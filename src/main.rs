@@ -1,4 +1,5 @@
 // src/main.rs
+mod aggregate;
 mod availability;
 mod backend;
 mod backends;
