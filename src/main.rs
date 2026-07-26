@@ -1,6 +1,7 @@
 // src/main.rs
 mod availability;
 mod deadline;
+mod document;
 mod error;
 mod cli;
 
