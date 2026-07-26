@@ -128,21 +128,35 @@ fn markdown_prose_spans(raw: &str) -> Vec<Range<usize>> {
     let mut fence_marker = "";
 
     for line in &lines[start_idx..] {
-        let trimmed = line_content(&raw[line.clone()]).trim_start();
-        let is_fence_line = trimmed.starts_with("```") || trimmed.starts_with("~~~");
-        if !is_fence_line {
-            continue;
-        }
-        let marker = if trimmed.starts_with("```") { "```" } else { "~~~" };
+        let content = line_content(&raw[line.clone()]);
         if !in_fence {
-            if line.start > prose_start {
-                spans.push(prose_start..line.start);
+            // Opening a fence follows standard markdown syntax: the marker
+            // may be followed by an info string (e.g. "```rust").
+            let trimmed_start = content.trim_start();
+            let is_open_line =
+                trimmed_start.starts_with("```") || trimmed_start.starts_with("~~~");
+            if is_open_line {
+                let marker = if trimmed_start.starts_with("```") {
+                    "```"
+                } else {
+                    "~~~"
+                };
+                if line.start > prose_start {
+                    spans.push(prose_start..line.start);
+                }
+                in_fence = true;
+                fence_marker = marker;
             }
-            in_fence = true;
-            fence_marker = marker;
-        } else if marker == fence_marker {
-            in_fence = false;
-            prose_start = line.end;
+        } else {
+            // Closing a fence requires the line, once trimmed of
+            // surrounding whitespace, to be *exactly* the same marker —
+            // not merely start with it. Otherwise a line like "```extra"
+            // appearing inside a fenced block (e.g. a doc demonstrating
+            // fence syntax) would prematurely close the fence.
+            if content.trim() == fence_marker {
+                in_fence = false;
+                prose_start = line.end;
+            }
         }
     }
 
@@ -191,6 +205,45 @@ mod tests {
         let body_pos = raw.find("Body text.").unwrap();
         assert!(doc.prose_spans.iter().any(|s| s.start <= body_pos && body_pos < s.end));
         assert!(!doc.prose_spans.iter().any(|s| s.start == 0));
+    }
+
+    #[test]
+    fn markdown_fence_closing_requires_exact_marker_line() {
+        // Regression test: a line inside a fence that merely *starts with*
+        // the marker (e.g. "```extra", such as a doc demonstrating fence
+        // syntax) must not prematurely close the fence. Only the real
+        // closing "```" line should end it.
+        let raw = "```\nsome code\n```extra\nmore code that should still be in fence\n```\n"
+            .to_string();
+        let doc = Document::from_stdin_text(raw.clone(), true);
+        assert_eq!(doc.content_type, ContentType::Markdown);
+        let still_in_fence_pos = raw.find("more code that should still be in fence").unwrap();
+        assert!(
+            !doc
+                .prose_spans
+                .iter()
+                .any(|s| s.start <= still_in_fence_pos && still_in_fence_pos < s.end),
+            "line inside fence was incorrectly classified as prose: {:?}",
+            doc.prose_spans
+        );
+    }
+
+    #[test]
+    fn markdown_tilde_fence_closing_requires_exact_marker_line() {
+        // Symmetric case for the "~~~" fence delimiter.
+        let raw = "~~~\nsome code\n~~~extra\nmore code that should still be in fence\n~~~\n"
+            .to_string();
+        let doc = Document::from_stdin_text(raw.clone(), true);
+        assert_eq!(doc.content_type, ContentType::Markdown);
+        let still_in_fence_pos = raw.find("more code that should still be in fence").unwrap();
+        assert!(
+            !doc
+                .prose_spans
+                .iter()
+                .any(|s| s.start <= still_in_fence_pos && still_in_fence_pos < s.end),
+            "line inside fence was incorrectly classified as prose: {:?}",
+            doc.prose_spans
+        );
     }
 
     #[test]
