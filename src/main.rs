@@ -3,6 +3,7 @@ mod availability;
 mod deadline;
 mod document;
 mod error;
+mod score;
 mod cli;
 
 use clap::Parser;
