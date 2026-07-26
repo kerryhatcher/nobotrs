@@ -4,6 +4,7 @@ mod deadline;
 mod document;
 mod error;
 mod score;
+mod backend;
 mod cli;
 
 use clap::Parser;
