@@ -1,0 +1,8 @@
+nobotrs contains two independently licensed components:
+
+  - Source code (this repository, excluding `dictionary/`): MIT. See `LICENSE`.
+  - `dictionary/`: CC BY-SA 4.0. See `dictionary/LICENSE`.
+
+Anyone redistributing the dictionary content itself (forking or republishing
+`dictionary/entries.json`) has ShareAlike/attribution obligations under CC BY-SA
+4.0 distinct from the code's MIT terms. See `dictionary/README.md` for details.
