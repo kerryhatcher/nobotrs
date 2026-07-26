@@ -3,17 +3,21 @@
 /// Recoverable vs. unrecoverable failure modes a `DetectorBackend` can surface.
 /// Split explicitly so callers (the `config` command, `detect`'s `warnings`
 /// surface, log output) can distinguish "retry/reconfigure" from "reinstall."
+#[allow(dead_code)] // Temporary: consumed starting in Task 3
 #[derive(Debug, Clone, PartialEq)]
 pub enum Error {
     ModelMissing,
+    #[allow(dead_code)] // Temporary: consumed starting in Task 3
     ModelLoadFailed(String),
     ChecksumMismatch,
     NetworkError(String),
+    #[allow(dead_code)] // Temporary: consumed starting in Task 3
     ConfigError(String),
     InternalError(String),
 }
 
 impl Error {
+    #[allow(dead_code)] // Temporary: consumed starting in Task 3
     pub fn is_recoverable(&self) -> bool {
         !matches!(self, Error::ChecksumMismatch | Error::InternalError(_))
     }
