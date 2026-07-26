@@ -161,7 +161,7 @@ mod tests {
 
     #[test]
     fn uniform_sentence_lengths_over_150_words_votes_strong() {
-        // 30 sentences of exactly 6 words each = 180 words, stdev = 0 -> burstiness ratio 0.0
+        // 31 sentences of exactly 6 words each = 186 words, stdev = 0 -> burstiness ratio 0.0
         let sentence = "This sentence has six words total.";
         let text = std::iter::repeat(sentence).take(31).collect::<Vec<_>>().join(" ");
         let outcome = outcome_for(&text);
@@ -170,5 +170,21 @@ mod tests {
             other => panic!("expected Scored, got abstain/fail"),
         }
         let _ = words(1); // silence unused helper warning if not otherwise used
+    }
+
+    #[test]
+    fn over_150_words_but_under_5_sentences_abstains() {
+        // 4 run-on sentences of 40 words each = 160 words (>=150), but only 4
+        // sentences (<5) -- must abstain even though the word floor is cleared,
+        // proving the sentence-count gate fires independently of the word-count gate.
+        let text = (0..4)
+            .map(|_| format!("{}.", words(40)))
+            .collect::<Vec<_>>()
+            .join(" ");
+        let outcome = outcome_for(&text);
+        assert!(
+            matches!(outcome, ScoreOutcome::Abstained { .. }),
+            "must abstain below the 5-sentence floor even with >=150 words"
+        );
     }
 }
