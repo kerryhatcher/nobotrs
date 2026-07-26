@@ -10,3 +10,4 @@
 // should be added by whichever task introduces each corresponding backend.
 pub mod vocabulary;
 pub mod punctuation;
+pub mod burstiness;
