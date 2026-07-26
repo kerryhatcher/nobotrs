@@ -1,11 +1,12 @@
 // src/main.rs
 mod availability;
+mod backend;
+mod backends;
 mod deadline;
 mod dictionary;
 mod document;
 mod error;
 mod score;
-mod backend;
 mod cli;
 
 use clap::Parser;
