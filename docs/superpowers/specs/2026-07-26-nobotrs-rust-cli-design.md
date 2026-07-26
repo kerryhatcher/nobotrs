@@ -4,6 +4,7 @@
 **Date:** 2026-07-26
 **Research basis:** `docs/research/00-consolidated-summary.md` and its eight source reports, which themselves drew on prior art at `/mnt/storage/grimoire/research/open-plugins-spec/` (used directly by report 07).
 **Revision note (2026-07-26, post-review):** revised per `docs/superpowers/specs/2026-07-26-nobotrs-rust-cli-design-review.md`, a 5-agent (Opus/Sonnet×2/Haiku×2) review round plus independent Sonnet verification. See that file for the full findings; this revision applies all 8 Blocker and 11 Important items.
+**Revision note (2026-07-26, dictionary addition):** adds §11, a separately CC BY-SA 4.0–licensed tell dictionary, per product decision. Cross-referenced from §2.2, §3, §9, and §10.
 
 ## 1. Overview
 
@@ -64,7 +65,7 @@ Backends are grouped into independent **signal families** for aggregation purpos
 
 | Tier | Feature flag | Default? | Signal family/families | What it does | Key crates |
 |---|---|---|---|---|---|
-| **deterministic** | *(always on)* | Yes | `Vocabulary`, `Punctuation` | Exact tell-word / tell-phrase matching, ported from `check_ai_tells.py`'s word and phrase lists | `aho-corasick` (tell-words, linear time at scale), `regex` (tell-phrases with wildcards), `unicode-segmentation` (sentence/word boundaries) |
+| **deterministic** | *(always on)* | Yes | `Vocabulary`, `Punctuation` | Exact tell-word / tell-phrase matching, data-driven from the separately-licensed tell dictionary (§11) rather than hardcoded in the binary — the dictionary itself is the Rust port's source of truth, seeded from `check_ai_tells.py`'s existing lists | `aho-corasick` (tell-words, linear time at scale), `regex` (tell-phrases with wildcards), `unicode-segmentation` (sentence/word boundaries) |
 | **stylometric** | *(always on)* | Yes | `Burstiness`, `LexicalDiversity`, `Readability`, `Compression` | Burstiness (sentence-length stdev/mean), lexical diversity (hand-rolled MTLD), readability (hand-rolled Flesch-Kincaid — see §10), compression-ratio perplexity proxy, entropy-per-token. Language-tuned features (readability, some lexical-diversity assumptions) are gated behind a `whichlang` check; non-English input abstains rather than scoring incorrectly | `unicode-segmentation`, `statrs`, `xz` (pure-Rust LZMA), `whichlang` |
 | **classifier** | `classifier` | No | `MlClassifier` | Single-pass fine-tuned AI-text classifier inference (DeBERTa-v3-style) via `candle-transformers::debertav2` — **module confirmed to exist and architecturally match this use case; compatibility with the specific `desklib/ai-text-detector-v1.01` checkpoint is unconfirmed, see §9 item 1** | `candle` + `candle-transformers::debertav2`; `ort` (ONNX Runtime) as documented fallback; `hf-hub` for weight download |
 | **perplexity** | `perplexity` | No | `MlPerplexity` — **non-voting/experimental in v1, see §7 item 4** | Twin-model zero-shot perplexity ratio (Binoculars/Fast-DetectGPT style); reports the raw cross-perplexity ratio as evidence but does not participate in quorum aggregation until calibrated (§8). Validated model pairs are memory-heavy (~8–10GB RAM); no smaller validated pair was found in research | `candle` or `llama-cpp-2` (GGUF quantization); `hf-hub` |
@@ -115,7 +116,7 @@ nobotrs config                      # manage API keys, model downloads, enabled 
 
 `detect` applies the §2.4 quorum and reports one aggregated verdict. `lint` does **not** apply quorum — it reports every backend's raw evidence (including sub-quorum, single-family hits) so a human can see everything a `detect` verdict would have suppressed; this is a deliberate difference, not an oversight. `scan <dir>` runs the `deterministic` + `stylometric` tiers by default (fast, no model downloads, safe for unattended CI); `classifier`/`perplexity`/`api-clients` participate in `scan` only when explicitly enabled via `--features`/config, since a batch directory scan is exactly the case where unbounded model-loading or API cost is most likely to surprise a user.
 
-**Suggested fixes** (in `lint` output) apply to deterministic tell-word/tell-phrase hits, which have an obvious template-swap mechanism (e.g. "delve" → "look into"/"start"). Stylometric flags (low burstiness, low MTLD, compression-ratio anomalies) get diagnostic explanation but not a templated fix — there's no single correct rewrite for "your sentence-length variance is low," only general guidance. `Evidence` (§2.3) carries a `suggestion: Option<String>` to reflect this: `Some` for deterministic hits, `None` for stylometric flags where no specific fix applies.
+**Suggested fixes** (in `lint` output) apply to deterministic tell-word/tell-phrase hits, sourced directly from the tell dictionary's `suggested_replacements` field (§11.3) — e.g. "delve" → "look into"/"start" — rather than being generated or templated by nobotrs itself. Stylometric flags (low burstiness, low MTLD, compression-ratio anomalies) get diagnostic explanation but not a templated fix — there's no single correct rewrite for "your sentence-length variance is low," only general guidance. `Evidence` (§2.3) carries a `suggestion: Option<String>` to reflect this: `Some` (populated from the dictionary) for deterministic hits, `None` for stylometric flags where no specific fix applies.
 
 - Argument parsing: `clap` (derive API).
 - Human output: colored terminal via `owo-colors` (respects `NO_COLOR`).
@@ -176,9 +177,72 @@ These are empirical or due-diligence items the plan should sequence early, since
 1. **Prototype candle + `desklib/ai-text-detector-v1.01`** as the first concrete step of the `classifier` tier — the `debertav2` module's existence is confirmed, but nobody has been found to have actually loaded that specific checkpoint into it. `ort` + ONNX export is the documented fallback if it doesn't work cleanly. **At the same priority:** verify the checkpoint's own license (separate from the Rust crates that load it — model weights carry their own, often more restrictive, license terms) permits nobotrs's intended use, before prototyping past a spike. Do the same license check for whatever perplexity-tier model pair is ultimately chosen.
 2. **Downloaded model weights are checksum-verified against a pinned hash before load**, for both the `classifier` and `perplexity` tiers — a supply-chain integrity requirement, not just a correctness nicety.
 3. **Validate `postagger.rs` accuracy** against a labeled sample before trusting it in any verdict, if/when POS features are picked back up.
+4. **Confirm whether embedding CC BY-SA 4.0 dictionary data (§11) inside a compiled MIT-licensed binary creates any obligation on the binary distribution itself**, as opposed to on redistributing the dictionary's JSON data directly (which clearly requires attribution/ShareAlike compliance). Not confidently resolved in this spec — verify before the first tagged release, not just before prototyping.
 
 ## 10. Recommended dependency stack
 
 See `docs/research/00-consolidated-summary.md` § "Recommended stack" for the full table. Every crate actually referenced in §2.2's tier definitions is MIT/Apache-2.0/Unlicense family, with one correction already applied: `rust_readability` (GPL-3.0-or-later) is excluded; Flesch-Kincaid is hand-rolled instead. (This section previously also claimed the `stylometry` crate as MIT-family license-verified while §7 correctly flagged the same crate's license as unconfirmed — that contradiction is resolved by dropping the unused `stylometry` dependency entirely, per §7.)
+
+**The one deliberate exception to "everything is MIT/Apache-2.0/Unlicense" is the tell dictionary (§11), which is CC BY-SA 4.0 by design** — a separate, independently-licensed data artifact, not a code dependency, kept in its own subdirectory with its own LICENSE file specifically so this exception is unambiguous rather than silently mixed into the crate's license story.
+
+## 11. Tell dictionary (separately licensed)
+
+The word/phrase tell list ships as its own artifact, `dictionary/`, licensed **CC BY-SA 4.0** — distinct from the rest of the repository (source code, MIT, root `LICENSE`). This is the one place in the project where two licenses coexist by design, called out explicitly in §10.
+
+### 11.1 Why a separate license
+
+A curated word/phrase list is a creative/curatorial dataset, not source code — CC BY-SA 4.0 is the standard choice for this kind of lexical resource. Its ShareAlike clause ensures downstream forks/derivatives of the *dictionary* stay open and attributed, which isn't a concern the MIT-licensed code needs or benefits from. Keeping the two licenses in separate directories with separate `LICENSE` files avoids ambiguity about which terms apply to which files — there is never a file where both licenses could plausibly apply.
+
+### 11.2 Location and contents
+
+- `dictionary/LICENSE` — full CC BY-SA 4.0 text.
+- `dictionary/README.md` — states the license, attribution requirements, and schema documentation.
+- `dictionary/words.json`, `dictionary/phrases.json` — the actual data, plain JSON (broadest cross-language consumability; no Rust toolchain required to read it).
+- A root-level `NOTICE` file states plainly that the repository contains two independently licensed components (code: MIT, root `LICENSE`; dictionary: CC BY-SA 4.0, `dictionary/LICENSE`). This is stated explicitly because nobotrs's compiled binary embeds the dictionary data (§11.4), and anyone redistributing the *dictionary content itself* (forking/republishing the JSON) has ShareAlike/attribution obligations distinct from the code's MIT terms. **Whether bundling CC BY-SA data inside a compiled MIT-licensed binary creates any obligation on the binary distribution itself is a real nuance, not confidently resolved here — see §9 item 4.**
+
+### 11.3 Entry schema (rich records, per product decision)
+
+```json
+{
+  "schema_version": "1.0.0",
+  "dictionary_version": "2026.07.26",
+  "entries": [
+    {
+      "id": "delve",
+      "kind": "word",
+      "match_type": "exact",
+      "pattern": "delve",
+      "category": "vocabulary",
+      "suggested_replacements": ["look into", "explore", "start"],
+      "model_era": ["gpt-3.5", "gpt-4o"],
+      "source": null,
+      "notes": null
+    },
+    {
+      "id": "not-just-x-but-y",
+      "kind": "phrase",
+      "match_type": "regex",
+      "pattern": "it'?s not just [a-z ]+, it'?s",
+      "category": "structural-phrase",
+      "suggested_replacements": [],
+      "model_era": [],
+      "source": null,
+      "notes": "negative parallelism"
+    }
+  ]
+}
+```
+
+`match_type` tells the `deterministic` tier (§2.2) which matcher to use: `exact` entries feed `aho-corasick`; `regex` entries feed the `regex` crate. `suggested_replacements` feeds `lint`'s `Evidence.suggestion` (§3) directly for word-kind entries — the mechanism §3 refers to as sourced "from the tell dictionary." `model_era` is optional metadata (populated over time, not required at v1 launch) reflecting the research finding that vocabulary tells are time-bound and generation-specific; it is not currently consumed by aggregation (§2.4) but is reserved for a plausible future per-era weighting refinement.
+
+**Scope boundary:** the dictionary covers word- and phrase-level tells expressible as an exact string or a regex pattern. The three structural patterns identified during prior-art review (`docs/research/09-no-ai-slop-review.md`) — colon-reveal, negative-listing, markdown formatting-slop — are not all cleanly regex-expressible (formatting-slop in particular requires counting/structural logic, not string matching) and are therefore implemented as code-level checks within the `deterministic` backend, not as dictionary entries, even though negative-listing and colon-reveal may end up regex-representable in practice. This keeps the dictionary schema honest: an entry describes a match rule any consumer, in any language, can apply directly from the JSON — not a rule that requires nobotrs's specific code to interpret.
+
+### 11.4 Consumption
+
+nobotrs embeds `dictionary/*.json` at compile time (`include_str!` / a small `build.rs`) so the shipped binary stays single-file and works fully offline — no network fetch needed at runtime for the `deterministic` tier's data. The JSON files in `dictionary/` remain the canonical, independently fetchable source: any tool, in any language, can read them directly from the repository without depending on nobotrs itself. Publishing the dictionary to a stable CDN URL or a package registry (npm/PyPI-style, for easier non-Rust consumption than "clone the repo") is a plausible v2 addition, not committed to for v1.
+
+### 11.5 Versioning
+
+The dictionary carries its own `schema_version` (format stability, mirroring §3's JSON output `schema_version` pattern) and `dictionary_version` (content revision, independent of the nobotrs crate's own semver) — the two evolve on different cadences: the schema should rarely change, while entries get added/refined much more often as new model-era vocabulary tells are identified. Seed content: `check_ai_tells.py`'s existing word/phrase lists, plus the vocabulary/phrase findings from `docs/research/09-no-ai-slop-review.md` (facilitate, empower, robust, cutting-edge, paradigm shift, harness; "here's the thing," "let me be clear," "the uncomfortable truth is," "experts agree," "studies show," "that's it, that's the [x]").
 
 `candle` is pre-1.0 — no MSRV/pinning policy is stated here yet; pin an exact version in `Cargo.lock` and revisit pinning strategy once the `classifier`/`perplexity` prototypes (§9) are underway. Rust edition and MSRV otherwise follow current stable Rust at implementation start, stated explicitly in `Cargo.toml` rather than left implicit. A single-crate-with-features layout (not a Cargo workspace split) is sufficient for v1, consistent with research report 05's conclusion — revisit only if the optional heavy dependencies start causing real build-graph friction in practice. `nobotrs` makes no telemetry or usage-data calls of any kind; this follows directly from the local-first goal in §1 but is stated here explicitly rather than left to be inferred.
