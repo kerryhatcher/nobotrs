@@ -1,0 +1,30 @@
+[package]
+name = "nobotrs"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Detects AI-generated text and lints prose for AI-writing tells"
+repository = "https://github.com/kerryhatcher/nobotrs"
+
+[[bin]]
+name = "nobotrs"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+aho-corasick = "1"
+regex = "1"
+unicode-segmentation = "1"
+statrs = "0.17"
+lzma-rs = "0.3"
+whichlang = "0.1"
+owo-colors = { version = "4", features = ["supports-colors"] }
+directories = "5"
+walkdir = "2"
+
+[profile.release]
+lto = true
+strip = true
+opt-level = "z"
