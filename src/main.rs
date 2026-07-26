@@ -1,4 +1,7 @@
 // src/main.rs
+mod availability;
+mod deadline;
+mod error;
 mod cli;
 
 use clap::Parser;
