@@ -9,3 +9,4 @@
 // Vocabulary. Only `vocabulary` is wired; the remaining `pub mod` lines
 // should be added by whichever task introduces each corresponding backend.
 pub mod vocabulary;
+pub mod punctuation;
