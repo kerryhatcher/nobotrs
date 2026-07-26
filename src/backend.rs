@@ -8,7 +8,7 @@ use crate::score::Score;
 /// One `DetectorBackend` instance produces exactly one family's vote — a tier
 /// that covers several families registers one backend instance per family,
 /// not one backend that multiplexes several (spec §2.1).
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, serde::Deserialize)]
 pub enum SignalFamily {
     Vocabulary,
     Punctuation,

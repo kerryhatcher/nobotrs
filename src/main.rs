@@ -1,6 +1,7 @@
 // src/main.rs
 mod availability;
 mod deadline;
+mod dictionary;
 mod document;
 mod error;
 mod score;
