@@ -94,8 +94,8 @@ impl Vocabulary {
 
     /// Runs both engines over `prose_text` and merges their hits under
     /// longest-match-wins (spec Sec 11.3): when two hits' byte ranges
-    /// overlap, the narrower one is dropped, regardless of which engine
-    /// produced it.
+    /// overlap at all — full containment or a partial "crossing" overlap —
+    /// the narrower one is dropped, regardless of which engine produced it.
     fn raw_hits(&self, prose_text: &str) -> Vec<RawHit> {
         let mut hits = Vec::new();
 
@@ -125,14 +125,20 @@ impl Vocabulary {
 
         // Longest-match-wins: sort by start ascending, then by end
         // descending, so the widest candidate at each start point is seen
-        // first; drop any hit fully contained within an already-kept hit.
+        // first. Drop `hit` if it overlaps *any* already-kept hit at all —
+        // not just full containment. A general interval-overlap check is
+        // required here: two hits can "cross" (e.g. [0,10) and [5,15)) with
+        // neither containing the other, and a containment-only check would
+        // let both survive as overlapping evidence. Full containment (the
+        // common case with the current dictionary, e.g. an exact "embark"
+        // hit inside a longer "embark on a journey" phrase hit) is just the
+        // special case of overlap where one span's bounds sit entirely
+        // inside the other's.
         hits.sort_by_key(|h| (h.start, std::cmp::Reverse(h.end)));
         let mut kept: Vec<RawHit> = Vec::new();
         for hit in hits {
-            let contained = kept
-                .iter()
-                .any(|k| k.start <= hit.start && hit.end <= k.end && !(k.start == hit.start && k.end == hit.end));
-            if !contained {
+            let overlaps_kept = kept.iter().any(|k| k.start < hit.end && hit.start < k.end);
+            if !overlaps_kept {
                 kept.push(hit);
             }
         }
@@ -231,13 +237,53 @@ impl DetectorBackend for Vocabulary {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::backend::SignalFamily;
     use crate::deadline::Deadline;
-    use crate::dictionary::Dictionary;
+    use crate::dictionary::{Dictionary, DictionaryEntry, EntryKind, MatchType};
     use crate::document::Document;
     use crate::score::VoteStrength;
 
     fn backend() -> Vocabulary {
         Vocabulary::new(Dictionary::embedded()).expect("embedded dictionary must compile")
+    }
+
+    /// Minimal hand-built entries for the crossing-overlap test below —
+    /// every field the schema requires, with the parts irrelevant to that
+    /// test (variants, suggestions, model_era, source, notes) left empty.
+    fn exact_entry(id: &str, pattern: &str) -> DictionaryEntry {
+        DictionaryEntry {
+            id: id.to_string(),
+            kind: EntryKind::Word,
+            match_type: MatchType::Exact,
+            pattern: pattern.to_string(),
+            variants: vec![],
+            case_sensitive: false,
+            whole_word: false,
+            family: SignalFamily::Vocabulary,
+            category: "test".to_string(),
+            suggested_replacements: vec![],
+            model_era: vec![],
+            source: None,
+            notes: None,
+        }
+    }
+
+    fn regex_entry(id: &str, pattern: &str) -> DictionaryEntry {
+        DictionaryEntry {
+            id: id.to_string(),
+            kind: EntryKind::Phrase,
+            match_type: MatchType::Regex,
+            pattern: pattern.to_string(),
+            variants: vec![],
+            case_sensitive: false,
+            whole_word: false,
+            family: SignalFamily::Vocabulary,
+            category: "test".to_string(),
+            suggested_replacements: vec![],
+            model_era: vec![],
+            source: None,
+            notes: None,
+        }
     }
 
     fn score_text(text: &str) -> crate::score::Score {
@@ -293,7 +339,7 @@ mod tests {
     }
 
     #[test]
-    fn longest_match_wins_suppresses_overlapping_shorter_evidence() {
+    fn longest_match_wins_suppresses_full_containment_overlap() {
         // The dictionary has both an exact word entry "embark" (id: embark)
         // and a regex phrase entry "embark on a journey" (id:
         // embark-on-a-journey). Against this sentence, aho-corasick finds a
@@ -305,6 +351,56 @@ mod tests {
         assert!(
             !score.evidence.is_empty(),
             "expected at least one evidence entry from the overlapping matches"
+        );
+        for (i, a) in score.evidence.iter().enumerate() {
+            for b in score.evidence.iter().skip(i + 1) {
+                let overlaps = a.raw_offset.start < b.raw_offset.end && b.raw_offset.start < a.raw_offset.end;
+                assert!(!overlaps, "evidence spans {:?} and {:?} overlap", a.raw_offset, b.raw_offset);
+            }
+        }
+    }
+
+    #[test]
+    fn longest_match_wins_suppresses_crossing_overlap() {
+        // Regression test (post-review): a *crossing* overlap is a pair of
+        // spans where neither contains the other, e.g. [0,5) and [3,8]. A
+        // containment-only check (`k.start <= hit.start && hit.end <=
+        // k.end`) lets both survive, since neither is nested inside the
+        // other — only a general interval-overlap check
+        // (`k.start < hit.end && hit.start < k.end`) catches this.
+        //
+        // Note this can't be reproduced with two aho-corasick (exact)
+        // patterns alone: `AhoCorasick::find_iter` under
+        // `MatchKind::LeftmostLongest` already scans non-overlapping —
+        // once it commits to a match it resumes scanning *after* that
+        // match's end, so a second pattern starting inside the first's
+        // span is never even yielded by the automaton. A genuine crossing
+        // overlap requires two independent engines whose scans aren't
+        // coordinated with each other, which is exactly the aho-corasick +
+        // regex combination this backend runs. This synthetic dictionary
+        // pairs a regex phrase entry matching "abcde" with an exact word
+        // entry matching "defgh"; against "abcdefgh" the regex hit is
+        // [0,5) and the exact hit is [3,8) — 0 < 8 and 3 < 5, so they
+        // overlap, but neither range contains the other.
+        let dictionary = Dictionary {
+            schema_version: "1.0.0".to_string(),
+            dictionary_version: "test".to_string(),
+            entries: vec![regex_entry("crossing-regex", "abcde"), exact_entry("crossing-exact", "defgh")],
+        };
+        let backend = Vocabulary::new(dictionary).expect("synthetic crossing-overlap dictionary must compile");
+        let doc = Document::from_stdin_text("abcdefgh".to_string(), false);
+        let deadline = Deadline::new(std::time::Duration::from_secs(1));
+        let score = match backend.score(&doc, deadline) {
+            crate::backend::ScoreOutcome::Scored(score) => score,
+            _other => panic!("expected Scored, got a different outcome"),
+        };
+
+        // Only one of the two crossing hits may survive the merge.
+        assert_eq!(
+            score.evidence.len(),
+            1,
+            "crossing overlap must collapse to exactly one kept hit, got {:?}",
+            score.evidence
         );
         for (i, a) in score.evidence.iter().enumerate() {
             for b in score.evidence.iter().skip(i + 1) {
