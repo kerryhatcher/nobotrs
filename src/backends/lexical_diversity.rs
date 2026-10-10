@@ -8,8 +8,6 @@ use crate::document::Document;
 use crate::score::{ConfidenceTier, Score, VoteStrength};
 
 const MIN_WORDS_FOR_STATS: usize = 150; // check_ai_tells.py MIN_WORDS_FOR_STATS -- the effective floor
-#[allow(dead_code)] // Ported for parity with check_ai_tells.py; never the binding floor in practice (see task-11 brief)
-const MIN_WORDS_FOR_DIVERSITY: usize = 50; // check_ai_tells.py MIN_WORDS_FOR_DIVERSITY
 const MTLD_THRESHOLD: f64 = 0.72;
 
 pub struct LexicalDiversity;
@@ -23,24 +21,31 @@ pub(crate) fn tokenize(text: &str) -> Vec<String> {
 /// a "factor" and reset. A leftover partial segment contributes a fractional
 /// factor. Run forward and reverse, average the two — matching the algorithm
 /// `lexicalrichness.mtld()` (used by `check_ai_tells.py`) implements.
+#[cfg(test)]
 pub(crate) fn mtld(tokens: &[String], threshold: f64) -> f64 {
+    mtld_budget(tokens, threshold, None).unwrap()
+}
+fn mtld_budget(tokens: &[String], threshold: f64, deadline: Option<Deadline>) -> Option<f64> {
     if tokens.is_empty() {
-        return 0.0;
+        return Some(0.0);
     }
-    let forward = mtld_single_pass(tokens, threshold);
+    let forward = mtld_single_pass(tokens, threshold, deadline)?;
     let mut reversed = tokens.to_vec();
     reversed.reverse();
-    let backward = mtld_single_pass(&reversed, threshold);
-    (forward + backward) / 2.0
+    let backward = mtld_single_pass(&reversed, threshold, deadline)?;
+    Some((forward + backward) / 2.0)
 }
 
-fn mtld_single_pass(tokens: &[String], threshold: f64) -> f64 {
+fn mtld_single_pass(tokens: &[String], threshold: f64, deadline: Option<Deadline>) -> Option<f64> {
     use std::collections::HashSet;
     let mut factor_count = 0.0_f64;
     let mut segment_len = 0usize;
     let mut types: HashSet<&str> = HashSet::new();
 
     for token in tokens {
+        if deadline.is_some_and(|d| d.expired()) {
+            return None;
+        }
         types.insert(token.as_str());
         segment_len += 1;
         let ttr = types.len() as f64 / segment_len as f64;
@@ -58,9 +63,9 @@ fn mtld_single_pass(tokens: &[String], threshold: f64) -> f64 {
     }
 
     if factor_count == 0.0 {
-        tokens.len() as f64
+        Some(tokens.len() as f64)
     } else {
-        tokens.len() as f64 / factor_count
+        Some(tokens.len() as f64 / factor_count)
     }
 }
 
@@ -75,8 +80,11 @@ impl DetectorBackend for LexicalDiversity {
         Availability::Ready
     }
 
-    fn score(&self, doc: &Document, _deadline: Deadline) -> ScoreOutcome {
-        let word_count = doc.raw.split_whitespace().count();
+    fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        let word_count = doc.words.len();
         if word_count < MIN_WORDS_FOR_STATS {
             return ScoreOutcome::Abstained {
                 reason: format!(
@@ -85,37 +93,39 @@ impl DetectorBackend for LexicalDiversity {
             };
         }
 
-        let prose: String = doc
-            .prose_spans
-            .iter()
-            .map(|s| &doc.raw[s.clone()])
-            .collect::<Vec<_>>()
-            .join(" ");
+        let prose = &doc.prose;
 
-        if let Ok(lang) = std::panic::catch_unwind(|| whichlang::detect_language(&prose)) {
-            if lang != whichlang::Lang::Eng {
-                return ScoreOutcome::Abstained {
-                    reason: "non-English text; lexical-diversity assumptions are English-tuned"
-                        .to_string(),
-                };
-            }
+        if !doc.english_supported() {
+            return ScoreOutcome::Abstained {
+                reason: doc.language.reason.clone(),
+            };
         }
 
-        let tokens = tokenize(&prose);
-        let mtld_score = mtld(&tokens, MTLD_THRESHOLD);
+        let tokens = tokenize(prose);
+        let Some(mtld_score) = mtld_budget(&tokens, MTLD_THRESHOLD, Some(deadline)) else {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        };
 
         // Evidence-only in v1 (spec §2.2, §7 item 5): always VoteStrength::None.
-        // human_probability still reflects the measurement for display purposes.
-        let human_probability = (mtld_score / 150.0).clamp(0.0, 1.0) as f32;
 
-        ScoreOutcome::Scored(Score::new(
-            "lexical-diversity".to_string(),
-            SignalFamily::LexicalDiversity,
-            human_probability,
-            ConfidenceTier::Low,
-            VoteStrength::None,
-            vec![],
-        ))
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        ScoreOutcome::Scored(
+            Score::new(
+                "lexical-diversity".to_string(),
+                SignalFamily::LexicalDiversity,
+                ConfidenceTier::Low,
+                VoteStrength::None,
+                vec![],
+            )
+            .metric(
+                "mtld",
+                mtld_score,
+                "tokens/factor",
+                "bidirectional-mtld-0.72-v1",
+            ),
+        )
     }
 }
 

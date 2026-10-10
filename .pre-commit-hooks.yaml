@@ -1,0 +1,8 @@
+- id: nobotrs
+  name: nobotrs prose lint
+  entry: nobotrs lint
+  language: system
+  types: [text]
+  files: '\.(md|markdown|txt)$'
+  require_serial: true
+  pass_filenames: true

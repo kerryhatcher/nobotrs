@@ -1,3 +1,5 @@
+> Historical July specification/plan. The current contract is the [October remediation plan](../plans/2026-10-10-nobotrs-review-remediation.md) and shipped README: raw metrics replace unconditional human probabilities; informational families do not satisfy quorum; prepared prose and completeness govern reporting. Rust lzma-rs ratios are not numerically interchangeable with Python preset-6 compression.
+
 # nobotrs Core Architecture + Default Build Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.

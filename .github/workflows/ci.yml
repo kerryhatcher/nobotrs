@@ -1,0 +1,16 @@
+name: Rust core
+on: [push, pull_request]
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - run: cargo fmt --check
+      - run: cargo clippy --locked --all-targets -- -D warnings
+      - run: cargo test --locked
+      - run: cargo build --locked --release
+      - run: test "$(stat -c %s target/release/nobotrs)" -le 8000000
+      - run: python3 scripts/evaluate.py --binary target/release/nobotrs --manifest tests/fixtures/evaluation/manifest.json --output /tmp/baseline.json --check docs/evaluation/ci-baseline.json

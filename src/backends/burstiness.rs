@@ -12,36 +12,6 @@ const LOW_BURSTINESS_THRESHOLD: f64 = 0.35;
 
 pub struct Burstiness;
 
-fn sentence_word_lengths(prose_text: &str) -> Vec<usize> {
-    // mirrors check_ai_tells.py's SENTENCE_SPLIT: split after ., !, or ? followed by whitespace
-    let mut lengths = Vec::new();
-    let mut start = 0usize;
-    let bytes = prose_text.as_bytes();
-    let mut i = 0usize;
-    while i < bytes.len() {
-        let b = bytes[i];
-        if (b == b'.' || b == b'!' || b == b'?')
-            && bytes.get(i + 1).map(|c| c.is_ascii_whitespace()).unwrap_or(true)
-        {
-            let sentence = prose_text[start..=i].trim();
-            let word_count = sentence.split_whitespace().count();
-            if word_count > 0 {
-                lengths.push(word_count);
-            }
-            start = i + 1;
-        }
-        i += 1;
-    }
-    let tail = prose_text[start..].trim();
-    if !tail.is_empty() {
-        let word_count = tail.split_whitespace().count();
-        if word_count > 0 {
-            lengths.push(word_count);
-        }
-    }
-    lengths
-}
-
 fn population_stdev(values: &[usize]) -> f64 {
     let n = values.len() as f64;
     let mean = values.iter().sum::<usize>() as f64 / n;
@@ -67,8 +37,11 @@ impl DetectorBackend for Burstiness {
         Availability::Ready
     }
 
-    fn score(&self, doc: &Document, _deadline: Deadline) -> ScoreOutcome {
-        let word_count = doc.raw.split_whitespace().count();
+    fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        let word_count = doc.words.len();
         if word_count < MIN_WORDS_FOR_STATS {
             return ScoreOutcome::Abstained {
                 reason: format!(
@@ -77,13 +50,14 @@ impl DetectorBackend for Burstiness {
             };
         }
 
-        let prose: String = doc
-            .prose_spans
+        let lengths: Vec<usize> = doc
+            .sentences
             .iter()
-            .map(|s| &doc.raw[s.clone()])
-            .collect::<Vec<_>>()
-            .join(" ");
-        let lengths = sentence_word_lengths(&prose);
+            .map(|r| {
+                unicode_segmentation::UnicodeSegmentation::unicode_words(&doc.prose[r.clone()])
+                    .count()
+            })
+            .collect();
         if lengths.len() < MIN_SENTENCES {
             return ScoreOutcome::Abstained {
                 reason: format!(
@@ -109,20 +83,26 @@ impl DetectorBackend for Burstiness {
             VoteStrength::None
         };
 
-        let human_probability = match vote {
-            VoteStrength::Strong => 0.15,
-            VoteStrength::Suspicious => 0.4,
-            VoteStrength::None => 0.85,
-        };
-
-        ScoreOutcome::Scored(Score::new(
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        let mut score = Score::new(
             "burstiness".to_string(),
             SignalFamily::Burstiness,
-            human_probability,
             ConfidenceTier::Medium,
             vote,
             vec![], // a document-level statistic; no line-anchored evidence
-        ))
+        )
+        .metric(
+            "sentence_length_cv",
+            ratio,
+            "ratio",
+            "population-stdev/shared-segmentation-v1",
+        );
+        if vote != VoteStrength::None {
+            score.document_findings.push(crate::score::DocumentFinding {rule_id:"statistics.burstiness".into(),severity:crate::score::Severity::Low,message:"Low document-wide variation in sentence word counts (uncalibrated heuristic).".into(),suggestion:Some("Review rhythm and readability in context; sentence uniformity does not establish authorship.".into()),suppression:None});
+        }
+        ScoreOutcome::Scored(score)
     }
 }
 
@@ -142,7 +122,10 @@ mod tests {
     }
 
     fn words(n: usize) -> String {
-        (0..n).map(|i| format!("word{i}")).collect::<Vec<_>>().join(" ")
+        (0..n)
+            .map(|i| format!("word{i}"))
+            .collect::<Vec<_>>()
+            .join(" ")
     }
 
     #[test]
@@ -154,20 +137,28 @@ mod tests {
     #[test]
     fn under_150_words_abstains_even_with_many_sentences() {
         // 20 sentences of 5 words each = 100 words, well over 5 sentences but under 150 words
-        let text = (0..20).map(|_| "Five short words in sentence.".to_string()).collect::<Vec<_>>().join(" ");
+        let text = (0..20)
+            .map(|_| "Five short words in sentence.".to_string())
+            .collect::<Vec<_>>()
+            .join(" ");
         let outcome = outcome_for(&text);
-        assert!(matches!(outcome, ScoreOutcome::Abstained { .. }), "must abstain below the 150-word floor even with >=5 sentences");
+        assert!(
+            matches!(outcome, ScoreOutcome::Abstained { .. }),
+            "must abstain below the 150-word floor even with >=5 sentences"
+        );
     }
 
     #[test]
     fn uniform_sentence_lengths_over_150_words_votes_strong() {
         // 31 sentences of exactly 6 words each = 186 words, stdev = 0 -> burstiness ratio 0.0
         let sentence = "This sentence has six words total.";
-        let text = std::iter::repeat(sentence).take(31).collect::<Vec<_>>().join(" ");
+        let text = std::iter::repeat_n(sentence, 31)
+            .collect::<Vec<_>>()
+            .join(" ");
         let outcome = outcome_for(&text);
         match outcome {
             ScoreOutcome::Scored(score) => assert_eq!(score.vote, VoteStrength::Strong),
-            other => panic!("expected Scored, got abstain/fail"),
+            _other => panic!("expected Scored, got abstain/fail"),
         }
         let _ = words(1); // silence unused helper warning if not otherwise used
     }

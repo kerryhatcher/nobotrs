@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "corpus_version": "regression-2026-10-10-v1",
+  "purpose": "Reusable CI behavior regression; not independent authorship evaluation.",
+  "samples": [
+    {
+      "id": "plain",
+      "file": "plain.md",
+      "split": "regression",
+      "source_group": "plain",
+      "label": null,
+      "slice": "short",
+      "provenance": "Original synthetic behavior fixture authored during remediation, 2026-10-10. No reliable authorship label is claimed.",
+      "license": "MIT",
+      "expected": {
+        "verdict": "clean",
+        "status": 0
+      }
+    },
+    {
+      "id": "flagged",
+      "file": "flagged.md",
+      "split": "regression",
+      "source_group": "flagged",
+      "label": null,
+      "slice": "tells",
+      "provenance": "Original synthetic behavior fixture authored during remediation, 2026-10-10. No reliable authorship label is claimed.",
+      "license": "MIT",
+      "expected": {
+        "verdict": "flagged",
+        "status": 1
+      }
+    },
+    {
+      "id": "code-only",
+      "file": "code-only.md",
+      "split": "regression",
+      "source_group": "code-only",
+      "label": null,
+      "slice": "markdown",
+      "provenance": "Original synthetic behavior fixture authored during remediation, 2026-10-10. No reliable authorship label is claimed.",
+      "license": "MIT",
+      "expected": {
+        "verdict": "inconclusive",
+        "status": 3
+      }
+    },
+    {
+      "id": "long-fence",
+      "file": "long-fence.md",
+      "split": "regression",
+      "source_group": "long-fence",
+      "label": null,
+      "slice": "markdown",
+      "provenance": "Original synthetic behavior fixture authored during remediation, 2026-10-10. No reliable authorship label is claimed.",
+      "license": "MIT",
+      "expected": {
+        "verdict": "clean",
+        "status": 0
+      }
+    },
+    {
+      "id": "softbreak",
+      "file": "softbreak.md",
+      "split": "regression",
+      "source_group": "softbreak",
+      "label": null,
+      "slice": "markdown",
+      "provenance": "Original synthetic behavior fixture authored during remediation, 2026-10-10. No reliable authorship label is claimed.",
+      "license": "MIT",
+      "expected": {
+        "verdict": "clean",
+        "status": 0
+      }
+    },
+    {
+      "id": "no-cross-block",
+      "file": "no-cross-block.md",
+      "split": "regression",
+      "source_group": "no-cross-block",
+      "label": null,
+      "slice": "markdown",
+      "provenance": "Original synthetic behavior fixture authored during remediation, 2026-10-10. No reliable authorship label is claimed.",
+      "license": "MIT",
+      "expected": {
+        "verdict": "clean",
+        "status": 0
+      }
+    },
+    {
+      "id": "welsh",
+      "file": "welsh.md",
+      "split": "regression",
+      "source_group": "welsh",
+      "label": null,
+      "slice": "uncertain-language",
+      "provenance": "Original synthetic behavior fixture authored during remediation, 2026-10-10. No reliable authorship label is claimed.",
+      "license": "MIT",
+      "expected": {
+        "verdict": "clean",
+        "status": 0
+      }
+    }
+  ]
+}

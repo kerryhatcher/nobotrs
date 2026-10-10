@@ -4,11 +4,10 @@ use crate::document::Document;
 use crate::error::Error;
 use crate::score::Score;
 
-/// Which independent signal family a backend's vote belongs to (spec §2.2).
-/// One `DetectorBackend` instance produces exactly one family's vote — a tier
-/// that covers several families registers one backend instance per family,
-/// not one backend that multiplexes several (spec §2.1).
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, serde::Deserialize)]
+/// Independent signal family. Multiple backends may share a family; reduction grants at most one vote.
+#[derive(
+    Debug, Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord, serde::Deserialize, serde::Serialize,
+)]
 pub enum SignalFamily {
     Vocabulary,
     Punctuation,
@@ -21,9 +20,18 @@ pub enum SignalFamily {
 /// Distinguishes "not applicable to this input" (`Abstained`) from "something
 /// broke" (`Failed`) — both excluded from the vote count in aggregation, but
 /// `Failed` additionally surfaces as a `detect` warning (spec §2.1, §2.4).
+#[derive(Debug, serde::Serialize)]
+#[serde(tag = "status", content = "details", rename_all = "snake_case")]
 pub enum ScoreOutcome {
     Scored(Score),
-    Abstained { reason: String },
+    Incomplete {
+        score: Score,
+        reason: Error,
+        coverage: f64,
+    },
+    Abstained {
+        reason: String,
+    },
     Failed(Error),
 }
 
@@ -46,11 +54,19 @@ mod tests {
 
     struct AlwaysAbstains;
     impl DetectorBackend for AlwaysAbstains {
-        fn name(&self) -> &str { "always-abstains" }
-        fn family(&self) -> SignalFamily { SignalFamily::Vocabulary }
-        fn availability(&self) -> crate::availability::Availability { crate::availability::Availability::Ready }
+        fn name(&self) -> &str {
+            "always-abstains"
+        }
+        fn family(&self) -> SignalFamily {
+            SignalFamily::Vocabulary
+        }
+        fn availability(&self) -> crate::availability::Availability {
+            crate::availability::Availability::Ready
+        }
         fn score(&self, _doc: &Document, _deadline: Deadline) -> ScoreOutcome {
-            ScoreOutcome::Abstained { reason: "test backend".into() }
+            ScoreOutcome::Abstained {
+                reason: "test backend".into(),
+            }
         }
     }
 

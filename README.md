@@ -1,2 +1,40 @@
 # nobotrs
-A tool for detecting AI slop in text as well as creating slop free text. 
+
+An offline Rust prose linter and heuristic detector. The default build uses an embedded dictionary and six deterministic backends. It makes no network requests and requires no keys or model downloads. Findings are editing prompts, not proof of authorship.
+
+Install from the checkout with `cargo install --locked --path .`. Build with `cargo build --release --locked`. Rust 1.85 or newer is required. Code is MIT licensed; dictionary data retains its separate CC BY-SA 4.0 license (see `NOTICE` and `dictionary/LICENSE`).
+
+```sh
+nobotrs detect README.md
+printf 'delve leverage\n' | nobotrs lint - --format json
+printf 'experts\nagree\n' | nobotrs lint - --markdown
+nobotrs lint docs/one.md docs/two.md --minimum-severity high
+nobotrs analyze essay.txt --language en --format json
+nobotrs scan docs --format sarif > prose.sarif
+nobotrs config
+nobotrs guide
+```
+
+`detect` uses quorum (default 2) across independent eligible vocabulary, punctuation and burstiness families. `lint` reports individual findings and gates by minimum severity (default medium), regardless of quorum. `analyze` exposes the same raw metrics and typed backend outcomes, using detection status semantics. MTLD, readability, compression and entropy are informational and never satisfy participation. Each eligible family contributes at most one vote; backends in a family reduce to their strongest complete contribution. Current thresholds remain inherited, uncalibrated heuristics.
+
+Exit status precedence is `2` (operational error/incomplete analysis), then `1` (actionable lint findings or a flagged ensemble), then `3` (inconclusive), then `0` (completed and unflagged). Empty/code-only input is inconclusive. A clean detection means configured tells did not meet the policy; it does not establish human origin. Short prose can produce useful lint findings even when document statistics abstain. Detection of short text has limited statistical coverage, reported through per-backend abstentions.
+
+Markdown is inferred from `.md`/`.markdown`, or selected with `--markdown`. Plain-text stdin is the default. Variable-length/container fences, indented/inline code, front matter, HTML blocks, image alt text and link destinations are excluded. Visible links, headings, list items, quotations and table cells are retained. Soft breaks become spaces; entities are decoded; emphasis/link text stays adjacent. Paragraphs, headings, list items, table cells and excluded code create matching boundaries. Inline HTML comments retain rendered adjacency. Locations refer to original UTF-8 source and one-based Unicode scalar columns. Discontinuous findings provide explicit `source_ranges`; their bounding range is for navigation, not a safe contiguous edit. Context IDs reference the report's block/sentence source ranges.
+
+Automatic language applicability is **unknown**. The old closed-set whichlang guess could accept Welsh as English, so it was removed. English-specific readability and MTLD abstain unless `--language en` is supplied. Other language overrides are reported as unsupported. An override is the user's assertion, not validated recognition; short/mixed text receives no automatic supported-language guarantee. Word/sentence segmentation and syllable counts are documented approximations, not a linguistic parser.
+
+Configuration is JSON at the platform `directories::ProjectDirs` path (`$XDG_CONFIG_HOME/nobotrs/config.json` on Linux, normally `~/.config/nobotrs/config.json`). Select another file with `--config` or `NOBOTRS_CONFIG`. Precedence is CLI > environment > file > defaults. Invalid files, unknown fields, backend names, rule IDs or numeric settings are errors. `config` reports effective values and origins. See [configuration](docs/configuration.md).
+
+JSON uses schema version `1.0.0`, preserves metrics/method versions and backend abstention/failure details, and separates backend outcomes from family decisions. `complete`, `incomplete_reasons` and `analyzed_coverage` describe execution. Incomplete coverage is conservative, and oversized streams have unknown total size rather than a fabricated fraction. `emitted_findings`, `omitted_findings`, candidate audit counts, and `display_limit` describe rendering. Limiting display never changes completed policy or status. Diagnostics go to stderr. Human output is always uncolored, respecting `NO_COLOR` and pipes.
+
+Default resource budgets: 1 MiB actual input bytes, 10,000 vocabulary candidates (including rejected boundaries), 8 MiB total vocabulary candidate text, 10,000 punctuation occurrences, 5 seconds cooperative analysis, and 200 displayed findings/audit records. Use `--max-bytes`, `--max-candidates`, `--timeout-ms` and `--display-limit`. Prefix analysis, candidate exhaustion, and expired work produce status 2; retained evidence is partial. Reads can block waiting for stdin; the budget does not preempt syscalls, parser calls, regex searches, sorting, or a native computation between checks. Compression polls its reader; no hard timeout or sandbox is claimed. Scans process supported text extensions in sorted order, skip symlinks, `.git`, `target`, dependencies and virtual environments, and retain file/traversal errors.
+
+Suppression uses stable [rule IDs](docs/rule-catalog.md). `--ignore-rule embark-on-a-journey` leaves `embark` eligible at the same occurrence. Global/per-path configuration and HTML comments (`nobotrs-ignore-file`, `nobotrs-ignore-next-line`, `nobotrs-ignore-block`) suppress rules before overlap selection and family reduction. Code-fenced examples are inactive. Next-line scope is the next physical source line; block scope is the containing retained block or the next retained block for a standalone comment. Local directives affect occurrences; document-wide burstiness only supports whole-file ignores. See [configuration](docs/configuration.md) for examples and audit semantics.
+
+SARIF 2.1.0 uses original source locations, stable IDs and suppression metadata; document metrics do not get invented line locations. Display limits also limit SARIF audit results, disclosed in run properties. [Code scanning](integrations/code-scanning.yml), the pre-commit hook definition and [advisory hook](scripts/advisory-hook.py) call the same installed binary. The advisory adapter translates Rust status 1 to the host's status 2 nudge; Rust status 2 is a tool failure and remains advisory silence with diagnostics. Install the binary before using the system pre-commit hook.
+
+There is no validated authorship accuracy or calibrated probability claim. Common vocabulary, uniform rhythm or em dashes can occur in human prose; generated text can evade these rules. The [evaluation runner](docs/evaluation/README.md) separates reusable behavior regressions from licensed development/validation selection and frozen independent release evaluation. A curated independent corpus, optional detection models, MCP/TUI and local-provider humanization remain later acceptance gates in the [remediation plan](docs/superpowers/plans/2026-10-10-nobotrs-review-remediation.md).
+
+Dictionary contributions should retain IDs, metadata and licensing, pass schema/regex validation, and include boundary/overlap regressions. Changing voting thresholds or adding default voting signals requires development/validation evidence and a fresh independent release assessment when test results inform a revision.
+
+Verify with `cargo fmt --check`, `cargo clippy --all-targets --locked -- -D warnings` and `cargo test --locked`. See [release measurements](docs/core-validation.md) and [handoff](HANDOFF.md) for the implemented milestone and remaining gates.

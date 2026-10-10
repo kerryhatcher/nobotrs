@@ -3,21 +3,19 @@
 /// Recoverable vs. unrecoverable failure modes a `DetectorBackend` can surface.
 /// Split explicitly so callers (the `config` command, `detect`'s `warnings`
 /// surface, log output) can distinguish "retry/reconfigure" from "reinstall."
-#[allow(dead_code)] // Temporary: consumed starting in Task 3
-#[derive(Debug, Clone, PartialEq)]
+#[derive(Debug, Clone, PartialEq, serde::Serialize)]
 pub enum Error {
+    Timeout,
+    ResourceLimit(String),
     ModelMissing,
-    #[allow(dead_code)] // Temporary: consumed starting in Task 3
     ModelLoadFailed(String),
     ChecksumMismatch,
     NetworkError(String),
-    #[allow(dead_code)] // Temporary: consumed starting in Task 3
     ConfigError(String),
     InternalError(String),
 }
 
 impl Error {
-    #[allow(dead_code)] // Temporary: consumed starting in Task 3
     pub fn is_recoverable(&self) -> bool {
         !matches!(self, Error::ChecksumMismatch | Error::InternalError(_))
     }
@@ -26,7 +24,12 @@ impl Error {
 impl std::fmt::Display for Error {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            Error::ModelMissing => write!(f, "model missing (run `nobotrs config` to download)"),
+            Error::Timeout => write!(f, "analysis deadline exceeded"),
+            Error::ResourceLimit(msg) => write!(f, "resource limit: {msg}"),
+            Error::ModelMissing => write!(
+                f,
+                "model missing; optional model installation is not available"
+            ),
             Error::ModelLoadFailed(msg) => write!(f, "model load failed: {msg}"),
             Error::ChecksumMismatch => write!(f, "checksum mismatch (reinstall required)"),
             Error::NetworkError(msg) => write!(f, "network error: {msg}"),

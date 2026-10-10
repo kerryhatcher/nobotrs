@@ -2,6 +2,8 @@
 name = "nobotrs"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.85"
+include = ["src/**", "dictionary/**", "tests/**", "scripts/**", "integrations/**", "docs/*.md", "docs/evaluation/**", "Cargo.toml", "Cargo.lock", "build.rs", "README.md", "HANDOFF.md", "docs/superpowers/plans/2026-10-10-nobotrs-review-remediation.md", "LICENSE", "NOTICE", ".pre-commit-hooks.yaml"]
 license = "MIT"
 description = "Detects AI-generated text and lints prose for AI-writing tells"
 repository = "https://github.com/kerryhatcher/nobotrs"
@@ -17,12 +19,10 @@ serde_json = "1"
 aho-corasick = "1"
 regex = "1"
 unicode-segmentation = "1"
-statrs = "0.17"
 lzma-rs = "0.3"
-whichlang = "0.1"
-owo-colors = { version = "4", features = ["supports-colors"] }
 directories = "5"
 walkdir = "2"
+pulldown-cmark = { version = "0.13", default-features = false }
 
 [profile.release]
 lto = true

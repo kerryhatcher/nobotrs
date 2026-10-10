@@ -38,8 +38,12 @@ pub struct DictionaryEntry {
     pub notes: Option<String>,
 }
 
-fn default_false() -> bool { false }
-fn default_true() -> bool { true }
+fn default_false() -> bool {
+    false
+}
+fn default_true() -> bool {
+    true
+}
 
 #[derive(Debug, Clone, Deserialize)]
 pub struct Dictionary {
@@ -51,8 +55,28 @@ pub struct Dictionary {
 const EMBEDDED_JSON: &str = include_str!("../dictionary/entries.json");
 
 impl Dictionary {
+    pub fn validate(&self) -> Result<(), String> {
+        if self.schema_version != "1.0.0" {
+            return Err("unsupported dictionary schema".into());
+        }
+        let mut ids = std::collections::HashSet::new();
+        for e in &self.entries {
+            if e.id.is_empty() || !ids.insert(&e.id) {
+                return Err(format!("empty or duplicate rule ID: {}", e.id));
+            }
+            if e.pattern.is_empty() || e.variants.iter().any(String::is_empty) {
+                return Err(format!("empty pattern: {}", e.id));
+            }
+            if e.family != SignalFamily::Vocabulary {
+                return Err(format!("invalid dictionary family: {}", e.id));
+            }
+        }
+        Ok(())
+    }
+
     pub fn embedded() -> Dictionary {
-        Self::from_json_str(EMBEDDED_JSON).expect("embedded dictionary/entries.json must be valid at compile time")
+        Self::from_json_str(EMBEDDED_JSON)
+            .expect("embedded dictionary/entries.json must be valid at compile time")
     }
 
     pub fn from_json_str(json: &str) -> Result<Dictionary, serde_json::Error> {
@@ -63,7 +87,10 @@ impl Dictionary {
     /// per spec §8/§11.3: a deterministic size bound, not a wall-clock timing
     /// check. Returns the offending entry `id` on the first failure so a bad
     /// contributed pattern fails CI with an actionable message.
-    pub fn compiled_regexes(&self, size_limit: usize) -> Result<Vec<(String, regex::Regex)>, String> {
+    pub fn compiled_regexes(
+        &self,
+        size_limit: usize,
+    ) -> Result<Vec<(String, regex::Regex)>, String> {
         self.entries
             .iter()
             .filter(|e| matches!(e.match_type, MatchType::Regex))
@@ -93,7 +120,12 @@ mod tests {
     fn every_entry_family_is_vocabulary() {
         let dict = Dictionary::embedded();
         for entry in &dict.entries {
-            assert_eq!(entry.family, crate::backend::SignalFamily::Vocabulary, "entry {} has non-Vocabulary family", entry.id);
+            assert_eq!(
+                entry.family,
+                crate::backend::SignalFamily::Vocabulary,
+                "entry {} has non-Vocabulary family",
+                entry.id
+            );
         }
     }
 
@@ -104,14 +136,18 @@ mod tests {
             {"id":"x","kind":"word","match_type":"exact","pattern":"x","family":"Vocabulary","category":"vocabulary","suggested_replacements":[],"model_era":[],"source":null,"notes":null}
         ]}"#;
         let dict: Dictionary = Dictionary::from_json_str(json).unwrap();
-        assert_eq!(dict.entries[0].case_sensitive, false);
-        assert_eq!(dict.entries[0].whole_word, true);
+        assert!(!dict.entries[0].case_sensitive);
+        assert!(dict.entries[0].whole_word);
     }
 
     #[test]
     fn all_regex_entries_compile_under_size_limit() {
         let dict = Dictionary::embedded();
         let compiled = dict.compiled_regexes(1 << 16); // 64 KiB, the CI-asserted bound (spec §8, §11.3)
-        assert!(compiled.is_ok(), "a dictionary regex failed to compile: {:?}", compiled.err());
+        assert!(
+            compiled.is_ok(),
+            "a dictionary regex failed to compile: {:?}",
+            compiled.err()
+        );
     }
 }

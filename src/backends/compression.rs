@@ -29,14 +29,57 @@ pub struct Compression;
 /// reference implementation's preset-6 ratio. Since v1 treats `Compression`
 /// as evidence-only (never above `VoteStrength::None`), this does not affect
 /// any threshold decision.
+#[cfg(test)]
 pub(crate) fn compression_ratio(raw: &[u8]) -> f64 {
-    if raw.is_empty() {
-        return 1.0;
+    compression_ratio_bounded(raw, Deadline::new(std::time::Duration::from_secs(10))).unwrap()
+}
+fn compression_ratio_bounded(raw: &[u8], deadline: Deadline) -> Result<f64, crate::error::Error> {
+    use std::io::{BufRead, Read};
+    struct BudgetReader<'a> {
+        raw: &'a [u8],
+        deadline: Deadline,
     }
-    let mut compressed = Vec::new();
-    lzma_rs::lzma_compress(&mut &raw[..], &mut compressed)
-        .expect("lzma compression should not fail on valid input");
-    compressed.len() as f64 / raw.len() as f64
+    impl Read for BudgetReader<'_> {
+        fn read(&mut self, out: &mut [u8]) -> std::io::Result<usize> {
+            if self.deadline.expired() {
+                return Err(std::io::Error::new(
+                    std::io::ErrorKind::TimedOut,
+                    "analysis deadline exceeded",
+                ));
+            }
+            self.raw.read(out)
+        }
+    }
+    impl BufRead for BudgetReader<'_> {
+        fn fill_buf(&mut self) -> std::io::Result<&[u8]> {
+            if self.deadline.expired() {
+                return Err(std::io::Error::new(
+                    std::io::ErrorKind::TimedOut,
+                    "analysis deadline exceeded",
+                ));
+            }
+            Ok(self.raw)
+        }
+        fn consume(&mut self, n: usize) {
+            self.raw = &self.raw[n..];
+        }
+    }
+    if raw.is_empty() {
+        return Ok(1.0);
+    }
+    let mut compressed = vec![];
+    if let Err(error) = lzma_rs::lzma_compress(&mut BudgetReader { raw, deadline }, &mut compressed)
+    {
+        return Err(if deadline.expired() {
+            crate::error::Error::Timeout
+        } else {
+            crate::error::Error::InternalError(error.to_string())
+        });
+    }
+    if deadline.expired() {
+        return Err(crate::error::Error::Timeout);
+    }
+    Ok(compressed.len() as f64 / raw.len() as f64)
 }
 
 /// Shannon entropy (bits) over the document's word-frequency distribution —
@@ -71,8 +114,11 @@ impl DetectorBackend for Compression {
         Availability::Ready
     }
 
-    fn score(&self, doc: &Document, _deadline: Deadline) -> ScoreOutcome {
-        let word_count = doc.raw.split_whitespace().count();
+    fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        let word_count = doc.words.len();
         if word_count < MIN_WORDS_FOR_STATS {
             return ScoreOutcome::Abstained {
                 reason: format!(
@@ -81,28 +127,40 @@ impl DetectorBackend for Compression {
             };
         }
 
-        let prose: String = doc
-            .prose_spans
-            .iter()
-            .map(|s| &doc.raw[s.clone()])
-            .collect::<Vec<_>>()
-            .join(" ");
-        let ratio = compression_ratio(prose.as_bytes());
+        let prose = &doc.prose;
+        let ratio = match compression_ratio_bounded(prose.as_bytes(), deadline) {
+            Ok(ratio) => ratio,
+            Err(error) => return ScoreOutcome::Failed(error),
+        };
         let words: Vec<&str> = prose.split_whitespace().collect();
-        let _entropy = entropy_per_token(&words); // reported via evidence/log surface wired in Task 16-17's output formatting
+        let entropy = entropy_per_token(&words);
 
         // Evidence-only in v1 (spec §2.2, §7 item 5): always VoteStrength::None.
-        // Lower ratio (more compressible/predictable) maps toward lower human_probability.
-        let human_probability = ratio.clamp(0.0, 1.0) as f32;
 
-        ScoreOutcome::Scored(Score::new(
-            "compression".to_string(),
-            SignalFamily::Compression,
-            human_probability,
-            ConfidenceTier::Low,
-            VoteStrength::None,
-            vec![],
-        ))
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        ScoreOutcome::Scored(
+            Score::new(
+                "compression".to_string(),
+                SignalFamily::Compression,
+                ConfidenceTier::Low,
+                VoteStrength::None,
+                vec![],
+            )
+            .metric(
+                "lzma_ratio",
+                ratio,
+                "compressed-bytes/prose-bytes",
+                "lzma-rs-0.3-default",
+            )
+            .metric(
+                "token_entropy",
+                entropy,
+                "bits/token",
+                "shannon-whitespace-case-sensitive-v1",
+            ),
+        )
     }
 }
 
@@ -121,14 +179,20 @@ mod tests {
         let owned: Vec<String> = (0..16).map(|i| format!("t{i}")).collect();
         let tokens: Vec<&str> = owned.iter().map(|s| s.as_str()).collect();
         let entropy = entropy_per_token(&tokens);
-        assert!((entropy - 4.0).abs() < 1e-9, "16 equally-likely unique tokens should have entropy log2(16)=4.0, got {entropy}");
+        assert!(
+            (entropy - 4.0).abs() < 1e-9,
+            "16 equally-likely unique tokens should have entropy log2(16)=4.0, got {entropy}"
+        );
     }
 
     #[test]
     fn compression_ratio_of_highly_repetitive_text_is_low() {
         let repetitive = "the same words repeat over and over again ".repeat(50);
         let ratio = compression_ratio(repetitive.as_bytes());
-        assert!(ratio < 0.5, "highly repetitive text should compress well (low ratio), got {ratio}");
+        assert!(
+            ratio < 0.5,
+            "highly repetitive text should compress well (low ratio), got {ratio}"
+        );
     }
 
     #[test]
@@ -139,7 +203,10 @@ mod tests {
         let backend = Compression;
         let doc = Document::from_stdin_text("short text".to_string(), false);
         let deadline = Deadline::new(std::time::Duration::from_secs(1));
-        assert!(matches!(backend.score(&doc, deadline), ScoreOutcome::Abstained { .. }));
+        assert!(matches!(
+            backend.score(&doc, deadline),
+            ScoreOutcome::Abstained { .. }
+        ));
     }
 
     #[test]

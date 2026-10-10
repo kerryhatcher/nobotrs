@@ -16,7 +16,9 @@ pub struct Readability;
 /// (see Task 12's Step 1/2), since matching the standard Flesch-Kincaid
 /// formula's grade-level ballpark is the actual correctness bar (spec §8, §10).
 pub(crate) fn count_syllables(word: &str) -> usize {
-    let word = word.to_lowercase();
+    let word = word
+        .trim_matches(|c: char| !c.is_alphabetic())
+        .to_lowercase();
     let is_vowel = |c: char| matches!(c, 'a' | 'e' | 'i' | 'o' | 'u' | 'y');
     let mut count = 0usize;
     let mut prev_was_vowel = false;
@@ -33,13 +35,15 @@ pub(crate) fn count_syllables(word: &str) -> usize {
     count.max(1)
 }
 
+#[cfg(test)]
 fn count_sentences(text: &str) -> usize {
-    let count = text.matches(['.', '!', '?']).count();
-    count.max(1)
+    let blocks = std::iter::once(0..text.len()).collect::<Vec<_>>();
+    crate::document::sentence_ranges(text, &blocks).len().max(1)
 }
 
+#[cfg(test)]
 pub(crate) fn flesch_kincaid_grade(text: &str) -> f64 {
-    let words: Vec<&str> = text.split_whitespace().collect();
+    let words: Vec<&str> = unicode_segmentation::UnicodeSegmentation::unicode_words(text).collect();
     let word_count = words.len().max(1) as f64;
     let sentence_count = count_sentences(text) as f64;
     let syllable_count: usize = words.iter().map(|w| count_syllables(w)).sum();
@@ -58,8 +62,11 @@ impl DetectorBackend for Readability {
         Availability::Ready
     }
 
-    fn score(&self, doc: &Document, _deadline: Deadline) -> ScoreOutcome {
-        let word_count = doc.raw.split_whitespace().count();
+    fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        let word_count = doc.words.len();
         if word_count < MIN_WORDS_FOR_STATS {
             return ScoreOutcome::Abstained {
                 reason: format!(
@@ -68,35 +75,43 @@ impl DetectorBackend for Readability {
             };
         }
 
-        let prose: String = doc
-            .prose_spans
-            .iter()
-            .map(|s| &doc.raw[s.clone()])
-            .collect::<Vec<_>>()
-            .join(" ");
+        let prose = &doc.prose;
 
-        if let Ok(lang) = std::panic::catch_unwind(|| whichlang::detect_language(&prose)) {
-            if lang != whichlang::Lang::Eng {
-                return ScoreOutcome::Abstained {
-                    reason: "non-English text; Flesch-Kincaid is English-syllable-tuned"
-                        .to_string(),
-                };
-            }
+        if !doc.english_supported() {
+            return ScoreOutcome::Abstained {
+                reason: doc.language.reason.clone(),
+            };
         }
 
-        let grade = flesch_kincaid_grade(&prose);
+        let syllables: usize = doc
+            .words
+            .iter()
+            .map(|r| count_syllables(&prose[r.clone()]))
+            .sum();
+        let grade = 0.39 * doc.words.len() as f64 / doc.sentences.len().max(1) as f64
+            + 11.8 * syllables as f64 / doc.words.len() as f64
+            - 15.59;
 
         // Evidence-only in v1 (spec §2.2, §7 item 5): always VoteStrength::None.
-        let human_probability = (1.0 - (grade / 20.0).clamp(0.0, 1.0)) as f32;
 
-        ScoreOutcome::Scored(Score::new(
-            "readability".to_string(),
-            SignalFamily::Readability,
-            human_probability,
-            ConfidenceTier::Low,
-            VoteStrength::None,
-            vec![],
-        ))
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        ScoreOutcome::Scored(
+            Score::new(
+                "readability".to_string(),
+                SignalFamily::Readability,
+                ConfidenceTier::Low,
+                VoteStrength::None,
+                vec![],
+            )
+            .metric(
+                "flesch_kincaid_grade",
+                grade,
+                "grade",
+                "vowel-groups/shared-segmentation-v1",
+            ),
+        )
     }
 }
 
@@ -139,7 +154,10 @@ mod tests {
         let backend = Readability;
         let doc = Document::from_stdin_text("just a few words".to_string(), false);
         let deadline = Deadline::new(std::time::Duration::from_secs(1));
-        assert!(matches!(backend.score(&doc, deadline), ScoreOutcome::Abstained { .. }));
+        assert!(matches!(
+            backend.score(&doc, deadline),
+            ScoreOutcome::Abstained { .. }
+        ));
     }
 
     #[test]

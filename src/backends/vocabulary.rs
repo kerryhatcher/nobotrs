@@ -1,239 +1,274 @@
-// src/backends/vocabulary.rs
+use crate::{
+    availability::Availability,
+    backend::{DetectorBackend, ScoreOutcome, SignalFamily},
+    deadline::Deadline,
+    dictionary::{Dictionary, MatchType},
+    document::Document,
+    error::Error,
+    score::{ConfidenceTier, Score, VoteStrength},
+};
 use aho_corasick::{AhoCorasick, AhoCorasickBuilder, MatchKind};
 use regex::{Regex, RegexBuilder};
-
-use crate::availability::Availability;
-use crate::backend::{DetectorBackend, ScoreOutcome, SignalFamily};
-use crate::deadline::Deadline;
-use crate::dictionary::{Dictionary, MatchType};
-use crate::document::Document;
-use crate::score::{ConfidenceTier, Evidence, Score, Severity, VoteStrength};
-
-const REGEX_SIZE_LIMIT: usize = 1 << 16; // matches the CI-asserted bound (Task 7)
-
-struct ExactEntry {
-    #[allow(dead_code)] // Not yet consumed: reserved for per-entry diagnostics/reporting.
+use std::collections::BTreeMap;
+const REGEX_SIZE_LIMIT: usize = 1 << 16;
+#[derive(Clone)]
+struct Entry {
     id: String,
     suggestion: Option<String>,
     whole_word: bool,
 }
-
+struct ExactPath {
+    automaton: AhoCorasick,
+    entries: Vec<Entry>,
+}
 struct RegexEntry {
-    #[allow(dead_code)] // Not yet consumed: reserved for per-entry diagnostics/reporting.
-    id: String,
-    suggestion: Option<String>,
+    entry: Entry,
     regex: Regex,
 }
-
 pub struct Vocabulary {
-    automaton: AhoCorasick,
-    exact_entries: Vec<ExactEntry>, // parallel to automaton's pattern order
-    regex_entries: Vec<RegexEntry>,
+    exact: Vec<ExactPath>,
+    regex: Vec<RegexEntry>,
 }
-
-struct RawHit {
-    start: usize,
-    end: usize,
-    matched_text: String,
-    suggestion: Option<String>,
-}
-
 impl Vocabulary {
-    /// Builds the aho-corasick automaton and compiles every regex-kind
-    /// dictionary entry. Fails fast here (rather than lazily at score time)
-    /// so a broken contributed pattern surfaces as a single, attributable
-    /// construction error instead of a per-document runtime surprise.
-    pub fn new(dictionary: Dictionary) -> Result<Vocabulary, String> {
-        let mut patterns = Vec::new();
-        let mut exact_entries = Vec::new();
-        let mut regex_entries = Vec::new();
-
-        for entry in &dictionary.entries {
-            match entry.match_type {
-                MatchType::Exact => {
-                    let mut forms = vec![entry.pattern.clone()];
-                    forms.extend(entry.variants.clone());
-                    for form in forms {
-                        patterns.push(if entry.case_sensitive { form } else { form.to_lowercase() });
-                        exact_entries.push(ExactEntry {
-                            id: entry.id.clone(),
-                            suggestion: entry.suggested_replacements.first().cloned(),
-                            whole_word: entry.whole_word,
-                        });
-                    }
+    pub fn new(dictionary: Dictionary) -> Result<Self, String> {
+        dictionary.validate()?;
+        let mut exact = vec![];
+        for sensitive in [false, true] {
+            let mut entries = vec![];
+            let mut patterns = vec![];
+            for e in &dictionary.entries {
+                if !matches!(e.match_type, MatchType::Exact) || e.case_sensitive != sensitive {
+                    continue;
                 }
-                MatchType::Regex => {
-                    let regex = RegexBuilder::new(&entry.pattern)
-                        .case_insensitive(!entry.case_sensitive)
-                        .size_limit(REGEX_SIZE_LIMIT)
-                        .build()
-                        .map_err(|err| format!("entry '{}' failed to compile: {err}", entry.id))?;
-                    regex_entries.push(RegexEntry {
-                        id: entry.id.clone(),
-                        suggestion: entry.suggested_replacements.first().cloned(),
-                        regex,
+                for pattern in std::iter::once(&e.pattern).chain(&e.variants) {
+                    patterns.push(pattern.clone());
+                    entries.push(Entry {
+                        id: e.id.clone(),
+                        suggestion: e.suggested_replacements.first().cloned(),
+                        whole_word: e.whole_word,
                     });
                 }
             }
-        }
-
-        // Dictionary entries default case_sensitive:false and none of the
-        // real 46 entries opt into case_sensitive:true (Task 6), so it's
-        // safe in v1 to fold every exact pattern into a single
-        // ascii-case-insensitive automaton with lowercased pattern text
-        // above. A future case_sensitive:true entry would need a second,
-        // case-sensitive automaton — out of scope for Task 8.
-        let automaton = AhoCorasickBuilder::new()
-            .match_kind(MatchKind::LeftmostLongest)
-            .ascii_case_insensitive(true)
-            .build(&patterns)
-            .map_err(|err| format!("failed to build vocabulary automaton: {err}"))?;
-
-        Ok(Vocabulary { automaton, exact_entries, regex_entries })
-    }
-
-    /// Runs both engines over `prose_text` and merges their hits under
-    /// longest-match-wins (spec Sec 11.3): when two hits' byte ranges
-    /// overlap at all — full containment or a partial "crossing" overlap —
-    /// the narrower one is dropped, regardless of which engine produced it.
-    fn raw_hits(&self, prose_text: &str) -> Vec<RawHit> {
-        let mut hits = Vec::new();
-
-        for m in self.automaton.find_iter(prose_text) {
-            let entry = &self.exact_entries[m.pattern().as_usize()];
-            if entry.whole_word && !is_word_bounded(prose_text, m.start(), m.end()) {
-                continue;
+            if !patterns.is_empty() {
+                let automaton = AhoCorasickBuilder::new()
+                    .match_kind(MatchKind::Standard)
+                    .ascii_case_insensitive(!sensitive)
+                    .build(patterns)
+                    .map_err(|e| e.to_string())?;
+                exact.push(ExactPath { automaton, entries });
             }
-            hits.push(RawHit {
-                start: m.start(),
-                end: m.end(),
-                matched_text: prose_text[m.start()..m.end()].to_string(),
-                suggestion: entry.suggestion.clone(),
-            });
         }
-
-        for entry in &self.regex_entries {
-            for m in entry.regex.find_iter(prose_text) {
-                hits.push(RawHit {
-                    start: m.start(),
-                    end: m.end(),
-                    matched_text: m.as_str().to_string(),
-                    suggestion: entry.suggestion.clone(),
+        let mut regex = vec![];
+        for e in &dictionary.entries {
+            if matches!(e.match_type, MatchType::Regex) {
+                let re = RegexBuilder::new(&e.pattern)
+                    .case_insensitive(!e.case_sensitive)
+                    .size_limit(REGEX_SIZE_LIMIT)
+                    .build()
+                    .map_err(|err| format!("entry '{}': {err}", e.id))?;
+                if re.is_match("") {
+                    return Err(format!("entry '{}' matches empty input", e.id));
+                }
+                regex.push(RegexEntry {
+                    entry: Entry {
+                        id: e.id.clone(),
+                        suggestion: e.suggested_replacements.first().cloned(),
+                        whole_word: e.whole_word,
+                    },
+                    regex: re,
                 });
             }
         }
-
-        // Longest-match-wins: sort by start ascending, then by end
-        // descending, so the widest candidate at each start point is seen
-        // first. Drop `hit` if it overlaps *any* already-kept hit at all —
-        // not just full containment. A general interval-overlap check is
-        // required here: two hits can "cross" (e.g. [0,10) and [5,15)) with
-        // neither containing the other, and a containment-only check would
-        // let both survive as overlapping evidence. Full containment (the
-        // common case with the current dictionary, e.g. an exact "embark"
-        // hit inside a longer "embark on a journey" phrase hit) is just the
-        // special case of overlap where one span's bounds sit entirely
-        // inside the other's.
-        hits.sort_by_key(|h| (h.start, std::cmp::Reverse(h.end)));
-        let mut kept: Vec<RawHit> = Vec::new();
-        for hit in hits {
-            let overlaps_kept = kept.iter().any(|k| k.start < hit.end && hit.start < k.end);
-            if !overlaps_kept {
-                kept.push(hit);
+        Ok(Self { exact, regex })
+    }
+    pub fn score_limited(&self, doc: &Document, deadline: Deadline, cap: usize) -> ScoreOutcome {
+        let mut candidates = vec![];
+        let mut examined = 0usize;
+        let mut candidate_bytes = 0usize;
+        let mut failure = None;
+        let mut covered = 0;
+        'blocks: for span in &doc.prose_spans {
+            let text = &doc.prose[span.clone()];
+            for path in &self.exact {
+                for m in path.automaton.find_overlapping_iter(text) {
+                    if deadline.expired() {
+                        failure = Some(Error::Timeout);
+                        break 'blocks;
+                    }
+                    examined += 1;
+                    if examined > cap {
+                        failure = Some(Error::ResourceLimit("vocabulary candidate budget".into()));
+                        break 'blocks;
+                    }
+                    let entry = &path.entries[m.pattern().as_usize()];
+                    if !entry.whole_word || is_word_bounded(text, m.start(), m.end()) {
+                        candidate_bytes += m.end() - m.start();
+                        if candidate_bytes > 8_388_608 {
+                            failure =
+                                Some(Error::ResourceLimit("candidate text byte budget".into()));
+                            break 'blocks;
+                        }
+                        candidates.push(doc.finding(
+                            span.start + m.start()..span.start + m.end(),
+                            &entry.id,
+                            entry.suggestion.clone(),
+                        ));
+                    }
+                }
             }
+            for re in &self.regex {
+                let mut pos = 0;
+                while pos < text.len() {
+                    if deadline.expired() {
+                        failure = Some(Error::Timeout);
+                        break 'blocks;
+                    }
+                    let Some(m) = re.regex.find_at(text, pos) else {
+                        break;
+                    };
+                    examined += 1;
+                    if examined > cap {
+                        failure = Some(Error::ResourceLimit("vocabulary candidate budget".into()));
+                        break 'blocks;
+                    }
+                    if m.start() != m.end()
+                        && (!re.entry.whole_word || is_word_bounded(text, m.start(), m.end()))
+                    {
+                        candidate_bytes += m.end() - m.start();
+                        if candidate_bytes > 8_388_608 {
+                            failure =
+                                Some(Error::ResourceLimit("candidate text byte budget".into()));
+                            break 'blocks;
+                        }
+                        candidates.push(doc.finding(
+                            span.start + m.start()..span.start + m.end(),
+                            &re.entry.id,
+                            re.entry.suggestion.clone(),
+                        ));
+                    }
+                    // Within-rule overlaps enumerate every possible starting position. Regex alternation
+                    // retains Rust regex's leftmost-first choice at a given start (not all alternatives).
+                    pos = m.start() + text[m.start()..].chars().next().map_or(1, char::len_utf8);
+                }
+            }
+            covered = span.end;
         }
-        kept
-    }
-}
-
-/// A whole-word match requires non-alphanumeric (or absent) boundaries on
-/// both sides, so e.g. "harness" does not match inside "harnessed".
-fn is_word_bounded(text: &str, start: usize, end: usize) -> bool {
-    let before_ok = text[..start].chars().next_back().map(|c| !c.is_alphanumeric()).unwrap_or(true);
-    let after_ok = text[end..].chars().next().map(|c| !c.is_alphanumeric()).unwrap_or(true);
-    before_ok && after_ok
-}
-
-/// Converts a byte offset within `text` into 1-based (line, column), where
-/// "column" counts chars (not bytes) since the last newline.
-fn line_and_column(text: &str, byte_offset: usize) -> (u32, u32) {
-    let mut line = 1u32;
-    let mut col = 1u32;
-    for ch in text[..byte_offset].chars() {
-        if ch == '\n' {
-            line += 1;
-            col = 1;
+        if deadline.expired() {
+            failure.get_or_insert(Error::Timeout);
+        }
+        candidates.sort_by(|a, b| {
+            (a.prose_offset.start, a.prose_offset.end, &a.rule_id).cmp(&(
+                b.prose_offset.start,
+                b.prose_offset.end,
+                &b.rule_id,
+            ))
+        });
+        candidates.dedup_by(|a, b| a.rule_id == b.rule_id && a.prose_offset == b.prose_offset);
+        let mut score = Score::new(
+            "vocabulary".into(),
+            SignalFamily::Vocabulary,
+            ConfidenceTier::Medium,
+            VoteStrength::None,
+            vec![],
+        );
+        score.candidates = candidates;
+        select_effective(&mut score);
+        if let Some(reason) = failure {
+            score.voting_eligible = false;
+            ScoreOutcome::Incomplete {
+                score,
+                reason,
+                coverage: covered as f64 / doc.prose.len().max(1) as f64,
+            }
         } else {
-            col += 1;
+            ScoreOutcome::Scored(score)
         }
     }
-    (line, col)
 }
-
+fn is_word_bounded(text: &str, start: usize, end: usize) -> bool {
+    let word = |c: char| c.is_alphanumeric() || c == '_';
+    !text[..start].chars().next_back().is_some_and(word)
+        && !text[end..].chars().next().is_some_and(word)
+}
+/// Suppression must already have been applied to candidates. O(n log n) interval selection.
+pub fn select_effective(score: &mut Score) {
+    let mut order: Vec<_> = (0..score.candidates.len())
+        .filter(|&i| score.candidates[i].suppression.is_none())
+        .collect();
+    order.sort_by(|&a, &b| {
+        let a = &score.candidates[a];
+        let b = &score.candidates[b];
+        (
+            std::cmp::Reverse(a.prose_offset.len()),
+            a.prose_offset.start,
+            &a.rule_id,
+        )
+            .cmp(&(
+                std::cmp::Reverse(b.prose_offset.len()),
+                b.prose_offset.start,
+                &b.rule_id,
+            ))
+    });
+    let mut kept: BTreeMap<usize, usize> = BTreeMap::new();
+    for c in &mut score.candidates {
+        c.disposition = if c.suppression.is_some() {
+            "suppressed"
+        } else {
+            "overlap_excluded"
+        }
+        .into();
+    }
+    for i in order {
+        let c = &mut score.candidates[i];
+        let r = &c.prose_offset;
+        let prev = kept
+            .range(..=r.start)
+            .next_back()
+            .is_some_and(|(_, end)| *end > r.start);
+        let next = kept
+            .range(r.start..)
+            .next()
+            .is_some_and(|(start, _)| *start < r.end);
+        if !prev && !next {
+            kept.insert(r.start, r.end);
+            c.disposition = "selected".into();
+        }
+    }
+    score.evidence = score
+        .candidates
+        .iter()
+        .filter(|c| c.disposition == "selected")
+        .cloned()
+        .collect();
+    score.evidence.sort_by_key(|c| c.prose_offset.start);
+    score.vote = match score.evidence.len() {
+        4.. => VoteStrength::Strong,
+        2.. => VoteStrength::Suspicious,
+        _ => VoteStrength::None,
+    };
+    score.metrics.insert(
+        "effective_occurrences".into(),
+        crate::score::Metric {
+            value: score.evidence.len() as f64,
+            unit: "occurrences".into(),
+            method: "suppression-before-longest-selection-v1".into(),
+        },
+    );
+}
 impl DetectorBackend for Vocabulary {
     fn name(&self) -> &str {
         "vocabulary"
     }
-
     fn family(&self) -> SignalFamily {
         SignalFamily::Vocabulary
     }
-
     fn availability(&self) -> Availability {
         Availability::Ready
     }
-
-    fn score(&self, doc: &Document, _deadline: Deadline) -> ScoreOutcome {
-        let mut evidence = Vec::new();
-        let mut total_hits = 0usize;
-
-        for span in &doc.prose_spans {
-            let prose_text = &doc.raw[span.clone()];
-            for hit in self.raw_hits(prose_text) {
-                total_hits += 1;
-                let raw_start = span.start + hit.start;
-                let raw_end = span.start + hit.end;
-                let (line, column) = line_and_column(&doc.raw, raw_start);
-                evidence.push(Evidence {
-                    raw_offset: raw_start..raw_end,
-                    prose_offset: hit.start..hit.end,
-                    line,
-                    column,
-                    matched_text: hit.matched_text,
-                    severity: Severity::Medium,
-                    suggestion: hit.suggestion,
-                });
-            }
-        }
-
-        // Ported thresholds, verified directly against check_ai_tells.py:
-        // total_hits combines both engines' hits into the single
-        // Vocabulary family vote (spec Sec 2.2).
-        let vote = if total_hits >= 4 {
-            VoteStrength::Strong
-        } else if total_hits >= 2 {
-            VoteStrength::Suspicious
-        } else {
-            VoteStrength::None
-        };
-
-        let human_probability = match vote {
-            VoteStrength::Strong => 0.1,
-            VoteStrength::Suspicious => 0.4,
-            VoteStrength::None => 0.9,
-        };
-
-        ScoreOutcome::Scored(Score::new(
-            "vocabulary".to_string(),
-            SignalFamily::Vocabulary,
-            human_probability,
-            ConfidenceTier::Medium,
-            vote,
-            evidence,
-        ))
+    fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        self.score_limited(doc, deadline, 10_000)
     }
 }
-
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -347,47 +382,38 @@ mod tests {
         // longer phrase hit — a genuine overlap, not a hypothetical one.
         // Longest-match-wins (spec Sec 11.3) must suppress the shorter,
         // contained "embark" hit so no two evidence entries overlap.
-        let score = score_text("The team decided to embark on a journey toward better documentation.");
+        let score =
+            score_text("The team decided to embark on a journey toward better documentation.");
         assert!(
             !score.evidence.is_empty(),
             "expected at least one evidence entry from the overlapping matches"
         );
         for (i, a) in score.evidence.iter().enumerate() {
             for b in score.evidence.iter().skip(i + 1) {
-                let overlaps = a.raw_offset.start < b.raw_offset.end && b.raw_offset.start < a.raw_offset.end;
-                assert!(!overlaps, "evidence spans {:?} and {:?} overlap", a.raw_offset, b.raw_offset);
+                let overlaps =
+                    a.raw_offset.start < b.raw_offset.end && b.raw_offset.start < a.raw_offset.end;
+                assert!(
+                    !overlaps,
+                    "evidence spans {:?} and {:?} overlap",
+                    a.raw_offset, b.raw_offset
+                );
             }
         }
     }
 
     #[test]
     fn longest_match_wins_suppresses_crossing_overlap() {
-        // Regression test (post-review): a *crossing* overlap is a pair of
-        // spans where neither contains the other, e.g. [0,5) and [3,8]. A
-        // containment-only check (`k.start <= hit.start && hit.end <=
-        // k.end`) lets both survive, since neither is nested inside the
-        // other — only a general interval-overlap check
-        // (`k.start < hit.end && hit.start < k.end`) catches this.
-        //
-        // Note this can't be reproduced with two aho-corasick (exact)
-        // patterns alone: `AhoCorasick::find_iter` under
-        // `MatchKind::LeftmostLongest` already scans non-overlapping —
-        // once it commits to a match it resumes scanning *after* that
-        // match's end, so a second pattern starting inside the first's
-        // span is never even yielded by the automaton. A genuine crossing
-        // overlap requires two independent engines whose scans aren't
-        // coordinated with each other, which is exactly the aho-corasick +
-        // regex combination this backend runs. This synthetic dictionary
-        // pairs a regex phrase entry matching "abcde" with an exact word
-        // entry matching "defgh"; against "abcdefgh" the regex hit is
-        // [0,5) and the exact hit is [3,8) — 0 < 8 and 3 < 5, so they
-        // overlap, but neither range contains the other.
+        // Unequal/crossing exact and regex alternatives are retained until selection.
         let dictionary = Dictionary {
             schema_version: "1.0.0".to_string(),
             dictionary_version: "test".to_string(),
-            entries: vec![regex_entry("crossing-regex", "abcde"), exact_entry("crossing-exact", "defgh")],
+            entries: vec![
+                regex_entry("crossing-regex", "abcde"),
+                exact_entry("crossing-exact", "defgh"),
+            ],
         };
-        let backend = Vocabulary::new(dictionary).expect("synthetic crossing-overlap dictionary must compile");
+        let backend = Vocabulary::new(dictionary)
+            .expect("synthetic crossing-overlap dictionary must compile");
         let doc = Document::from_stdin_text("abcdefgh".to_string(), false);
         let deadline = Deadline::new(std::time::Duration::from_secs(1));
         let score = match backend.score(&doc, deadline) {
@@ -404,8 +430,13 @@ mod tests {
         );
         for (i, a) in score.evidence.iter().enumerate() {
             for b in score.evidence.iter().skip(i + 1) {
-                let overlaps = a.raw_offset.start < b.raw_offset.end && b.raw_offset.start < a.raw_offset.end;
-                assert!(!overlaps, "evidence spans {:?} and {:?} overlap", a.raw_offset, b.raw_offset);
+                let overlaps =
+                    a.raw_offset.start < b.raw_offset.end && b.raw_offset.start < a.raw_offset.end;
+                assert!(
+                    !overlaps,
+                    "evidence spans {:?} and {:?} overlap",
+                    a.raw_offset, b.raw_offset
+                );
             }
         }
     }

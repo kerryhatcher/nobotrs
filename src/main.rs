@@ -1,25 +1,13 @@
-// src/main.rs
-mod aggregate;
-mod availability;
-mod backend;
-mod backends;
-mod deadline;
-mod dictionary;
-mod document;
-mod error;
-mod score;
 mod cli;
-
 use clap::Parser;
-use cli::{Cli, Command};
-
 fn main() {
-    let cli = Cli::parse();
-    let code = match cli.command {
-        Command::Detect { path } => cli::detect::run(&path),
-        Command::Lint { path } => cli::lint::run(&path),
-        Command::Scan { dir } => cli::scan::run(&dir),
-        Command::Config => cli::config::run(),
+    let cli = cli::Cli::parse();
+    let code = match cli::run(cli) {
+        Ok(code) => code,
+        Err(error) => {
+            eprintln!("nobotrs: {error}");
+            2
+        }
     };
     std::process::exit(code);
 }

@@ -1,0 +1,564 @@
+{
+  "corpus_version": "regression-2026-10-10-v1",
+  "metrics": {
+    "abstentions": 0,
+    "auc": null,
+    "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+    "confusion_matrix": {
+      "fn": 0,
+      "fp": 0,
+      "tn": 0,
+      "tp": 0
+    },
+    "coverage": null,
+    "covered_count": 0,
+    "f1": null,
+    "false_positive_rate": null,
+    "false_positive_rate_wilson_95": null,
+    "labeled_count": 0,
+    "operational_failures": 0,
+    "precision": null,
+    "recall": null
+  },
+  "purpose": "Reusable CI behavior regression; not independent authorship evaluation.",
+  "raw_feature_cache": [
+    {
+      "complete": true,
+      "families": [
+        {
+          "backends": [
+            "vocabulary"
+          ],
+          "family": "Vocabulary",
+          "vote": "none"
+        },
+        {
+          "backends": [
+            "punctuation"
+          ],
+          "family": "Punctuation",
+          "vote": "none"
+        }
+      ],
+      "id": "plain",
+      "label": null,
+      "metrics": {
+        "burstiness": {},
+        "compression": {},
+        "lexical-diversity": {},
+        "punctuation": {
+          "effective_em_dash_count": {
+            "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dash_count": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dashes_per_100_words": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences/100-words",
+            "value": 0.0
+          },
+          "prose_words": {
+            "method": "unicode-segmentation-v1",
+            "unit": "words",
+            "value": 7.0
+          }
+        },
+        "readability": {},
+        "vocabulary": {
+          "effective_occurrences": {
+            "method": "suppression-before-longest-selection-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          }
+        }
+      },
+      "runtime_seconds": 0.0058561398182064295,
+      "slice": "short",
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "families": [
+        {
+          "backends": [
+            "vocabulary"
+          ],
+          "family": "Vocabulary",
+          "vote": "strong"
+        },
+        {
+          "backends": [
+            "punctuation"
+          ],
+          "family": "Punctuation",
+          "vote": "strong"
+        }
+      ],
+      "id": "flagged",
+      "label": null,
+      "metrics": {
+        "burstiness": {},
+        "compression": {},
+        "lexical-diversity": {},
+        "punctuation": {
+          "effective_em_dash_count": {
+            "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+            "unit": "occurrences",
+            "value": 6.0
+          },
+          "em_dash_count": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences",
+            "value": 6.0
+          },
+          "em_dashes_per_100_words": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences/100-words",
+            "value": 150.0
+          },
+          "prose_words": {
+            "method": "unicode-segmentation-v1",
+            "unit": "words",
+            "value": 4.0
+          }
+        },
+        "readability": {},
+        "vocabulary": {
+          "effective_occurrences": {
+            "method": "suppression-before-longest-selection-v1",
+            "unit": "occurrences",
+            "value": 4.0
+          }
+        }
+      },
+      "runtime_seconds": 0.006106573157012463,
+      "slice": "tells",
+      "status": 1,
+      "verdict": "flagged"
+    },
+    {
+      "complete": true,
+      "families": [],
+      "id": "code-only",
+      "label": null,
+      "metrics": {
+        "burstiness": {},
+        "compression": {},
+        "lexical-diversity": {},
+        "punctuation": {},
+        "readability": {},
+        "vocabulary": {}
+      },
+      "runtime_seconds": 0.0057086891029030085,
+      "slice": "markdown",
+      "status": 3,
+      "verdict": "inconclusive"
+    },
+    {
+      "complete": true,
+      "families": [
+        {
+          "backends": [
+            "vocabulary"
+          ],
+          "family": "Vocabulary",
+          "vote": "none"
+        },
+        {
+          "backends": [
+            "punctuation"
+          ],
+          "family": "Punctuation",
+          "vote": "none"
+        }
+      ],
+      "id": "long-fence",
+      "label": null,
+      "metrics": {
+        "burstiness": {},
+        "compression": {},
+        "lexical-diversity": {},
+        "punctuation": {
+          "effective_em_dash_count": {
+            "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dash_count": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dashes_per_100_words": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences/100-words",
+            "value": 0.0
+          },
+          "prose_words": {
+            "method": "unicode-segmentation-v1",
+            "unit": "words",
+            "value": 4.0
+          }
+        },
+        "readability": {},
+        "vocabulary": {
+          "effective_occurrences": {
+            "method": "suppression-before-longest-selection-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          }
+        }
+      },
+      "runtime_seconds": 0.005559416953474283,
+      "slice": "markdown",
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "families": [
+        {
+          "backends": [
+            "vocabulary"
+          ],
+          "family": "Vocabulary",
+          "vote": "none"
+        },
+        {
+          "backends": [
+            "punctuation"
+          ],
+          "family": "Punctuation",
+          "vote": "none"
+        }
+      ],
+      "id": "softbreak",
+      "label": null,
+      "metrics": {
+        "burstiness": {},
+        "compression": {},
+        "lexical-diversity": {},
+        "punctuation": {
+          "effective_em_dash_count": {
+            "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dash_count": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dashes_per_100_words": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences/100-words",
+            "value": 0.0
+          },
+          "prose_words": {
+            "method": "unicode-segmentation-v1",
+            "unit": "words",
+            "value": 2.0
+          }
+        },
+        "readability": {},
+        "vocabulary": {
+          "effective_occurrences": {
+            "method": "suppression-before-longest-selection-v1",
+            "unit": "occurrences",
+            "value": 1.0
+          }
+        }
+      },
+      "runtime_seconds": 0.00525961397215724,
+      "slice": "markdown",
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "families": [
+        {
+          "backends": [
+            "vocabulary"
+          ],
+          "family": "Vocabulary",
+          "vote": "none"
+        },
+        {
+          "backends": [
+            "punctuation"
+          ],
+          "family": "Punctuation",
+          "vote": "none"
+        }
+      ],
+      "id": "no-cross-block",
+      "label": null,
+      "metrics": {
+        "burstiness": {},
+        "compression": {},
+        "lexical-diversity": {},
+        "punctuation": {
+          "effective_em_dash_count": {
+            "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dash_count": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dashes_per_100_words": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences/100-words",
+            "value": 0.0
+          },
+          "prose_words": {
+            "method": "unicode-segmentation-v1",
+            "unit": "words",
+            "value": 2.0
+          }
+        },
+        "readability": {},
+        "vocabulary": {
+          "effective_occurrences": {
+            "method": "suppression-before-longest-selection-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          }
+        }
+      },
+      "runtime_seconds": 0.005024872021749616,
+      "slice": "markdown",
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "families": [
+        {
+          "backends": [
+            "vocabulary"
+          ],
+          "family": "Vocabulary",
+          "vote": "none"
+        },
+        {
+          "backends": [
+            "punctuation"
+          ],
+          "family": "Punctuation",
+          "vote": "none"
+        },
+        {
+          "backends": [
+            "burstiness"
+          ],
+          "family": "Burstiness",
+          "vote": "strong"
+        }
+      ],
+      "id": "welsh",
+      "label": null,
+      "metrics": {
+        "burstiness": {
+          "sentence_length_cv": {
+            "method": "population-stdev/shared-segmentation-v1",
+            "unit": "ratio",
+            "value": 0.15384615384615385
+          }
+        },
+        "compression": {
+          "lzma_ratio": {
+            "method": "lzma-rs-0.3-default",
+            "unit": "compressed-bytes/prose-bytes",
+            "value": 0.6198529411764706
+          },
+          "token_entropy": {
+            "method": "shannon-whitespace-case-sensitive-v1",
+            "unit": "bits/token",
+            "value": 4.46967048737186
+          }
+        },
+        "lexical-diversity": {},
+        "punctuation": {
+          "effective_em_dash_count": {
+            "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dash_count": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          },
+          "em_dashes_per_100_words": {
+            "method": "prepared-prose-v1",
+            "unit": "occurrences/100-words",
+            "value": 0.0
+          },
+          "prose_words": {
+            "method": "unicode-segmentation-v1",
+            "unit": "words",
+            "value": 260.0
+          }
+        },
+        "readability": {},
+        "vocabulary": {
+          "effective_occurrences": {
+            "method": "suppression-before-longest-selection-v1",
+            "unit": "occurrences",
+            "value": 0.0
+          }
+        }
+      },
+      "runtime_seconds": 0.005814459873363376,
+      "slice": "uncertain-language",
+      "status": 0,
+      "verdict": "clean"
+    }
+  ],
+  "regression_results": [
+    {
+      "complete": true,
+      "id": "plain",
+      "label": null,
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "id": "flagged",
+      "label": null,
+      "status": 1,
+      "verdict": "flagged"
+    },
+    {
+      "complete": true,
+      "id": "code-only",
+      "label": null,
+      "status": 3,
+      "verdict": "inconclusive"
+    },
+    {
+      "complete": true,
+      "id": "long-fence",
+      "label": null,
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "id": "softbreak",
+      "label": null,
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "id": "no-cross-block",
+      "label": null,
+      "status": 0,
+      "verdict": "clean"
+    },
+    {
+      "complete": true,
+      "id": "welsh",
+      "label": null,
+      "status": 0,
+      "verdict": "clean"
+    }
+  ],
+  "runtime_seconds": 0.039329764898866415,
+  "schema_version": "1.0.0",
+  "slice_metrics": {
+    "markdown": {
+      "abstentions": 0,
+      "auc": null,
+      "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "coverage": null,
+      "covered_count": 0,
+      "f1": null,
+      "false_positive_rate": null,
+      "false_positive_rate_wilson_95": null,
+      "labeled_count": 0,
+      "operational_failures": 0,
+      "precision": null,
+      "recall": null
+    },
+    "short": {
+      "abstentions": 0,
+      "auc": null,
+      "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "coverage": null,
+      "covered_count": 0,
+      "f1": null,
+      "false_positive_rate": null,
+      "false_positive_rate_wilson_95": null,
+      "labeled_count": 0,
+      "operational_failures": 0,
+      "precision": null,
+      "recall": null
+    },
+    "tells": {
+      "abstentions": 0,
+      "auc": null,
+      "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "coverage": null,
+      "covered_count": 0,
+      "f1": null,
+      "false_positive_rate": null,
+      "false_positive_rate_wilson_95": null,
+      "labeled_count": 0,
+      "operational_failures": 0,
+      "precision": null,
+      "recall": null
+    },
+    "uncertain-language": {
+      "abstentions": 0,
+      "auc": null,
+      "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "coverage": null,
+      "covered_count": 0,
+      "f1": null,
+      "false_positive_rate": null,
+      "false_positive_rate_wilson_95": null,
+      "labeled_count": 0,
+      "operational_failures": 0,
+      "precision": null,
+      "recall": null
+    }
+  },
+  "split": "regression"
+}

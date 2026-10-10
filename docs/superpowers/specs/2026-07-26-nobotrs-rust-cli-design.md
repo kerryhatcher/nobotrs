@@ -1,3 +1,5 @@
+> Historical July specification/plan. The current contract is the [October remediation plan](../plans/2026-10-10-nobotrs-review-remediation.md) and shipped README: raw metrics replace unconditional human probabilities; informational families do not satisfy quorum; prepared prose and completeness govern reporting. Rust lzma-rs ratios are not numerically interchangeable with Python preset-6 compression.
+
 # nobotrs: Rust CLI for AI-text detection — design spec
 
 **Status:** Draft, pending user review

@@ -8,13 +8,27 @@ use crate::score::{ConfidenceTier, Score, VoteStrength};
 pub struct Punctuation;
 
 impl DetectorBackend for Punctuation {
-    fn name(&self) -> &str { "punctuation" }
-    fn family(&self) -> SignalFamily { SignalFamily::Punctuation }
-    fn availability(&self) -> Availability { Availability::Ready }
+    fn name(&self) -> &str {
+        "punctuation"
+    }
+    fn family(&self) -> SignalFamily {
+        SignalFamily::Punctuation
+    }
+    fn availability(&self) -> Availability {
+        Availability::Ready
+    }
 
-    fn score(&self, doc: &Document, _deadline: Deadline) -> ScoreOutcome {
-        let word_count = doc.raw.split_whitespace().count();
-        let em_dash_count = doc.raw.matches('\u{2014}').count();
+    fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        self.score_limited(doc, deadline, 10_000)
+    }
+}
+impl Punctuation {
+    pub fn score_limited(&self, doc: &Document, deadline: Deadline, cap: usize) -> ScoreOutcome {
+        if deadline.expired() {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        }
+        let word_count = doc.words.len();
+        let em_dash_count = doc.prose.matches('\u{2014}').count();
 
         let vote = if em_dash_count >= 6 && em_dash_count as f64 > word_count as f64 / 100.0 {
             VoteStrength::Strong
@@ -24,20 +38,65 @@ impl DetectorBackend for Punctuation {
             VoteStrength::None
         };
 
-        let human_probability = match vote {
-            VoteStrength::Strong => 0.15,
-            VoteStrength::Suspicious => 0.4,
-            VoteStrength::None => 0.9,
-        };
+        let mut evidence = vec![];
+        let mut failure = None;
+        let mut covered = 0;
+        if vote != VoteStrength::None {
+            for (i, _) in doc.prose.match_indices('—') {
+                if deadline.expired() {
+                    failure = Some(crate::error::Error::Timeout);
+                    break;
+                }
+                if evidence.len() >= cap {
+                    failure = Some(crate::error::Error::ResourceLimit(
+                        "punctuation candidate budget".into(),
+                    ));
+                    break;
+                }
+                covered = i + 3;
+                evidence.push(doc.finding(
+                    i..i + 3,
+                    "punctuation.em-dash-density",
+                    Some("Consider a comma, period, or parentheses where appropriate.".into()),
+                ));
+            }
+        }
 
-        ScoreOutcome::Scored(Score::new(
+        let mut score = Score::new(
             "punctuation".to_string(),
             SignalFamily::Punctuation,
-            human_probability,
             ConfidenceTier::Medium,
             vote,
-            vec![], // density counting is not a per-location match; no line-anchored evidence to report
-        ))
+            evidence,
+        )
+        .metric(
+            "prose_words",
+            word_count as f64,
+            "words",
+            "unicode-segmentation-v1",
+        )
+        .metric(
+            "em_dash_count",
+            em_dash_count as f64,
+            "occurrences",
+            "prepared-prose-v1",
+        )
+        .metric(
+            "em_dashes_per_100_words",
+            em_dash_count as f64 * 100.0 / word_count.max(1) as f64,
+            "occurrences/100-words",
+            "prepared-prose-v1",
+        );
+        if let Some(reason) = failure {
+            score.voting_eligible = false;
+            ScoreOutcome::Incomplete {
+                score,
+                reason,
+                coverage: covered as f64 / doc.prose.len().max(1) as f64,
+            }
+        } else {
+            ScoreOutcome::Scored(score)
+        }
     }
 }
 
