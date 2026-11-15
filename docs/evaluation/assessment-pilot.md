@@ -5,12 +5,13 @@ curated from pinned HC3 and fresh RAID API responses. The old RAID v1 corpus
 remains immutable and retired at
 [`raid-pilot-v1`](../../evaluation/corpora/raid-pilot-v1) with its `retirement.json` ledger.
 
-Status: **curation, metadata-only preflight, and authorized
-development/validation detector runs complete. No independent-test detector run,
-freeze record, or access record exists. A root-owned final criteria/preflight pair
-is prepared, but no frozen access record or independent run exists at this
-moment.** This is not a complete HC3 or RAID benchmark and not an authorship
-accuracy certification.
+Status: **curation, metadata-only preflight, authorized
+development/validation runs, one frozen independent assessment, and the
+engineering milestone are complete. General authorship qualification is FAILED /
+not-qualified.** The independent access record has one `accessed` claim; no reset
+or rerun occurred. This is not a complete HC3 or RAID benchmark and not an
+authorship accuracy certification. See the
+[final assessment](final-assessment.md).
 
 ## Pinned sources and licenses
 
@@ -55,7 +56,7 @@ The repository code MIT license does not replace those data terms.
 |---|---:|---:|---:|---:|
 | development | 578 | 251 | 277 | 301 |
 | validation | 193 | 80 | 84 | 109 |
-| independent-test (unread) | 193 | 86 | 89 | 104 |
+| independent-test (one consumed assessment) | 193 | 86 | 89 | 104 |
 | **total** | **964** | **417** | **450** | **514** |
 
 | Dimension | Counts |
@@ -127,15 +128,15 @@ python3 scripts/assessment_preflight.py \
 
 The root-owned final criteria/preflight pair is
 `assessment-pilot-v1-fixed-policy-descriptive-assessment` /
-`preflight-final.json`; this worker did not modify either. No freeze or independent
-assessment may be claimed until the supervisor creates a frozen-unopened access
-record and runs the single authorized independent assessment.
+`preflight-final.json`, frozen at checkpoint `aad622a`. This worker did not modify
+either file. One independent assessment was consumed exactly once; no further
+independent claim may be made without fresh data and a new freeze.
 
 ## Development/validation results (metadata only)
 
-Authorized runs used `target/release/nobotrs` (`1d9af3d2…`), the frozen defaults
-config (`e7ec5e18…`), and proposed criteria (`44c06553…`). No independent-test
-sample was read or run.
+Authorized development/validation runs used `target/release/nobotrs`
+(`1d9af3d2…`), the frozen defaults config (`e7ec5e18…`), and historical proposed
+criteria (`44c06553…`).
 
 | Split | n | TP | FP | FN | TN | Precision | Recall | F1 | FPR | Coverage | Abstentions |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -171,6 +172,34 @@ validation sweep          1cb4bd608bdd2675c5c44b24b6b28d31b244b6fe248b6dff803e09
 
 No thresholds, rules, labels, or production policy changed.
 
+## Independent assessment (consumed once)
+
+After the root froze the unchanged candidate at `aad622a`, the final criteria
+`assessment-pilot-v1-fixed-policy-descriptive-assessment`, release binary
+`1d9af3d2…`, and effective settings `336b12d5…` were used for exactly one
+independent run. The access record records one `accessed` claim; it was not reset.
+
+| n | Human | Generated | TP | FP | FN | TN | Precision | Recall | F1 | FPR | Coverage | Failures/Abstentions |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 193 | 89 | 104 | 2 | 2 | 102 | 87 | 0.500 | 0.01923 | 0.03704 | 0.02247 | 1.000 | 0 / 0 |
+
+Cluster bootstrap: 86 source clusters, fixed seed, 2,000 replicates. Recall
+[0, 0.04763], FPR [0, 0.06025], F1 [0, 0.09009], precision [0, 1.0] with 1,957
+valid replicates; coverage degenerate with null bounds. Slices are in the
+metadata-only summary.
+
+Aggregate failure cases: HC3 0 TP / 67 FN; chatgpt 0 TP / 67 FN; mistral 0 TP /
+27 FN; abstracts 0 TP / 2 FP; human 2 FP / 87 TN. **The detector fails the general
+authorship qualification and is not useful as a general authorship detector.**
+No thresholds, rules, labels, or code changed after the independent assessment.
+
+```text
+independent result   13e772464f950fcc9fb3e7c14c925955c8d97ada47bbcfd9d9c2dbde48ecc8fa
+independent summary  dbd0fa76d66e329b14699d04034a463dc89a8ef0da33063549434e24a1abbf94
+access record        bc2437275e597e04694d68f3a943d62c2c24ce32c9a9efc7bf19c443a83c6e08
+final criteria       9c8f5059a0c228a7de56efa65c2d8abcde862d482915cccfc02b2b0954f5bab5
+```
+
 ## Limitations
 
 - HC3 is the first 50 records per source, not the complete corpus.
@@ -183,8 +212,8 @@ No thresholds, rules, labels, or production policy changed.
 - Mixed controls are kept in a separate development-only corpus
   (`mixed-controls-v1`), not this assessment manifest.
 - The language policy remains default-unknown with no per-sample overrides.
-- Development/validation detector results exist and show known-bad recall; no
-  independent-test result exists and no tuning/freeze was performed.
+- Development/validation and one independent assessment exist and show known-bad
+  recall; no tuning/freeze/reset occurred after independent access.
 - Reviewers must not display raw questions, answers, or response payloads.
   `.gitattributes` marks sample text and nested source response JSON/JSONL as
   `-text -diff`.

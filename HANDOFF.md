@@ -1,23 +1,6 @@
 # nobotrs remediation handoff
 
-## CURRENT: RAID pilot v1 retired; corpus checkpoint 993956a is committed
-
-The limited RAID pilot `evaluation/corpora/raid-pilot-v1` is committed at
-checkpoint `993956a`. Its 218-sample independent-test split is **retired as
-exposed selection data**. After that checkpoint, a supervisor
-`git diff --cached --check` on the staged raw corpus printed trailing-whitespace
-passages; the output was large and some passages were visible. Conservatively all
-218 held-out samples are retired. `retirement.json` binds the current manifest/
-content identity, records the exposure, and disables independent assessment and
-freeze. Preflight reports `preflight-passed-retired` and refuses `--freeze`; the
-evaluator refuses `--split independent-test`; development and validation remain
-usable. No independent detector run occurred and no access record was claimed.
-Original manifests, splits, results, and audits are preserved; nothing was reset,
-reshuffled, or whitespace-normalized. `.gitattributes` marks raw corpus samples
-and source response JSON/JSONL payloads `-text -diff`. Reviewers must not display
-held-out payloads.
-
-## CURRENT: assessment pilot development/validation run; final criteria prepared; not frozen/independent
+## FINAL: engineering milestone complete; authorship qualification FAILED / not-qualified
 
 `evaluation/corpora/assessment-pilot-v1` combines pinned HC3
 (`Hello-SimpleAI/HC3@4d0ff181...`, CC-BY-SA-4.0, first 50 records each of five
@@ -36,22 +19,29 @@ Hashes: manifest `7d6ffed1...`, content `c0ba2e11...`, curation `ad89bf0e...`,
 preflight `6e26190c...` (release binary `1d9af3d2...`). Curated criteria remain
 historical at `44c06553...`; root-owned final criteria
 `assessment-pilot-v1-fixed-policy-descriptive-assessment` and
-`preflight-final.json` are prepared. **No frozen access record or independent run
-exists yet.** The preflight reads development/validation only, reports 193
-held-out IDs as not read, and writes no access/freeze record. Reviewers must not
-display HC3 questions/answers or response payloads. `.gitattributes` covers
-sample text and nested HC3/RAID response JSON/JSONL.
+`preflight-final.json` and frozen checkpoint `aad622a` were used for exactly one
+independent assessment. `independent-access.json` now records one `accessed`
+claim; no reset or rerun occurred. Reviewers must not display HC3
+questions/answers or response payloads. `.gitattributes` covers sample text and
+nested HC3/RAID response JSON/JSONL.
 
-Authorized release-binary results: development 578 samples, TP9/FP1/FN292/TN276
-(precision .900, recall .0299, F1 .0579, FPR .00361; coverage 1.0, abstentions 0);
-validation 193, TP6/FP1/FN103/TN83 (precision .857, recall .0550, F1 .1034, FPR
-.01190; coverage 1.0, abstentions 0). **Recall is known-bad for general authorship
-detection.** Cluster summaries use the same seed/replicates across 251/80 source
-clusters and source/domain/generator/length slices; coverage is degenerate (null
-bounds), so no zero-risk certification is claimed. Cached quorum sweeps (no
-detector rerun) retain quorum 2/defaults: q1 dev/val recall .382/.358 with FPR
-.105/.107; q3 coverage .557/.534 with 256/90 abstentions. No threshold, rule, or
-label changed.
+Development/validation results before freeze: development 578 samples,
+TP9/FP1/FN292/TN276 (precision .900, recall .0299, F1 .0579, FPR .00361; coverage
+1.0, abstentions 0); validation 193, TP6/FP1/FN103/TN83 (precision .857, recall
+.0550, F1 .1034, FPR .01190; coverage 1.0, abstentions 0). Cached quorum sweeps
+retained quorum 2/defaults: q1 dev/val recall .382/.358 with FPR .105/.107; q3
+coverage .557/.534 with 256/90 abstentions. No threshold, rule, or label changed.
+
+Independent assessment (once, consumed): 193 samples (89 human / 104 generated),
+TP2/FP2/FN102/TN87, precision .500, recall .01923, F1 .03704, FPR .02247, coverage
+1.0, 0 failures/abstentions. Cluster summary: 86 source clusters, fixed-seed
+2,000-replicate intervals; recall [0, .04763], FPR [0, .06025], F1 [0, .09009],
+precision [0, 1.0] with 1,957 valid replicates; coverage is degenerate with null
+bounds. Aggregate failure cases: HC3 0 TP / 67 FN; chatgpt 0 TP / 67 FN; mistral
+0 TP / 27 FN; abstracts 0 TP / 2 FP; human 2 FP / 87 TN. Domain/generator/length
+slices and aggregate outcomes are in the metadata-only summary. **General
+authorship qualification is FAILED / not-qualified; this is not a useful general
+authorship detector.** See `docs/evaluation/final-assessment.md`.
 
 Review fixes incorporated: exclusion propagates to entire connected components
 (synthetic sibling + cross-corpus transitive regression); old corpus binding and
@@ -91,6 +81,11 @@ writing-tell signals. The integration checker passed all four groups under
 --schema /tmp/nobotrs-sarif-schema.json`. `scripts/integration_acceptance.py`
 and supervisor-owned provenance/research edits were not modified.
 
+Final assessment identity: candidate checkpoint `aad622a`, reporting commit
+`9d47db0`, release binary `1d9af3d2...`, effective settings `336b12d5...`, final
+criteria `assessment-pilot-v1-fixed-policy-descriptive-assessment` at
+`evaluation/release-criteria/assessment-pilot-v1-final.json`.
+
 Root validation note: full clean package/install acceptance passed 9 groups; the
 release binary was 2,577,616 bytes on an AMD Ryzen 7 5800X host, with
 `detect README.md --format json` below the 0.01-second timer resolution at
@@ -101,9 +96,10 @@ entries, and 34 unsupported claims; that is a limited provenance/source audit, n
 full external revalidation. Root-owned final assessment criteria/preflight are
 preserved and were not modified by this worker.
 
-The continuation text below is a historical pre-exposure record retained for
-audit. Statements about an "unopened" independent split describe the state before
-the exposure and are superseded by this retirement status.
+The continuation text below is a historical record retained for audit. The
+current status is the FINAL section above. Statements below about no detector run,
+no freeze/access record, or an unopened independent split are historical and
+superseded.
 
 Continuation 2026-11-14 (limited RAID pilot, curation, preflight; corpus
 checkpoint `993956a` committed, later retirement/safeguard edits uncommitted):
@@ -304,6 +300,23 @@ Implemented: shared library/engine; working detect/lint/analyze/scan/config/guid
 
 Tests replace obsolete probability and raw-span contracts with executable regression coverage. Permanent probes include code/frontend matter exclusion, long fences, soft-break/emphasis/link equivalence, entities/CRLF/Unicode locations, Welsh uncertainty, overlapping/boundary-valid dictionary candidates, named family outcomes, input/candidate/time budgets, display independence, suppression, config precedence and mixed directory errors. See `docs/core-validation.md` for final checks and measurements.
 
-Remaining gates: phases 5–7 require a curated licensed authorship corpus, development/validation tuning evidence, independent frozen release assessment, more varied pinned statistical reference fixtures, and Python parity against the specified branch. The CI baseline is behavior evidence only. Model/tokenizer choices, revisions/checksums/licenses, optional model runtime, MCP/TUI, and humanization are not implemented (phases 8–9). The user explicitly chose to select models and revisions later, deferring these optional phases. No threshold improvements, accuracy, calibrated probabilities, semantic-preservation or release-ready optional capabilities are claimed.
+Historical 2026-10-10 note (superseded by the FINAL section above): phases 5–7 were then described as requiring a curated licensed authorship corpus, development/validation tuning evidence, independent frozen release assessment, more varied pinned statistical reference fixtures, and Python parity against the specified branch. The CI baseline is behavior evidence only. Model/tokenizer choices, revisions/checksums/licenses, optional model runtime, MCP/TUI, and humanization are not implemented (phases 8–9). The user explicitly chose to select models and revisions later, deferring these optional phases. No threshold improvements, accuracy, calibrated probabilities, semantic-preservation or release-ready optional capabilities are claimed.
 
 Use `cargo fmt --check`, `cargo clippy --locked --all-targets -- -D warnings`, and `cargo test --locked`. Packaging excludes imported research without deleting it. Default operation is offline. Continue from the active plan's unchecked items; do not reset the independent test-set access policy or report synthetic CI fixtures as authorship truth.
+
+## HISTORICAL: old RAID v1 retirement; corpus checkpoint 993956a
+
+The limited RAID pilot `evaluation/corpora/raid-pilot-v1` is committed at
+checkpoint `993956a`. Its 218-sample independent-test split is **retired as
+exposed selection data**. After that checkpoint, a supervisor
+`git diff --cached --check` on the staged raw corpus printed trailing-whitespace
+passages; the output was large and some passages were visible. Conservatively all
+218 held-out samples are retired. `retirement.json` binds the current manifest/
+content identity, records the exposure, and disables independent assessment and
+freeze. Preflight reports `preflight-passed-retired` and refuses `--freeze`; the
+evaluator refuses `--split independent-test`; development and validation remain
+usable. No independent detector run occurred and no access record was claimed.
+Original manifests, splits, results, and audits are preserved; nothing was reset,
+reshuffled, or whitespace-normalized. `.gitattributes` marks raw corpus samples
+and source response JSON/JSONL payloads `-text -diff`. Reviewers must not display
+held-out payloads.

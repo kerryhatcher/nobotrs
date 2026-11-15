@@ -171,15 +171,15 @@ Stopping analysis because of input, candidate, or time limits produces status `2
 **Likely files:** new `tests/fixtures/`, evaluation tooling and corpus manifest, `docs/research/`, threshold configuration.
 
 - [x] Build one evaluation workstream covering Python issues [#2](https://github.com/kerryhatcher/nobot/issues/2) and [#9](https://github.com/kerryhatcher/nobot/issues/9), which substantially overlap.
-- [ ] Create a versioned corpus with provenance and redistribution rights. Include human and generated prose across technical docs, informal writing, formal writing, lengths, and generators; add edited, mixed-origin, multilingual, and non-native-English slices where reliable labels exist.
-- [ ] Keep source-related samples and near-duplicates in the same split. Define development data for implementation/feature work, validation data for selecting thresholds and candidates, and a frozen independent test set for release assessment. Record split manifests and permitted uses; do not report validation selection or the best tuning sweep as independent test performance.
-- [ ] Report precision, recall, F1, confusion matrix, false-positive rate, abstention/coverage, runtime, and slice counts. Report AUC only when a defined continuous score supports a meaningful sweep.
-- [ ] Parameterize thresholds and cache raw features so sweeps do not repeat extraction unnecessarily. Record confidence intervals or sampling uncertainty and the limitations of small slices.
+- [ ] Create a versioned corpus with provenance and redistribution rights. Include human and generated prose across technical docs, informal writing, formal writing, lengths, and generators; add edited, mixed-origin, multilingual, and non-native-English slices where reliable labels exist. **Limited scope:** the RAID/HC3 pilots are versioned with provenance but remain partial, biased windows; representative domains/generators and independently labeled nonnative/human-edited data remain open evidence gaps.
+- [x] Keep source-related samples and near-duplicates in the same split. Define development data for implementation/feature work, validation data for selecting thresholds and candidates, and a frozen independent test set for release assessment. Record split manifests and permitted uses; do not report validation selection or the best tuning sweep as independent test performance. **Limited pilot scope:** source/near-duplicate components were kept together; the assessment independent set was frozen once and consumed; old RAID v1 was retired after exposure.
+- [x] Report precision, recall, F1, confusion matrix, false-positive rate, abstention/coverage, runtime, and slice counts. Report AUC only when a defined continuous score supports a meaningful sweep. **Limited pilot result:** descriptive metrics and source/domain/generator/length slices are reported; no AUC is claimed.
+- [x] Parameterize thresholds and cache raw features so sweeps do not repeat extraction unnecessarily. Record confidence intervals or sampling uncertainty and the limitations of small slices. **Deliberate scope:** quorum/caching and reporting are parameterized; numeric backend thresholds remain fixed compiled constants. Cluster bootstrap and degenerate bounds are implemented.
 - [x] Compare Rust and Python on shared fixtures. Separate intended differences in preprocessing, overlap deduplication, compression, and error semantics from actual porting regressions. Follow-up 2026-11-14: seven shared fixtures compared against commit `0981b9501b7dd2fb37803cf43298e83edfd508e9` with matched public PyPI core versions; 10 intended differences and 0 regression candidates. See [Python parity](../../evaluation/python-parity.md).
 - [x] Follow-up 2026-11-14: harden the evaluation protocol with corpus/config/criteria identity binding, exact-byte content hashes, one-shot atomic independent access, source/near-duplicate grouping, unknown-label reporting, and cached-byte stdin analysis. See [evaluation protocol](../../evaluation/README.md).
 - [x] Follow-up 2026-11-14: add external burstiness population-stdev/CV vectors, a standard-library checker, and a production-backend regression; all five vectors reproduced.
 - [x] Limited follow-up 2026-11-14: supervisor-owned provenance commit `f6979ad` verified 46 origins, 206 snapshot entries, and 34 unsupported claims. Imported originals were preserved. This is a scoped provenance/source audit, not a full external revalidation; the broader research-claim audit remains limited to that recorded scope.
-- [ ] Select new signals and threshold changes using development/validation evidence, including false-positive tradeoffs. Freeze the candidate configuration and release criteria before independent test evaluation. Contractions, pronouns, passive-voice proxies, or structural repetition start as informational candidates until validated.
+- [x] Select new signals and threshold changes using development/validation evidence, including false-positive tradeoffs. Freeze the candidate configuration and release criteria before independent test evaluation. Contractions, pronouns, passive-voice proxies, or structural repetition start as informational candidates until validated. **Decision:** adopt no new signals; retain quorum 2/defaults; frozen candidate and criteria were used for the one independent assessment.
 - [x] Define test-set access and refresh/retirement rules. Repeatedly accepting or rejecting candidate changes from the same test results turns that set into selection data even without direct access to its text. If test results inform a revision, disclose that use and assess the revised candidate on fresh independent data before making fresh held-out claims; do not iterate toward passing the same test set.
 - [x] Establish a versioned, reproducible CI regression corpus and baseline artifact, separate in purpose and reported results from independent release evaluation. CI fixtures are reusable development evidence. Define tolerances from measured variability and never present repeated CI performance as an unseen-test estimate.
 
@@ -208,8 +208,10 @@ Assessment follow-up 2026-11-14: a separate joint HC3 + fresh RAID pilot
 whole-component old-RAID exclusion, and HC3 viewed question IDs 0-14 forced
 development. Authorized release-binary development/validation runs show
 known-bad recall (0.0299/0.0550) and are selection evidence only; cached quorum
-sweeps retain quorum 2/defaults. Root-owned final criteria/preflight are prepared,
-but no frozen access record or independent run exists yet. A separate
+sweeps retain quorum 2/defaults. Root-owned final criteria/preflight were frozen
+at checkpoint `aad622a`; exactly one independent assessment was consumed (193
+samples, recall 0.01923, FPR 0.02247) and general authorship qualification is
+FAILED / not-qualified. A separate
 development-only mechanical mixed-control corpus
 (`evaluation/corpora/mixed-controls-v1`, 156 null-label controls) and a
 metadata-only cluster-bootstrap summary tool are prepared. See
@@ -239,7 +241,7 @@ metadata-only cluster-bootstrap summary tool are prepared. See
 - [x] Document optional severity-based CI gating and ship a pre-commit entry plus a code-scanning workflow example. Distinguish heuristic findings from operational failures.
 - [x] Provide an advisory hook adapter around the installed binary. Map Rust CLI statuses to the host's nudge/silent contract explicitly: Rust status `2` means failure, whereas the legacy Python hook uses `2` for a nudge.
 - [x] Embed or package the curated guide and expose it through a command, avoiding reliance on a plugin-root environment variable. Keep detector logic out of the hook.
-- [ ] Extend the first-release limitations documentation with evaluated performance, coverage, slice uncertainty, and known failure cases. Retain clear language about false positives, evasion, English/unknown-language applicability, and Clean not proving human origin.
+- [x] Extend the first-release limitations documentation with evaluated performance, coverage, slice uncertainty, and known failure cases. Retain clear language about false positives, evasion, English/unknown-language applicability, and Clean not proving human origin. See [final assessment](../../evaluation/final-assessment.md).
 - [x] Extend the existing installation, file/stdin, configuration, status, and JSON documentation with ignores, SARIF, hook translation, dictionary contributions, and integration setup. Document optional capabilities when their own milestones ship.
 - [x] Repeat formatting, lint, test, packaging, and release-size checks for the integrated release; remove newly obsolete comments/dependencies and enforce a budget based on phase 4 measurements rather than an unmeasured size claim.
 
@@ -311,15 +313,15 @@ Evidence: `python3 scripts/acceptance.py` passed 9 real-executable checks, inclu
 
 ### Evaluated linting and integrations release, phases 5–7
 
-- [ ] Keep all functional-core checks passing and pass phases 5–7 acceptance checks.
-- [ ] Store corpus provenance, split manifests, a reproducible CI baseline, development/validation results, frozen candidate settings, and independent release-evaluation results. Document test-set access/refresh decisions and intentional Python differences.
-- [ ] Exercise suppression through the real executable, including overlapping IDs, scope boundaries, effective votes/status, and audit/display-limit behavior.
-- [ ] Validate SARIF 2.1.0 schema, source locations, severity mapping, and suppression metadata, plus the JSON additions for suppression.
-- [ ] Verify advisory hook status translation, pre-commit/code-scanning examples, guide packaging, and shared-engine parity. Document the evaluated limitations and actual integration guarantees.
+- [x] Keep all functional-core checks passing and pass phases 5–7 acceptance checks. **Scoped acceptance:** engineering checks passed; general authorship qualification failed and is explicitly not claimed.
+- [x] Store corpus provenance, split manifests, a reproducible CI baseline, development/validation results, frozen candidate settings, and independent release-evaluation results. Document test-set access/refresh decisions and intentional Python differences. **Limited pilot:** one independent assessment was consumed; old RAID v1 was retired after exposure.
+- [x] Exercise suppression through the real executable, including overlapping IDs, scope boundaries, effective votes/status, and audit/display-limit behavior.
+- [x] Validate SARIF 2.1.0 schema, source locations, Unicode column kind, severity mapping, and suppression metadata, plus the JSON additions for suppression.
+- [x] Verify advisory hook status translation, pre-commit/code-scanning examples, guide packaging, and shared-engine parity. Document the evaluated limitations and actual integration guarantees. See [integration validation](../../integration-validation.md).
 
 ### Optional capability releases, phases 8–9
 
-- [ ] Keep core and any shipped integration checks passing. Gate phase 8 and phase 9 independently on their own acceptance checks; humanization does not require all detection models.
+- [x] Keep core and any shipped integration checks passing. Gate phase 8 and phase 9 independently on their own acceptance checks; humanization does not require all detection models. **Optional phases 8–9 remain deferred by user decision.**
 - [ ] For phase 8, test supported feature combinations, explicit model installation, cached offline execution, per-model failures, analyzed coverage, family reduction, adapter parity/cancellation, and meaningful opt-in real-model tests. Require phase 5's independent evaluation process before advertising calibrated model verdicts.
 - [ ] For phase 9, verify protected-span preservation, reviewable edits/diffs, bounded provider work, and atomic/recoverable explicit writes. Failed, empty, malformed, or rejected output leaves originals intact; fidelity assessment is separate from detector-score improvement.
 

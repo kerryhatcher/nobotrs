@@ -140,14 +140,15 @@ status, and preflight/evaluation refuse freeze or independent assessment.
 
 A separate joint HC3 + fresh RAID assessment pilot is at
 [`evaluation/corpora/assessment-pilot-v1`](../../evaluation/corpora/assessment-pilot-v1),
-documented in [assessment-pilot.md](assessment-pilot.md). Its curation,
-metadata-only preflight, and authorized development/validation runs are complete;
-its independent-test split is unread. A root-owned final criteria/preflight pair
-is prepared, but no frozen access record or independent run exists yet. The
-results show known-bad recall and are not authorship certification. A separate
+documented in [assessment-pilot.md](assessment-pilot.md). Curation,
+development/validation reporting, and one frozen independent assessment are
+complete. General authorship qualification is **FAILED / not-qualified**; the
+independent result shows known-bad recall and is not authorship certification.
+See the [final assessment](final-assessment.md). A separate
 development-only mechanical HC3 mixed-control corpus is documented in
-[mixed-controls.md](mixed-controls.md); its controls have null labels and no
-detector result exists. The
-evaluated-release gate remains open. There are no independently measured
-accuracy, false-positive, or calibrated probability claims. Optional models,
-SAEs, MCP/TUI, and humanization remain deferred.
+[mixed-controls.md](mixed-controls.md); its controls have null labels and a
+development-only unknown-label run with no performance denominators. The
+engineering default-core/evaluation/integration milestone passed, but general
+authorship qualification is not established and no calibrated probability or
+general-accuracy claim is made. Optional models, SAEs, MCP/TUI, and humanization
+remain deferred.
