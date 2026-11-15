@@ -27,6 +27,13 @@ and an `entries[]` array. Each entry:
 - `model_era` (string array): optional, reserved for future per-era weighting.
 - `source`, `notes`: optional free-text provenance/context.
 
+The versioned [provenance sidecar](provenance.json) records a review date and
+pinned code-origin URLs for every stable ID. Its dictionary SHA-256 binds the
+review to the exact entries. Python correspondence records matching forms and
+literal regex text only; it does not establish identical semantics or empirical
+validity. All 46 rules remain **unvalidated as authorship indicators**. The
+sidecar is audit metadata and does not change matching, votes, or thresholds.
+
 ## Contributing
 
 **Before any external contribution is accepted**, contributors must license

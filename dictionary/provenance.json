@@ -1,0 +1,1038 @@
+{
+  "dictionary_sha256": "313307dfdab73e7a0c7d781eec7cd70502319432a7cd4ac904b85e52b9901682",
+  "dictionary_version": "2026.07.26",
+  "review_scope": "Code-origin and existing research snapshot audit; no new empirical rule validation and no fresh verification of all external URLs.",
+  "reviewed_on": "2026-11-14",
+  "rules": [
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "delve",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "delve",
+          "delves",
+          "delving"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "tapestry",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "tapestry"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "multifaceted",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "multifaceted"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "nuanced",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "nuanced"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "leverage",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "leverage",
+          "leveraging"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "utilize",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "utilize",
+          "utilizing"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "seamless",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "seamless"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "foster",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "foster",
+          "fosters"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "pivotal",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "pivotal"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "paramount",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "paramount"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "holistic",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "holistic"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "streamline",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "streamline"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "transformative",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "transformative"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "meticulous",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "meticulous"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "intricate",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "intricate"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "embark",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "embark",
+          "embarking"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "beacon",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "beacon"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "testament",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "testament"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "plethora",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "plethora"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "myriad",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "myriad"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "moreover",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "moreover"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "furthermore",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "furthermore"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "nevertheless",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "nevertheless"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "underscore",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "underscores",
+          "underscoring"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "showcase",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "showcase",
+          "showcases",
+          "showcasing"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "emphasize",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [
+          "emphasize",
+          "emphasizes",
+          "emphasizing"
+        ],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "facilitate",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "empower",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "robust",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "cutting-edge",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "paradigm-shift",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "harness-verb",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md; whole_word:true avoids matching inside e.g. proper nouns",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "not-just-x-but-y",
+      "prior_notes": "negative parallelism",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "important-to-note",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "rapidly-evolving",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "cannot-be-overstated",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "embark-on-a-journey",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "a-testament-to",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "plays-a-role",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "worth-noting",
+      "prior_notes": null,
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": true,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "heres-the-thing",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "let-me-be-clear",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "uncomfortable-truth",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "experts-agree",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "studies-show",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    },
+    {
+      "code_origin": {
+        "commit": "51f18f58a97bfcc092bda0248644724c5bc9e226",
+        "source_url": "https://github.com/kerryhatcher/nobotrs/blob/51f18f58a97bfcc092bda0248644724c5bc9e226/dictionary/entries.json"
+      },
+      "empirical_validation": {
+        "status": "unvalidated",
+        "supports_calibrated_authorship_probability": false
+      },
+      "id": "thats-it-thats-the-x",
+      "prior_notes": "from docs/research/09-no-ai-slop-review.md",
+      "python_comparison": {
+        "commit": "0981b9501b7dd2fb37803cf43298e83edfd508e9",
+        "exact_phrase_regex_present": false,
+        "interpretation": "Textual code correspondence only; not proof of empirical validity or identical matching semantics.",
+        "matching_word_forms": [],
+        "source_url": "https://github.com/kerryhatcher/nobot/blob/0981b9501b7dd2fb37803cf43298e83edfd508e9/src/nobots/core/detect.py"
+      },
+      "review_status": "code-origin-reviewed-empirical-support-unestablished",
+      "reviewed_on": "2026-11-14"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

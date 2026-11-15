@@ -1,0 +1,269 @@
+{
+  "independence_flags_as_reported": {
+    "False": 52,
+    "None": 2,
+    "True": 152
+  },
+  "interpretation": [
+    "A verified source can be reachable yet not validate a rule, threshold, or authorship claim.",
+    "The independence flag is copied from the snapshot; false is not automatically a vendor classification. Inspect the source before interpreting its evidence.",
+    "Vendor accuracy reports and independent evaluation must be kept separate. Neither source reachability nor code parity proves rule validity.",
+    "Unsupported, unreachable, and unchecked claims do not justify additional default voting signals.",
+    "All 46 dictionary rules retain their existing behavior and are explicitly unvalidated as authorship indicators."
+  ],
+  "reviewed_on": "2026-11-14",
+  "schema_version": "1.0.0",
+  "scope": "Audit of the existing 2026-07-04 verification snapshot, not fresh live verification of 206 sources.",
+  "snapshot": {
+    "generated": "2026-07-04T03:08:32Z",
+    "path": "docs/research/thor-ai-writing/ai-text-detection-2026/source-verification.yaml",
+    "sha256": "2ecbdea24eb189565d56c3e93e30518856d77da51b5b477fdae37d1e095b4cad"
+  },
+  "source_count": 206,
+  "status_counts": {
+    "does-not-support-claim": 34,
+    "not-checked": 15,
+    "unreachable": 12,
+    "verified": 145
+  },
+  "unsupported_claims": [
+    {
+      "cited_for": "GPTZero self-reported 99.39%/0.00%/98.78%/100%; Superhuman/Grammarly acquisition",
+      "independent_as_reported": false,
+      "issues": "Figures are GPTZero's OWN self-reported benchmark, not independent. Does NOT mention the acquisition at all. 'turnitin.app' is an unaffiliated lookalike domain that could mislead about authority.",
+      "title": "'turnitin.app' GPTZero review blog (lookalike domain, NOT Turnitin)",
+      "url": "https://turnitin.app/blog/GPTZero-Evaluation-A-Comprehensive-Review-of-the-Leading-AI-Text-Detector-in-2026.html"
+    },
+    {
+      "cited_for": "'University of Toronto' NNES bias, 30% figure",
+      "independent_as_reported": true,
+      "issues": "Attributes the study to Ahmad R. Pratama (PeerJ CS 2025), NOT University of Toronto; '30% higher' figure not found.",
+      "title": "TechXplore: bias in AI text tools",
+      "url": "https://techxplore.com/news/2025-06-reveals-bias-ai-text-tools.html"
+    },
+    {
+      "cited_for": "'University of Toronto' NNES bias (paired citation)",
+      "independent_as_reported": true,
+      "issues": "Attributes findings to Stanford's James Zou (the Liang et al. TOEFL study), NOT University of Toronto \u2014 the 'U Toronto' attribution is unsupported and may double-count the Stanford study.",
+      "title": "Advanced Science News: detector NNES bias",
+      "url": "https://www.advancedsciencenews.com/ai-detectors-have-a-bias-against-non-native-english-speakers/"
+    },
+    {
+      "cited_for": "ZeroGPT 67-85% accuracy, 14.6-33% FPR, 22% paraphrase, 62.5% NNES FPR",
+      "independent_as_reported": true,
+      "issues": "Source actually reports 73.8-94.8% accuracy, 5-30% FPR, paraphrase 94%->10%, ESL '3x higher' (no 62.5%). Doc's specific numbers do not match this cited source.",
+      "title": "paper-checker.com: ZeroGPT review 2026",
+      "url": "https://hub.paper-checker.com/blog/zerogpt-review-limitations-2026/"
+    },
+    {
+      "cited_for": "Pangram ~0.01%/GPTZero ~1%/Turnitin FPR table; 6% detection-power cap; 61% TOEFL",
+      "independent_as_reported": true,
+      "issues": "Confirms 6%-under-1%-FPR-cap math and ~61% TOEFL. Does NOT present the clean Pangram/GPTZero/Turnitin FPR table as flatly stated; frames GPTZero 1% as vendor 'controlled conditions' and gives Turnitin independent FPR 2-5% (50-61% ESL).",
+      "title": "Pebblous: AI text detector limits report",
+      "url": "https://blog.pebblous.ai/report/ai-text-detector-limits/en/"
+    },
+    {
+      "cited_for": "MAGE secondary description",
+      "independent_as_reported": false,
+      "issues": "Vendor content-marketing; slightly different rounded figures; adds no value over primary source.",
+      "title": "Skywork AI: MAGE description",
+      "url": "https://skywork.ai/skypage/en/mage-content-detection/2021154098147848192"
+    },
+    {
+      "cited_for": "'DeBERTa-v3 96.1% accuracy + temperature scaling'",
+      "independent_as_reported": true,
+      "issues": "MISATTRIBUTION: paper credits RoBERTa (not DeBERTa-v3) with 96.1% accuracy via temperature scaling (T=1.476).",
+      "title": "Nature Scientific Reports: temperature-scaling calibration detector",
+      "url": "https://www.nature.com/articles/s41598-025-27377-z"
+    },
+    {
+      "cited_for": "'172-essay annotation-task dataset' (Span/Component/Relation/Scoring/Quality)",
+      "independent_as_reported": true,
+      "issues": "MISMATCH: this paper describes a different corpus (4,038 machine + 4,115 human essays, 7 GPT models, 632 prompts) and different tasks \u2014 not the 172-essay framework. Conflated with C4AI/ArGPT.",
+      "title": "ArguGPT paper (arXiv)",
+      "url": "https://arxiv.org/html/2304.07666v2"
+    },
+    {
+      "cited_for": "DetectZoo '61 detectors' claim",
+      "independent_as_reported": true,
+      "issues": "Abstract DOES state '61 detectors, native loaders for 22 benchmark datasets' \u2014 so the file's own 'unverified' hedge is stale/inconsistent with this cited source. Preprint only.",
+      "title": "DetectZoo paper (arXiv)",
+      "url": "https://arxiv.org/abs/2606.04205"
+    },
+    {
+      "cited_for": "MIT license, '25-language support', 3 stars",
+      "independent_as_reported": true,
+      "issues": "3 stars confirmed; MIT license and '25 languages' NOT confirmable ('Python 100%' only) \u2014 25-languages figure may be transplanted from another tool.",
+      "title": "Kishanjaisoorya AI-Text-Detector-python",
+      "url": "https://github.com/Kishanjaisoorya/AI-Text-Detector-python"
+    },
+    {
+      "cited_for": "'RAID benchmark' scores 92%/98.3%/99.1%",
+      "independent_as_reported": false,
+      "issues": "MISLABELING: vendor ('It's AI') marketing page reporting its own scores; NOT the official RAID site (raid-bench.xyz). Labeling it 'RAID Benchmark Official Website' materially overstates independence.",
+      "title": "It's AI vendor 'accuracy' page (mislabeled 'RAID Benchmark Official Website')",
+      "url": "https://its-ai.org/en/accuracy"
+    },
+    {
+      "cited_for": "Commercial detector benchmark figures",
+      "independent_as_reported": false,
+      "issues": "First-party GPTZero marketing ranking itself #1; not an independent comparison despite 'we put each detector to the test' framing.",
+      "title": "GPTZero: 'best AI detectors' ranking",
+      "url": "https://gptzero.me/news/best-ai-detectors/"
+    },
+    {
+      "cited_for": "Multi-model detection; 'Gemma 4 finetune' / 'Gemini 3' retraining",
+      "independent_as_reported": false,
+      "issues": "Confirms GPT-5/Claude 4.5/Gemini 2.5/Qwen3/DeepSeek-V3 coverage; does NOT mention 'Gemma 4' (LOCALML) or 'Gemini 3' (QUICK) \u2014 those specifics unsupported/likely stale or fabricated.",
+      "title": "Sapling AI Content Detector page",
+      "url": "https://sapling.ai/ai-content-detector"
+    },
+    {
+      "cited_for": "15,000-character free-scan claim",
+      "independent_as_reported": false,
+      "issues": "Swagger page didn't surface a specific character limit; 15,000 figure not confirmable.",
+      "title": "ZeroGPT API docs (Swagger)",
+      "url": "https://api.zerogpt.com/docs"
+    },
+    {
+      "cited_for": "'2,000 free credits + 2,500 more on API signup'",
+      "independent_as_reported": false,
+      "issues": "Page states a single grant of 2,500 credits on signup, not the two-step '2,000 + 2,500' structure. 12-language list confirmed.",
+      "title": "Winston AI content detection API page",
+      "url": "https://gowinston.ai/ai-content-detection-api/"
+    },
+    {
+      "cited_for": "~300 req/hr Inference API free-tier limit",
+      "independent_as_reported": false,
+      "issues": "Documents generic Hub buckets over 5-min windows, not a distinct 'Inference API ~300/hr' figure.",
+      "title": "HuggingFace Hub rate limits",
+      "url": "https://huggingface.co/docs/hub/rate-limits"
+    },
+    {
+      "cited_for": "'$29-$99/mo subscription tiers' + free credits",
+      "independent_as_reported": false,
+      "issues": "Page describes only a 5.5% platform-fee self-serve model + custom Enterprise \u2014 no $29-$99/mo tiers or explicit free-credit grant.",
+      "title": "Eden AI pricing",
+      "url": "https://www.edenai.co/pricing"
+    },
+    {
+      "cited_for": "'LlamaIndex FaithfulnessEvaluator + hit-rate/MRR/NDCG'",
+      "independent_as_reported": false,
+      "issues": "MISMATCH: post is about DeepEval's own metrics, not LlamaIndex's native evaluator, and never mentions hit-rate/MRR/NDCG.",
+      "title": "LlamaIndex blog (DeepEval guest post)",
+      "url": "https://www.llamaindex.ai/blog/evaluating-rag-with-deepeval-and-llamaindex"
+    },
+    {
+      "cited_for": "TTR ~0.6 human vs ~0.8 AI",
+      "independent_as_reported": true,
+      "issues": "PDF body not extractable; topic matches but specific TTR numbers not confirmed.",
+      "title": "AI-vocabulary/TTR paper (arXiv)",
+      "url": "https://arxiv.org/pdf/2606.04177"
+    },
+    {
+      "cited_for": "'590 features (157 lexical + 433 syntactic)'",
+      "independent_as_reported": true,
+      "issues": "Live docs state 124 lexical + 433 syntactic (~557), not 157+433=590 \u2014 lexical count and total both off.",
+      "title": "writeprints-static docs",
+      "url": "https://literary-materials.github.io/writeprints-static/"
+    },
+    {
+      "cited_for": "79-100% accuracy / 0.87 MCC / TTR figures",
+      "independent_as_reported": true,
+      "issues": "PDF unreadable; existence/topic confirmed but specific figures not verified.",
+      "title": "Stylometric detection in tweets (arXiv)",
+      "url": "https://arxiv.org/pdf/2303.03697"
+    },
+    {
+      "cited_for": "SemEval-2026 Task 13 link; '112 software submissions, 70 papers in 2025'",
+      "independent_as_reported": true,
+      "issues": "Fetched content covers 5 PAN 2026 tasks but does not surface the SemEval-2026 cross-ref or the specific counts (likely long-PDF extraction limit).",
+      "title": "PAN 2026 overview (arXiv)",
+      "url": "https://arxiv.org/pdf/2602.09147"
+    },
+    {
+      "cited_for": "ZipPy 82% accuracy / 50x speed (as secondary source)",
+      "independent_as_reported": true,
+      "issues": "Only makes a vague qualitative 'reports strong performance' claim \u2014 does NOT contain the specific 82%/50x figures.",
+      "title": "Watermarking/ZipPy survey (arXiv, secondary)",
+      "url": "https://arxiv.org/html/2604.16607v2"
+    },
+    {
+      "cited_for": "Cited as an 'alternate' RADAR ID",
+      "independent_as_reported": true,
+      "issues": "CONFIRMED WRONG: 2302.05035 is an unrelated paper on ML for autism teaching methods, not RADAR. The correct RADAR ID is 2307.03838; this is a citation error, not an ambiguous discrepancy.",
+      "title": "WRONG RADAR arXiv ID (unrelated autism-teaching paper)",
+      "url": "https://arxiv.org/abs/2302.05035"
+    },
+    {
+      "cited_for": "97.2%/94.2%/92.8% figures",
+      "independent_as_reported": true,
+      "issues": "Paper/approach confirmed real (EMNLP 2023); exact figures not surfaced in abstract-level fetch.",
+      "title": "SeqXGPT (EMNLP 2023)",
+      "url": "https://arxiv.org/abs/2310.08903"
+    },
+    {
+      "cited_for": "Uses scikit-dimension for PHD",
+      "independent_as_reported": true,
+      "issues": "Minor: repo has custom PHD implementation (numpy/scipy); scikit-dimension used only for the alternate MLE approach. MIT confirmed.",
+      "title": "GPTID repo",
+      "url": "https://github.com/ArGintum/GPTID"
+    },
+    {
+      "cited_for": "'0.87 F1 vs Originality.ai 0.89 F1'",
+      "independent_as_reported": false,
+      "issues": "Model card reports ~0.87 average ACCURACY (not clearly F1); no Originality.ai 0.89 comparison found \u2014 the comparative stat is unverifiable / vendor-only.",
+      "title": "SuperAnnotate RoBERTa-large content detector",
+      "url": "https://huggingface.co/SuperAnnotate/roberta-large-llm-content-detector"
+    },
+    {
+      "cited_for": "'EU AI Act drafters questioning whether detector outputs can be evidence'",
+      "independent_as_reported": true,
+      "issues": "Confirms general 'detectors insufficient as sole evidence' consensus, but found NO source tying EU AI Act drafters specifically to questioning detector-output admissibility \u2014 that attribution looks unsupported.",
+      "title": "Newcastle SIN blog: unfairness of AI-flagged misconduct",
+      "url": "https://blogs.ncl.ac.uk/sin/2025/08/05/the-unfairness-of-ai-flagged-academic-misconduct-investigations-in-uk-universities/"
+    },
+    {
+      "cited_for": "GPTZero self-reported 99.5% beating Pangram 99.1% on 'Chicago Booth benchmark'",
+      "independent_as_reported": false,
+      "issues": "Vendor page CONFLICTS with the actual independent Jabarian & Imas study (which ranks Pangram top / only tool meeting the FPR cap). Appears to be a GPTZero self-run benchmark reusing the 'Chicago Booth' name \u2014 misleading naming collision.",
+      "title": "GPTZero: 'Chicago Booth benchmark' results page",
+      "url": "https://gptzero.me/news/chicago-booth-2026/"
+    },
+    {
+      "cited_for": "Academic/Lite/Turbo release timeline; <1% FPR; ~97% humanizer detection; GPT-5.2/Gemini 3/Grok 4.1 accuracy",
+      "independent_as_reported": false,
+      "issues": "Vendor marketing (written by Originality.ai's marketing director). SYNTH's '~70% humanizer' figure is contradicted (page says 'up to 97%'); IMPL's '<1% FPR on longer text' adds an unsourced qualifier. No independent validation.",
+      "title": "Originality.ai: Year in Review 2025",
+      "url": "https://originality.ai/blog/year-in-review-2025"
+    },
+    {
+      "cited_for": "Vocabulary signature list 'maintained 2023-2026'; delve/tapestry/boasts/showcasing",
+      "independent_as_reported": false,
+      "issues": "Single blog post dated Nov 17 2025 (not a continuously-maintained multi-year resource). Fetched page does NOT mention delve/tapestry/boasts/showcasing \u2014 content mismatch + vendor COI.",
+      "title": "Originality.ai: Obvious ChatGPT Sayings",
+      "url": "https://originality.ai/blog/obvious-chatgpt-sayings"
+    },
+    {
+      "cited_for": "OpenAI's decision NOT to ship text watermarking",
+      "independent_as_reported": false,
+      "issues": "More accurately an ongoing pause over UX/circumvention concerns (~30% of users said they'd use ChatGPT less), not a clean final decision; no URL to verify.",
+      "title": "OpenAI: decision not to ship text watermarking",
+      "url": "(no URL) OpenAI content provenance blog (May 2026)"
+    },
+    {
+      "cited_for": "Vocabulary evolution / era-by-era word lists",
+      "independent_as_reported": false,
+      "issues": "Vendor selling an AI humanizer/detector; funnels to paid tools; cites Max Planck/The Verge without primary links; no methodology shown. COI.",
+      "title": "Walter Writes: ChatGPT Words to Avoid 2026",
+      "url": "https://walterwrites.ai/most-common-chatgpt-words-to-avoid/"
+    },
+    {
+      "cited_for": "2026 landscape; per-model attribution accuracy",
+      "independent_as_reported": false,
+      "issues": "Vendor sells AI-humanizer (evasion) tools \u2014 incentive to portray detectors as unreliable. Contains pointers to real independent work but no data backing the '~70-80% per-model accuracy' claim.",
+      "title": "Undetected GPT: AI Detection in 2026",
+      "url": "https://www.undetectedgpt.ai/blog/ai-detection-2026"
+    }
+  ]
+}

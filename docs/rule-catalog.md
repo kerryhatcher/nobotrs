@@ -2,6 +2,10 @@
 
 Dictionary version: 2026.07.26. All vocabulary matches are medium severity editing prompts, with uncalibrated family thresholds. English vocabulary matching uses ASCII case folding; boundaries use Unicode alphanumeric characters plus underscore.
 
+Reviewed code origins and dates for all stable IDs are recorded in the
+[provenance sidecar](../dictionary/provenance.json). Code provenance and prior-art
+style advice do not establish empirical authorship validity.
+
 | Rule ID | Pattern | Matching |
 |---|---|---|
 | `delve` | `delve` | exact |
