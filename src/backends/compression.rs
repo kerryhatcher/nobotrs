@@ -34,6 +34,17 @@ pub(crate) fn compression_ratio(raw: &[u8]) -> f64 {
     compression_ratio_bounded(raw, Deadline::new(std::time::Duration::from_secs(10))).unwrap()
 }
 fn compression_ratio_bounded(raw: &[u8], deadline: Deadline) -> Result<f64, crate::error::Error> {
+    if raw.is_empty() {
+        return Ok(1.0);
+    }
+    Ok(compressed_bytes_bounded(raw, deadline)?.len() as f64 / raw.len() as f64)
+}
+/// The pinned LZMA-Alone stream for nonempty input. Kept separate from the ratio
+/// so reference tests can pin the exact bytes and validate the container.
+fn compressed_bytes_bounded(
+    raw: &[u8],
+    deadline: Deadline,
+) -> Result<Vec<u8>, crate::error::Error> {
     use std::io::{BufRead, Read};
     struct BudgetReader<'a> {
         raw: &'a [u8],
@@ -64,9 +75,6 @@ fn compression_ratio_bounded(raw: &[u8], deadline: Deadline) -> Result<f64, crat
             self.raw = &self.raw[n..];
         }
     }
-    if raw.is_empty() {
-        return Ok(1.0);
-    }
     let mut compressed = vec![];
     if let Err(error) = lzma_rs::lzma_compress(&mut BudgetReader { raw, deadline }, &mut compressed)
     {
@@ -79,7 +87,7 @@ fn compression_ratio_bounded(raw: &[u8], deadline: Deadline) -> Result<f64, crat
     if deadline.expired() {
         return Err(crate::error::Error::Timeout);
     }
-    Ok(compressed.len() as f64 / raw.len() as f64)
+    Ok(compressed)
 }
 
 /// Shannon entropy (bits) over the document's word-frequency distribution —
@@ -241,6 +249,127 @@ mod tests {
         let deadline = Deadline::new(std::time::Duration::from_secs(1));
         if let ScoreOutcome::Scored(score) = backend.score(&doc, deadline) {
             assert_eq!(score.vote, VoteStrength::None);
+        }
+    }
+
+    fn unhex(hex: &str) -> Vec<u8> {
+        assert!(hex.len() % 2 == 0, "odd-length hex fixture");
+        hex.as_bytes()
+            .chunks_exact(2)
+            .map(|pair| {
+                let text = std::str::from_utf8(pair).unwrap();
+                u8::from_str_radix(text, 16).unwrap()
+            })
+            .collect()
+    }
+
+    #[test]
+    fn pinned_compression_reference() {
+        let fixture: serde_json::Value = serde_json::from_str(include_str!(
+            "../../tests/fixtures/compression-reference.json"
+        ))
+        .unwrap();
+        let reference = &fixture["reference"];
+        assert_eq!(reference["crate"], "lzma-rs");
+        assert_eq!(reference["version"], "0.3.0");
+        assert_eq!(
+            reference["crates_io_checksum"],
+            "297e814c836ae64db86b36cf2a557ba54368d03f6afcd7d947c266692f71115e"
+        );
+        let tolerance = reference["comparison_tolerance"].as_f64().unwrap();
+        let cases = fixture["cases"].as_array().unwrap();
+        assert_eq!(cases.len(), 7);
+        let deadline = Deadline::new(std::time::Duration::from_secs(5));
+        for case in cases {
+            let id = case["id"].as_str().unwrap();
+            let text = case["text"].as_str().unwrap();
+            let doc = Document::from_stdin_text(text.to_string(), false);
+            assert_eq!(
+                doc.prose.len(),
+                case["expected_prose_bytes"].as_u64().unwrap() as usize,
+                "{id}: prepared prose bytes"
+            );
+            assert_eq!(
+                doc.words.len(),
+                case["expected_document_words"].as_u64().unwrap() as usize,
+                "{id}: document words"
+            );
+            let tokens: Vec<&str> = doc.prose.split_whitespace().collect();
+            assert_eq!(
+                tokens.len(),
+                case["expected_tokens"].as_u64().unwrap() as usize,
+                "{id}: whitespace tokens"
+            );
+            let expected_entropy = case["expected_entropy"].as_f64().unwrap();
+            let entropy = entropy_bounded(&tokens, Some(deadline)).unwrap();
+            assert!(
+                (entropy - expected_entropy).abs() < tolerance,
+                "{id}: entropy {entropy} vs {expected_entropy}"
+            );
+            let expected_ratio = case["expected_lzma_ratio"].as_f64().unwrap();
+            let ratio = compression_ratio_bounded(doc.prose.as_bytes(), deadline).unwrap();
+            assert!(
+                (ratio - expected_ratio).abs() < tolerance,
+                "{id}: ratio {ratio} vs {expected_ratio}"
+            );
+            match case["lzma_alone_hex"].as_str() {
+                None => {
+                    assert!(
+                        doc.prose.is_empty(),
+                        "{id}: only empty prose lacks a stream"
+                    );
+                    assert_eq!(case["expected_compressed_bytes"], 0, "{id}");
+                    assert!(case["expected_lzma_sha256"].is_null(), "{id}");
+                }
+                Some(hex) => {
+                    let expected_stream = unhex(hex);
+                    assert_eq!(
+                        expected_stream.len(),
+                        case["expected_compressed_bytes"].as_u64().unwrap() as usize,
+                        "{id}: pinned stream length"
+                    );
+                    let stream = compressed_bytes_bounded(doc.prose.as_bytes(), deadline).unwrap();
+                    assert_eq!(stream, expected_stream, "{id}: pinned LZMA-Alone bytes");
+                    let mut decoded = vec![];
+                    lzma_rs::lzma_decompress(
+                        &mut std::io::Cursor::new(&expected_stream),
+                        &mut decoded,
+                    )
+                    .unwrap();
+                    assert_eq!(decoded, doc.prose.as_bytes(), "{id}: decompressed prose");
+                }
+            }
+            let expected_words = case["expected_document_words"].as_u64().unwrap() as usize;
+            let actual = Compression.score(&doc, deadline);
+            if expected_words < MIN_WORDS_FOR_STATS {
+                assert!(
+                    matches!(actual, ScoreOutcome::Abstained { .. }),
+                    "{id}: below-floor case must abstain, got {actual:?}"
+                );
+                assert_eq!(case["expected_backend_outcome"], "abstained", "{id}");
+            } else {
+                let ScoreOutcome::Scored(score) = actual else {
+                    panic!("{id}: backend did not score")
+                };
+                assert!(
+                    (score.metrics["lzma_ratio"].value - expected_ratio).abs() < tolerance,
+                    "{id}: backend ratio"
+                );
+                assert!(
+                    (score.metrics["token_entropy"].value - expected_entropy).abs() < tolerance,
+                    "{id}: backend entropy"
+                );
+                assert_eq!(
+                    score.metrics["lzma_ratio"].method, "lzma-rs-0.3-default",
+                    "{id}"
+                );
+                assert_eq!(
+                    score.metrics["token_entropy"].method, "shannon-whitespace-case-sensitive-v1",
+                    "{id}"
+                );
+                assert_eq!(score.vote, VoteStrength::None, "{id}");
+                assert_eq!(case["expected_backend_outcome"], "scored", "{id}");
+            }
         }
     }
 }

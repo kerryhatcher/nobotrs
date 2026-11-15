@@ -1,5 +1,48 @@
 # Core validation record
 
+## Compression/entropy references and functional-core acceptance: 2026-11-14
+
+Seven original synthetic compression/entropy vectors are pinned in
+`tests/fixtures/compression-reference.json`. They cover empty input, the 149/150
+word boundary, repetition, mixed repetition, multi-byte Unicode, and varied
+prose. The fixture records the `lzma-rs` 0.3.0 Cargo.lock checksum, default
+options, LZMA-Alone header, exact encoded stream hex/SHA-256, compressed length,
+ratio, and independently computed token entropy. See
+[compression reference provenance and limits](compression-reference.md).
+
+`python3 scripts/check-compression-reference.py` reproduced all seven entropy
+values with the Python standard library, verified the pinned crate checksum,
+checked each LZMA-Alone header, decompressed every pinned stream with
+`lzma.FORMAT_ALONE`, and matched the exact raw bytes, length, hash, and ratio.
+The production-backend Rust test `pinned_compression_reference` rechecks the
+native encoder bytes and scored/abstained outcomes. This is regression evidence,
+not Python preset-6 parity or an accuracy claim.
+
+A repeatable real-executable runner now covers the documented functional-core
+release gates:
+
+```sh
+python3 scripts/acceptance.py
+```
+
+It exercises help/guide/config, file/stdin equivalence, Markdown soft breaks,
+entities, fences, gaps and source locations, candidate disposal and rejected
+boundaries, stable IDs, family reduction, language policy, missing/invalid
+inputs, empty prose, mixed scans and deterministic ordering, input/timeout/
+candidate budgets, display-only truncation, and a long single-line Unicode
+fixture. It also packages the crate, verifies imported research is absent,
+installs from the unpacked package into a clean temporary root, and exercises
+the installed binary. The run passed 9 checks. The installed stripped binary was
+2,577,328 bytes, within the 8,000,000-byte budget. On the named host (AMD Ryzen
+7 5800X, 16 logical CPUs), `/usr/bin/time -v` measured `detect README.md` below
+the 0.01-second timer resolution and about 5.7 MiB peak RSS. These are named-host observations,
+not portable guarantees.
+
+Packaging previously included one untracked imported-research `README.md`
+because Cargo's unanchored `README.md` include pattern matched nested files.
+Root package files are now anchored with leading `/`; the package list contains
+no `docs/research/` entries. The imported research itself was not modified.
+
 ## Follow-up: 2026-11-14
 
 Readability now has six pinned external Textstat comparisons, production-backend
@@ -62,4 +105,4 @@ Release measurements were taken with `/usr/bin/time -v` on an x86_64 AMD Ryzen 7
 
 The Unicode fixture was `("é " * 50000) + ("delve leverage " * 1000)`. Both runs completed with status 0 and full analysis coverage. Display suppression did not remove the effective finding count or family contribution. The stripped release binary was approximately 2.57 MB. CI uses a measured-envelope budget of 8,000,000 bytes, with headroom for compiler/target variation. These are named-host observations, not portable timing/RSS guarantees or fragile unit-test thresholds.
 
-Remaining core acceptance work includes a broader set of pinned statistical reference outputs and more cooperative polling inside preprocessing/statistical operations. Parser calls, sorting/regex searches and blocked input are not hard-preemptible. Empirical authorship corpus/evaluation and Python parity/source-by-source review remain later release gates. Optional models/revisions and humanization were deferred by the user. This record does not declare the full nine-phase plan or evaluated release complete.
+Compression/entropy reference coverage is now pinned; burstiness still has native regression tests but no external reference. Parser calls, sorting/regex searches and blocked input are not hard-preemptible. Empirical authorship corpus/evaluation and Python parity/source-by-source review remain later release gates. Optional models/revisions and humanization were deferred by the user. This record does not declare the full nine-phase plan or evaluated release complete.

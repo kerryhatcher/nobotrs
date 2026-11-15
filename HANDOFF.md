@@ -1,13 +1,36 @@
 # nobotrs remediation handoff
 
+Continuation 2026-11-14 (compression/entropy and functional-core acceptance):
+added seven pinned synthetic compression/entropy vectors in
+`tests/fixtures/compression-reference.json`, a standard-library checker
+`scripts/check-compression-reference.py`, and a production-backend regression
+`pinned_compression_reference`. The fixture pins the `lzma-rs` 0.3.0 checksum,
+LZMA-Alone header, exact stream hex/SHA-256, length, ratio, and independently
+computed token entropy. The checker decompresses every stream with Python
+`lzma.FORMAT_ALONE`; this is container/regression evidence, not Python preset-6
+parity. See `docs/compression-reference.md`.
+
+Added `scripts/acceptance.py`, a repeatable real-executable runner for the
+documented functional-core gates: file/stdin, Markdown normalization and source
+locations, candidate disposal/boundaries, stable IDs, family reduction, language
+policy, failures, mixed scans, budgets, display truncation, long Unicode lines,
+and package/install verification. It passed 9 checks; the installed binary was
+2,577,328 bytes. Packaging now anchors root include patterns with `/`, fixing an
+untracked imported-research `README.md` that Cargo had matched at nested depth.
+The imported research was not modified. See `docs/core-validation.md`.
+
+Remaining: licensed authorship corpus/evaluation, Python parity, burstiness
+external reference, and optional phases 8–9. No thresholds, accuracy claims, or
+calibrated probabilities changed. No commit or push was made by this worker.
+
 Continuation 2026-11-14: the readability/deadline follow-up is committed as
 `7592e89`. Added six pinned LexicalRichness 0.5.1 MTLD vectors, a development-only
 reference checker, and production-backend comparisons; see `docs/mtld-reference.md`.
 Fixed the MTLD and readability evidence-only tests to assert English applicability
 and require a scored result, rather than passing silently on abstention. Pi/Ornith
 performed the MTLD test work under supervision, with context resets between tasks.
-Compression reference coverage, licensed corpus evaluation, Python parity, and
-the broader release checklist remain open. No pushes were made.
+Licensed corpus evaluation, Python parity, and the broader release checklist
+remain open. No pushes were made.
 
 Follow-up 2026-11-14: six pinned Textstat readability comparisons and a reproducible
 development-only checker now cover varied English prose, including pronunciation

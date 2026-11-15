@@ -132,6 +132,7 @@ Stopping analysis because of input, candidate, or time limits produces status `2
 **Likely files:** `src/score.rs`, `src/backend.rs`, `src/aggregate.rs`, `src/dictionary.rs`, backend implementations, output/config modules.
 
 - [x] Introduce typed document metrics: sentence-length coefficient of variation, MTLD, Flesch–Kincaid grade, compression ratio with algorithm/container metadata, and empirical word-frequency entropy in bits. Include sample sizes and applicability reasons.
+- [x] Follow-up 2026-11-14: pin seven synthetic compression/entropy vectors with `lzma-rs` 0.3.0 provenance, exact LZMA-Alone streams, independently computed entropy, boundary/empty/Unicode/repetition cases, and production-backend regressions. See [compression references](../../compression-reference.md).
 - [x] Remove arbitrary conversions such as `MTLD / 150` or `1 - grade / 20` into human probability. Represent heuristic strength separately. Future model scores carry method, direction, model revision, and calibration status; probabilities are optional and require identified calibration.
 - [x] Reject or report nonfinite measurements explicitly instead of converting invalid computation into apparently valid neutral evidence.
 - [x] Return one inspectable outcome per backend invocation, including stable backend identity, family, status, raw metrics, candidate findings/contributions, and abstention/failure reason. Do not discard entropy or abstentions. Multiple backends may belong to the same family.
@@ -265,12 +266,14 @@ Stopping analysis because of input, candidate, or time limits produces status `2
 
 ### Functional core release, phases 0–4
 
-- [ ] Pass phases 0–4 acceptance checks and the common formatting/lint/test checks. Verify the default runtime works without keys, downloads, or network access.
-- [ ] Exercise the real executable for file/stdin, Markdown hints, JSON, invalid configuration, missing paths, invalid encoding, empty/no-prose input, unknown/unsupported language, explicit language overrides, and mixed-success directories.
-- [ ] Verify soft-break/entity normalization, block/gap boundaries, exact/regex candidate enumeration, rejected-boundary alternatives, stable IDs, family reduction, and Unicode source locations, including a long single-line fixture.
-- [ ] Exercise timeouts, oversized inputs, candidate-budget exhaustion, and display limits. Partial analysis returns `2`; display-only truncation preserves complete votes/status and reports omitted counts. Validate JSON completeness fields and deterministic output ordering.
-- [ ] Preserve candidates and the suppression-before-selection pipeline boundary for phase 6, without requiring suppression syntax or SARIF in this milestone.
-- [ ] Verify packaging and installation from a clean temporary destination, usable CLI help/README examples, and documentation of configuration precedence, status codes, JSON, language limits, short inputs, resource limits, and uncalibrated heuristics. Record release binary size, runtime, and peak memory on named hardware.
+- [x] Pass phases 0–4 acceptance checks and the common formatting/lint/test checks. Verify the default runtime works without keys, downloads, or network access.
+- [x] Exercise the real executable for file/stdin, Markdown hints, JSON, invalid configuration, missing paths, invalid encoding, empty/no-prose input, unknown/unsupported language, explicit language overrides, and mixed-success directories.
+- [x] Verify soft-break/entity normalization, block/gap boundaries, exact/regex candidate enumeration, rejected-boundary alternatives, stable IDs, family reduction, and Unicode source locations, including a long single-line fixture.
+- [x] Exercise timeouts, oversized inputs, candidate-budget exhaustion, and display limits. Partial analysis returns `2`; display-only truncation preserves complete votes/status and reports omitted counts. Validate JSON completeness fields and deterministic output ordering.
+- [x] Preserve candidates and the suppression-before-selection pipeline boundary for phase 6, without requiring suppression syntax or SARIF in this milestone.
+- [x] Verify packaging and installation from a clean temporary destination, usable CLI help/README examples, and documentation of configuration precedence, status codes, JSON, language limits, short inputs, resource limits, and uncalibrated heuristics. Record release binary size, runtime, and peak memory on named hardware.
+
+Evidence: `python3 scripts/acceptance.py` passed 9 real-executable checks, including package/install verification; see [core validation](../../core-validation.md). The installed binary was 2,577,328 bytes on the named host. This marks the documented functional-core gates, not the evaluated or optional milestones.
 
 ### Evaluated linting and integrations release, phases 5–7
 
