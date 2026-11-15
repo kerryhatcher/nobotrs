@@ -6,14 +6,18 @@ until a frozen access record has been claimed exactly once.
 """
 import argparse
 import json
+import os
 import pathlib
+import shutil
 import subprocess
 import sys
+import tempfile
 import time
 
 from evaluation_protocol import (
     SCHEMA_VERSION,
     ProtocolError,
+    canonical_json_bytes,
     claim_independent_access,
     corpus_content_sha256,
     decode_sample_bytes,
@@ -22,12 +26,54 @@ from evaluation_protocol import (
     metrics,
     read_sample_bytes,
     sha256_bytes,
+    sha256_file,
     sweep_rows,
     validate_config,
     validate_criteria,
     validate_grouping,
     validate_manifest,
 )
+
+
+def detector_environment():
+    """Remove NOBOTRS_* overrides so they cannot supersede the frozen config."""
+    return {
+        key: value for key, value in os.environ.items()
+        if not key.upper().startswith("NOBOTRS_")
+    }
+
+
+def sanitized_nobotrs_variables():
+    return sorted(
+        key for key in os.environ if key.upper().startswith("NOBOTRS_")
+    )
+
+
+def write_empty_config(path: pathlib.Path) -> str:
+    """Force serde defaults through an explicit isolated empty config."""
+    path.write_text("{}\n", encoding="utf-8")
+    return sha256_file(path)
+
+
+def dimension_metrics(rows, dimensions):
+    """Report optional manifest dimensions (domain/generator/language/etc.)."""
+    if not dimensions:
+        return {}
+    output = {}
+    for name in sorted(dimensions):
+        values = sorted({
+            str(row.get("dimension_values", {}).get(name))
+            for row in rows
+            if row.get("dimension_values", {}).get(name) is not None
+        })
+        output[name] = {
+            value: metrics([
+                row for row in rows
+                if str(row.get("dimension_values", {}).get(name)) == value
+            ])
+            for value in values
+        }
+    return output
 
 
 def main():
@@ -46,6 +92,7 @@ def main():
     parser.add_argument("--sweep-quorum", type=int, nargs="+")
     parser.add_argument("--release-access-record", type=pathlib.Path)
     args = parser.parse_args()
+    temp_config_dir = None
 
     try:
         manifest = load_json(args.manifest, "manifest")
@@ -67,8 +114,27 @@ def main():
         except OSError as error:
             raise ProtocolError(f"cannot read binary {args.binary}: {error}") from None
         config_hash = None
+        config_path = args.config
+        config_source = None
+        config_supplied_keys = []
+        config_data = None
         criteria = None
         access_record = None
+        if args.config:
+            config_path, config_hash = validate_config(args.config)
+            config_data = load_json(config_path, "configuration")
+            config_supplied_keys = sorted(config_data)
+            config_source = "explicit --config"
+        elif not independent:
+            temp_config_dir = tempfile.mkdtemp(prefix="nobotrs-eval-config-")
+            config_path = pathlib.Path(temp_config_dir) / "empty-defaults.json"
+            config_hash = write_empty_config(config_path)
+            config_source = (
+                "synthesized empty config; binary defaults; platform config "
+                "and NOBOTRS_CONFIG lookup isolated"
+            )
+        detector_env = detector_environment()
+        sanitized_vars = sanitized_nobotrs_variables()
         if independent:
             if args.sweep_quorum:
                 raise ProtocolError("independent-test forbids threshold sweeps")
@@ -77,7 +143,6 @@ def main():
                     "independent-test requires --config, --release-criteria, "
                     "and --release-access-record"
                 )
-            _, config_hash = validate_config(args.config)
             criteria = validate_criteria(args.release_criteria)
             expected_identity = {
                 "schema_version": SCHEMA_VERSION,
@@ -120,8 +185,6 @@ def main():
             verified_splits = sorted({sample["split"] for sample in info.samples})
             independent_held_out_verified = True
         else:
-            if args.config:
-                _, config_hash = validate_config(args.config)
             if args.release_criteria:
                 criteria = validate_criteria(args.release_criteria)
             readable = [
@@ -163,15 +226,16 @@ def main():
 
         rows = []
         for sample in selected:
-            command = [args.binary, "detect", "-", "--format", "json"]
+            command = [
+                args.binary, "detect", "-", "--format", "json",
+                "--config", str(config_path),
+            ]
             if markdown_hint(sample):
                 command.append("--markdown")
-            if args.config:
-                command += ["--config", str(args.config)]
             start = time.perf_counter()
             process = subprocess.run(
                 command, input=contents[sample["id"]], capture_output=True,
-                check=False, timeout=60
+                check=False, timeout=60, env=detector_env,
             )
             elapsed = time.perf_counter() - start
             try:
@@ -188,8 +252,10 @@ def main():
                 "id": sample["id"],
                 "label": sample.get("label"),
                 "slice": sample["slice"],
+                "dimension_values": sample.get("dimension_values", {}),
                 "verdict": report["verdict"],
                 "complete": report["complete"],
+                "settings": report.get("settings"),
                 "status": process.returncode,
                 "runtime_seconds": elapsed,
                 "families": report["families"],
@@ -213,6 +279,22 @@ def main():
             rows.append(row)
         if not rows:
             raise ProtocolError("selected split has no samples; no performance claim can be produced")
+        effective_settings = rows[0].get("settings")
+        if not isinstance(effective_settings, dict):
+            raise ProtocolError("detector report does not expose effective settings")
+        for row in rows[1:]:
+            other = row.get("settings")
+            if not isinstance(other, dict) or canonical_json_bytes(other) != canonical_json_bytes(
+                effective_settings
+            ):
+                raise ProtocolError("effective settings changed between detector runs")
+        if config_data is not None:
+            for key in config_supplied_keys:
+                if effective_settings.get(key) != config_data[key]:
+                    raise ProtocolError(
+                        f"effective setting {key!r} does not match the supplied configuration"
+                    )
+        effective_settings_sha256 = sha256_bytes(canonical_json_bytes(effective_settings))
 
         metric_versions = {}
         for row in rows:
@@ -243,6 +325,7 @@ def main():
                 slice_name: metrics([row for row in rows if row["slice"] == slice_name])
                 for slice_name in sorted({row["slice"] for row in rows})
             },
+            "dimension_metrics": dimension_metrics(rows, manifest.get("dimensions")),
             "regression_results": stable,
             "raw_feature_cache": rows,
             "runtime_seconds": sum(row["runtime_seconds"] for row in rows),
@@ -254,6 +337,7 @@ def main():
                     else manifest.get("corpus_content_sha256", verified_content)
                 ),
                 "configuration_sha256": config_hash,
+                "configuration_source": config_source,
                 "release_criteria_sha256": criteria.raw_sha256 if criteria else None,
                 "release_criteria_id": criteria.criteria_id if criteria else None,
                 "binary_sha256": binary_sha256,
@@ -268,6 +352,14 @@ def main():
                 "independent_held_out_verified": independent_held_out_verified,
             },
             "grouping": grouping,
+            "effective_configuration": {
+                "settings": effective_settings,
+                "settings_sha256": effective_settings_sha256,
+                "supplied_keys": config_supplied_keys,
+                "source": config_source,
+                "environment_sanitized": True,
+                "sanitized_nobotrs_variables": sanitized_vars,
+            },
             "engine_identity": {
                 "binary_sha256": binary_sha256,
                 "engine_versions": sorted({row["engine_version"] for row in rows if row["engine_version"]}),
@@ -294,6 +386,9 @@ def main():
     except (ProtocolError, OSError, subprocess.TimeoutExpired) as error:
         print(f"evaluate: {error}", file=sys.stderr)
         return 1
+    finally:
+        if temp_config_dir:
+            shutil.rmtree(temp_config_dir, ignore_errors=True)
     return 0
 
 

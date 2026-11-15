@@ -1,0 +1,19 @@
+{
+  "minimum_severity": "medium",
+  "quorum": 2,
+  "max_bytes": 1048576,
+  "max_candidates": 10000,
+  "display_limit": 200,
+  "timeout_ms": 5000,
+  "language": null,
+  "enabled_backends": [
+    "vocabulary",
+    "punctuation",
+    "burstiness",
+    "lexical-diversity",
+    "readability",
+    "compression"
+  ],
+  "ignore_rules": [],
+  "path_ignores": {}
+}

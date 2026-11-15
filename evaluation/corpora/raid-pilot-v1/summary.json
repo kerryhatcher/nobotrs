@@ -1,0 +1,524 @@
+{
+  "corpus_content_sha256": "349a0c64684e30b31f2f893547cceaf30609354d33aa5a266332bc84e2d5858d",
+  "corpus_version": "raid-pilot-v1",
+  "coverage_gaps": {
+    "attacks_present": [
+      "none",
+      "paraphrase"
+    ],
+    "domains_absent_from_pilot": [
+      "code",
+      "recipes",
+      "reddit",
+      "reviews",
+      "wiki"
+    ],
+    "domains_present": [
+      "abstracts",
+      "books",
+      "czech",
+      "german",
+      "news",
+      "poetry"
+    ],
+    "domains_with_paraphrase": [
+      "abstracts",
+      "books",
+      "news"
+    ],
+    "domains_without_human": [
+      "german",
+      "news"
+    ],
+    "empty_queries": [
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "poetry",
+        "empty": true,
+        "file": "responses/poetry-chatgpt.json",
+        "model": "chatgpt",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27poetry%27+AND+%22model%22%3D%27chatgpt%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "poetry",
+        "empty": true,
+        "file": "responses/poetry-gpt4.json",
+        "model": "gpt4",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27poetry%27+AND+%22model%22%3D%27gpt4%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "reddit",
+        "empty": true,
+        "file": "responses/reddit-chatgpt.json",
+        "model": "chatgpt",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27reddit%27+AND+%22model%22%3D%27chatgpt%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "reddit",
+        "empty": true,
+        "file": "responses/reddit-gpt4.json",
+        "model": "gpt4",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27reddit%27+AND+%22model%22%3D%27gpt4%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "reddit",
+        "empty": true,
+        "file": "responses/reddit-human.json",
+        "model": "human",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27reddit%27+AND+%22model%22%3D%27human%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "reddit",
+        "empty": true,
+        "file": "responses/reddit-mistral-chat.json",
+        "model": "mistral-chat",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27reddit%27+AND+%22model%22%3D%27mistral-chat%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "reviews",
+        "empty": true,
+        "file": "responses/reviews-chatgpt.json",
+        "model": "chatgpt",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27reviews%27+AND+%22model%22%3D%27chatgpt%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "reviews",
+        "empty": true,
+        "file": "responses/reviews-gpt4.json",
+        "model": "gpt4",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27reviews%27+AND+%22model%22%3D%27gpt4%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "reviews",
+        "empty": true,
+        "file": "responses/reviews-human.json",
+        "model": "human",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27reviews%27+AND+%22model%22%3D%27human%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "wiki",
+        "empty": true,
+        "file": "responses/wiki-chatgpt.json",
+        "model": "chatgpt",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27wiki%27+AND+%22model%22%3D%27chatgpt%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "wiki",
+        "empty": true,
+        "file": "responses/wiki-gpt4.json",
+        "model": "gpt4",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27wiki%27+AND+%22model%22%3D%27gpt4%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "wiki",
+        "empty": true,
+        "file": "responses/wiki-human.json",
+        "model": "human",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27wiki%27+AND+%22model%22%3D%27human%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      },
+      {
+        "attack": "none",
+        "available": 0,
+        "domain": "wiki",
+        "empty": true,
+        "file": "responses/wiki-mistral-chat.json",
+        "model": "mistral-chat",
+        "partial_view": true,
+        "rows": 0,
+        "sha256": "d599e2c4201f3876aa98a347022a2ff2785a0f49354a2b5eacc0bc94145f1c71",
+        "upstream_split": "train",
+        "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27wiki%27+AND+%22model%22%3D%27mistral-chat%27+AND+%22attack%22%3D%27none%27&offset=0&length=50"
+      }
+    ],
+    "failed_queries": [
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "news",
+          "human"
+        ]
+      },
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "reviews",
+          "mistral-chat"
+        ]
+      },
+      {
+        "error": "The read operation timed out",
+        "job": [
+          "books",
+          "chatgpt"
+        ]
+      },
+      {
+        "error": "The read operation timed out",
+        "job": [
+          "recipes",
+          "human"
+        ]
+      },
+      {
+        "error": "The read operation timed out",
+        "job": [
+          "recipes",
+          "mistral-chat"
+        ]
+      },
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "recipes",
+          "chatgpt"
+        ]
+      },
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "recipes",
+          "gpt4"
+        ]
+      },
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "code",
+          "human"
+        ]
+      },
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "code",
+          "gpt4"
+        ]
+      },
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "code",
+          "mistral-chat"
+        ]
+      },
+      {
+        "error": "HTTP Error 500: Internal Server Error",
+        "job": [
+          "german",
+          "human"
+        ]
+      },
+      {
+        "error": "The read operation timed out",
+        "job": [
+          "code",
+          "chatgpt"
+        ]
+      }
+    ],
+    "models_absent_from_pilot": [
+      "cohere",
+      "cohere-chat",
+      "gpt2",
+      "gpt3",
+      "llama-chat",
+      "mistral",
+      "mpt",
+      "mpt-chat"
+    ],
+    "models_present": [
+      "chatgpt",
+      "gpt4",
+      "human",
+      "mistral-chat"
+    ],
+    "native_speaker_attribution": "absent upstream; not inferred",
+    "no_test_split_requested": true,
+    "partial_api_views": true,
+    "per_sample_language_field": "absent upstream; language_hint is a domain hint"
+  },
+  "curation_sha256": "a965a4bd2ed0669a47caf17a8d4ba9437c491935781b051729db4865e1619f28",
+  "dimensions": {
+    "attack": {
+      "none": 950,
+      "paraphrase": 150
+    },
+    "domain": {
+      "abstracts": 250,
+      "books": 200,
+      "czech": 200,
+      "german": 150,
+      "news": 200,
+      "poetry": 100
+    },
+    "generator": {
+      "chatgpt": 200,
+      "gpt4": 400,
+      "human": 200,
+      "mistral-chat": 300
+    },
+    "label": {
+      "generated": 900,
+      "human": 200
+    },
+    "language_hint": {
+      "czech-domain": 200,
+      "german-domain": 150,
+      "unknown": 750
+    },
+    "length_bucket": {
+      "100-249": 631,
+      "250-499": 391,
+      "500-plus": 45,
+      "lt-100": 33
+    },
+    "upstream_split": {
+      "extra": 350,
+      "train": 750
+    }
+  },
+  "labels": {
+    "generated": 900,
+    "human": 200
+  },
+  "limitations": [
+    "Only copied datasets-server filter views were available; every view is partial.",
+    "The pilot is not the complete RAID benchmark and must not be presented as one.",
+    "Rows are capped by the acquisition response length; available counts are much larger.",
+    "Only abstracts, books, czech, german, news, and poetry are represented.",
+    "Code, recipes, reddit, reviews, and wiki responses were absent, empty, or failed.",
+    "Most upstream domain/generator/attack cells were never requested or failed.",
+    "Only abstracts, books, and news contain GPT-4 paraphrase rows in this snapshot.",
+    "Some domains have no human cell (german and news) and some have no chatbot cell.",
+    "RAID supplies no native-speaker attribution, so none is inferred or reported.",
+    "RAID supplies no per-row language field, so language_hint is only a domain hint.",
+    "The detector runs with its default unknown-language policy; no overrides are frozen.",
+    "The 12 failed queries and empty responses are recorded, not filled or re-requested.",
+    "No RAID test split was requested; the pilot was built only from train/extra views.",
+    "Source IDs and exact/near content are grouped before splitting; no text is displayed."
+  ],
+  "manifest_sha256": "dcc538e2fe6dcbb7ad5ff99dc0886d235f105297be161ee77f40745d8ed3ddfa",
+  "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+  "row_accounting": {
+    "accepted": 1100,
+    "rejected": 0,
+    "rejected_by_reason": {},
+    "rejected_rows": [],
+    "rows_seen": 1100
+  },
+  "samples": 1100,
+  "split_components": {
+    "development": 146,
+    "independent-test": 42,
+    "validation": 62
+  },
+  "split_dimensions": {
+    "development": {
+      "attack": {
+        "none": 556,
+        "paraphrase": 106
+      },
+      "domain": {
+        "abstracts": 162,
+        "books": 150,
+        "czech": 78,
+        "german": 78,
+        "news": 136,
+        "poetry": 58
+      },
+      "generator": {
+        "chatgpt": 112,
+        "gpt4": 256,
+        "human": 116,
+        "mistral-chat": 178
+      },
+      "label": {
+        "generated": 546,
+        "human": 116
+      },
+      "language_hint": {
+        "czech-domain": 78,
+        "german-domain": 78,
+        "unknown": 506
+      },
+      "length_bucket": {
+        "100-249": 356,
+        "250-499": 260,
+        "500-plus": 29,
+        "lt-100": 17
+      },
+      "upstream_split": {
+        "extra": 156,
+        "train": 506
+      }
+    },
+    "independent-test": {
+      "attack": {
+        "none": 194,
+        "paraphrase": 24
+      },
+      "domain": {
+        "abstracts": 41,
+        "books": 15,
+        "czech": 58,
+        "german": 36,
+        "news": 48,
+        "poetry": 20
+      },
+      "generator": {
+        "chatgpt": 48,
+        "gpt4": 76,
+        "human": 30,
+        "mistral-chat": 64
+      },
+      "label": {
+        "generated": 188,
+        "human": 30
+      },
+      "language_hint": {
+        "czech-domain": 58,
+        "german-domain": 36,
+        "unknown": 124
+      },
+      "length_bucket": {
+        "100-249": 133,
+        "250-499": 74,
+        "500-plus": 4,
+        "lt-100": 7
+      },
+      "upstream_split": {
+        "extra": 94,
+        "train": 124
+      }
+    },
+    "validation": {
+      "attack": {
+        "none": 200,
+        "paraphrase": 20
+      },
+      "domain": {
+        "abstracts": 47,
+        "books": 35,
+        "czech": 64,
+        "german": 36,
+        "news": 16,
+        "poetry": 22
+      },
+      "generator": {
+        "chatgpt": 40,
+        "gpt4": 68,
+        "human": 54,
+        "mistral-chat": 58
+      },
+      "label": {
+        "generated": 166,
+        "human": 54
+      },
+      "language_hint": {
+        "czech-domain": 64,
+        "german-domain": 36,
+        "unknown": 120
+      },
+      "length_bucket": {
+        "100-249": 142,
+        "250-499": 57,
+        "500-plus": 12,
+        "lt-100": 9
+      },
+      "upstream_split": {
+        "extra": 100,
+        "train": 120
+      }
+    }
+  },
+  "split_labels": {
+    "development": {
+      "generated": 546,
+      "human": 116
+    },
+    "independent-test": {
+      "generated": 188,
+      "human": 30
+    },
+    "validation": {
+      "generated": 166,
+      "human": 54
+    }
+  },
+  "splits": {
+    "development": 662,
+    "independent-test": 218,
+    "validation": 220
+  }
+}

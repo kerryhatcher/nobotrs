@@ -185,6 +185,21 @@ Stopping analysis because of input, candidate, or time limits produces status `2
 
 **Acceptance:** an evaluation command or script reproduces the CI baseline, exports machine-readable results, supports a documented development/validation sweep, and reports abstentions separately. Split manifests, frozen candidate settings, release criteria, and test-set access/refresh records distinguish selection from independent release assessment. No new default voting rule is justified solely by folklore, a source summary, or parity with the Python constants.
 
+Pilot follow-up 2026-11-14: a limited, MIT-licensed RAID pilot is available at
+[`evaluation/corpora/raid-pilot-v1`](../../../evaluation/corpora/raid-pilot-v1),
+with a portable source snapshot, 1,100 partial-view rows, deterministic
+source/near-duplicate grouping, forced-development viewed sources, dimension
+reporting, and freeze/preflight tooling. It does not satisfy the complete
+versioned-corpus item above: five RAID domains and most generators are absent,
+some cells failed, native-speaker attribution is unavailable, and the corpus is
+not representative. Only development/validation evaluation has run; the
+independent-test split is unopened and no access record was claimed. A cached
+validation quorum sweep retained quorum 2/default thresholds because quorum 1
+traded extremely low recall for an unacceptable observed pilot FPR and quorum 3
+lost coverage; see the
+[cached selection note](../../evaluation/raid-pilot-selection.md). See
+[raid pilot](../../evaluation/raid-pilot.md).
+
 ## Phase 6 — Add scoped suppression and actionable localization
 
 **Likely files:** new suppression/postprocessing module, configuration, report types, CLI output, localization fixtures.

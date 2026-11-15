@@ -1,0 +1,16 @@
+The Voronoi diagram-based dual-front active contour models are known as a
+powerful and efficient way for addressing the image segmentation and domain
+partitioning problems. In the basic formulation of the dual-front models, the
+evolving contours can be considered as the interfaces of adjacent Voronoi
+regions. Among these dual-front models, a crucial ingredient is regarded as the
+geodesic metrics by which the geodesic distances and the corresponding Voronoi
+diagram can be estimated. In this paper, we introduce a type of asymmetric
+quadratic metrics dual-front model. The metrics considered are built by the
+integration of the image features and a vector field derived from the evolving
+contours. The use of the asymmetry enhancement can reduce the risk of contour
+shortcut or leakage problems especially when the initial contours are far away
+from the target boundaries or the images have complicated intensity
+distributions. Moreover, the proposed dual-front model can be applied for image
+segmentation in conjunction with various region-based homogeneity terms. The
+numerical experiments on both synthetic and real images show that the proposed
+dual-front model indeed achieves encouraging results.

@@ -1,0 +1,11 @@
+Google hat ein neues Feature für seine E-Mail-Plattform Inbox eingeführt, das den Nutzern dabei helfen soll, ihre E-Mails effizienter zu verwalten. Die neue Funktion namens "Snooze" erinnert die Nutzer intelligent daran, auf wichtige E-Mails zu reagieren.
+
+Mit der Snooze-Funktion können Nutzer E-Mails für einen späteren Zeitpunkt "verschlafen" lassen. Die E-Mail wird dann zu einem vom Nutzer festgelegten Zeitpunkt erneut in den Posteingang verschoben. Das Besondere an der neuen Funktion ist, dass sie intelligent genug ist, um den Inhalt der E-Mail zu analysieren und den Nutzer zum optimalen Zeitpunkt zu erinnern.
+
+Zum Beispiel, wenn eine E-Mail eine Flugbestätigung enthält, wird die Snooze-Funktion den Nutzer daran erinnern, kurz vor dem Abflug einzuchecken. Wenn eine E-Mail eine Restaurantreservierung enthält, wird die Snooze-Funktion den Nutzer kurz vor der Reservierungszeit daran erinnern.
+
+"Wir wissen, dass das Leben manchmal hektisch sein kann und es leicht ist, Dinge zu vergessen, besonders wenn man eine Flut von E-Mails hat", sagte ein Google-Sprecher. "Mit der Snooze-Funktion wollen wir unseren Nutzern helfen, ihre E-Mails effizienter zu verwalten und sicherzustellen, dass sie nichts Wichtiges verpassen."
+
+Die Snooze-Funktion ist das neueste Feature in Googles Bemühungen, seine E-Mail-Plattform benutzerfreundlicher zu gestalten. In den letzten Jahren hat Google eine Reihe von Funktionen eingeführt, darunter die automatische Sortierung von E-Mails in Kategorien wie "Primär", "Soziale Netzwerke" und "Werbung", um den Nutzern zu helfen, ihren Posteingang besser zu organisieren.
+
+Die Snooze-Funktion ist ab sofort für alle Nutzer von Googles Inbox verfügbar.

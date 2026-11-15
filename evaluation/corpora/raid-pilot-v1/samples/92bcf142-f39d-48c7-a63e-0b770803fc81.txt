@@ -1,0 +1,16 @@
+The segmentation of nanoscale electron microscopy (EM) images is crucial but
+challenging in connectomics. Recent advances in deep learning have demonstrated
+the significant potential of automatic segmentation for tera-scale EM images.
+However, none of the existing segmentation methods are error-free, and they
+require proofreading, which is typically implemented as an interactive,
+semi-automatic process via manual intervention. Herein, we propose a fully
+automatic proofreading method based on reinforcement learning. The main idea is
+to model the human decision process in proofreading using a reinforcement agent
+to achieve fully automatic proofreading. We systematically design the proposed
+system by combining multiple reinforcement learning agents in a hierarchical
+manner, where each agent focuses only on a specific task while preserving
+dependency between agents. Furthermore, we also demonstrate that the episodic
+task setting of reinforcement learning can efficiently manage a combination of
+merge and split errors concurrently presented in the input. We demonstrate the
+efficacy of the proposed system by comparing it with state-of-the-art
+proofreading methods using various testing examples.

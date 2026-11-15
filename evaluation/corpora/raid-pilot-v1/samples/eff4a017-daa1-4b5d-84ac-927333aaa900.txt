@@ -1,0 +1,15 @@
+This paper reports a CPU-level real-time stereo matching method for surgical
+images (10 Hz on 640 * 480 image with a single core of i5-9400). The proposed
+method is built on the fast ''dense inverse searching'' algorithm, which
+estimates the disparity of the stereo images. The overlapping image patches
+(arbitrary squared image segment) from the images at different scales are
+aligned based on the photometric consistency presumption. We propose a Bayesian
+framework to evaluate the probability of the optimized patch disparity at
+different scales. Moreover, we introduce a spatial Gaussian mixed probability
+distribution to address the pixel-wise probability within the patch. In-vivo
+and synthetic experiments show that our method can handle ambiguities resulted
+from the textureless surfaces and the photometric inconsistency caused by the
+Lambertian reflectance. Our Bayesian method correctly balances the probability
+of the patch for stereo images at different scales. Experiments indicate that
+the estimated depth has higher accuracy and fewer outliers than the baseline
+methods in the surgical scenario.

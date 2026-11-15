@@ -1,0 +1,17 @@
+With the widespread success of deep learning in biomedical image
+segmentation, domain shift becomes a critical and challenging problem, as the
+gap between two domains can severely affect model performance when deployed to
+unseen data with heterogeneous features. To alleviate this problem, we present
+a novel unsupervised domain adaptation network, for generalizing models learned
+from the labeled source domain to the unlabeled target domain for
+cross-modality biomedical image segmentation. Specifically, our approach
+consists of two key modules, a conditional domain discriminator~(CDD) and a
+category-centric prototype aligner~(CCPA). The CDD, extended from conditional
+domain adversarial networks in classifier tasks, is effective and robust in
+handling complex cross-modality biomedical images. The CCPA, improved from the
+graph-induced prototype alignment mechanism in cross-domain object detection,
+can exploit precise instance-level features through an elaborate prototype
+representation. In addition, it can address the negative effect of class
+imbalance via entropy-based loss. Extensive experiments on a public benchmark
+for the cardiac substructure segmentation task demonstrate that our method
+significantly improves performance on the target domain.

@@ -1,0 +1,14 @@
+High-quality training data play a key role in image segmentation tasks.
+Usually, pixel-level annotations are expensive, laborious and time-consuming
+for the large volume of training data. To reduce labelling cost and improve
+segmentation quality, interactive segmentation methods have been proposed,
+which provide the result with just a few clicks. However, their performance
+does not meet the requirements of practical segmentation tasks in terms of
+speed and accuracy. In this work, we propose EdgeFlow, a novel architecture
+that fully utilizes interactive information of user clicks with edge-guided
+flow. Our method achieves state-of-the-art performance without any
+post-processing or iterative optimization scheme. Comprehensive experiments on
+benchmarks also demonstrate the superiority of our method. In addition, with
+the proposed method, we develop an efficient interactive segmentation tool for
+practical data annotation tasks. The source code and tool is avaliable at
+https://github.com/PaddlePaddle/PaddleSeg.

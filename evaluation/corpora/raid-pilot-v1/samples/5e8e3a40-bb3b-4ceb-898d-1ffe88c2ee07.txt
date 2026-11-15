@@ -1,0 +1,13 @@
+Snooze: Googles Inbox erinnert jetzt intelligent
+
+Mountain View, Kalifornien - Google hat kürzlich eine intelligente Funktion namens "Snooze" in seine Inbox-App integriert, um den Nutzern dabei zu helfen, ihre E-Mails besser zu organisieren und wichtige Informationen nicht zu vergessen. Die Funktion nutzt maschinelles Lernen, um E-Mails zu identifizieren, die später erneut gelesen oder bearbeitet werden sollen.
+
+Mit der Funktion "Snooze" können User eine E-Mail aus ihrer Inbox entfernen und später zu einem bestimmten Zeitpunkt wieder zurückholen. Dies ermöglicht es den Benutzern, ihr Posteingangsfach aufzuräumen und gleichzeitig sicherzustellen, dass wichtige E-Mails nicht in Vergessenheit geraten. Die Funktion steht sowohl auf Android- als auch auf iOS-Geräten zur Verfügung.
+
+Die Künstliche Intelligenz (KI) von Google verwendet verschiedene Kriterien, um zu bestimmen, wann eine E-Mail gesnoozt werden sollte. Dazu gehören beispielsweise der Inhalt der Nachricht, der Absender und die Aktionen des Benutzers in der Vergangenheit. Auf diese Weise lernt die KI im Laufe der Zeit die Vorlieben und Gewohnheiten eines Benutzers kennen und kann personalisierte Vorschläge machen.
+
+Google betont, dass die Funktion "Snooze" nicht dazu gedacht ist, E-Mails einfach nur zu verschieben und zu vergessen. Stattdessen soll sie den Benutzern dabei helfen, ihre E-Mails gezielt zu organisieren und wichtige Informationen zur richtigen Zeit zur Hand zu haben. Es besteht auch die Möglichkeit, Erinnerungen für bestimmte E-Mails einzustellen, um sicherzustellen, dass sie nicht unbeachtet bleiben.
+
+Die Integration von "Snooze" in die Google Inbox ist ein weiterer Schritt in Richtung einer intelligenten und effizienten E-Mail-Verwaltung. Mit Hilfe von maschinellem Lernen und KI-Technologie entwickelt Google ständig neue Features, um den Nutzern dabei zu helfen, den Posteingang im Griff zu behalten und produktiver zu sein.
+
+Die Funktion "Snooze" wird derzeit schrittweise ausgerollt und wird vora

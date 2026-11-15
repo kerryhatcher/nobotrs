@@ -1,0 +1,16 @@
+Many approaches to 3D image segmentation are based on hierarchical clustering
+of supervoxels into image regions. Here we describe a distributed algorithm
+capable of handling a tremendous number of supervoxels. The algorithm works
+recursively, the regions are divided into chunks that are processed
+independently in parallel by multiple workers. At each round of the recursive
+procedure, the chunk size in all dimensions are doubled until a single chunk
+encompasses the entire image. The final result is provably independent of the
+chunking scheme, and the same as if the entire image were processed without
+division into chunks. This is nontrivial because a pair of adjacent regions is
+scored by some statistical property (e.g. mean or median) of the affinities at
+the interface, and the interface may extend over arbitrarily many chunks. The
+trick is to delay merge decisions for regions that touch chunk boundaries, and
+only complete them in a later round after the regions are fully contained
+within a chunk. We demonstrate the algorithm by clustering an affinity graph
+with over 1.5 trillion edges between 135 billion supervoxels derived from a 3D
+electron microscopic brain image.

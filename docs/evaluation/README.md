@@ -36,6 +36,13 @@ optional `corpus_revision` (defaults to `corpus_version`), `purpose`, optional
   `corpus_content_sha256` computed from the canonical sample identities and
   content hashes.
 
+A manifest may also declare `dimensions` (name -> description) and give every
+sample a `dimension_values` object. When present, the runner emits
+`dimension_metrics` in addition to `slice_metrics`; this is how the RAID pilot
+reports domain, generator, attack, language-hint, length, upstream-split, and
+label counts without changing verdicts or thresholds. Dimension values are
+metadata assertions, not authorship truth.
+
 Hashes are over raw bytes, not newline-normalized decoded text. CRLF/LF changes
 are therefore tampering, not equivalent content.
 
@@ -79,10 +86,20 @@ held-out text was verified after a claim.
 ## Output identity
 
 Output records `corpus_identity` (corpus revision, manifest/content/configuration/
-criteria hashes, access ID), `engine_identity` (binary SHA-256, engine and
+criteria hashes, configuration source, access ID), `effective_configuration`
+(resolved `report.settings`, its SHA-256, supplied config keys, and sanitized
+environment variable names), `engine_identity` (binary SHA-256, engine and
 dictionary versions, metric contract), `metric_versions` (backend metric method
 strings), and `grouping` counts. Raw feature cache rows retain families, metrics,
 completeness, status, and runtime.
+
+Detector subprocesses run with every `NOBOTRS_*` environment variable removed and
+an explicit `--config` path. Without `--config`, a temporary empty `{}` config is
+passed so the binary resolves its own defaults; platform config and
+`NOBOTRS_CONFIG` lookup are isolated. For an explicit partial config, every
+supplied key is checked against the detector's resolved `settings`; the complete
+resolved settings hash is recorded. This prevents an inherited environment
+override from silently changing policy under the same config and binary hashes.
 
 ## Metrics and sweeps
 
@@ -95,7 +112,8 @@ Use development data for feature work and validation data for threshold choices.
 `--split validation --sweep-quorum 1 2 3` recomputes quorum verdicts from cached
 family contributions without rerunning extraction. Sweeps are rejected for
 regression and independent-test splits. Selection results are not independent
-test performance.
+test performance. The pilot's cached validation selection note is
+[raid-pilot-selection.md](raid-pilot-selection.md).
 
 ## Python reference and burstiness references
 
@@ -104,7 +122,11 @@ in [python-parity.md](python-parity.md). The external population-stdev vectors a
 in `tests/fixtures/burstiness-reference.json` with
 `scripts/check-burstiness-reference.py` and `tests/burstiness_reference.rs`.
 
-No licensed, independently held-out authorship corpus was supplied with this
-repository. The evaluated-release gate remains open. There are no independently
-measured accuracy, false-positive, or calibrated probability claims. Optional
-models, SAEs, MCP/TUI, and humanization remain deferred.
+A limited, licensed RAID pilot is available at
+[`evaluation/corpora/raid-pilot-v1`](../../evaluation/corpora/raid-pilot-v1) and is
+documented in [raid-pilot.md](raid-pilot.md). It is a partial API view with
+1,100 samples, is not the complete RAID benchmark, and is not an accuracy
+certification. Its independent-test split has not been opened or run. The
+evaluated-release gate remains open. There are no independently measured
+accuracy, false-positive, or calibrated probability claims. Optional models,
+SAEs, MCP/TUI, and humanization remain deferred.

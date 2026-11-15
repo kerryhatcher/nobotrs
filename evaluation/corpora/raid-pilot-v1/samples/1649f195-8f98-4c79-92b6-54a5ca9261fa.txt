@@ -1,0 +1,17 @@
+In this work, we address the challenging task of few-shot segmentation.
+Previous few-shot segmentation methods mainly employ the information of support
+images as guidance for query image segmentation. Although some works propose to
+build cross-reference between support and query images, their extraction of
+query information still depends on the support images. We here propose to
+extract the information from the query itself independently to benefit the
+few-shot segmentation task. To this end, we first propose a prior extractor to
+learn the query information from the unlabeled images with our proposed
+global-local contrastive learning. Then, we extract a set of predetermined
+priors via this prior extractor. With the obtained priors, we generate the
+prior region maps for query images, which locate the objects, as guidance to
+perform cross interaction with support features. In such a way, the extraction
+of query information is detached from the support branch, overcoming the
+limitation by support, and could obtain more informative query clues to achieve
+better interaction. Without bells and whistles, the proposed approach achieves
+new state-of-the-art performance for the few-shot segmentation task on
+PASCAL-5$^{i}$ and COCO datasets.

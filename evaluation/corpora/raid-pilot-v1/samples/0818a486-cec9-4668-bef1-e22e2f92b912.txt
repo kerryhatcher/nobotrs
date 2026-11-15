@@ -1,0 +1,20 @@
+Performing inference in graphs is a common task within several machine
+learning problems, e.g., image segmentation, community detection, among others.
+For a given undirected connected graph, we tackle the statistical problem of
+exactly recovering an unknown ground-truth binary labeling of the nodes from a
+single corrupted observation of each edge. Such problem can be formulated as a
+quadratic combinatorial optimization problem over the boolean hypercube, where
+it has been shown before that one can (with high probability and in polynomial
+time) exactly recover the ground-truth labeling of graphs that have an
+isoperimetric number that grows with respect to the number of nodes (e.g.,
+complete graphs, regular expanders). In this work, we apply a powerful
+hierarchy of relaxations, known as the sum-of-squares (SoS) hierarchy, to the
+combinatorial problem. Motivated by empirical evidence on the improvement in
+exact recoverability, we center our attention on the degree-4 SoS relaxation
+and set out to understand the origin of such improvement from a graph
+theoretical perspective. We show that the solution of the dual of the relaxed
+problem is related to finding edge weights of the Johnson and Kneser graphs,
+where the weights fulfill the SoS constraints and intuitively allow the input
+graph to increase its algebraic connectivity. Finally, as byproduct of our
+analysis, we derive a novel Cheeger-type lower bound for the algebraic
+connectivity of graphs with signed edge weights.

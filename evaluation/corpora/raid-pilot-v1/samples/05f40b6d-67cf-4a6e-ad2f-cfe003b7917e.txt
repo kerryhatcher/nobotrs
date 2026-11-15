@@ -1,0 +1,22 @@
+Semantic segmentation from very fine resolution (VFR) urban scene images
+plays a significant role in several application scenarios including autonomous
+driving, land cover classification, and urban planning, etc. However, the
+tremendous details contained in the VFR image severely limit the potential of
+the existing deep learning approaches. More seriously, the considerable
+variations in scale and appearance of objects further deteriorate the
+representational capacity of those se-mantic segmentation methods, leading to
+the confusion of adjacent objects. Addressing such is-sues represents a
+promising research field in the remote sensing community, which paves the way
+for scene-level landscape pattern analysis and decision making. In this
+manuscript, we pro-pose a bilateral awareness network (BANet) which contains a
+dependency path and a texture path to fully capture the long-range
+relationships and fine-grained details in VFR images. Specif-ically, the
+dependency path is conducted based on the ResT, a novel Transformer backbone
+with memory-efficient multi-head self-attention, while the texture path is
+built on the stacked convo-lution operation. Besides, using the linear
+attention mechanism, a feature aggregation module (FAM) is designed to
+effectively fuse the dependency features and texture features. Extensive
+experiments conducted on the three large-scale urban scene image segmentation
+datasets, i.e., ISPRS Vaihingen dataset, ISPRS Potsdam dataset, and UAVid
+dataset, demonstrate the effective-ness of our BANet. Specifically, a 64.6%
+mIoU is achieved on the UAVid dataset.

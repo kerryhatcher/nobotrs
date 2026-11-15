@@ -1,0 +1,16 @@
+We aim to estimate food portion size, a property that is strongly related to
+the presence of food object in 3D space, from single monocular images under
+real life setting. Specifically, we are interested in end-to-end estimation of
+food portion size, which has great potential in the field of personal health
+management. Unlike image segmentation or object recognition where annotation
+can be obtained through large scale crowd sourcing, it is much more challenging
+to collect datasets for portion size estimation since human cannot accurately
+estimate the size of an object in an arbitrary 2D image without expert
+knowledge. To address such challenge, we introduce a real life food image
+dataset collected from a nutrition study where the groundtruth food energy
+(calorie) is provided by registered dietitians, and will be made available to
+the research community. We propose a deep regression process for portion size
+estimation by combining features estimated from both RGB and learned energy
+distribution domains. Our estimates of food energy achieved state-of-the-art
+with a MAPE of 11.47%, significantly outperforms non-expert human estimates by
+27.56%.

@@ -360,7 +360,7 @@ class ProtocolTests(unittest.TestCase):
             "pathlib.Path(os.environ['FAKE_ARGS']).write_text('\\n'.join(sys.argv[1:]))\n"
             "print(json.dumps({'schema_version':'1.0.0','engine_version':'fake-0.1',"
             "'dictionary_version':'fake-dict','metric_contract':'fake-v1',"
-            "'verdict':'clean','complete':True,'families':[],'backends':[]}))\n",
+            "'verdict':'clean','complete':True,'families':[],'backends':[],'settings':{'quorum':2}}))\n",
             encoding="utf-8",
         )
         fake.chmod(0o755)
@@ -386,6 +386,106 @@ class ProtocolTests(unittest.TestCase):
         self.assertNotIn(str(self.root), " ".join(args))
         report = json.loads(output.read_text())
         self.assertEqual(report["engine_identity"]["binary_sha256"], sha256_bytes(fake.read_bytes()))
+
+    def test_detector_runs_sanitize_nobotrs_environment_and_isolate_config(self):
+        data = b"A sufficiently long sample for protocol validation.\n"
+        self.write_bytes("env-sample.txt", data)
+        item = sample(
+            "env-sample", data.decode("utf-8"), split="regression",
+            label=None, content_hash=sha256_bytes(data),
+        )
+        item["file"] = "env-sample.txt"
+        manifest_path = self.write(manifest([item]), "env-manifest.json")
+        config3 = self.write({"quorum": 3}, "config3.json")
+        hostile_config = self.write({"quorum": 1}, "hostile-config.json")
+        env_capture = self.root / "captured-env.json"
+        config_capture = self.root / "captured-config.json"
+        fake = self.root / "fake-nobotrs"
+        fake.write_text(
+            "#!/usr/bin/env python3\n"
+            "import json, os, pathlib, sys\n"
+            "args = sys.argv[1:]\n"
+            "config_path = pathlib.Path(args[args.index('--config') + 1])\n"
+            "raw = config_path.read_bytes()\n"
+            "config = json.loads(raw)\n"
+            "pathlib.Path(os.environ['FAKE_ENV']).write_text(json.dumps({\n"
+            "    key: value for key, value in os.environ.items()\n"
+            "    if key.upper().startswith('NOBOTRS_')}, sort_keys=True))\n"
+            "pathlib.Path(os.environ['FAKE_CONFIG']).write_bytes(raw)\n"
+            "sys.stdin.buffer.read()\n"
+            "quorum = int(os.environ.get('NOBOTRS_QUORUM', config.get('quorum', 2)))\n"
+            "verdict = 'flagged' if quorum <= 2 else 'clean'\n"
+            "print(json.dumps({'schema_version':'1.0.0','engine_version':'fake-0.1',\n"
+            "    'dictionary_version':'fake-dict','metric_contract':'fake-v1',\n"
+            "    'verdict':verdict,'complete':True,'families':[],'backends':[],\n"
+            "    'settings':{'quorum':quorum}}))\n",
+            encoding="utf-8",
+        )
+        fake.chmod(0o755)
+        base_env = os.environ.copy()
+        base_env["FAKE_ENV"] = str(env_capture)
+        base_env["FAKE_CONFIG"] = str(config_capture)
+        command = [
+            sys.executable, str(ROOT / "scripts/evaluate.py"),
+            "--binary", str(fake), "--manifest", str(manifest_path),
+        ]
+
+        baseline_path = self.root / "baseline.json"
+        first = subprocess.run(
+            command + ["--output", str(baseline_path), "--config", str(config3)],
+            capture_output=True, text=True, env=base_env, check=False,
+        )
+        self.assertEqual(first.returncode, 0, first.stderr)
+        baseline = json.loads(baseline_path.read_text())
+        self.assertEqual(baseline["regression_results"][0]["verdict"], "clean")
+        self.assertEqual(baseline["corpus_identity"]["configuration_sha256"],
+                         sha256_bytes(config3.read_bytes()))
+        self.assertEqual(baseline["effective_configuration"]["supplied_keys"],
+                         ["quorum"])
+        self.assertEqual(baseline["effective_configuration"]["settings"]["quorum"], 3)
+        check_path = self.write(
+            {"regression_results": baseline["regression_results"]}, "check.json"
+        )
+
+        hostile_env = base_env.copy()
+        hostile_env["NOBOTRS_QUORUM"] = "1"
+        hostile_env["NOBOTRS_CONFIG"] = str(hostile_config)
+        hostile_output = self.root / "hostile.json"
+        second = subprocess.run(
+            command + [
+                "--output", str(hostile_output), "--config", str(config3),
+                "--check", str(check_path),
+            ],
+            capture_output=True, text=True, env=hostile_env, check=False,
+        )
+        self.assertEqual(second.returncode, 0, second.stderr)
+        self.assertEqual(json.loads(env_capture.read_text()), {})
+        self.assertEqual(json.loads(config_capture.read_text())["quorum"], 3)
+        hostile = json.loads(hostile_output.read_text())
+        self.assertEqual(hostile["effective_configuration"]["settings"]["quorum"], 3)
+        self.assertEqual(hostile["corpus_identity"]["configuration_sha256"],
+                         sha256_bytes(config3.read_bytes()))
+        self.assertIn("NOBOTRS_QUORUM",
+                      hostile["effective_configuration"]["sanitized_nobotrs_variables"])
+        self.assertIn("NOBOTRS_CONFIG",
+                      hostile["effective_configuration"]["sanitized_nobotrs_variables"])
+
+        default_output = self.root / "defaults.json"
+        third = subprocess.run(
+            command + ["--output", str(default_output)],
+            capture_output=True, text=True, env=hostile_env, check=False,
+        )
+        self.assertEqual(third.returncode, 0, third.stderr)
+        self.assertEqual(json.loads(env_capture.read_text()), {})
+        self.assertEqual(json.loads(config_capture.read_text()), {})
+        defaults = json.loads(default_output.read_text())
+        self.assertTrue(defaults["corpus_identity"]["configuration_source"].startswith(
+            "synthesized empty config"
+        ))
+        self.assertEqual(defaults["corpus_identity"]["configuration_sha256"],
+                         sha256_bytes(b"{}\n"))
+        self.assertEqual(defaults["effective_configuration"]["supplied_keys"], [])
+        self.assertEqual(defaults["effective_configuration"]["settings"]["quorum"], 2)
 
     def test_development_run_does_not_open_held_out_text(self):
         dev_data = b"# development\n\nexperts\nagree\n"
@@ -413,7 +513,7 @@ class ProtocolTests(unittest.TestCase):
             "pathlib.Path(os.environ['FAKE_CAPTURE']).write_bytes(sys.stdin.buffer.read())\n"
             "print(json.dumps({'schema_version':'1.0.0','engine_version':'fake-0.1',"
             "'dictionary_version':'fake-dict','metric_contract':'fake-v1',"
-            "'verdict':'clean','complete':True,'families':[],'backends':[]}))\n",
+            "'verdict':'clean','complete':True,'families':[],'backends':[],'settings':{'quorum':2}}))\n",
             encoding="utf-8",
         )
         fake.chmod(0o755)
@@ -465,7 +565,7 @@ class ProtocolTests(unittest.TestCase):
             "pathlib.Path(os.environ['FAKE_CAPTURE']).write_bytes(sys.stdin.buffer.read())\n"
             "print(json.dumps({'schema_version':'1.0.0','engine_version':'fake-0.1',"
             "'dictionary_version':'fake-dict','metric_contract':'fake-v1',"
-            "'verdict':'clean','complete':True,'families':[],'backends':[]}))\n",
+            "'verdict':'clean','complete':True,'families':[],'backends':[],'settings':{'quorum':2}}))\n",
             encoding="utf-8",
         )
         fake.chmod(0o755)

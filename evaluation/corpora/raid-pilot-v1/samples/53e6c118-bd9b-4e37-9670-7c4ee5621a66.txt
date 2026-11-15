@@ -1,0 +1,21 @@
+Medical image segmentation is a relevant task as it serves as the first step
+for several diagnosis processes, thus it is indispensable in clinical usage.
+Whilst major success has been reported using supervised techniques, they assume
+a large and well-representative labelled set. This is a strong assumption in
+the medical domain where annotations are expensive, time-consuming, and
+inherent to human bias. To address this problem, unsupervised techniques have
+been proposed in the literature yet it is still an open problem due to the
+difficulty of learning any transformation pattern. In this work, we present a
+novel optimisation model framed into a new CNN-based contrastive registration
+architecture for unsupervised medical image segmentation. The core of our
+approach is to exploit image-level registration and feature-level from a
+contrastive learning mechanism, to perform registration-based segmentation.
+Firstly, we propose an architecture to capture the image-to-image
+transformation pattern via registration for unsupervised medical image
+segmentation. Secondly, we embed a contrastive learning mechanism into the
+registration architecture to enhance the discriminating capacity of the network
+in the feature-level. We show that our proposed technique mitigates the major
+drawbacks of existing unsupervised techniques. We demonstrate, through
+numerical and visual experiments, that our technique substantially outperforms
+the current state-of-the-art unsupervised segmentation methods on two major
+medical image datasets.

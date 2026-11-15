@@ -1,0 +1,19 @@
+Incorporating shape information is essential for the delineation of many
+organs and anatomical structures in medical images. While previous work has
+mainly focused on parametric spatial transformations applied on reference
+template shapes, in this paper, we address the Bayesian inference of parametric
+shape models for segmenting medical images with the objective to provide
+interpretable results. The proposed framework defines a likelihood appearance
+probability and a prior label probability based on a generic shape function
+through a logistic function. A reference length parameter defined in the
+sigmoid controls the trade-off between shape and appearance information. The
+inference of shape parameters is performed within an Expectation-Maximisation
+approach where a Gauss-Newton optimization stage allows to provide an
+approximation of the posterior probability of shape parameters. This framework
+is applied to the segmentation of cochlea structures from clinical CT images
+constrained by a 10 parameter shape model. It is evaluated on three different
+datasets, one of which includes more than 200 patient images. The results show
+performances comparable to supervised methods and better than previously
+proposed unsupervised ones. It also enables an analysis of parameter
+distributions and the quantification of segmentation uncertainty including the
+effect of the shape model.

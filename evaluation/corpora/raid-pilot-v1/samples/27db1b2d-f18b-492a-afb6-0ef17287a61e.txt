@@ -1,0 +1,14 @@
+Despite the remarkable performance of deep learning methods on various tasks,
+most cutting-edge models rely heavily on large-scale annotated training
+examples, which are often unavailable for clinical and health care tasks. The
+labeling costs for medical images are very high, especially in medical image
+segmentation, which typically requires intensive pixel/voxel-wise labeling.
+Therefore, the strong capability of learning and generalizing from limited
+supervision, including a limited amount of annotations, sparse annotations, and
+inaccurate annotations, is crucial for the successful application of deep
+learning models in medical image segmentation. However, due to its intrinsic
+difficulty, segmentation with limited supervision is challenging and specific
+model design and/or learning strategies are needed. In this paper, we provide a
+systematic and up-to-date review of the solutions above, with summaries and
+comments about the methodologies. We also highlight several problems in this
+field, discussed future directions observing further investigations.

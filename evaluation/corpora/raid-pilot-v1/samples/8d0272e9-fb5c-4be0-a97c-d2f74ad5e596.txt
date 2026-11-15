@@ -1,0 +1,13 @@
+Google hat ein neues Feature für sein Mailprogramm "Inbox" vorgestellt, das Benutzern dabei helfen soll, ihre Inbox besser zu organisieren. Mit der neuen Funktion "Snooze" ermöglicht Google den Nutzern, bestimmte E-Mails zu "verschlafen" und später darauf zurückzukommen.
+
+Mit dem neuen Feature "Snooze" können die Nutzer ihre E-Mails auf einen späteren Zeitpunkt verschieben, etwa auf den Abend oder das nächste Wochenende. Eine der bemerkenswertesten Funktionen des neuen Snooze-Features ist jedoch seine "intelligente Erinnerungsfunktion". Inbox nutzt künstliche Intelligenz, um zu antizipieren, wann der Benutzer eine bestimmte E-Mail wiedersehen möchte.
+
+Das neue Feature ergänzt die bereits vorhandenen Funktionen von Inbox, wie die automatische Sortierung der E-Mails in Kategorien und das Hervorheben wichtiger E-Mails. Damit erhofft sich Google, den Nutzern beim Management ihres E-Mail-Accounts zu helfen und sie produktiver zu machen.
+
+Um das neue Feature zu nutzen, müssen die Nutzer nur auf die Snooze-Schaltfläche klicken, die auf jeder E-Mail zu finden ist, und dann den gewünschten Zeitpunkt für die Erinnerung auswählen.
+
+Google hat das neue "Snooze"-Feature in einem Blogpost angekündigt und gesagt, es sei "wie ein persönlicher Assistent, der Ihnen hilft, Ihre E-Mails zu organisieren". Es wird erwartet, dass das Feature in den nächsten Tagen für alle Nutzer von Inbox verfügbar sein wird.
+
+Im Zuge der kontinuierlichen Verbesserung seiner E-Mail-Dienste hatte Google bereits im vergangenen Jahr eine intelligente Antwortfunktion eingeführt, die automatisch passende Antworten auf E-Mails vorschlägt.
+
+Mit dem neuen "Snooze"-Feature setzt Google einen weiteren Schritt in Richtung intelligenter E-Mail-Verwaltung und könnte damit andere E-Mail-Anbieter unter Druck setzen, ähnliche Funktionen anzubieten.

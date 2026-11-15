@@ -1,0 +1,172 @@
+{
+  "detector_rerun": false,
+  "held_out_accessed": false,
+  "held_out_sample_count": 218,
+  "method": "Reused cached family votes from the existing validation result and recomputed quorum verdicts with evaluation_protocol.",
+  "non_claims": [
+    "These are selection observations on a biased, partial RAID pilot.",
+    "They are not independent-test performance or general accuracy claims.",
+    "The pilot omits domains, generators, and human cells; labels are imbalanced.",
+    "No threshold or default was changed from this sweep.",
+    "No held-out data was opened, run, or tuned against."
+  ],
+  "schema_version": "1.0.0",
+  "selection": {
+    "decision": "Retain quorum 2 and existing default thresholds unchanged. Treat the detector as a conservative lint policy, not a useful general authorship detector.",
+    "default_quorum": 2,
+    "defaults_changed": false,
+    "independent_test_performance": false,
+    "rationale": [
+      "Quorum 1 raises recall on this pilot but produces an unacceptable observed false-positive rate.",
+      "Quorum 3 loses coverage and abstains on 54 validation samples.",
+      "Quorum 2 keeps the existing conservative default behavior."
+    ],
+    "selected_from_cached_validation_only": true,
+    "thresholds_changed": false
+  },
+  "selection_id": "raid-pilot-v1-validation-cached-sweep-v1",
+  "source_result": {
+    "binary_sha256": "2a606f3b92ad4d0e717102cbabb4e1cced4d2b35aff98a6828e2484fb0807aae",
+    "configuration_sha256": "e7ec5e1872cc2ffcbf9a9617f7ce9c8bf1a0d09213be8d5b6779b74b70092cc2",
+    "configuration_source": "explicit --config",
+    "corpus_content_sha256": "349a0c64684e30b31f2f893547cceaf30609354d33aa5a266332bc84e2d5858d",
+    "effective_settings": {
+      "display_limit": 200,
+      "enabled_backends": [
+        "vocabulary",
+        "punctuation",
+        "burstiness",
+        "lexical-diversity",
+        "readability",
+        "compression"
+      ],
+      "ignore_rules": [],
+      "language": null,
+      "max_bytes": 1048576,
+      "max_candidates": 10000,
+      "minimum_severity": "medium",
+      "path_ignores": {},
+      "quorum": 2,
+      "timeout_ms": 5000
+    },
+    "effective_settings_sha256": "336b12d549cb709b3335d2ae7e8fed8e46b4ef7bffd2b038ab11351754864239",
+    "engine_identity": {
+      "binary_sha256": "2a606f3b92ad4d0e717102cbabb4e1cced4d2b35aff98a6828e2484fb0807aae",
+      "dictionary_versions": [
+        "2026.07.26"
+      ],
+      "engine_versions": [
+        "0.1.0"
+      ],
+      "metric_contracts": [
+        "prepared-prose-v1/uncalibrated"
+      ]
+    },
+    "manifest_sha256": "dcc538e2fe6dcbb7ad5ff99dc0886d235f105297be161ee77f40745d8ed3ddfa",
+    "path": "evaluation/corpora/raid-pilot-v1/results/validation.json",
+    "release_criteria_id": "raid-pilot-v1-supervisor-release-assessment",
+    "release_criteria_sha256": "37fe7c018722016090f4e305b3d97d5b0a403cf8c78c5154b5667414b6cf5abb",
+    "sample_count": 220,
+    "sha256": "15651fe2c4579f2cbdbbe292ae0432b4a8f12451521597f241207f9e5a05556a"
+  },
+  "split": "validation",
+  "status": "selection-observation-not-release-evidence",
+  "sweeps": {
+    "1": {
+      "metrics": {
+        "abstentions": 0,
+        "auc": null,
+        "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+        "confusion_matrix": {
+          "fn": 100,
+          "fp": 14,
+          "tn": 40,
+          "tp": 66
+        },
+        "coverage": 1.0,
+        "covered_count": 220,
+        "f1": 0.5365853658536586,
+        "false_positive_rate": 0.25925925925925924,
+        "false_positive_rate_wilson_95": [
+          0.16118507964793902,
+          0.38931144880217294
+        ],
+        "labeled_count": 220,
+        "operational_failures": 0,
+        "precision": 0.825,
+        "recall": 0.39759036144578314,
+        "sample_count": 220,
+        "unknown_label_abstentions": 0,
+        "unknown_label_count": 0,
+        "unknown_label_coverage": null,
+        "unknown_label_operational_failures": 0
+      },
+      "quorum": 1,
+      "use": "cached selection observation only"
+    },
+    "2": {
+      "metrics": {
+        "abstentions": 0,
+        "auc": null,
+        "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+        "confusion_matrix": {
+          "fn": 165,
+          "fp": 0,
+          "tn": 54,
+          "tp": 1
+        },
+        "coverage": 1.0,
+        "covered_count": 220,
+        "f1": 0.011976047904191617,
+        "false_positive_rate": 0.0,
+        "false_positive_rate_wilson_95": [
+          6.938893903907228e-18,
+          0.06641586678100189
+        ],
+        "labeled_count": 220,
+        "operational_failures": 0,
+        "precision": 1.0,
+        "recall": 0.006024096385542169,
+        "sample_count": 220,
+        "unknown_label_abstentions": 0,
+        "unknown_label_count": 0,
+        "unknown_label_coverage": null,
+        "unknown_label_operational_failures": 0
+      },
+      "quorum": 2,
+      "use": "cached selection observation only"
+    },
+    "3": {
+      "metrics": {
+        "abstentions": 54,
+        "auc": null,
+        "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+        "confusion_matrix": {
+          "fn": 114,
+          "fp": 0,
+          "tn": 52,
+          "tp": 0
+        },
+        "coverage": 0.7545454545454545,
+        "covered_count": 166,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "false_positive_rate_wilson_95": [
+          0.0,
+          0.06879459041288215
+        ],
+        "labeled_count": 220,
+        "operational_failures": 0,
+        "precision": null,
+        "recall": 0.0,
+        "sample_count": 220,
+        "unknown_label_abstentions": 0,
+        "unknown_label_count": 0,
+        "unknown_label_coverage": null,
+        "unknown_label_operational_failures": 0
+      },
+      "quorum": 3,
+      "use": "cached selection observation only"
+    }
+  }
+}

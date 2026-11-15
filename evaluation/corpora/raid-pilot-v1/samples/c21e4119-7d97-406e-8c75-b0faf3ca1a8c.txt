@@ -1,0 +1,11 @@
+Facebook hat kürzlich bekannt gegeben, dass sein neuer virtueller Assistent M, der direkt in den Facebook Messenger integriert ist, über intelligente Funktionen verfügt, die weit über die Fähigkeiten von Apples Siri oder Google Assistant hinausgehen. Dies wird durch die Tatsache ermöglicht, dass M hinter den Kulissen von Menschen unterstützt wird. 
+
+Facebooks M wurde entwickelt, um Siri nicht nur in Bezug auf Intelligenz herauszufordern, sondern auch um die Barrieren zu überwinden, die Siri bisher zurückgehalten haben. Dank der Unterstützung von Menschen kann M Aufgaben erledigen, die Siri derzeit nicht bieten kann, wie zum Beispiel das Senden von Blumen an Ihre Liebsten, das Reservieren eines Tisches in einem Restaurant oder das Buchen von Flugtickets und Hotelzimmern.
+
+Im Kern basiert M auf künstlicher Intelligenz, wird aber durch ein Team von Facebook-Mitarbeitern, die als "M-Trainer" bekannt sind, überwacht und geleitet. Diese M-Trainer treten ein, wenn die künstliche Intelligenz eine Anfrage nicht bearbeiten kann. Im Laufe der Zeit lernt die künstliche Intelligenz von den Interaktionen und Entscheidungen der M-Trainer, um immer intelligenter und autonomer zu werden.
+
+Facebook hat jedoch klargestellt, dass M-Trainer keinen Zugang zu den personenbezogenen Daten der Benutzer haben. Sie sehen nur den Kontext der aktuellen Anfrage des Benutzers und handeln ausschließlich auf der Basis dieser Informationen. 
+
+Dieser Ansatz unterscheidet M deutlich von Siri und Google Assistant, die ausschließlich auf Algorithmen und maschinelles Lernen angewiesen sind. M nutzt den menschlichen Faktor, um ein verbessertes und mehr personalisiertes Nutzererlebnis zu bieten.
+
+Trotz des menschlichen Eingriffs hat Facebook angegeben, dass die Mehrheit der durch M erledigten Aufgaben von der künstlichen Intelligenz selbst ausgeführt wird. Der menschliche Eingriff dient in erster Linie dazu, die künstliche Intelligenz zu trainieren und zu verbessern, um den Benutzern letztlich ein nahtloses und effizientes Er

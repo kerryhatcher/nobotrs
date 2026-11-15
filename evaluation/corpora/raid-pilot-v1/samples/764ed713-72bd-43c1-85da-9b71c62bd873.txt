@@ -1,0 +1,14 @@
+Computer vision has shown promising results in medical image processing.
+Pneumothorax is a deadly condition and if not diagnosed and treated at time
+then it causes death. It can be diagnosed with chest X-ray images. We need an
+expert and experienced radiologist to predict whether a person is suffering
+from pneumothorax or not by looking at the chest X-ray images. Everyone does
+not have access to such a facility. Moreover, in some cases, we need quick
+diagnoses. So we propose an image segmentation model to predict and give the
+output a mask that will assist the doctor in taking this crucial decision. Deep
+Learning has proved their worth in many areas and outperformed man
+state-of-the-art models. We want to use the power of these deep learning model
+to solve this problem. We have used U-net [13] architecture with ResNet [17] as
+a backbone and achieved promising results. U-net [13] performs very well in
+medical image processing and semantic segmentation. Our problem falls in the
+semantic segmentation category.

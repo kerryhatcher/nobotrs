@@ -1,0 +1,17 @@
+Deep learning has not been routinely employed for semantic segmentation of
+seabed environment for synthetic aperture sonar (SAS) imagery due to the
+implicit need of abundant training data such methods necessitate. Abundant
+training data, specifically pixel-level labels for all images, is usually not
+available for SAS imagery due to the complex logistics (e.g., diver survey,
+chase boat, precision position information) needed for obtaining accurate
+ground-truth. Many hand-crafted feature based algorithms have been proposed to
+segment SAS in an unsupervised fashion. However, there is still room for
+improvement as the feature extraction step of these methods is fixed. In this
+work, we present a new iterative unsupervised algorithm for learning deep
+features for SAS image segmentation. Our proposed algorithm alternates between
+clustering superpixels and updating the parameters of a convolutional neural
+network (CNN) so that the feature extraction for image segmentation can be
+optimized. We demonstrate the efficacy of our method on a realistic benchmark
+dataset. Our results show that the performance of our proposed method is
+considerably better than current state-of-the-art methods in SAS image
+segmentation.

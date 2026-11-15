@@ -34,6 +34,7 @@ SPDX_TOKEN = re.compile(r"^[A-Za-z0-9.+-]+$")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 SAFE_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
+DIMENSION_NAME = re.compile(r"^[a-z][a-z0-9_-]*$")
 
 
 class ProtocolError(ValueError):
@@ -214,6 +215,7 @@ def validate_manifest(
             raise ProtocolError("corpus_content_sha256 must be lowercase SHA-256")
     if require_content_hashes and declared_content is None:
         raise ProtocolError(f"corpus_content_sha256 is required for {split} data")
+    _validate_dimensions(manifest, samples)
     computed_content = corpus_content_sha256(samples)
     if declared_content is not None and computed_content != declared_content:
         raise ProtocolError(
@@ -227,6 +229,45 @@ def validate_manifest(
         near_duplicate_threshold=float(threshold),
         samples=samples,
     )
+
+
+def _validate_dimensions(manifest: dict[str, Any],
+                         samples: Iterable[dict[str, Any]]) -> None:
+    """Validate optional reporting dimensions without requiring them everywhere."""
+    dimensions = manifest.get("dimensions")
+    if dimensions is None:
+        return
+    if not isinstance(dimensions, dict) or not dimensions:
+        raise ProtocolError("dimensions must be a nonempty object when present")
+    for name, description in dimensions.items():
+        if not isinstance(name, str) or not DIMENSION_NAME.match(name):
+            raise ProtocolError(f"invalid dimension name: {name!r}")
+        _require_text(description, f"dimensions.{name}", minimum=8)
+    for index, sample in enumerate(samples):
+        values = sample.get("dimension_values")
+        if not isinstance(values, dict):
+            raise ProtocolError(
+                f"samples[{index}].dimension_values is required when dimensions are declared"
+            )
+        unknown = sorted(set(values) - set(dimensions))
+        missing = sorted(set(dimensions) - set(values))
+        if unknown:
+            raise ProtocolError(
+                f"samples[{index}].dimension_values has unknown dimensions: {unknown}"
+            )
+        if missing:
+            raise ProtocolError(
+                f"samples[{index}].dimension_values is missing dimensions: {missing}"
+            )
+        for name, value in values.items():
+            if isinstance(value, bool) or not isinstance(value, (str, int)):
+                raise ProtocolError(
+                    f"samples[{index}].dimension_values.{name} must be a string or integer"
+                )
+            if isinstance(value, str) and not value.strip():
+                raise ProtocolError(
+                    f"samples[{index}].dimension_values.{name} must be nonempty"
+                )
 
 
 def corpus_content_sha256(samples: Iterable[dict[str, Any]]) -> str:

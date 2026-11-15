@@ -1,0 +1,15 @@
+We investigate Referring Image Segmentation (RIS), which outputs a
+segmentation map corresponding to the given natural language description. To
+solve RIS efficiently, we need to understand each word's relationship with
+other words, each region in the image to other regions, and cross-modal
+alignment between linguistic and visual domains. We argue that one of the
+limiting factors in the recent methods is that they do not handle these
+interactions simultaneously. To this end, we propose a novel architecture
+called JRNet, which uses a Joint Reasoning Module(JRM) to concurrently capture
+the inter-modal and intra-modal interactions. The output of JRM is passed
+through a novel Cross-Modal Multi-Level Fusion (CMMLF) module which further
+refines the segmentation masks by exchanging contextual information across
+visual hierarchy through linguistic features acting as a bridge. We present
+thorough ablation studies and validate our approach's performance on four
+benchmark datasets, showing considerable performance gains over the existing
+state-of-the-art methods.

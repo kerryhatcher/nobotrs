@@ -1,0 +1,18 @@
+Colorectal cancer (CRC) is the first cause of death in many countries. CRC
+originates from a small clump of cells on the lining of the colon called
+polyps, which over time might grow and become malignant. Early detection and
+removal of polyps are therefore necessary for the prevention of colon cancer.
+In this paper, we introduce an ensemble of medical polyp segmentation
+algorithms. Based on an observation that different segmentation algorithms will
+perform well on different subsets of examples because of the nature and size of
+training sets they have been exposed to and because of method-intrinsic
+factors, we propose to measure the confidence in the prediction of each
+algorithm and then use an associate threshold to determine whether the
+confidence is acceptable or not. An algorithm is selected for the ensemble if
+the confidence is below its associate threshold. The optimal threshold for each
+segmentation algorithm is found by using Comprehensive Learning Particle Swarm
+Optimization (CLPSO), a swarm intelligence algorithm. The Dice coefficient, a
+popular performance metric for image segmentation, is used as the fitness
+criteria. Experimental results on two polyp segmentation datasets MICCAI2015
+and Kvasir-SEG confirm that our ensemble achieves better results compared to
+some well-known segmentation algorithms.

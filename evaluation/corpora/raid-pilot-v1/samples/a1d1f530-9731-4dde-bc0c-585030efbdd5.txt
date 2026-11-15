@@ -1,0 +1,13 @@
+Facebook hat kürzlich seinen neuen virtuellen Assistenten vorgestellt, der dank menschlicher Hilfe klüger als Apples Siri sein soll. Der Assistent, der den Namen "M" trägt, soll in der Lage sein, komplexe Aufgaben zu erledigen und sogar Entscheidungen für den Nutzer zu treffen.
+
+Im Gegensatz zu anderen virtuellen Assistenten wie Siri von Apple oder Alexa von Amazon, setzt Facebook bei seinem Assistenten auf menschliche Unterstützung. M wird von einem Team von Facebook-Mitarbeitern unterstützt, die als "Trainer" fungieren und dem Assistenten dabei helfen, die Anfragen der Nutzer zu verstehen und zu bearbeiten.
+
+"Wir haben M mit Menschen trainiert, um zu lernen und zu verstehen, wie man Aufgaben erledigt", sagte David Marcus, Vice President of Messaging Products bei Facebook. "Das ist ein großer Unterschied zu anderen KI-Assistenten, die auf maschinellem Lernen basieren und oft Schwierigkeiten haben, komplexe oder mehrdeutige Anfragen zu verstehen."
+
+M kann laut Facebook eine Vielzahl von Aufgaben erledigen, darunter das Bestellen von Essen, das Buchen von Reisen, das Finden von Geschenken und vieles mehr. Der Assistent kann sogar Entscheidungen für den Nutzer treffen, beispielsweise welches Restaurant für ein Abendessen am besten geeignet ist.
+
+Facebook hat M in den USA bereits getestet und plant, den Assistenten in den kommenden Monaten weltweit auszurollen. Das Unternehmen hofft, dass M den Nutzern dabei helfen wird, ihre Zeit effizienter zu nutzen und ihre täglichen Aufgaben einfacher zu erledigen.
+
+"Wir glauben, dass M den Menschen dabei helfen kann, ihre Zeit besser zu nutzen und ihre Aufgaben effizienter zu erledigen", sagte Marcus. "Und weil M von Menschen trainiert wird, wird er mit der Zeit immer besser und klüger."
+
+Mit M tritt Facebook in direkte Konkurrenz zu anderen Tech-Giganten wie Apple und Amazon, die bereits eigene virtuelle Assistenten auf den Markt gebracht haben. Doch während Siri und Alexa auf maschinelles Lernen angewiesen sind, setzt Facebook auf die Kombination von künstlicher und menschlicher

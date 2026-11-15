@@ -1,0 +1,11 @@
+Snooze: Googles Inbox erinnert jetzt intelligent
+
+Mountain View, Kalifornien - Google hat kürzlich ein Update für seine E-Mail-App Inbox angekündigt, das eine neue Funktion namens "Snooze" einführt. Mit dieser Funktion können Benutzer ihre E-Mails vorübergehend aus ihrem Posteingang entfernen und zu einem späteren Zeitpunkt erneut anzeigen lassen. Das Besondere an dieser Aktualisierung ist jedoch die intelligente Erinnerungsfunktion von Snooze.
+
+Die intelligente Erinnerungsfunktion von Snooze basiert auf maschinellem Lernen und analysiert den Inhalt der E-Mails sowie das Verhalten des Benutzers, um die beste Zeit für die Erinnerung zu bestimmen. Zum Beispiel kann Snooze erkennen, dass eine E-Mail eine Aufgabe enthält, die der Benutzer erledigen muss, und schlägt dann vor, die E-Mail zu einem Zeitpunkt wieder anzuzeigen, an dem der Benutzer normalerweise produktiv ist. Auf diese Weise kann der Benutzer sicherstellen, dass wichtige E-Mails nicht vergessen werden und zur richtigen Zeit erneut angezeigt werden.
+
+"Wir wissen, dass es manchmal schwierig sein kann, den Überblick über den Posteingang zu behalten und wichtige E-Mails zu verpassen", sagte John Smith, Produktmanager bei Google Inbox. "Mit der intelligenten Erinnerungsfunktion von Snooze möchten wir unseren Benutzern helfen, organisiert zu bleiben und sicherzustellen, dass sie keine wichtigen Informationen übersehen."
+
+Die intelligente Erinnerungsfunktion von Snooze ist auch in der Lage, Muster im E-Mail-Verhalten des Benutzers zu erkennen. Wenn der Benutzer beispielsweise dazu neigt, E-Mails von bestimmten Absendern immer wieder zu verschieben, schlägt Snooze vor, diese E-Mails automatisch zu einem späteren Zeitpunkt anzuzeigen. Auf diese Weise kann der Benutzer Zeit sparen und sicherstellen, dass weniger wichtige E-Mails nicht den Posteingang überfluten.
+
+Das Update für Inbox mit der intelligenten Erinnerungsfunktion von Snooze wird in den kommenden Wochen für alle Benutzer verfügbar sein. Benutzer können die Funktion aktivieren, indem sie auf das Snooze-Symbol

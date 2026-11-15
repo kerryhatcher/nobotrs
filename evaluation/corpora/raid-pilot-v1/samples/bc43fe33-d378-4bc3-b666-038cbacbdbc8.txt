@@ -1,0 +1,18 @@
+Accurate segmentation of medical images into anatomically meaningful regions
+is critical for the extraction of quantitative indices or biomarkers. The
+common pipeline for segmentation comprises regions of interest detection stage
+and segmentation stage, which are independent of each other and typically
+performed using separate deep learning networks. The performance of the
+segmentation stage highly relies on the extracted set of spatial features and
+the receptive fields. In this work, we propose an end-to-end network, called
+Trilateral Attention Network (TaNet), for real-time detection and segmentation
+in medical images. TaNet has a module for region localization, and three
+segmentation pathways: 1) handcrafted pathway with hand-designed convolutional
+kernels, 2) detail pathway with regular convolutional kernels, and 3) a global
+pathway to enlarge the receptive field. The first two pathways encode rich
+handcrafted and low-level features extracted by hand-designed and regular
+kernels while the global pathway encodes high-level context information. By
+jointly training the network for localization and segmentation using different
+sets of features, TaNet achieved superior performance, in terms of accuracy and
+speed, when evaluated on an echocardiography dataset for cardiac segmentation.
+The code and models will be made publicly available in TaNet Github page.

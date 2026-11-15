@@ -1,0 +1,25 @@
+{
+  "criteria_id": "raid-pilot-v1-supervisor-release-assessment",
+  "criteria_version": "1",
+  "scope": "Limited RAID pilot; development/validation plumbing and methodology only.",
+  "status": "pilot-not-release-certified",
+  "decision_owner": "supervisor",
+  "independent_test": "frozen-unopened until supervisor review; no access record claimed by preflight.",
+  "thresholds_changed": false,
+  "defaults_changed": false,
+  "numeric_pass_thresholds": null,
+  "required_reports": [
+    "per-split sample, label, component, and dimension counts",
+    "development and validation metrics with abstentions and operational failures separated",
+    "explicit partial-view, missing-domain, missing-generator, attack, language-hint, and native-attribution gaps",
+    "source snapshot, manifest, content, config, criteria, and binary hashes"
+  ],
+  "prohibited_claims": [
+    "complete RAID benchmark",
+    "general accuracy certification",
+    "calibrated authorship probability",
+    "native-speaker status",
+    "held-out performance from development or validation results"
+  ],
+  "notes": "No threshold or default change was made. The pilot has no numeric release pass/fail threshold; the supervisor decides whether a frozen independent assessment is warranted."
+}

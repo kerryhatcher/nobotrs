@@ -1,0 +1,11 @@
+Facebooks virtueller Assistent: Dank Menschen klüger als Siri
+
+Facebook hat angekündigt, dass sein virtueller Assistent, der in der Facebook Messenger-App integriert ist, dank der Unterstützung von Menschen nun klüger ist als je zuvor. Der Assistent, der bisher hauptsächlich auf Künstlicher Intelligenz (KI) basierte, wird nun von einem Team von menschlichen Assistenten unterstützt, um Nutzern noch bessere und präzisere Antworten zu liefern.
+
+Der virtuelle Assistent von Facebook, der oft mit Siri von Apple verglichen wird, ist in der Lage, Fragen zu beantworten, Informationen zu liefern und sogar Aufgaben wie das Buchen von Flügen oder das Reservieren von Restaurants zu erledigen. Bisher basierte der Assistent hauptsächlich auf KI-Algorithmen, die aus großen Mengen von Daten lernen. Obwohl dies zu guten Ergebnissen führte, gab es immer noch Situationen, in denen der Assistent nicht in der Lage war, die gewünschten Informationen zu liefern oder die Anfragen der Nutzer vollständig zu verstehen.
+
+Um dieses Problem zu lösen, hat Facebook nun ein Team von menschlichen Assistenten eingestellt, die den virtuellen Assistenten unterstützen. Diese Assistenten sind speziell geschult, um Anfragen von Nutzern zu verstehen und präzise Antworten zu liefern. Sie können auch auf spezifische Informationen zugreifen, die nicht in den KI-Algorithmen enthalten sind. Dies ermöglicht es dem virtuellen Assistenten, eine viel breitere Palette von Fragen zu beantworten und den Nutzern eine bessere Erfahrung zu bieten.
+
+Die menschlichen Assistenten arbeiten eng mit den KI-Algorithmen zusammen, um den virtuellen Assistenten kontinuierlich zu verbessern. Sie analysieren die Anfragen der Nutzer und identifizieren Muster oder Themen, bei denen der Assistent Schwierigkeiten hat. Diese Informationen werden dann verwendet, um die KI-Algorithmen zu trainieren und zu verbessern, so dass der Assistent in Zukunft besser auf ähnliche Anfragen reagieren kann.
+
+Facebook betont, dass die menschlichen Assistenten die Privatsphäre der Nutzer
