@@ -1,0 +1,58 @@
+{
+  "access_policy": {
+    "if_results_inform_future_revision": "Retire this assessment as selection evidence and obtain fresh independent data; never reset access records or iterate to pass the same set.",
+    "independent_runs": 1,
+    "results_inform_candidate_revision": false
+  },
+  "assessment_requirements": {
+    "auc": "not applicable; no defined continuous ensemble score",
+    "cluster_uncertainty": "2000 fixed-seed source-component bootstrap replicates; degenerate intervals have null bounds, no zero-risk interpretation",
+    "mixed_controls": "development-only unknown labels; excluded from precision/recall",
+    "operational_failures_max": 0,
+    "report_all_samples": true,
+    "report_confusion_precision_recall_f1_fpr": true,
+    "report_coverage_abstentions_and_runtime": true,
+    "report_source_domain_generator_length_slices": true
+  },
+  "authorship_qualification": {
+    "numeric_accuracy_pass_thresholds": null,
+    "reason": "A descriptive pilot cannot certify general authorship accuracy. Existing validation shows poor recall; no calibrated probability or authorship determination is offered.",
+    "status": "not-qualified"
+  },
+  "candidate": {
+    "binary_sha256": "1d9af3d2f3b14e995853a3749e665626b21aa382700db458d6a352480a2a879d",
+    "code_checkpoint": "6cd4ef2",
+    "configuration": "evaluation/config/assessment-pilot-v1-defaults.json",
+    "language_policy": "unknown by default; no per-sample overrides",
+    "numeric_backend_thresholds": "existing compiled constants; not selected or tuned in this assessment",
+    "quorum": 2
+  },
+  "criteria_id": "assessment-pilot-v1-fixed-policy-descriptive-assessment",
+  "criteria_version": "2",
+  "limitations": [
+    "Partial first-window HC3 and RAID views; not complete benchmark or random population sample.",
+    "Source-correlated answers and uneven domain/generator/length representation.",
+    "Fresh independent set contains no attack variants; old RAID paraphrase evidence is selection-only.",
+    "Mixed controls are mechanical concatenations, not verified real-world human-edited writing.",
+    "No independently labeled nonnative-speaker data; native status is not inferred.",
+    "Clean does not prove human authorship; common words and punctuation can occur in human writing.",
+    "Optional neural detectors, SAE inspection, MCP/TUI, and humanization remain deferred."
+  ],
+  "required_engineering_gates": [
+    "cargo fmt --check",
+    "cargo clippy --locked --all-targets -- -D warnings",
+    "cargo test --locked",
+    "Python protocol/curation/reporting tests",
+    "Reusable CI baseline unchanged",
+    "Nine functional acceptance groups including clean offline package/install",
+    "Four real integration groups including pinned official SARIF schema",
+    "Release binary <=8000000 bytes",
+    "Exact manifest/config/criteria/binary binding and one-shot independent access"
+  ],
+  "scope": "One descriptive independent assessment of the existing offline heuristic policy; engineering release readiness is separate from authorship qualification.",
+  "selection": {
+    "candidate_changes_from_selection": false,
+    "data": "old RAID development/validation and fresh assessment development/validation only",
+    "decision": "Retain existing quorum2 and all default rules/thresholds; recall is poor and lowering quorum has a false-positive tradeoff."
+  }
+}
