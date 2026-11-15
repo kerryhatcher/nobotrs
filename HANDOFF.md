@@ -1,5 +1,20 @@
 # nobotrs remediation handoff
 
+Follow-up 2026-11-14: six pinned Textstat readability comparisons and a reproducible
+development-only checker now cover varied English prose, including pronunciation
+and segmentation differences. See `docs/readability-reference.md`. Added cooperative
+polling during document preparation, sentence segmentation, suppression parsing,
+and statistical backend loops. Expired preparation discards unfinished prose and
+returns an incomplete report/status 2 with zero analyzed coverage. Native parser,
+segmentation, allocation, regex and compression operations remain non-preemptible
+between polls. Pi/Ornith performed supervised readability/lexical-diversity edits;
+the supervisor corrected a faulty fixture draft and implemented the supporting
+reference checker and preprocessing/other backend changes. This follow-up was
+committed locally at the user's request; see Git history. It was not pushed.
+Imported research remains untouched. Broader statistical references
+beyond readability, licensed authorship evaluation, Python parity, and the
+unchecked release gates remain open. The October record below is historical.
+
 Updated 2026-10-10. Active plan: `docs/superpowers/plans/2026-10-10-nobotrs-review-remediation.md`. The July handoff is superseded; reviewed code can be revisited when a regression demonstrates a defect. Work is on `main`, starting at `eb02215c03d119f1ca698dd84f718c37a3530d73`. Implementation and documentation are committed together; consult Git history for the commit ID.
 
 Starting local changes were untracked imported research under `docs/research/thor-ai-writing/` and the active plan itself. Those originals are preserved. Baseline: `cargo test --locked --offline` passed 60 unit tests and one CLI smoke test; commands were stubs. Python reference in the plan is `0981b9501b7dd2fb37803cf43298e83edfd508e9`, but the adjacent local Python checkout is `main` at `27e6ce0f65c28ef563db7aa2fd997aff4d86724d`; do not treat it as the pinned reference. On 2026-10-10, GitHub public API returned Rust main at the reviewed commit, 0 Rust open issues and 13 Python open issue entries. No issues were closed or externally modified.

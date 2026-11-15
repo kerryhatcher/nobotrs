@@ -9,12 +9,8 @@ const MIN_WORDS_FOR_STATS: usize = 150;
 
 pub struct Readability;
 
-/// Standard vowel-group syllable-counting heuristic: count transitions into a
-/// vowel group, then drop one for a silent trailing "e" (when that leaves at
-/// least one syllable). Not bit-identical to any specific library's counter —
-/// validated against `textstat`'s output within a stated tolerance instead
-/// (see Task 12's Step 1/2), since matching the standard Flesch-Kincaid
-/// formula's grade-level ballpark is the actual correctness bar (spec §8, §10).
+/// Approximate English syllables from vowel groups and a terminal-e adjustment.
+/// Trims surrounding nonletters; not a pronunciation dictionary.
 pub(crate) fn count_syllables(word: &str) -> usize {
     let word = word
         .trim_matches(|c: char| !c.is_alphabetic())
@@ -83,11 +79,13 @@ impl DetectorBackend for Readability {
             };
         }
 
-        let syllables: usize = doc
-            .words
-            .iter()
-            .map(|r| count_syllables(&prose[r.clone()]))
-            .sum();
+        let mut syllables: usize = 0;
+        for word_range in &doc.words {
+            if deadline.expired() {
+                return ScoreOutcome::Failed(crate::error::Error::Timeout);
+            }
+            syllables += count_syllables(&prose[word_range.clone()]);
+        }
         let grade = 0.39 * doc.words.len() as f64 / doc.sentences.len().max(1) as f64
             + 11.8 * syllables as f64 / doc.words.len() as f64
             - 15.59;
@@ -125,7 +123,10 @@ mod tests {
         assert_eq!(count_syllables("running"), 2);
         assert_eq!(count_syllables("beautiful"), 3);
         assert_eq!(count_syllables("the"), 1);
-        assert_eq!(count_syllables("time"), 1); // silent trailing e
+        assert_eq!(count_syllables("time"), 1);
+        assert_eq!(count_syllables("time."), 1);
+        assert_eq!(count_syllables(r#""time""#), 1);
+        assert_eq!(count_syllables("TIME"), 1);
     }
 
     #[test]
@@ -172,6 +173,57 @@ mod tests {
         let deadline = Deadline::new(std::time::Duration::from_secs(1));
         if let ScoreOutcome::Scored(score) = backend.score(&doc, deadline) {
             assert_eq!(score.vote, VoteStrength::None);
+        }
+    }
+
+    #[test]
+    fn pinned_textstat_fixtures() {
+        let root: serde_json::Value = serde_json::from_str(include_str!(
+            "../../tests/fixtures/readability-reference.json"
+        ))
+        .unwrap();
+        let cases = root["cases"].as_array().unwrap();
+        assert_eq!(cases.len(), 6);
+        for case in cases {
+            let id = case["id"].as_str().unwrap();
+            let text = case["sentence_group"]
+                .as_str()
+                .unwrap()
+                .repeat(case["repetitions"].as_u64().unwrap() as usize);
+            let mut doc = Document::from_stdin_text(text.clone(), false);
+            doc.assert_language(Some("en"));
+            assert_eq!(
+                doc.words.len(),
+                case["expected_native_words"].as_u64().unwrap() as usize,
+                "{id}"
+            );
+            assert_eq!(
+                doc.sentences.len(),
+                case["expected_native_sentences"].as_u64().unwrap() as usize,
+                "{id}"
+            );
+            let ScoreOutcome::Scored(score) =
+                Readability.score(&doc, Deadline::new(std::time::Duration::from_secs(5)))
+            else {
+                panic!("{id}: readability did not score")
+            };
+            let actual = score.metrics["flesch_kincaid_grade"].value;
+            let expected = case["expected_native_grade"].as_f64().unwrap();
+            let reference = case["reference_grade"].as_f64().unwrap();
+            let difference = case["expected_grade_difference"].as_f64().unwrap();
+            assert!(
+                (actual - expected).abs() < 1e-9,
+                "{id}: {actual} vs {expected}"
+            );
+            assert!(
+                (actual - reference - difference).abs() < 1e-9,
+                "{id}: changed reference difference"
+            );
+            assert!(
+                (flesch_kincaid_grade(&text) - actual).abs() < 1e-9,
+                "{id}: helper/backend disagree"
+            );
+            assert_eq!(score.vote, VoteStrength::None, "{id}");
         }
     }
 }

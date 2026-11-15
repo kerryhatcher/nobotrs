@@ -21,6 +21,32 @@ pub fn directives(
     path: &str,
     known: &HashSet<String>,
 ) -> Result<Vec<Directive>, String> {
+    directives_inner(doc, settings, path, known, None)
+}
+pub fn directives_with_deadline(
+    doc: &Document,
+    settings: &Settings,
+    path: &str,
+    known: &HashSet<String>,
+    deadline: crate::deadline::Deadline,
+) -> Result<Vec<Directive>, String> {
+    directives_inner(doc, settings, path, known, Some(deadline))
+}
+fn directives_inner(
+    doc: &Document,
+    settings: &Settings,
+    path: &str,
+    known: &HashSet<String>,
+    deadline: Option<crate::deadline::Deadline>,
+) -> Result<Vec<Directive>, String> {
+    let poll = || {
+        if deadline.is_some_and(|d| d.expired()) {
+            Err(crate::error::Error::Timeout.to_string())
+        } else {
+            Ok(())
+        }
+    };
+    poll()?;
     validate_ids(&settings.ignore_rules, known)?;
     let mut out = vec![Directive {
         ids: settings.ignore_rules.clone(),
@@ -28,6 +54,7 @@ pub fn directives(
         reason: "global configuration".into(),
     }];
     for (pattern, ids) in &settings.path_ignores {
+        poll()?;
         validate_ids(ids, known)?;
         let pattern = regex::escape(pattern)
             .replace("\\*", ".*")
@@ -43,15 +70,16 @@ pub fn directives(
             });
         }
     }
-    let blocks: Vec<_> = doc
-        .prose_spans
-        .iter()
-        .filter_map(|b| {
-            let ranges = doc.source_ranges(b.clone());
-            Some(ranges.first()?.start..ranges.last()?.end)
-        })
-        .collect();
+    let mut blocks = Vec::new();
+    for block in &doc.prose_spans {
+        poll()?;
+        let ranges = doc.source_ranges(block.clone());
+        if let (Some(first), Some(last)) = (ranges.first(), ranges.last()) {
+            blocks.push(first.start..last.end);
+        }
+    }
     for (event, r) in Parser::new(&doc.raw).into_offset_iter() {
+        poll()?;
         let text = match event {
             Event::InlineHtml(t) | Event::Html(t) => t,
             _ => continue,
@@ -103,6 +131,7 @@ pub fn directives(
             reason: format!("{name} at line {}", doc.location(r.start).0),
         });
     }
+    poll()?;
     Ok(out)
 }
 pub fn apply(
@@ -131,6 +160,9 @@ pub fn apply(
     }
     for finding in &mut score.document_findings {
         for directive in directives {
+            if deadline.expired() {
+                return Err(crate::error::Error::Timeout);
+            }
             if (directive.reason == "global configuration"
                 || directive.reason == "per-path configuration"
                 || directive.reason.starts_with("nobotrs-ignore-file"))

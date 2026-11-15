@@ -12,6 +12,7 @@ const MTLD_THRESHOLD: f64 = 0.72;
 
 pub struct LexicalDiversity;
 
+#[cfg(test)]
 pub(crate) fn tokenize(text: &str) -> Vec<String> {
     text.unicode_words().map(|w| w.to_lowercase()).collect()
 }
@@ -30,8 +31,13 @@ fn mtld_budget(tokens: &[String], threshold: f64, deadline: Option<Deadline>) ->
         return Some(0.0);
     }
     let forward = mtld_single_pass(tokens, threshold, deadline)?;
-    let mut reversed = tokens.to_vec();
-    reversed.reverse();
+    let mut reversed = Vec::with_capacity(tokens.len());
+    for token in tokens.iter().rev() {
+        if deadline.is_some_and(|d| d.expired()) {
+            return None;
+        }
+        reversed.push(token.clone());
+    }
     let backward = mtld_single_pass(&reversed, threshold, deadline)?;
     Some((forward + backward) / 2.0)
 }
@@ -101,7 +107,13 @@ impl DetectorBackend for LexicalDiversity {
             };
         }
 
-        let tokens = tokenize(prose);
+        let mut tokens: Vec<String> = Vec::new();
+        for word in prose.unicode_words() {
+            if deadline.expired() {
+                return ScoreOutcome::Failed(crate::error::Error::Timeout);
+            }
+            tokens.push(word.to_lowercase());
+        }
         let Some(mtld_score) = mtld_budget(&tokens, MTLD_THRESHOLD, Some(deadline)) else {
             return ScoreOutcome::Failed(crate::error::Error::Timeout);
         };

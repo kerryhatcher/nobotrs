@@ -120,9 +120,29 @@ impl Engine {
         if raw.len() > settings.max_bytes {
             return Err(format!("input exceeds {} bytes", settings.max_bytes));
         }
-        let mut doc = Document::from_stdin_text(raw, markdown);
+        // An expired preparation has no safely completed prose to score. Keep the
+        // ordinary report/exit contract and let all enabled backends fail closed.
+        let mut doc = match Document::from_stdin_text_with_deadline(raw, markdown, deadline) {
+            Ok(doc) => doc,
+            Err(Error::Timeout) => Document::from_stdin_text(String::new(), markdown),
+            Err(error) => return Err(error.to_string()),
+        };
         doc.assert_language(settings.language.as_deref());
-        let directives = crate::suppression::directives(&doc, settings, path, &self.known)?;
+        let directives = if deadline.expired() {
+            Vec::new()
+        } else {
+            match crate::suppression::directives_with_deadline(
+                &doc,
+                settings,
+                path,
+                &self.known,
+                deadline,
+            ) {
+                Ok(directives) => directives,
+                Err(_) if deadline.expired() => Vec::new(),
+                Err(error) => return Err(error),
+            }
+        };
         let registry: Vec<&dyn DetectorBackend> =
             std::iter::once(&self.vocabulary as &dyn DetectorBackend)
                 .chain(self.backends.iter().map(|b| b.as_ref()))
@@ -255,10 +275,6 @@ impl Engine {
             .iter()
             .map(|w| w.error.to_string())
             .collect();
-        if deadline.expired() && incomplete_reasons.is_empty() {
-            incomplete_reasons.push(Error::Timeout.to_string());
-            coverage = 0.0;
-        }
         let block_contexts = doc
             .prose_spans
             .iter()
@@ -269,6 +285,10 @@ impl Engine {
             .iter()
             .map(|r| doc.source_ranges(r.clone()))
             .collect();
+        if deadline.expired() && incomplete_reasons.is_empty() {
+            incomplete_reasons.push(Error::Timeout.to_string());
+            coverage = 0.0;
+        }
         Ok(Report {
             schema_version: "1.0.0",
             engine_version: env!("CARGO_PKG_VERSION"),

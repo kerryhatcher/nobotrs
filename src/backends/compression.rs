@@ -85,22 +85,34 @@ fn compression_ratio_bounded(raw: &[u8], deadline: Deadline) -> Result<f64, crat
 /// Shannon entropy (bits) over the document's word-frequency distribution —
 /// a proxy for how predictable the token stream is, bundled into this
 /// backend's evidence rather than a separate family (spec §2.2).
+#[cfg(test)]
 pub(crate) fn entropy_per_token(words: &[&str]) -> f64 {
+    entropy_bounded(words, None).unwrap()
+}
+fn entropy_bounded(words: &[&str], deadline: Option<Deadline>) -> Option<f64> {
+    if deadline.is_some_and(|d| d.expired()) {
+        return None;
+    }
     if words.is_empty() {
-        return 0.0;
+        return Some(0.0);
     }
     let mut freq: HashMap<&str, usize> = HashMap::new();
     for w in words {
+        if deadline.is_some_and(|d| d.expired()) {
+            return None;
+        }
         *freq.entry(*w).or_insert(0) += 1;
     }
     let n = words.len() as f64;
-    -freq
-        .values()
-        .map(|&c| {
-            let p = c as f64 / n;
-            p * p.log2()
-        })
-        .sum::<f64>()
+    let mut entropy = 0.0;
+    for &count in freq.values() {
+        if deadline.is_some_and(|d| d.expired()) {
+            return None;
+        }
+        let p = count as f64 / n;
+        entropy += p * p.log2();
+    }
+    Some(-entropy)
 }
 
 impl DetectorBackend for Compression {
@@ -132,8 +144,16 @@ impl DetectorBackend for Compression {
             Ok(ratio) => ratio,
             Err(error) => return ScoreOutcome::Failed(error),
         };
-        let words: Vec<&str> = prose.split_whitespace().collect();
-        let entropy = entropy_per_token(&words);
+        let mut words = Vec::new();
+        for word in prose.split_whitespace() {
+            if deadline.expired() {
+                return ScoreOutcome::Failed(crate::error::Error::Timeout);
+            }
+            words.push(word);
+        }
+        let Some(entropy) = entropy_bounded(&words, Some(deadline)) else {
+            return ScoreOutcome::Failed(crate::error::Error::Timeout);
+        };
 
         // Evidence-only in v1 (spec §2.2, §7 item 5): always VoteStrength::None.
 

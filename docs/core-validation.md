@@ -1,5 +1,32 @@
 # Core validation record
 
+## Follow-up: 2026-11-14
+
+Readability now has six pinned external Textstat comparisons, production-backend
+regressions, and explicit punctuation/case probes. See
+[reference provenance and known differences](readability-reference.md). The
+development-only `uv run scripts/check-readability-reference.py` reproduced all
+six external values using the recorded package versions and CMU dictionary hash.
+
+Cooperative deadline polling now covers document construction, source-position
+indexing, sentence segmentation, suppression-directive parsing, statistical
+word/sentence loops, MTLD reverse-copy preparation, and entropy frequency/reduction
+loops. Expired preprocessing discards unfinished prose and preserves the ordinary
+incomplete-report contract. Direct expired-helper probes and bounded/unbounded
+Unicode/Markdown source-map comparisons passed. No hard preemption is claimed.
+
+Verified `cargo fmt --check`, `cargo clippy --locked --all-targets -- -D warnings`,
+`cargo test --locked` (43 unit/backend, 5 CLI, 13 remediation tests),
+`cargo build --release --locked`, and `git diff --check`. The release executable
+reproduced the seven-fixture CI behavior baseline. Real plain-text and Markdown
+stdin probes with `--timeout-ms 0` returned status 2, `complete: false`, zero
+coverage, zero prepared words, and failed backend outcomes. The release binary
+was 2,576,608 bytes, within the existing 8,000,000-byte budget. Corpus evaluation,
+broader statistical references, Python parity, and other release gates remain
+separate work. No authorship accuracy or calibrated probability claim was added.
+
+## Original core milestone
+
 Date: 2026-10-10. Baseline: main at `eb02215c03d119f1ca698dd84f718c37a3530d73`, 60 unit tests + 1 stub CLI smoke test passing. Imported research and the original remediation plan were untracked before implementation and were preserved.
 
 The implemented core was verified with `cargo fmt --check`, `cargo clippy --locked --all-targets -- -D warnings`, and `cargo test --locked --offline`: 40 backend/unit tests, 5 executable tests, and 13 remediation tests passed. Old probability/raw-span tests were replaced when their contracts changed; test count is not an accuracy measure. Source modifications were reviewed with `git diff --check`.

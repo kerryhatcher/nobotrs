@@ -1,0 +1,90 @@
+{
+  "reference": {
+    "textstat": "0.7.10",
+    "pyphen": "0.18.1",
+    "nltk": "3.10.4",
+    "language": "en_US",
+    "cmudict_sha256": "cad209c39eb87677d64e93d97f8eed10b7e6f9bdd42de8e7ca8efc8e17d62e8a",
+    "notes": "External comparison only; native pronunciation and segmentation differ. These synthetic fixtures do not measure authorship accuracy."
+  },
+  "cases": [
+    {
+      "id": "simple",
+      "sentence_group": "The cat sat on the mat. The dog ran to the gate. We saw a red bird in the tree. ",
+      "repetitions": 20,
+      "reference_words": 400,
+      "reference_sentences": 60,
+      "reference_syllables": 400,
+      "reference_grade": -1.1899999999999995,
+      "expected_native_grade": -1.1899999999999995,
+      "expected_grade_difference": 0.0,
+      "expected_native_words": 400,
+      "expected_native_sentences": 60
+    },
+    {
+      "id": "multisyllabic",
+      "sentence_group": "Careful planning improves communication. The engineer reviewed the technical report. Beautiful gardens surround the community library. ",
+      "repetitions": 20,
+      "reference_words": 320,
+      "reference_sentences": 60,
+      "reference_syllables": 760,
+      "reference_grade": 14.515000000000004,
+      "expected_native_grade": 16.727500000000003,
+      "expected_grade_difference": 2.2124999999999986,
+      "expected_native_words": 320,
+      "expected_native_sentences": 60
+    },
+    {
+      "id": "contractions",
+      "sentence_group": "We don't know why it's late. They'll bring the tools when we've called. You can't fix what isn't broken. ",
+      "repetitions": 20,
+      "reference_words": 380,
+      "reference_sentences": 60,
+      "reference_syllables": 420,
+      "reference_grade": -0.07789473684210435,
+      "expected_native_grade": -0.07789473684210435,
+      "expected_grade_difference": 0.0,
+      "expected_native_words": 380,
+      "expected_native_sentences": 60
+    },
+    {
+      "id": "punctuation",
+      "sentence_group": "\"Time,\" she said, \"is precious.\" Running helps! Can careful planning save the day? ",
+      "repetitions": 20,
+      "reference_words": 260,
+      "reference_sentences": 40,
+      "reference_syllables": 340,
+      "reference_grade": 2.375769230769233,
+      "expected_native_grade": 2.4384615384615387,
+      "expected_grade_difference": 0.0626923076923056,
+      "expected_native_words": 260,
+      "expected_native_sentences": 60
+    },
+    {
+      "id": "exceptions",
+      "sentence_group": "People make choices about science. Every family needs a safe place. The fire burned near the quiet lake. ",
+      "repetitions": 20,
+      "reference_words": 360,
+      "reference_sentences": 60,
+      "reference_syllables": 560,
+      "reference_grade": 5.105555555555558,
+      "expected_native_grade": 3.1388888888888893,
+      "expected_grade_difference": -1.9666666666666686,
+      "expected_native_words": 360,
+      "expected_native_sentences": 60
+    },
+    {
+      "id": "varied_sentences",
+      "sentence_group": "Birds sing. The children walked along the river after lunch. A small boat carried three tired workers past the old stone bridge before dusk. ",
+      "repetitions": 20,
+      "reference_words": 480,
+      "reference_sentences": 40,
+      "reference_syllables": 640,
+      "reference_grade": 4.823333333333334,
+      "expected_native_grade": 3.7550000000000026,
+      "expected_grade_difference": -1.0683333333333316,
+      "expected_native_words": 480,
+      "expected_native_sentences": 60
+    }
+  ]
+}

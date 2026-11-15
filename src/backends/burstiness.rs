@@ -12,18 +12,25 @@ const LOW_BURSTINESS_THRESHOLD: f64 = 0.35;
 
 pub struct Burstiness;
 
-fn population_stdev(values: &[usize]) -> f64 {
+fn population_stdev(values: &[usize], deadline: Deadline) -> Result<f64, crate::error::Error> {
     let n = values.len() as f64;
-    let mean = values.iter().sum::<usize>() as f64 / n;
-    let variance = values
-        .iter()
-        .map(|&v| {
-            let d = v as f64 - mean;
-            d * d
-        })
-        .sum::<f64>()
-        / n;
-    variance.sqrt()
+    let mut total = 0usize;
+    for &value in values {
+        if deadline.expired() {
+            return Err(crate::error::Error::Timeout);
+        }
+        total += value;
+    }
+    let mean = total as f64 / n;
+    let mut variance = 0.0;
+    for &value in values {
+        if deadline.expired() {
+            return Err(crate::error::Error::Timeout);
+        }
+        let delta = value as f64 - mean;
+        variance += delta * delta;
+    }
+    Ok((variance / n).sqrt())
 }
 
 impl DetectorBackend for Burstiness {
@@ -50,14 +57,22 @@ impl DetectorBackend for Burstiness {
             };
         }
 
-        let lengths: Vec<usize> = doc
-            .sentences
-            .iter()
-            .map(|r| {
-                unicode_segmentation::UnicodeSegmentation::unicode_words(&doc.prose[r.clone()])
-                    .count()
-            })
-            .collect();
+        let mut lengths = Vec::new();
+        for range in &doc.sentences {
+            if deadline.expired() {
+                return ScoreOutcome::Failed(crate::error::Error::Timeout);
+            }
+            let mut count = 0;
+            for _ in
+                unicode_segmentation::UnicodeSegmentation::unicode_words(&doc.prose[range.clone()])
+            {
+                if deadline.expired() {
+                    return ScoreOutcome::Failed(crate::error::Error::Timeout);
+                }
+                count += 1;
+            }
+            lengths.push(count);
+        }
         if lengths.len() < MIN_SENTENCES {
             return ScoreOutcome::Abstained {
                 reason: format!(
@@ -67,13 +82,24 @@ impl DetectorBackend for Burstiness {
             };
         }
 
-        let mean = lengths.iter().sum::<usize>() as f64 / lengths.len() as f64;
+        let mut total = 0usize;
+        for &length in &lengths {
+            if deadline.expired() {
+                return ScoreOutcome::Failed(crate::error::Error::Timeout);
+            }
+            total += length;
+        }
+        let mean = total as f64 / lengths.len() as f64;
         if mean == 0.0 {
             return ScoreOutcome::Abstained {
                 reason: "mean sentence length is zero".to_string(),
             };
         }
-        let ratio = population_stdev(&lengths) / mean;
+        let deviation = match population_stdev(&lengths, deadline) {
+            Ok(value) => value,
+            Err(error) => return ScoreOutcome::Failed(error),
+        };
+        let ratio = deviation / mean;
 
         let vote = if ratio < VERY_LOW_BURSTINESS {
             VoteStrength::Strong

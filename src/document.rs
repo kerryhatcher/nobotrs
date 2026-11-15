@@ -1,3 +1,4 @@
+use crate::{deadline::Deadline, error::Error};
 use pulldown_cmark::{Event, Options, Parser, Tag, TagEnd};
 use serde::Serialize;
 use std::{ops::Range, path::Path};
@@ -42,6 +43,18 @@ impl Document {
             .is_some_and(|e| matches!(e.to_ascii_lowercase().as_str(), "md" | "markdown"))
     }
     pub fn from_stdin_text(raw: String, markdown: bool) -> Self {
+        Self::prepare(raw, markdown, None).expect("unbounded preparation cannot time out")
+    }
+    /// Cooperative preparation; parser/segmentation calls are not preemptible.
+    pub fn from_stdin_text_with_deadline(
+        raw: String,
+        markdown: bool,
+        deadline: Deadline,
+    ) -> Result<Self, Error> {
+        Self::prepare(raw, markdown, Some(deadline))
+    }
+    fn prepare(raw: String, markdown: bool, deadline: Option<Deadline>) -> Result<Self, Error> {
+        poll(deadline)?;
         let mut doc = Self {
             raw,
             prose: String::new(),
@@ -65,20 +78,20 @@ impl Document {
             positions: vec![],
         };
         if markdown {
-            doc.prepare_markdown();
+            doc.prepare_markdown(deadline)?;
         } else {
             let raw = doc.raw.clone();
-            doc.append(&raw, 0..raw.len());
+            doc.append(&raw, 0..raw.len(), deadline)?;
             doc.boundary();
         }
-        doc.words = doc
-            .prose
-            .unicode_word_indices()
-            .map(|(i, w)| i..i + w.len())
-            .collect();
-        doc.sentences = sentence_ranges(&doc.prose, &doc.prose_spans);
+        for (i, word) in doc.prose.unicode_word_indices() {
+            poll(deadline)?;
+            doc.words.push(i..i + word.len());
+        }
+        doc.sentences = sentence_ranges_bounded(&doc.prose, &doc.prose_spans, deadline)?;
         let (mut line, mut col) = (1, 1);
         for (i, c) in doc.raw.char_indices() {
+            poll(deadline)?;
             doc.positions.push((i, line, col));
             if c == '\n' {
                 line += 1;
@@ -88,7 +101,8 @@ impl Document {
             }
         }
         doc.positions.push((doc.raw.len(), line, col));
-        doc
+        poll(deadline)?;
+        Ok(doc)
     }
     pub fn assert_language(&mut self, code: Option<&str>) {
         if let Some(code) = code {
@@ -160,9 +174,16 @@ impl Document {
             suppression: None,
         }
     }
-    fn append(&mut self, text: &str, source: Range<usize>) {
+    fn append(
+        &mut self,
+        text: &str,
+        source: Range<usize>,
+        deadline: Option<Deadline>,
+    ) -> Result<(), Error> {
+        poll(deadline)?;
         let equal = self.raw.get(source.clone()) == Some(text);
         for (i, c) in text.char_indices() {
+            poll(deadline)?;
             let r = if equal {
                 source.start + i..source.start + i + c.len_utf8()
             } else {
@@ -171,6 +192,7 @@ impl Document {
             self.mapping.extend(std::iter::repeat_n(r, c.len_utf8()));
         }
         self.prose.push_str(text);
+        poll(deadline)
     }
     fn boundary(&mut self) {
         let start = self.prose_spans.last().map_or(0, |r| r.end + 1);
@@ -180,7 +202,8 @@ impl Document {
             self.mapping.push(0..0);
         }
     }
-    fn prepare_markdown(&mut self) {
+    fn prepare_markdown(&mut self, deadline: Option<Deadline>) -> Result<(), Error> {
+        poll(deadline)?;
         // Closed YAML front matter at the start is excluded; malformed blocks remain Markdown.
         let mut offset = 0;
         let mut lines = self.raw.split_inclusive('\n');
@@ -190,6 +213,7 @@ impl Document {
         {
             let mut end = self.raw.find('\n').map_or(self.raw.len(), |i| i + 1);
             for line in lines {
+                poll(deadline)?;
                 end += line.len();
                 if line.trim_end_matches(['\r', '\n']) == "---" {
                     offset = end;
@@ -198,12 +222,19 @@ impl Document {
             }
         }
         // Own events to allow appending to the prepared document without retaining a borrow.
-        let events: Vec<_> = Parser::new_ext(&self.raw[offset..], Options::ENABLE_TABLES)
-            .into_offset_iter()
-            .map(|(e, r)| (e.into_static(), r.start + offset..r.end + offset))
-            .collect();
+        let mut events = Vec::new();
+        for (event, range) in
+            Parser::new_ext(&self.raw[offset..], Options::ENABLE_TABLES).into_offset_iter()
+        {
+            poll(deadline)?;
+            events.push((
+                event.into_static(),
+                range.start + offset..range.end + offset,
+            ));
+        }
         let mut excluded = 0usize;
         for (event, range) in events {
+            poll(deadline)?;
             match event {
                 Event::Start(Tag::CodeBlock(_) | Tag::Image { .. } | Tag::HtmlBlock) => {
                     self.boundary();
@@ -214,8 +245,8 @@ impl Document {
                     self.boundary();
                 }
                 _ if excluded > 0 => {}
-                Event::Text(text) => self.append(&text, range),
-                Event::SoftBreak | Event::HardBreak => self.append(" ", range),
+                Event::Text(text) => self.append(&text, range, deadline)?,
+                Event::SoftBreak | Event::HardBreak => self.append(" ", range, deadline)?,
                 Event::Code(_) => self.boundary(),
                 Event::InlineHtml(text) if text.starts_with("<!--") => {} // rendered adjacency
                 Event::InlineHtml(_) | Event::Html(_) => self.boundary(),
@@ -228,15 +259,34 @@ impl Document {
             }
         }
         self.boundary();
+        poll(deadline)
+    }
+}
+
+fn poll(deadline: Option<Deadline>) -> Result<(), Error> {
+    if deadline.is_some_and(|d| d.expired()) {
+        Err(Error::Timeout)
+    } else {
+        Ok(())
     }
 }
 
 /// Shared approximate segmentation, including abbreviation/decimal rejection and punctuation runs.
 pub fn sentence_ranges(text: &str, blocks: &[Range<usize>]) -> Vec<Range<usize>> {
+    sentence_ranges_bounded(text, blocks, None).expect("unbounded segmentation cannot time out")
+}
+fn sentence_ranges_bounded(
+    text: &str,
+    blocks: &[Range<usize>],
+    deadline: Option<Deadline>,
+) -> Result<Vec<Range<usize>>, Error> {
+    poll(deadline)?;
     let mut out = vec![];
     for block in blocks {
+        poll(deadline)?;
         let mut start = block.start;
         for (relative, c) in text[block.clone()].char_indices() {
+            poll(deadline)?;
             let i = block.start + relative;
             if !matches!(c, '.' | '!' | '?') {
                 continue;
@@ -275,7 +325,8 @@ pub fn sentence_ranges(text: &str, blocks: &[Range<usize>]) -> Vec<Range<usize>>
             out.push(start..block.end);
         }
     }
-    out
+    poll(deadline)?;
+    Ok(out)
 }
 
 fn containing(ranges: &[Range<usize>], target: &Range<usize>) -> Option<usize> {
@@ -283,4 +334,51 @@ fn containing(ranges: &[Range<usize>], target: &Range<usize>) -> Option<usize> {
         .partition_point(|r| r.start <= target.start)
         .checked_sub(1)?;
     (target.end <= ranges[i].end).then_some(i)
+}
+
+#[cfg(test)]
+mod deadline_tests {
+    use super::*;
+    use std::time::Duration;
+
+    #[test]
+    fn expired_preparation_and_segmentation_reject_work() {
+        let expired = Deadline::new(Duration::ZERO);
+        for markdown in [false, true] {
+            assert!(matches!(
+                Document::from_stdin_text_with_deadline("Visible prose.".into(), markdown, expired),
+                Err(Error::Timeout)
+            ));
+        }
+        let text = "Visible prose.";
+        let blocks = std::iter::once(0..text.len()).collect::<Vec<_>>();
+        assert_eq!(
+            sentence_ranges_bounded(text, &blocks, Some(expired)),
+            Err(Error::Timeout)
+        );
+        let mut doc = Document::from_stdin_text(String::new(), false);
+        assert_eq!(doc.append(text, 0..0, Some(expired)), Err(Error::Timeout));
+        assert!(doc.prose.is_empty());
+        assert_eq!(doc.prepare_markdown(Some(expired)), Err(Error::Timeout));
+    }
+
+    #[test]
+    fn bounded_preparation_preserves_prose_and_source_mapping() {
+        let text = "---\r\nx: hidden\r\n---\r\n# Héllo\r\n\r\nExperts *agree* &mdash; yes.\r\nNext sentence!\r\n\r\n````\r\nignored\r\n````\r\n";
+        for markdown in [false, true] {
+            let reference = Document::from_stdin_text(text.into(), markdown);
+            let actual = Document::from_stdin_text_with_deadline(
+                text.into(),
+                markdown,
+                Deadline::new(Duration::from_secs(5)),
+            )
+            .unwrap();
+            assert_eq!(actual.prose, reference.prose);
+            assert_eq!(actual.words, reference.words);
+            assert_eq!(actual.sentences, reference.sentences);
+            assert_eq!(actual.prose_spans, reference.prose_spans);
+            assert_eq!(actual.mapping, reference.mapping);
+            assert_eq!(actual.positions, reference.positions);
+        }
+    }
 }
