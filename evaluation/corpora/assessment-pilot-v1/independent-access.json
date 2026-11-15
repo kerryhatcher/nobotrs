@@ -1,4 +1,6 @@
 {
+  "access_id": "cee850d52400e51a313f2a0fc7876bf2",
+  "accessed_at": "2026-11-15T04:24:49.054338+00:00",
   "binary_sha256": "1d9af3d2f3b14e995853a3749e665626b21aa382700db458d6a352480a2a879d",
   "configuration_sha256": "e7ec5e1872cc2ffcbf9a9617f7ce9c8bf1a0d09213be8d5b6779b74b70092cc2",
   "corpus_content_sha256": "c0ba2e11a2921aaa9e6957f12f94f35cad9fb472027e455ca486690af9c2c140",
@@ -6,6 +8,17 @@
   "frozen_by": "supervisor",
   "frozen_on": "2026-11-14",
   "frozen_timezone": "America/New_York",
+  "identity": {
+    "binary_sha256": "1d9af3d2f3b14e995853a3749e665626b21aa382700db458d6a352480a2a879d",
+    "configuration_sha256": "e7ec5e1872cc2ffcbf9a9617f7ce9c8bf1a0d09213be8d5b6779b74b70092cc2",
+    "corpus_content_sha256": "c0ba2e11a2921aaa9e6957f12f94f35cad9fb472027e455ca486690af9c2c140",
+    "corpus_revision": "Hello-SimpleAI/HC3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3+liamdugan/raid@865cac74188466cb0c3b7574a10204007b57a459",
+    "manifest_sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
+    "release_criteria_id": "assessment-pilot-v1-fixed-policy-descriptive-assessment",
+    "release_criteria_sha256": "9c8f5059a0c228a7de56efa65c2d8abcde862d482915cccfc02b2b0954f5bab5",
+    "schema_version": "1.0.0",
+    "split": "independent-test"
+  },
   "manifest_sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
   "purpose": "One descriptive fixed-policy assessment; not authorship qualification. No further selection or policy changes before access.",
   "release_criteria_id": "assessment-pilot-v1-fixed-policy-descriptive-assessment",
@@ -13,5 +26,5 @@
   "schema_version": "1.0.0",
   "selection_checkpoint": "9d47db0adf1be52d22b7def7c4a600e85739ffa0",
   "split": "independent-test",
-  "status": "frozen-unopened"
+  "status": "accessed"
 }
