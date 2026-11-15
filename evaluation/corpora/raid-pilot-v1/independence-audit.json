@@ -20,6 +20,8 @@
     "recorded_generations_share_content_hash": true,
     "recorded_generations_share_split_counts": true,
     "results_bind_current_manifest": true,
+    "retirement_blocks_independent_assessment": true,
+    "retirement_ledger_matches_manifest": true,
     "validation_result_ids_match_manifest": true
   },
   "corpus_content_sha256": "349a0c64684e30b31f2f893547cceaf30609354d33aa5a266332bc84e2d5858d",
@@ -1826,12 +1828,17 @@
   },
   "held_out": {
     "access_record_claimed": false,
+    "content_exposed_by_git_diff_check": true,
     "evaluated_ids_are_disjoint": true,
+    "freeze_allowed": false,
     "id_set_sha256": "d7f85a96b361d0afa9c8212ea331e4765d94ffdf479ce835d66b3763f676100a",
+    "independent_assessment_allowed": false,
     "preserved_evaluated_ids_are_reserved_for_development_or_validation": true,
+    "retired_as_selection_data": true,
     "sample_count": 218,
     "split": "independent-test",
-    "text_or_detector_results_opened": false
+    "text_or_detector_results_opened": false,
+    "unopened_claim_superseded": true
   },
   "manifest_sha256": "dcc538e2fe6dcbb7ad5ff99dc0886d235f105297be161ee77f40745d8ed3ddfa",
   "metadata_only_change_evidence": {
@@ -1895,6 +1902,33 @@
       }
     }
   ],
+  "retirement": {
+    "disposition": {
+      "classify_as": "selection data",
+      "must_not_claim_unopened": true,
+      "no_normalize_raw_whitespace": true,
+      "no_reset": true,
+      "no_reshuffle": true,
+      "not_independent_test": true,
+      "preserve_original_manifest_splits_results": true
+    },
+    "exposure": {
+      "access_record_claimed": false,
+      "command": "git diff --cached --check",
+      "detector_results_observed": false,
+      "event": "supervisor git diff --cached --check on staged raw corpus after commit 993956a",
+      "exposed_content": "trailing-whitespace passages from staged raw corpus sample payloads; large output with some passages visible",
+      "independent_detector_run": false,
+      "scope": "all 218 independent-test samples conservatively treated as exposed"
+    },
+    "freeze_allowed": false,
+    "independent_test_allowed": false,
+    "retired_id_set_sha256": "d7f85a96b361d0afa9c8212ea331e4765d94ffdf479ce835d66b3763f676100a",
+    "retired_sample_count": 218,
+    "retired_split": "independent-test",
+    "retirement_id": "raid-pilot-v1-heldout-retirement-2026-11-14",
+    "status": "retired-exposed-selection-data"
+  },
   "schema_version": "1.0.0",
-  "status": "independence-audit-passed"
+  "status": "independence-audit-passed-retired"
 }

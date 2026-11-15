@@ -76,9 +76,11 @@ the test set into selection data and obtain fresh independent data.
 
 The verified file bytes are passed to the detector through stdin, with Markdown
 inferred from the sample's file extension. The subprocess does not reread the
-path after hash verification. Development, validation, and regression runs read
-only non-independent samples; they validate source/near-duplicate/content-hash
-metadata for the full manifest but do not open held-out text. The
+path after hash verification. Detector subprocesses also run with all
+`NOBOTRS_*` variables removed and an explicit config path, as described below.
+Development, validation, and regression runs read only non-independent samples;
+they validate source/near-duplicate/content-hash metadata for the full manifest
+but do not open held-out text. The
 `content_verification` output lists verified sample IDs/splits, held-out IDs not
 read, the verified subset hash, the manifest corpus hash, and whether independent
 held-out text was verified after a claim.
@@ -126,7 +128,9 @@ A limited, licensed RAID pilot is available at
 [`evaluation/corpora/raid-pilot-v1`](../../evaluation/corpora/raid-pilot-v1) and is
 documented in [raid-pilot.md](raid-pilot.md). It is a partial API view with
 1,100 samples, is not the complete RAID benchmark, and is not an accuracy
-certification. Its independent-test split has not been opened or run. The
+certification. Its 218-sample independent-test split was retired as exposed
+selection data after a Git diff whitespace exposure; `retirement.json` binds that
+status, and preflight/evaluation refuse freeze or independent assessment. The
 evaluated-release gate remains open. There are no independently measured
 accuracy, false-positive, or calibrated probability claims. Optional models,
 SAEs, MCP/TUI, and humanization remain deferred.

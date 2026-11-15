@@ -1,6 +1,28 @@
 # nobotrs remediation handoff
 
-Continuation 2026-11-14 (limited RAID pilot, curation, preflight; uncommitted):
+## CURRENT: RAID pilot v1 retired; corpus checkpoint 993956a is committed
+
+The limited RAID pilot `evaluation/corpora/raid-pilot-v1` is committed at
+checkpoint `993956a`. Its 218-sample independent-test split is **retired as
+exposed selection data**. After that checkpoint, a supervisor
+`git diff --cached --check` on the staged raw corpus printed trailing-whitespace
+passages; the output was large and some passages were visible. Conservatively all
+218 held-out samples are retired. `retirement.json` binds the current manifest/
+content identity, records the exposure, and disables independent assessment and
+freeze. Preflight reports `preflight-passed-retired` and refuses `--freeze`; the
+evaluator refuses `--split independent-test`; development and validation remain
+usable. No independent detector run occurred and no access record was claimed.
+Original manifests, splits, results, and audits are preserved; nothing was reset,
+reshuffled, or whitespace-normalized. `.gitattributes` marks raw corpus samples
+and source response JSON/JSONL payloads `-text -diff`. Reviewers must not display
+held-out payloads.
+
+The continuation text below is a historical pre-exposure record retained for
+audit. Statements about an "unopened" independent split describe the state before
+the exposure and are superseded by this retirement status.
+
+Continuation 2026-11-14 (limited RAID pilot, curation, preflight; corpus
+checkpoint `993956a` committed, later retirement/safeguard edits uncommitted):
 added `scripts/curate_raid_pilot.py`, `scripts/raid_pilot_preflight.py`, and
 `scripts/test_curate_raid_pilot.py`, and generated
 `evaluation/corpora/raid-pilot-v1` outside the Cargo package include. The pilot is
@@ -61,9 +83,24 @@ against `report.settings` and records the complete resolved settings and hash.
 The hostile `NOBOTRS_QUORUM`/`NOBOTRS_CONFIG` synthetic regression and a real
 CI-baseline hostile-environment run both passed.
 
+Retirement (supersedes unopened claim): after commit `993956a`, the supervisor
+ran `git diff --cached --check` on the staged raw corpus. Git printed
+trailing-whitespace passages from raw payloads; output was large and some
+passages were visible. Conservatively all 218 independent-test samples are retired
+as exposed selection data. `evaluation/corpora/raid-pilot-v1/retirement.json`
+(SHA-256 `917de1bc74a23248738512e17951c6307f86ac4509d359ef42a61bf2e96783c1`)
+binds the current manifest/content hashes and records the exposure. Original
+manifests, splits, results, and audits are preserved; nothing was reset,
+reshuffled, or whitespace-normalized. Preflight refuses freeze; the evaluator
+refuses `--split independent-test`; development/validation remain usable. A new
+`.gitattributes` marks raw corpus samples and source response JSON/JSONL payloads
+`-text -diff` to preserve bytes and prevent whitespace/content diff dumps.
+Reviewers must not display held-out payloads. No independent detector run
+occurred and no access record was claimed.
+
 Independence audit: `scripts/audit_raid_pilot_independence.py` generated
 `evaluation/corpora/raid-pilot-v1/independence-audit.json` (SHA-256
-`632bdb83f68a01dcf091e003af3b2d66c67d4bc5a6c946ee2fec5c6a185daec5`). It
+`8da025ff4f9deb03ef9fe7978c5fc5e03f308331ce38661554dc73bb1c67c3ec`). It
 preserves the complete evaluated development (662) and validation (220)
 sample-ID lists with per-ID content hashes and ID-set hashes, asserts they are
 disjoint from the 218 held-out IDs, and reconstructs the deterministic split from
@@ -82,8 +119,11 @@ were overwritten during metadata-only regeneration, so the audit records the old
 generation identities and relies on the invariant content hash plus unchanged
 deterministic inputs; current result files bind generation 3. The curator now
 refuses nonempty/symlinked output directories and never rmtree()s experiment
-history; replay/versioning requires a fresh path. No held-out text or held-out
-detector result was read, and no access record was claimed or reset.
+history; replay/versioning requires a fresh path. The audit retains its historical
+"no text or detector result opened" fields but adds the superseding retirement
+status: the Git-diff exposure displayed some raw held-out passages, all 218 are
+retired, and independent assessment/freeze are refused. No independent detector
+result was read and no access record was claimed or reset.
 
 Continuation 2026-11-14 (evaluation protocol, Python parity, burstiness reference):
 the first functional-core milestone was committed as `d15b767` after supervisor

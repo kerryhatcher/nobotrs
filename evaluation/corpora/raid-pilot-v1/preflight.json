@@ -1488,8 +1488,8 @@
   "independent_access": {
     "access_record_path": null,
     "access_record_written": false,
-    "note": "Preflight never claims the one-shot access record. The supervisor decides whether to freeze and release-assess.",
-    "status": "not-claimed"
+    "note": "Preflight refuses freeze/access for retired corpora. It never claims the one-shot access record; the supervisor decides whether a non-retired corpus may be frozen.",
+    "status": "refused-retired"
   },
   "language": {
     "native_speaker_status": "not provided; not inferred",
@@ -1500,11 +1500,38 @@
   "purpose": "Limited RAID pilot for development/validation plumbing and methodology. It is not the complete RAID benchmark, not independent accuracy certification, and held-out text is unopened.",
   "release_criteria_id": "raid-pilot-v1-supervisor-release-assessment",
   "release_criteria_sha256": "37fe7c018722016090f4e305b3d97d5b0a403cf8c78c5154b5667414b6cf5abb",
+  "retirement": {
+    "disposition": {
+      "classify_as": "selection data",
+      "must_not_claim_unopened": true,
+      "no_normalize_raw_whitespace": true,
+      "no_reset": true,
+      "no_reshuffle": true,
+      "not_independent_test": true,
+      "preserve_original_manifest_splits_results": true
+    },
+    "exposure": {
+      "access_record_claimed": false,
+      "command": "git diff --cached --check",
+      "detector_results_observed": false,
+      "event": "supervisor git diff --cached --check on staged raw corpus after commit 993956a",
+      "exposed_content": "trailing-whitespace passages from staged raw corpus sample payloads; large output with some passages visible",
+      "independent_detector_run": false,
+      "scope": "all 218 independent-test samples conservatively treated as exposed"
+    },
+    "freeze_allowed": false,
+    "independent_test_allowed": false,
+    "retired_id_set_sha256": "d7f85a96b361d0afa9c8212ea331e4765d94ffdf479ce835d66b3763f676100a",
+    "retired_sample_count": 218,
+    "retired_split": "independent-test",
+    "retirement_id": "raid-pilot-v1-heldout-retirement-2026-11-14",
+    "status": "retired-exposed-selection-data"
+  },
   "retrieved": "2026-11-14",
   "retrieved_override": false,
   "retrieved_timezone": "America/New_York",
   "schema_version": "1.0.0",
-  "status": "preflight-passed",
+  "status": "preflight-passed-retired",
   "upstream_retrieved": "2026-11-14",
   "upstream_retrieved_timezone": "America/New_York"
 }

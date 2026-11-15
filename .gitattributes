@@ -1,0 +1,4 @@
+# Preserve raw corpus bytes and prevent whitespace/content diff dumps.
+/evaluation/corpora/*/samples/*.txt -text -diff
+/evaluation/corpora/*/source/responses/*.json -text -diff
+/evaluation/corpora/*/source/responses/*.jsonl -text -diff

@@ -23,6 +23,7 @@ from evaluation_protocol import (  # noqa: E402
     corpus_content_sha256,
     decode_sample_bytes,
     load_json,
+    load_retirement,
     read_sample_bytes,
     sha256_bytes,
     sha256_file,
@@ -30,6 +31,8 @@ from evaluation_protocol import (  # noqa: E402
     validate_criteria,
     validate_grouping,
     validate_manifest,
+    validate_retirement,
+    RETIREMENT_STATUS,
 )
 
 PINNED_DATASET = "liamdugan/raid"
@@ -267,9 +270,17 @@ def main() -> int:
                 "--freeze requires --access-record-out")
         manifest_path = args.corpus / "manifest.json"
         manifest = load_json(manifest_path, "manifest")
+        retirement = load_retirement(args.corpus)
+        if args.freeze and retirement and retirement.get("status") == RETIREMENT_STATUS:
+            raise ProtocolError(
+                "corpus is retired as exposed selection data; freeze is refused"
+            )
         info = validate_manifest(
             manifest, manifest_path, split="development",
             require_content_hashes=True, require_near_duplicate_groups=True,
+        )
+        retirement_info = (
+            validate_retirement(retirement, info) if retirement else None
         )
         pilot_splits = ("development", "validation", "independent-test")
         split_counts = {
@@ -330,6 +341,10 @@ def main() -> int:
             "binary_sha256": binary_hash,
         }
         if args.freeze:
+            if retirement_info:
+                raise ProtocolError(
+                    "corpus is retired as exposed selection data; freeze is refused"
+                )
             record_path = args.access_record_out
             if record_path.exists():
                 raise ProtocolError(f"refusing to overwrite access record {record_path}")
@@ -342,7 +357,11 @@ def main() -> int:
             "schema_version": SCHEMA_VERSION,
             "corpus_version": manifest.get("corpus_version"),
             "corpus_revision": info.corpus_revision,
-            "status": "preflight-passed" if not args.freeze else "frozen-unopened-record-written",
+            "status": (
+                "preflight-passed-retired" if retirement_info
+                else ("preflight-passed" if not args.freeze
+                      else "frozen-unopened-record-written")
+            ),
             "purpose": manifest.get("purpose"),
             "retrieved": source["retrieved"],
             "retrieved_timezone": source["retrieved_timezone"],
@@ -385,15 +404,18 @@ def main() -> int:
                 "manifest_corpus_content_sha256": info.corpus_content_sha256,
                 "independent_held_out_verified": False,
             },
+            "retirement": retirement_info or {"status": "not-retired"},
             "independent_access": {
-                "status": "not-claimed",
-                "access_record_written": bool(args.freeze),
+                "status": "refused-retired" if retirement_info else "not-claimed",
+                "access_record_written": bool(args.freeze) and not retirement_info,
                 "access_record_path": (
-                    str(args.access_record_out) if args.freeze else None
+                    str(args.access_record_out)
+                    if args.freeze and not retirement_info else None
                 ),
                 "note": (
-                    "Preflight never claims the one-shot access record. The "
-                    "supervisor decides whether to freeze and release-assess."
+                    "Preflight refuses freeze/access for retired corpora. It "
+                    "never claims the one-shot access record; the supervisor "
+                    "decides whether a non-retired corpus may be frozen."
                 ),
             },
             "access_record_identity": identity,

@@ -6,8 +6,27 @@ Hugging Face datasets-server responses for `liamdugan/raid` at immutable revisio
 grouping, freeze/preflight, and development/validation reporting.
 
 It is **not** the complete RAID benchmark, not a representative sample of RAID,
-and not an accuracy certification. The independent-test split has not been opened
-or run. No threshold or default was changed.
+and not an accuracy certification. Historically no independent detector run
+occurred and no access record was claimed; the independent-test split is now
+retired as exposed selection data. No threshold or default was changed.
+
+## Retirement status (supersedes unopened claim)
+
+After commit `993956a`, the supervisor ran `git diff --cached --check` on the
+staged raw corpus. Git printed trailing-whitespace passages from raw sample
+payloads; the output was large and some passages were visible. Conservatively,
+**all 218 RAID v1 independent-test samples are retired as exposed selection
+data**. The historical facts that no independent detector run occurred and no
+access record was ever claimed remain true, but any claim that the held-out set
+is unopened is superseded. Original manifests, splits, results, and audits are
+preserved, not reset, reshuffled, or whitespace-normalized. Reviewers must not
+display held-out payloads.
+
+The permanent ledger is `retirement.json` (SHA-256
+`917de1bc74a23248738512e17951c6307f86ac4509d359ef42a61bf2e96783c1`).
+Preflight refuses `--freeze`, and the evaluator refuses
+`--split independent-test`, for this retired corpus. Development and validation
+remain usable.
 
 ## Source snapshot and license
 
@@ -86,7 +105,7 @@ independent authorship verification in these rows.
 |---|---:|---:|---:|---:|
 | development | 662 | 146 | 116 | 546 |
 | validation | 220 | 62 | 54 | 166 |
-| independent-test (unopened) | 218 | 42 | 30 | 188 |
+| independent-test (retired; historically unopened/unrun) | 218 | 42 | 30 | 188 |
 | **total** | **1,100** | **250** | **200** | **900** |
 
 | Dimension | Counts |
@@ -134,8 +153,10 @@ observations, not independent performance:
 
 Abstentions and operational failures were both 0 in these runs. The low recall is
 a property of the current uncalibrated rules on this partial pilot, not a
-justification to retune on held-out data. The independent-test split was not
-opened; the runner lists its 218 IDs as `held_out_not_read`.
+justification to retune on held-out data. The evaluator did not open the
+independent-test split and lists its 218 IDs as `held_out_not_read`; the Git-diff
+exposure subsequently retired all 218 as exposed selection data, so no
+independent assessment may use them.
 
 A cached validation quorum sweep is persisted as
 [`raid-pilot-selection.md`](raid-pilot-selection.md) and
@@ -168,10 +189,12 @@ python3 scripts/raid_pilot_preflight.py \
 The output is a binding record and includes the exact one-shot access-record
 identity for a future supervisor decision. It does **not** claim the access
 record. A supervisor may explicitly add `--freeze --access-record-out PATH` to
-write a `frozen-unopened` record; that still does not claim it. Preflight rejects
-absolute response paths, missing/tampered source files, stale manifest/source
-bindings, forced sources outside development, non-default language overrides, and
-held-out text reads.
+write a `frozen-unopened` record; that still does not claim it. **For this retired
+corpus, preflight refuses `--freeze` and reports `refused-retired`; the evaluator
+refuses `--split independent-test` before claiming any access record.**
+Preflight rejects absolute response paths, missing/tampered source files, stale
+manifest/source bindings, forced sources outside development, non-default
+language overrides, and held-out text reads.
 
 Current preflight identity:
 
@@ -211,8 +234,10 @@ response byte/hash is preserved.
 `scripts/audit_raid_pilot_independence.py`) records the split-stability and
 evaluated-sample audit. It preserves the complete development and validation evaluated sample-ID lists,
 with per-ID content hashes and ID-set hashes, so those samples cannot later be
-moved into the held-out set. It also records the held-out set hash and count,
-without opening held-out text or detector results.
+moved into the held-out set. It records the held-out set hash and count. The
+retirement ledger supersedes the audit's historical unopened status; the
+historical fields are retained. No independent detector run occurred and no
+access record was claimed.
 
 The manifest hash changed three times while provenance metadata was fixed:
 
@@ -242,7 +267,8 @@ development. This timing is recorded in the audit.
 Current audit hash:
 
 ```text
-independence_audit_sha256  632bdb83f68a01dcf091e003af3b2d66c67d4bc5a6c946ee2fec5c6a185daec5
+independence_audit_sha256  8da025ff4f9deb03ef9fe7978c5fc5e03f308331ce38661554dc73bb1c67c3ec
+retirement_ledger_sha256   917de1bc74a23248738512e17951c6307f86ac4509d359ef42a61bf2e96783c1
 development_result_sha256   da226f9851d312c2a6f112a1b385d34dae9723a97dde9f08ae5ebe128ff93051
 validation_result_sha256    15651fe2c4579f2cbdbbe292ae0432b4a8f12451521597f241207f9e5a05556a
 ```
@@ -251,13 +277,17 @@ The first development/validation predictions were produced after generation 1.
 The earlier manifest and result files were overwritten during the metadata-only
 regenerations, so the retained evidence is the recorded generation identities,
 the invariant content hash, the unchanged deterministic split inputs, and the
-current result files bound to generation 3. No held-out text or held-out detector
-result was read at any point.
+current result files bound to generation 3. No independent detector result was
+read and no access record was claimed. The Git-diff exposure displayed some raw
+held-out passages, so all 218 held-out samples are retired as exposed selection
+data.
 
 ## Non-claims
 
 This pilot does not establish general detector accuracy, calibrated
 probabilities, native-speaker behavior, or complete RAID coverage. Do not report
-development/validation selection results as held-out performance. Any future
-independent assessment requires supervisor freeze/review and must not reuse or
-reset the one-shot access record after seeing results.
+development/validation selection results as held-out performance. The RAID v1
+held-out split is retired as exposed selection data and cannot be frozen or
+assessed as independent. Any future independent assessment requires a fresh,
+separate corpus, supervisor freeze/review, and must not reuse or reset the
+one-shot access record after seeing results.

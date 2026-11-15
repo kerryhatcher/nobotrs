@@ -22,6 +22,7 @@ from evaluation_protocol import (
     corpus_content_sha256,
     decode_sample_bytes,
     load_json,
+    load_retirement,
     markdown_hint,
     metrics,
     read_sample_bytes,
@@ -32,6 +33,8 @@ from evaluation_protocol import (
     validate_criteria,
     validate_grouping,
     validate_manifest,
+    validate_retirement,
+    RETIREMENT_STATUS,
 )
 
 
@@ -98,12 +101,21 @@ def main():
         manifest = load_json(args.manifest, "manifest")
         independent = args.split == "independent-test"
         non_regression = args.split != "regression"
+        retirement = load_retirement(args.manifest.parent)
+        if independent and retirement and retirement.get("status") == RETIREMENT_STATUS:
+            raise ProtocolError(
+                "corpus is retired as exposed selection data; "
+                "independent-test assessment is refused"
+            )
         info = validate_manifest(
             manifest,
             args.manifest,
             split=args.split,
             require_content_hashes=non_regression,
             require_near_duplicate_groups=non_regression,
+        )
+        retirement_info = (
+            validate_retirement(retirement, info) if retirement else None
         )
         selected = [sample for sample in info.samples if sample["split"] == args.split]
         if not selected:
@@ -367,6 +379,7 @@ def main():
                 "metric_contracts": sorted({row["metric_contract"] for row in rows if row["metric_contract"]}),
             },
             "metric_versions": metric_versions,
+            "retirement": retirement_info or {"status": "not-retired"},
         }
         if args.sweep_quorum:
             if args.split not in ("development", "validation"):

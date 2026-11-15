@@ -192,8 +192,11 @@ source/near-duplicate grouping, forced-development viewed sources, dimension
 reporting, and freeze/preflight tooling. It does not satisfy the complete
 versioned-corpus item above: five RAID domains and most generators are absent,
 some cells failed, native-speaker attribution is unavailable, and the corpus is
-not representative. Only development/validation evaluation has run; the
-independent-test split is unopened and no access record was claimed. A cached
+not representative. Only development/validation evaluation has run. The 218
+independent-test samples were later retired as exposed selection data after a Git
+diff whitespace exposure; `retirement.json` binds that status, and preflight/
+evaluation refuse freeze or independent assessment. No access record was claimed.
+A cached
 validation quorum sweep retained quorum 2/default thresholds because quorum 1
 traded extremely low recall for an unacceptable observed pilot FPR and quorum 3
 lost coverage; see the

@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import Any, Iterable
 
 SCHEMA_VERSION = "1.0.0"
+RETIREMENT_STATUS = "retired-exposed-selection-data"
+RETIREMENT_FILE = "retirement.json"
 SPLITS = ("regression", "development", "validation", "independent-test")
 LABELS = ("human", "generated")
 VERDICTS = ("clean", "flagged", "inconclusive")
@@ -65,6 +67,62 @@ def sha256_bytes(data: bytes) -> str:
 
 def sha256_file(path: Path) -> str:
     return sha256_bytes(Path(path).read_bytes())
+
+
+def load_retirement(directory: Path) -> dict[str, Any] | None:
+    path = Path(directory) / RETIREMENT_FILE
+    if not path.exists():
+        return None
+    value = load_json(path, "retirement ledger")
+    if not isinstance(value, dict):
+        raise ProtocolError("retirement ledger must be a JSON object")
+    return value
+
+
+def validate_retirement(ledger: dict[str, Any], info: "ManifestInfo") -> dict[str, Any]:
+    if ledger.get("schema_version") != SCHEMA_VERSION:
+        raise ProtocolError("unsupported retirement ledger schema_version")
+    if ledger.get("status") != RETIREMENT_STATUS:
+        raise ProtocolError(
+            f"retirement ledger status is {ledger.get('status')!r}; expected {RETIREMENT_STATUS!r}"
+        )
+    if ledger.get("manifest_sha256") != info.raw_sha256:
+        raise ProtocolError("retirement ledger does not bind the current manifest")
+    if ledger.get("corpus_content_sha256") != info.corpus_content_sha256:
+        raise ProtocolError("retirement ledger does not bind the current corpus content hash")
+    retired_split = ledger.get("retired_split")
+    if retired_split not in SPLITS:
+        raise ProtocolError("retirement ledger retired_split is invalid")
+    retired_ids = sorted(
+        sample["id"] for sample in info.samples if sample["split"] == retired_split
+    )
+    if ledger.get("retired_sample_count") != len(retired_ids):
+        raise ProtocolError("retirement ledger retired_sample_count is stale")
+    expected_hash = sha256_bytes(
+        ("\n".join(retired_ids) + "\n").encode("utf-8")
+    )
+    if ledger.get("retired_id_set_sha256") != expected_hash:
+        raise ProtocolError("retirement ledger retired ID-set hash is stale")
+    declared_ids = ledger.get("retired_sample_ids")
+    if not isinstance(declared_ids, list) or sorted(declared_ids) != retired_ids:
+        raise ProtocolError("retirement ledger retired sample IDs are stale")
+    disposition = ledger.get("disposition")
+    if not isinstance(disposition, dict):
+        raise ProtocolError("retirement ledger disposition must be an object")
+    for key in ("not_independent_test", "preserve_original_manifest_splits_results"):
+        if disposition.get(key) is not True:
+            raise ProtocolError(f"retirement ledger disposition.{key} must be true")
+    return {
+        "status": RETIREMENT_STATUS,
+        "retirement_id": ledger.get("retirement_id"),
+        "retired_split": retired_split,
+        "retired_sample_count": len(retired_ids),
+        "retired_id_set_sha256": expected_hash,
+        "independent_test_allowed": False,
+        "freeze_allowed": False,
+        "exposure": ledger.get("exposure"),
+        "disposition": disposition,
+    }
 
 
 def canonical_json_bytes(value: Any) -> bytes:

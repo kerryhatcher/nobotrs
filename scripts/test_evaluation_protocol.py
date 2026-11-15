@@ -23,6 +23,9 @@ from evaluation_protocol import (  # noqa: E402
     sweep_rows,
     validate_grouping,
     validate_manifest,
+    load_retirement,
+    validate_retirement,
+    RETIREMENT_STATUS,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,6 +64,208 @@ def manifest(samples, *, corpus_revision="corpus-v1", declared_content=None,
     if declared_content is not None:
         value["corpus_content_sha256"] = declared_content
     return value
+
+
+FORCED_SOURCE_IDS = [
+    "e5e058ce-be2b-459d-af36-32532aaba5ff",
+    "f95b107b-d176-4af5-90f7-4d0bb20caf93",
+    "856d8972-9e3d-4544-babc-0fe16f21e04d",
+    "fbc8a5ea-90fa-47b8-8fa7-73dd954f1524",
+    "72c41b8d-0069-4886-b734-a4000ffca286",
+]
+
+
+def build_retired_corpus(root: Path) -> Path:
+    """Build a minimal preflight-valid corpus with a retirement ledger."""
+    corpus = root / "retired-corpus"
+    samples_dir = corpus / "samples"
+    samples_dir.mkdir(parents=True)
+    samples = []
+    for index, source_id in enumerate(FORCED_SOURCE_IDS):
+        text = f"development sample {index} with enough words for validation."
+        file_name = f"samples/dev-{index}.txt"
+        (corpus / file_name).write_bytes(text.encode("utf-8"))
+        samples.append({
+            "id": f"dev-{index}",
+            "file": file_name,
+            "split": "development",
+            "source_group": f"src-dev-{index}",
+            "near_duplicate_group": f"nd-dev-{index}",
+            "label": "human",
+            "slice": "synthetic",
+            "license": "MIT",
+            "provenance": {
+                "source": "https://example.org/source",
+                "retrieved": "2026-11-14",
+            },
+            "content_sha256": sha256_bytes(text.encode("utf-8")),
+            "source_id": source_id,
+            "dimension_values": {"language_hint": "unknown"},
+        })
+    for split, sample_id, text in (
+        ("validation", "val-0", "validation sample with enough words for checks."),
+        ("independent-test", "ind-0", "independent sample with enough words for checks."),
+    ):
+        file_name = f"samples/{sample_id}.txt"
+        (corpus / file_name).write_bytes(text.encode("utf-8"))
+        samples.append({
+            "id": sample_id,
+            "file": file_name,
+            "split": split,
+            "source_group": f"src-{sample_id}",
+            "near_duplicate_group": f"nd-{sample_id}",
+            "label": "generated",
+            "slice": "synthetic",
+            "license": "MIT",
+            "provenance": {
+                "source": "https://example.org/source",
+                "retrieved": "2026-11-14",
+            },
+            "content_sha256": sha256_bytes(text.encode("utf-8")),
+            "source_id": f"00000000-0000-4000-8000-{0 if split == 'validation' else 1:012d}",
+            "dimension_values": {"language_hint": "unknown"},
+        })
+
+    source = corpus / "source"
+    responses = source / "responses"
+    responses.mkdir(parents=True)
+    response_bytes = b'{"rows":[]}\n'
+    (responses / "response.json").write_bytes(response_bytes)
+    acquisition = {
+        "dataset": "liamdugan/raid",
+        "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+        "upstream_license": "MIT (dataset card declaration)",
+        "license_url": "https://example.org/license",
+        "retrieved": "2026-11-14",
+        "retrieved_timezone": "America/New_York",
+        "queries": [{
+            "domain": "abstracts",
+            "model": "human",
+            "attack": "none",
+            "upstream_split": "train",
+            "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+            "url": "https://example.org/query",
+            "file": "responses/response.json",
+            "sha256": sha256_bytes(response_bytes),
+            "rows": 0,
+            "available": 0,
+            "partial_view": True,
+        }],
+        "errors": [],
+        "notes": "synthetic retirement fixture",
+        "portable_snapshot": True,
+        "original_acquisition_sha256": "a" * 64,
+    }
+    (source / "acquisition.json").write_text(
+        json.dumps(acquisition, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    (source / "dataset-card.md").write_text(
+        "---\nlicense: mit\n---\nSynthetic card.\n", encoding="utf-8"
+    )
+    (source / "LICENSE").write_text(
+        "MIT License\n\nCopyright (c) 2024- Liam Dugan\n", encoding="utf-8"
+    )
+    provenance = {
+        "dataset": "liamdugan/raid",
+        "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+        "upstream_license": "MIT (dataset card declaration)",
+        "license_url": "https://example.org/license",
+        "retrieved": "2026-11-14",
+        "retrieved_timezone": "America/New_York",
+        "upstream_retrieved": "2026-11-14",
+        "upstream_retrieved_timezone": "America/New_York",
+        "retrieved_override": False,
+        "acquisition_sha256": sha256_bytes((source / "acquisition.json").read_bytes()),
+        "upstream_acquisition_sha256": "a" * 64,
+        "dataset_card_sha256": sha256_bytes((source / "dataset-card.md").read_bytes()),
+        "license_sha256": sha256_bytes((source / "LICENSE").read_bytes()),
+        "queries": acquisition["queries"],
+        "errors": [],
+        "notes": "synthetic retirement fixture",
+        "reproduction": "synthetic",
+    }
+    (source / "PROVENANCE.json").write_text(
+        json.dumps(provenance, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    content_hash = corpus_content_sha256(samples)
+    manifest_value = {
+        "schema_version": "1.0.0",
+        "corpus_version": "synthetic-retired-v1",
+        "corpus_revision": "synthetic-retired-v1",
+        "purpose": "Synthetic retirement guard regression; not authorship evidence.",
+        "near_duplicate_threshold": 0.8,
+        "retrieved": "2026-11-14",
+        "retrieved_timezone": "America/New_York",
+        "retrieved_override": False,
+        "language_policy": {
+            "runtime_default": "unknown",
+            "per_sample_overrides": False,
+            "overrides_recorded": [],
+        },
+        "split_policy": {"forced_to_development": FORCED_SOURCE_IDS},
+        "source_snapshot": {
+            "path": "source",
+            "acquisition_sha256": provenance["acquisition_sha256"],
+            "upstream_acquisition_sha256": provenance["upstream_acquisition_sha256"],
+            "dataset_card_sha256": provenance["dataset_card_sha256"],
+            "license_sha256": provenance["license_sha256"],
+            "provenance_sha256": sha256_bytes((source / "PROVENANCE.json").read_bytes()),
+            "response_count": 1,
+        },
+        "curation_audit": "curation.json",
+        "corpus_content_sha256": content_hash,
+        "samples": samples,
+    }
+    manifest_path = corpus / "manifest.json"
+    manifest_path.write_text(
+        json.dumps(manifest_value, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    audit = {
+        "schema_version": "1.0.0",
+        "corpus_version": "synthetic-retired-v1",
+        "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+        "retrieved": "2026-11-14",
+        "retrieved_timezone": "America/New_York",
+        "manifest_sha256": sha256_bytes(manifest_path.read_bytes()),
+        "corpus_content_sha256": content_hash,
+        "claims": {
+            "complete_raid_benchmark": False,
+            "general_accuracy_certification": False,
+            "independent_test_opened": False,
+            "thresholds_or_defaults_changed": False,
+        },
+        "row_accounting": {"rejected": 0},
+    }
+    (corpus / "curation.json").write_text(
+        json.dumps(audit, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    independent_ids = sorted(
+        sample["id"] for sample in samples if sample["split"] == "independent-test"
+    )
+    ledger = {
+        "schema_version": "1.0.0",
+        "retirement_id": "synthetic-retirement-v1",
+        "status": RETIREMENT_STATUS,
+        "corpus_version": "synthetic-retired-v1",
+        "corpus_revision": "synthetic-retired-v1",
+        "manifest_sha256": sha256_bytes(manifest_path.read_bytes()),
+        "corpus_content_sha256": content_hash,
+        "retired_split": "independent-test",
+        "retired_sample_count": len(independent_ids),
+        "retired_id_set_sha256": sha256_bytes(
+            ("\n".join(independent_ids) + "\n").encode("utf-8")
+        ),
+        "retired_sample_ids": independent_ids,
+        "disposition": {
+            "not_independent_test": True,
+            "preserve_original_manifest_splits_results": True,
+        },
+        "exposure": {"event": "synthetic git diff exposure"},
+    }
+    (corpus / "retirement.json").write_text(
+        json.dumps(ledger, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
+    return corpus
 
 
 class ProtocolTests(unittest.TestCase):
@@ -486,6 +691,140 @@ class ProtocolTests(unittest.TestCase):
                          sha256_bytes(b"{}\n"))
         self.assertEqual(defaults["effective_configuration"]["supplied_keys"], [])
         self.assertEqual(defaults["effective_configuration"]["settings"]["quorum"], 2)
+
+    def test_retirement_ledger_binds_manifest_and_ids(self):
+        corpus = build_retired_corpus(self.root)
+        manifest_path = corpus / "manifest.json"
+        value = json.loads(manifest_path.read_text())
+        info = validate_manifest(
+            value, manifest_path, split="development",
+            require_content_hashes=True, require_near_duplicate_groups=True,
+        )
+        ledger = load_retirement(corpus)
+        retirement = validate_retirement(ledger, info)
+        self.assertEqual(retirement["status"], RETIREMENT_STATUS)
+        self.assertEqual(retirement["retired_split"], "independent-test")
+        self.assertEqual(retirement["retired_sample_count"], 1)
+        self.assertFalse(retirement["independent_test_allowed"])
+        self.assertFalse(retirement["freeze_allowed"])
+
+        stale_manifest = dict(ledger)
+        stale_manifest["manifest_sha256"] = "0" * 64
+        with self.assertRaises(ProtocolError):
+            validate_retirement(stale_manifest, info)
+        stale_ids = dict(ledger)
+        stale_ids["retired_sample_ids"] = []
+        with self.assertRaises(ProtocolError):
+            validate_retirement(stale_ids, info)
+        stale_status = dict(ledger)
+        stale_status["status"] = "open"
+        with self.assertRaises(ProtocolError):
+            validate_retirement(stale_status, info)
+
+    def test_retired_corpus_refuses_independent_before_sample_or_access_reads(self):
+        corpus = build_retired_corpus(self.root)
+        marker = self.root / "detector-ran"
+        fake = self.root / "fake-nobotrs"
+        fake.write_text(
+            "#!/usr/bin/env python3\n"
+            "import json, pathlib, sys\n"
+            f"pathlib.Path({str(marker)!r}).write_text('ran')\n"
+            "sys.stdin.buffer.read()\n"
+            "print(json.dumps({'schema_version':'1.0.0','engine_version':'fake',"
+            "'dictionary_version':'fake','metric_contract':'fake',"
+            "'verdict':'clean','complete':True,'families':[],'backends':[],"
+            "'settings':{'quorum':2}}))\n",
+            encoding="utf-8",
+        )
+        fake.chmod(0o755)
+        config = self.write({"quorum": 2}, "ret-config.json")
+        criteria = self.write(
+            {"criteria_id": "retired-v1", "criteria_version": "1"},
+            "ret-criteria.json",
+        )
+        record = self.root / "retired-access.json"
+        result = subprocess.run([
+            sys.executable, str(ROOT / "scripts/evaluate.py"),
+            "--binary", str(fake), "--manifest", str(corpus / "manifest.json"),
+            "--output", str(self.root / "retired-independent.json"),
+            "--split", "independent-test", "--config", str(config),
+            "--release-criteria", str(criteria),
+            "--release-access-record", str(record),
+        ], capture_output=True, text=True, check=False)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("retired", result.stderr)
+        self.assertFalse(marker.exists())
+        self.assertFalse(record.exists())
+        self.assertFalse(record.with_name(record.name + ".lock").exists())
+
+    def test_retired_corpus_allows_development_and_validation(self):
+        corpus = build_retired_corpus(self.root)
+        fake = self.root / "fake-nobotrs"
+        fake.write_text(
+            "#!/usr/bin/env python3\n"
+            "import json, sys\n"
+            "sys.stdin.buffer.read()\n"
+            "print(json.dumps({'schema_version':'1.0.0','engine_version':'fake',"
+            "'dictionary_version':'fake','metric_contract':'fake',"
+            "'verdict':'clean','complete':True,'families':[],'backends':[],"
+            "'settings':{'quorum':2}}))\n",
+            encoding="utf-8",
+        )
+        fake.chmod(0o755)
+        config = self.write({"quorum": 2}, "ret-config.json")
+        criteria = self.write(
+            {"criteria_id": "retired-v1", "criteria_version": "1"},
+            "ret-criteria.json",
+        )
+        for split in ("development", "validation"):
+            output = self.root / f"retired-{split}.json"
+            result = subprocess.run([
+                sys.executable, str(ROOT / "scripts/evaluate.py"),
+                "--binary", str(fake),
+                "--manifest", str(corpus / "manifest.json"),
+                "--output", str(output), "--split", split,
+                "--config", str(config), "--release-criteria", str(criteria),
+            ], capture_output=True, text=True, check=False)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            report = json.loads(output.read_text())
+            self.assertEqual(report["split"], split)
+            self.assertEqual(report["retirement"]["status"], RETIREMENT_STATUS)
+
+    def test_retired_corpus_freeze_refused_without_record(self):
+        corpus = build_retired_corpus(self.root)
+        fake = self.root / "fake-nobotrs"
+        fake.write_text("preflight only reads binary bytes\n", encoding="utf-8")
+        config = self.write({"quorum": 2}, "ret-config.json")
+        criteria = self.write(
+            {"criteria_id": "retired-v1", "criteria_version": "1"},
+            "ret-criteria.json",
+        )
+        record = self.root / "retired-freeze-access.json"
+        result = subprocess.run([
+            sys.executable, str(ROOT / "scripts/raid_pilot_preflight.py"),
+            "--corpus", str(corpus), "--config", str(config),
+            "--release-criteria", str(criteria), "--binary", str(fake),
+            "--output", str(self.root / "retired-freeze-preflight.json"),
+            "--access-record-out", str(record), "--freeze",
+        ], capture_output=True, text=True, check=False)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("retired", result.stderr)
+        self.assertFalse(record.exists())
+        self.assertFalse(record.with_name(record.name + ".lock").exists())
+
+        preflight = self.root / "retired-preflight.json"
+        allowed = subprocess.run([
+            sys.executable, str(ROOT / "scripts/raid_pilot_preflight.py"),
+            "--corpus", str(corpus), "--config", str(config),
+            "--release-criteria", str(criteria), "--binary", str(fake),
+            "--output", str(preflight),
+        ], capture_output=True, text=True, check=False)
+        self.assertEqual(allowed.returncode, 0, allowed.stderr)
+        report = json.loads(preflight.read_text())
+        self.assertEqual(report["status"], "preflight-passed-retired")
+        self.assertEqual(report["retirement"]["status"], RETIREMENT_STATUS)
+        self.assertEqual(report["independent_access"]["status"], "refused-retired")
+        self.assertFalse(report["independent_access"]["access_record_written"])
 
     def test_development_run_does_not_open_held_out_text(self):
         dev_data = b"# development\n\nexperts\nagree\n"

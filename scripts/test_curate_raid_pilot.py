@@ -465,6 +465,118 @@ class PilotTests(unittest.TestCase):
         )
         self.assertNotIn("ZZZSECRET", results.read_text())
 
+    def write_retirement(self, out):
+        manifest_path = out / "manifest.json"
+        manifest = self.load(manifest_path)
+        ids = sorted(
+            sample["id"] for sample in manifest["samples"]
+            if sample["split"] == "independent-test"
+        )
+        ledger = {
+            "schema_version": "1.0.0",
+            "retirement_id": "synthetic-retirement-v1",
+            "status": "retired-exposed-selection-data",
+            "corpus_version": manifest["corpus_version"],
+            "corpus_revision": manifest["corpus_revision"],
+            "manifest_sha256": sha256_file(manifest_path),
+            "corpus_content_sha256": manifest["corpus_content_sha256"],
+            "retired_split": "independent-test",
+            "retired_sample_count": len(ids),
+            "retired_id_set_sha256": sha256_bytes(
+                ("\n".join(ids) + "\n").encode("utf-8")
+            ),
+            "retired_sample_ids": ids,
+            "disposition": {
+                "not_independent_test": True,
+                "preserve_original_manifest_splits_results": True,
+            },
+            "exposure": {"event": "synthetic git diff exposure"},
+        }
+        (out / "retirement.json").write_text(
+            json.dumps(ledger, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+        return ledger
+
+    def test_retired_corpus_cannot_be_frozen_or_assessed_but_dev_validation_work(self):
+        out, _ = self.curate()
+        ledger = self.write_retirement(out)
+        config = self.root / "retired-config.json"
+        config.write_text('{"quorum": 2}\n', encoding="utf-8")
+        criteria = self.root / "retired-criteria.json"
+        criteria.write_text(
+            '{"criteria_id": "retired-v1", "criteria_version": "1"}\n',
+            encoding="utf-8",
+        )
+        detector = self.root / "retired-fake-detector"
+        detector.write_text(
+            "#!/usr/bin/env python3\n"
+            "import json, sys\n"
+            "sys.stdin.buffer.read()\n"
+            "print(json.dumps({'schema_version':'1.0.0','engine_version':'fake-0.1',"
+            "'dictionary_version':'fake-dict','metric_contract':'fake-v1',"
+            "'verdict':'clean','complete':True,'families':[],'backends':[],"
+            "'settings':{'quorum':2}}))\n",
+            encoding="utf-8",
+        )
+        detector.chmod(0o755)
+
+        record = self.root / "retired-access.json"
+        freeze = subprocess.run([
+            sys.executable, str(ROOT / "scripts/raid_pilot_preflight.py"),
+            "--corpus", str(out), "--config", str(config),
+            "--release-criteria", str(criteria), "--binary", str(detector),
+            "--output", str(self.root / "retired-preflight-freeze.json"),
+            "--access-record-out", str(record), "--freeze",
+        ], capture_output=True, text=True, check=False)
+        self.assertNotEqual(freeze.returncode, 0)
+        self.assertIn("retired", freeze.stderr)
+        self.assertFalse(record.exists())
+        self.assertFalse(record.with_name(record.name + ".lock").exists())
+
+        preflight = self.root / "retired-preflight.json"
+        report = subprocess.run([
+            sys.executable, str(ROOT / "scripts/raid_pilot_preflight.py"),
+            "--corpus", str(out), "--config", str(config),
+            "--release-criteria", str(criteria), "--binary", str(detector),
+            "--output", str(preflight),
+        ], capture_output=True, text=True, check=False)
+        self.assertEqual(report.returncode, 0, report.stderr)
+        value = self.load(preflight)
+        self.assertEqual(value["status"], "preflight-passed-retired")
+        self.assertEqual(value["retirement"]["status"],
+                         "retired-exposed-selection-data")
+        self.assertEqual(value["independent_access"]["status"], "refused-retired")
+        self.assertFalse(value["independent_access"]["access_record_written"])
+
+        access = self.root / "retired-access.json"
+        independent = subprocess.run([
+            sys.executable, str(ROOT / "scripts/evaluate.py"),
+            "--binary", str(detector), "--manifest", str(out / "manifest.json"),
+            "--output", str(self.root / "retired-independent.json"),
+            "--split", "independent-test", "--config", str(config),
+            "--release-criteria", str(criteria),
+            "--release-access-record", str(access),
+        ], capture_output=True, text=True, check=False)
+        self.assertNotEqual(independent.returncode, 0)
+        self.assertIn("retired", independent.stderr)
+        self.assertFalse(access.exists())
+        self.assertFalse(access.with_name(access.name + ".lock").exists())
+
+        for split in ("development", "validation"):
+            allowed = subprocess.run([
+                sys.executable, str(ROOT / "scripts/evaluate.py"),
+                "--binary", str(detector), "--manifest", str(out / "manifest.json"),
+                "--output", str(self.root / f"retired-{split}.json"),
+                "--split", split, "--config", str(config),
+                "--release-criteria", str(criteria),
+            ], capture_output=True, text=True, check=False)
+            self.assertEqual(allowed.returncode, 0, allowed.stderr)
+            allowed_report = self.load(self.root / f"retired-{split}.json")
+            self.assertEqual(allowed_report["retirement"]["status"],
+                             "retired-exposed-selection-data")
+            self.assertEqual(allowed_report["split"], split)
+
     def test_freeze_writes_unopened_record_without_claiming(self):
         out, _ = self.curate()
         config = self.root / "config.json"
