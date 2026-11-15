@@ -1,5 +1,45 @@
 # nobotrs remediation handoff
 
+Continuation 2026-11-14 (evaluation protocol, Python parity, burstiness reference):
+the first functional-core milestone was committed as `d15b767` after supervisor
+verification. New evaluation work is uncommitted. `scripts/evaluation_protocol.py`
+and the rewritten `scripts/evaluate.py` bind corpus revision, manifest/content/
+configuration/release-criteria hashes and criteria ID; require SPDX-like licenses
+and verifiable provenance; verify exact file-byte hashes (including CRLF/LF);
+preserve null/unknown labels outside accuracy denominators; reject source-group,
+near-duplicate-group, content-hash, normalized-text, and 5-gram near-duplicate
+leakage across splits; and bind the binary SHA-256 into the frozen access record.
+Independent access is claimed before reading test text via an exclusive lock
+plus atomic record replace. Stale, reused, mismatched, and locked access records
+are rejected. Verified bytes are analyzed through stdin with Markdown inferred
+from the file extension; development/validation/regression runs do not open
+held-out independent text and report the verified subset separately. Output
+records binary SHA-256, engine/dictionary/metric-contract versions, and metric
+methods. A held-out file may be absent while its declared metadata participates
+in grouping. The legacy regression manifest and `docs/evaluation/ci-baseline.json`
+still pass unchanged. Cargo now includes only `scripts/*.py`; `.gitignore` covers
+Python caches, and package acceptance rejects `__pycache__`, `.pyc`, `.pyo`, and
+`.pytest_cache` entries. Verified with caches present after the Python tests.
+
+`python3 scripts/test_evaluation_protocol.py` passed 18 unittests. The pinned
+Python comparison harness (`scripts/compare_python_reference.py`) compared the
+seven shared fixtures against commit `0981b9501b7dd2fb37803cf43298e83edfd508e9`
+using matched public PyPI versions (textstat 0.7.13, lexicalrichness 0.5.1, nltk
+3.10.0, pyphen 0.17.2, typer 0.26.8) because the archived private registry was
+unavailable (401). It pins expected reference-file SHA-256 values from the supervisor's trusted
+`git archive` capture, rejects modified or mislabeled archives, and found 10
+intended differences, 0 regression candidates. The three archive-identity/tamper
+regressions passed. See `docs/evaluation/python-parity.md`.
+
+Added external population-stdev/CV burstiness vectors in
+`tests/fixtures/burstiness-reference.json`, `scripts/check-burstiness-reference.py`,
+and `tests/burstiness_reference.rs`; all five vectors reproduced, with the
+below-word-floor case abstaining. Added `docs/evaluation/building-auditable-notes.md`
+with hard-negative, ablation/collateral, OOD/FPR, and Table 4 hypothesis-only
+lessons. SAEs/models/MCP/TUI/humanization remain deferred. The supervisor is
+acquiring a small versioned RAID subset; no independent release evaluation or
+access record was run or consumed.
+
 Continuation 2026-11-14 (compression/entropy and functional-core acceptance):
 added seven pinned synthetic compression/entropy vectors in
 `tests/fixtures/compression-reference.json`, a standard-library checker

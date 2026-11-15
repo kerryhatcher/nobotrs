@@ -411,6 +411,10 @@ def check_package(r, package_timeout):
                     "packaged dictionary missing")
             require(not any("docs/research/thor-ai-writing" in name for name in names),
                     "imported research was packaged")
+            require(not any(
+                "__pycache__" in name or name.endswith((".pyc", ".pyo"))
+                or ".pytest_cache" in name for name in names
+            ), "Python cache artifact was packaged")
             archive.extractall(unpacked)
         source = unpacked / "nobotrs-0.1.0"
         install_root = temp / "install"
