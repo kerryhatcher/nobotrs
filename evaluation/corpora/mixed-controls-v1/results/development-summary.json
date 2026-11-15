@@ -1,0 +1,1285 @@
+{
+  "abstentions": {
+    "labeled": 0,
+    "operational_failures": 0,
+    "unknown_label": 0
+  },
+  "auc": null,
+  "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+  "detector_run": false,
+  "limitations": [
+    "Cluster bootstrap resamples source components from this result; it is not a fresh corpus or independent sample.",
+    "Pilot source selection is biased and partial; missing domains, generators, cells, and attacks are disclosed in the corpus documentation.",
+    "No independently labeled nonnative-speaker or human-edited material is available; native-speaker status is not inferred.",
+    "Per-generator slices necessarily separate correlated human/generated answers; overall and source/domain slices retain source-component clustering.",
+    "No AUC is reported because the detector has no continuous calibrated ensemble score.",
+    "Clustered bootstrap cannot establish small false-positive-rate certification from tiny or biased samples.",
+    "All-identical replicate distributions return null bounds; they are not evidence of zero risk.",
+    "No pseudo-independent binomial intervals are applied to clustered human/generated rows.",
+    "This tool does not run the detector and does not read sample text; it summarizes an existing result file."
+  ],
+  "method": {
+    "cluster_bootstrap": true,
+    "cluster_key": "source_group",
+    "confidence_interval": "percentile 2.5/97.5; null bounds when all valid replicate values are identical",
+    "no_auc": true,
+    "replicates": 2000,
+    "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+  },
+  "overall": {
+    "bootstrap": {
+      "cluster_count": 156,
+      "cluster_key": "source_group",
+      "confidence": 0.95,
+      "metrics": {
+        "coverage": {
+          "degenerate": true,
+          "denominator": "labeled",
+          "estimate": null,
+          "lower": null,
+          "reason": "No valid replicates: zero denominator.",
+          "total_replicates": 2000,
+          "upper": null,
+          "valid_replicates": 0
+        },
+        "f1": {
+          "degenerate": true,
+          "denominator": "2*tp+fp+fn",
+          "estimate": null,
+          "lower": null,
+          "reason": "No valid replicates: zero denominator.",
+          "total_replicates": 2000,
+          "upper": null,
+          "valid_replicates": 0
+        },
+        "false_positive_rate": {
+          "degenerate": true,
+          "denominator": "fp+tn",
+          "estimate": null,
+          "lower": null,
+          "reason": "No valid replicates: zero denominator.",
+          "total_replicates": 2000,
+          "upper": null,
+          "valid_replicates": 0
+        },
+        "precision": {
+          "degenerate": true,
+          "denominator": "tp+fp",
+          "estimate": null,
+          "lower": null,
+          "reason": "No valid replicates: zero denominator.",
+          "total_replicates": 2000,
+          "upper": null,
+          "valid_replicates": 0
+        },
+        "recall": {
+          "degenerate": true,
+          "denominator": "tp+fn",
+          "estimate": null,
+          "lower": null,
+          "reason": "No valid replicates: zero denominator.",
+          "total_replicates": 2000,
+          "upper": null,
+          "valid_replicates": 0
+        }
+      },
+      "replicates": 2000,
+      "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+    },
+    "metrics": {
+      "abstentions": 0,
+      "auc": null,
+      "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+      "confusion_matrix": {
+        "fn": 0,
+        "fp": 0,
+        "tn": 0,
+        "tp": 0
+      },
+      "coverage": null,
+      "covered_count": 0,
+      "f1": null,
+      "false_positive_rate": null,
+      "false_positive_rate_wilson_95": null,
+      "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+      "labeled_count": 0,
+      "operational_failures": 0,
+      "precision": null,
+      "recall": null,
+      "sample_count": 156,
+      "unknown_label_abstentions": 0,
+      "unknown_label_count": 156,
+      "unknown_label_coverage": 1.0,
+      "unknown_label_operational_failures": 0
+    }
+  },
+  "runtime": {
+    "mean_seconds": 0.007178443238118257,
+    "p95_seconds": 0.009082213524379767,
+    "sample_count": 156,
+    "total_seconds": 1.1198371451464482
+  },
+  "sample_text_included": false,
+  "schema_version": "1.0.0",
+  "slices": {
+    "domain": {
+      "finance": {
+        "bootstrap": {
+          "cluster_count": 36,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 36,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 36,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 36
+      },
+      "medicine": {
+        "bootstrap": {
+          "cluster_count": 26,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 26,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 26,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 26
+      },
+      "open_qa": {
+        "bootstrap": {
+          "cluster_count": 27,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 27,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 27,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 27
+      },
+      "reddit_eli5": {
+        "bootstrap": {
+          "cluster_count": 32,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 32,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 32,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 32
+      },
+      "wiki_csai": {
+        "bootstrap": {
+          "cluster_count": 35,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 35,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 35,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 35
+      }
+    },
+    "generator": {
+      "mixed-human-prefix-generated-suffix": {
+        "bootstrap": {
+          "cluster_count": 156,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 156,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 156,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 156
+      }
+    },
+    "length_bucket": {
+      "100-249": {
+        "bootstrap": {
+          "cluster_count": 45,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 45,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 45,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 45
+      },
+      "250-499": {
+        "bootstrap": {
+          "cluster_count": 98,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 98,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 98,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 98
+      },
+      "500-plus": {
+        "bootstrap": {
+          "cluster_count": 12,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 12,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 12,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 12
+      },
+      "lt-100": {
+        "bootstrap": {
+          "cluster_count": 1,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 1,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 1,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 1
+      }
+    },
+    "source": {
+      "hc3-mixed-control": {
+        "bootstrap": {
+          "cluster_count": 156,
+          "cluster_key": "source_group",
+          "confidence": 0.95,
+          "metrics": {
+            "coverage": {
+              "degenerate": true,
+              "denominator": "labeled",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "f1": {
+              "degenerate": true,
+              "denominator": "2*tp+fp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "false_positive_rate": {
+              "degenerate": true,
+              "denominator": "fp+tn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "precision": {
+              "degenerate": true,
+              "denominator": "tp+fp",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            },
+            "recall": {
+              "degenerate": true,
+              "denominator": "tp+fn",
+              "estimate": null,
+              "lower": null,
+              "reason": "No valid replicates: zero denominator.",
+              "total_replicates": 2000,
+              "upper": null,
+              "valid_replicates": 0
+            }
+          },
+          "replicates": 2000,
+          "seed": "evaluation-cluster-bootstrap-v1-2026-11-14"
+        },
+        "metrics": {
+          "abstentions": 0,
+          "auc": null,
+          "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+          "confusion_matrix": {
+            "fn": 0,
+            "fp": 0,
+            "tn": 0,
+            "tp": 0
+          },
+          "coverage": null,
+          "covered_count": 0,
+          "f1": null,
+          "false_positive_rate": null,
+          "false_positive_rate_wilson_95": null,
+          "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+          "labeled_count": 0,
+          "operational_failures": 0,
+          "precision": null,
+          "recall": null,
+          "sample_count": 156,
+          "unknown_label_abstentions": 0,
+          "unknown_label_count": 156,
+          "unknown_label_coverage": 1.0,
+          "unknown_label_operational_failures": 0
+        },
+        "sample_count": 156
+      }
+    }
+  },
+  "source_result": {
+    "binary_sha256": "1d9af3d2f3b14e995853a3749e665626b21aa382700db458d6a352480a2a879d",
+    "configuration_sha256": "e7ec5e1872cc2ffcbf9a9617f7ce9c8bf1a0d09213be8d5b6779b74b70092cc2",
+    "configuration_source": "explicit --config",
+    "content_verification": {
+      "held_out_not_read": [],
+      "independent_held_out_verified": true,
+      "manifest_corpus_content_sha256": "d101fd6dcf291d0ec7b3744fbc6aee3b89cbf64584a93ff9f5111a9a5e8803c0",
+      "verified_content_sha256": "d101fd6dcf291d0ec7b3744fbc6aee3b89cbf64584a93ff9f5111a9a5e8803c0",
+      "verified_sample_ids": [
+        "mixed-032d18ab07c53a67f72c98d8",
+        "mixed-0452d8403a9c8079cf337bd6",
+        "mixed-046083472284953ea39a12b6",
+        "mixed-0649b82d1fd2d305a674b04c",
+        "mixed-065c9345b78c760afd9c87cd",
+        "mixed-06fd69c035b6eef0a21ef699",
+        "mixed-074d4063fe58b42d02de52d2",
+        "mixed-0c16e53dff9771a5c68760f8",
+        "mixed-0c9cb9e53811ba82bcc485bd",
+        "mixed-0cd04d1de63afe6360c02090",
+        "mixed-0cd4ead0c0e20d3e962b048d",
+        "mixed-0d52909988179e54582ab39f",
+        "mixed-0e3e88280205581abc901063",
+        "mixed-0fedd502b12cbcb4fde46613",
+        "mixed-1009604e8a161065463c9080",
+        "mixed-105bcd6d28336398ab1b553f",
+        "mixed-10bcbd995393a275514101f0",
+        "mixed-150c5baeedf1b60ae8ef714d",
+        "mixed-15b529c399e31729868160cc",
+        "mixed-1b7138bdb9f13f7aaba863cd",
+        "mixed-1c60e23dbe6b7db9e60b3c33",
+        "mixed-1ca44a623df24461a1b7c039",
+        "mixed-1d888794b5092518168b3a94",
+        "mixed-1e55310ed800747bdc05402d",
+        "mixed-2246bd88469dd9187672b375",
+        "mixed-2491c24f724760328795d32d",
+        "mixed-26abbe280aeef2a446ae106e",
+        "mixed-2707927d61305c74aec6cf9b",
+        "mixed-28242c63c0cad6cff1af3598",
+        "mixed-295b5b54c9d1596a86618216",
+        "mixed-2bf115d512da8d01c40f7634",
+        "mixed-2ceea12e7e2359a7a25d102a",
+        "mixed-350d0df936b03598aff30154",
+        "mixed-3768e1b2c3c8dff9b6ccee29",
+        "mixed-3a8a6822154fcd8cd861bb90",
+        "mixed-3ce585f88e6041606b29afce",
+        "mixed-3fbf99fd26c772c7671df1fb",
+        "mixed-42cce05ac3bc36f886d4eb60",
+        "mixed-4467b4a998d70078f866da0f",
+        "mixed-44c8c8680690b816ff8eaff0",
+        "mixed-46629a927148d7bc01b7c36e",
+        "mixed-470db3034a5f22a3a24fbb67",
+        "mixed-499be98d807df82c9dfefea5",
+        "mixed-4a9365f7e5a97c5828b7c608",
+        "mixed-4af22f8ba36b5800144ffe5e",
+        "mixed-4dbba1f03438e5b992f4fbce",
+        "mixed-4dde8b664d61e72e7f8959c2",
+        "mixed-4df003e193250625891c6ca1",
+        "mixed-5042efc6bc0e3f18c6e596c7",
+        "mixed-50b74e5b01a0ebf869c908f5",
+        "mixed-5368175a44cad994b88e0ec5",
+        "mixed-53f53ca2ec3892e54216f383",
+        "mixed-55aae212675b9ca4312572f2",
+        "mixed-57d8d22c115cbeb5f6629a3c",
+        "mixed-5800e63bc1b225fab63b1b66",
+        "mixed-5874c83679ab57a06be836a2",
+        "mixed-59cbdaf803e3a404a3b6d2d8",
+        "mixed-59dfd554f742f33f49cec019",
+        "mixed-5da5d3b59a4ec28e0be07682",
+        "mixed-5e13eb30e1124f8712eed382",
+        "mixed-5fa850321980625e890a1201",
+        "mixed-60d397ac9c6d5afdea6f6756",
+        "mixed-610b1d7040aa95fdfae18ffe",
+        "mixed-67e993f7299050b7bd01dbf6",
+        "mixed-699e56b1ca2a56fa7eac3d75",
+        "mixed-6a643f96f90d1a48e9a65ef8",
+        "mixed-6d8c1be05fe6f72652bfd753",
+        "mixed-6e9951d8e53554bf992c07e9",
+        "mixed-6ec2a337d6bb656234505cb9",
+        "mixed-6f3ca482eddfb5964d44fcfa",
+        "mixed-704155e9088cd3467c70fe6c",
+        "mixed-709de090f350e500a5721aa9",
+        "mixed-744bd3834a76bf88e6dfd117",
+        "mixed-764c693116d2ddd8b1c07c1b",
+        "mixed-7762e3a0fe632f3a7c78ee8c",
+        "mixed-78cd446854de86c17aa230ce",
+        "mixed-7ae9e1a3f0272a11c6ce7267",
+        "mixed-7cad03b49a54c81b85d4f8bc",
+        "mixed-7ce0bd699eaa1d67a35514ab",
+        "mixed-7d194219ead7210c7eacabcd",
+        "mixed-7f147b4289d59b00602ce98e",
+        "mixed-803dfd19b1f7db057c895c41",
+        "mixed-80b54df01dabcf951bc85df2",
+        "mixed-814ead0bdcf4e85a36ed7757",
+        "mixed-823c18e8085301a059821d1a",
+        "mixed-8284607539e9b43a4d35c7d2",
+        "mixed-8547ab5f3860eb14ed501b1a",
+        "mixed-88b07da81caa0387275ed7ce",
+        "mixed-8a489f319193af189c5e053b",
+        "mixed-8c0f6a69b96c0b1dbccfb33a",
+        "mixed-8ed9805b978347b0beca39ef",
+        "mixed-8edda44c54c600e3fc7a2b47",
+        "mixed-906a18ebbd0b1b03fb688228",
+        "mixed-91bbbcf7cd67615fc023f76d",
+        "mixed-92c0d2a4637413fbd62ac9e0",
+        "mixed-93025ba513c44eaba3278c10",
+        "mixed-934afc3761a404bd24fa30c1",
+        "mixed-9367878ebc971a89fbb8a29a",
+        "mixed-944707a13040fc53f52fe272",
+        "mixed-94afc025e58994c56511557e",
+        "mixed-94b17a14ae9c7841185fa7e4",
+        "mixed-94c7b3d58f4804b19624a48a",
+        "mixed-964cdcab95554872c2484064",
+        "mixed-96bc53540ed39c2eaea4a3b6",
+        "mixed-9b8ec8cbee75bb65208653f3",
+        "mixed-9e8ed9564aa86aba761b60b4",
+        "mixed-a03b13fa661d63047c7ee22c",
+        "mixed-a1cf9a11d059a1642b91f6ab",
+        "mixed-a2ae5b12c6599091c654d57f",
+        "mixed-a43da273efe4ccb2330dbb4d",
+        "mixed-a4f01074b63cff1bae9ceb2a",
+        "mixed-a5a5084ed7aab9b3c5409161",
+        "mixed-a618a3b9783b4e526059e84f",
+        "mixed-a788886fff5a5a5121c1e341",
+        "mixed-abcef1ed22f50e7647cf2378",
+        "mixed-ac6782fb48648af46057565d",
+        "mixed-ac748a66bc8bd0db79143c6b",
+        "mixed-ad6a20c00da02daec432fb0e",
+        "mixed-b45d3920a3a7dd86764f01be",
+        "mixed-b4db829f690d6148114f4014",
+        "mixed-b57a034e42c6d916fa909db1",
+        "mixed-ba75d68ac44a062e19f7490a",
+        "mixed-c16fc0f8d12f3d0c1dd6bf2d",
+        "mixed-c176fa972ca4516905121f0c",
+        "mixed-c41a49e45d44c088d4a6d81d",
+        "mixed-c6f2ecbad95c094ee42a89f4",
+        "mixed-c726c69857a65a1a6391e5a4",
+        "mixed-cb2488ddc8cfbdec9a48a021",
+        "mixed-cbc335131429eadabd0248f8",
+        "mixed-cbc807769c7b8dbcad4df321",
+        "mixed-cde7315e620c0eeb6f912c54",
+        "mixed-ce5e17e99e91ad4d3f0d964f",
+        "mixed-cfb98a3dd6345a9c35ec99d4",
+        "mixed-d859fcb2dfb82c3a0e83df03",
+        "mixed-d85e3546b66d124db71b1851",
+        "mixed-d948a0ca25ac5418c4b6c500",
+        "mixed-da28771d7b1c9d196c01dcb6",
+        "mixed-dae43fab39d4a3093fce9ecd",
+        "mixed-dfa4b7c0378f9f81da8bb1b9",
+        "mixed-e1d3ba1fa28ba71f851d5082",
+        "mixed-e2f34e06fc2b07d02727d2d0",
+        "mixed-e62756448e983e8263c85240",
+        "mixed-e793700ca5b4b7a9184c0ecf",
+        "mixed-ec8006812d801cca87dc63bc",
+        "mixed-ed0b530fe69f6289b80e2919",
+        "mixed-ede1b30c5ef00a65274c7ef6",
+        "mixed-eed42a6bbfbba0f7810cc441",
+        "mixed-ef18c407276ac7f028ee7268",
+        "mixed-efd0f5cd148c4de6a03dec5a",
+        "mixed-f217af1c7a5bd4b66ad68dc9",
+        "mixed-f2e909439d2f1236a0a5c46d",
+        "mixed-f514ebc1399204debee13e81",
+        "mixed-f9517017f33b0132b77fc410",
+        "mixed-fbf02e034b54eed9fb9ccc1c",
+        "mixed-fd5b95447b87dd3d7bb739e2",
+        "mixed-ffb292ac8a089b66d2fd33ff"
+      ],
+      "verified_splits": [
+        "development"
+      ]
+    },
+    "corpus_content_sha256": "d101fd6dcf291d0ec7b3744fbc6aee3b89cbf64584a93ff9f5111a9a5e8803c0",
+    "corpus_version": "mixed-controls-v1",
+    "effective_settings_sha256": "336b12d549cb709b3335d2ae7e8fed8e46b4ef7bffd2b038ab11351754864239",
+    "manifest_sha256": "f2130c03e4de3a27c8cf7b6628177ef8f30be04db237eebc21bef6e91778a4a1",
+    "path": "evaluation/corpora/mixed-controls-v1/results/development.json",
+    "retirement": {
+      "status": "not-retired"
+    },
+    "sha256": "33f04976a06ad613b63163e209badb35eee07d50a0aa57bcc466957b08f98cfe",
+    "split": "development"
+  },
+  "summary_id": "evaluation-cluster-bootstrap-v1"
+}

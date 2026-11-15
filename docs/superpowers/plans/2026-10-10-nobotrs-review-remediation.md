@@ -178,7 +178,7 @@ Stopping analysis because of input, candidate, or time limits produces status `2
 - [x] Compare Rust and Python on shared fixtures. Separate intended differences in preprocessing, overlap deduplication, compression, and error semantics from actual porting regressions. Follow-up 2026-11-14: seven shared fixtures compared against commit `0981b9501b7dd2fb37803cf43298e83edfd508e9` with matched public PyPI core versions; 10 intended differences and 0 regression candidates. See [Python parity](../../evaluation/python-parity.md).
 - [x] Follow-up 2026-11-14: harden the evaluation protocol with corpus/config/criteria identity binding, exact-byte content hashes, one-shot atomic independent access, source/near-duplicate grouping, unknown-label reporting, and cached-byte stdin analysis. See [evaluation protocol](../../evaluation/README.md).
 - [x] Follow-up 2026-11-14: add external burstiness population-stdev/CV vectors, a standard-library checker, and a production-backend regression; all five vectors reproduced.
-- [ ] Audit research claims against `source-verification.yaml`; preserve imported originals and write corrected interpretations separately. Distinguish vendor reports, independent evaluation, and unsupported claims. Add reviewed source/date metadata to rules.
+- [x] Limited follow-up 2026-11-14: supervisor-owned provenance commit `f6979ad` verified 46 origins, 206 snapshot entries, and 34 unsupported claims. Imported originals were preserved. This is a scoped provenance/source audit, not a full external revalidation; the broader research-claim audit remains limited to that recorded scope.
 - [ ] Select new signals and threshold changes using development/validation evidence, including false-positive tradeoffs. Freeze the candidate configuration and release criteria before independent test evaluation. Contractions, pronouns, passive-voice proxies, or structural repetition start as informational candidates until validated.
 - [x] Define test-set access and refresh/retirement rules. Repeatedly accepting or rejecting candidate changes from the same test results turns that set into selection data even without direct access to its text. If test results inform a revision, disclose that use and assess the revised candidate on fresh independent data before making fresh held-out claims; do not iterate toward passing the same test set.
 - [x] Establish a versioned, reproducible CI regression corpus and baseline artifact, separate in purpose and reported results from independent release evaluation. CI fixtures are reusable development evidence. Define tolerances from measured variability and never present repeated CI performance as an unseen-test estimate.
@@ -202,6 +202,20 @@ traded extremely low recall for an unacceptable observed pilot FPR and quorum 3
 lost coverage; see the
 [cached selection note](../../evaluation/raid-pilot-selection.md). See
 [raid pilot](../../evaluation/raid-pilot.md).
+
+Assessment follow-up 2026-11-14: a separate joint HC3 + fresh RAID pilot
+(`evaluation/corpora/assessment-pilot-v1`) has 964 samples, 578/193/193 splits,
+whole-component old-RAID exclusion, and HC3 viewed question IDs 0-14 forced
+development. Authorized release-binary development/validation runs show
+known-bad recall (0.0299/0.0550) and are selection evidence only; cached quorum
+sweeps retain quorum 2/defaults. Root-owned final criteria/preflight are prepared,
+but no frozen access record or independent run exists yet. A separate
+development-only mechanical mixed-control corpus
+(`evaluation/corpora/mixed-controls-v1`, 156 null-label controls) and a
+metadata-only cluster-bootstrap summary tool are prepared. See
+[assessment pilot](../../evaluation/assessment-pilot.md),
+[mixed controls](../../evaluation/mixed-controls.md), and
+[summary reporting](../../evaluation/summary-reporting.md).
 
 ## Phase 6 — Add scoped suppression and actionable localization
 

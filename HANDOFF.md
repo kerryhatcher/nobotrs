@@ -17,7 +17,7 @@ reshuffled, or whitespace-normalized. `.gitattributes` marks raw corpus samples
 and source response JSON/JSONL payloads `-text -diff`. Reviewers must not display
 held-out payloads.
 
-## CURRENT: joint assessment pilot v1 curated and preflighted; not run/frozen
+## CURRENT: assessment pilot development/validation run; final criteria prepared; not frozen/independent
 
 `evaluation/corpora/assessment-pilot-v1` combines pinned HC3
 (`Hello-SimpleAI/HC3@4d0ff181...`, CC-BY-SA-4.0, first 50 records each of five
@@ -33,16 +33,31 @@ exact or near text in this snapshot. No native-speaker labels or mixed controls
 are included.
 
 Hashes: manifest `7d6ffed1...`, content `c0ba2e11...`, curation `ad89bf0e...`,
-preflight `29bc7756...`; criteria `44c06553...` are **proposed/not frozen**. The
-assessment preflight reads development/validation only, reports 193 held-out IDs
-as not read, and writes no access/freeze record. No detector has run. Reviewers
-must not display HC3 questions/answers or response payloads. `.gitattributes`
-covers sample text and nested HC3/RAID response JSON/JSONL.
+preflight `6e26190c...` (release binary `1d9af3d2...`). Curated criteria remain
+historical at `44c06553...`; root-owned final criteria
+`assessment-pilot-v1-fixed-policy-descriptive-assessment` and
+`preflight-final.json` are prepared. **No frozen access record or independent run
+exists yet.** The preflight reads development/validation only, reports 193
+held-out IDs as not read, and writes no access/freeze record. Reviewers must not
+display HC3 questions/answers or response payloads. `.gitattributes` covers
+sample text and nested HC3/RAID response JSON/JSONL.
+
+Authorized release-binary results: development 578 samples, TP9/FP1/FN292/TN276
+(precision .900, recall .0299, F1 .0579, FPR .00361; coverage 1.0, abstentions 0);
+validation 193, TP6/FP1/FN103/TN83 (precision .857, recall .0550, F1 .1034, FPR
+.01190; coverage 1.0, abstentions 0). **Recall is known-bad for general authorship
+detection.** Cluster summaries use the same seed/replicates across 251/80 source
+clusters and source/domain/generator/length slices; coverage is degenerate (null
+bounds), so no zero-risk certification is claimed. Cached quorum sweeps (no
+detector rerun) retain quorum 2/defaults: q1 dev/val recall .382/.358 with FPR
+.105/.107; q3 coverage .557/.534 with 256/90 abstentions. No threshold, rule, or
+label changed.
 
 Review fixes incorporated: exclusion propagates to entire connected components
 (synthetic sibling + cross-corpus transitive regression); old corpus binding and
 exact content hashes are validated; nested source-response attributes are tested;
-criteria say proposed/not frozen; occupied output is refused before source reads
+curation criteria remain historical while root-owned final criteria/preflight are
+preserved; occupied output is refused before source reads
 and unrelated files are preserved. HC3 metadata question audit found 250 unique
 normalized question hashes and 0 duplicates, so no question-hash union was needed
 for this snapshot; the assessment manifest was not regenerated for that rule.
@@ -52,14 +67,19 @@ mechanical HC3 controls (human-prefix + generated-suffix, label null, exact
 transformation provenance, CC-BY-SA-4.0 attribution). It reads only assessment
 development samples, never held-out text, and does not alter the assessment
 manifest. Manifest `f2130c03...`, content `d101fd6d...`, curation `49587de2...`,
-summary `b31db0aa...`. No detector has run.
+summary `b31db0aa...`. An authorized development-only run produced 156 unknown-
+label samples with null precision/recall/F1/FPR/coverage and all-degenerate
+cluster bounds. No validation/independent run exists.
 
 Metadata-only reporting infrastructure: `scripts/summarize_evaluation.py` adds
 fixed-seed source-component cluster bootstrap for precision/recall/F1/FPR/coverage
-with valid-replicate counts, null zero denominators, overall and
-source/domain/generator slices, runtime, abstentions, no AUC, and explicit
-biased-pilot/nonnative/human-edited limitations. It does not run the detector.
-Tests are in `scripts/test_summarize_evaluation.py`; docs in
+with valid-replicate counts, null zero denominators, explicit degenerate
+all-identical bounds (not zero-risk evidence), overall and
+source/domain/generator slices with seed/replicate propagation, runtime,
+abstentions, no AUC, and explicit biased-pilot/nonnative/human-edited
+limitations. It validates row labels/verdicts/completeness and finite nonnegative
+runtime, and its aggregate point metrics match the framework metrics. It does not
+run the detector. Tests are in `scripts/test_summarize_evaluation.py`; docs in
 `docs/evaluation/summary-reporting.md`.
 
 Production follow-up completed: SARIF now declares
@@ -70,6 +90,16 @@ writing-tell signals. The integration checker passed all four groups under
 `uv run --with jsonschema==4.26.0 python scripts/integration_acceptance.py
 --schema /tmp/nobotrs-sarif-schema.json`. `scripts/integration_acceptance.py`
 and supervisor-owned provenance/research edits were not modified.
+
+Root validation note: full clean package/install acceptance passed 9 groups; the
+release binary was 2,577,616 bytes on an AMD Ryzen 7 5800X host, with
+`detect README.md --format json` below the 0.01-second timer resolution at
+5,308 KiB peak RSS. Root checks: 66 Rust tests, formatting/Clippy, 51 Python tests,
+4 integration groups against the release binary, and the CI regression baseline.
+Supervisor source provenance commit `f6979ad` verified 46 origins, 206 snapshot
+entries, and 34 unsupported claims; that is a limited provenance/source audit, not
+full external revalidation. Root-owned final assessment criteria/preflight are
+preserved and were not modified by this worker.
 
 The continuation text below is a historical pre-exposure record retained for
 audit. Statements about an "unopened" independent split describe the state before

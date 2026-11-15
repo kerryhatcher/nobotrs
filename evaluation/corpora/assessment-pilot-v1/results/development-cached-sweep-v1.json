@@ -1,0 +1,134 @@
+{
+  "corpus_label": "assessment-pilot-v1",
+  "detector_rerun": false,
+  "independent_test_accessed": false,
+  "limitations": [
+    "Cached sweep over a biased, partial pilot split; not independent-test performance.",
+    "No detector was rerun for this sweep and no sample text is included.",
+    "No threshold/rule/default was changed.",
+    "Independent-test data was not read or used."
+  ],
+  "schema_version": "1.0.0",
+  "selection": {
+    "decision": "Retain quorum 2 and existing default thresholds unchanged. Do not tune candidate thresholds/rules from these outcomes.",
+    "default_quorum": 2,
+    "defaults_changed": false,
+    "independent_test_performance": false,
+    "thresholds_changed": false
+  },
+  "selection_id": "assessment-pilot-v1-development-cached-sweep-v1",
+  "source_result": {
+    "binary_sha256": "1d9af3d2f3b14e995853a3749e665626b21aa382700db458d6a352480a2a879d",
+    "configuration_sha256": "e7ec5e1872cc2ffcbf9a9617f7ce9c8bf1a0d09213be8d5b6779b74b70092cc2",
+    "configuration_source": "explicit --config",
+    "corpus_content_sha256": "c0ba2e11a2921aaa9e6957f12f94f35cad9fb472027e455ca486690af9c2c140",
+    "effective_settings_sha256": "336b12d549cb709b3335d2ae7e8fed8e46b4ef7bffd2b038ab11351754864239",
+    "manifest_sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
+    "path": "evaluation/corpora/assessment-pilot-v1/results/development.json",
+    "sample_count": 578,
+    "sha256": "c0ec52e5ca9043b44e074da9978e52041905c55c4248e7e3f1cef95027cbc698"
+  },
+  "split": "development",
+  "status": "selection-observation-not-release-evidence",
+  "sweeps": {
+    "1": {
+      "metrics": {
+        "abstentions": 0,
+        "auc": null,
+        "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+        "confusion_matrix": {
+          "fn": 186,
+          "fp": 29,
+          "tn": 248,
+          "tp": 115
+        },
+        "coverage": 1.0,
+        "covered_count": 578,
+        "f1": 0.5168539325842697,
+        "false_positive_rate": 0.10469314079422383,
+        "false_positive_rate_wilson_95": [
+          0.07388730366029882,
+          0.14631369220356183
+        ],
+        "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+        "labeled_count": 578,
+        "operational_failures": 0,
+        "precision": 0.7986111111111112,
+        "recall": 0.38205980066445183,
+        "sample_count": 578,
+        "unknown_label_abstentions": 0,
+        "unknown_label_count": 0,
+        "unknown_label_coverage": null,
+        "unknown_label_operational_failures": 0
+      },
+      "quorum": 1,
+      "use": "cached selection observation only"
+    },
+    "2": {
+      "metrics": {
+        "abstentions": 0,
+        "auc": null,
+        "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+        "confusion_matrix": {
+          "fn": 292,
+          "fp": 1,
+          "tn": 276,
+          "tp": 9
+        },
+        "coverage": 1.0,
+        "covered_count": 578,
+        "f1": 0.05787781350482315,
+        "false_positive_rate": 0.0036101083032490976,
+        "false_positive_rate_wilson_95": [
+          0.0006375408651620989,
+          0.020162796406809007
+        ],
+        "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+        "labeled_count": 578,
+        "operational_failures": 0,
+        "precision": 0.9,
+        "recall": 0.029900332225913623,
+        "sample_count": 578,
+        "unknown_label_abstentions": 0,
+        "unknown_label_count": 0,
+        "unknown_label_coverage": null,
+        "unknown_label_operational_failures": 0
+      },
+      "quorum": 2,
+      "use": "cached selection observation only"
+    },
+    "3": {
+      "metrics": {
+        "abstentions": 256,
+        "auc": null,
+        "auc_reason": "No calibrated or defined continuous ensemble score; discrete verdicts are not an AUC score.",
+        "confusion_matrix": {
+          "fn": 204,
+          "fp": 0,
+          "tn": 118,
+          "tp": 0
+        },
+        "coverage": 0.5570934256055363,
+        "covered_count": 322,
+        "f1": 0.0,
+        "false_positive_rate": 0.0,
+        "false_positive_rate_wilson_95": [
+          0.0,
+          0.03152946120208532
+        ],
+        "false_positive_rate_wilson_95_assumption": "Exploratory individual-row binomial interval; assumes independent rows and must not certify clustered HC3/RAID data. Use the cluster-aware summary and disclose degenerate bounds.",
+        "labeled_count": 578,
+        "operational_failures": 0,
+        "precision": null,
+        "recall": 0.0,
+        "sample_count": 578,
+        "unknown_label_abstentions": 0,
+        "unknown_label_count": 0,
+        "unknown_label_coverage": null,
+        "unknown_label_operational_failures": 0
+      },
+      "quorum": 3,
+      "use": "cached selection observation only"
+    }
+  }
+}

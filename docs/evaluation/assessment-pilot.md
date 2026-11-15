@@ -5,10 +5,11 @@ curated from pinned HC3 and fresh RAID API responses. The old RAID v1 corpus
 remains immutable and retired at
 [`raid-pilot-v1`](../../evaluation/corpora/raid-pilot-v1) with its `retirement.json` ledger.
 
-Status: **curation and metadata-only preflight complete. No detector has been
-run. The independent-test split has not been read by curation preflight. No
-freeze record or access record exists. The release criteria are proposed, not
-frozen.** This is not a complete HC3 or RAID benchmark and not an authorship
+Status: **curation, metadata-only preflight, and authorized
+development/validation detector runs complete. No independent-test detector run,
+freeze record, or access record exists. A root-owned final criteria/preflight pair
+is prepared, but no frozen access record or independent run exists at this
+moment.** This is not a complete HC3 or RAID benchmark and not an authorship
 accuracy certification.
 
 ## Pinned sources and licenses
@@ -97,10 +98,10 @@ manifest_sha256              7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a808
 corpus_content_sha256        c0ba2e11a2921aaa9e6957f12f94f35cad9fb472027e455ca486690af9c2c140
 curation_sha256              ad89bf0ea3822e7001ca6cc2ec5dab48c51abb534b1283712094bf675cfc1fba
 summary_sha256               52a7de0ff8a332c83b80f187391957c5c3073d911181f54f72a7541e33d063bb
-preflight_sha256             29bc77560c6025a946025937e9d3ea8fb643f365ab18f1c9121f5b54d28694c8
+preflight_sha256             6e26190cbbf7cfa1c50398c9e55cc607c80454aa865cf29ab3e85287ad9467ca
 configuration_sha256         e7ec5e1872cc2ffcbf9a9617f7ce9c8bf1a0d09213be8d5b6779b74b70092cc2
 release_criteria_sha256      44c06553e77ef7800c8b7b58f563f8984418e2e7b81aa9b260814b031a8391dc
-binary_sha256                5ae810e65cc5f5b33502783f7bae2fd5ad2882a04e53abb0dd8a808f786eee49
+binary_sha256                1d9af3d2f3b14e995853a3749e665626b21aa382700db458d6a352480a2a879d
 ```
 
 Source snapshot bindings are recorded in the manifest and preflight output:
@@ -124,8 +125,51 @@ python3 scripts/assessment_preflight.py \
   --output evaluation/corpora/assessment-pilot-v1/preflight.json
 ```
 
-Criteria are **proposed/not frozen**; no freeze or independent assessment may be
-claimed until the supervisor creates a freeze record and reviews the corpus.
+The root-owned final criteria/preflight pair is
+`assessment-pilot-v1-fixed-policy-descriptive-assessment` /
+`preflight-final.json`; this worker did not modify either. No freeze or independent
+assessment may be claimed until the supervisor creates a frozen-unopened access
+record and runs the single authorized independent assessment.
+
+## Development/validation results (metadata only)
+
+Authorized runs used `target/release/nobotrs` (`1d9af3d2…`), the frozen defaults
+config (`e7ec5e18…`), and proposed criteria (`44c06553…`). No independent-test
+sample was read or run.
+
+| Split | n | TP | FP | FN | TN | Precision | Recall | F1 | FPR | Coverage | Abstentions |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| development | 578 | 9 | 1 | 292 | 276 | 0.900 | 0.0299 | 0.0579 | 0.00361 | 1.000 | 0 |
+| validation | 193 | 6 | 1 | 103 | 83 | 0.857 | 0.0550 | 0.1034 | 0.01190 | 1.000 | 0 |
+
+The recall is known-bad for a general authorship detector. Cluster-bootstrap
+summaries use the same seed/replicates across slices
+(`evaluation-cluster-bootstrap-v1-2026-11-14`, 2,000): development has 251
+clusters and validation 80. Coverage is all-identical (degenerate, null bounds);
+FPR/recall/F1 intervals are cluster-aware, not binomial certification. Slices are
+reported for source, domain, generator, and length bucket.
+
+Cached quorum sweeps (no detector rerun) retain **quorum 2/defaults unchanged**:
+
+| Split | q1 recall/FPR | q2 recall/FPR | q3 coverage/abstentions |
+|---|---|---|---|
+| development | 0.382 / 0.105 | 0.0299 / 0.00361 | 0.557 / 256 |
+| validation | 0.358 / 0.107 | 0.0550 / 0.01190 | 0.534 / 90 |
+
+Lower quorum raises recall but has unacceptable observed pilot FPR; q3 loses
+coverage. These are biased-pilot selection observations, not independent-test
+performance. Artifact SHA-256 values:
+
+```text
+development result        c0ec52e5ca9043b44e074da9978e52041905c55c4248e7e3f1cef95027cbc698
+validation result         0ae8470109cb93475adabff8c6883f6e533265e57926ce0457a72b79ee0afd98
+development summary       126c7587ad002e8c15becc7e686675a57702781420e62ab94b9a82087ca36165
+validation summary        5b657e1a6d7a8755706799438a24becf5e204559144e736a071a69a9fea337eb
+development sweep         411876503cafd3a5f12539d7fdbca0eda5a895aaea5acecf442162925f6734d9
+validation sweep          1cb4bd608bdd2675c5c44b24b6b28d31b244b6fe248b6dff803e0993c57d8bb7
+```
+
+No thresholds, rules, labels, or production policy changed.
 
 ## Limitations
 
@@ -139,8 +183,8 @@ claimed until the supervisor creates a freeze record and reviews the corpus.
 - Mixed controls are kept in a separate development-only corpus
   (`mixed-controls-v1`), not this assessment manifest.
 - The language policy remains default-unknown with no per-sample overrides.
-- No detector results, development/validation tuning, or independent-test
-  performance exist for this pilot yet.
+- Development/validation detector results exist and show known-bad recall; no
+  independent-test result exists and no tuning/freeze was performed.
 - Reviewers must not display raw questions, answers, or response payloads.
   `.gitattributes` marks sample text and nested source response JSON/JSONL as
   `-text -diff`.

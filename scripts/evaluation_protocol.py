@@ -649,6 +649,11 @@ def metrics(rows: Iterable[dict[str, Any]]) -> dict[str, Any]:
         "f1": ratio(2 * tp, 2 * tp + fp + fn),
         "false_positive_rate": ratio(fp, fp + tn),
         "false_positive_rate_wilson_95": wilson(fp, fp + tn),
+        "false_positive_rate_wilson_95_assumption": (
+            "Exploratory individual-row binomial interval; assumes independent "
+            "rows and must not certify clustered HC3/RAID data. Use the "
+            "cluster-aware summary and disclose degenerate bounds."
+        ),
         "auc": None,
         "auc_reason": (
             "No calibrated or defined continuous ensemble score; "

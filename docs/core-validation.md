@@ -170,3 +170,19 @@ Release measurements were taken with `/usr/bin/time -v` on an x86_64 AMD Ryzen 7
 The Unicode fixture was `("é " * 50000) + ("delve leverage " * 1000)`. Both runs completed with status 0 and full analysis coverage. Display suppression did not remove the effective finding count or family contribution. The stripped release binary was approximately 2.57 MB. CI uses a measured-envelope budget of 8,000,000 bytes, with headroom for compiler/target variation. These are named-host observations, not portable timing/RSS guarantees or fragile unit-test thresholds.
 
 Compression/entropy reference coverage is now pinned; burstiness still has native regression tests but no external reference. Parser calls, sorting/regex searches and blocked input are not hard-preemptible. Empirical authorship corpus/evaluation and Python parity/source-by-source review remain later release gates. Optional models/revisions and humanization were deferred by the user. This record does not declare the full nine-phase plan or evaluated release complete.
+
+
+## Final package/install acceptance
+
+The root session reported 9 package/install acceptance groups passed for the
+current release build. The binary was 2,577,616 bytes on an AMD Ryzen 7 5800X
+host; `detect README.md --format json` completed below the 0.01-second timer
+resolution at 5,308 KiB peak RSS. Formatting, Clippy with warnings denied, 66
+Rust tests, the CI regression baseline, the 4-group real-executable integration
+checker, and 46 Python tests before the final summary-tool additions passed.
+
+Source/provenance audit scope: supervisor commit `f6979ad` verified 46 origins,
+206 snapshot entries, and 34 unsupported claims. This is a limited
+provenance/source audit with imported originals preserved, not a full external
+revalidation. Evaluation results remain limited-pilot observations; no authorship
+accuracy certification or independent-test performance is claimed.

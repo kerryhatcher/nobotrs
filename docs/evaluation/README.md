@@ -108,7 +108,11 @@ override from silently changing policy under the same config and binary hashes.
 The runner reports labeled and unknown-label counts, coverage, abstentions,
 operational failures, confusion matrix, precision, recall, F1, false-positive
 rate, Wilson sampling interval, and slice metrics. Empty denominators are null.
-No AUC is produced without a meaningful continuous ensemble score.
+The Wilson interval is accompanied by `false_positive_rate_wilson_95_assumption`:
+it is an exploratory individual-row binomial interval, assumes independent rows,
+and must not certify clustered HC3/RAID data. Use the cluster-aware summary and
+disclose degenerate bounds. No AUC is produced without a meaningful continuous
+ensemble score.
 
 Use development data for feature work and validation data for threshold choices.
 `--split validation --sweep-quorum 1 2 3` recomputes quorum verdicts from cached
@@ -136,9 +140,11 @@ status, and preflight/evaluation refuse freeze or independent assessment.
 
 A separate joint HC3 + fresh RAID assessment pilot is at
 [`evaluation/corpora/assessment-pilot-v1`](../../evaluation/corpora/assessment-pilot-v1),
-documented in [assessment-pilot.md](assessment-pilot.md). Its curation and
-metadata-only preflight are complete; no detector has run, its independent-test
-split is unread, and its release criteria are proposed, not frozen. A separate
+documented in [assessment-pilot.md](assessment-pilot.md). Its curation,
+metadata-only preflight, and authorized development/validation runs are complete;
+its independent-test split is unread. A root-owned final criteria/preflight pair
+is prepared, but no frozen access record or independent run exists yet. The
+results show known-bad recall and are not authorship certification. A separate
 development-only mechanical HC3 mixed-control corpus is documented in
 [mixed-controls.md](mixed-controls.md); its controls have null labels and no
 detector result exists. The

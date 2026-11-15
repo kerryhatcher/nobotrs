@@ -523,6 +523,9 @@ class ProtocolTests(unittest.TestCase):
         self.assertEqual(result["false_positive_rate"], 0.5)
         low, high = result["false_positive_rate_wilson_95"]
         self.assertTrue(0.0 <= low < 0.5 < high <= 1.0)
+        self.assertIn("independent rows",
+                      result["false_positive_rate_wilson_95_assumption"])
+        self.assertIn("clustered", result["false_positive_rate_wilson_95_assumption"])
         empty = metrics([])
         self.assertIsNone(empty["coverage"])
         self.assertIsNone(empty["precision"])
