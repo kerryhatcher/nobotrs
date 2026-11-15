@@ -1,0 +1,13 @@
+Machine perception is the capability of a computer system to interpret data in a manner that is similar to the way humans use their senses to relate to the world around them. The basic method that the computers take in and respond to their environment is through the attached hardware.  Until recently input was limited to a keyboard, or a mouse, but advances in technology, both in hardware and software, have allowed computers to take in sensory input in a way similar to humans.
+Machine perception allows the computer to use this sensory input, as well as conventional computational means of gathering information, to gather information with greater accuracy and to present it in a way that is more comfortable for the user. These include computer vision, machine hearing, machine touch, and machine smelling, as artificial scents are, at a chemical compound, molecular, atomic level, indiscernible and identical.
+The end goal of machine perception is to give machines the ability to see, feel and perceive the world as humans do and therefore for them to be able to explain in a human way why they are making their decisions, to warn us when it is failing and more importantly, the reason why it is failing. This purpose is very similar to the proposed purposes for artificial intelligence generally, except that machine perception would only grant machines limited sentience, rather than bestow upon machines full consciousness, self-awareness, and intentionality.
+
+Machine perception is the ability of a machine to interpret and understand sensory data from its environment, such as images, sounds, and other inputs. It involves the use of artificial intelligence (AI) techniques, such as machine learning and deep learning, to enable machines to recognize patterns, classify objects and events, and make decisions based on this information.
+
+
+
+The goal of machine perception is to enable machines to understand and interpret the world around them in a way that is similar to how humans perceive their surroundings. This can be used to enable a wide range of applications, including image and speech recognition, natural language processing, and autonomous robots.
+
+
+
+There are many challenges associated with machine perception, including the need to accurately process and interpret large amounts of data, the need to adapt to changing environments, and the need to make decisions in real-time. As a result, machine perception is an active area of research in both artificial intelligence and robotics.

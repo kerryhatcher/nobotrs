@@ -1,0 +1,15 @@
+Frank Rosenblatt (July 11, 1928 – July 11, 1971) was an American psychologist notable in the field of artificial intelligence. He is sometimes called the father of deep learning.
+
+Frank Rosenblatt was an American psychologist and computer scientist who is known for his work in artificial intelligence and machine learning. He is most famous for his development of the perceptron, a type of artificial neural network that was one of the first learning algorithms developed for machine learning.
+
+
+
+Rosenblatt was born in New York City in 1928 and received his bachelor's degree in psychology from City College of New York in 1950. He later earned his Ph.D. in psychology from the University of Michigan in 1954. After completing his Ph.D., Rosenblatt worked at the Cornell Aeronautical Laboratory, where he developed the perceptron.
+
+
+
+The perceptron was a simple model of a neuron that could be trained to recognize patterns in data. It was inspired by the way that neurons in the human brain function, and it was one of the first examples of a machine learning algorithm that could be trained to perform tasks without being explicitly programmed to do so.
+
+
+
+Rosenblatt's work on the perceptron was influential in the development of the field of artificial intelligence, and it laid the foundation for many of the advances in machine learning that have been made since. He passed away in 1971 at the age of 42.

@@ -1,0 +1,13 @@
+The Dartmouth workshop, also known as the Dartmouth Conference or the Dartmouth Summer Research Project on Artificial Intelligence, was a meeting held in the summer of 1956 at Dartmouth College in Hanover, New Hampshire, United States. The meeting was organized by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon, and was one of the first conferences focused on the topic of artificial intelligence (AI).
+
+
+
+The Dartmouth workshop was a turning point in the history of AI, as it was the first time that the term "artificial intelligence" was coined and the field of AI was formally established. The workshop brought together a group of researchers who were interested in exploring the possibility of creating intelligent machines, and it resulted in the development of many of the foundational ideas and techniques that are still used in AI research today.
+
+
+
+During the Dartmouth workshop, the participants discussed a range of topics related to AI, including natural language processing, problem solving, and learning. The workshop also laid the groundwork for the development of the first AI programming language, LISP, which was developed by McCarthy and Minsky.
+
+
+
+The Dartmouth workshop is widely considered to be a seminal event in the history of AI, and it is often cited as the beginning of the modern field of AI research.

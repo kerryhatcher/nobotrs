@@ -1,0 +1,39 @@
+> Let $X$ be a smooth projective surface over a number field $K$.
+> We prove that the third non-ramified cohomology group of the universal
+> torsor over $X$ is finite.
+
+The paper is by Jean-Louis Colliot-Th\'el\`ene, Pierre Colmez, and
+Pierre-Henri Chatonnet.
+
+The paper is available at
+http://arxiv.org/abs/math/0603519.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.pdf.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.ps.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.dvi.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.tex.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.bib.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.log.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.aux.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.out.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/papers/troisieme.toc.
+
+The paper is also available at
+http://www.math.jussieu.fr/~colliot/

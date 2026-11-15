@@ -1,0 +1,9 @@
+Formal reasoning is a type of logical argument that follows a specific set of rules and conventions. It is a systematic process that involves making logical inferences based on statements or propositions that are considered to be true or accepted as premises.
+
+
+
+In formal reasoning, arguments are constructed using deductive or inductive reasoning. Deductive reasoning involves starting with a general statement or principle and using it to reach a specific conclusion. Inductive reasoning involves starting with specific observations or examples and using them to reach a general conclusion.
+
+
+
+Formal reasoning is used in many fields, including mathematics, computer science, philosophy, and law. It is an important tool for evaluating and understanding complex systems and for making informed decisions based on logical analysis.

@@ -1,0 +1,4 @@
+Let $H$ be a multigraph, let $\lambda_i(S)$ denote the number of subgraphs of $ S\subset H$ with exactly $ i$ cycles ($1 \le i\leq | V (H)| /2$), and fix some integer $k$. A connected graph G = (V , E) is {\em almost k-hypohamiltonian} if
+$\sum_{ i=0}^{v- 4}\binom{|E|}{2-\lfloor \frac{i}{k + 3} \rfloor \pm
+\left(\lambda_{\lceil\frac{i+5}{\frac{k+v-6}{2}}\rceil}(G') -
+|\nu'_{ \lceil\frac{i+5}{{\frac{k+ v-5 }{2}\}} \rceil}(\delta(G')) |\right)} + O(|E|^2)$. Here we show that there are infinitely many integers k such that there exists no odd cycle in every almost k-hypohamiltonian graph. Also in [Dobrowolski, M., Janssen, W. B.; Almost Hamilton Graph, The Electronic Journal of Combinatorics Vol. 9 No. R14, Pages 7, Article 14, December 2002] the authors characterize all almost Hamilton graphs using the concept of domination numbers by sets which can not have isolated vertices to avoid forming triangles.

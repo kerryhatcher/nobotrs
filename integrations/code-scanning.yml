@@ -19,5 +19,4 @@ jobs:
           # Findings are advisory in this example. Fail on operational errors.
           if [ "$status" -eq 2 ]; then exit 2; fi
       - uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: prose.sarif
+        with: { sarif_file: prose.sarif }

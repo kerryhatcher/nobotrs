@@ -1,0 +1,20 @@
+Standard segmentation of medical images based on full-supervised
+convolutional networks demands accurate dense annotations. Such learning
+framework is built on laborious manual annotation with restrict demands for
+expertise, leading to insufficient high-quality labels. To overcome such
+limitation and exploit massive weakly labeled data, we relaxed the rigid
+labeling requirement and developed a semi-supervised learning framework based
+on a teacher-student fashion for organ and lesion segmentation with partial
+dense-labeled supervision and supplementary loose bounding-box supervision
+which are easier to acquire. Observing the geometrical relation of an organ and
+its inner lesions in most cases, we propose a hierarchical organ-to-lesion
+(O2L) attention module in a teacher segmentor to produce pseudo-labels. Then a
+student segmentor is trained with combinations of manual-labeled and
+pseudo-labeled annotations. We further proposed a localization branch realized
+via an aggregation of high-level features in a deep decoder to predict
+locations of organ and lesion, which enriches student segmentor with precise
+localization information. We validated each design in our model on LiTS
+challenge datasets by ablation study and showed its state-of-the-art
+performance compared with recent methods. We show our model is robust to the
+quality of bounding box and achieves comparable performance compared with
+full-supervised learning methods.

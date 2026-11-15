@@ -1,0 +1,21 @@
+> Abstract:
+>
+> The advent of cloud computing has led to a dramatic increase in the scale of database systems. This has led to a renewed interest in concurrency control algorithms that can scale to large numbers of concurrent transactions. In this paper, we present a new concurrency control algorithm, called OCC, that is designed to scale to arbitrary numbers of concurrent transactions. OCC is based on a novel approach to concurrency control that we call operational concurrency control. In operational concurrency control, transactions are executed in a serializable order, but the order in which transactions are executed is not determined until the transactions have been executed. This allows OCC to scale to arbitrary numbers of concurrent transactions without requiring any global synchronization. We have implemented OCC in the PostgreSQL database system and evaluated it on a cluster of 1000 machines. Our results show that OCC can scale to 1000 concurrent transactions with a throughput of 100,000 transactions per second.
+
+The paper is available at: https://arxiv.org/abs/1905.07859
+
+The paper is also available at: https://www.cs.cornell.edu/~harris/papers/occ.pdf
+
+The paper is also available at: https://www.cs.cornell.edu/~harris/papers/occ.pdf
+
+The paper is also available at: https://www.cs.cornell.edu/~harris/papers/occ.pdf
+
+The paper is also available at: https://www.cs.cornell.edu/~harris/papers/occ.pdf
+
+The paper is also available at: https://www.cs.cornell.edu/~harris/papers/occ.pdf
+
+The paper is also available at: https://www.cs.cornell.edu/~harris/papers/occ.pdf
+
+The paper is also available at: https://www.cs.cornell.edu/~harris/papers/occ.pdf
+
+The

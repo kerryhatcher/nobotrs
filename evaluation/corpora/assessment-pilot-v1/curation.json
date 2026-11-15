@@ -1,0 +1,1115 @@
+{
+  "claims": {
+    "complete_hc3_or_raid_benchmark": false,
+    "detector_run": false,
+    "general_accuracy_certification": false,
+    "independent_test_opened": false,
+    "native_speaker_inferred": false,
+    "thresholds_or_defaults_changed": false
+  },
+  "corpus_content_sha256": "c0ba2e11a2921aaa9e6957f12f94f35cad9fb472027e455ca486690af9c2c140",
+  "corpus_version": "assessment-pilot-v1",
+  "forced_development": {
+    "all_forced_samples_development": true,
+    "hc3_question_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "questions_present": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "scope": "all HC3 sources; conservative"
+  },
+  "generated_by": "scripts/curate_assessment_pilot.py",
+  "grouping": {
+    "component_count": 417,
+    "component_size_distribution": {
+      "1": 98,
+      "2": 207,
+      "3": 10,
+      "4": 101,
+      "18": 1
+    },
+    "components_with_multiple_bases": 2,
+    "cross_corpus_components": 0,
+    "exact_normalized_duplicate_links": [
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q37-g0"
+      },
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q38-g0"
+      },
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q39-g0"
+      },
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q40-g0"
+      },
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q41-g0"
+      },
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q42-g0"
+      },
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "left": "hc3-wiki_csai-q23-h0",
+        "right": "hc3-wiki_csai-q26-h0"
+      }
+    ],
+    "near_duplicate_links": [
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q37-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q38-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q39-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q40-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q41-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q42-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q36-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q37-g0",
+        "right": "hc3-medicine-q38-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q37-g0",
+        "right": "hc3-medicine-q39-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q37-g0",
+        "right": "hc3-medicine-q40-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q37-g0",
+        "right": "hc3-medicine-q41-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q37-g0",
+        "right": "hc3-medicine-q42-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q37-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q37-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q38-g0",
+        "right": "hc3-medicine-q39-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q38-g0",
+        "right": "hc3-medicine-q40-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q38-g0",
+        "right": "hc3-medicine-q41-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q38-g0",
+        "right": "hc3-medicine-q42-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q38-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q38-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q39-g0",
+        "right": "hc3-medicine-q40-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q39-g0",
+        "right": "hc3-medicine-q41-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q39-g0",
+        "right": "hc3-medicine-q42-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q39-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q39-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q40-g0",
+        "right": "hc3-medicine-q41-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q40-g0",
+        "right": "hc3-medicine-q42-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q40-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q40-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q41-g0",
+        "right": "hc3-medicine-q42-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q41-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q41-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q42-g0",
+        "right": "hc3-medicine-q43-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q42-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-medicine-q43-g0",
+        "right": "hc3-medicine-q44-g0"
+      },
+      {
+        "jaccard": 1.0,
+        "left": "hc3-wiki_csai-q23-h0",
+        "right": "hc3-wiki_csai-q26-h0"
+      }
+    ],
+    "near_duplicate_threshold": 0.8,
+    "shingle_size": 5
+  },
+  "licenses": {
+    "hc3": {
+      "attribution": "Hello-SimpleAI/HC3, Guo et al. 2023",
+      "license": "CC-BY-SA-4.0",
+      "share_alike": true
+    },
+    "raid_fresh": {
+      "attribution": "Liam Dugan et al., RAID 2024",
+      "license": "MIT"
+    }
+  },
+  "limitations": [
+    "Limited pilot, not a complete HC3 or RAID benchmark and not an accuracy certification.",
+    "HC3 uses only the first 50 pinned records from five source files.",
+    "HC3 question ordinals are local nonempty record positions; the source has no stable row id.",
+    "HC3 source IDs/question IDs 0-14 are forced to development conservatively across all five sources.",
+    "Fresh RAID is a 350-row partial API window with 100 human rows; most RAID cells are absent.",
+    "Fresh RAID rows overlapping any old RAID v1 source_id are excluded.",
+    "HC3 and fresh RAID samples overlapping any old RAID v1 normalized text or 5-shingle Jaccard >=0.8 are excluded.",
+    "No native-speaker labels are present or inferred.",
+    "The default unknown-language policy is retained; no per-sample overrides are frozen.",
+    "No mixed human-prefix/generated-suffix controls are included in this version.",
+    "No detector has been run on these corpora; independent-test text is not read by curation preflight."
+  ],
+  "manifest_sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
+  "old_corpus_exclusions": {
+    "excluded_component_count": 47,
+    "excluded_components": [
+      {
+        "component": "component:09d60a80c6fb35e82114e2f036066b05",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:106deacf2ae1bb45c43f8af28a09769c",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:12ee276fe6ebbad597cb062472874af9",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:187a12e1160e2eb682338580a24e8f5b",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:2ae9d8a009ae0d661042510135313b4e",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:3db2b7758733f737275f3837174c6d67",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:441c59983f2695aa275222e16bc1284b",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:44f4618b39d1b26074092595f75697f7",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:47c450c33d8528821c66be54dfafbb7d",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:4a0db9fc0c86232438e6feae00ec9dd2",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:4cc471fff5fdcace529b853780e61aa0",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:4fa907cba7524294d294ed3774e51397",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:51595c1f6c75f3bbf7996940874090f3",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:5266003cd76afc0254e7e0e028e83515",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:55a58058c4dd016a63181940ee04f9ad",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:5ac909545372b4e116b75d592854c0e1",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:67a593ec7b9f1e3d50da6047c83b8322",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:725b466fdd9ccca1b3e2ad76b1c0ad69",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:7286644d59922ff3c2c6856f62051389",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:732978e3536929259e7bb474955a428d",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:7a9f09525cc4c2b01fe1a58fdf07bf01",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:7d6aeabaa8e92f3306b490f80b659625",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:7e07c0214cd8c3f91f3ad2595e265a17",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:7fb4b89215a22771f31e131198e571a4",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:8c2f55f8c2f99dd6d36da57f1948f6b1",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:96ddad6e354f96c544f1e7646e7f4360",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:a69caabb1811b326530614b53d50cb69",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:a91fd3f410cef22b67dc54b5e0abe4ea",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:acc84d639f55590813b6fe81a93faeea",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:b2cf7731abf4d6f28a28fa17b435a6ac",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:b3c94ffdb609905c7ea52058dd9bc0e0",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:baacc304ae2cb537c51b4459ad2d1223",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:c4936c98699b4502d4865a7cdb3b6cd5",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:d6ec159e8acf1770878d7c72bdeaf8b7",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:dca78f7c444b48c606e575ab39eeda7e",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:e077cbc67b8c00fbf4cde95ffcf801ba",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:e31718445a2cc4a97c5f9243cd698905",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 1
+      },
+      {
+        "component": "component:e7c4b0d437cef7af5a879d128a58d103",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:e83e3228c7610768e06bf83598830c0c",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:e8c676c1ac23d3e64e8f83fe281fdf11",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:ee36ec51c6e1c52d191dc9e648bee81c",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:f01eb07978d228a224fa89d515cb5ba4",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:f4239ba7be463835afb057bcea825711",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:f94b490cbc038bbda25af06d5c72c06f",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:fa416faeda59b62aa10880ebd818b950",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:fc642b50368b46c4a27b5da9e4c636a6",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      },
+      {
+        "component": "component:fcd896f661c3e28eee321e30cf1c7435",
+        "cross_corpus": false,
+        "direct_reasons": [
+          "old_raid_v1_source_id_overlap"
+        ],
+        "member_count": 2
+      }
+    ],
+    "excluded_counts": {
+      "old_raid_v1_source_id_overlap": 93
+    },
+    "old_corpus_content_sha256": "349a0c64684e30b31f2f893547cceaf30609354d33aa5a266332bc84e2d5858d",
+    "old_manifest_sha256": "dcc538e2fe6dcbb7ad5ff99dc0886d235f105297be161ee77f40745d8ed3ddfa",
+    "old_retirement_sha256": "917de1bc74a23248738512e17951c6307f86ac4509d359ef42a61bf2e96783c1",
+    "old_retirement_status": "retired-exposed-selection-data",
+    "old_sample_count": 1100,
+    "pre_exclusion_components": 464,
+    "pre_exclusion_exact_links": 9,
+    "pre_exclusion_near_links": 37,
+    "universe": "all old RAID v1 samples, conservative"
+  },
+  "retrieved": "2026-11-14",
+  "retrieved_timezone": "America/New_York",
+  "row_accounting": {
+    "accepted": 964,
+    "excluded": 93,
+    "excluded_by_reason": {
+      "old_raid_v1_source_id_overlap": 93
+    },
+    "hc3_answers_seen": 707,
+    "raid_rows_seen": 350,
+    "rejected": 0,
+    "rejected_by_reason": {},
+    "rejected_rows": []
+  },
+  "schema_version": "1.0.0",
+  "source_snapshots": {
+    "hc3": {
+      "acquisition_sha256": "1573b64158363ec21edb4c2a3b14c1e5134bff3dec386aa6d14c9e3eaf177c93",
+      "dataset_card_sha256": "ce119f7fcd4511acb1d2ac37ddb082238b9a93b2f638c57f8d2c44f381248691",
+      "path": "source/hc3",
+      "response_count": 5,
+      "retrieved": "2026-11-14",
+      "retrieved_timezone": "America/New_York",
+      "upstream_acquisition_sha256": "5824493a573cd66c59fe5f5dc2a80d2fbb784fe19d5cfe14c9ba7af3767f1f71"
+    },
+    "raid_fresh": {
+      "acquisition_sha256": "06c8117ef44a36d58a6f3e6c6e9dcdc4c34f7403c5100a43e600e570bf1b6137",
+      "dataset_card_sha256": "54df4f236108b360e8ad4b4e527b3764c4068fb77c95cbce1e9bac78af64d35c",
+      "license_sha256": "b21e877a2c3905604308a8f731b94dfa97d96dcd6128fd367c0c10b55d93fe0b",
+      "path": "source/raid-fresh",
+      "response_count": 5,
+      "retrieved": "2026-11-14",
+      "retrieved_timezone": "America/New_York",
+      "upstream_acquisition_sha256": "c8234b91c2d05db34cb0c92bd3d79c0fbb0a6bc9252d7084574cb12addee3e8a"
+    }
+  },
+  "sources": {
+    "hc3": {
+      "acquisition_sha256": "5824493a573cd66c59fe5f5dc2a80d2fbb784fe19d5cfe14c9ba7af3767f1f71",
+      "dataset": "Hello-SimpleAI/HC3",
+      "dataset_card_sha256": "ce119f7fcd4511acb1d2ac37ddb082238b9a93b2f638c57f8d2c44f381248691",
+      "declared_license": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "responses": [
+        {
+          "file": "responses/finance.jsonl",
+          "rows": 50,
+          "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+          "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+          "source": "finance",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/finance.jsonl"
+        },
+        {
+          "file": "responses/medicine.jsonl",
+          "rows": 50,
+          "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+          "sha256": "08dbc0f9800b0e40cd4b3dff621421b3ede84f48c6b12a6bb960abaca4c0f876",
+          "source": "medicine",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/medicine.jsonl"
+        },
+        {
+          "file": "responses/open_qa.jsonl",
+          "rows": 50,
+          "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+          "sha256": "79b908206aa97593ffc1238e74499e2ef1dfb824ea983e39f8eb3b9edcf3980f",
+          "source": "open_qa",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/open_qa.jsonl"
+        },
+        {
+          "file": "responses/reddit_eli5.jsonl",
+          "rows": 50,
+          "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+          "sha256": "e337874fe5485b5609db7e14e3dd059a98e5b3a90af75830a159d143af0d73af",
+          "source": "reddit_eli5",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/reddit_eli5.jsonl"
+        },
+        {
+          "file": "responses/wiki_csai.jsonl",
+          "rows": 50,
+          "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+          "sha256": "84137268c2f83a801151a94c98acf889e36ab3e0c711f257eb373cafdad30fb4",
+          "source": "wiki_csai",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/wiki_csai.jsonl"
+        }
+      ],
+      "retrieved": "2026-11-14",
+      "retrieved_timezone": "America/New_York",
+      "revision": "4d0ff18143b5a7e1b1e79beb540c04549d1e59d3",
+      "viewed_question_ids_force_development": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    "raid_fresh": {
+      "acquisition_sha256": "c8234b91c2d05db34cb0c92bd3d79c0fbb0a6bc9252d7084574cb12addee3e8a",
+      "dataset": "liamdugan/raid",
+      "dataset_card_sha256": "54df4f236108b360e8ad4b4e527b3764c4068fb77c95cbce1e9bac78af64d35c",
+      "errors": [
+        {
+          "error": "The read operation timed out",
+          "job": [
+            "books",
+            "human"
+          ]
+        },
+        {
+          "error": "The read operation timed out",
+          "job": [
+            "abstracts",
+            "human"
+          ]
+        },
+        {
+          "error": "The read operation timed out",
+          "job": [
+            "abstracts",
+            "gpt4"
+          ]
+        }
+      ],
+      "license_sha256": "b21e877a2c3905604308a8f731b94dfa97d96dcd6128fd367c0c10b55d93fe0b",
+      "license_url": "https://huggingface.co/datasets/liamdugan/raid/blob/865cac74188466cb0c3b7574a10204007b57a459/README.md",
+      "queries": [
+        {
+          "available": 3562,
+          "file": "responses/books-gpt4-offset500.json",
+          "length": 50,
+          "offset": 500,
+          "partial_view": true,
+          "rows": 50,
+          "sha256": "39441188b0d075f7c74f26a5c291c1d5ee9d14c6a2d886502abd5a9066ae2cb7",
+          "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27books%27+AND+%22model%22%3D%27gpt4%27+AND+%22attack%22%3D%27none%27&offset=500&length=50"
+        },
+        {
+          "available": 2270000,
+          "file": "responses/rows-offset500.json",
+          "length": 100,
+          "offset": 500,
+          "partial_view": true,
+          "rows": 100,
+          "sha256": "fb74c437c877d3466f6df7564c63205a93ba1e1d9ad89b901419fe24540f07f4",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=liamdugan%2Fraid&config=raid&split=train&offset=500&length=100"
+        },
+        {
+          "available": 2270000,
+          "file": "responses/rows-offset5000.json",
+          "length": 100,
+          "offset": 5000,
+          "partial_view": true,
+          "rows": 100,
+          "sha256": "54e6bdd34cd78011bb48695d31d93d4a8e408cf8b61d8728a2c3ce2323858666",
+          "url": "https://datasets-server.huggingface.co/rows?dataset=liamdugan%2Fraid&config=raid&split=train&offset=5000&length=100"
+        },
+        {
+          "available": 1766,
+          "file": "responses/abstracts-human-offset50.json",
+          "length": 50,
+          "offset": 50,
+          "partial_view": true,
+          "rows": 50,
+          "sha256": "9fc7c2766be804fba2e0ae492d1d6aa5c3335fe8eb6307f14c22899c3a4f5519",
+          "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27abstracts%27+AND+%22model%22%3D%27human%27+AND+%22attack%22%3D%27none%27&offset=50&length=50"
+        },
+        {
+          "available": 1781,
+          "file": "responses/books-human-offset50.json",
+          "length": 50,
+          "offset": 50,
+          "partial_view": true,
+          "rows": 50,
+          "sha256": "69e3b9a7db78a92396393db917e420f2d32a6b2bb0a31745b6673452b19bd410",
+          "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27books%27+AND+%22model%22%3D%27human%27+AND+%22attack%22%3D%27none%27&offset=50&length=50"
+        }
+      ],
+      "retrieved": "2026-11-14",
+      "retrieved_timezone": "America/New_York",
+      "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+      "upstream_license": "MIT"
+    }
+  },
+  "splits": {
+    "components_per_split": {
+      "development": 251,
+      "independent-test": 86,
+      "validation": 80
+    },
+    "dimensions_overall": {
+      "attack": {
+        "none": 964
+      },
+      "corpus_source": {
+        "hc3": 707,
+        "raid-fresh": 257
+      },
+      "domain": {
+        "abstracts": 157,
+        "books": 100,
+        "finance": 107,
+        "medicine": 100,
+        "open_qa": 200,
+        "reddit_eli5": 200,
+        "wiki_csai": 100
+      },
+      "generator": {
+        "chatgpt": 357,
+        "gpt4": 50,
+        "human": 450,
+        "llama-chat": 7,
+        "mistral": 100
+      },
+      "hc3_question_band": {
+        "0-14": 211,
+        "15-49": 496,
+        "not-applicable": 257
+      },
+      "label": {
+        "generated": 514,
+        "human": 450
+      },
+      "language_hint": {
+        "unknown": 964
+      },
+      "length_bucket": {
+        "100-249": 505,
+        "250-499": 197,
+        "500-plus": 22,
+        "lt-100": 240
+      },
+      "pairing": {
+        "single": 964
+      }
+    },
+    "dimensions_per_split": {
+      "development": {
+        "attack": {
+          "none": 578
+        },
+        "corpus_source": {
+          "hc3": 436,
+          "raid-fresh": 142
+        },
+        "domain": {
+          "abstracts": 92,
+          "books": 50,
+          "finance": 78,
+          "medicine": 52,
+          "open_qa": 108,
+          "reddit_eli5": 128,
+          "wiki_csai": 70
+        },
+        "generator": {
+          "chatgpt": 216,
+          "gpt4": 20,
+          "human": 277,
+          "llama-chat": 7,
+          "mistral": 58
+        },
+        "hc3_question_band": {
+          "0-14": 211,
+          "15-49": 225,
+          "not-applicable": 142
+        },
+        "label": {
+          "generated": 301,
+          "human": 277
+        },
+        "language_hint": {
+          "unknown": 578
+        },
+        "length_bucket": {
+          "100-249": 311,
+          "250-499": 122,
+          "500-plus": 12,
+          "lt-100": 133
+        },
+        "pairing": {
+          "single": 578
+        }
+      },
+      "independent-test": {
+        "attack": {
+          "none": 193
+        },
+        "corpus_source": {
+          "hc3": 132,
+          "raid-fresh": 61
+        },
+        "domain": {
+          "abstracts": 40,
+          "books": 21,
+          "finance": 18,
+          "medicine": 14,
+          "open_qa": 48,
+          "reddit_eli5": 44,
+          "wiki_csai": 8
+        },
+        "generator": {
+          "chatgpt": 67,
+          "gpt4": 10,
+          "human": 89,
+          "mistral": 27
+        },
+        "hc3_question_band": {
+          "15-49": 132,
+          "not-applicable": 61
+        },
+        "label": {
+          "generated": 104,
+          "human": 89
+        },
+        "language_hint": {
+          "unknown": 193
+        },
+        "length_bucket": {
+          "100-249": 98,
+          "250-499": 39,
+          "500-plus": 5,
+          "lt-100": 51
+        },
+        "pairing": {
+          "single": 193
+        }
+      },
+      "validation": {
+        "attack": {
+          "none": 193
+        },
+        "corpus_source": {
+          "hc3": 139,
+          "raid-fresh": 54
+        },
+        "domain": {
+          "abstracts": 25,
+          "books": 29,
+          "finance": 11,
+          "medicine": 34,
+          "open_qa": 44,
+          "reddit_eli5": 28,
+          "wiki_csai": 22
+        },
+        "generator": {
+          "chatgpt": 74,
+          "gpt4": 20,
+          "human": 84,
+          "mistral": 15
+        },
+        "hc3_question_band": {
+          "15-49": 139,
+          "not-applicable": 54
+        },
+        "label": {
+          "generated": 109,
+          "human": 84
+        },
+        "language_hint": {
+          "unknown": 193
+        },
+        "length_bucket": {
+          "100-249": 96,
+          "250-499": 36,
+          "500-plus": 5,
+          "lt-100": 56
+        },
+        "pairing": {
+          "single": 193
+        }
+      }
+    },
+    "labels_per_split": {
+      "development": {
+        "generated": 301,
+        "human": 277
+      },
+      "independent-test": {
+        "generated": 104,
+        "human": 89
+      },
+      "validation": {
+        "generated": 109,
+        "human": 84
+      }
+    },
+    "samples_per_split": {
+      "development": 578,
+      "independent-test": 193,
+      "validation": 193
+    },
+    "seed": "assessment-pilot-v1-2026-11-14",
+    "target_fractions": {
+      "development": 0.6,
+      "independent-test": 0.2,
+      "validation": 0.2
+    }
+  }
+}

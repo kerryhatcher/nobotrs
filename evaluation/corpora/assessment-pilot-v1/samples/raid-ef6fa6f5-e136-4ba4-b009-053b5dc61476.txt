@@ -1,0 +1,16 @@
+Recent advances in AI technology have made the forgery of digital images and
+videos easier, and it has become significantly more difficult to identify such
+forgeries. These forgeries, if disseminated with malicious intent, can
+negatively impact social and political stability, and pose significant ethical
+and legal challenges as well. Deepfake is a variant of auto-encoders that use
+deep learning techniques to identify and exchange images of a person's face in
+a picture or film. Deepfake can result in an erosion of public trust in digital
+images and videos, which has far-reaching effects on political and social
+stability. This study therefore proposes a solution for facial forgery
+detection to determine if a picture or film has ever been processed by
+Deepfake. The proposed solution reaches detection efficiency by using the
+recently proposed separable convolutional neural network (CNN) and image
+segmentation. In addition, this study also examined how different image
+segmentation methods affect detection results. Finally, the ensemble model is
+used to improve detection capabilities. Experiment results demonstrated the
+excellent performance of the proposed solution.

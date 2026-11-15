@@ -1,0 +1,18 @@
+We use Deep Convolutional Neural Networks (DCNNs) for image segmentation
+problems. DCNNs can well extract the features from natural images. However, the
+classification functions in the existing network architecture of CNNs are
+simple and lack capabilities to handle important spatial information in a way
+that have been done for many well-known traditional variational models. Prior
+such as spatial regularity, volume prior and object shapes cannot be well
+handled by existing DCNNs. We propose a novel Soft Threshold Dynamics (STD)
+framework which can easily integrate many spatial priors of the classical
+variational models into the DCNNs for image segmentation. The novelty of our
+method is to interpret the softmax activation function as a dual variable in a
+variational problem, and thus many spatial priors can be imposed in the dual
+space. From this viewpoint, we can build a STD based framework which can enable
+the outputs of DCNNs to have many special priors such as spatial regularity,
+volume constraints and star-shape priori. The proposed method is a general
+mathematical framework and it can be applied to any semantic segmentation
+DCNNs. To show the efficiency and accuracy of our method, we applied it to the
+popular DeepLabV3+ image segmentation network, and the experiments results show
+that our method can work efficiently on data-driven image segmentation DCNNs.

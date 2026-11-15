@@ -1,0 +1,1 @@
+html5 works on mobile devices , flash does n't

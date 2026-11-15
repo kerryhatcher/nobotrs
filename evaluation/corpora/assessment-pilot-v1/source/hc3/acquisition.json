@@ -1,0 +1,70 @@
+{
+  "acquisition_sha256": "5824493a573cd66c59fe5f5dc2a80d2fbb784fe19d5cfe14c9ba7af3767f1f71",
+  "dataset": "Hello-SimpleAI/HC3",
+  "dataset_card_sha256": "ce119f7fcd4511acb1d2ac37ddb082238b9a93b2f638c57f8d2c44f381248691",
+  "declared_license": "CC-BY-SA-4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "portable_snapshot": true,
+  "responses": [
+    {
+      "file": "responses/finance.jsonl",
+      "rows": 50,
+      "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+      "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+      "source": "finance",
+      "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/finance.jsonl"
+    },
+    {
+      "file": "responses/medicine.jsonl",
+      "rows": 50,
+      "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+      "sha256": "08dbc0f9800b0e40cd4b3dff621421b3ede84f48c6b12a6bb960abaca4c0f876",
+      "source": "medicine",
+      "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/medicine.jsonl"
+    },
+    {
+      "file": "responses/open_qa.jsonl",
+      "rows": 50,
+      "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+      "sha256": "79b908206aa97593ffc1238e74499e2ef1dfb824ea983e39f8eb3b9edcf3980f",
+      "source": "open_qa",
+      "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/open_qa.jsonl"
+    },
+    {
+      "file": "responses/reddit_eli5.jsonl",
+      "rows": 50,
+      "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+      "sha256": "e337874fe5485b5609db7e14e3dd059a98e5b3a90af75830a159d143af0d73af",
+      "source": "reddit_eli5",
+      "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/reddit_eli5.jsonl"
+    },
+    {
+      "file": "responses/wiki_csai.jsonl",
+      "rows": 50,
+      "selection": "first 50 nonempty JSONL records in pinned source file; no detector-based selection",
+      "sha256": "84137268c2f83a801151a94c98acf889e36ab3e0c711f257eb373cafdad30fb4",
+      "source": "wiki_csai",
+      "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/4d0ff18143b5a7e1b1e79beb540c04549d1e59d3/wiki_csai.jsonl"
+    }
+  ],
+  "retrieved": "2026-11-14",
+  "retrieved_timezone": "America/New_York",
+  "revision": "4d0ff18143b5a7e1b1e79beb540c04549d1e59d3",
+  "viewed_question_ids_force_development": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ]
+}

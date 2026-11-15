@@ -1,0 +1,26 @@
+{
+  "criteria_id": "assessment-pilot-v1-supervisor-review",
+  "criteria_version": "1",
+  "scope": "Limited joint HC3 + fresh RAID assessment pilot; curation and preflight only.",
+  "status": "proposed-not-frozen-not-release-certified",
+  "decision_owner": "supervisor",
+  "independent_test": "proposed; not yet frozen; no freeze record or access record exists; supervisor review required.",
+  "thresholds_changed": false,
+  "defaults_changed": false,
+  "numeric_pass_thresholds": null,
+  "required_reports": [
+    "sample, component, split, label, dimension, rejection, and old-corpus exclusion counts",
+    "HC3 CC-BY-SA-4.0 and RAID MIT attribution with pinned source bytes/hashes",
+    "explicit source limitations and missing coverage",
+    "forced HC3 question-band and cross-corpus grouping disclosures",
+    "independent-test not read and no detector run"
+  ],
+  "prohibited_claims": [
+    "complete HC3 or RAID benchmark",
+    "general accuracy certification",
+    "calibrated authorship probability",
+    "native-speaker status",
+    "held-out performance from development or validation results"
+  ],
+  "notes": "No production policy, threshold, rule, or label was selected from outcomes. This is not a release certification."
+}

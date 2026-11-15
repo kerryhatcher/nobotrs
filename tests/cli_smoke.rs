@@ -51,6 +51,31 @@ fn missing_invalid_and_oversized_inputs_fail() {
     );
 }
 #[test]
+fn sarif_declares_unicode_columns_and_severity_levels() {
+    let o = cli(
+        &["lint", "-", "--markdown", "--format", "sarif"],
+        "😀 delve\n<!-- nobotrs-ignore-next-line leverage -->\nleverage\n".as_bytes(),
+    );
+    let report: serde_json::Value = serde_json::from_slice(&o.stdout).unwrap();
+    let run = &report["runs"][0];
+    assert_eq!(run["columnKind"], "unicodeCodePoints");
+    let delve = run["results"]
+        .as_array()
+        .unwrap()
+        .iter()
+        .find(|result| result["ruleId"] == "delve")
+        .unwrap();
+    assert_eq!(delve["level"], "warning");
+    assert_eq!(
+        delve["locations"][0]["physicalLocation"]["region"],
+        serde_json::json!({"startLine": 1, "endLine": 1, "startColumn": 3, "endColumn": 8})
+    );
+    let rules = run["tool"]["driver"]["rules"].as_array().unwrap();
+    let rule = rules.iter().find(|rule| rule["id"] == "delve").unwrap();
+    assert_eq!(delve["level"], rule["defaultConfiguration"]["level"]);
+}
+
+#[test]
 fn markdown_hint_and_display_limit_work_through_executable() {
     let o = cli(
         &["lint", "-", "--markdown", "--format", "json"],

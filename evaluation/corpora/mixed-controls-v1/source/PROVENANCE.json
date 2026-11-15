@@ -1,0 +1,1116 @@
+{
+  "assessment": {
+    "corpus_content_sha256": "c0ba2e11a2921aaa9e6957f12f94f35cad9fb472027e455ca486690af9c2c140",
+    "manifest_sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
+    "retirement_status": "not-retired",
+    "source_split": "development only"
+  },
+  "control_version": "mixed-controls-v1",
+  "hc3": {
+    "attribution": "Hello-SimpleAI / Guo et al. 2023; CC-BY-SA-4.0",
+    "dataset": "Hello-SimpleAI/HC3",
+    "license": "CC-BY-SA-4.0",
+    "revision": "4d0ff18143b5a7e1b1e79beb540c04549d1e59d3"
+  },
+  "mappings": [
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q0",
+      "control_content_sha256": "9f59761d6c3bd5701ee4cc810399e2927499d473606e8294c9acf5dd024a06a3",
+      "control_id": "mixed-0cd4ead0c0e20d3e962b048d",
+      "generated_sample_id": "hc3-finance-q0-g0",
+      "human_sample_id": "hc3-finance-q0-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q1",
+      "control_content_sha256": "4976eccf5b7414cf34b37a1e0062fec7b944013f74227c95c24faac9d5ecd845",
+      "control_id": "mixed-0452d8403a9c8079cf337bd6",
+      "generated_sample_id": "hc3-finance-q1-g0",
+      "human_sample_id": "hc3-finance-q1-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q10",
+      "control_content_sha256": "cced2a4507c06d95059bde26b8239e17d7214288204724b2216be5e69954319e",
+      "control_id": "mixed-fbf02e034b54eed9fb9ccc1c",
+      "generated_sample_id": "hc3-finance-q10-g0",
+      "human_sample_id": "hc3-finance-q10-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q11",
+      "control_content_sha256": "28f6112378a0a58de70233c3d5296e282820cc7e27cff478b14db61acbcc8569",
+      "control_id": "mixed-3ce585f88e6041606b29afce",
+      "generated_sample_id": "hc3-finance-q11-g0",
+      "human_sample_id": "hc3-finance-q11-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q12",
+      "control_content_sha256": "755d3cf122651ba5f3001798ca2d88add20883b3b3ffcac78ab9c32740731872",
+      "control_id": "mixed-5fa850321980625e890a1201",
+      "generated_sample_id": "hc3-finance-q12-g0",
+      "human_sample_id": "hc3-finance-q12-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q13",
+      "control_content_sha256": "ededa4eed1a5b7573a8a79b8141e611376519df0a5c6cc93fbb54e40a36f0bcc",
+      "control_id": "mixed-a5a5084ed7aab9b3c5409161",
+      "generated_sample_id": "hc3-finance-q13-g0",
+      "human_sample_id": "hc3-finance-q13-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q14",
+      "control_content_sha256": "4937dfc07a31425a713dbaae3f3d51e063f80e7f11bae2122b536d5f6ec06b60",
+      "control_id": "mixed-abcef1ed22f50e7647cf2378",
+      "generated_sample_id": "hc3-finance-q14-g0",
+      "human_sample_id": "hc3-finance-q14-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q15",
+      "control_content_sha256": "b909bee8b5ef160f653455ebcbeb69f16fbdf2d7f5013b01d378ceba9c8a321f",
+      "control_id": "mixed-6f3ca482eddfb5964d44fcfa",
+      "generated_sample_id": "hc3-finance-q15-g0",
+      "human_sample_id": "hc3-finance-q15-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q16",
+      "control_content_sha256": "bff8e6fe03efc310e6ad773a836ee5bc585c032288c7c2c1ce521512f3429099",
+      "control_id": "mixed-cb2488ddc8cfbdec9a48a021",
+      "generated_sample_id": "hc3-finance-q16-g0",
+      "human_sample_id": "hc3-finance-q16-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q18",
+      "control_content_sha256": "4742f8a7f9f980f604a0c583b3d05f3e624e4ed3b40ee82d409cb6093815125b",
+      "control_id": "mixed-a4f01074b63cff1bae9ceb2a",
+      "generated_sample_id": "hc3-finance-q18-g0",
+      "human_sample_id": "hc3-finance-q18-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q19",
+      "control_content_sha256": "a83116711fc6e9ee4c118b4b4f172592299830fb04c66107a2b81f8f9b37084d",
+      "control_id": "mixed-4dbba1f03438e5b992f4fbce",
+      "generated_sample_id": "hc3-finance-q19-g0",
+      "human_sample_id": "hc3-finance-q19-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q2",
+      "control_content_sha256": "7d4de0e5521570d539f3699ff35209d5d3f9fca1fb3102991f92ec2930c4750e",
+      "control_id": "mixed-470db3034a5f22a3a24fbb67",
+      "generated_sample_id": "hc3-finance-q2-g0",
+      "human_sample_id": "hc3-finance-q2-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q20",
+      "control_content_sha256": "cbea5734da185be2c566ad2824b76771df52e6cc28e42f32ff1619bbd8b89607",
+      "control_id": "mixed-ac6782fb48648af46057565d",
+      "generated_sample_id": "hc3-finance-q20-g0",
+      "human_sample_id": "hc3-finance-q20-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q23",
+      "control_content_sha256": "b63206607be625d2af60d36d4bd2c44ac43b13527206cc7e6287f3f480e26759",
+      "control_id": "mixed-1ca44a623df24461a1b7c039",
+      "generated_sample_id": "hc3-finance-q23-g0",
+      "human_sample_id": "hc3-finance-q23-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q24",
+      "control_content_sha256": "bb7c441eb5867c996ffdcde5814cfffa02700a2d914ef71c91710a7a503a0e02",
+      "control_id": "mixed-a43da273efe4ccb2330dbb4d",
+      "generated_sample_id": "hc3-finance-q24-g0",
+      "human_sample_id": "hc3-finance-q24-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q27",
+      "control_content_sha256": "d56173f8f8a4c92e1efbde28cf0cfc2af64b8ca4770eb8fb99be7bcaba867bf0",
+      "control_id": "mixed-4a9365f7e5a97c5828b7c608",
+      "generated_sample_id": "hc3-finance-q27-g0",
+      "human_sample_id": "hc3-finance-q27-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q28",
+      "control_content_sha256": "21659d25b45597bf8ff1fc0366b511cc099b54a8f5e3cee27250166b8d394b47",
+      "control_id": "mixed-91bbbcf7cd67615fc023f76d",
+      "generated_sample_id": "hc3-finance-q28-g0",
+      "human_sample_id": "hc3-finance-q28-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q29",
+      "control_content_sha256": "c35b78f6a2248f3fe175058eb4ed7a5b6d884acca0717e3d3c21ffe27914e141",
+      "control_id": "mixed-7ae9e1a3f0272a11c6ce7267",
+      "generated_sample_id": "hc3-finance-q29-g0",
+      "human_sample_id": "hc3-finance-q29-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q3",
+      "control_content_sha256": "3499ef2bb7fe7b0a4e0ecf77872208adda2940a4e809645ebaac99d4eb914042",
+      "control_id": "mixed-fd5b95447b87dd3d7bb739e2",
+      "generated_sample_id": "hc3-finance-q3-g0",
+      "human_sample_id": "hc3-finance-q3-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q30",
+      "control_content_sha256": "4a8125e55215cb1cbe0a5b8f55bfa7d33858c2bb3d24358b21a7e09b1b000a4c",
+      "control_id": "mixed-b57a034e42c6d916fa909db1",
+      "generated_sample_id": "hc3-finance-q30-g0",
+      "human_sample_id": "hc3-finance-q30-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q32",
+      "control_content_sha256": "9ffadeb7152dfc1770d325ea7903e3ebf50e9953043e348da693665c276333e6",
+      "control_id": "mixed-610b1d7040aa95fdfae18ffe",
+      "generated_sample_id": "hc3-finance-q32-g0",
+      "human_sample_id": "hc3-finance-q32-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q33",
+      "control_content_sha256": "fa8664267de36e81e3af0b87a29ff609225959fd4b367ba75bea9eceac1195b9",
+      "control_id": "mixed-44c8c8680690b816ff8eaff0",
+      "generated_sample_id": "hc3-finance-q33-g0",
+      "human_sample_id": "hc3-finance-q33-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q34",
+      "control_content_sha256": "21ecaab20a0a707b092c32194da669512b87d5d5318ca34585f98af0a665c25f",
+      "control_id": "mixed-709de090f350e500a5721aa9",
+      "generated_sample_id": "hc3-finance-q34-g0",
+      "human_sample_id": "hc3-finance-q34-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q35",
+      "control_content_sha256": "daf748f29d6b31565878058b738d47e51f20c1b8ea567d3b684f9531f1637a91",
+      "control_id": "mixed-6ec2a337d6bb656234505cb9",
+      "generated_sample_id": "hc3-finance-q35-g0",
+      "human_sample_id": "hc3-finance-q35-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q36",
+      "control_content_sha256": "8a989ca08ea147cc372596b49b49e4ae285cfaad8dd282a83607eed4957c1de4",
+      "control_id": "mixed-53f53ca2ec3892e54216f383",
+      "generated_sample_id": "hc3-finance-q36-g0",
+      "human_sample_id": "hc3-finance-q36-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q37",
+      "control_content_sha256": "4b68bf84a07f907eb3ffadef149c4fba4e52e5b551a14c3cf06a2011e41477eb",
+      "control_id": "mixed-499be98d807df82c9dfefea5",
+      "generated_sample_id": "hc3-finance-q37-g0",
+      "human_sample_id": "hc3-finance-q37-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q39",
+      "control_content_sha256": "543db1c447f6643bf4d113306d1c4d96015907d009faee1db9e6d880ebfac868",
+      "control_id": "mixed-8a489f319193af189c5e053b",
+      "generated_sample_id": "hc3-finance-q39-g0",
+      "human_sample_id": "hc3-finance-q39-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q4",
+      "control_content_sha256": "daa58ee1cdec515670b63bdc726ad7834097c67d6ea88c94dafd70680d8a4043",
+      "control_id": "mixed-2bf115d512da8d01c40f7634",
+      "generated_sample_id": "hc3-finance-q4-g0",
+      "human_sample_id": "hc3-finance-q4-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q45",
+      "control_content_sha256": "5d382ae12f478c0145732b2509ebac72a7013eb564613ade4b19bc753d95155e",
+      "control_id": "mixed-b45d3920a3a7dd86764f01be",
+      "generated_sample_id": "hc3-finance-q45-g0",
+      "human_sample_id": "hc3-finance-q45-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q47",
+      "control_content_sha256": "a1f88f92584586b245b8ba4e0eaaca9288155938e741e18cc9c1d5acd3ea4a7d",
+      "control_id": "mixed-80b54df01dabcf951bc85df2",
+      "generated_sample_id": "hc3-finance-q47-g0",
+      "human_sample_id": "hc3-finance-q47-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q49",
+      "control_content_sha256": "35eb16bdb620703c59490c34e5539c0c56d8932368147544e3310e32bcad6c50",
+      "control_id": "mixed-55aae212675b9ca4312572f2",
+      "generated_sample_id": "hc3-finance-q49-g0",
+      "human_sample_id": "hc3-finance-q49-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q5",
+      "control_content_sha256": "99aae7854271791e10b29a962e8dfb6d61c019c6f0ad38c476f424abda2a5469",
+      "control_id": "mixed-ef18c407276ac7f028ee7268",
+      "generated_sample_id": "hc3-finance-q5-g0",
+      "human_sample_id": "hc3-finance-q5-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q6",
+      "control_content_sha256": "8d79a401ad08506a15640035f937ce024a7a4093a361209d839898cb63156782",
+      "control_id": "mixed-5e13eb30e1124f8712eed382",
+      "generated_sample_id": "hc3-finance-q6-g0",
+      "human_sample_id": "hc3-finance-q6-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q7",
+      "control_content_sha256": "9cf14d2ec1fc86ffee694f0bcf118691a34d19eb58717de7a562b26a8c6a45e9",
+      "control_id": "mixed-6d8c1be05fe6f72652bfd753",
+      "generated_sample_id": "hc3-finance-q7-g0",
+      "human_sample_id": "hc3-finance-q7-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q8",
+      "control_content_sha256": "e10ee2bf6be7d6b370b4b2363cdad4efd80653982356539932c8e7081ce76cf5",
+      "control_id": "mixed-15b529c399e31729868160cc",
+      "generated_sample_id": "hc3-finance-q8-g0",
+      "human_sample_id": "hc3-finance-q8-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:finance:q9",
+      "control_content_sha256": "100d14be381b6227e877ca0433f141e1739239b5c99ba28cf2b1850d92db1359",
+      "control_id": "mixed-906a18ebbd0b1b03fb688228",
+      "generated_sample_id": "hc3-finance-q9-g0",
+      "human_sample_id": "hc3-finance-q9-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q0",
+      "control_content_sha256": "6e574af3c1341421ab460eebdfc51ee793aa45218156428a549ed0199d445c91",
+      "control_id": "mixed-60d397ac9c6d5afdea6f6756",
+      "generated_sample_id": "hc3-medicine-q0-g0",
+      "human_sample_id": "hc3-medicine-q0-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q1",
+      "control_content_sha256": "825c69083d5161fa4af5d833de9d6ffb8bd7eca6de39811ea27949b66aca5f09",
+      "control_id": "mixed-8edda44c54c600e3fc7a2b47",
+      "generated_sample_id": "hc3-medicine-q1-g0",
+      "human_sample_id": "hc3-medicine-q1-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q10",
+      "control_content_sha256": "84c2468c216b309bd0a669bbc9391ff7c07708c10d0744ec2a35bff55d61b60a",
+      "control_id": "mixed-ac748a66bc8bd0db79143c6b",
+      "generated_sample_id": "hc3-medicine-q10-g0",
+      "human_sample_id": "hc3-medicine-q10-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q11",
+      "control_content_sha256": "bf10c69ea68a8b84a670caee9fae6cd28be615ea4fcacea00def606c5bd05a81",
+      "control_id": "mixed-b4db829f690d6148114f4014",
+      "generated_sample_id": "hc3-medicine-q11-g0",
+      "human_sample_id": "hc3-medicine-q11-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q12",
+      "control_content_sha256": "22b44030372f32dfcd315a680ceb89c73afc9fa347c29b82dc9d3d83bf995015",
+      "control_id": "mixed-d859fcb2dfb82c3a0e83df03",
+      "generated_sample_id": "hc3-medicine-q12-g0",
+      "human_sample_id": "hc3-medicine-q12-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q13",
+      "control_content_sha256": "d172d220d1891ffeb9bb0bc1b948c079d9c77cef30a36f35ca6120753ae8d4e2",
+      "control_id": "mixed-105bcd6d28336398ab1b553f",
+      "generated_sample_id": "hc3-medicine-q13-g0",
+      "human_sample_id": "hc3-medicine-q13-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q14",
+      "control_content_sha256": "65e3e9a1a09447ce5c3a4252e178e92d0946cb06a24867787b52b43cce8bf534",
+      "control_id": "mixed-f2e909439d2f1236a0a5c46d",
+      "generated_sample_id": "hc3-medicine-q14-g0",
+      "human_sample_id": "hc3-medicine-q14-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q15",
+      "control_content_sha256": "837669ce1651914c3ba54e4237c5fb4a9abd2642f2adc106f2bdb00dbf0a9b94",
+      "control_id": "mixed-e1d3ba1fa28ba71f851d5082",
+      "generated_sample_id": "hc3-medicine-q15-g0",
+      "human_sample_id": "hc3-medicine-q15-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q17",
+      "control_content_sha256": "0aae82930834256a4a9e4ab0bf365ec270209b1e0f3260be0db83b7684b2c3ff",
+      "control_id": "mixed-d85e3546b66d124db71b1851",
+      "generated_sample_id": "hc3-medicine-q17-g0",
+      "human_sample_id": "hc3-medicine-q17-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q18",
+      "control_content_sha256": "6666a1aff43ea989a9dd219524492d366d8ea720c2549d5f2c337f441235b44a",
+      "control_id": "mixed-ad6a20c00da02daec432fb0e",
+      "generated_sample_id": "hc3-medicine-q18-g0",
+      "human_sample_id": "hc3-medicine-q18-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q2",
+      "control_content_sha256": "d8f2ab93df31d28d55b49b71b8990ee0cff25f310ca71a3448d352229b7488aa",
+      "control_id": "mixed-7d194219ead7210c7eacabcd",
+      "generated_sample_id": "hc3-medicine-q2-g0",
+      "human_sample_id": "hc3-medicine-q2-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q21",
+      "control_content_sha256": "549408016331c7e60edf82133c9b644c0081fb33451b08f5735d29d3199ee2a9",
+      "control_id": "mixed-3768e1b2c3c8dff9b6ccee29",
+      "generated_sample_id": "hc3-medicine-q21-g0",
+      "human_sample_id": "hc3-medicine-q21-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q22",
+      "control_content_sha256": "9acda81896892702a1d0308243e319f916f939b132e842611e2ab199a279c039",
+      "control_id": "mixed-a2ae5b12c6599091c654d57f",
+      "generated_sample_id": "hc3-medicine-q22-g0",
+      "human_sample_id": "hc3-medicine-q22-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q23",
+      "control_content_sha256": "df07b6703fb65415d6070f4e740dac056e84855078e208324328ca49cf75a1a2",
+      "control_id": "mixed-4df003e193250625891c6ca1",
+      "generated_sample_id": "hc3-medicine-q23-g0",
+      "human_sample_id": "hc3-medicine-q23-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q27",
+      "control_content_sha256": "0f69a8e7d9df67d48bb2a8eb37b244ce891711f6ad7d92f41b96436b806883f8",
+      "control_id": "mixed-8284607539e9b43a4d35c7d2",
+      "generated_sample_id": "hc3-medicine-q27-g0",
+      "human_sample_id": "hc3-medicine-q27-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q29",
+      "control_content_sha256": "4e497a6360ac3b3c03fc3bffd0c70a3840c8beb1e679e04f1530a89e36c2bd6c",
+      "control_id": "mixed-1009604e8a161065463c9080",
+      "generated_sample_id": "hc3-medicine-q29-g0",
+      "human_sample_id": "hc3-medicine-q29-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q3",
+      "control_content_sha256": "781c114dbb2a0e4a4d1bd5cbcc0c080a430488b0aff4299f35c935067c2f16f0",
+      "control_id": "mixed-065c9345b78c760afd9c87cd",
+      "generated_sample_id": "hc3-medicine-q3-g0",
+      "human_sample_id": "hc3-medicine-q3-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q30",
+      "control_content_sha256": "6b0a1a72400bd3c3f4c94360b9c0a77abda346373e6459d54b8ca175f1c789d2",
+      "control_id": "mixed-ed0b530fe69f6289b80e2919",
+      "generated_sample_id": "hc3-medicine-q30-g0",
+      "human_sample_id": "hc3-medicine-q30-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q31",
+      "control_content_sha256": "10912f41f3d8deb0d6ce1b991b33e98cc0fb41ff82d9fe5675fdf6650279d88e",
+      "control_id": "mixed-699e56b1ca2a56fa7eac3d75",
+      "generated_sample_id": "hc3-medicine-q31-g0",
+      "human_sample_id": "hc3-medicine-q31-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q4",
+      "control_content_sha256": "7ab62ba649e8c634e079a94c1ab85614e8bde02c725dd9cc77cd7c5387526082",
+      "control_id": "mixed-eed42a6bbfbba0f7810cc441",
+      "generated_sample_id": "hc3-medicine-q4-g0",
+      "human_sample_id": "hc3-medicine-q4-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q47",
+      "control_content_sha256": "8ad673790d3db6c208d3874bea8061fdf915fd2ae3df693acd10ddb7f23f2f44",
+      "control_id": "mixed-150c5baeedf1b60ae8ef714d",
+      "generated_sample_id": "hc3-medicine-q47-g0",
+      "human_sample_id": "hc3-medicine-q47-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q5",
+      "control_content_sha256": "94ce470a0db070c0c33f4f27b216422afcdaa6ec6870c4ee4867f872ed51ac3d",
+      "control_id": "mixed-2246bd88469dd9187672b375",
+      "generated_sample_id": "hc3-medicine-q5-g0",
+      "human_sample_id": "hc3-medicine-q5-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q6",
+      "control_content_sha256": "bb7f9784ab2a3ec9d3693e839afcc60339dd69ce224edac2d02469ac0fd0bd69",
+      "control_id": "mixed-f514ebc1399204debee13e81",
+      "generated_sample_id": "hc3-medicine-q6-g0",
+      "human_sample_id": "hc3-medicine-q6-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q7",
+      "control_content_sha256": "7813738293433bf49e55e1d281f315c7851ac34f46bc761a266f0d90d782acc9",
+      "control_id": "mixed-f217af1c7a5bd4b66ad68dc9",
+      "generated_sample_id": "hc3-medicine-q7-g0",
+      "human_sample_id": "hc3-medicine-q7-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q8",
+      "control_content_sha256": "223371d7861cbfb67669da086feaf5b8b88bd8a6655e2ce388c325240b8d4494",
+      "control_id": "mixed-ffb292ac8a089b66d2fd33ff",
+      "generated_sample_id": "hc3-medicine-q8-g0",
+      "human_sample_id": "hc3-medicine-q8-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:medicine:q9",
+      "control_content_sha256": "817c4ea1b76a19902eb02eb2de483f51893ea18751b958e26f16f23e8efc5c15",
+      "control_id": "mixed-cfb98a3dd6345a9c35ec99d4",
+      "generated_sample_id": "hc3-medicine-q9-g0",
+      "human_sample_id": "hc3-medicine-q9-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q0",
+      "control_content_sha256": "9ea734ede9bb38c9ee34d486274a98bb191dd11b6d2a48012b55bf17af343412",
+      "control_id": "mixed-94afc025e58994c56511557e",
+      "generated_sample_id": "hc3-open_qa-q0-g0",
+      "human_sample_id": "hc3-open_qa-q0-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q1",
+      "control_content_sha256": "0624384dbd364e37a1b770ba9b9a030953514f261988078039026e31740e8319",
+      "control_id": "mixed-4af22f8ba36b5800144ffe5e",
+      "generated_sample_id": "hc3-open_qa-q1-g0",
+      "human_sample_id": "hc3-open_qa-q1-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q10",
+      "control_content_sha256": "0cc8456e13f24aeb9c5593a5cf156e7750df601045ecb471c228d40674f0a37e",
+      "control_id": "mixed-46629a927148d7bc01b7c36e",
+      "generated_sample_id": "hc3-open_qa-q10-g0",
+      "human_sample_id": "hc3-open_qa-q10-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q11",
+      "control_content_sha256": "0e8e9b8aedd8fd1308a19e343c10af6bac65afaa4fa051f326691996da982034",
+      "control_id": "mixed-823c18e8085301a059821d1a",
+      "generated_sample_id": "hc3-open_qa-q11-g0",
+      "human_sample_id": "hc3-open_qa-q11-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q12",
+      "control_content_sha256": "4d48f8400330a1d791111c3f17543df2621b6e3c059a6844cfd999443550fa53",
+      "control_id": "mixed-0c9cb9e53811ba82bcc485bd",
+      "generated_sample_id": "hc3-open_qa-q12-g0",
+      "human_sample_id": "hc3-open_qa-q12-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q13",
+      "control_content_sha256": "a25e7ecd3aa8192b3e4dacc3bc72525a71f4249e03ad173d934bbbaafac30b8b",
+      "control_id": "mixed-59cbdaf803e3a404a3b6d2d8",
+      "generated_sample_id": "hc3-open_qa-q13-g0",
+      "human_sample_id": "hc3-open_qa-q13-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q14",
+      "control_content_sha256": "e934a96aa6de23fb3109f43a463a96cbcb77f62308805fe40d6cb1c370ec41f2",
+      "control_id": "mixed-032d18ab07c53a67f72c98d8",
+      "generated_sample_id": "hc3-open_qa-q14-g0",
+      "human_sample_id": "hc3-open_qa-q14-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q17",
+      "control_content_sha256": "fbbcac7e860bf4375f4a3a0dee979319091e078e90d1b08cf8810d6c5e06f924",
+      "control_id": "mixed-4dde8b664d61e72e7f8959c2",
+      "generated_sample_id": "hc3-open_qa-q17-g0",
+      "human_sample_id": "hc3-open_qa-q17-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q18",
+      "control_content_sha256": "eec88e1e2b723b8907215177aacf6b37dabf01c36c0b5fec74699eaaa3c6563c",
+      "control_id": "mixed-3fbf99fd26c772c7671df1fb",
+      "generated_sample_id": "hc3-open_qa-q18-g0",
+      "human_sample_id": "hc3-open_qa-q18-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q2",
+      "control_content_sha256": "f132cecb13709d4c5160842ac971efd4e78ce806425a6a5f41bed10b383b5e0e",
+      "control_id": "mixed-c41a49e45d44c088d4a6d81d",
+      "generated_sample_id": "hc3-open_qa-q2-g0",
+      "human_sample_id": "hc3-open_qa-q2-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q20",
+      "control_content_sha256": "a9ba7312996d6a8e3c8a987bdffdf03155a9d24aae63ab74856c5ded834750d3",
+      "control_id": "mixed-cde7315e620c0eeb6f912c54",
+      "generated_sample_id": "hc3-open_qa-q20-g0",
+      "human_sample_id": "hc3-open_qa-q20-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q22",
+      "control_content_sha256": "8ddd22bab8ca502a734e266bd6389937d716686d4bb7c60e16bfedbb1de2c9a5",
+      "control_id": "mixed-764c693116d2ddd8b1c07c1b",
+      "generated_sample_id": "hc3-open_qa-q22-g0",
+      "human_sample_id": "hc3-open_qa-q22-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q26",
+      "control_content_sha256": "1d796557ca656a84b7c6bc7981e9f4a1f2b5897f4bbe1cc32a1e93759f491dc7",
+      "control_id": "mixed-350d0df936b03598aff30154",
+      "generated_sample_id": "hc3-open_qa-q26-g0",
+      "human_sample_id": "hc3-open_qa-q26-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q3",
+      "control_content_sha256": "660c73005997f8dd22e39bd8bcf97b8a5c1c38446ecc90bf7437cad3283c8c45",
+      "control_id": "mixed-744bd3834a76bf88e6dfd117",
+      "generated_sample_id": "hc3-open_qa-q3-g0",
+      "human_sample_id": "hc3-open_qa-q3-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q33",
+      "control_content_sha256": "cbc3cc89b892d5e9fbf3b897d146457ad8aa390d4df4474596756a49c04d1eb5",
+      "control_id": "mixed-c16fc0f8d12f3d0c1dd6bf2d",
+      "generated_sample_id": "hc3-open_qa-q33-g0",
+      "human_sample_id": "hc3-open_qa-q33-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q35",
+      "control_content_sha256": "3f4d8337e379e111c877c802e0252f9abd9bddcfaaed5b7a9ef712a3f74e1ef3",
+      "control_id": "mixed-50b74e5b01a0ebf869c908f5",
+      "generated_sample_id": "hc3-open_qa-q35-g0",
+      "human_sample_id": "hc3-open_qa-q35-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q36",
+      "control_content_sha256": "1237cdd979938768d2819af28d6b4fa71648fa359a76e1cc8ec0036ae4cf8543",
+      "control_id": "mixed-59dfd554f742f33f49cec019",
+      "generated_sample_id": "hc3-open_qa-q36-g0",
+      "human_sample_id": "hc3-open_qa-q36-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q37",
+      "control_content_sha256": "d5503602e9790d0dc6f6a220cba734f4dba750392545471b2f6f9b5a81a89bf6",
+      "control_id": "mixed-074d4063fe58b42d02de52d2",
+      "generated_sample_id": "hc3-open_qa-q37-g0",
+      "human_sample_id": "hc3-open_qa-q37-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q38",
+      "control_content_sha256": "a659408e430eb1558f76e4643724ba6866ee02f352544e2bfe198663f75de31b",
+      "control_id": "mixed-1c60e23dbe6b7db9e60b3c33",
+      "generated_sample_id": "hc3-open_qa-q38-g0",
+      "human_sample_id": "hc3-open_qa-q38-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q4",
+      "control_content_sha256": "eaa1f8bf7bdebee0358890ac1980d3631bbd48d99829e8b82f02198f23208f34",
+      "control_id": "mixed-0d52909988179e54582ab39f",
+      "generated_sample_id": "hc3-open_qa-q4-g0",
+      "human_sample_id": "hc3-open_qa-q4-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q44",
+      "control_content_sha256": "d530dcdddd7fba0b1655784e9bf354f11bfb1e5ac9aa348537f42a23561f2189",
+      "control_id": "mixed-06fd69c035b6eef0a21ef699",
+      "generated_sample_id": "hc3-open_qa-q44-g0",
+      "human_sample_id": "hc3-open_qa-q44-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q47",
+      "control_content_sha256": "4b1fec1c370ee15da8328096c71689599fd883d5855a1310d28d28a2ea2c8ab8",
+      "control_id": "mixed-8ed9805b978347b0beca39ef",
+      "generated_sample_id": "hc3-open_qa-q47-g0",
+      "human_sample_id": "hc3-open_qa-q47-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q5",
+      "control_content_sha256": "6e4ec4f5e3763d98335f8529df6a77ccb5076c67b6134ff0795bb0e73f27e22c",
+      "control_id": "mixed-9b8ec8cbee75bb65208653f3",
+      "generated_sample_id": "hc3-open_qa-q5-g0",
+      "human_sample_id": "hc3-open_qa-q5-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q6",
+      "control_content_sha256": "169c5c98af94d343b2e8b0de8063f865095d7076763ad4e4028a3ef148d2237b",
+      "control_id": "mixed-0cd04d1de63afe6360c02090",
+      "generated_sample_id": "hc3-open_qa-q6-g0",
+      "human_sample_id": "hc3-open_qa-q6-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q7",
+      "control_content_sha256": "bbf1325988f0283dfbecf07d8f6342a888bb705d4dc3e6ccd6ab1b92de5d1176",
+      "control_id": "mixed-814ead0bdcf4e85a36ed7757",
+      "generated_sample_id": "hc3-open_qa-q7-g0",
+      "human_sample_id": "hc3-open_qa-q7-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q8",
+      "control_content_sha256": "8bd6c946ab935c70acaf10d97399aa424c58310a7351e8505e43820797ec2665",
+      "control_id": "mixed-a618a3b9783b4e526059e84f",
+      "generated_sample_id": "hc3-open_qa-q8-g0",
+      "human_sample_id": "hc3-open_qa-q8-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:open_qa:q9",
+      "control_content_sha256": "b767df6c9534877c1656ad2211387d74f1c3d00edcf116531504a2312ca9b5c6",
+      "control_id": "mixed-a788886fff5a5a5121c1e341",
+      "generated_sample_id": "hc3-open_qa-q9-g0",
+      "human_sample_id": "hc3-open_qa-q9-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q0",
+      "control_content_sha256": "85a7e9d7af16cd5e0bd6d043afaa67c839751cfbfca7e5a6971a5b239a5a315c",
+      "control_id": "mixed-964cdcab95554872c2484064",
+      "generated_sample_id": "hc3-reddit_eli5-q0-g0",
+      "human_sample_id": "hc3-reddit_eli5-q0-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q1",
+      "control_content_sha256": "51934c9d5a4745ff57a336d85bac04b18cbab1d6e9acc249511dd3d04e1e71ab",
+      "control_id": "mixed-dfa4b7c0378f9f81da8bb1b9",
+      "generated_sample_id": "hc3-reddit_eli5-q1-g0",
+      "human_sample_id": "hc3-reddit_eli5-q1-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q10",
+      "control_content_sha256": "6898648bca4432ee7feaee227a7bec1a291d284baeabf2250bf1b11f05862b1a",
+      "control_id": "mixed-88b07da81caa0387275ed7ce",
+      "generated_sample_id": "hc3-reddit_eli5-q10-g0",
+      "human_sample_id": "hc3-reddit_eli5-q10-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q11",
+      "control_content_sha256": "e158e7269de9be8aab5f3c478736828de8b0563dac3e3abbf89e6cf0811dcf0d",
+      "control_id": "mixed-dae43fab39d4a3093fce9ecd",
+      "generated_sample_id": "hc3-reddit_eli5-q11-g0",
+      "human_sample_id": "hc3-reddit_eli5-q11-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q12",
+      "control_content_sha256": "845ad515226761b69a348549c370d7bfe87d63a1507cdb75fec1faf33bd0137f",
+      "control_id": "mixed-67e993f7299050b7bd01dbf6",
+      "generated_sample_id": "hc3-reddit_eli5-q12-g0",
+      "human_sample_id": "hc3-reddit_eli5-q12-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q13",
+      "control_content_sha256": "a61bff342317afa689f4b435825be44730d4c75b8cf35fdee67d0e213cb9565b",
+      "control_id": "mixed-da28771d7b1c9d196c01dcb6",
+      "generated_sample_id": "hc3-reddit_eli5-q13-g0",
+      "human_sample_id": "hc3-reddit_eli5-q13-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q14",
+      "control_content_sha256": "963cdd92f2e01ecc53d31a07589c02d9d5746ecd45bc79935902c9fab078dc90",
+      "control_id": "mixed-96bc53540ed39c2eaea4a3b6",
+      "generated_sample_id": "hc3-reddit_eli5-q14-g0",
+      "human_sample_id": "hc3-reddit_eli5-q14-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q15",
+      "control_content_sha256": "0802f34c59722801517054bd7713708bf7f28743f207354b6fe386059aea0374",
+      "control_id": "mixed-10bcbd995393a275514101f0",
+      "generated_sample_id": "hc3-reddit_eli5-q15-g0",
+      "human_sample_id": "hc3-reddit_eli5-q15-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q16",
+      "control_content_sha256": "c634ff2745739571c756130f2558e604e56018ffdf172db80b513eb757bf53b6",
+      "control_id": "mixed-efd0f5cd148c4de6a03dec5a",
+      "generated_sample_id": "hc3-reddit_eli5-q16-g0",
+      "human_sample_id": "hc3-reddit_eli5-q16-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q17",
+      "control_content_sha256": "921fd82fefd4a99432e24d3701884237b9718f64262afa84369468d54ac211b0",
+      "control_id": "mixed-0c16e53dff9771a5c68760f8",
+      "generated_sample_id": "hc3-reddit_eli5-q17-g0",
+      "human_sample_id": "hc3-reddit_eli5-q17-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q18",
+      "control_content_sha256": "4a7fd647a192853eb1357e33ab498ff4da20bcb1e85ea414d775245f89c5b7e6",
+      "control_id": "mixed-5368175a44cad994b88e0ec5",
+      "generated_sample_id": "hc3-reddit_eli5-q18-g0",
+      "human_sample_id": "hc3-reddit_eli5-q18-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q19",
+      "control_content_sha256": "f5b8bcb7e9a8447171eece1a5fb3c0b3a889e0d0e1504baa461ebbaedd9fb438",
+      "control_id": "mixed-ba75d68ac44a062e19f7490a",
+      "generated_sample_id": "hc3-reddit_eli5-q19-g0",
+      "human_sample_id": "hc3-reddit_eli5-q19-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q2",
+      "control_content_sha256": "ced54106b7592fbdb661ac824db21f5f86889c5ebd359d3a1bf7573e21188857",
+      "control_id": "mixed-7cad03b49a54c81b85d4f8bc",
+      "generated_sample_id": "hc3-reddit_eli5-q2-g0",
+      "human_sample_id": "hc3-reddit_eli5-q2-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q20",
+      "control_content_sha256": "492e72f8385064e2e89707f4b031ab761f261ad9674773e55518d2a83d59a397",
+      "control_id": "mixed-295b5b54c9d1596a86618216",
+      "generated_sample_id": "hc3-reddit_eli5-q20-g0",
+      "human_sample_id": "hc3-reddit_eli5-q20-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q21",
+      "control_content_sha256": "a1c2e6c34f2289be1c3fd746e9a3e41da96296c7b98a8a5fcd132fad6217f0e7",
+      "control_id": "mixed-ce5e17e99e91ad4d3f0d964f",
+      "generated_sample_id": "hc3-reddit_eli5-q21-g0",
+      "human_sample_id": "hc3-reddit_eli5-q21-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q22",
+      "control_content_sha256": "344535fa4ae2a5ba9d5807df40eba6882e9a66a8682a1f089cfce4c42a954866",
+      "control_id": "mixed-8547ab5f3860eb14ed501b1a",
+      "generated_sample_id": "hc3-reddit_eli5-q22-g0",
+      "human_sample_id": "hc3-reddit_eli5-q22-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q23",
+      "control_content_sha256": "30931d6e1c0fe1dc6c7c11d6190dcfca9c1ea68a1a7191655702ead0d5cdcda2",
+      "control_id": "mixed-cbc807769c7b8dbcad4df321",
+      "generated_sample_id": "hc3-reddit_eli5-q23-g0",
+      "human_sample_id": "hc3-reddit_eli5-q23-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q24",
+      "control_content_sha256": "7a142916f65c05dbd9074860307efd038eb81a7ef0ed5e2aa905f018a42a7b65",
+      "control_id": "mixed-7ce0bd699eaa1d67a35514ab",
+      "generated_sample_id": "hc3-reddit_eli5-q24-g0",
+      "human_sample_id": "hc3-reddit_eli5-q24-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q25",
+      "control_content_sha256": "8e9eb55f238d8f296daf9fe665b5d1ef8b9aa0f2095b692d5efc8f97fa446fec",
+      "control_id": "mixed-7f147b4289d59b00602ce98e",
+      "generated_sample_id": "hc3-reddit_eli5-q25-g0",
+      "human_sample_id": "hc3-reddit_eli5-q25-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q26",
+      "control_content_sha256": "c70ab9aeac18e97a6328bce32b8a930c1f6e969ab02cb4b2e8eca1516b96d216",
+      "control_id": "mixed-704155e9088cd3467c70fe6c",
+      "generated_sample_id": "hc3-reddit_eli5-q26-g0",
+      "human_sample_id": "hc3-reddit_eli5-q26-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q3",
+      "control_content_sha256": "d34dcdf27f4df7379fb969b36b16ff5d73383d9a091d3b262050a4274011425b",
+      "control_id": "mixed-92c0d2a4637413fbd62ac9e0",
+      "generated_sample_id": "hc3-reddit_eli5-q3-g0",
+      "human_sample_id": "hc3-reddit_eli5-q3-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q30",
+      "control_content_sha256": "8e663177df32fdcb5a786f8289680c600c475a90c83c3be5a858ac3b95983875",
+      "control_id": "mixed-93025ba513c44eaba3278c10",
+      "generated_sample_id": "hc3-reddit_eli5-q30-g0",
+      "human_sample_id": "hc3-reddit_eli5-q30-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q31",
+      "control_content_sha256": "85fd8a9f82df35bae0ed2d6bebd7d9244dd3e703a9add2b62f4b712804fc45c1",
+      "control_id": "mixed-26abbe280aeef2a446ae106e",
+      "generated_sample_id": "hc3-reddit_eli5-q31-g0",
+      "human_sample_id": "hc3-reddit_eli5-q31-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q35",
+      "control_content_sha256": "9405717e3530248df297d88b6ddac4b673fbacb2c3f8258794f8e2d68fe0f8ed",
+      "control_id": "mixed-f9517017f33b0132b77fc410",
+      "generated_sample_id": "hc3-reddit_eli5-q35-g0",
+      "human_sample_id": "hc3-reddit_eli5-q35-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q39",
+      "control_content_sha256": "705c680337a81c9f2410d9af82b7185a9587da0bf320c8288e264a2828cbb468",
+      "control_id": "mixed-0fedd502b12cbcb4fde46613",
+      "generated_sample_id": "hc3-reddit_eli5-q39-g0",
+      "human_sample_id": "hc3-reddit_eli5-q39-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q4",
+      "control_content_sha256": "707bf2a6a5ef090d2861ac004f1b5b81eb0927dbee2ebbf3268e445d8b23ea66",
+      "control_id": "mixed-944707a13040fc53f52fe272",
+      "generated_sample_id": "hc3-reddit_eli5-q4-g0",
+      "human_sample_id": "hc3-reddit_eli5-q4-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q47",
+      "control_content_sha256": "14de0695076fa2d7fcd3516121fb841898888d62bedb4b90c2288ae3d27a641f",
+      "control_id": "mixed-ec8006812d801cca87dc63bc",
+      "generated_sample_id": "hc3-reddit_eli5-q47-g0",
+      "human_sample_id": "hc3-reddit_eli5-q47-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q5",
+      "control_content_sha256": "a1e9af72cdd4e0a8f861e885de5bd36e5cc7c6ad2593490a3b765f29f9223e79",
+      "control_id": "mixed-78cd446854de86c17aa230ce",
+      "generated_sample_id": "hc3-reddit_eli5-q5-g0",
+      "human_sample_id": "hc3-reddit_eli5-q5-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q6",
+      "control_content_sha256": "798582b13264baba7b209c241270e919d97ba41777fbd1eeafb0f3dedd612806",
+      "control_id": "mixed-5da5d3b59a4ec28e0be07682",
+      "generated_sample_id": "hc3-reddit_eli5-q6-g0",
+      "human_sample_id": "hc3-reddit_eli5-q6-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q7",
+      "control_content_sha256": "9a65833778802dd186ac42080504f9f47ad77b1f06bd50f4ddbfcd725fe3d940",
+      "control_id": "mixed-3a8a6822154fcd8cd861bb90",
+      "generated_sample_id": "hc3-reddit_eli5-q7-g0",
+      "human_sample_id": "hc3-reddit_eli5-q7-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q8",
+      "control_content_sha256": "6053eacbc015dcc7980dc0018a67b8704fd6e8d8fb9d4c7c8bba2e94a16dd7ed",
+      "control_id": "mixed-2491c24f724760328795d32d",
+      "generated_sample_id": "hc3-reddit_eli5-q8-g0",
+      "human_sample_id": "hc3-reddit_eli5-q8-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:reddit_eli5:q9",
+      "control_content_sha256": "069b8621e1f4c3ac0104c3648bfe48b245feed6001512d7943ae146ecd5d4006",
+      "control_id": "mixed-c176fa972ca4516905121f0c",
+      "generated_sample_id": "hc3-reddit_eli5-q9-g0",
+      "human_sample_id": "hc3-reddit_eli5-q9-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q0",
+      "control_content_sha256": "4dc7f553f1375a38d3111e26f6075f10f983f7694021bf185b50497edef40d4d",
+      "control_id": "mixed-a1cf9a11d059a1642b91f6ab",
+      "generated_sample_id": "hc3-wiki_csai-q0-g0",
+      "human_sample_id": "hc3-wiki_csai-q0-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q1",
+      "control_content_sha256": "51f9d324507885c2d8937c54f3487bb5ad078ea0a69e3a3e4d7bb34581371d97",
+      "control_id": "mixed-934afc3761a404bd24fa30c1",
+      "generated_sample_id": "hc3-wiki_csai-q1-g0",
+      "human_sample_id": "hc3-wiki_csai-q1-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q10",
+      "control_content_sha256": "5ce3ae2f4d5e9f2669020b5fe8f379bf0f92a90763b47573ee1c606b190aed5e",
+      "control_id": "mixed-94c7b3d58f4804b19624a48a",
+      "generated_sample_id": "hc3-wiki_csai-q10-g0",
+      "human_sample_id": "hc3-wiki_csai-q10-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q11",
+      "control_content_sha256": "3e7ae473d63dadcede1558adb78aa29652206142216a7471daa07f926180700a",
+      "control_id": "mixed-a03b13fa661d63047c7ee22c",
+      "generated_sample_id": "hc3-wiki_csai-q11-g0",
+      "human_sample_id": "hc3-wiki_csai-q11-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q12",
+      "control_content_sha256": "9666e6f8094b393141e7e26ea27dd757123ea3e4cf473857f17c448d2b30bd13",
+      "control_id": "mixed-5874c83679ab57a06be836a2",
+      "generated_sample_id": "hc3-wiki_csai-q12-g0",
+      "human_sample_id": "hc3-wiki_csai-q12-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q13",
+      "control_content_sha256": "63bfd3d6cb30192f34ced0dc744883253aabf70f8eda338d9042140e71eb8888",
+      "control_id": "mixed-803dfd19b1f7db057c895c41",
+      "generated_sample_id": "hc3-wiki_csai-q13-g0",
+      "human_sample_id": "hc3-wiki_csai-q13-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q14",
+      "control_content_sha256": "186934f91ae4da32095a6206b20e404044d4e9be1eadc6b5466ec4fa2338bdf3",
+      "control_id": "mixed-c6f2ecbad95c094ee42a89f4",
+      "generated_sample_id": "hc3-wiki_csai-q14-g0",
+      "human_sample_id": "hc3-wiki_csai-q14-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q15",
+      "control_content_sha256": "60531d7cba4702e26532c2177832b1443cacdd8643970bd9dae5afaeacb5546b",
+      "control_id": "mixed-c726c69857a65a1a6391e5a4",
+      "generated_sample_id": "hc3-wiki_csai-q15-g0",
+      "human_sample_id": "hc3-wiki_csai-q15-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q2",
+      "control_content_sha256": "0cbd5d9aee0cd618396365ffdf8ceddf64b804b1b4fdb082a0e585e26ada5a3c",
+      "control_id": "mixed-6e9951d8e53554bf992c07e9",
+      "generated_sample_id": "hc3-wiki_csai-q2-g0",
+      "human_sample_id": "hc3-wiki_csai-q2-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q21",
+      "control_content_sha256": "a66fa578dadf55ab48fc655a52bab14466ccfc8555810cb27eede1328b67a01c",
+      "control_id": "mixed-046083472284953ea39a12b6",
+      "generated_sample_id": "hc3-wiki_csai-q21-g0",
+      "human_sample_id": "hc3-wiki_csai-q21-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q22",
+      "control_content_sha256": "806e04eca57625bf4d26575611a6c6abad3afab407201f2a22d5cdede8783d7e",
+      "control_id": "mixed-2ceea12e7e2359a7a25d102a",
+      "generated_sample_id": "hc3-wiki_csai-q22-g0",
+      "human_sample_id": "hc3-wiki_csai-q22-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q23",
+      "control_content_sha256": "e1485d8a9af4ce01169e45b49720cc03771a049bc6657bba917543f91521f36d",
+      "control_id": "mixed-9367878ebc971a89fbb8a29a",
+      "generated_sample_id": "hc3-wiki_csai-q23-g0",
+      "human_sample_id": "hc3-wiki_csai-q23-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q24",
+      "control_content_sha256": "423c1023e1387224114bbc067f536e6bd8f221b573fbc13d049eb2c858e9ce26",
+      "control_id": "mixed-e793700ca5b4b7a9184c0ecf",
+      "generated_sample_id": "hc3-wiki_csai-q24-g0",
+      "human_sample_id": "hc3-wiki_csai-q24-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q26",
+      "control_content_sha256": "cc9d540727109976a826a7cf484dc4286317ff6ba62ca5efb45abda769b9cebe",
+      "control_id": "mixed-d948a0ca25ac5418c4b6c500",
+      "generated_sample_id": "hc3-wiki_csai-q26-g0",
+      "human_sample_id": "hc3-wiki_csai-q26-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q28",
+      "control_content_sha256": "bc1a8490ade83c14d6f071c9c713f4530ba6ea94083d9ee26cc4c16517d11194",
+      "control_id": "mixed-42cce05ac3bc36f886d4eb60",
+      "generated_sample_id": "hc3-wiki_csai-q28-g0",
+      "human_sample_id": "hc3-wiki_csai-q28-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q3",
+      "control_content_sha256": "2eeb9e4b8af49818cc7b15ad5bba0609671c8faa0a4d3b3b1af24eb3f97d9acd",
+      "control_id": "mixed-9e8ed9564aa86aba761b60b4",
+      "generated_sample_id": "hc3-wiki_csai-q3-g0",
+      "human_sample_id": "hc3-wiki_csai-q3-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q30",
+      "control_content_sha256": "50e74671da2946bf2b482b2f7ce436d7bab79a3d6dbc349dbf82daa2b7302930",
+      "control_id": "mixed-5042efc6bc0e3f18c6e596c7",
+      "generated_sample_id": "hc3-wiki_csai-q30-g0",
+      "human_sample_id": "hc3-wiki_csai-q30-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q34",
+      "control_content_sha256": "27e4a6bd69f94bffd0bb49448e58aa295d14cc83495e86af066592c5e547d441",
+      "control_id": "mixed-1b7138bdb9f13f7aaba863cd",
+      "generated_sample_id": "hc3-wiki_csai-q34-g0",
+      "human_sample_id": "hc3-wiki_csai-q34-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q35",
+      "control_content_sha256": "c699fea8052ff49ad68a38c23188d7986a19aff96476d6997825249ae6fb6ef6",
+      "control_id": "mixed-94b17a14ae9c7841185fa7e4",
+      "generated_sample_id": "hc3-wiki_csai-q35-g0",
+      "human_sample_id": "hc3-wiki_csai-q35-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q37",
+      "control_content_sha256": "f3f7a72131a7d59ac85c107c55f867940d8d58fd23d59cd1b2907f252ad05569",
+      "control_id": "mixed-0e3e88280205581abc901063",
+      "generated_sample_id": "hc3-wiki_csai-q37-g0",
+      "human_sample_id": "hc3-wiki_csai-q37-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q38",
+      "control_content_sha256": "a30913d9cd1de465eaab2bab7ba99c3e3469be86321320a43b3b6abcbbb22cd1",
+      "control_id": "mixed-1d888794b5092518168b3a94",
+      "generated_sample_id": "hc3-wiki_csai-q38-g0",
+      "human_sample_id": "hc3-wiki_csai-q38-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q39",
+      "control_content_sha256": "2fb04ac719c9b3e65ae13c436251727e24813aed987cbe2e48620ed1f8e1996b",
+      "control_id": "mixed-1e55310ed800747bdc05402d",
+      "generated_sample_id": "hc3-wiki_csai-q39-g0",
+      "human_sample_id": "hc3-wiki_csai-q39-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q4",
+      "control_content_sha256": "38ad61de98780d2769406456eb9d81fb40c3ec5e180f828a9acc01d642043d65",
+      "control_id": "mixed-e62756448e983e8263c85240",
+      "generated_sample_id": "hc3-wiki_csai-q4-g0",
+      "human_sample_id": "hc3-wiki_csai-q4-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q42",
+      "control_content_sha256": "51696d3e8cd82bc3368a9bbfbb5dc43d095026cf88e6f04657184c31f5adeb92",
+      "control_id": "mixed-5800e63bc1b225fab63b1b66",
+      "generated_sample_id": "hc3-wiki_csai-q42-g0",
+      "human_sample_id": "hc3-wiki_csai-q42-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q43",
+      "control_content_sha256": "ee0b3feefb30913215ec3df4c731b46b15673cea6473d599f1cefe783e481719",
+      "control_id": "mixed-28242c63c0cad6cff1af3598",
+      "generated_sample_id": "hc3-wiki_csai-q43-g0",
+      "human_sample_id": "hc3-wiki_csai-q43-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q45",
+      "control_content_sha256": "d18657b398b18df4023d19c822f8f2ff607be7992cafb2473aabdf1e87a09b9e",
+      "control_id": "mixed-8c0f6a69b96c0b1dbccfb33a",
+      "generated_sample_id": "hc3-wiki_csai-q45-g0",
+      "human_sample_id": "hc3-wiki_csai-q45-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q46",
+      "control_content_sha256": "0c156781a3ba456bb7eafc55ed7f4c6dc526da6415f7d00c9efaba3da1aed1f9",
+      "control_id": "mixed-cbc335131429eadabd0248f8",
+      "generated_sample_id": "hc3-wiki_csai-q46-g0",
+      "human_sample_id": "hc3-wiki_csai-q46-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q47",
+      "control_content_sha256": "f08a636f141aae288674382e682b92224ce11e30276aa53cb85a3027abd90618",
+      "control_id": "mixed-4467b4a998d70078f866da0f",
+      "generated_sample_id": "hc3-wiki_csai-q47-g0",
+      "human_sample_id": "hc3-wiki_csai-q47-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q48",
+      "control_content_sha256": "11e63c8b6198fefcfad91fc0c5d0fae1c90235a278c63720d688471da3b0be29",
+      "control_id": "mixed-7762e3a0fe632f3a7c78ee8c",
+      "generated_sample_id": "hc3-wiki_csai-q48-g0",
+      "human_sample_id": "hc3-wiki_csai-q48-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q49",
+      "control_content_sha256": "ed668b8abfed33e507871ecd84652893d3751e4f2034506c6734ba85e1b82e2c",
+      "control_id": "mixed-0649b82d1fd2d305a674b04c",
+      "generated_sample_id": "hc3-wiki_csai-q49-g0",
+      "human_sample_id": "hc3-wiki_csai-q49-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q5",
+      "control_content_sha256": "e9791b2404890365faf80de3c90f77154cddf44d3c35666cba17f520a3d41478",
+      "control_id": "mixed-6a643f96f90d1a48e9a65ef8",
+      "generated_sample_id": "hc3-wiki_csai-q5-g0",
+      "human_sample_id": "hc3-wiki_csai-q5-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q6",
+      "control_content_sha256": "7509f840f87e03626105a6d5d070f6ed828fc83788cbe46529f1e9b2c5e3c14f",
+      "control_id": "mixed-57d8d22c115cbeb5f6629a3c",
+      "generated_sample_id": "hc3-wiki_csai-q6-g0",
+      "human_sample_id": "hc3-wiki_csai-q6-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q7",
+      "control_content_sha256": "c95464bfaaeff94e5de2f818af6d7e6ed4da3e3e40e195689831444fd62392a8",
+      "control_id": "mixed-e2f34e06fc2b07d02727d2d0",
+      "generated_sample_id": "hc3-wiki_csai-q7-g0",
+      "human_sample_id": "hc3-wiki_csai-q7-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q8",
+      "control_content_sha256": "e5aaca370887d9c006f030710af8595238f89bf7245ddad824406e3d18276529",
+      "control_id": "mixed-2707927d61305c74aec6cf9b",
+      "generated_sample_id": "hc3-wiki_csai-q8-g0",
+      "human_sample_id": "hc3-wiki_csai-q8-h0"
+    },
+    {
+      "base_group": "hc3@4d0ff18143b5a7e1b1e79beb540c04549d1e59d3:wiki_csai:q9",
+      "control_content_sha256": "bfe0a660f46d0fcef2610b64cf29edf5242c64a1c35e30295b5b70e8bf048b71",
+      "control_id": "mixed-ede1b30c5ef00a65274c7ef6",
+      "generated_sample_id": "hc3-wiki_csai-q9-g0",
+      "human_sample_id": "hc3-wiki_csai-q9-h0"
+    }
+  ],
+  "transformation": {
+    "held_out_used": false,
+    "operator": "human_prefix_generated_suffix_concat",
+    "same_question_only": true,
+    "separator_hex": "0a0a",
+    "version": "mixed-controls-v1"
+  }
+}

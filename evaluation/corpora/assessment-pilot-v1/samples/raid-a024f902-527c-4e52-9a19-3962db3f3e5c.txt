@@ -1,0 +1,3 @@
+> We consider the problem of online learning with kernels, where the learner is given a sequence of examples and must predict the label of the next example based on the previous examples. The learner is allowed to use a kernel function to compute similarities between examples. We consider the case where the kernel function is given by a sparse dictionary, i.e., the kernel function is a linear combination of a small number of basis functions. We show that the online learning problem with kernels can be solved by a simple algorithm that maintains a sparse dictionary and updates it online. We also show that the algorithm is optimal in the sense that it achieves the best possible regret bound.
+
+The paper is available here.

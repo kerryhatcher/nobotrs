@@ -2,3 +2,8 @@
 /evaluation/corpora/*/samples/*.txt -text -diff
 /evaluation/corpora/*/source/responses/*.json -text -diff
 /evaluation/corpora/*/source/responses/*.jsonl -text -diff
+/evaluation/corpora/*/source/*/responses/*.json -text -diff
+/evaluation/corpora/*/source/*/responses/*.jsonl -text -diff
+# Upstream cards/licenses are pinned byte-for-byte, including whitespace.
+/evaluation/corpora/*/source/**/dataset-card.md -text -diff
+/evaluation/corpora/*/source/**/LICENSE -text -diff

@@ -1,0 +1,3 @@
+> We consider a single-elimination tournament with n teams, where each team is assigned a score between 0 and 1. The tournament is played in a round-robin fashion, with the winner of each match being the team with the higher score. We are interested in the probability that a team with score s wins the tournament. We show that this probability is given by a simple formula, which we derive using a recursive argument. We also show that the probability that a team with score s wins the tournament is maximized when s is equal to the average score of all teams.
+
+The paper is available here.

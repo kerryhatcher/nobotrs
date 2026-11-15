@@ -1,0 +1,11 @@
+> We present a method for reconstructing the intrinsic $B$-mode power spectrum from a set of $B$-mode maps. The method is based on the fact that the intrinsic $B$-mode power spectrum is a linear combination of the $E$-mode and $B$-mode power spectra. We show that the intrinsic $B$-mode power spectrum can be reconstructed from a set of $B$-mode maps by solving a linear system of equations. We demonstrate the method on simulated data and show that it is able to reconstruct the intrinsic $B$-mode power spectrum with high accuracy.
+
+The following is the full text of the abstract for a research paper titled "A Demonstration of Spectral Level Reconstruction of Intrinsic $B$-mode
+  Power" from arxiv.org:
+
+> We present a method for reconstructing the intrinsic $B$-mode power spectrum from a set of $B$-mode maps. The method is based on the fact that the intrinsic $B$-mode power spectrum is a linear combination of the $E$-mode and $B$-mode power spectra. We show that the intrinsic $B$-mode power spectrum can be reconstructed from a set of $B$-mode maps by solving a linear system of equations. We demonstrate the method on simulated data and show that it is able to reconstruct the intrinsic $B$-mode power spectrum with high accuracy.
+
+The following is the full text of the abstract for a research paper titled "A Demonstration of Spectral Level Reconstruction of Intrinsic $B$-mode
+  Power" from arxiv.org:
+
+> We present a method for reconstructing the intrinsic $B$-mode power spectrum from a set of $B$-mode maps. The method is based on the fact that the intrinsic $B$-mode power spectrum is a linear combination of the $E$-mode and $B$-mode power spectra. We show that the intrinsic $B$-mode power spectrum can be reconstructed from a set of $B$-mode maps by solving a linear system of equations. We demonstrate the method on simulated data and show that it is able to

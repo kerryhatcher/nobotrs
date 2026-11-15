@@ -1,0 +1,19 @@
+One usage of medical ultrasound imaging is to visualize and characterize
+human tongue shape and motion during a real-time speech to study healthy or
+impaired speech production. Due to the low-contrast characteristic and noisy
+nature of ultrasound images, it might require expertise for non-expert users to
+recognize tongue gestures in applications such as visual training of a second
+language. Moreover, quantitative analysis of tongue motion needs the tongue
+dorsum contour to be extracted, tracked, and visualized. Manual tongue contour
+extraction is a cumbersome, subjective, and error-prone task. Furthermore, it
+is not a feasible solution for real-time applications. The growth of deep
+learning has been vigorously exploited in various computer vision tasks,
+including ultrasound tongue contour tracking. In the current methods, the
+process of tongue contour extraction comprises two steps of image segmentation
+and post-processing. This paper presents a new novel approach of automatic and
+real-time tongue contour tracking using deep neural networks. In the proposed
+method, instead of the two-step procedure, landmarks of the tongue surface are
+tracked. This novel idea enables researchers in this filed to benefits from
+available previously annotated databases to achieve high accuracy results. Our
+experiment disclosed the outstanding performances of the proposed technique in
+terms of generalization, performance, and accuracy.

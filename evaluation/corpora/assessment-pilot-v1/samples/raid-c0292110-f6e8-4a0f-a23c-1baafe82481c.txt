@@ -1,0 +1,19 @@
+Polarimetric synthetic aperture radar (PolSAR) image segmentation is
+currently of great importance in image processing for remote sensing
+applications. However, it is a challenging task due to two main reasons.
+Firstly, the label information is difficult to acquire due to high annotation
+costs. Secondly, the speckle effect embedded in the PolSAR imaging process
+remarkably degrades the segmentation performance. To address these two issues,
+we present a contextual PolSAR image semantic segmentation method in this
+paper.With a newly defined channelwise consistent feature set as input, the
+three-dimensional discrete wavelet transform (3D-DWT) technique is employed to
+extract discriminative multi-scale features that are robust to speckle noise.
+Then Markov random field (MRF) is further applied to enforce label smoothness
+spatially during segmentation. By simultaneously utilizing 3D-DWT features and
+MRF priors for the first time, contextual information is fully integrated
+during the segmentation to ensure accurate and smooth segmentation. To
+demonstrate the effectiveness of the proposed method, we conduct extensive
+experiments on three real benchmark PolSAR image data sets. Experimental
+results indicate that the proposed method achieves promising segmentation
+accuracy and preferable spatial consistency using a minimal number of labeled
+pixels.

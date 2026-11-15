@@ -1,0 +1,14 @@
+The ability of neural networks to continuously learn and adapt to new tasks
+while retaining prior knowledge is crucial for many applications. However,
+current neural networks tend to forget previously learned tasks when trained on
+new ones, i.e., they suffer from Catastrophic Forgetting (CF). The objective of
+Continual Learning (CL) is to alleviate this problem, which is particularly
+relevant for medical applications, where it may not be feasible to store and
+access previously used sensitive patient data. In this work, we propose a
+Continual Learning approach for brain segmentation, where a single network is
+consecutively trained on samples from different domains. We build upon an
+importance driven approach and adapt it for medical image segmentation.
+Particularly, we introduce learning rate regularization to prevent the loss of
+the network's knowledge. Our results demonstrate that directly restricting the
+adaptation of important network parameters clearly reduces Catastrophic
+Forgetting for segmentation across domains.

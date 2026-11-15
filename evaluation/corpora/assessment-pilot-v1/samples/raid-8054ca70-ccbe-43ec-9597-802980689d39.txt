@@ -1,0 +1,19 @@
+Deep learning-based medical image segmentation technology aims at automatic
+recognizing and annotating objects on the medical image. Non-local attention
+and feature learning by multi-scale methods are widely used to model network,
+which drives progress in medical image segmentation. However, those attention
+mechanism methods have weakly non-local receptive fields' strengthened
+connection for small objects in medical images. Then, the features of important
+small objects in abstract or coarse feature maps may be deserted, which leads
+to unsatisfactory performance. Moreover, the existing multi-scale methods only
+simply focus on different sizes of view, whose sparse multi-scale features
+collected are not abundant enough for small objects segmentation. In this work,
+a multi-dimensional attention segmentation model with cascade multi-scale
+convolution is proposed to predict accurate segmentation for small objects in
+medical images. As the weight function, multi-dimensional attention modules
+provide coefficient modification for significant/informative small objects
+features. Furthermore, The cascade multi-scale convolution modules in each
+skip-connection path are exploited to capture multi-scale features in different
+semantic depth. The proposed method is evaluated on three datasets: KiTS19,
+Pancreas CT of Decathlon-10, and MICCAI 2018 LiTS Challenge, demonstrating
+better segmentation performances than the state-of-the-art baselines.

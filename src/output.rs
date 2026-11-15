@@ -1,4 +1,4 @@
-use crate::{backend::ScoreOutcome, pipeline::Report};
+use crate::{backend::ScoreOutcome, pipeline::Report, score::Severity};
 use serde_json::{json, Value};
 pub fn human(report: &Report) -> String {
     let mut out = format!(
@@ -76,8 +76,7 @@ pub fn sarif(reports: &[Report]) -> Value {
             if let ScoreOutcome::Scored(s) | ScoreOutcome::Incomplete { score: s, .. } = &b.outcome
             {
                 for f in &s.document_findings {
-                    let mut value =
-                        json!({"ruleId":f.rule_id,"level":"note","message":{"text":f.message}});
+                    let mut value = json!({"ruleId":f.rule_id,"level":severity_level(f.severity),"message":{"text":f.message}});
                     if let Some(reason) = &f.suppression {
                         value["suppressions"] = json!([{"kind":"inSource","justification":reason}]);
                     }
@@ -87,7 +86,7 @@ pub fn sarif(reports: &[Report]) -> Value {
                     if e.disposition != "selected" && e.disposition != "suppressed" {
                         continue;
                     }
-                    let mut value = json!({"ruleId":e.rule_id,"level":"warning","message":{"text":e.suggestion.as_ref().map_or_else(||format!("Heuristic writing tell: {}",e.matched_text),Clone::clone)},"locations":[{"physicalLocation":{"artifactLocation":{"uri":uri(&report.path)},"region":{"startLine":e.line,"startColumn":e.column,"endLine":e.end_line,"endColumn":e.end_column}}}],"properties":{"sourceRanges":e.source_ranges,"discontinuous":e.source_ranges.len()>1}});
+                    let mut value = json!({"ruleId":e.rule_id,"level":severity_level(e.severity),"message":{"text":e.suggestion.as_ref().map_or_else(||format!("Heuristic writing tell: {}",e.matched_text),Clone::clone)},"locations":[{"physicalLocation":{"artifactLocation":{"uri":uri(&report.path)},"region":{"startLine":e.line,"startColumn":e.column,"endLine":e.end_line,"endColumn":e.end_column}}}],"properties":{"sourceRanges":e.source_ranges,"discontinuous":e.source_ranges.len()>1}});
                     if let Some(reason) = &e.suppression {
                         value["suppressions"] = json!([{"kind":"inSource","justification":reason}]);
                     }
@@ -97,9 +96,16 @@ pub fn sarif(reports: &[Report]) -> Value {
         }
     }
     let dictionary = crate::dictionary::Dictionary::embedded();
-    let mut rules:Vec<_>=dictionary.entries.iter().map(|e|json!({"id":e.id,"shortDescription":{"text":format!("Heuristic vocabulary tell: {}",e.id)},"help":{"text":e.notes.as_deref().unwrap_or("Editing prompt only; not an authorship determination.")},"defaultConfiguration":{"level":"warning"},"properties":{"category":e.category,"pattern":e.pattern,"source":e.source}})).collect();
-    rules.extend([json!({"id":"punctuation.em-dash-density","shortDescription":{"text":"Em dash density"},"defaultConfiguration":{"level":"warning"}}),json!({"id":"statistics.burstiness","shortDescription":{"text":"Document-wide sentence length variation"},"defaultConfiguration":{"level":"note"}})]);
-    json!({"version":"2.1.0","$schema":"https://json.schemastore.org/sarif-2.1.0.json","runs":[{"tool":{"driver":{"name":"nobotrs","version":env!("CARGO_PKG_VERSION"),"rules":rules,"informationUri":"https://github.com/kerryhatcher/nobotrs"}},"results":results,"invocations":[{"executionSuccessful":reports.iter().all(|r|r.complete),"toolExecutionNotifications":notices}],"properties":{"displayTruncated":reports.iter().any(|r|r.omitted_candidates>0 || r.omitted_document_findings>0),"uncalibrated":true}}]})
+    let mut rules:Vec<_>=dictionary.entries.iter().map(|e|json!({"id":e.id,"shortDescription":{"text":format!("Heuristic vocabulary tell: {}",e.id)},"help":{"text":e.notes.as_deref().unwrap_or("Editing prompt only; not an authorship determination.")},"defaultConfiguration":{"level":severity_level(Severity::Medium)},"properties":{"category":e.category,"pattern":e.pattern,"source":e.source}})).collect();
+    rules.extend([json!({"id":"punctuation.em-dash-density","shortDescription":{"text":"Em dash density"},"defaultConfiguration":{"level":severity_level(Severity::Medium)}}),json!({"id":"statistics.burstiness","shortDescription":{"text":"Document-wide sentence length variation"},"defaultConfiguration":{"level":severity_level(Severity::Low)}})]);
+    json!({"version":"2.1.0","$schema":"https://json.schemastore.org/sarif-2.1.0.json","runs":[{"tool":{"driver":{"name":"nobotrs","version":env!("CARGO_PKG_VERSION"),"rules":rules,"informationUri":"https://github.com/kerryhatcher/nobotrs"}},"results":results,"columnKind":"unicodeCodePoints","invocations":[{"executionSuccessful":reports.iter().all(|r|r.complete),"toolExecutionNotifications":notices}],"properties":{"displayTruncated":reports.iter().any(|r|r.omitted_candidates>0 || r.omitted_document_findings>0),"uncalibrated":true}}]})
+}
+fn severity_level(severity: Severity) -> &'static str {
+    match severity {
+        Severity::Low => "note",
+        Severity::Medium => "warning",
+        Severity::High => "error",
+    }
 }
 fn uri(path: &str) -> String {
     let mut out = String::new();
@@ -111,4 +117,17 @@ fn uri(path: &str) -> String {
         }
     }
     out
+}
+
+#[cfg(test)]
+mod tests {
+    use super::severity_level;
+    use crate::score::Severity;
+
+    #[test]
+    fn sarif_severity_mapping_is_explicit() {
+        assert_eq!(severity_level(Severity::Low), "note");
+        assert_eq!(severity_level(Severity::Medium), "warning");
+        assert_eq!(severity_level(Severity::High), "error");
+    }
 }

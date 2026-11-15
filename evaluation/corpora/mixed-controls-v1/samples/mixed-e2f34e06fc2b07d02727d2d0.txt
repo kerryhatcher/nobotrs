@@ -1,0 +1,24 @@
+A recommender system, or a recommendation system (sometimes replacing 'system' with a synonym such as platform or engine), is a subclass of information filtering system that provide suggestions for items that are most pertinent to a particular user. Typically, the suggestions refer to various decision-making processes, such as what product to purchase, what music to listen to, or what online news to read. Recommender systems are particularly useful when an individual needs to choose an item from a potentially overwhelming number of items that a service may offer.
+Recommender systems are used in a variety of areas, with commonly recognised examples taking the form of playlist generators for video and music services, product recommenders for online stores, or content recommenders for social media platforms and open web content recommenders. These systems can operate using a single input, like music, or multiple inputs within and across platforms like news, books and search queries. There are also popular recommender systems for specific topics like restaurants and online dating. Recommender systems have also been developed to explore research articles and experts, collaborators, and financial services.
+
+A recommender system, or a recommendation system, is a subclass of information filtering system that seeks to predict the "rating" or "preference" a user would give to an item. Recommender systems are utilized in a variety of areas, but are most commonly recognized as playlist generators for video and music services, product recommenders for online stores, or content recommenders for social media platforms.
+
+
+
+There are several methods used to build recommender systems, including:
+
+
+
+Collaborative filtering: This method makes recommendations based on the past behavior of a group of users. It looks at the items that similar users have liked in the past, and recommends those items to the new user.
+
+
+
+Content-based filtering: This method recommends items based on their attributes. It looks at the characteristics of an item and recommends similar items to the user.
+
+
+
+Hybrid systems: These systems use both collaborative filtering and content-based filtering to make recommendations.
+
+
+
+There are many potential applications for recommender systems, including product recommendations for e-commerce websites, movie recommendations for streaming services, and content recommendations for social media platforms. Recommender systems have the ability to improve the user experience by personalizing recommendations and highlighting items that may be of particular interest to the user.

@@ -1,0 +1,16 @@
+The need for labour intensive pixel-wise annotation is a major limitation of
+many fully supervised learning methods for segmenting bioimages that can
+contain numerous object instances with thin separations. In this paper, we
+introduce a deep convolutional neural network for microscopy image
+segmentation. Annotation issues are circumvented by letting the network being
+trainable on coarse labels combined with only a very small number of images
+with pixel-wise annotations. We call this new labelling strategy `lazy' labels.
+Image segmentation is stratified into three connected tasks: rough inner region
+detection, object separation and pixel-wise segmentation. These tasks are
+learned in an end-to-end multi-task learning framework. The method is
+demonstrated on two microscopy datasets, where we show that the model gives
+accurate segmentation results even if exact boundary labels are missing for a
+majority of annotated data. It brings more flexibility and efficiency for
+training deep neural networks that are data hungry and is applicable to
+biomedical images with poor contrast at the object boundaries or with diverse
+textures and repeated patterns.

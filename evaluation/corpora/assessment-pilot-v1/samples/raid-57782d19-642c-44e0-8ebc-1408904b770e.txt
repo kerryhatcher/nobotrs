@@ -1,0 +1,15 @@
+The performance of deep networks for semantic image segmentation largely
+depends on the availability of large-scale training images which are labelled
+at the pixel level. Typically, such pixel-level image labellings are obtained
+manually by a labour-intensive process. To alleviate the burden of manual image
+labelling, we propose an interesting learning approach to generate pixel-level
+image labellings automatically. A Guided Filter Network (GFN) is first
+developed to learn the segmentation knowledge from a source domain, and such
+GFN then transfers such segmentation knowledge to generate coarse object masks
+in the target domain. Such coarse object masks are treated as pseudo labels and
+they are further integrated to optimize/refine the GFN iteratively in the
+target domain. Our experiments on six image sets have demonstrated that our
+proposed approach can generate fine-grained object masks (i.e., pixel-level
+object labellings), whose quality is very comparable to the manually-labelled
+ones. Our proposed approach can also achieve better performance on semantic
+image segmentation than most existing weakly-supervised approaches.

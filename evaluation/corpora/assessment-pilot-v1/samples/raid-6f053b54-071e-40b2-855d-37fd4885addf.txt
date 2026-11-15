@@ -1,0 +1,16 @@
+Fine-grained annotations---e.g. dense image labels, image segmentation and
+text tagging---are useful in many ML applications but they are labor-intensive
+to generate. Moreover there are often systematic, structured errors in these
+fine-grained annotations. For example, a car might be entirely unannotated in
+the image, or the boundary between a car and street might only be coarsely
+annotated. Standard ML training on data with such structured errors produces
+models with biases and poor performance. In this work, we propose a novel
+framework of Error-Correcting Networks (ECN) to address the challenge of
+learning in the presence structured error in fine-grained annotations. Given a
+large noisy dataset with commonly occurring structured errors, and a much
+smaller dataset with more accurate annotations, ECN is able to substantially
+improve the prediction of fine-grained annotations compared to standard
+approaches for training on noisy data. It does so by learning to leverage the
+structures in the annotations and in the noisy labels. Systematic experiments
+on image segmentation and text tagging demonstrate the strong performance of
+ECN in improving training on noisy structured labels.

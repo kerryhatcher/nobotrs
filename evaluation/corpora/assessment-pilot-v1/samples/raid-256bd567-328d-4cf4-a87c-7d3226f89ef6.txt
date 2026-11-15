@@ -1,0 +1,16 @@
+Advances in image-based dietary assessment methods have allowed nutrition
+professionals and researchers to improve the accuracy of dietary assessment,
+where images of food consumed are captured using smartphones or wearable
+devices. These images are then analyzed using computer vision methods to
+estimate energy and nutrition content of the foods. Food image segmentation,
+which determines the regions in an image where foods are located, plays an
+important role in this process. Current methods are data dependent, thus cannot
+generalize well for different food types. To address this problem, we propose a
+class-agnostic food image segmentation method. Our method uses a pair of eating
+scene images, one before start eating and one after eating is completed. Using
+information from both the before and after eating images, we can segment food
+images by finding the salient missing objects without any prior information
+about the food class. We model a paradigm of top down saliency which guides the
+attention of the human visual system (HVS) based on a task to find the salient
+missing objects in a pair of images. Our method is validated on food images
+collected from a dietary study which showed promising results.

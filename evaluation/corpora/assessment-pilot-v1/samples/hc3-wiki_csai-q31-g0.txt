@@ -1,0 +1,9 @@
+The Church-Turing thesis is a fundamental principle in computer science, mathematics, and philosophy. It states that any computation that can be performed by a human using pen and paper can also be performed by a machine, as long as it is given the right instructions. In other words, the Church-Turing thesis asserts that all computations that are possible in principle can be performed by a computer.
+
+
+
+The thesis is named after two influential figures in the history of computer science: Alonzo Church and Alan Turing. Church was a logician and mathematician who developed the concept of the "effective calculability" of functions, which formed the basis for the Church-Turing thesis. Turing was a computer scientist and mathematician who is widely considered to be the father of modern computer science. He developed the concept of the "universal machine," which is a theoretical device that can perform any computation that is possible in principle.
+
+
+
+The Church-Turing thesis has had a major impact on the field of computer science, and it remains an important principle in the field today. It has also sparked considerable debate and discussion among philosophers and computer scientists, as it raises a number of interesting questions about the nature of computation and the limits of what can be computed.

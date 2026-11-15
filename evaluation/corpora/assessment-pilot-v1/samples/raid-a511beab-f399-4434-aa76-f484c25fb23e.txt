@@ -1,0 +1,15 @@
+Supervised deep learning performance is heavily tied to the availability of
+high-quality labels for training. Neural networks can gradually overfit
+corrupted labels if directly trained on noisy datasets, leading to severe
+performance degradation at test time. In this paper, we propose a novel deep
+learning framework, namely Co-Seg, to collaboratively train segmentation
+networks on datasets which include low-quality noisy labels. Our approach first
+trains two networks simultaneously to sift through all samples and obtain a
+subset with reliable labels. Then, an efficient yet easily-implemented label
+correction strategy is applied to enrich the reliable subset. Finally, using
+the updated dataset, we retrain the segmentation network to finalize its
+parameters. Experiments in two noisy labels scenarios demonstrate that our
+proposed model can achieve results comparable to those obtained from supervised
+learning trained on the noise-free labels. In addition, our framework can be
+easily implemented in any segmentation algorithm to increase its robustness to
+noisy labels.

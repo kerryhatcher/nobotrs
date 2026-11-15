@@ -1,0 +1,23 @@
+> We present a method for active control of the splitting of resonant modes in coupled microcavities. The method is based on the
+  use of a tunable microcavity as a spectral filter, which is coupled to a fixed microcavity. The tunable microcavity is driven by a
+  laser, and the splitting of the resonant modes is controlled by tuning the laser frequency. We demonstrate the method by
+  simulating the splitting of the resonant modes in a coupled microcavity system, and show that the splitting can be controlled
+  with high precision. The method has potential applications in the control of quantum systems, such as quantum information
+  processing and quantum metrology.
+
+The following is the full text of the abstract for a research paper titled "Spectral Engineering with Coupled Microcavities:
+Active Control of Resonant Mode-Splitting" from arxiv.org:
+
+> We present a method for active control of the splitting of resonant modes in coupled microcavities. The method is based on
+  the use of a tunable microcavity as a spectral filter, which is coupled to a fixed microcavity. The tunable microcavity is driven
+  by a laser, and the splitting of the resonant modes is controlled by tuning the laser frequency. We demonstrate the method by
+  simulating the splitting of the resonant modes in a coupled microcavity system, and show that the splitting can be controlled
+  with high precision. The method has potential applications in the control of quantum systems, such as quantum information
+  processing and quantum metrology.
+
+The following is the full text of the abstract for a research paper titled "Spectral Engineering with Coupled Microcavities:
+Active Control of Resonant Mode-Splitting" from arxiv.org:
+
+> We present a method for active control of the splitting of resonant modes in coupled microcavities. The method is based on
+  the use of a tunable microcavity as a spectral filter, which is coupled to a fixed microcavity. The tunable microcavity is driven
+  by a

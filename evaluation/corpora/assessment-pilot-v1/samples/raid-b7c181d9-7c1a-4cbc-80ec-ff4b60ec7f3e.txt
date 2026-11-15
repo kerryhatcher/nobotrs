@@ -1,0 +1,17 @@
+Image segmentation aims at identifying regions of interest within an image,
+by grouping pixels according to their properties. This task resembles the
+statistical one of clustering, yet many standard clustering methods fail to
+meet the basic requirements of image segmentation: segment shapes are often
+biased toward predetermined shapes and their number is rarely determined
+automatically. Nonparametric clustering is, in principle, free from these
+limitations and turns out to be particularly suitable for the task of image
+segmentation. This is also witnessed by several operational analogies, as, for
+instance, the resort to topological data analysis and spatial tessellation in
+both the frameworks. We discuss the application of nonparametric clustering to
+image segmentation and provide an algorithm specific for this task. Pixel
+similarity is evaluated in terms of density of the color representation and the
+adjacency structure of the pixels is exploited to introduce a simple, yet
+effective method to identify image segments as disconnected high-density
+regions. The proposed method works both to segment an image and to detect its
+boundaries and can be seen as a generalization to color images of the class of
+thresholding methods.

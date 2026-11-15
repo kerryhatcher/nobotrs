@@ -1,0 +1,113 @@
+{
+  "dataset": "liamdugan/raid",
+  "errors": [
+    {
+      "error": "The read operation timed out",
+      "job": [
+        "books",
+        "human"
+      ]
+    },
+    {
+      "error": "The read operation timed out",
+      "job": [
+        "abstracts",
+        "human"
+      ]
+    },
+    {
+      "error": "The read operation timed out",
+      "job": [
+        "abstracts",
+        "gpt4"
+      ]
+    }
+  ],
+  "license_url": "https://huggingface.co/datasets/liamdugan/raid/blob/865cac74188466cb0c3b7574a10204007b57a459/README.md",
+  "original_acquisition_sha256": "c8234b91c2d05db34cb0c92bd3d79c0fbb0a6bc9252d7084574cb12addee3e8a",
+  "portable_snapshot": true,
+  "purpose": "Fresh source records after conservative retirement of the first pilot holdout. No detector results or raw text displayed. Must exclude all source/near-duplicate groups used in retired pilot before independent assessment.",
+  "queries": [
+    {
+      "attack": "none",
+      "available": 3562,
+      "domain": "books",
+      "file": "responses/books-gpt4-offset500.json",
+      "length": 50,
+      "model": "gpt4",
+      "offset": 500,
+      "partial_view": true,
+      "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+      "rows": 50,
+      "sha256": "39441188b0d075f7c74f26a5c291c1d5ee9d14c6a2d886502abd5a9066ae2cb7",
+      "upstream_split": "train",
+      "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27books%27+AND+%22model%22%3D%27gpt4%27+AND+%22attack%22%3D%27none%27&offset=500&length=50"
+    },
+    {
+      "attack": "none",
+      "available": 2270000,
+      "domain": "abstracts",
+      "file": "responses/rows-offset500.json",
+      "length": 100,
+      "model": "llama-chat",
+      "offset": 500,
+      "partial_view": true,
+      "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+      "rows": 100,
+      "selection": "predetermined unfiltered row window; metadata only inspected",
+      "sha256": "fb74c437c877d3466f6df7564c63205a93ba1e1d9ad89b901419fe24540f07f4",
+      "upstream_split": "train",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=liamdugan%2Fraid&config=raid&split=train&offset=500&length=100"
+    },
+    {
+      "attack": "none",
+      "available": 2270000,
+      "domain": "abstracts",
+      "file": "responses/rows-offset5000.json",
+      "length": 100,
+      "model": "mistral",
+      "offset": 5000,
+      "partial_view": true,
+      "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+      "rows": 100,
+      "selection": "predetermined unfiltered row window; metadata only inspected",
+      "sha256": "54e6bdd34cd78011bb48695d31d93d4a8e408cf8b61d8728a2c3ce2323858666",
+      "upstream_split": "train",
+      "url": "https://datasets-server.huggingface.co/rows?dataset=liamdugan%2Fraid&config=raid&split=train&offset=5000&length=100"
+    },
+    {
+      "attack": "none",
+      "available": 1766,
+      "domain": "abstracts",
+      "file": "responses/abstracts-human-offset50.json",
+      "length": 50,
+      "model": "human",
+      "offset": 50,
+      "partial_view": true,
+      "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+      "rows": 50,
+      "sha256": "9fc7c2766be804fba2e0ae492d1d6aa5c3335fe8eb6307f14c22899c3a4f5519",
+      "upstream_split": "train",
+      "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27abstracts%27+AND+%22model%22%3D%27human%27+AND+%22attack%22%3D%27none%27&offset=50&length=50"
+    },
+    {
+      "attack": "none",
+      "available": 1781,
+      "domain": "books",
+      "file": "responses/books-human-offset50.json",
+      "length": 50,
+      "model": "human",
+      "offset": 50,
+      "partial_view": true,
+      "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+      "rows": 50,
+      "sha256": "69e3b9a7db78a92396393db917e420f2d32a6b2bb0a31745b6673452b19bd410",
+      "upstream_split": "train",
+      "url": "https://datasets-server.huggingface.co/filter?dataset=liamdugan%2Fraid&config=raid&split=train&where=%22domain%22%3D%27books%27+AND+%22model%22%3D%27human%27+AND+%22attack%22%3D%27none%27&offset=50&length=50"
+    }
+  ],
+  "retrieved": "2026-11-14",
+  "retrieved_timezone": "America/New_York",
+  "revision": "865cac74188466cb0c3b7574a10204007b57a459",
+  "upstream_license": "MIT (dataset card declaration)"
+}

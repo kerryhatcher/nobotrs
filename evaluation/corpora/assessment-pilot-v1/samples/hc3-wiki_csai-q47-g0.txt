@@ -1,0 +1,13 @@
+An expert system is a computer program that is designed to mimic the decision-making abilities of a human expert in a particular field. Expert systems are based on the idea of artificial intelligence and are designed to replicate the expertise of a human expert by using a combination of computer software and data.
+
+
+
+Expert systems use a set of rules or a decision tree to make decisions and solve problems. These rules are based on the knowledge and experience of an expert in a particular field, and are stored in a computer program. The expert system uses these rules to analyze data, identify patterns, and make decisions or recommendations.
+
+
+
+Expert systems are used in a variety of fields, including medicine, engineering, and finance, to help make decisions and solve problems more efficiently. They can be used to diagnose medical conditions, design engineering solutions, or make investment recommendations, for example.
+
+
+
+Expert systems are considered to be a form of artificial intelligence and are often used in combination with other AI technologies, such as machine learning, to improve their accuracy and efficiency.

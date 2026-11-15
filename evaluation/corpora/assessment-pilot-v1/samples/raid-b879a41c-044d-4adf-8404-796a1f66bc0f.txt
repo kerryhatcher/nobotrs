@@ -1,0 +1,22 @@
+Magnetic resonance (MR) protocols rely on several sequences to assess
+pathology and organ status properly. Despite advances in image analysis, we
+tend to treat each sequence, here termed modality, in isolation. Taking
+advantage of the common information shared between modalities (an organ's
+anatomy) is beneficial for multi-modality processing and learning. However, we
+must overcome inherent anatomical misregistrations and disparities in signal
+intensity across the modalities to obtain this benefit. We present a method
+that offers improved segmentation accuracy of the modality of interest (over a
+single input model), by learning to leverage information present in other
+modalities, even if few (semi-supervised) or no (unsupervised) annotations are
+available for this specific modality. Core to our method is learning a
+disentangled decomposition into anatomical and imaging factors. Shared
+anatomical factors from the different inputs are jointly processed and fused to
+extract more accurate segmentation masks. Image misregistrations are corrected
+with a Spatial Transformer Network, which non-linearly aligns the anatomical
+factors. The imaging factor captures signal intensity characteristics across
+different modality data and is used for image reconstruction, enabling
+semi-supervised learning. Temporal and slice pairing between inputs are learned
+dynamically. We demonstrate applications in Late Gadolinium Enhanced (LGE) and
+Blood Oxygenation Level Dependent (BOLD) cardiac segmentation, as well as in T2
+abdominal segmentation. Code is available at
+https://github.com/vios-s/multimodal_segmentation.

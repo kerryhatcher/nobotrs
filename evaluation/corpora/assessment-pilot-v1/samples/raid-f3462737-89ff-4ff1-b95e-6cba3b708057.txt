@@ -1,0 +1,14 @@
+In this paper, we propose a novel image segmentation framework called Co-Seg, which is designed to be robust against label corruption. Label corruption, where the ground truth labels are incorrect or noisy, is a common problem in image segmentation tasks that can significantly degrade the performance of state-of-the-art segmentation models.
+
+Existing approaches to address label corruption typically involve either data preprocessing techniques, such as data augmentation and noise removal, or robust loss functions that can tolerate certain levels of label noise. However, these methods have limitations in terms of their ability to handle severe label corruption or their computational complexity.
+
+In contrast, Co-Seg takes a different approach by leveraging the power of co-segmentation, which involves segmenting the same image multiple times using different modalities or features. By combining the segmentation results from multiple modalities or features, Co-Seg can improve the robustness of the segmentation model to label corruption and achieve better performance.
+
+The key idea behind Co-Seg is to use a combination of modalities or features that are complementary to each other, such that the errors in one modality or feature can be compensated by the others. We propose a novel fusion strategy that combines the segmentation results from multiple modalities or features using a weighted averaging method, where the weights are learned from a small set of clean labels.
+
+We evaluate the performance of Co-Seg on several benchmark datasets, including PASCAL VOC and Cityscapes, under various label corruption scenarios. The results show that Co-Seg outperforms state-of-the-art segmentation models and is more robust to label corruption. In particular, Co-Seg achieves a 10% improvement in mean Intersection over Union (mIoU) compared to the baseline model on the PASCAL VOC dataset under a high label corruption rate.
+
+Our contributions can be summarized as follows:
+
+* We propose a novel image segmentation framework called Co-Seg that leverages co-segmentation to improve the robustness of segmentation models against label corruption.
+* We introduce a novel fusion strategy that combines the segmentation results from multiple modalities or features using a weighted aver

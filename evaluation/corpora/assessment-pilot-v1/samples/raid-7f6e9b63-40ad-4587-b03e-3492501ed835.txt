@@ -1,0 +1,16 @@
+Self-supervised learning has proven to be invaluable in making best use of
+all of the available data in biomedical image segmentation. One particularly
+simple and effective mechanism to achieve self-supervision is inpainting, the
+task of predicting arbitrary missing areas based on the rest of an image. In
+this work, we focus on image inpainting as the self-supervised proxy task, and
+propose two novel structural changes to further enhance the performance of a
+deep neural network. We guide the process of generating images to inpaint by
+using supervoxel-based masking instead of random masking, and also by focusing
+on the area to be segmented in the primary task, which we term as the
+region-of-interest. We postulate that these additions force the network to
+learn semantics that are more attuned to the primary task, and test our
+hypotheses on two applications: brain tumour and white matter hyperintensities
+segmentation. We empirically show that our proposed approach consistently
+outperforms both supervised CNNs, without any self-supervision, and
+conventional inpainting-based self-supervision methods on both large and small
+training set sizes.

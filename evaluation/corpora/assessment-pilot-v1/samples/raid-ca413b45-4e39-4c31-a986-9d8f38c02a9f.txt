@@ -1,0 +1,16 @@
+This paper addresses representational block named Hierarchical-Split Block,
+which can be taken as a plug-and-play block to upgrade existing convolutional
+neural networks, improves model performance significantly in a network.
+Hierarchical-Split Block contains many hierarchical split and concatenate
+connections within one single residual block. We find multi-scale features is
+of great importance for numerous vision tasks. Moreover, Hierarchical-Split
+block is very flexible and efficient, which provides a large space of potential
+network architectures for different applications. In this work, we present a
+common backbone based on Hierarchical-Split block for tasks: image
+classification, object detection, instance segmentation and semantic image
+segmentation/parsing. Our approach shows significant improvements over all
+these core tasks in comparison with the baseline. As shown in Figure1, for
+image classification, our 50-layers network(HS-ResNet50) achieves 81.28% top-1
+accuracy with competitive latency on ImageNet-1k dataset. It also outperforms
+most state-of-the-art models. The source code and models will be available on:
+https://github.com/PaddlePaddle/PaddleClas

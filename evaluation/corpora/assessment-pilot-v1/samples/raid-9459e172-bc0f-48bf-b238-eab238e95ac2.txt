@@ -1,0 +1,16 @@
+We present a novel region based active learning method for semantic image
+segmentation, called MetaBox+. For acquisition, we train a meta regression
+model to estimate the segment-wise Intersection over Union (IoU) of each
+predicted segment of unlabeled images. This can be understood as an estimation
+of segment-wise prediction quality. Queried regions are supposed to minimize to
+competing targets, i.e., low predicted IoU values / segmentation quality and
+low estimated annotation costs. For estimating the latter we propose a simple
+but practical method for annotation cost estimation. We compare our method to
+entropy based methods, where we consider the entropy as uncertainty of the
+prediction. The comparison and analysis of the results provide insights into
+annotation costs as well as robustness and variance of the methods. Numerical
+experiments conducted with two different networks on the Cityscapes dataset
+clearly demonstrate a reduction of annotation effort compared to random
+acquisition. Noteworthily, we achieve 95%of the mean Intersection over Union
+(mIoU), using MetaBox+ compared to when training with the full dataset, with
+only 10.47% / 32.01% annotation effort for the two networks, respectively.

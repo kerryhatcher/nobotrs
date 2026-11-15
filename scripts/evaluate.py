@@ -264,6 +264,8 @@ def main():
                 "id": sample["id"],
                 "label": sample.get("label"),
                 "slice": sample["slice"],
+                "source_group": sample["source_group"],
+                "near_duplicate_group": sample.get("near_duplicate_group"),
                 "dimension_values": sample.get("dimension_values", {}),
                 "verdict": report["verdict"],
                 "complete": report["complete"],

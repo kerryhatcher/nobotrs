@@ -1,0 +1,18 @@
+Image segmentation and classification are the two main fundamental steps in
+pattern recognition. To perform medical image segmentation or classification
+with deep learning models, it requires training on large image dataset with
+annotation. The dermoscopy images (ISIC archive) considered for this work does
+not have ground truth information for lesion segmentation. Performing manual
+labelling on this dataset is time-consuming. To overcome this issue,
+self-learning annotation scheme was proposed in the two-stage deep learning
+algorithm. The two-stage deep learning algorithm consists of U-Net segmentation
+model with the annotation scheme and CNN classifier model. The annotation
+scheme uses a K-means clustering algorithm along with merging conditions to
+achieve initial labelling information for training the U-Net model. The
+classifier models namely ResNet-50 and LeNet-5 were trained and tested on the
+image dataset without segmentation for comparison and with the U-Net
+segmentation for implementing the proposed self-learning Artificial
+Intelligence (AI) framework. The classification results of the proposed AI
+framework achieved training accuracy of 93.8% and testing accuracy of 82.42%
+when compared with the two classifier models directly trained on the input
+images.

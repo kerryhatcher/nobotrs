@@ -1,0 +1,3 @@
+> We introduce a notion of weighted Sobolev spaces on metric measure spaces. We show that the weighted Sobolev spaces are independent of the choice of the weight function and that the weighted Sobolev spaces are independent of the choice of the metric measure space. We also show that the weighted Sobolev spaces are independent of the choice of the weight function and that the weighted Sobolev spaces are independent of the choice of the metric measure space.
+
+The paper is available here.

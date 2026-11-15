@@ -1,0 +1,12 @@
+In this paper, we propose a novel approach to medical image segmentation that leverages knowledge transfer from pre-trained deep neural networks, without requiring explicit network architecture modifications or task-specific fine-tuning. Our method, called Network-Agnostic Knowledge Transfer (NAKT), exploits the shared underlying structure present in various medical imaging modalities and applications, to transfer knowledge across different segmentation tasks. This is achieved by using a domain adaptation technique that aligns feature representations from source and target domains, allowing the sharing of knowledge between them.
+
+We evaluate NAKT on three distinct medical image segmentation tasks: brain tumor segmentation from magnetic resonance imaging (MRI), lung nodule detection from computed tomography (CT) scans, and retinal vessel segmentation from fundus images. Our results show that NAKT outperforms traditional fine-tuning methods, achieving state-of-the-art performance on all three tasks while using significantly fewer annotations. Additionally, we demonstrate the generalizability of NAKT by applying it to unseen datasets and comparing its performance to task-specific architectures.
+
+The key contributions of this paper are:
+
+1. The introduction of Network-Agnostic Knowledge Transfer (NAKT), a novel approach to medical image segmentation that enables knowledge transfer across different segmentation tasks and imaging modalities.
+2. The development of a domain adaptation technique that aligns feature representations from source and target domains, enabling the sharing of knowledge between them.
+3. An extensive evaluation of NAKT on three diverse medical image segmentation tasks, demonstrating its superiority over traditional fine-tuning methods and highlighting its potential as a versatile solution for segmentation tasks in medical imaging.
+4. The demonstration of NAKT's generalizability by applying it to unseen datasets and comparing its performance to task-specific architectures.
+
+Overall, our work has important implications for the efficient utilization of annotated data in medical image segmentation tasks, paving the way for more robust and adaptable AI models that can be applied to a wide range of medical imaging applications.

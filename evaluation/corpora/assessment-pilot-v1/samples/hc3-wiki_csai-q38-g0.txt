@@ -1,0 +1,9 @@
+In computer science, a heuristic is a technique that allows a computer program to find a solution to a problem more quickly than would be possible using an algorithm that guarantees a correct solution. Heuristics are often used when an exact solution is not necessary or when it is not feasible to find an exact solution because of the amount of time or resources it would require.
+
+
+
+Heuristics are typically used to solve optimization problems, where the goal is to find the best solution out of a set of possible solutions. For example, in the traveling salesman problem, the goal is to find the shortest route that visits a set of cities and returns to the starting city. An algorithm that guarantees a correct solution to this problem would be very slow, so heuristics are often used instead to quickly find a solution that is close to the optimal one.
+
+
+
+Heuristics can be very effective, but they are not guaranteed to find the optimal solution, and the quality of the solution they find may vary depending on the specific problem and the heuristic used. As a result, it is important to carefully evaluate the quality of the solutions found by a heuristic and to consider whether an exact solution is necessary in a particular context.

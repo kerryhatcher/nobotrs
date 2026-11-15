@@ -115,7 +115,9 @@ Use development data for feature work and validation data for threshold choices.
 family contributions without rerunning extraction. Sweeps are rejected for
 regression and independent-test splits. Selection results are not independent
 test performance. The pilot's cached validation selection note is
-[raid-pilot-selection.md](raid-pilot-selection.md).
+[raid-pilot-selection.md](raid-pilot-selection.md). Metadata-only result summaries
+with source-component cluster bootstrap are documented in
+[summary-reporting.md](summary-reporting.md).
 
 ## Python reference and burstiness references
 
@@ -130,7 +132,16 @@ documented in [raid-pilot.md](raid-pilot.md). It is a partial API view with
 1,100 samples, is not the complete RAID benchmark, and is not an accuracy
 certification. Its 218-sample independent-test split was retired as exposed
 selection data after a Git diff whitespace exposure; `retirement.json` binds that
-status, and preflight/evaluation refuse freeze or independent assessment. The
+status, and preflight/evaluation refuse freeze or independent assessment.
+
+A separate joint HC3 + fresh RAID assessment pilot is at
+[`evaluation/corpora/assessment-pilot-v1`](../../evaluation/corpora/assessment-pilot-v1),
+documented in [assessment-pilot.md](assessment-pilot.md). Its curation and
+metadata-only preflight are complete; no detector has run, its independent-test
+split is unread, and its release criteria are proposed, not frozen. A separate
+development-only mechanical HC3 mixed-control corpus is documented in
+[mixed-controls.md](mixed-controls.md); its controls have null labels and no
+detector result exists. The
 evaluated-release gate remains open. There are no independently measured
 accuracy, false-positive, or calibrated probability claims. Optional models,
 SAEs, MCP/TUI, and humanization remain deferred.

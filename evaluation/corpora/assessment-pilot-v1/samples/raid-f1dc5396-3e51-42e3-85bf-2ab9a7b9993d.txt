@@ -1,0 +1,4 @@
+Stoil Katzarov (University Paris Diderot) and Béla Csaba Nagy (Central European University, Hungary): Abstract
+We prove that every graph of order n with maximum degree \Delta &gE; [19] has an irreversible 2- conversion
+set S such that |S| < g(n,\Delta), where $latex e^* = ((C_3)/(3))^6$ is given by $$e^*=\begin{cases} 168\cdot \frac{{{(e^{(\log {n}/{\log {(4e)}} ))}}}^{(\max {\{{\cal P}_5+o(1),\ln (L)} } ) } }{({e^{(\log {n}/{\lg {(\tfrac{1}{4})+\theta(1/k)-\epsilon) }}+o(1)}}) }, &\text{if } k<<q \\
+\frac{{{(e^{\max {{P_{\!q}}(3)+o(1)},{P_\!(C_{5},k)}\,(t/\gamma)\ln q+(1-\theta /{({t/\gamma}+\ln t+O(1)))}),\;\; (b<T<c}\!\}})^{O((n/{p}^{(c}))} , & \mbox{if } k>>q, {{\dot L}}\le\min {{P}_{\!(3,q)}(r)^{\lambda/(1+\lambda)}, \, r=T\,,\; k={l_{L}\,,\;\; t =\log p, }} \end{array}$${{\mathstrut }}\displaystyle\in \{0,.2\} $, where ${(X)^a}:={{((Y)_1^y......_(Y)_{ab}^z)(Y)$, $\frac{1}{\rho}\cdot e^{-y/2}$, and ${\bar{\cal Z}}$ are some functions to be defined later.

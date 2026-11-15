@@ -1,0 +1,95 @@
+{
+  "corpus_content_sha256": "c0ba2e11a2921aaa9e6957f12f94f35cad9fb472027e455ca486690af9c2c140",
+  "corpus_version": "assessment-pilot-v1",
+  "cross_corpus_components": 0,
+  "curation_sha256": "ad89bf0ea3822e7001ca6cc2ec5dab48c51abb534b1283712094bf675cfc1fba",
+  "dimensions": {
+    "attack": {
+      "none": 964
+    },
+    "corpus_source": {
+      "hc3": 707,
+      "raid-fresh": 257
+    },
+    "domain": {
+      "abstracts": 157,
+      "books": 100,
+      "finance": 107,
+      "medicine": 100,
+      "open_qa": 200,
+      "reddit_eli5": 200,
+      "wiki_csai": 100
+    },
+    "generator": {
+      "chatgpt": 357,
+      "gpt4": 50,
+      "human": 450,
+      "llama-chat": 7,
+      "mistral": 100
+    },
+    "hc3_question_band": {
+      "0-14": 211,
+      "15-49": 496,
+      "not-applicable": 257
+    },
+    "label": {
+      "generated": 514,
+      "human": 450
+    },
+    "language_hint": {
+      "unknown": 964
+    },
+    "length_bucket": {
+      "100-249": 505,
+      "250-499": 197,
+      "500-plus": 22,
+      "lt-100": 240
+    },
+    "pairing": {
+      "single": 964
+    }
+  },
+  "exclusions": {
+    "old_raid_v1_source_id_overlap": 93
+  },
+  "limitations": [
+    "Limited pilot, not a complete HC3 or RAID benchmark and not an accuracy certification.",
+    "HC3 uses only the first 50 pinned records from five source files.",
+    "HC3 question ordinals are local nonempty record positions; the source has no stable row id.",
+    "HC3 source IDs/question IDs 0-14 are forced to development conservatively across all five sources.",
+    "Fresh RAID is a 350-row partial API window with 100 human rows; most RAID cells are absent.",
+    "Fresh RAID rows overlapping any old RAID v1 source_id are excluded.",
+    "HC3 and fresh RAID samples overlapping any old RAID v1 normalized text or 5-shingle Jaccard >=0.8 are excluded.",
+    "No native-speaker labels are present or inferred.",
+    "The default unknown-language policy is retained; no per-sample overrides are frozen.",
+    "No mixed human-prefix/generated-suffix controls are included in this version.",
+    "No detector has been run on these corpora; independent-test text is not read by curation preflight."
+  ],
+  "manifest_sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
+  "rejections": {},
+  "samples": 964,
+  "split_components": {
+    "development": 251,
+    "independent-test": 86,
+    "validation": 80
+  },
+  "split_labels": {
+    "development": {
+      "generated": 301,
+      "human": 277
+    },
+    "independent-test": {
+      "generated": 104,
+      "human": 89
+    },
+    "validation": {
+      "generated": 109,
+      "human": 84
+    }
+  },
+  "splits": {
+    "development": 578,
+    "independent-test": 193,
+    "validation": 193
+  }
+}

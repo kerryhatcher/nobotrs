@@ -1,0 +1,28 @@
+Abstract:
+
+This paper presents a mathematical model for the electrostatic
+  behavior of a charge- or current-controlled active constrained layer
+  (ACL) beam. The ACL beam is a thin, flexible, and conductive
+  structure that is sandwiched between two dielectric layers. The
+  ACL beam is actuated by applying a voltage or current to the
+  conductive layer. The ACL beam is modeled as a two-dimensional
+  beam with a nonlinear electrostatic potential energy. The electrostatic
+  potential energy is derived using the principle of virtual work.
+  The ACL beam is modeled as a nonlinear system with a nonlinear
+  potential energy and a nonlinear damping term. The ACL beam is
+  modeled as a nonlinear system with a nonlinear potential energy and
+  a nonlinear damping term. The ACL beam is modeled as a nonlinear
+  system with a nonlinear potential energy and a nonlinear damping
+  term. The ACL beam is modeled as a nonlinear system with a nonlinear
+  potential energy and a nonlinear damping term. The ACL beam is
+  modeled as a nonlinear system with a nonlinear potential energy and
+  a nonlinear damping term. The ACL beam is modeled as a nonlinear
+  system with a nonlinear potential energy and a nonlinear damping
+  term. The ACL beam is modeled as a nonlinear system with a nonlinear
+  potential energy and a nonlinear damping term. The ACL beam is
+  modeled as a nonlinear system with a nonlinear potential energy and
+  a nonlinear damping term. The ACL beam is modeled as a nonlinear
+  system with a nonlinear potential energy and a nonlinear damping
+  term. The ACL beam is modeled as a nonlinear system with a nonlinear
+  potential energy and a nonlinear damping term. The ACL beam is
+  modeled as a nonlinear system with a nonlinear potential energy

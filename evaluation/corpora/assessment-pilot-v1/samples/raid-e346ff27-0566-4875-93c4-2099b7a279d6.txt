@@ -1,0 +1,20 @@
+Computer vision tasks such as semantic segmentation perform very well in good
+weather conditions, but if the weather turns bad, they have problems to achieve
+this performance in these conditions. One possibility to obtain more robust and
+reliable results in adverse weather conditions is to use video-segmentation
+approaches instead of commonly used single-image segmentation methods.
+Video-segmentation approaches capture temporal information of the previous
+video-frames in addition to current image information, and hence, they are more
+robust against disturbances, especially if they occur in only a few frames of
+the video-sequence. However, video-segmentation approaches, which are often
+based on recurrent neural networks, cannot be applied in real-time applications
+anymore, since their recurrent structures in the network are computational
+expensive. For instance, the inference time of the LSTM-ICNet, in which
+recurrent units are placed at proper positions in the single-segmentation
+approach ICNet, increases up to 61 percent compared to the basic ICNet. Hence,
+in this work, the LSTM-ICNet is sped up by modifying the recurrent units of the
+network so that it becomes real-time capable again. Experiments on different
+datasets and various weather conditions show that the inference time can be
+decreased by about 23 percent by these modifications, while they achieve
+similar performance than the LSTM-ICNet and outperform the single-segmentation
+approach enormously in adverse weather conditions.

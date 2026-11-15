@@ -1,0 +1,14 @@
+Google Search (also known simply as Google) is a search engine provided by Google. Handling more than 3.5 billion searches per day, it has a 92% share of the global search engine market. It is also the most-visited website in the world.
+The order of search results returned by Google is based, in part, on a priority rank system called "PageRank". Google Search also provides many different options for customized searches, using symbols to include, exclude, specify or require certain search behavior, and offers specialized interactive experiences, such as flight status and package tracking, weather forecasts, currency, unit, and time conversions, word definitions, and more.
+The main purpose of Google Search is to search for text in publicly accessible documents offered by web servers, as opposed to other data, such as images or data contained in databases. It was originally developed in 1996 by Larry Page, Sergey Brin, and Scott Hassan. In 2011, Google introduced "Google Voice Search" to search for spoken, rather than typed, words. In 2012, Google introduced a Knowledge Graph semantic search feature.
+Analysis of the frequency of search terms may indicate economic, social and health trends.[10] Data about the frequency of use of search terms on Google can be openly inquired via Google Trends and have been shown to correlate with flu outbreaks and unemployment levels, and provide the information faster than traditional reporting methods and surveys. As of mid-2016, Google's search engine has begun to rely on deep neural networks.[11]
+
+Google Search is a web search engine developed by Google. It is the most widely used search engine on the World Wide Web, handling more than three billion searches each day. Google Search allows users to search for information on the Internet by entering keywords, or phrases, into a search field. The search results are then displayed as a list of web pages, with the most relevant pages appearing at the top of the list.
+
+
+
+Google Search uses complex algorithms to determine the relevance and quality of the web pages it returns in response to a search query. These algorithms consider factors such as the number and quality of links to a page, the relevance of the page's content to the search query, and the presence of certain keywords on the page.
+
+
+
+In addition to returning web pages, Google Search can also return other types of results, such as images, news articles, and videos. Users can also use advanced search options, such as searching within a specific website or searching for a specific type of file, to refine their search results.

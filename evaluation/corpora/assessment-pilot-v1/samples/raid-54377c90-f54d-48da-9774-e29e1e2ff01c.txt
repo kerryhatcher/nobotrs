@@ -1,0 +1,9 @@
+> Abstract:
+>
+> We present a new method for estimating the residual amplitude modulation in interferometric gravitational wave detectors. The method is based on the use of a single-sided spectral density estimator, which is a generalization of the Welch method. The method is applied to data from the LIGO Hanford and Livingston detectors, and the results are compared with those obtained using the standard Welch method. We find that the new method is more sensitive to the presence of residual amplitude modulation, and that it is able to detect modulation at lower frequencies than the Welch method. We also find that the new method is able to detect modulation at higher frequencies than the Welch method.
+
+The paper is available here:
+
+https://arxiv.org/abs/2203.00001
+
+Last edited:

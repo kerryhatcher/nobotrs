@@ -1,0 +1,3 @@
+> The Social Force Model (SFM) is a popular model for pedestrian dynamics. It is based on the assumption that the pedestrians move in a stationary environment. In this paper, we show that this assumption is not valid in the case of evacuation. We show that the evacuation process is not stationary, and that the evacuation time is not a function of the number of pedestrians. We also show that the evacuation time is not a function of the number of pedestrians.
+
+The paper is available here.

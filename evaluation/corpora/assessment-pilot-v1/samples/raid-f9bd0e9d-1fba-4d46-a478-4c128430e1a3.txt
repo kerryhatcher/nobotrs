@@ -1,0 +1,18 @@
+The 3D volumetric shape of the heart's left ventricle (LV) myocardium (MYO)
+wall provides important information for diagnosis of cardiac disease and
+invasive procedure navigation. Many cardiac image segmentation methods have
+relied on detection of region-of-interest as a pre-requisite for shape
+segmentation and modeling. With segmentation results, a 3D surface mesh and a
+corresponding point cloud of the segmented cardiac volume can be reconstructed
+for further analyses. Although state-of-the-art methods (e.g., U-Net) have
+achieved decent performance on cardiac image segmentation in terms of accuracy,
+these segmentation results can still suffer from imaging artifacts and noise,
+which will lead to inaccurate shape modeling results. In this paper, we propose
+a PC-U net that jointly reconstructs the point cloud of the LV MYO wall
+directly from volumes of 2D CT slices and generates its segmentation masks from
+the predicted 3D point cloud. Extensive experimental results show that by
+incorporating a shape prior from the point cloud, the segmentation masks are
+more accurate than the state-of-the-art U-Net results in terms of Dice's
+coefficient and Hausdorff distance.The proposed joint learning framework of our
+PC-U net is beneficial for automatic cardiac image analysis tasks because it
+can obtain simultaneously the 3D shape and segmentation of the LV MYO walls.

@@ -1,0 +1,21 @@
+Deep learning has achieved great success as a powerful classification tool
+and also made great progress in sematic segmentation. As a result, many
+researchers also believe that deep learning is the most powerful tool for pixel
+level image segmentation. Could deep learning achieve the same pixel level
+accuracy as traditional image segmentation techniques by mapping the features
+of the object into a non-linear function? This paper gives a short survey of
+the accuracies achieved by deep learning so far in image classification and
+image segmentation. Compared to the high accuracies achieved by deep learning
+in classifying limited categories in international vision challenges, the image
+segmentation accuracies achieved by deep learning in the same challenges are
+only about eighty percent. On the contrary, the image segmentation accuracies
+achieved in international biomedical challenges are close to ninty five
+percent. Why the difference is so big? Since the accuracies of the competitors
+methods are only evaluated based on their submitted results instead of
+reproducing the results by submitting the source codes or the software, are the
+achieved accuracies verifiable or overhyped? We are going to find it out by
+analyzing the working principle of deep learning. Finally, we compared the
+accuracies of state of the art deep learning methods with a threshold selection
+method quantitatively. Experimental results showed that the threshold selection
+method could achieve significantly higher accuracy than deep learning methods
+in image segmentation.

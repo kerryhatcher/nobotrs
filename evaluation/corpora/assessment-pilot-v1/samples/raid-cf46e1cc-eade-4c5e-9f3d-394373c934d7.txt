@@ -1,0 +1,37 @@
+> We consider the asymptotics of the coefficients of a multivariate generating function $F(x_1, \ldots, x_n)$ as the variables tend to zero. We assume that $F$ is smooth at the origin, and that the coefficients of $F$ are nonnegative. We show that the asymptotics of the coefficients of $F$ are determined by the asymptotics of the coefficients of the partial derivatives of $F$ at the origin. We also show that the asymptotics of the coefficients of $F$ are determined by the asymptotics of the coefficients of the partial derivatives of $F$ at the origin, and that the asymptotics of the coefficients of $F$ are determined by the asymptotics of the coefficients of the partial derivatives of $F$ at the origin.
+
+The paper is available at:
+
+https://arxiv.org/abs/1903.08834
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.08834.pdf
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.08834.pdf
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.08834.pdf
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.08834.pdf
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.08834.pdf
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.08834.pdf
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.08834.pdf
+
+The paper is also available at:
+
+https://arxiv.org/pdf/1903.0883

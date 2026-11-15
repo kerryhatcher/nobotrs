@@ -1,0 +1,21 @@
+Despite deep convolutional neural networks achieved impressive progress in
+medical image computing and analysis, its paradigm of supervised learning
+demands a large number of annotations for training to avoid overfitting and
+achieving promising results. In clinical practices, massive semantic
+annotations are difficult to acquire in some conditions where specialized
+biomedical expert knowledge is required, and it is also a common condition
+where only few annotated classes are available. In this work, we proposed a
+novel method for few-shot medical image segmentation, which enables a
+segmentation model to fast generalize to an unseen class with few training
+images. We construct our few-shot image segmentor using a deep convolutional
+network trained episodically. Motivated by the spatial consistency and
+regularity in medical images, we developed an efficient global correlation
+module to capture the correlation between a support and query image and
+incorporate it into the deep network called global correlation network.
+Moreover, we enhance discriminability of deep embedding to encourage clustering
+of the feature domains of the same class while keep the feature domains of
+different organs far apart. Ablation Study proved the effectiveness of the
+proposed global correlation module and discriminative embedding loss. Extensive
+experiments on anatomical abdomen images on both CT and MRI modalities are
+performed to demonstrate the state-of-the-art performance of our proposed
+model.

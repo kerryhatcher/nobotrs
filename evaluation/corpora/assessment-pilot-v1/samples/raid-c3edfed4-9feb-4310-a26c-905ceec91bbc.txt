@@ -1,0 +1,15 @@
+> Abstract:
+>
+> In this paper, we consider the problem of multicell coordinated beamforming with rate outage constraint. We first formulate the problem as a mixed integer nonlinear programming (MINLP) problem, and then propose a novel algorithm to solve it. The proposed algorithm is based on the idea of successive convex approximation (SCA), and it is shown that the proposed algorithm can converge to a stationary point of the original problem. We also propose a heuristic algorithm to solve the problem. The proposed heuristic algorithm is based on the idea of successive convex relaxation (SCR), and it is shown that the proposed heuristic algorithm can converge to a stationary point of the original problem. Numerical results show that the proposed algorithms can achieve significant performance gains over the existing algorithms.
+
+The following is the full text of the abstract for a research paper titled "Multicell Coordinated Beamforming with Rate Outage Constraint--Part I:  Problem Formulation and Algorithm Design" from arxiv.org:
+
+> Abstract:
+>
+> In this paper, we consider the problem of multicell coordinated beamforming with rate outage constraint. We first formulate the problem as a mixed integer nonlinear programming (MINLP) problem, and then propose a novel algorithm to solve it. The proposed algorithm is based on the idea of successive convex approximation (SCA), and it is shown that the proposed algorithm can converge to a stationary point of the original problem. We also propose a heuristic algorithm to solve the problem. The proposed heuristic algorithm is based on the idea of successive convex relaxation (SCR), and it is shown that the proposed heuristic algorithm can converge to a stationary point of the original problem. Numerical results show that the proposed algorithms can achieve significant performance gains over the existing algorithms.
+
+The following is the full text of the abstract for a research paper titled "Multicell Coordinated Beamforming with Rate Outage Constraint--Part III:  Numerical Results" from arxiv.org:
+
+> Abstract:
+>
+> In this paper, we

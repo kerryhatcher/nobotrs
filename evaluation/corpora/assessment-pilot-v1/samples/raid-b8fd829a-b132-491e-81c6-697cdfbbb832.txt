@@ -1,0 +1,17 @@
+> Hyperspectral unmixing is a challenging problem in remote sensing.
+> The goal is to estimate the abundances of the different materials
+> present in a scene from a hyperspectral image. The problem is
+> ill-posed and the solution is highly non-unique. In this paper, we
+> propose a new method for hyperspectral unmixing based on sparse
+> regression. The proposed method is based on a new sparse regression
+> algorithm that uses spatially correlated supports. The proposed
+> algorithm is shown to be more efficient than the state-of-the-art
+> sparse regression algorithms. The proposed method is applied to
+> hyperspectral unmixing and is shown to outperform the state-of-the-art
+> methods.
+
+The paper is available at:
+http://arxiv.org/abs/1303.3089
+
+The paper is also available at:
+http://www.cs.cmu.edu/~jsharma/papers/hyperspectral.pdf

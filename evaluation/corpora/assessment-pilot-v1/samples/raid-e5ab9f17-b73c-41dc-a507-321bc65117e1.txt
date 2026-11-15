@@ -1,0 +1,15 @@
+> Quantitative automata are a generalization of classical automata, where the transition probabilities are not restricted to be either 0 or 1. They are used to model probabilistic systems, and are a natural model for systems where the behavior is not fully deterministic.
+>
+> In this paper, we study the problem of model checking quantitative automata under probabilistic semantics. We show that the problem is decidable for a large class of quantitative automata, and that the complexity is in PSPACE. We also show that the problem is undecidable for a large class of quantitative automata, and that the complexity is in EXPSPACE.
+>
+> We also show that the problem is decidable for a large class of quantitative automata, and that the complexity is in PSPACE. We also show that the problem is undecidable for a large class of quantitative automata, and that the complexity is in EXPSPACE.
+>
+> We also show that the problem is decidable for a large class of quantitative automata, and that the complexity is in PSPACE. We also show that the problem is undecidable for a large class of quantitative automata, and that the complexity is in EXPSPACE.
+>
+> We also show that the problem is decidable for a large class of quantitative automata, and that the complexity is in PSPACE. We also show that the problem is undecidable for a large class of quantitative automata, and that the complexity is in EXPSPACE.
+>
+> We also show that the problem is decidable for a large class of quantitative automata, and that the complexity is in PSPACE. We also show that the problem is undecidable for a large class of quantitative automata, and that the complexity is in EXPSPACE.
+>
+> We also show that the problem is decidable for a large class of quantitative automata, and that the complexity is in PSPACE. We also show that the problem is undecidable for a large class of quantitative automata, and that the complexity is in EXPSPACE.
+>
+> We also show that the problem is decidable for a large class

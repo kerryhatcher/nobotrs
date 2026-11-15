@@ -17,6 +17,60 @@ reshuffled, or whitespace-normalized. `.gitattributes` marks raw corpus samples
 and source response JSON/JSONL payloads `-text -diff`. Reviewers must not display
 held-out payloads.
 
+## CURRENT: joint assessment pilot v1 curated and preflighted; not run/frozen
+
+`evaluation/corpora/assessment-pilot-v1` combines pinned HC3
+(`Hello-SimpleAI/HC3@4d0ff181...`, CC-BY-SA-4.0, first 50 records each of five
+sources) with the fresh 350-row RAID cache (`liamdugan/raid@865cac74...`, MIT,
+100 human rows). It has 964 accepted samples (707 HC3, 257 fresh RAID), 417
+components, and 578/193/193 development/validation/independent-test splits.
+HC3 question IDs 0-14 are forced to development across all five sources. Old
+RAID v1 exclusion is whole-component: 93 fresh RAID rows were excluded by old
+`source_id`, and any sibling/transitive exact or near-duplicate component would
+also be excluded. Old manifest/content/retirement hashes and old sample content
+hashes are verified before exclusion. No accepted sample overlaps old RAID v1 by
+exact or near text in this snapshot. No native-speaker labels or mixed controls
+are included.
+
+Hashes: manifest `7d6ffed1...`, content `c0ba2e11...`, curation `ad89bf0e...`,
+preflight `29bc7756...`; criteria `44c06553...` are **proposed/not frozen**. The
+assessment preflight reads development/validation only, reports 193 held-out IDs
+as not read, and writes no access/freeze record. No detector has run. Reviewers
+must not display HC3 questions/answers or response payloads. `.gitattributes`
+covers sample text and nested HC3/RAID response JSON/JSONL.
+
+Review fixes incorporated: exclusion propagates to entire connected components
+(synthetic sibling + cross-corpus transitive regression); old corpus binding and
+exact content hashes are validated; nested source-response attributes are tested;
+criteria say proposed/not frozen; occupied output is refused before source reads
+and unrelated files are preserved. HC3 metadata question audit found 250 unique
+normalized question hashes and 0 duplicates, so no question-hash union was needed
+for this snapshot; the assessment manifest was not regenerated for that rule.
+
+A separate development-only `evaluation/corpora/mixed-controls-v1` contains 156
+mechanical HC3 controls (human-prefix + generated-suffix, label null, exact
+transformation provenance, CC-BY-SA-4.0 attribution). It reads only assessment
+development samples, never held-out text, and does not alter the assessment
+manifest. Manifest `f2130c03...`, content `d101fd6d...`, curation `49587de2...`,
+summary `b31db0aa...`. No detector has run.
+
+Metadata-only reporting infrastructure: `scripts/summarize_evaluation.py` adds
+fixed-seed source-component cluster bootstrap for precision/recall/F1/FPR/coverage
+with valid-replicate counts, null zero denominators, overall and
+source/domain/generator slices, runtime, abstentions, no AUC, and explicit
+biased-pilot/nonnative/human-edited limitations. It does not run the detector.
+Tests are in `scripts/test_summarize_evaluation.py`; docs in
+`docs/evaluation/summary-reporting.md`.
+
+Production follow-up completed: SARIF now declares
+`runs[].columnKind: unicodeCodePoints`; severity levels map deliberately from
+evidence severity (`low`→`note`, `medium`→`warning`, `high`→`error`) and match
+rule defaults; Cargo describes offline heuristic prose linting with uncalibrated
+writing-tell signals. The integration checker passed all four groups under
+`uv run --with jsonschema==4.26.0 python scripts/integration_acceptance.py
+--schema /tmp/nobotrs-sarif-schema.json`. `scripts/integration_acceptance.py`
+and supervisor-owned provenance/research edits were not modified.
+
 The continuation text below is a historical pre-exposure record retained for
 audit. Statements about an "unopened" independent split describe the state before
 the exposure and are superseded by this retirement status.

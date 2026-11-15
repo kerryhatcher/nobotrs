@@ -1,0 +1,13 @@
+Fifth generation computers, also known as 5G computers, refer to a class of computers that were developed in the 1980s and early 1990s with the goal of creating intelligent machines that could perform tasks that normally require human-level intelligence. These computers were intended to be able to reason, learn, and adapt to new situations in a way that is similar to how humans think and solve problems.
+
+
+
+Fifth generation computers were characterized by the use of artificial intelligence (AI) techniques, such as expert systems, natural language processing, and machine learning, to enable them to perform tasks that require a high degree of knowledge and decision-making ability. They were also designed to be highly parallel, meaning that they could perform many tasks at the same time, and to be able to handle large amounts of data efficiently.
+
+
+
+Some examples of fifth generation computers include the Japanese Fifth Generation Computer Systems (FGCS) project, which was a research project funded by the Japanese government in the 1980s to develop advanced AI-based computer systems, and the IBM Deep Blue computer, which was a fifth generation computer that was able to defeat the world chess champion in 1997.
+
+
+
+Today, many modern computers are considered to be fifth generation computers or beyond, as they incorporate advanced AI and machine learning capabilities and are able to perform a wide range of tasks that require human-level intelligence.

@@ -1,0 +1,3 @@
+> We study the consistency of matter models with asymptotically safe quantum gravity. We consider a class of matter models that are described by a scalar field with a non-minimal coupling to gravity. We show that the matter models are consistent with asymptotically safe quantum gravity if the scalar field has a mass that is much smaller than the Planck mass. We also show that the matter models are consistent with asymptotically safe quantum gravity if the scalar field has a mass that is much larger than the Planck mass. We also show that the matter models are consistent with asymptotically safe quantum gravity if the scalar field has a mass that is of the order of the Planck mass.
+
+The paper is available here.

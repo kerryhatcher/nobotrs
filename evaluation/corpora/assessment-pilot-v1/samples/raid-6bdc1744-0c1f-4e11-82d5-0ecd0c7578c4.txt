@@ -1,0 +1,14 @@
+Recently, Deep-Neural-Network (DNN) based edge prediction is progressing
+fast. Although the DNN based schemes outperform the traditional edge detectors,
+they have much higher computational complexity. It could be that the DNN based
+edge detectors often adopt the neural net structures designed for high-level
+computer vision tasks, such as image segmentation and object recognition. Edge
+detection is a rather local and simple job, the over-complicated architecture
+and massive parameters may be unnecessary. Therefore, we propose a traditional
+method inspired framework to produce good edges with minimal complexity. We
+simplify the network architecture to include Feature Extractor, Enrichment, and
+Summarizer, which roughly correspond to gradient, low pass filter, and pixel
+connection in the traditional edge detection schemes. The proposed structure
+can effectively reduce the complexity and retain the edge prediction quality.
+Our TIN2 (Traditional Inspired Network) model has an accuracy higher than the
+recent BDCN2 (Bi-Directional Cascade Network) but with a smaller model.

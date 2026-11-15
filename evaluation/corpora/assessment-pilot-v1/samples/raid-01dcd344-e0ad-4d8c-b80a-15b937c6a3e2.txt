@@ -1,0 +1,3 @@
+> We introduce a notion of differentiable stratified groupoid, which is a generalization of the notion of differentiable stratified space. We show that the inertia space of a differentiable stratified groupoid is a differentiable stratified space. We also show that the inertia space of a differentiable stratified groupoid is a differentiable stratified groupoid. We then prove a de Rham theorem for the inertia space of a differentiable stratified groupoid.
+
+The paper is available here.

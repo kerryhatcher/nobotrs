@@ -1,0 +1,15 @@
+Walter Harry Pitts, Jr. (23 April 1923 – 14 May 1969) was a logician who worked in the field of computational neuroscience.  He proposed landmark theoretical formulations of neural activity and generative processes that influenced diverse fields such as cognitive sciences and psychology, philosophy, neurosciences, computer science, artificial neural networks, cybernetics and artificial intelligence, together with what has come to be known as the generative sciences. He is best remembered for having written along with Warren McCulloch, a seminal paper in scientific history, titled "A Logical Calculus of Ideas Immanent in Nervous Activity" (1943). This paper proposed the first mathematical model of a neural network. The unit of this model, a simple formalized neuron, is still the standard of reference in the field of neural networks. It is often called a McCulloch–Pitts neuron.  Prior to that paper, he formalized his ideas regarding the fundamental steps to building a Turing machine in "The Bulletin of Mathematical Biophysics" in an essay titled "Some observations on the simple neuron circuit".
+
+Walter Pitts was a pioneering computer scientist and philosopher who made significant contributions to the field of artificial intelligence. He was born in 1923 in Detroit, Michigan, and grew up in a poor family. Despite facing numerous challenges and setbacks, he was a gifted student who excelled in mathematics and science.
+
+
+
+Pitts attended the University of Michigan, where he studied mathematics and electrical engineering. He became interested in the concept of artificial intelligence and the possibility of building machines that could think and learn. In 1943, he co-authored a paper with Warren McCulloch, a neurophysiologist, titled "A Logical Calculus of Ideas Immanent in Nervous Activity," which laid the foundation for the field of artificial intelligence.
+
+
+
+Pitts worked on several projects related to artificial intelligence and computer science, including the development of computer languages and algorithms for solving complex mathematical problems. He also made important contributions to the field of cognitive science, which is the study of the mental processes that underlie perception, learning, decision-making, and other aspects of human intelligence.
+
+
+
+Despite his many achievements, Pitts struggled with mental health issues throughout his life and died by suicide at the age of 37. He is remembered as a brilliant and influential figure in the field of artificial intelligence and cognitive science.

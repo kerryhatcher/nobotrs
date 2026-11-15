@@ -1,0 +1,47 @@
+> We consider a class of parameter-dependent oscillatory networks, where the dynamics of each node is given by a nonlinear oscillator with a time-varying coupling strength. We show that the network is globally asymptotically stable if the coupling strength is sufficiently small. We also show that the network is globally asymptotically stable if the coupling strength is sufficiently large and the network is attractive in the sense of Ott-Antonsen.
+
+The paper is available here.
+
+The paper is authored by:
+
+- Yong-Jin Kim
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+- Jae-Hoon Kwon
+-

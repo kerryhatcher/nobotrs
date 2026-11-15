@@ -1,0 +1,10 @@
+> Diffusion spectrum imaging (DSI) is a magnetic resonance imaging (MRI) technique that provides a comprehensive characterization of the
+> microstructure of biological tissues. DSI data are typically analyzed using a diffusion tensor model, which is a linear model that assumes
+> that the diffusion process is isotropic. However, the diffusion process is often anisotropic, and the diffusion tensor model is not able to
+> capture this anisotropy. In this paper, we propose a new method for analyzing DSI data that uses a generalized Q-sampling (GQS)
+> conversion to convert the DSI data into a form that can be analyzed using a nonlinear model. The GQS conversion is a linear transformation
+> that maps the DSI data into a new space that is more amenable to analysis using a nonlinear model. We show that the GQS conversion can
+> be used to increase the analytical accessibility of DSI data, and we demonstrate the effectiveness of the GQS conversion using a
+> simulation study.
+
+The paper is available at https://arxiv.org/abs/2303.15037.

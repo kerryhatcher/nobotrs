@@ -1,0 +1,2 @@
+This paper presents a technique to transform between observed $BB$ and $EE+TE-E_p E_{Ip}$ in such a way that it allows us to obtain an unbiased estimator of $\sigma^2_\zeta$. It also shows how this can be used as a test statistic which has unit distribution under null hypothesis $S=0$
+and $<1/738$ or even smaller under $r \ge r_{\text{min}}$. This opens up the possibility of using SZ to measure or constrain primordial non-Gaussianity at the level predicted by inflation models.

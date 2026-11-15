@@ -1,8 +1,29 @@
-nobotrs contains two independently licensed components:
+nobotrs code and dictionary have separate licenses:
 
-  - Source code (this repository, excluding `dictionary/`): MIT. See `LICENSE`.
+  - Source code (excluding dictionary and upstream evaluation data): MIT.
+    See `LICENSE`.
   - `dictionary/`: CC BY-SA 4.0. See `dictionary/LICENSE`.
 
 Anyone redistributing the dictionary content itself (forking or republishing
 `dictionary/entries.json`) has ShareAlike/attribution obligations under CC BY-SA
 4.0 distinct from the code's MIT terms. See `dictionary/README.md` for details.
+
+Evaluation corpora retain their upstream data licenses and attribution:
+
+  - `evaluation/corpora/raid-pilot-v1` and the fresh RAID portion of
+    `evaluation/corpora/assessment-pilot-v1` use `liamdugan/raid` at revision
+    `865cac74188466cb0c3b7574a10204007b57a459`. The dataset card declares MIT;
+    the copied upstream LICENSE is the Liam Dugan MIT notice. See
+    `source/` in each corpus for exact bytes and hashes.
+  - `evaluation/corpora/assessment-pilot-v1` also includes
+    `Hello-SimpleAI/HC3` at revision
+    `4d0ff18143b5a7e1b1e79beb540c04549d1e59d3`. Its dataset card declares
+    CC-BY-SA-4.0, and the HC3-derived answers remain under CC-BY-SA-4.0 with
+    attribution to Hello-SimpleAI and Guo et al. (2023). ShareAlike and
+    attribution obligations apply to redistributed HC3-derived content; the
+    repository code license does not replace them.
+
+  - `evaluation/corpora/mixed-controls-v1` is a development-only mechanical
+    derivation of HC3 development answers and remains CC-BY-SA-4.0 with the same
+    Hello-SimpleAI / Guo et al. attribution. Mixed-origin controls have null
+    labels and are not authorship truth claims.

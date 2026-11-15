@@ -1,0 +1,14 @@
+We extend first-order model agnostic meta-learning algorithms (including
+FOMAML and Reptile) to image segmentation, present a novel neural network
+architecture built for fast learning which we call EfficientLab, and leverage a
+formal definition of the test error of meta-learning algorithms to decrease
+error on out of distribution tasks. We show state of the art results on the
+FSS-1000 dataset by meta-training EfficientLab with FOMAML and using Bayesian
+optimization to infer the optimal test-time adaptation routine hyperparameters.
+We also construct a small benchmark dataset, FP-k, for the empirical study of
+how meta-learning systems perform in both few- and many-shot settings. On the
+FP-k dataset, we show that meta-learned initializations provide value for
+canonical few-shot image segmentation but their performance is quickly matched
+by conventional transfer learning with performance being equal beyond 10
+labeled examples. Our code, meta-learned model, and the FP-k dataset are
+available at https://github.com/ml4ai/mliis .

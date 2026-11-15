@@ -1,0 +1,22 @@
+{
+  "control_version": "mixed-controls-v1",
+  "corpus_content_sha256": "d101fd6dcf291d0ec7b3744fbc6aee3b89cbf64584a93ff9f5111a9a5e8803c0",
+  "curation_sha256": "49587de251826f3ec1be1c30354f861b351d3a0b27f03bcd9f9070cedda1b756",
+  "labels": {
+    "None": 156
+  },
+  "limitations": [
+    "Development-only mixed controls; not an independent test set.",
+    "Derived only from assessment-pilot-v1 development HC3 samples; held-out samples are never read.",
+    "Label is null because origin is mixed; unknown labels are excluded from precision/recall denominators.",
+    "No native-speaker, nonnative-speaker, or human-edited evidence is available or inferred.",
+    "No detector has been run on these controls.",
+    "These controls are not a complete HC3 benchmark or authorship certification."
+  ],
+  "manifest_sha256": "f2130c03e4de3a27c8cf7b6628177ef8f30be04db237eebc21bef6e91778a4a1",
+  "questions": 156,
+  "samples": 156,
+  "splits": {
+    "development": 156
+  }
+}

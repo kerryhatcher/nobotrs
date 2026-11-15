@@ -1,0 +1,19 @@
+Infrared (IR) image segmentation is essential in many urban defence
+applications, such as pedestrian surveillance, vehicle counting, security
+monitoring, etc. Active contour model (ACM) is one of the most widely used
+image segmentation tools at present, but the existing methods only utilize the
+local or global single feature information of image to minimize the energy
+function, which is easy to cause false segmentations in IR images. In this
+paper, we propose a multi-feature driven active contour segmentation model to
+handle IR images with intensity inhomogeneity. Firstly, an especially-designed
+signed pressure force (SPF) function is constructed by combining the global
+information calculated by global average gray information and the local
+multi-feature information calculated by local entropy, local standard deviation
+and gradient information. Then, we draw upon adaptive weight coefficient
+calculated by local range to adjust the afore-mentioned global term and local
+term. Next, the SPF function is substituted into the level set formulation
+(LSF) for further evolution. Finally, the LSF converges after a finite number
+of iterations, and the IR image segmentation result is obtained from the
+corresponding convergence result. Experimental results demonstrate that the
+presented method outperforms the state-of-the-art models in terms of precision
+rate and overlapping rate in IR test images.
