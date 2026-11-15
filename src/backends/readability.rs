@@ -169,11 +169,13 @@ mod tests {
         use crate::score::VoteStrength;
         let backend = Readability;
         let text = "The quick brown fox jumps over the lazy dog. ".repeat(30);
-        let doc = Document::from_stdin_text(text, false);
+        let mut doc = Document::from_stdin_text(text, false);
+        doc.assert_language(Some("en"));
         let deadline = Deadline::new(std::time::Duration::from_secs(1));
-        if let ScoreOutcome::Scored(score) = backend.score(&doc, deadline) {
-            assert_eq!(score.vote, VoteStrength::None);
-        }
+        let ScoreOutcome::Scored(score) = backend.score(&doc, deadline) else {
+            panic!("Readability must score supported English above the word floor")
+        };
+        assert_eq!(score.vote, VoteStrength::None);
     }
 
     #[test]

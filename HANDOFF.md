@@ -1,5 +1,14 @@
 # nobotrs remediation handoff
 
+Continuation 2026-11-14: the readability/deadline follow-up is committed as
+`7592e89`. Added six pinned LexicalRichness 0.5.1 MTLD vectors, a development-only
+reference checker, and production-backend comparisons; see `docs/mtld-reference.md`.
+Fixed the MTLD and readability evidence-only tests to assert English applicability
+and require a scored result, rather than passing silently on abstention. Pi/Ornith
+performed the MTLD test work under supervision, with context resets between tasks.
+Compression reference coverage, licensed corpus evaluation, Python parity, and
+the broader release checklist remain open. No pushes were made.
+
 Follow-up 2026-11-14: six pinned Textstat readability comparisons and a reproducible
 development-only checker now cover varied English prose, including pronunciation
 and segmentation differences. See `docs/readability-reference.md`. Added cooperative

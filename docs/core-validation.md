@@ -25,6 +25,22 @@ was 2,576,608 bytes, within the existing 8,000,000-byte budget. Corpus evaluatio
 broader statistical references, Python parity, and other release gates remain
 separate work. No authorship accuracy or calibrated probability claim was added.
 
+### MTLD continuation
+
+Six explicit normalized token lists now match LexicalRichness 0.5.1 at threshold
+0.72 within absolute tolerance `1e-12`. The reference checker verifies the package
+version and implementation-source hash, disables external preprocessing/tokenizing,
+and reproduces all six values. Rust regressions require matching prepared tokens,
+scored production-backend metrics, and no vote. Existing MTLD/readability
+evidence-only tests now assert English and fail on abstention or failure instead
+of skipping their assertions. See [MTLD provenance](mtld-reference.md).
+
+Verified formatting, Clippy with warnings denied, `cargo test --locked` (44 unit,
+5 CLI, 13 remediation tests), and `git diff --check`. This continuation changes
+tests, reference fixtures/tooling, and documentation; production algorithms and
+thresholds are unchanged. Pi/Ornith applied the test changes; the supervisor
+replaced a faulty draft with reviewed code and independently ran the full checks.
+
 ## Original core milestone
 
 Date: 2026-10-10. Baseline: main at `eb02215c03d119f1ca698dd84f718c37a3530d73`, 60 unit tests + 1 stub CLI smoke test passing. Imported research and the original remediation plan were untracked before implementation and were preserved.

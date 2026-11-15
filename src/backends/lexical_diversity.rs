@@ -218,14 +218,62 @@ mod tests {
         use crate::score::VoteStrength;
         let backend = LexicalDiversity;
         let text = "same ".repeat(200); // deliberately low-diversity, over the word floor
-        let doc = Document::from_stdin_text(text, false);
+        let mut doc = Document::from_stdin_text(text, false);
+        doc.assert_language(Some("en"));
         let deadline = Deadline::new(std::time::Duration::from_secs(1));
-        if let ScoreOutcome::Scored(score) = backend.score(&doc, deadline) {
-            assert_eq!(
-                score.vote,
-                VoteStrength::None,
-                "LexicalDiversity must never vote above None in v1 (evidence-only, spec §7 item 5)"
+        let ScoreOutcome::Scored(score) = backend.score(&doc, deadline) else {
+            panic!("LexicalDiversity must have scored here")
+        };
+        assert_eq!(
+            score.vote,
+            VoteStrength::None,
+            "LexicalDiversity must never vote above None in v1 (evidence-only, spec §7 item 5)"
+        );
+    }
+
+    #[test]
+    fn mtld_matches_fixture_cases() {
+        let fixture: serde_json::Value =
+            serde_json::from_str(include_str!("../../tests/fixtures/mtld-reference.json")).unwrap();
+        let cases = fixture["cases"].as_array().unwrap();
+        assert_eq!(cases.len(), 6);
+        let threshold = fixture["reference"]["threshold"].as_f64().unwrap();
+        assert_eq!(threshold, MTLD_THRESHOLD);
+        for case in cases {
+            let id = case["id"].as_str().unwrap();
+            let tokens: Vec<String> = case["tokens"]
+                .as_array()
+                .unwrap()
+                .iter()
+                .map(|word| word.as_str().unwrap().to_owned())
+                .collect();
+            let reference = case["reference_mtld"].as_f64().unwrap();
+            let computed = mtld(&tokens, threshold);
+            assert!(
+                (computed - reference).abs() < 1e-12,
+                "{id}: {computed} vs {reference}"
             );
+            assert!(tokens.len() >= MIN_WORDS_FOR_STATS, "{id}: short fixture");
+            let mut doc = Document::from_stdin_text(tokens.join(" "), false);
+            doc.assert_language(Some("en"));
+            assert_eq!(doc.words.len(), tokens.len(), "{id}: token count changed");
+            let prepared_tokens: Vec<_> = doc
+                .words
+                .iter()
+                .map(|range| doc.prose[range.clone()].to_lowercase())
+                .collect();
+            assert_eq!(prepared_tokens, tokens, "{id}: normalized tokens changed");
+            let ScoreOutcome::Scored(score) =
+                LexicalDiversity.score(&doc, Deadline::new(std::time::Duration::from_secs(5)))
+            else {
+                panic!("{id}: backend did not score")
+            };
+            let actual = score.metrics["mtld"].value;
+            assert!(
+                (actual - reference).abs() < 1e-12,
+                "{id}: backend {actual} vs {reference}"
+            );
+            assert_eq!(score.vote, VoteStrength::None, "{id}");
         }
     }
 }
