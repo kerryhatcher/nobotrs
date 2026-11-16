@@ -1,5 +1,171 @@
 # nobotrs remediation handoff
 
+## Resume here — updated 2026-11-16
+
+Repository: `/mnt/storage/projects/nobotrs`, branch `main`. Implementation and
+assessment checkpoint before this handoff: `f7b01e5`. This section is the entry
+point for the next session; the detailed milestone history below is retained for
+audit. The latest user request was to save a handoff for later continuation, not
+to start another coding or evaluation run now.
+
+### Current state and scope
+
+- The offline heuristic prose linter, evaluation tooling, and shipped integrations
+  have passed their scoped engineering checks. General authorship detection is
+  **not qualified**: the one-shot independent pilot detected 2/104 generated
+  samples and falsely flagged 2/89 human samples (TP2, FP2, FN102, TN87).
+- "FAILED / not-qualified" in the historical assessment is a project judgment,
+  not formal certification or failure of a predefined numerical accuracy gate.
+  The final criteria deliberately set `numeric_accuracy_pass_thresholds: null`.
+- No production rules or thresholds were changed in response to those results.
+  Quorum remains 2; numeric backend thresholds are fixed compiled constants.
+  Automatic language applicability remains unknown; English-specific statistics
+  require an explicit language assertion. Clean does not establish human origin.
+- Optional neural detector/model scoring, SAE inspection, MCP/TUI, and
+  humanization remain deferred by the user's explicit choice. Do not silently
+  expand this scope to implement them.
+- `docs/research/thor-ai-writing/` is pre-existing, untracked imported research.
+  Preserve it; do not add it to commits or normalize/edit its originals. There
+  were no tracked working-tree changes at the start of this handoff update.
+- Earlier work was committed locally; no push was performed in this workflow.
+  Inspect remote state before assuming anything about synchronization.
+
+### Next objective: define and pursue a narrow qualification claim
+
+The latest discussion proposed, but the user has **not adopted**, an advisory
+qualification profile such as English prose of at least 250 words, recall at
+least 80%, and false-positive rate at most 1%, with confidence bounds, coverage,
+and subgroup requirements. These are suggested project targets, not an external
+standard or existing acceptance criteria. Do not write them as approved policy.
+
+1. Draft a separate, versioned qualification profile defining supported text,
+   generated-versus-assisted/mixed labels, intended advisory use, minimum length,
+   language applicability, error tolerances, confidence requirements, coverage,
+   and critical subgroup gates. Keep it explicitly proposed until agreed. Do not
+   rewrite the historical descriptive-assessment criteria.
+2. Audit and plan additional licensed data: verified human provenance, technical,
+   informal and formal writing, modern generators, varied decoding, paraphrases,
+   genuine human editing, and reliably labeled nonnative-English examples. Never
+   infer native-speaker status. Existing mixed controls are mechanical
+   concatenations with null labels, not verified real-world editing examples.
+3. Improve candidate signals using development/validation evidence only. The
+   current pilot recall is inadequate; lowering quorum alone already increased
+   false positives substantially. Benchmark candidate changes and ablations,
+   preserve raw features, and distinguish runtime correctness from accuracy.
+   Assess whether richer features can meet the proposed scope before requesting
+   any change to the user's deferred-model scope.
+4. Acquire a **fresh independent source-group-disjoint corpus** for the revised
+   candidate. Exclude old selection/exposed sources and exact/near duplicates;
+   exclude related question/answer components together. Size the human set and
+   critical slices to support the chosen error bounds. Roughly 300 independent
+   human examples with zero false positives only support an approximately 1%
+   one-sided 95% upper error bound; correlated answers are not independent units.
+5. Freeze the selected candidate, settings, criteria, and binary identity before
+   one independent assessment. Report subgroup performance, runtime, failures,
+   abstentions, source-component uncertainty, and limitations. If results inform
+   another candidate revision, obtain fresh independent evidence again.
+
+Account for deployment prevalence: 80% recall and 1% FPR at 1% AI prevalence
+imply only about 45% precision. Passing a benchmark gate would support only the
+defined use, not proof of authorship or a calibrated probability claim.
+
+### Data access constraints — retain these across sessions
+
+- `evaluation/corpora/raid-pilot-v1`: 1,100 samples; its 218-sample former
+  independent split is retired as exposed selection data. Git whitespace-check
+  output revealed raw passages. `retirement.json` binds the retirement; freeze
+  and independent evaluation are refused. Preserve all records and splits.
+- `evaluation/corpora/assessment-pilot-v1`: 964 samples, 578 development / 193
+  validation / 193 independent. Its independent set was frozen at `aad622a` and
+  assessed once. `independent-access.json` is `accessed`; results were committed
+  at `778a7ce`. Do not reset, reuse, reshuffle, or present it as a fresh holdout.
+  Since results are now known, any result-informed revision needs fresh data.
+- `evaluation/corpora/mixed-controls-v1`: 156 development-only controls, all
+  labels null. Exclude these from precision/recall/FPR denominators.
+- Do not print raw corpus text, questions, answers, source response payloads, or
+  payload diffs. Inspect metadata/counts/hashes only. Preserve exact upstream
+  bytes, including whitespace, cards, licenses, and attribution. Verify
+  `.gitattributes` guards cover new raw paths **before** diff/check commands.
+- HC3-derived data is CC-BY-SA-4.0; RAID snapshots retain upstream MIT notices.
+  Evaluation data is excluded from the Cargo package. Do not overwrite existing
+  artifacts to make a new run look historical or reset an access record.
+
+### Delegation preferences and worker recovery
+
+The user authorized handing the bulk of coding to **Pi**, supervised through
+Herdr, using **`openrouter/~deepseek/deepseek-flash-latest`**. Pi replaced
+OpenCode in the original `opencode-qwen-dev` pane. Last observed live name:
+`pi-dev`; pane `w1S:p2`; model displayed as DeepSeek Flash Latest, high reasoning,
+1M context. These are historical runtime identifiers; rediscover live state.
+
+Before controlling a worker, read the Herdr skill at
+`/home/kwhatcher/.agents/skills/herdr/SKILL.md` and verify `HERDR_ENV=1`. The
+installed client previously used protocol 22 while the active server used 19;
+`/proc/482044/exe` successfully controlled that instance. That PID may no longer
+exist: verify the current instance and CLI help instead of assuming it persists.
+Never kill/restart the main server to solve a client mismatch.
+
+Give Pi bounded tasks with acceptance checks; review diffs and run independent
+validation before committing. Worker instructions were no commits/pushes, model
+changes, independent runs, or access resets without supervisor direction. Monitor
+context; clear only when needed, preserve a task summary, and verify the model
+after every session reset. A prior `/new` reverted Pi to another model. The latest
+large-context session did not require frequent clears. The supervisor owns review
+and commits; no push is currently requested.
+
+### Read these first
+
+- [Final assessment and evidence gaps](docs/evaluation/final-assessment.md).
+- [Final descriptive criteria](evaluation/release-criteria/assessment-pilot-v1-final.json).
+- [Evaluation protocol](docs/evaluation/README.md), [assessment corpus](docs/evaluation/assessment-pilot.md),
+  and [cluster uncertainty](docs/evaluation/summary-reporting.md).
+- [Active remediation plan](docs/superpowers/plans/2026-10-10-nobotrs-review-remediation.md):
+  scoped engineering gates passed; representative data and broader calibration
+  remain evidence gaps. Numeric backend parameterization is not implemented.
+- [Auditable-detector paper review](docs/evaluation/building-auditable-notes.md).
+  User PDF: `/home/kwhatcher/Downloads/building-auditable.pdf`, SHA-256
+  `426e3c20b85f56627912e82731559e6f9d9656546768ddaf60652469db6702d8`.
+  Lessons: hard negatives/context dependence, targeted ablation and collateral
+  effects, domain/generator slices, low-FPR evaluation, and shortcut features.
+  The paper does not validate the dictionary or justify default rules by itself.
+- [Rule provenance](dictionary/provenance.json) and
+  [research interpretation](docs/research/remediation-interpretation.md): 46 code
+  origins reviewed; 206-source historical snapshot, including 34 unsupported
+  claims. This is not fresh verification of every external URL or empirical
+  validation of every rule.
+
+### Validation baseline and commands
+
+Last recorded checks: 66 Rust tests, 51 Python tests, formatting and Clippy,
+four real-executable integration groups, and nine functional/package/install
+groups. Installed release binary: 2,577,616 bytes; Ryzen 7 5800X observation:
+README detection below 0.01-second timer resolution, 5,308 KiB peak RSS.
+These are recorded results, not checks rerun during this documentation update.
+
+```sh
+git status --short
+cargo fmt --check
+cargo clippy --locked --all-targets -- -D warnings
+cargo test --locked
+cargo build --locked --release
+python3 -m unittest discover -s scripts -p 'test_*.py'
+python3 scripts/acceptance.py --binary target/release/nobotrs
+python3 scripts/evaluate.py --binary target/release/nobotrs --manifest tests/fixtures/evaluation/manifest.json --output /tmp/nobotrs-resume-baseline.json --check docs/evaluation/ci-baseline.json
+```
+
+The last command is the reusable **synthetic regression** corpus, not an
+independent assessment. For SARIF schema acquisition/checks follow
+[integration validation](docs/integration-validation.md); temporary `/tmp` caches
+and schema/reference files may have disappeared. Python parity uses pinned
+reference commit `0981b9501b7dd2fb37803cf43298e83edfd508e9` from the neighboring
+`/mnt/storage/projects/nobot` repository; see
+[the parity procedure](docs/evaluation/python-parity.md).
+
+## Previous milestone record
+
+The sections below describe earlier work. The resume section above incorporates
+the subsequent qualification discussion and supersedes older continuation advice.
+
 ## FINAL: engineering milestone complete; authorship qualification FAILED / not-qualified
 
 `evaluation/corpora/assessment-pilot-v1` combines pinned HC3
