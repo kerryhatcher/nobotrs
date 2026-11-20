@@ -438,6 +438,10 @@ def check_package(r, package_timeout):
         guide = installed_runner.run(["guide"])
         require(guide.returncode == 0 and guide.stdout.startswith(b"# Writing guide"),
                 "installed packaged guide")
+        ai_guide = installed_runner.run(["ai-writing-guide"])
+        require(ai_guide.returncode == 0
+                and ai_guide.stdout == (ROOT / "docs/ai-writing-guide.md").read_bytes(),
+                "installed full AI writing guide")
         missing = installed_runner.run(["detect", str(temp / "absent.txt"), "--format", "json"])
         require(missing.returncode == 2, "installed missing-path status")
         print(f"MEASURE installed_binary_bytes={size}")

@@ -17,6 +17,25 @@ fn cli(args: &[&str], input: &[u8]) -> std::process::Output {
     child.wait_with_output().unwrap()
 }
 #[test]
+fn full_ai_writing_guide_is_available_as_markdown_and_json() {
+    let guide = include_str!("../docs/ai-writing-guide.md");
+    let markdown = cli(&["ai-writing-guide", "--quorum", "0"], b"");
+    assert!(markdown.status.success());
+    assert_eq!(markdown.stdout, guide.as_bytes());
+    assert!(markdown.stderr.is_empty());
+
+    let json = cli(&["ai-writing-guide", "--format", "json"], b"");
+    assert!(json.status.success());
+    let report: serde_json::Value = serde_json::from_slice(&json.stdout).unwrap();
+    assert_eq!(report["schema_version"], "1.0.0");
+    assert_eq!(report["guide"], guide);
+
+    let sarif = cli(&["ai-writing-guide", "--format", "sarif"], b"");
+    assert_eq!(sarif.status.code(), Some(2));
+    assert!(sarif.stdout.is_empty());
+}
+
+#[test]
 fn stdin_is_read_and_findings_affect_status() {
     let o = cli(&["lint", "-", "--format", "json"], b"delve leverage");
     assert_eq!(o.status.code(), Some(1));

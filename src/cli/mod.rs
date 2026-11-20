@@ -65,8 +65,24 @@ pub enum Command {
     Config,
     /// Print the packaged writing guide.
     Guide,
+    /// Print the full AI writing field guide.
+    AiWritingGuide,
 }
 pub fn run(cli: Cli) -> Result<i32, String> {
+    if matches!(cli.command, Command::AiWritingGuide) {
+        let guide = include_str!("../../docs/ai-writing-guide.md");
+        match cli.format {
+            Format::Human => io::stdout()
+                .lock()
+                .write_all(guide.as_bytes())
+                .map_err(|e| format!("stdout: {e}"))?,
+            Format::Json => {
+                emit(&serde_json::json!({"schema_version": "1.0.0", "guide": guide}).to_string())?
+            }
+            Format::Sarif => return Err("ai-writing-guide does not produce SARIF".into()),
+        }
+        return Ok(0);
+    }
     let resolved = ResolvedConfig::load(
         cli.config,
         Overrides {
@@ -196,7 +212,7 @@ pub fn run(cli: Cli) -> Result<i32, String> {
                 }
             }
         }
-        Command::Config | Command::Guide => unreachable!(),
+        Command::Config | Command::Guide | Command::AiWritingGuide => unreachable!(),
     }
     let code = if !errors.is_empty() {
         2

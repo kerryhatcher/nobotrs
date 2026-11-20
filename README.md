@@ -17,7 +17,21 @@ nobotrs analyze essay.txt --language en --format json
 nobotrs scan docs --format sarif > prose.sarif
 nobotrs config
 nobotrs guide
+nobotrs ai-writing-guide
 ```
+
+`guide` prints the short usage-oriented writing guide. `ai-writing-guide` prints the
+[full AI writing field guide](docs/ai-writing-guide.md) as Markdown. Use
+`--format json` for a JSON object with the full text in `guide`.
+
+## Agent skill
+
+Install the [nobotrs skill](skills/nobotrs/SKILL.md) with the skills.sh CLI.
+From a checkout use `npx skills add . --skill nobotrs`. Once the skill is on
+GitHub, use `npx skills add kerryhatcher/nobotrs --skill nobotrs`. The skill uses
+the separately installed `nobotrs` binary.
+
+## CLI behavior
 
 `detect` uses quorum (default 2) across independent eligible vocabulary, punctuation and burstiness families. `lint` reports individual findings and gates by minimum severity (default medium), regardless of quorum. `analyze` exposes the same raw metrics and typed backend outcomes, using detection status semantics. MTLD, readability, compression and entropy are informational and never satisfy participation. Each eligible family contributes at most one vote; backends in a family reduce to their strongest complete contribution. Current thresholds remain inherited, uncalibrated heuristics.
 
