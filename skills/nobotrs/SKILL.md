@@ -14,6 +14,13 @@ If the installed binary lacks `ai-writing-guide`, use or install a newer checkou
 - Run `nobotrs lint draft.md --format json` for structured findings with rule IDs
   and source locations. For Markdown on stdin, use
   `nobotrs lint - --markdown --format json`. Plain-text stdin needs only `lint -`.
+  For `lint`, exit status 1 means at least one editing finding met the minimum
+  severity, and `actionable_finding_count` gives the number of those findings.
+  The JSON `verdict` is a separate detection-quorum decision, so it can be
+  `clean` while the exit status is 1 and `actionable_finding_count` is greater
+  than 0. Report lint results from the exit status and that count, not from
+  the verdict. Lint findings are editorial prompts; they are not authorship
+  judgments.
 - Run `nobotrs analyze draft.md --format json --language en` for document metrics
   and backend outcomes. Use `--language en` when the document is English.
 - Run `nobotrs scan docs --format sarif` for a directory-level code scanning report.
