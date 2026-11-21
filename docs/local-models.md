@@ -160,4 +160,4 @@ cargo test --locked --release --features models-detectorscope \
 
 The test has reference values for CPU float32 and RTX 3060 CUDA bfloat16.
 It checks signed contributions, Unicode source ranges, and the exact and
-over-limit 1,024-token cases. See the [independent validation record](research/local-model-integration-validation.md).
+over-limit 1,024-token cases.
