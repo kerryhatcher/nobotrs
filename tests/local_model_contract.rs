@@ -80,6 +80,7 @@ fn requested_unavailable_models_preserve_heuristic_results() {
     );
     assert_eq!(code, 2);
     assert_eq!(report["complete"], false);
+    assert_eq!(report["analyzed_coverage"], baseline["analyzed_coverage"]);
     for key in [
         "verdict",
         "families",

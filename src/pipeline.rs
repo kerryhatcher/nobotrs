@@ -33,6 +33,7 @@ pub struct Report {
     pub block_contexts: Vec<Vec<Range<usize>>>,
     pub sentence_contexts: Vec<Vec<Range<usize>>>,
     pub complete: bool,
+    /// Coverage of heuristic analysis. Local models report their excerpt coverage separately.
     pub analyzed_coverage: f64,
     pub incomplete_reasons: Vec<String>,
     pub verdict: Verdict,
@@ -207,11 +208,12 @@ impl Engine {
                     ScoreOutcome::Scored(score)
                 };
             }
-            if let ScoreOutcome::Incomplete { coverage: c, .. } = &outcome {
-                coverage = coverage.min(*c);
-            }
-            if matches!(outcome, ScoreOutcome::Failed(_)) {
-                coverage = 0.0;
+            if backend.family() != SignalFamily::Model {
+                match &outcome {
+                    ScoreOutcome::Incomplete { coverage: c, .. } => coverage = coverage.min(*c),
+                    ScoreOutcome::Failed(_) => coverage = 0.0,
+                    _ => {}
+                }
             }
             outcomes.push(BackendOutcome {
                 backend: backend.name().into(),

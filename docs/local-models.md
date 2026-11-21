@@ -44,7 +44,8 @@ The helper verifies source and generated digests, derives ConPara's
 tensor-only safetensors artifact, packages its fast tokenizer, archives the
 pinned DetectorScope checkout, and activates a complete directory with one
 atomic rename. Existing versions are immutable; choose a new directory instead
-of replacing one in place. Use `--copy` if symlinks are unsuitable.
+of replacing one in place. Staged symlinks depend on their Hugging Face cache
+entries. Use `--copy` for a version that survives cache eviction.
 
 The staged layout is:
 

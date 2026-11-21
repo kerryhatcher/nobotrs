@@ -17,6 +17,7 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
+import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -46,21 +47,13 @@ def snapshot(spec, cache, local_files_only):
     return Path(snapshot_download(
         repo_id=spec[0], revision=spec[1], cache_dir=cache,
         local_files_only=local_files_only,
-    ))
+    )).resolve()
 
 
 def source_revision(path):
-    head = (path / ".git/HEAD").read_text().strip()
-    if head.startswith("ref: "):
-        ref = head.removeprefix("ref: ")
-        candidate = path / ".git" / ref
-        if candidate.exists():
-            return candidate.read_text().strip()
-        for line in (path / ".git/packed-refs").read_text().splitlines():
-            if line.endswith(" " + ref):
-                return line.split(" ", 1)[0]
-        raise SystemExit(f"source reference not found: {path}: {ref}")
-    return head
+    return subprocess.check_output(
+        ["git", "-C", str(path), "rev-parse", "--verify", "HEAD"], text=True
+    ).strip()
 
 
 def manifest_artifacts():
@@ -143,7 +136,6 @@ def _populate(staging, cache, link, scope_source, local_files_only):
         target.mkdir(parents=True)
         # Archive the committed tree rather than copying a possibly dirty checkout.
         import io
-        import subprocess
         import tarfile
         archive = subprocess.check_output(
             ["git", "-C", str(scope_source), "archive", "--format=tar", revision])

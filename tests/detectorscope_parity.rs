@@ -38,6 +38,8 @@ fn detector_scope_preserves_signed_evidence_and_reports_token_clipping() {
         .analyze_with_models(unicode.into(), false, "unicode.txt", &settings, &registry)
         .unwrap();
     let observed = evidence(&report);
+    assert!(!observed.truncated);
+    assert_eq!(observed.excerpt_coverage, Some(1.0));
     let (logit, negative_ids) = match (observed.device.as_str(), observed.precision.as_str()) {
         ("cpu", "float32") => (0.5247440934, [60396, 41667, 29327, 23769, 64665]),
         ("cuda", "bfloat16") => (0.5256628990, [41667, 60396, 29327, 23769, 64665]),

@@ -322,15 +322,13 @@ fn build_excerpt(tokenizer: &Tokenizer, max_tokens: usize, text: &str) -> Result
 
 impl Session {
     fn load(manifest: &'static Manifest, root: &Path) -> Result<Self, Error> {
-        verify_artifacts(manifest, root)?;
         let config_path = if manifest.id == "conpara" {
             root.join("conpara/config.json")
         } else {
             root.join("desklib/config.json")
         };
-        let config_raw = std::fs::read_to_string(&config_path)
-            .map_err(|e| Error::ModelLoadFailed(format!("{}: {e}", config_path.display())))?;
-        let config: Config = serde_json::from_str(&config_raw)
+        let config_raw = super::read_verified(&config_path, artifact_sha(manifest, &config_path)?)?;
+        let config: Config = serde_json::from_slice(&config_raw)
             .map_err(|e| Error::ModelLoadFailed(format!("config: {e}")))?;
         let tokenizer = load_tokenizer(manifest, root)?;
         let model_path = root.join(if manifest.id == "conpara" {
@@ -455,17 +453,6 @@ fn floor_char_boundary(text: &str, mut end: usize) -> usize {
         end -= 1;
     }
     end
-}
-
-fn verify_artifacts(manifest: &Manifest, root: &Path) -> Result<(), Error> {
-    for artifact in &manifest.artifacts {
-        // The model and tokenizer bytes are verified again while loading and consumed there.
-        if artifact.path.ends_with("model.safetensors") {
-            continue;
-        }
-        super::read_verified(&root.join(&artifact.path), &artifact.sha256)?;
-    }
-    Ok(())
 }
 
 fn artifact_sha<'a>(manifest: &'a Manifest, path: &Path) -> Result<&'a str, Error> {

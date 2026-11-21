@@ -119,9 +119,6 @@ pub fn run(cli: Cli) -> Result<i32, String> {
         emit(&serde_json::to_string_pretty(&value).map_err(|e| e.to_string())?)?;
         return Ok(0);
     }
-    // Resolve requested models after config reporting, but before reading input. Missing support
-    // becomes a per-backend Failed outcome so sibling heuristic/model results are preserved.
-    let models = nobotrs::models::ModelRegistry::resolve(&resolved.settings)?;
     if matches!(cli.command, Command::Guide) {
         match cli.format {
             Format::Human=>emit(include_str!("../../docs/writing-guide.md"))?,
@@ -130,6 +127,8 @@ pub fn run(cli: Cli) -> Result<i32, String> {
         }
         return Ok(0);
     }
+    // Retain the registry across inputs so analysis can reuse loaded models.
+    let models = nobotrs::models::ModelRegistry::resolve(&resolved.settings)?;
     let scan = matches!(cli.command, Command::Scan { .. });
     let lint = matches!(cli.command, Command::Lint { .. });
     let mut reports = vec![];

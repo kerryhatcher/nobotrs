@@ -150,7 +150,15 @@ fn runtime_reason(id: &str, settings: &Settings) -> Option<String> {
         ));
     }
     if let Some(python) = std::env::var_os("NOBOTRS_MODEL_PYTHON") {
-        if !Path::new(&python).is_file() {
+        let path = Path::new(&python);
+        let available = if path.file_name() == Some(python.as_os_str()) {
+            std::env::var_os("PATH").is_some_and(|search| {
+                std::env::split_paths(&search).any(|dir| dir.join(path).is_file())
+            })
+        } else {
+            path.is_file()
+        };
+        if !available {
             return Some(format!(
                 "NOBOTRS_MODEL_PYTHON does not exist: {}",
                 Path::new(&python).display()

@@ -54,6 +54,7 @@ struct Handshake {
     code_revision: String,
     head: String,
     tau: f64,
+    feature_filter: f64,
     device: String,
     dtype: String,
     threshold: f64,
@@ -136,6 +137,9 @@ impl DetectorScopeBackend {
             .worker
             .lock()
             .map_err(|_| Error::InternalError("worker lock poisoned".into()))?;
+        if deadline.expired() {
+            return Err(Error::Timeout);
+        }
         if matches!(&*state, WorkerState::Empty) {
             let worker = WorkerClient::start(self.manifest, &self.root, deadline)?;
             *state = WorkerState::Ready(Box::new(worker));
@@ -228,7 +232,7 @@ impl DetectorBackend for DetectorScopeBackend {
                 if *verified {
                     true
                 } else {
-                    match verify_all(self.manifest, &self.root) {
+                    match verify_all(self.manifest, &self.root, deadline) {
                         Ok(()) => {
                             *verified = true;
                             true
@@ -250,11 +254,15 @@ impl DetectorBackend for DetectorScopeBackend {
             Err(error) => return ScoreOutcome::Failed(error),
         };
         let prepared_chars = doc.prose.chars().count();
-        let prose_end = mapping
-            .get(excerpt.bytes.saturating_sub(1))
-            .map(|range| range.end)
-            .unwrap_or(doc.prose.len())
-            .min(doc.prose.len());
+        let prose_end = if !excerpt.truncated {
+            doc.prose.len()
+        } else {
+            mapping
+                .get(excerpt.bytes.saturating_sub(1))
+                .map(|range| range.end)
+                .unwrap_or(doc.prose.len())
+                .min(doc.prose.len())
+        };
         let excerpt_chars = doc.prose[..prose_end].chars().count();
         let coverage = if prepared_chars == 0 {
             None
@@ -385,22 +393,28 @@ impl DetectorBackend for DetectorScopeBackend {
     }
 }
 
-fn verify_all(manifest: &Manifest, root: &Path) -> Result<(), Error> {
+fn verify_all(manifest: &Manifest, root: &Path, deadline: Deadline) -> Result<(), Error> {
     for artifact in &manifest.artifacts {
-        verify_streaming(&root.join(&artifact.path), &artifact.sha256)?;
+        verify_streaming(&root.join(&artifact.path), &artifact.sha256, deadline)?;
     }
     if let Some(tokenizer) = &manifest.tokenizer {
-        verify_streaming(&root.join(&tokenizer.file), &tokenizer.sha256)?;
+        verify_streaming(&root.join(&tokenizer.file), &tokenizer.sha256, deadline)?;
     }
     Ok(())
 }
 
-fn verify_streaming(path: &Path, expected: &str) -> Result<(), Error> {
+fn verify_streaming(path: &Path, expected: &str, deadline: Deadline) -> Result<(), Error> {
+    if deadline.expired() {
+        return Err(Error::Timeout);
+    }
     let mut file =
         File::open(path).map_err(|e| Error::ModelLoadFailed(format!("{}: {e}", path.display())))?;
     let mut hasher = Sha256::new();
     let mut buffer = vec![0u8; 1 << 20];
     loop {
+        if deadline.expired() {
+            return Err(Error::Timeout);
+        }
         let read = file
             .read(&mut buffer)
             .map_err(|e| Error::ModelLoadFailed(format!("{}: {e}", path.display())))?;
@@ -454,14 +468,32 @@ fn detector_excerpt(
         })
         .unwrap_or(text.len())
         .min(text.len());
+    let bytes = floor_char_boundary(text, end);
+    let retained = full_tokenizer
+        .encode(&text[..bytes], true)
+        .map_err(|e| Error::InternalError(format!("tokenizer: {e}")))?;
     Ok(Excerpt {
-        bytes: floor_char_boundary(text, end),
-        tokens: max_tokens,
+        bytes,
+        tokens: retained.len().min(max_tokens),
         truncated: true,
     })
 }
 
 fn source_revision(source: &Path) -> Result<String, Error> {
+    if source.join(".git").is_file() {
+        let output = Command::new("git")
+            .args(["rev-parse", "--verify", "HEAD"])
+            .current_dir(source)
+            .output()
+            .map_err(|e| Error::ModelLoadFailed(format!("source git revision: {e}")))?;
+        if !output.status.success() {
+            return Err(Error::ModelLoadFailed(format!(
+                "source git revision: {}",
+                String::from_utf8_lossy(&output.stderr).trim()
+            )));
+        }
+        return Ok(String::from_utf8_lossy(&output.stdout).trim().to_owned());
+    }
     let head = std::fs::read_to_string(source.join(".git/HEAD"))
         .map_err(|e| Error::ModelLoadFailed(format!("source .git/HEAD: {e}")))?;
     let head = head.trim();
@@ -496,6 +528,9 @@ struct WorkerClient {
 
 impl WorkerClient {
     fn start(manifest: &Manifest, root: &Path, deadline: Deadline) -> Result<Self, Error> {
+        if deadline.expired() {
+            return Err(Error::Timeout);
+        }
         let python = std::env::var_os("NOBOTRS_MODEL_PYTHON")
             .map(PathBuf::from)
             .unwrap_or_else(|| PathBuf::from("python3"));
@@ -522,6 +557,12 @@ impl WorkerClient {
         let device = std::env::var("NOBOTRS_DETECTORSCOPE_DEVICE").unwrap_or_else(|_| "cpu".into());
         let dtype =
             std::env::var("NOBOTRS_DETECTORSCOPE_DTYPE").unwrap_or_else(|_| "float32".into());
+        let head = manifest.head.as_ref().ok_or_else(|| {
+            Error::ModelLoadFailed("DetectorScope manifest has no head pin".into())
+        })?;
+        if deadline.expired() {
+            return Err(Error::Timeout);
+        }
         let mut child = Command::new(&python)
             .arg("-c")
             .arg(WORKER)
@@ -588,6 +629,9 @@ impl WorkerClient {
             Err(RecvTimeoutError::Timeout) => {
                 let _ = child.kill();
                 let _ = child.wait();
+                if deadline.expired() {
+                    return Err(Error::Timeout);
+                }
                 return Err(Error::ModelLoadFailed(
                     "DetectorScope worker handshake timed out".into(),
                 ));
@@ -636,18 +680,12 @@ impl WorkerClient {
             || handshake.protocol != PROTOCOL
             || handshake.model_revision != manifest.upstream.revision
             || handshake.code_revision != expected_code
-            || handshake.head != "logreg"
-            || (handshake.tau - 0.85).abs() > 1e-9
+            || handshake.head != head.name
+            || (handshake.tau - head.feature_filter).abs() > 1e-9
+            || (handshake.feature_filter - head.feature_filter).abs() > 1e-9
             || handshake.device != device
             || handshake.dtype != dtype
-            || (handshake.threshold
-                - manifest
-                    .head
-                    .as_ref()
-                    .map(|h| h.threshold)
-                    .unwrap_or(0.5008))
-            .abs()
-                > 1e-6
+            || (handshake.threshold - head.threshold).abs() > 1e-6
         {
             let _ = child.kill();
             let _ = child.wait();
@@ -666,6 +704,9 @@ impl WorkerClient {
     }
 
     fn request(&mut self, text: &str, deadline: Deadline) -> Result<SuccessResponse, Error> {
+        if deadline.expired() {
+            return Err(Error::Timeout);
+        }
         let id = self.next_id;
         self.next_id += 1;
         let request = Request {
@@ -840,6 +881,24 @@ fn floor_char_boundary(text: &str, mut end: usize) -> usize {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn verification_respects_an_expired_deadline() {
+        let path = Path::new(env!("CARGO_MANIFEST_DIR")).join("Cargo.toml");
+        assert_eq!(
+            verify_streaming(&path, "", Deadline::new(Duration::ZERO)),
+            Err(Error::Timeout)
+        );
+    }
+
+    #[test]
+    fn expired_deadline_prevents_worker_startup() {
+        let manifest = super::super::manifest("detectorscope").unwrap();
+        assert!(matches!(
+            WorkerClient::start(manifest, Path::new(""), Deadline::new(Duration::ZERO)),
+            Err(Error::Timeout)
+        ));
+    }
 
     #[test]
     fn flattening_preserves_word_content_and_maps_back() {
