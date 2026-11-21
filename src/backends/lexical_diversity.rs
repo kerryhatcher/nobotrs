@@ -96,6 +96,7 @@ impl DetectorBackend for LexicalDiversity {
                 reason: format!(
                     "text has {word_count} words, below the {MIN_WORDS_FOR_STATS}-word floor"
                 ),
+                model: None,
             };
         }
 
@@ -104,6 +105,7 @@ impl DetectorBackend for LexicalDiversity {
         if !doc.english_supported() {
             return ScoreOutcome::Abstained {
                 reason: doc.language.reason.clone(),
+                model: None,
             };
         }
 

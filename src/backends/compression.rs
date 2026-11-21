@@ -144,6 +144,7 @@ impl DetectorBackend for Compression {
                 reason: format!(
                     "text has {word_count} words, below the {MIN_WORDS_FOR_STATS}-word floor"
                 ),
+                model: None,
             };
         }
 

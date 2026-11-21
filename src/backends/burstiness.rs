@@ -54,6 +54,7 @@ impl DetectorBackend for Burstiness {
                 reason: format!(
                     "text has {word_count} words, below the {MIN_WORDS_FOR_STATS}-word floor"
                 ),
+                model: None,
             };
         }
 
@@ -79,6 +80,7 @@ impl DetectorBackend for Burstiness {
                     "only {} sentences, below the {MIN_SENTENCES}-sentence floor",
                     lengths.len()
                 ),
+                model: None,
             };
         }
 
@@ -93,6 +95,7 @@ impl DetectorBackend for Burstiness {
         if mean == 0.0 {
             return ScoreOutcome::Abstained {
                 reason: "mean sentence length is zero".to_string(),
+                model: None,
             };
         }
         let deviation = match population_stdev(&lengths, deadline) {

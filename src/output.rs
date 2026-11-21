@@ -26,6 +26,48 @@ pub fn human(report: &Report) -> String {
                         b.backend, name, m.value, m.unit
                     ));
                 }
+                if let Some(m) = &s.model_evidence {
+                    out.push_str(&format!(
+                        "  {}: model evidence (revision {}, tokenizer {}, {} {} {}, raw {:.6} {})\n",
+                        b.backend,
+                        m.model_revision,
+                        m.tokenizer_revision,
+                        m.runtime,
+                        m.device,
+                        m.precision,
+                        m.raw_output,
+                        m.raw_units
+                    ));
+                    out.push_str(&format!(
+                        "  {}: excerpt {} tokens / limit {} ({:.4} coverage, truncated={}), {} prepared words, {:.1} ms\n",
+                        b.backend,
+                        m.excerpt_tokens,
+                        m.token_limit,
+                        m.excerpt_coverage.unwrap_or(0.0),
+                        m.truncated,
+                        m.prepared_words,
+                        m.elapsed_ms
+                    ));
+                    if let Some(ds) = &m.detectorscope {
+                        out.push_str(&format!(
+                            "  {}: DetectorScope bias {:.6}, residual {:.3e}, {} active features, omitted {}, remainder {:.6}, filter {:.2}, formatting {}\n",
+                            b.backend,
+                            ds.bias,
+                            ds.reconstruction_residual,
+                            ds.active_features,
+                            ds.omitted_features,
+                            ds.remainder,
+                            ds.feature_filter,
+                            ds.formatting_profile
+                        ));
+                        for feature in &ds.top_features {
+                            out.push_str(&format!(
+                                "    feature {} {:+.6} {}\n",
+                                feature.id, feature.contribution, feature.description
+                            ));
+                        }
+                    }
+                }
                 for f in &s.document_findings {
                     if f.suppression.is_none() {
                         out.push_str(&format!("  document [{}] {}\n", f.rule_id, f.message));
@@ -46,7 +88,7 @@ pub fn human(report: &Report) -> String {
                     ));
                 }
             }
-            ScoreOutcome::Abstained { reason } => {
+            ScoreOutcome::Abstained { reason, .. } => {
                 out.push_str(&format!("  {}: abstained ({reason})\n", b.backend))
             }
             ScoreOutcome::Failed(e) => out.push_str(&format!("  {}: failed ({e})\n", b.backend)),
