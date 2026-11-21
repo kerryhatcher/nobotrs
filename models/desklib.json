@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "id": "desklib",
+  "display_name": "Desklib AI text detector v1.01",
+  "architecture": "deberta-v3-large masked-mean-pooling + linear logit",
+  "upstream": {
+    "repo": "desklib/ai-text-detector-v1.01",
+    "revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+  },
+  "code": null,
+  "runtime": {
+    "kind": "candle-debertav2",
+    "cargo_feature": "models-encoders",
+    "precision": "float32",
+    "device": "cpu"
+  },
+  "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+  "max_tokens": 512,
+  "thresholds": {
+    "pilot_development_1pct": 3.6327714920043945
+  },
+  "tokenizer": {
+    "repo": "desklib/ai-text-detector-v1.01",
+    "revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+    "file": "desklib/tokenizer.json",
+    "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+    "bytes": 8656624
+  },
+  "artifacts": [
+    {
+      "path": "desklib/model.safetensors",
+      "sha256": "c024a1704c65f5a4bffeda58745c58fc0ed67d6ca07b158b068a257238815265",
+      "bytes": 1736100972
+    },
+    {
+      "path": "desklib/config.json",
+      "sha256": "a9512ad54a256ca2e26bb16336cfcaa7c93d071a8667c659044003ef3973a9e2",
+      "bytes": 890
+    }
+  ],
+  "licenses": {
+    "weights": "MIT (upstream model card at the pinned revision)",
+    "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+    "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+    "notes": "Manifest facts only; packaging review is still required before redistributing artifacts."
+  },
+  "minimum_words": 25
+}

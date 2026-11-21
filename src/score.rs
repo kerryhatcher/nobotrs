@@ -79,6 +79,9 @@ pub struct Score {
     pub evidence: Vec<Evidence>,
     pub candidates: Vec<Evidence>,
     pub document_findings: Vec<DocumentFinding>,
+    /// Additive local-model evidence. Absent for heuristic backends and skipped in JSON.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub model_evidence: Option<crate::models::ModelEvidence>,
 }
 impl Score {
     pub fn new(
@@ -103,6 +106,7 @@ impl Score {
             metrics: BTreeMap::new(),
             document_findings: vec![],
             candidates: evidence.clone(),
+            model_evidence: None,
             evidence,
         }
     }

@@ -7,6 +7,7 @@ pub mod deadline;
 pub mod dictionary;
 pub mod document;
 pub mod error;
+pub mod models;
 pub mod output;
 pub mod pipeline;
 pub mod score;

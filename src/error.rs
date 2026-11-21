@@ -13,6 +13,12 @@ pub enum Error {
     NetworkError(String),
     ConfigError(String),
     InternalError(String),
+    /// A model failure after input preparation, retaining planned excerpt metadata
+    /// without changing the ScoreOutcome contract or claiming executed coverage.
+    ModelFailure {
+        message: String,
+        planned: Option<Box<crate::models::PlannedExcerpt>>,
+    },
 }
 
 impl Error {
@@ -35,6 +41,20 @@ impl std::fmt::Display for Error {
             Error::NetworkError(msg) => write!(f, "network error: {msg}"),
             Error::ConfigError(msg) => write!(f, "config error: {msg}"),
             Error::InternalError(msg) => write!(f, "internal error: {msg}"),
+            Error::ModelFailure { message, planned } => {
+                write!(f, "{message}")?;
+                if let Some(planned) = planned {
+                    write!(
+                        f,
+                        " (planned excerpt {} tokens/limit {}{}, coverage {:.4}; executed coverage 0)",
+                        planned.excerpt_tokens,
+                        planned.token_limit,
+                        if planned.truncated { ", truncated" } else { "" },
+                        planned.coverage.unwrap_or(0.0)
+                    )?;
+                }
+                Ok(())
+            }
         }
     }
 }

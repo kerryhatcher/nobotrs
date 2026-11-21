@@ -20,6 +20,10 @@ pub struct Settings {
     pub timeout_ms: u64,
     pub language: Option<String>,
     pub enabled_backends: Vec<String>,
+    /// Optional local evidence backends requested with --models. Empty by default.
+    pub models: Vec<String>,
+    /// Directory containing the pinned model artifacts described by models/*.json.
+    pub models_dir: Option<PathBuf>,
     pub ignore_rules: Vec<String>,
     pub path_ignores: BTreeMap<String, Vec<String>>,
 }
@@ -34,6 +38,8 @@ impl Default for Settings {
             timeout_ms: 5000,
             language: None,
             enabled_backends: BACKENDS.iter().map(|s| s.to_string()).collect(),
+            models: vec![],
+            models_dir: None,
             ignore_rules: vec![],
             path_ignores: BTreeMap::new(),
         }
@@ -54,6 +60,8 @@ pub struct Overrides {
     pub display_limit: Option<usize>,
     pub timeout_ms: Option<u64>,
     pub language: Option<String>,
+    pub models: Option<Vec<String>>,
+    pub models_dir: Option<PathBuf>,
     pub ignore_rules: Option<Vec<String>>,
 }
 impl ResolvedConfig {
@@ -76,6 +84,8 @@ impl ResolvedConfig {
             "timeout_ms",
             "language",
             "enabled_backends",
+            "models",
+            "models_dir",
             "ignore_rules",
             "path_ignores",
         ] {
@@ -149,6 +159,33 @@ impl ResolvedConfig {
             settings.language = Some(raw);
             origins.insert("language".into(), "cli".into());
         }
+        if let Some(raw) = std::env::var_os("NOBOTRS_MODELS_DIR") {
+            let raw = raw
+                .into_string()
+                .map_err(|_| "NOBOTRS_MODELS_DIR must be UTF-8")?;
+            settings.models_dir = Some(PathBuf::from(raw));
+            origins.insert("models_dir".into(), "environment:NOBOTRS_MODELS_DIR".into());
+        }
+        if let Some(value) = cli.models_dir {
+            settings.models_dir = Some(value);
+            origins.insert("models_dir".into(), "cli".into());
+        }
+        if let Some(raw) = env_text("NOBOTRS_MODELS")? {
+            settings.models = raw
+                .split(',')
+                .filter(|name| !name.trim().is_empty())
+                .map(|name| name.trim().to_string())
+                .collect();
+            origins.insert("models".into(), "environment:NOBOTRS_MODELS".into());
+        }
+        if let Some(models) = cli.models {
+            settings.models = models
+                .into_iter()
+                .filter(|name| !name.trim().is_empty())
+                .map(|name| name.trim().to_string())
+                .collect();
+            origins.insert("models".into(), "cli".into());
+        }
         if let Some(raw) = env_text("NOBOTRS_IGNORE_RULES")? {
             settings.ignore_rules = raw.split(',').map(str::to_string).collect();
             origins.insert(
@@ -196,6 +233,17 @@ impl Settings {
                 return Err(format!("unknown or duplicate backend: {name}"));
             }
         }
+        let mut models = std::collections::HashSet::new();
+        for name in &self.models {
+            if !crate::models::is_model_backend(name) || !models.insert(name) {
+                return Err(format!("unknown or duplicate model: {name}"));
+            }
+        }
+        if let Some(models_dir) = &self.models_dir {
+            if models_dir.as_os_str().is_empty() {
+                return Err("models_dir must not be empty".into());
+            }
+        }
         Ok(())
     }
 }
@@ -208,4 +256,39 @@ fn env_text(name: &str) -> Result<Option<String>, String> {
                 .map_err(|_| format!("{name} must be UTF-8"))
         })
         .transpose()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn model_settings_deserialize_without_changing_core_defaults() {
+        let settings: Settings =
+            serde_json::from_str(r#"{"models":["desklib"],"models_dir":"/tmp/models"}"#).unwrap();
+        assert_eq!(settings.models, ["desklib"]);
+        assert_eq!(
+            settings.models_dir.as_deref(),
+            Some(std::path::Path::new("/tmp/models"))
+        );
+        assert_eq!(
+            settings.enabled_backends,
+            Settings::default().enabled_backends
+        );
+        assert!(Settings::default().models.is_empty());
+    }
+
+    #[test]
+    fn invalid_or_duplicate_model_requests_fail_validation() {
+        let mut settings = Settings {
+            models: vec!["not-a-model".into()],
+            ..Default::default()
+        };
+        assert!(settings.validate().is_err());
+        settings.models = vec!["desklib".into(), "desklib".into()];
+        assert!(settings.validate().is_err());
+        settings.models = vec!["desklib".into()];
+        settings.models_dir = Some(std::path::PathBuf::new());
+        assert!(settings.validate().is_err());
+    }
 }

@@ -15,6 +15,8 @@ pub enum SignalFamily {
     LexicalDiversity,
     Readability,
     Compression,
+    /// Informational local-model evidence. Never eligible for a heuristic quorum vote.
+    Model,
 }
 
 /// Distinguishes "not applicable to this input" (`Abstained`) from "something
@@ -31,6 +33,9 @@ pub enum ScoreOutcome {
     },
     Abstained {
         reason: String,
+        /// Typed model policy abstention; absent for heuristic backends.
+        #[serde(skip_serializing_if = "Option::is_none")]
+        model: Option<crate::models::ModelAbstention>,
     },
     Failed(Error),
 }
@@ -66,6 +71,7 @@ mod tests {
         fn score(&self, _doc: &Document, _deadline: Deadline) -> ScoreOutcome {
             ScoreOutcome::Abstained {
                 reason: "test backend".into(),
+                model: None,
             }
         }
     }

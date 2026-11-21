@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "id": "conpara",
+  "display_name": "DeBERTa-ConPara v2.18 no-feature",
+  "architecture": "deberta-v3-large CLS pooling + Linear(1024,512) + GELU + Linear(512,2), AI-minus-human margin",
+  "upstream": {
+    "repo": "SES-Lab-OTH/deberta-conpara",
+    "revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+    "checkpoint_sha256": "a0a4eaf8914471b76102703e9de25ab5e7d49a49e3d5b529036ef4f61e72ab7c"
+  },
+  "code": {
+    "repo": "SES-Lab-OTH/deberta-conpara",
+    "revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+    "source_license": "MIT"
+  },
+  "runtime": {
+    "kind": "candle-debertav2",
+    "cargo_feature": "models-encoders",
+    "precision": "float32",
+    "device": "cpu"
+  },
+  "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+  "max_tokens": 512,
+  "thresholds": {
+    "checkpoint_threshold_margin": 2.9423828125
+  },
+  "tokenizer": {
+    "repo": "microsoft/deberta-v3-large",
+    "revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+    "file": "conpara/tokenizer.json",
+    "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964",
+    "bytes": 8656624
+  },
+  "artifacts": [
+    {
+      "path": "conpara/model.safetensors",
+      "sha256": "be997091698ff9ac5f204fe005554a17b87c7f51d3e291a1eed6471fc975d92f",
+      "bytes": 1738201152
+    },
+    {
+      "path": "conpara/config.json",
+      "sha256": "ddec8b81d079d218ce9e54fc0af5d1d5937d6d53b5d42e70c1f251a1cebc830d",
+      "bytes": 580
+    }
+  ],
+  "licenses": {
+    "weights": "MIT (upstream model card and pinned source LICENSE)",
+    "tokenizer": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+    "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+    "notes": "Converted tensor-only artifact derived locally from the pinned rawguard.pt; no redistribution until packaging review."
+  },
+  "minimum_words": 25
+}

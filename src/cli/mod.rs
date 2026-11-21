@@ -30,6 +30,12 @@ pub struct Cli {
     /// Assert a language (en enables English-specific metrics).
     #[arg(long, global = true)]
     language: Option<String>,
+    /// Comma-separated optional local model evidence backends: desklib,conpara,detectorscope.
+    #[arg(long, global = true, value_delimiter = ',')]
+    models: Vec<String>,
+    /// Directory containing the pinned model artifacts described by models/*.json.
+    #[arg(long, global = true)]
+    models_dir: Option<PathBuf>,
     #[arg(long, global = true)]
     quorum: Option<usize>,
     #[arg(long, global = true, value_enum)]
@@ -93,6 +99,12 @@ pub fn run(cli: Cli) -> Result<i32, String> {
             display_limit: cli.display_limit,
             timeout_ms: cli.timeout_ms,
             language: cli.language,
+            models: if cli.models.is_empty() {
+                None
+            } else {
+                Some(cli.models)
+            },
+            models_dir: cli.models_dir,
             ignore_rules: if cli.ignore_rule.is_empty() {
                 None
             } else {
@@ -103,10 +115,13 @@ pub fn run(cli: Cli) -> Result<i32, String> {
     let engine = Engine::new()?;
     engine.validate_settings(&resolved.settings)?;
     if matches!(cli.command, Command::Config) {
-        let value = serde_json::json!({"schema_version":"1.0.0","configuration":resolved,"backends":nobotrs::config::BACKENDS.iter().map(|name|serde_json::json!({"backend":name,"availability":"ready","enabled":resolved.settings.enabled_backends.iter().any(|n|n==name)})).collect::<Vec<_>>()});
+        let value = serde_json::json!({"schema_version":"1.0.0","configuration":resolved,"backends":nobotrs::config::BACKENDS.iter().map(|name|serde_json::json!({"backend":name,"availability":"ready","enabled":resolved.settings.enabled_backends.iter().any(|n|n==name)})).collect::<Vec<_>>(),"models":nobotrs::models::statuses(&resolved.settings)});
         emit(&serde_json::to_string_pretty(&value).map_err(|e| e.to_string())?)?;
         return Ok(0);
     }
+    // Resolve requested models after config reporting, but before reading input. Missing support
+    // becomes a per-backend Failed outcome so sibling heuristic/model results are preserved.
+    let models = nobotrs::models::ModelRegistry::resolve(&resolved.settings)?;
     if matches!(cli.command, Command::Guide) {
         match cli.format {
             Format::Human=>emit(include_str!("../../docs/writing-guide.md"))?,
@@ -122,11 +137,12 @@ pub fn run(cli: Cli) -> Result<i32, String> {
     match cli.command {
         Command::Detect { path } | Command::Analyze { path } => {
             match load(&path, resolved.settings.max_bytes).and_then(|input| {
-                let mut report = engine.analyze(
+                let mut report = engine.analyze_with_models(
                     input.text,
                     cli.markdown || nobotrs::document::Document::is_markdown(Path::new(&path)),
                     &path,
                     &resolved.settings,
+                    &models,
                 )?;
                 if input.truncated {
                     report.mark_input_truncated();
@@ -140,11 +156,12 @@ pub fn run(cli: Cli) -> Result<i32, String> {
         Command::Lint { paths } => {
             for path in paths {
                 match load(&path, resolved.settings.max_bytes).and_then(|input| {
-                    let mut report = engine.analyze(
+                    let mut report = engine.analyze_with_models(
                         input.text,
                         cli.markdown || nobotrs::document::Document::is_markdown(Path::new(&path)),
                         &path,
                         &resolved.settings,
+                        &models,
                     )?;
                     if input.truncated {
                         report.mark_input_truncated();
@@ -194,11 +211,12 @@ pub fn run(cli: Cli) -> Result<i32, String> {
             for path in paths {
                 let name = path.to_str().ok_or("scan path is not UTF-8")?;
                 match load(name, resolved.settings.max_bytes).and_then(|input| {
-                    let mut report = engine.analyze(
+                    let mut report = engine.analyze_with_models(
                         input.text,
                         cli.markdown || nobotrs::document::Document::is_markdown(&path),
                         name,
                         &resolved.settings,
+                        &models,
                     )?;
                     if input.truncated {
                         report.mark_input_truncated();

@@ -115,6 +115,20 @@ impl Engine {
         path: &str,
         settings: &Settings,
     ) -> Result<Report, String> {
+        let models = crate::models::ModelRegistry::resolve(settings)?;
+        self.analyze_with_models(raw, markdown, path, settings, &models)
+    }
+
+    /// Analyze with optional local model evidence. Model backends are informational:
+    /// they never enter the heuristic family decision or quorum.
+    pub fn analyze_with_models(
+        &self,
+        raw: String,
+        markdown: bool,
+        path: &str,
+        settings: &Settings,
+        models: &crate::models::ModelRegistry,
+    ) -> Result<Report, String> {
         self.validate_settings(settings)?;
         let deadline = Deadline::new(Duration::from_millis(settings.timeout_ms));
         if raw.len() > settings.max_bytes {
@@ -146,7 +160,14 @@ impl Engine {
         let registry: Vec<&dyn DetectorBackend> =
             std::iter::once(&self.vocabulary as &dyn DetectorBackend)
                 .chain(self.backends.iter().map(|b| b.as_ref()))
-                .filter(|b| settings.enabled_backends.iter().any(|n| n == b.name()))
+                .chain(models.backends().iter().map(|b| b.as_ref()))
+                .filter(|b| {
+                    if b.family() == SignalFamily::Model {
+                        settings.models.iter().any(|n| n == b.name())
+                    } else {
+                        settings.enabled_backends.iter().any(|n| n == b.name())
+                    }
+                })
                 .collect();
         let mut names = HashSet::new();
         let mut outcomes = vec![];
@@ -157,9 +178,12 @@ impl Engine {
             }
             let mut outcome = if deadline.expired() {
                 ScoreOutcome::Failed(Error::Timeout)
-            } else if doc.words.is_empty() {
+            } else if doc.words.is_empty() && backend.family() != SignalFamily::Model {
+                // Model backends receive empty/short prose so they can emit a typed
+                // applicability/length abstention instead of a generic heuristic one.
                 ScoreOutcome::Abstained {
                     reason: "no analyzable prose".into(),
+                    model: None,
                 }
             } else if backend.name() == "vocabulary" {
                 self.vocabulary

@@ -57,7 +57,7 @@ pub fn aggregate(
                 if !names.insert(&score.backend) {
                     return Err("duplicate backend identity".into());
                 }
-                if score.voting_eligible {
+                if score.voting_eligible && *family != SignalFamily::Model {
                     let d = decisions.entry(*family).or_insert(FamilyDecision {
                         family: *family,
                         vote: VoteStrength::None,
@@ -134,4 +134,28 @@ pub fn aggregate_backends(
             .collect(),
         quorum,
     )
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::{backend::SignalFamily, score::Score};
+
+    #[test]
+    fn model_family_is_never_reduced_into_a_vote() {
+        let mut score = Score::new(
+            "desklib".into(),
+            SignalFamily::Model,
+            crate::score::ConfidenceTier::Low,
+            VoteStrength::Strong,
+            vec![],
+        );
+        // Even a malformed model score cannot become quorum participation.
+        score.voting_eligible = true;
+        let result = aggregate(vec![(SignalFamily::Model, ScoreOutcome::Scored(score))], 1)
+            .expect("aggregation");
+        assert!(result.families.is_empty());
+        assert_eq!(result.votes_cast, 0);
+        assert_eq!(result.verdict, Verdict::Inconclusive);
+    }
 }

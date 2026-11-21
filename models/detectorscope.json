@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "detectorscope",
+  "display_name": "DetectorScope auditable Gemma-2 2B + SAE + logistic head",
+  "upstream": {
+    "repo": "liamdugan/detector-scope",
+    "revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae"
+  },
+  "code": {
+    "repo": "liamdugan/detectorscope",
+    "revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+    "source_license": "Apache-2.0"
+  },
+  "runtime": {
+    "kind": "detectorscope-worker",
+    "cargo_feature": "models-detectorscope",
+    "precision": "float32",
+    "device": "cpu-or-cuda",
+    "worker": "integrations/model_workers/detectorscope_worker.py",
+    "protocol": "nobotrs-detectorscope-v1"
+  },
+  "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+  "max_tokens": 1024,
+  "head": {
+    "name": "logreg",
+    "path": "detectorscope/heads/logreg_tau0.85.safetensors",
+    "sha256": "8a19128c6a79c5e1e0548c5ab376f60d337991a0b408ed4006ce2ecfb4676cc4",
+    "threshold": 0.5008,
+    "feature_filter": 0.85
+  },
+  "artifacts": [
+    {
+      "path": "detectorscope/model.safetensors",
+      "sha256": "2e8ae474410517753497b2600a88a523dd50ad9c703da7248b049064ba173d2b",
+      "bytes": 1208522464
+    },
+    {
+      "path": "detectorscope/features.jsonl",
+      "sha256": "713b0a28fc7dbc2a174f31ab6dc49fb3b14da7efaa5e2fac8a3f920d5d4785aa",
+      "bytes": 53470618
+    },
+    {
+      "path": "detectorscope/extractor/tokenizer.json",
+      "sha256": "e6ce83119bb404f7f0a6e621b76759d476357dcd01241a90f9ca136ae2b3c11c",
+      "bytes": 34362972
+    },
+    {
+      "path": "detectorscope/extractor/model.safetensors.index.json",
+      "sha256": "b43d22840c3a033a4bbc9cb9a2877f37be63dd0af618ad82a28f231484cf3926",
+      "bytes": 24260
+    },
+    {
+      "path": "detectorscope/extractor/model-00001-of-00003.safetensors",
+      "sha256": "1425aa066ec77e3eb79aac14a5bdea3ebcec46aa5c96cd40608c5c1fd70d193d",
+      "bytes": 4992576136
+    },
+    {
+      "path": "detectorscope/extractor/model-00002-of-00003.safetensors",
+      "sha256": "96c111d3dcdbde9271595e463b5d9f7fc4810ad8b79e736309c0a1833e6c0d35",
+      "bytes": 4983443424
+    },
+    {
+      "path": "detectorscope/extractor/model-00003-of-00003.safetensors",
+      "sha256": "4e08abc64d1767fdacd2c94da7f2ec4b8c65b25b19a53e87d19dc432901b5f02",
+      "bytes": 481381384
+    },
+    {
+      "path": "detectorscope/config.json",
+      "sha256": "0c2b653e74feacec4edfe5a861fb3aa6fb01cecfec86116c5621a1c71a887b5a",
+      "bytes": 173
+    },
+    {
+      "path": "detectorscope/extractor/config.json",
+      "sha256": "3aecd9e4d0b1daf9da7e1f52e895a6bb8ad537b77444f609ede14e376336f8d7",
+      "bytes": 1446
+    },
+    {
+      "path": "detectorscope/extractor/generation_config.json",
+      "sha256": "d9f6059f6cb5b3b46847f9f4ada1493e54bc5136711a528024c6ca9c26e624f7",
+      "bytes": 168
+    },
+    {
+      "path": "detectorscope/extractor/tokenizer_config.json",
+      "sha256": "5db39e7ccbeceb1dc1136ff54d717f6f84f3556893e6cc30ee4972c408ed4dc2",
+      "bytes": 46409
+    },
+    {
+      "path": "detectorscope/extractor/special_tokens_map.json",
+      "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351",
+      "bytes": 636
+    },
+    {
+      "path": "detectorscope/extractor/tokenizer.model",
+      "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2",
+      "bytes": 4241003
+    },
+    {
+      "path": "detectorscope/heads/logreg_tau0.85.safetensors",
+      "sha256": "8a19128c6a79c5e1e0548c5ab376f60d337991a0b408ed4006ce2ecfb4676cc4",
+      "bytes": 262388
+    }
+  ],
+  "licenses": {
+    "weights": "Gemma license (upstream Hub model card at the pinned revision)",
+    "code": "Apache-2.0 (pinned DetectorScope checkout LICENSE)",
+    "tokenizer": "Gemma terms via the pinned extractor bundle; base model terms also apply",
+    "notes": "The Hub bundle is marked Gemma-licensed. Worker/source and artifacts remain external pending packaging and license review."
+  },
+  "tokenizer": {
+    "repo": "liamdugan/detector-scope",
+    "revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+    "file": "detectorscope/extractor/tokenizer.json",
+    "sha256": "e6ce83119bb404f7f0a6e621b76759d476357dcd01241a90f9ca136ae2b3c11c",
+    "bytes": 34362972
+  },
+  "minimum_words": 25
+}

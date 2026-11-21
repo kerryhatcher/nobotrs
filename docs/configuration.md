@@ -12,6 +12,8 @@ The JSON file accepts these settings (defaults shown):
   "display_limit": 200,
   "language": null,
   "enabled_backends": ["vocabulary", "punctuation", "burstiness", "lexical-diversity", "readability", "compression"],
+  "models": [],
+  "models_dir": null,
   "ignore_rules": [],
   "path_ignores": { "docs/examples/*": ["embark-on-a-journey"] }
 }
@@ -19,7 +21,7 @@ The JSON file accepts these settings (defaults shown):
 
 Path patterns use `*` (any sequence, including `/`) and `?` (one character); matching uses the displayed input path, so absolute invocation paths require absolute patterns. Scans skip symlinks and do not follow them. Direct file commands follow a supplied file symlink normally.
 
-CLI settings replace the corresponding environment/file setting. Environment names are `NOBOTRS_QUORUM`, `NOBOTRS_MINIMUM_SEVERITY`, `NOBOTRS_MAX_BYTES`, `NOBOTRS_MAX_CANDIDATES`, `NOBOTRS_TIMEOUT_MS`, `NOBOTRS_DISPLAY_LIMIT`, `NOBOTRS_LANGUAGE`, and `NOBOTRS_IGNORE_RULES` (comma-separated). Configuration path precedence is `--config` > `NOBOTRS_CONFIG` > platform path. Origins are per setting. Environment variables with malformed values produce errors. CLI global ignore IDs replace, rather than append to, configured global IDs; path and inline scopes still apply.
+CLI settings replace the corresponding environment/file setting. Environment names are `NOBOTRS_QUORUM`, `NOBOTRS_MINIMUM_SEVERITY`, `NOBOTRS_MAX_BYTES`, `NOBOTRS_MAX_CANDIDATES`, `NOBOTRS_TIMEOUT_MS`, `NOBOTRS_DISPLAY_LIMIT`, `NOBOTRS_LANGUAGE`, `NOBOTRS_MODELS` (comma-separated), `NOBOTRS_MODELS_DIR`, and `NOBOTRS_IGNORE_RULES` (comma-separated). `models` is empty by default and never contributes quorum votes; see [local model evidence](local-models.md). Configuration path precedence is `--config` > `NOBOTRS_CONFIG` > platform path. Origins are per setting. Environment variables with malformed values produce errors. CLI global ignore IDs replace, rather than append to, configured global IDs; path and inline scopes still apply.
 
 ```markdown
 <!-- nobotrs-ignore-file statistics.burstiness -->
