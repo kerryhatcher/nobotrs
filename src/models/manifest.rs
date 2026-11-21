@@ -109,13 +109,18 @@ impl ModelManifest {
         let Some(root) = root else {
             return ArtifactState::NotConfigured;
         };
-        if self.artifacts.is_empty() {
-            return ArtifactState::Present;
-        }
         let mut state = ArtifactState::Present;
-        for artifact in &self.artifacts {
-            match std::fs::metadata(self.artifact_path(root, artifact)) {
-                Ok(metadata) if metadata.len() == artifact.bytes => {}
+        let artifacts = self
+            .artifacts
+            .iter()
+            .map(|artifact| (artifact.path.as_str(), artifact.bytes));
+        let tokenizer = self
+            .tokenizer
+            .iter()
+            .map(|tokenizer| (tokenizer.file.as_str(), tokenizer.bytes));
+        for (path, bytes) in artifacts.chain(tokenizer) {
+            match std::fs::metadata(root.join(path)) {
+                Ok(metadata) if metadata.is_file() && metadata.len() == bytes => {}
                 Ok(_) => return ArtifactState::MismatchedSize,
                 Err(_) => state = ArtifactState::Missing,
             }

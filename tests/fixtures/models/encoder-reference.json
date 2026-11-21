@@ -6,6 +6,10 @@
   "conpara": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
   "backbone": "64a8c8eab3e352a784c658aef62be1662607476f"
  },
+ "cutoffs": {
+  "desklib": 3.6327714920043945,
+  "conpara": 2.9423828125
+ },
  "tolerance": {
   "absolute_score": 0.001,
   "exact_tokens": true

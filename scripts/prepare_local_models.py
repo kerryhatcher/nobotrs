@@ -243,6 +243,8 @@ def reference(models, output, conpara_source):
         "purpose": "Native Candle/Python parity reference from the pinned revisions; synthetic text only.",
         "models": {"desklib": DESKLIB[1], "conpara": CONPARA[1],
                    "backbone": BACKBONE[1]},
+        # Frozen research cutoffs independent of the Rust runtime manifests.
+        "cutoffs": {"desklib": 3.6327714920043945, "conpara": 2.9423828125},
         "tolerance": {"absolute_score": 1e-3, "exact_tokens": True},
         "cases": cases,
     }

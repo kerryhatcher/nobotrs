@@ -131,6 +131,7 @@ impl Engine {
         models: &crate::models::ModelRegistry,
     ) -> Result<Report, String> {
         self.validate_settings(settings)?;
+        models.validate_settings(settings)?;
         let deadline = Deadline::new(Duration::from_millis(settings.timeout_ms));
         if raw.len() > settings.max_bytes {
             return Err(format!("input exceeds {} bytes", settings.max_bytes));

@@ -171,11 +171,15 @@ fn runtime_reason(id: &str, settings: &Settings) -> Option<String> {
 /// A validated request. Construction checks support and artifact presence, not inference.
 pub struct ModelRegistry {
     backends: Vec<Box<dyn DetectorBackend>>,
+    models_dir: Option<PathBuf>,
 }
 
 impl ModelRegistry {
     pub fn empty() -> Self {
-        Self { backends: vec![] }
+        Self {
+            backends: vec![],
+            models_dir: None,
+        }
     }
 
     pub fn resolve(settings: &Settings) -> Result<Self, String> {
@@ -231,7 +235,25 @@ impl ModelRegistry {
                 ))),
             }
         }
-        Ok(Self { backends })
+        Ok(Self {
+            backends,
+            models_dir: settings.models_dir.clone(),
+        })
+    }
+
+    pub(crate) fn validate_settings(&self, settings: &Settings) -> Result<(), String> {
+        if !self
+            .backends
+            .iter()
+            .map(|backend| backend.name())
+            .eq(settings.models.iter().map(String::as_str))
+        {
+            return Err("model registry does not match the requested models or their order".into());
+        }
+        if !self.is_empty() && self.models_dir != settings.models_dir {
+            return Err("model registry does not match the configured models directory".into());
+        }
+        Ok(())
     }
 
     pub fn backends(&self) -> &[Box<dyn DetectorBackend>] {

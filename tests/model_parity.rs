@@ -14,16 +14,13 @@ fn fixture() -> Value {
 
 #[test]
 fn native_encoders_match_pinned_python_reference_when_enabled() {
-    let Ok(models_dir) = std::env::var("NOBOTRS_MODELS_DIR") else {
-        eprintln!(
-            "skipping native encoder parity; set NOBOTRS_MODEL_PARITY=1 and NOBOTRS_MODELS_DIR"
-        );
-        return;
-    };
     if std::env::var_os("NOBOTRS_MODEL_PARITY").is_none() {
         eprintln!("skipping native encoder parity; set NOBOTRS_MODEL_PARITY=1");
         return;
     }
+    let models_dir = std::env::var_os("NOBOTRS_MODELS_DIR")
+        .filter(|path| !path.is_empty())
+        .expect("set NOBOTRS_MODELS_DIR to a nonempty staged models directory for encoder parity");
     let fixture = fixture();
     let tolerance = fixture["tolerance"]["absolute_score"]
         .as_f64()
@@ -85,7 +82,14 @@ fn native_encoders_match_pinned_python_reference_when_enabled() {
                 expected["ids"].as_array().unwrap().len()
             );
             assert_eq!(evidence.token_limit, 512);
-            let cutoff = evidence.threshold.expect("pinned cutoff");
+            let cutoff = fixture["cutoffs"][backend]
+                .as_f64()
+                .expect("fixture cutoff");
+            assert_eq!(
+                evidence.threshold,
+                Some(cutoff),
+                "{backend}: reported cutoff"
+            );
             let python_cutoff = expected_score >= cutoff;
             let rust_cutoff = evidence.raw_output >= cutoff;
             assert_eq!(

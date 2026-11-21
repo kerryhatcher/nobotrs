@@ -1,3 +1,8 @@
+use nobotrs::{
+    config::Settings,
+    models::{self, ModelRegistry},
+    pipeline::Engine,
+};
 use serde_json::Value;
 use std::{
     io::Write,
@@ -5,6 +10,53 @@ use std::{
     process::{Command, Stdio},
     sync::OnceLock,
 };
+
+#[test]
+fn analysis_rejects_mismatched_model_registries() {
+    let settings = Settings {
+        models: vec!["desklib".into()],
+        ..Settings::default()
+    };
+    let engine = Engine::new().unwrap();
+    let analyze = |settings: &Settings, registry: &ModelRegistry| {
+        engine.analyze_with_models(String::new(), false, "-", settings, registry)
+    };
+    assert!(analyze(&settings, &ModelRegistry::empty())
+        .unwrap_err()
+        .contains("requested models"));
+
+    let registry = ModelRegistry::resolve(&settings).unwrap();
+    let other_dir = Settings {
+        models_dir: Some("other-models".into()),
+        ..settings.clone()
+    };
+    assert!(analyze(&other_dir, &registry)
+        .unwrap_err()
+        .contains("models directory"));
+    assert!(analyze(&settings, &registry).is_ok());
+}
+
+#[test]
+fn artifact_availability_checks_tokenizer_pin() {
+    let root = PathBuf::from(env!("CARGO_TARGET_TMPDIR"))
+        .join(format!("tokenizer-availability-{}", std::process::id()));
+    let mut manifest = models::manifest("desklib").unwrap().clone();
+    manifest.artifacts.clear();
+    let tokenizer = manifest.tokenizer.as_mut().unwrap();
+    tokenizer.file = "tokenizer.json".into();
+    tokenizer.bytes = 2;
+    std::fs::create_dir(&root).unwrap();
+    assert_eq!(manifest.artifact_state(Some(&root)).as_str(), "missing");
+    let path = root.join("tokenizer.json");
+    std::fs::write(&path, b" ").unwrap();
+    assert_eq!(
+        manifest.artifact_state(Some(&root)).as_str(),
+        "mismatched_size"
+    );
+    std::fs::write(path, b"{}").unwrap();
+    assert_eq!(manifest.artifact_state(Some(&root)).as_str(), "present");
+    std::fs::remove_dir_all(root).unwrap();
+}
 
 fn run(args: &[&str], input: &str) -> (i32, Value) {
     static CONFIG: OnceLock<PathBuf> = OnceLock::new();
