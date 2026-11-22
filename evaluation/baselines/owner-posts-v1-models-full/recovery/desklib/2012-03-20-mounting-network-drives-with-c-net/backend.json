@@ -1,0 +1,105 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 2.1859755516052246
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 770.579426,
+        "excerpt_bytes": 227,
+        "excerpt_coverage": 1.0,
+        "excerpt_tokens": 54,
+        "execution_coverage": 1.0,
+        "full_coverage_output": 2.1859755516052246,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 1.0,
+        "precision": "float32",
+        "prepared_bytes": 227,
+        "prepared_words": 39,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 2.1859755516052246,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": false,
+        "windows": [
+          {
+            "body_tokens": 52,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": true,
+            "prose": {
+              "end": 227,
+              "start": 0
+            },
+            "raw_output": 2.1859755516052246,
+            "source_ranges": [
+              {
+                "end": 1043,
+                "start": 1017
+              },
+              {
+                "end": 1048,
+                "start": 1044
+              },
+              {
+                "end": 1196,
+                "start": 1111
+              },
+              {
+                "end": 1230,
+                "start": 1198
+              },
+              {
+                "end": 1235,
+                "start": 1231
+              },
+              {
+                "end": 1392,
+                "start": 1333
+              },
+              {
+                "end": 2238,
+                "start": 2224
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 3,
+              "start": 0
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

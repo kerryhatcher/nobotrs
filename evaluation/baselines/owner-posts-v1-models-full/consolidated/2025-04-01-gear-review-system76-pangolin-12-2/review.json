@@ -1,0 +1,193 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "unknown"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "unknown"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "unknown"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "unknown"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": "analysis deadline exceeded",
+      "status": "incomplete"
+    },
+    {
+      "backend": "desklib",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author\u2019s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 5,
+        "end_column": 13,
+        "end_line": 41,
+        "line": 41,
+        "source_ranges": [
+          {
+            "end": 2576,
+            "start": 2568
+          }
+        ]
+      },
+      "matched_text": "Seamless",
+      "message": null,
+      "rule_id": "seamless",
+      "sentence": "Seamless Linux Integration: System76 ensures that Linux runs flawlessly out of the box.",
+      "severity": "medium",
+      "suggestion": "smooth",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "structure: failed",
+    "desklib: incomplete",
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "5": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-04-01-gear-review-system76-pangolin-12-2.md",
+  "prose_words": 746,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 1,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-01-gear-review-system76-pangolin-12-2/backend-attempt-1.json",
+        "sha256": "75066a4b588965a2f2a59e2b2d6185e1ec1f61df73a379a816a866f72432ad53",
+        "origin": "recovery_attempt",
+        "status": "incomplete"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-01-gear-review-system76-pangolin-12-2/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-01-gear-review-system76-pangolin-12-2/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

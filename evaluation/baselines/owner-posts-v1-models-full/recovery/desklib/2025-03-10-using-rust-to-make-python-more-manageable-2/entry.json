@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.052971,
+  "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+  "input_sha256": "4aacb44dc570d62ffcb4664ec6cb0255e03981e883f09a57c63ee04b3121bf41",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-10-using-rust-to-make-python-more-manageable-2/backend.json",
+  "reused_source_sha256": "e9af2f9bd2d58d30d147d443017bc807725e22bbbba91acf97a59ef05ac7d15e",
+  "status": "scored_full"
+}

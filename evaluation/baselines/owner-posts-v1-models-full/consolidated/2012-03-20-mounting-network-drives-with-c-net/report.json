@@ -1,0 +1,1712 @@
+{
+  "actionable_finding_count": 1,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 39.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "reason": "text has 39 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "reason": "text has 39 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "reason": "text has 39 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "reason": "text has 39 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 2,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 54,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 54,
+              "matched_text": "Example Usage:",
+              "prose_offset": {
+                "end": 226,
+                "start": 212
+              },
+              "raw_offset": {
+                "end": 2238,
+                "start": 2224
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 2,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2238,
+                  "start": 2224
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 2,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 54,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 54,
+              "matched_text": "Example Usage:",
+              "prose_offset": {
+                "end": 226,
+                "start": 212
+              },
+              "raw_offset": {
+                "end": 2238,
+                "start": 2224
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 2,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2238,
+                  "start": 2224
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 25.641025641025642
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 2.1859755516052246
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 770.579426,
+            "excerpt_bytes": 227,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 54,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 2.1859755516052246,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 227,
+            "prepared_words": 39,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": 2.1859755516052246,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 52,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 227,
+                  "start": 0
+                },
+                "raw_output": 2.1859755516052246,
+                "source_ranges": [
+                  {
+                    "end": 1043,
+                    "start": 1017
+                  },
+                  {
+                    "end": 1048,
+                    "start": 1044
+                  },
+                  {
+                    "end": 1196,
+                    "start": 1111
+                  },
+                  {
+                    "end": 1230,
+                    "start": 1198
+                  },
+                  {
+                    "end": 1235,
+                    "start": 1231
+                  },
+                  {
+                    "end": 1392,
+                    "start": 1333
+                  },
+                  {
+                    "end": 2238,
+                    "start": 2224
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 3,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "conpara",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+              "unit": "logit_margin",
+              "value": 7.299963712692261
+            },
+            "model_threshold": {
+              "method": "checkpoint_threshold_margin",
+              "unit": "logit",
+              "value": 2.9423828125
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "conpara",
+            "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+            "device": "cpu",
+            "elapsed_ms": 843.139741,
+            "excerpt_bytes": 223,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 54,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 7.299963712692261,
+            "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 223,
+            "prepared_words": 39,
+            "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+            "raw_output": 7.299963712692261,
+            "raw_units": "logit margin (AI - human; higher = machine-like)",
+            "runtime": "candle-debertav2",
+            "threshold": 2.9423828125,
+            "threshold_source": "checkpoint threshold_margin",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 52,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 226,
+                  "start": 0
+                },
+                "raw_output": 7.299963712692261,
+                "source_ranges": [
+                  {
+                    "end": 1043,
+                    "start": 1017
+                  },
+                  {
+                    "end": 1048,
+                    "start": 1044
+                  },
+                  {
+                    "end": 1196,
+                    "start": 1111
+                  },
+                  {
+                    "end": 1230,
+                    "start": 1198
+                  },
+                  {
+                    "end": 1235,
+                    "start": 1231
+                  },
+                  {
+                    "end": 1392,
+                    "start": 1333
+                  },
+                  {
+                    "end": 2238,
+                    "start": 2224
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 3,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "detectorscope",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -0.1359460949897766
+            },
+            "model_threshold": {
+              "method": "released logreg head",
+              "unit": "logit",
+              "value": 0.5008
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "detectorscope",
+            "code_revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+            "detectorscope": {
+              "active_features": 33,
+              "bias": 0.6096460819244385,
+              "feature_filter": 0.85,
+              "formatting_profile": "flat-whitespace-v1",
+              "omitted_features": 23,
+              "reconstruction_residual": 1.0762050806079061e-08,
+              "remainder": -0.12126961373724043,
+              "top_features": [
+                {
+                  "contribution": 0.06489036232233047,
+                  "description": "instructions on how to perform or accomplish specific tasks or processes",
+                  "highlights": [
+                    {
+                      "activation": 7.749385833740234,
+                      "prose_ranges": [
+                        {
+                          "end": 99,
+                          "start": 94
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1180,
+                          "start": 1175
+                        }
+                      ],
+                      "text": " make",
+                      "token_index": 23
+                    }
+                  ],
+                  "id": 49384
+                },
+                {
+                  "contribution": 0.049083031713962555,
+                  "description": "initial setup or beginning instructions in software tutorials or project guides",
+                  "highlights": [
+                    {
+                      "activation": 11.740710258483888,
+                      "prose_ranges": [
+                        {
+                          "end": 210,
+                          "start": 202
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1391,
+                          "start": 1383
+                        }
+                      ],
+                      "text": " project",
+                      "token_index": 50
+                    },
+                    {
+                      "activation": 7.554703712463379,
+                      "prose_ranges": [
+                        {
+                          "end": 202,
+                          "start": 197
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1383,
+                          "start": 1378
+                        }
+                      ],
+                      "text": " your",
+                      "token_index": 49
+                    },
+                    {
+                      "activation": 7.10978889465332,
+                      "prose_ranges": [
+                        {
+                          "end": 161,
+                          "start": 153
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1342,
+                          "start": 1334
+                        }
+                      ],
+                      "text": " extract",
+                      "token_index": 34
+                    },
+                    {
+                      "activation": 6.844231605529785,
+                      "prose_ranges": [
+                        {
+                          "end": 142,
+                          "start": 136
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1224,
+                          "start": 1218
+                        }
+                      ],
+                      "text": " files",
+                      "token_index": 30
+                    },
+                    {
+                      "activation": 6.386700630187988,
+                      "prose_ranges": [
+                        {
+                          "end": 136,
+                          "start": 128
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1218,
+                          "start": 1210
+                        }
+                      ],
+                      "text": " project",
+                      "token_index": 29
+                    }
+                  ],
+                  "id": 18558
+                },
+                {
+                  "contribution": 0.02957205101847649,
+                  "description": "words related to ensuring or contributing to positive outcomes or community improvements",
+                  "highlights": [
+                    {
+                      "activation": 26.391584396362305,
+                      "prose_ranges": [
+                        {
+                          "end": 52,
+                          "start": 50
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1133,
+                          "start": 1131
+                        }
+                      ],
+                      "text": " a",
+                      "token_index": 14
+                    },
+                    {
+                      "activation": 22.451576232910156,
+                      "prose_ranges": [
+                        {
+                          "end": 56,
+                          "start": 52
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1137,
+                          "start": 1133
+                        }
+                      ],
+                      "text": " lot",
+                      "token_index": 15
+                    },
+                    {
+                      "activation": 17.436492919921875,
+                      "prose_ranges": [
+                        {
+                          "end": 50,
+                          "start": 45
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1131,
+                          "start": 1126
+                        }
+                      ],
+                      "text": " life",
+                      "token_index": 13
+                    },
+                    {
+                      "activation": 10.01850700378418,
+                      "prose_ranges": [
+                        {
+                          "end": 104,
+                          "start": 99
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1185,
+                          "start": 1180
+                        }
+                      ],
+                      "text": " this",
+                      "token_index": 24
+                    }
+                  ],
+                  "id": 51551
+                },
+                {
+                  "contribution": 0.005500105209648609,
+                  "description": "word this used as a demonstrative pronoun or subject",
+                  "highlights": [
+                    {
+                      "activation": 40.92366027832031,
+                      "prose_ranges": [
+                        {
+                          "end": 104,
+                          "start": 99
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1185,
+                          "start": 1180
+                        }
+                      ],
+                      "text": " this",
+                      "token_index": 24
+                    }
+                  ],
+                  "id": 4181
+                },
+                {
+                  "contribution": 0.003535601543262601,
+                  "description": "step markers and section headers like step or list items",
+                  "highlights": [
+                    {
+                      "activation": 6.880773544311523,
+                      "prose_ranges": [
+                        {
+                          "end": 226,
+                          "start": 225
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2238,
+                          "start": 2237
+                        }
+                      ],
+                      "text": ":",
+                      "token_index": 54
+                    }
+                  ],
+                  "id": 43945
+                },
+                {
+                  "contribution": -0.4895677864551544,
+                  "description": "neuron fires on the digit 0 inside url placeholders like url 0",
+                  "highlights": [
+                    {
+                      "activation": 10.178939819335938,
+                      "prose_ranges": [
+                        {
+                          "end": 178,
+                          "start": 177
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1359,
+                          "start": 1358
+                        }
+                      ],
+                      "text": "0",
+                      "token_index": 40
+                    },
+                    {
+                      "activation": 8.594963073730469,
+                      "prose_ranges": [
+                        {
+                          "end": 177,
+                          "start": 176
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1358,
+                          "start": 1357
+                        }
+                      ],
+                      "text": "0",
+                      "token_index": 39
+                    },
+                    {
+                      "activation": 7.230438709259033,
+                      "prose_ranges": [
+                        {
+                          "end": 179,
+                          "start": 178
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1360,
+                          "start": 1359
+                        }
+                      ],
+                      "text": "1",
+                      "token_index": 41
+                    },
+                    {
+                      "activation": 4.677413463592529,
+                      "prose_ranges": [
+                        {
+                          "end": 180,
+                          "start": 179
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1361,
+                          "start": 1360
+                        }
+                      ],
+                      "text": "5",
+                      "token_index": 42
+                    }
+                  ],
+                  "id": 10954
+                },
+                {
+                  "contribution": -0.11965475231409071,
+                  "description": "biographical section headers and metadata labels",
+                  "highlights": [
+                    {
+                      "activation": 18.629608154296875,
+                      "prose_ranges": [
+                        {
+                          "end": 225,
+                          "start": 219
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2237,
+                          "start": 2231
+                        }
+                      ],
+                      "text": " Usage",
+                      "token_index": 53
+                    }
+                  ],
+                  "id": 50269
+                },
+                {
+                  "contribution": -0.07057444006204605,
+                  "description": "words or phrases used to reference or transition to other people's contributions or answers in a discussion",
+                  "highlights": [
+                    {
+                      "activation": 12.097570419311523,
+                      "prose_ranges": [
+                        {
+                          "end": 74,
+                          "start": 66
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1155,
+                          "start": 1147
+                        }
+                      ],
+                      "text": " writing",
+                      "token_index": 18
+                    },
+                    {
+                      "activation": 9.200328826904297,
+                      "prose_ranges": [
+                        {
+                          "end": 66,
+                          "start": 63
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1147,
+                          "start": 1144
+                        }
+                      ],
+                      "text": " by",
+                      "token_index": 17
+                    },
+                    {
+                      "activation": 7.953648090362549,
+                      "prose_ranges": [
+                        {
+                          "end": 35,
+                          "start": 30
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1116,
+                          "start": 1111
+                        }
+                      ],
+                      "text": " for",
+                      "token_index": 10
+                    },
+                    {
+                      "activation": 7.948164463043213,
+                      "prose_ranges": [
+                        {
+                          "end": 85,
+                          "start": 77
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1166,
+                          "start": 1158
+                        }
+                      ],
+                      "text": " awesome",
+                      "token_index": 20
+                    },
+                    {
+                      "activation": 7.772550106048584,
+                      "prose_ranges": [
+                        {
+                          "end": 77,
+                          "start": 74
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1158,
+                          "start": 1155
+                        }
+                      ],
+                      "text": " an",
+                      "token_index": 19
+                    }
+                  ],
+                  "id": 39030
+                },
+                {
+                  "contribution": -0.05669445171952248,
+                  "description": "pejorative descriptions of people or situations",
+                  "highlights": [
+                    {
+                      "activation": 4.495795726776123,
+                      "prose_ranges": [
+                        {
+                          "end": 50,
+                          "start": 45
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1131,
+                          "start": 1126
+                        }
+                      ],
+                      "text": " life",
+                      "token_index": 13
+                    }
+                  ],
+                  "id": 29376
+                },
+                {
+                  "contribution": -0.040412284433841705,
+                  "description": "words related to narrowing focusing or dimensionality",
+                  "highlights": [
+                    {
+                      "activation": 7.59414005279541,
+                      "prose_ranges": [
+                        {
+                          "end": 66,
+                          "start": 63
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1147,
+                          "start": 1144
+                        }
+                      ],
+                      "text": " by",
+                      "token_index": 17
+                    },
+                    {
+                      "activation": 5.39383602142334,
+                      "prose_ranges": [
+                        {
+                          "end": 50,
+                          "start": 45
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1131,
+                          "start": 1126
+                        }
+                      ],
+                      "text": " life",
+                      "token_index": 13
+                    }
+                  ],
+                  "id": 39975
+                }
+              ]
+            },
+            "device": "cpu",
+            "elapsed_ms": 5908.51931,
+            "excerpt_bytes": 227,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 55,
+            "execution_coverage": 1.0,
+            "full_coverage_output": -0.1359460949897766,
+            "model_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 227,
+            "prepared_words": 39,
+            "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+            "raw_output": -0.1359460949897766,
+            "raw_units": "logit (higher = machine-like at the released head threshold)",
+            "runtime": "detectorscope-worker",
+            "threshold": 0.5008,
+            "threshold_source": "released logreg head threshold",
+            "token_coverage": 1.0,
+            "token_limit": 1024,
+            "tokenizer_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 54,
+                "detectorscope": {
+                  "active_features": 33,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 23,
+                  "reconstruction_residual": 1.0762050806079061e-08,
+                  "remainder": -0.12126961373724043,
+                  "top_features": [
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.06489036232233047,
+                      "description": "instructions on how to perform or accomplish specific tasks or processes",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 7.749385833740234,
+                          "prose_ranges": [
+                            {
+                              "end": 99,
+                              "start": 94
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1180,
+                              "start": 1175
+                            }
+                          ],
+                          "text": " make",
+                          "token_index": 23
+                        }
+                      ],
+                      "id": 49384
+                    },
+                    {
+                      "active_tokens": 9,
+                      "contribution": 0.049083031713962555,
+                      "description": "initial setup or beginning instructions in software tutorials or project guides",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 11.740710258483888,
+                          "prose_ranges": [
+                            {
+                              "end": 210,
+                              "start": 202
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1391,
+                              "start": 1383
+                            }
+                          ],
+                          "text": " project",
+                          "token_index": 50
+                        },
+                        {
+                          "activation": 7.554703712463379,
+                          "prose_ranges": [
+                            {
+                              "end": 202,
+                              "start": 197
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1383,
+                              "start": 1378
+                            }
+                          ],
+                          "text": " your",
+                          "token_index": 49
+                        },
+                        {
+                          "activation": 7.10978889465332,
+                          "prose_ranges": [
+                            {
+                              "end": 161,
+                              "start": 153
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1342,
+                              "start": 1334
+                            }
+                          ],
+                          "text": " extract",
+                          "token_index": 34
+                        },
+                        {
+                          "activation": 6.844231605529785,
+                          "prose_ranges": [
+                            {
+                              "end": 142,
+                              "start": 136
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1224,
+                              "start": 1218
+                            }
+                          ],
+                          "text": " files",
+                          "token_index": 30
+                        },
+                        {
+                          "activation": 6.386700630187988,
+                          "prose_ranges": [
+                            {
+                              "end": 136,
+                              "start": 128
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1218,
+                              "start": 1210
+                            }
+                          ],
+                          "text": " project",
+                          "token_index": 29
+                        }
+                      ],
+                      "id": 18558
+                    },
+                    {
+                      "active_tokens": 4,
+                      "contribution": 0.02957205101847649,
+                      "description": "words related to ensuring or contributing to positive outcomes or community improvements",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 26.391584396362305,
+                          "prose_ranges": [
+                            {
+                              "end": 52,
+                              "start": 50
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1133,
+                              "start": 1131
+                            }
+                          ],
+                          "text": " a",
+                          "token_index": 14
+                        },
+                        {
+                          "activation": 22.451576232910156,
+                          "prose_ranges": [
+                            {
+                              "end": 56,
+                              "start": 52
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1137,
+                              "start": 1133
+                            }
+                          ],
+                          "text": " lot",
+                          "token_index": 15
+                        },
+                        {
+                          "activation": 17.436492919921875,
+                          "prose_ranges": [
+                            {
+                              "end": 50,
+                              "start": 45
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1131,
+                              "start": 1126
+                            }
+                          ],
+                          "text": " life",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 10.01850700378418,
+                          "prose_ranges": [
+                            {
+                              "end": 104,
+                              "start": 99
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1185,
+                              "start": 1180
+                            }
+                          ],
+                          "text": " this",
+                          "token_index": 24
+                        }
+                      ],
+                      "id": 51551
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.005500105209648609,
+                      "description": "word this used as a demonstrative pronoun or subject",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 40.92366027832031,
+                          "prose_ranges": [
+                            {
+                              "end": 104,
+                              "start": 99
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1185,
+                              "start": 1180
+                            }
+                          ],
+                          "text": " this",
+                          "token_index": 24
+                        }
+                      ],
+                      "id": 4181
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.003535601543262601,
+                      "description": "step markers and section headers like step or list items",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.880773544311523,
+                          "prose_ranges": [
+                            {
+                              "end": 226,
+                              "start": 225
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2238,
+                              "start": 2237
+                            }
+                          ],
+                          "text": ":",
+                          "token_index": 54
+                        }
+                      ],
+                      "id": 43945
+                    },
+                    {
+                      "active_tokens": 4,
+                      "contribution": -0.4895677864551544,
+                      "description": "neuron fires on the digit 0 inside url placeholders like url 0",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 10.178939819335938,
+                          "prose_ranges": [
+                            {
+                              "end": 178,
+                              "start": 177
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1359,
+                              "start": 1358
+                            }
+                          ],
+                          "text": "0",
+                          "token_index": 40
+                        },
+                        {
+                          "activation": 8.594963073730469,
+                          "prose_ranges": [
+                            {
+                              "end": 177,
+                              "start": 176
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1358,
+                              "start": 1357
+                            }
+                          ],
+                          "text": "0",
+                          "token_index": 39
+                        },
+                        {
+                          "activation": 7.230438709259033,
+                          "prose_ranges": [
+                            {
+                              "end": 179,
+                              "start": 178
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1360,
+                              "start": 1359
+                            }
+                          ],
+                          "text": "1",
+                          "token_index": 41
+                        },
+                        {
+                          "activation": 4.677413463592529,
+                          "prose_ranges": [
+                            {
+                              "end": 180,
+                              "start": 179
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1361,
+                              "start": 1360
+                            }
+                          ],
+                          "text": "5",
+                          "token_index": 42
+                        }
+                      ],
+                      "id": 10954
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.11965475231409071,
+                      "description": "biographical section headers and metadata labels",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 18.629608154296875,
+                          "prose_ranges": [
+                            {
+                              "end": 225,
+                              "start": 219
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2237,
+                              "start": 2231
+                            }
+                          ],
+                          "text": " Usage",
+                          "token_index": 53
+                        }
+                      ],
+                      "id": 50269
+                    },
+                    {
+                      "active_tokens": 7,
+                      "contribution": -0.07057444006204605,
+                      "description": "words or phrases used to reference or transition to other people's contributions or answers in a discussion",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 12.097570419311523,
+                          "prose_ranges": [
+                            {
+                              "end": 74,
+                              "start": 66
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1155,
+                              "start": 1147
+                            }
+                          ],
+                          "text": " writing",
+                          "token_index": 18
+                        },
+                        {
+                          "activation": 9.200328826904297,
+                          "prose_ranges": [
+                            {
+                              "end": 66,
+                              "start": 63
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1147,
+                              "start": 1144
+                            }
+                          ],
+                          "text": " by",
+                          "token_index": 17
+                        },
+                        {
+                          "activation": 7.953648090362549,
+                          "prose_ranges": [
+                            {
+                              "end": 35,
+                              "start": 30
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1116,
+                              "start": 1111
+                            }
+                          ],
+                          "text": " for",
+                          "token_index": 10
+                        },
+                        {
+                          "activation": 7.948164463043213,
+                          "prose_ranges": [
+                            {
+                              "end": 85,
+                              "start": 77
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1166,
+                              "start": 1158
+                            }
+                          ],
+                          "text": " awesome",
+                          "token_index": 20
+                        },
+                        {
+                          "activation": 7.772550106048584,
+                          "prose_ranges": [
+                            {
+                              "end": 77,
+                              "start": 74
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1158,
+                              "start": 1155
+                            }
+                          ],
+                          "text": " an",
+                          "token_index": 19
+                        }
+                      ],
+                      "id": 39030
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.05669445171952248,
+                      "description": "pejorative descriptions of people or situations",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.495795726776123,
+                          "prose_ranges": [
+                            {
+                              "end": 50,
+                              "start": 45
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1131,
+                              "start": 1126
+                            }
+                          ],
+                          "text": " life",
+                          "token_index": 13
+                        }
+                      ],
+                      "id": 29376
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.040412284433841705,
+                      "description": "words related to narrowing focusing or dimensionality",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 7.59414005279541,
+                          "prose_ranges": [
+                            {
+                              "end": 66,
+                              "start": 63
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1147,
+                              "start": 1144
+                            }
+                          ],
+                          "text": " by",
+                          "token_index": 17
+                        },
+                        {
+                          "activation": 5.39383602142334,
+                          "prose_ranges": [
+                            {
+                              "end": 50,
+                              "start": 45
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1131,
+                              "start": 1126
+                            }
+                          ],
+                          "text": " life",
+                          "token_index": 13
+                        }
+                      ],
+                      "id": 39975
+                    }
+                  ]
+                },
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 226,
+                  "start": 0
+                },
+                "raw_output": -0.1359460949897766,
+                "source_ranges": [
+                  {
+                    "end": 1043,
+                    "start": 1017
+                  },
+                  {
+                    "end": 1048,
+                    "start": 1044
+                  },
+                  {
+                    "end": 1196,
+                    "start": 1111
+                  },
+                  {
+                    "end": 1230,
+                    "start": 1198
+                  },
+                  {
+                    "end": 1235,
+                    "start": 1231
+                  },
+                  {
+                    "end": 1392,
+                    "start": 1333
+                  },
+                  {
+                    "end": 2238,
+                    "start": 2224
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 3,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1043,
+        "start": 1017
+      },
+      {
+        "end": 1048,
+        "start": 1044
+      },
+      {
+        "end": 1196,
+        "start": 1111
+      }
+    ],
+    [
+      {
+        "end": 1230,
+        "start": 1198
+      },
+      {
+        "end": 1235,
+        "start": 1231
+      },
+      {
+        "end": 1392,
+        "start": 1333
+      }
+    ],
+    [
+      {
+        "end": 2238,
+        "start": 2224
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 1,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 1,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2012-03-20-mounting-network-drives-with-c-net.md",
+  "prose_words": 39,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1043,
+        "start": 1017
+      },
+      {
+        "end": 1048,
+        "start": 1044
+      },
+      {
+        "end": 1196,
+        "start": 1111
+      }
+    ],
+    [
+      {
+        "end": 1230,
+        "start": 1198
+      },
+      {
+        "end": 1235,
+        "start": 1231
+      },
+      {
+        "end": 1392,
+        "start": 1333
+      }
+    ],
+    [
+      {
+        "end": 2238,
+        "start": 2224
+      }
+    ]
+  ],
+  "sentence_count": 3,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": [],
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-20-mounting-network-drives-with-c-net/report.json",
+        "sha256": "996db7b57bb4cfe2ac0c9039b2540181d098fba4cf27914ec34c00690728173c",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-20-mounting-network-drives-with-c-net/report.json",
+        "sha256": "996db7b57bb4cfe2ac0c9039b2540181d098fba4cf27914ec34c00690728173c",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-20-mounting-network-drives-with-c-net/report.json",
+        "sha256": "996db7b57bb4cfe2ac0c9039b2540181d098fba4cf27914ec34c00690728173c",
+        "origin": "original_reused",
+        "status": "scored_full"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

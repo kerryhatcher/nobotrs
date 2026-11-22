@@ -1,6 +1,14 @@
 # nobotrs remediation handoff
 
-## Resume here — updated 2026-11-16
+## Resume here — updated 2026-11-21
+
+Humanization and reader-first editing are back in scope by owner decision. The [revised roadmap](docs/superpowers/plans/2026-11-21-humanize-roadmap.md) governs delivery and supersedes the historical deferrals below. Plans 1–2 now provide the canonical brief, exact rule coverage, additive lint guidance metadata, parallel source-mapped units, a non-voting structural family and advisory review. Structure runs only in editorial analysis; legacy detection and lint retain their backend execution budgets and voting behavior. The drafting and revision skills ship with local guides. The CLI also supports draft comparison, copyediting, project fact checks and optional section-level model diagnostics.
+
+Review ranks unsliced suppressed outcomes, counts before truncation, and emits each logical finding once. Locations are optional for document-wide metrics. The public `Engine::editorial_analysis` returns `(Report, Document)` for review and compare consumers. `guide` JSON retains its old `guide` field alongside canonical data. The practical field-guide section changed; external judge comparisons using the embedded field guide must identify this guide revision rather than compare outputs as if the prompt were unchanged.
+
+The historical authorship qualification failure remains in force. Structural observations are unvalidated editing prompts. See the plan sheets for scoped verification and outstanding model validation gates.
+
+## Historical checkpoint — 2026-11-16
 
 Repository: `/mnt/storage/projects/nobotrs`, branch `main`. Implementation and
 assessment checkpoint before this handoff: `f7b01e5`. This section is the entry

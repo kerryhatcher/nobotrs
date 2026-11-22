@@ -1,0 +1,2617 @@
+{
+  "actionable_finding_count": 3,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 149.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "reason": "text has 149 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "reason": "text has 149 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "reason": "text has 149 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "reason": "text has 149 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 5,
+              "column": 315,
+              "disposition": "selected",
+              "end_column": 330,
+              "end_line": 40,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 40,
+              "matched_text": "Don't do this!!",
+              "prose_offset": {
+                "end": 770,
+                "start": 755
+              },
+              "raw_offset": {
+                "end": 2133,
+                "start": 2118
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 12,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2133,
+                  "start": 2118
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 7,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 11,
+              "end_line": 42,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 42,
+              "matched_text": "Reference",
+              "prose_offset": {
+                "end": 827,
+                "start": 818
+              },
+              "raw_offset": {
+                "end": 2216,
+                "start": 2207
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 15,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2216,
+                  "start": 2207
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 5,
+              "column": 315,
+              "disposition": "selected",
+              "end_column": 330,
+              "end_line": 40,
+              "guidance_id": "structure.fragment-pattern",
+              "leverage": 2,
+              "line": 40,
+              "matched_text": "Don't do this!!",
+              "prose_offset": {
+                "end": 770,
+                "start": 755
+              },
+              "raw_offset": {
+                "end": 2133,
+                "start": 2118
+              },
+              "rule_id": "structure.fragment-pattern",
+              "sentence_context": 12,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2133,
+                  "start": 2118
+                }
+              ],
+              "suggestion": "2 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 5,
+              "column": 315,
+              "disposition": "selected",
+              "end_column": 330,
+              "end_line": 40,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 40,
+              "matched_text": "Don't do this!!",
+              "prose_offset": {
+                "end": 770,
+                "start": 755
+              },
+              "raw_offset": {
+                "end": 2133,
+                "start": 2118
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 12,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2133,
+                  "start": 2118
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 7,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 11,
+              "end_line": 42,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 42,
+              "matched_text": "Reference",
+              "prose_offset": {
+                "end": 827,
+                "start": 818
+              },
+              "raw_offset": {
+                "end": 2216,
+                "start": 2207
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 15,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2216,
+                  "start": 2207
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 5,
+              "column": 315,
+              "disposition": "selected",
+              "end_column": 330,
+              "end_line": 40,
+              "guidance_id": "structure.fragment-pattern",
+              "leverage": 2,
+              "line": 40,
+              "matched_text": "Don't do this!!",
+              "prose_offset": {
+                "end": 770,
+                "start": 755
+              },
+              "raw_offset": {
+                "end": 2133,
+                "start": 2118
+              },
+              "rule_id": "structure.fragment-pattern",
+              "sentence_context": 12,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2133,
+                  "start": 2118
+                }
+              ],
+              "suggestion": "2 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 20.13422818791946
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -3.326629877090454
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 2368.769861,
+            "excerpt_bytes": 828,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 187,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 0.7214967856536041,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 828,
+            "prepared_words": 149,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -3.326629877090454,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 126,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 558,
+                  "start": 0
+                },
+                "raw_output": 2.1008780002593994,
+                "source_ranges": [
+                  {
+                    "end": 1316,
+                    "start": 1004
+                  },
+                  {
+                    "end": 1371,
+                    "start": 1318
+                  },
+                  {
+                    "end": 1613,
+                    "start": 1468
+                  },
+                  {
+                    "end": 1729,
+                    "start": 1692
+                  },
+                  {
+                    "end": 1801,
+                    "start": 1794
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 8,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 59,
+                "heading": "Warning:",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 828,
+                  "start": 558
+                },
+                "raw_output": -2.2243003845214844,
+                "source_ranges": [
+                  {
+                    "end": 1802,
+                    "start": 1801
+                  },
+                  {
+                    "end": 1838,
+                    "start": 1804
+                  },
+                  {
+                    "end": 1845,
+                    "start": 1839
+                  },
+                  {
+                    "end": 1981,
+                    "start": 1894
+                  },
+                  {
+                    "end": 2047,
+                    "start": 1982
+                  },
+                  {
+                    "end": 2150,
+                    "start": 2115
+                  },
+                  {
+                    "end": 2204,
+                    "start": 2175
+                  },
+                  {
+                    "end": 2216,
+                    "start": 2207
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 15,
+                  "start": 8
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "conpara",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+              "unit": "logit_margin",
+              "value": -4.6907947063446045
+            },
+            "model_threshold": {
+              "method": "checkpoint_threshold_margin",
+              "unit": "logit",
+              "value": 2.9423828125
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "conpara",
+            "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+            "device": "cpu",
+            "elapsed_ms": 2365.9291319999998,
+            "excerpt_bytes": 825,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 187,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 2.9559356644346906,
+            "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 825,
+            "prepared_words": 149,
+            "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+            "raw_output": -4.6907947063446045,
+            "raw_units": "logit margin (AI - human; higher = machine-like)",
+            "runtime": "candle-debertav2",
+            "threshold": 2.9423828125,
+            "threshold_source": "checkpoint threshold_margin",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 126,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 558,
+                  "start": 0
+                },
+                "raw_output": 3.128591775894165,
+                "source_ranges": [
+                  {
+                    "end": 1316,
+                    "start": 1004
+                  },
+                  {
+                    "end": 1371,
+                    "start": 1318
+                  },
+                  {
+                    "end": 1613,
+                    "start": 1468
+                  },
+                  {
+                    "end": 1729,
+                    "start": 1692
+                  },
+                  {
+                    "end": 1801,
+                    "start": 1794
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 8,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 59,
+                "heading": "Warning:",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 827,
+                  "start": 558
+                },
+                "raw_output": 2.5872124433517456,
+                "source_ranges": [
+                  {
+                    "end": 1802,
+                    "start": 1801
+                  },
+                  {
+                    "end": 1838,
+                    "start": 1804
+                  },
+                  {
+                    "end": 1845,
+                    "start": 1839
+                  },
+                  {
+                    "end": 1981,
+                    "start": 1894
+                  },
+                  {
+                    "end": 2047,
+                    "start": 1982
+                  },
+                  {
+                    "end": 2150,
+                    "start": 2115
+                  },
+                  {
+                    "end": 2204,
+                    "start": 2175
+                  },
+                  {
+                    "end": 2216,
+                    "start": 2207
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 15,
+                  "start": 8
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "detectorscope",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -0.38571953773498535
+            },
+            "model_threshold": {
+              "method": "released logreg head",
+              "unit": "logit",
+              "value": 0.5008
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "detectorscope",
+            "code_revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+            "detectorscope": {
+              "active_features": 91,
+              "bias": 0.6096460819244385,
+              "feature_filter": 0.85,
+              "formatting_profile": "flat-whitespace-v1",
+              "omitted_features": 81,
+              "reconstruction_residual": 3.4743266041914473e-08,
+              "remainder": -0.4613230265676975,
+              "top_features": [
+                {
+                  "contribution": 0.2960349917411804,
+                  "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                  "highlights": [
+                    {
+                      "activation": 6.5559983253479,
+                      "prose_ranges": [
+                        {
+                          "end": 411,
+                          "start": 410
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1512,
+                          "start": 1511
+                        }
+                      ],
+                      "text": "/",
+                      "token_index": 89
+                    }
+                  ],
+                  "id": 41406
+                },
+                {
+                  "contribution": 0.2689356505870819,
+                  "description": "exclamation points used at the end of emotional or emphatic sentences",
+                  "highlights": [
+                    {
+                      "activation": 46.047698974609375,
+                      "prose_ranges": [
+                        {
+                          "end": 770,
+                          "start": 768
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2133,
+                          "start": 2131
+                        }
+                      ],
+                      "text": "!!",
+                      "token_index": 168
+                    }
+                  ],
+                  "id": 18537
+                },
+                {
+                  "contribution": 0.12424060702323914,
+                  "description": "cooking and instructional serving or assembly directions",
+                  "highlights": [
+                    {
+                      "activation": 6.140439033508301,
+                      "prose_ranges": [
+                        {
+                          "end": 540,
+                          "start": 535
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1719,
+                          "start": 1714
+                        }
+                      ],
+                      "text": " with",
+                      "token_index": 120
+                    },
+                    {
+                      "activation": 5.5731964111328125,
+                      "prose_ranges": [
+                        {
+                          "end": 527,
+                          "start": 523
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1706,
+                          "start": 1702
+                        }
+                      ],
+                      "text": " and",
+                      "token_index": 118
+                    },
+                    {
+                      "activation": 4.813386917114258,
+                      "prose_ranges": [
+                        {
+                          "end": 808,
+                          "start": 800
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2195,
+                          "start": 2187
+                        }
+                      ],
+                      "text": " restart",
+                      "token_index": 176
+                    },
+                    {
+                      "activation": 3.593986749649048,
+                      "prose_ranges": [
+                        {
+                          "end": 282,
+                          "start": 272
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1286,
+                          "start": 1276
+                        }
+                      ],
+                      "text": " deploying",
+                      "token_index": 59
+                    },
+                    {
+                      "activation": 3.4074504375457764,
+                      "prose_ranges": [
+                        {
+                          "end": 535,
+                          "start": 527
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1714,
+                          "start": 1706
+                        }
+                      ],
+                      "text": " install",
+                      "token_index": 119
+                    }
+                  ],
+                  "id": 18874
+                },
+                {
+                  "contribution": 0.061597857624292374,
+                  "description": "activates on the word also and phrases containing it",
+                  "highlights": [
+                    {
+                      "activation": 6.621181011199951,
+                      "prose_ranges": [
+                        {
+                          "end": 205,
+                          "start": 195
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1209,
+                          "start": 1199
+                        }
+                      ],
+                      "text": " recommend",
+                      "token_index": 45
+                    }
+                  ],
+                  "id": 47226
+                },
+                {
+                  "contribution": 0.049122199416160583,
+                  "description": "word such when used to introduce examples or comparisons",
+                  "highlights": [
+                    {
+                      "activation": 12.164787292480469,
+                      "prose_ranges": [
+                        {
+                          "end": 151,
+                          "start": 145
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1155,
+                          "start": 1149
+                        }
+                      ],
+                      "text": " other",
+                      "token_index": 35
+                    }
+                  ],
+                  "id": 46850
+                },
+                {
+                  "contribution": -0.479547381401062,
+                  "description": "markdown editing and formatting indicators",
+                  "highlights": [
+                    {
+                      "activation": 8.046192169189453,
+                      "prose_ranges": [
+                        {
+                          "end": 564,
+                          "start": 559
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1808,
+                          "start": 1804
+                        }
+                      ],
+                      "text": " When",
+                      "token_index": 125
+                    },
+                    {
+                      "activation": 7.5372443199157715,
+                      "prose_ranges": [
+                        {
+                          "end": 572,
+                          "start": 566
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1816,
+                          "start": 1810
+                        }
+                      ],
+                      "text": " first",
+                      "token_index": 127
+                    },
+                    {
+                      "activation": 6.566714286804199,
+                      "prose_ranges": [
+                        {
+                          "end": 581,
+                          "start": 580
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1825,
+                          "start": 1824
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 129
+                    },
+                    {
+                      "activation": 6.3699259757995605,
+                      "prose_ranges": [
+                        {
+                          "end": 580,
+                          "start": 572
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1824,
+                          "start": 1816
+                        }
+                      ],
+                      "text": " started",
+                      "token_index": 128
+                    },
+                    {
+                      "activation": 6.321831703186035,
+                      "prose_ranges": [
+                        {
+                          "end": 566,
+                          "start": 564
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1810,
+                          "start": 1808
+                        }
+                      ],
+                      "text": " I",
+                      "token_index": 126
+                    }
+                  ],
+                  "id": 32030
+                },
+                {
+                  "contribution": -0.2957550287246704,
+                  "description": "doubled words appearing as a repeated pair",
+                  "highlights": [
+                    {
+                      "activation": 17.517473220825195,
+                      "prose_ranges": [
+                        {
+                          "end": 12,
+                          "start": 7
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1016,
+                          "start": 1011
+                        }
+                      ],
+                      "text": " VERY",
+                      "token_index": 3
+                    },
+                    {
+                      "activation": 10.43016242980957,
+                      "prose_ranges": [
+                        {
+                          "end": 19,
+                          "start": 12
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1023,
+                          "start": 1016
+                        }
+                      ],
+                      "text": " simple",
+                      "token_index": 4
+                    },
+                    {
+                      "activation": 4.385709762573242,
+                      "prose_ranges": [
+                        {
+                          "end": 304,
+                          "start": 295
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1308,
+                          "start": 1299
+                        }
+                      ],
+                      "text": " critical",
+                      "token_index": 63
+                    },
+                    {
+                      "activation": 2.1490464210510254,
+                      "prose_ranges": [
+                        {
+                          "end": 255,
+                          "start": 249
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1259,
+                          "start": 1253
+                        }
+                      ],
+                      "text": " quick",
+                      "token_index": 55
+                    }
+                  ],
+                  "id": 794
+                },
+                {
+                  "contribution": -0.23969592154026031,
+                  "description": "parenthetical clauses or aside remarks in text",
+                  "highlights": [
+                    {
+                      "activation": 4.3650994300842285,
+                      "prose_ranges": [
+                        {
+                          "end": 488,
+                          "start": 484
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1589,
+                          "start": 1585
+                        }
+                      ],
+                      "text": " let",
+                      "token_index": 109
+                    },
+                    {
+                      "activation": 4.265239238739014,
+                      "prose_ranges": [
+                        {
+                          "end": 717,
+                          "start": 713
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2012,
+                          "start": 2008
+                        }
+                      ],
+                      "text": " due",
+                      "token_index": 155
+                    },
+                    {
+                      "activation": 3.909267902374267,
+                      "prose_ranges": [
+                        {
+                          "end": 722,
+                          "start": 720
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2017,
+                          "start": 2015
+                        }
+                      ],
+                      "text": " a",
+                      "token_index": 157
+                    },
+                    {
+                      "activation": 3.88480281829834,
+                      "prose_ranges": [
+                        {
+                          "end": 671,
+                          "start": 668
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1965,
+                          "start": 1962
+                        }
+                      ],
+                      "text": " to",
+                      "token_index": 147
+                    },
+                    {
+                      "activation": 3.864492416381836,
+                      "prose_ranges": [
+                        {
+                          "end": 740,
+                          "start": 732
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2035,
+                          "start": 2027
+                        }
+                      ],
+                      "text": " dispute",
+                      "token_index": 159
+                    }
+                  ],
+                  "id": 7178
+                },
+                {
+                  "contribution": -0.18342474102973935,
+                  "description": "newline characters and line breaks within technical or academic documents",
+                  "highlights": [
+                    {
+                      "activation": 6.07863712310791,
+                      "prose_ranges": [
+                        {
+                          "end": 366,
+                          "start": 365
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1371,
+                          "start": 1370
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 78
+                    }
+                  ],
+                  "id": 25049
+                },
+                {
+                  "contribution": -0.1355508267879486,
+                  "description": "tokenized components of medical or diagnostic phrasing and lists",
+                  "highlights": [
+                    {
+                      "activation": 4.216598987579346,
+                      "prose_ranges": [
+                        {
+                          "end": 25,
+                          "start": 24
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1029,
+                          "start": 1028
+                        }
+                      ],
+                      "text": "'",
+                      "token_index": 7
+                    }
+                  ],
+                  "id": 13528
+                }
+              ]
+            },
+            "device": "cpu",
+            "elapsed_ms": 6671.310326000001,
+            "excerpt_bytes": 828,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 181,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 0.03537500997384389,
+            "model_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 828,
+            "prepared_words": 149,
+            "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+            "raw_output": -0.38571953773498535,
+            "raw_units": "logit (higher = machine-like at the released head threshold)",
+            "runtime": "detectorscope-worker",
+            "threshold": 0.5008,
+            "threshold_source": "released logreg head threshold",
+            "token_coverage": 1.0,
+            "token_limit": 1024,
+            "tokenizer_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 123,
+                "detectorscope": {
+                  "active_features": 65,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 55,
+                  "reconstruction_residual": -4.5406864046526614e-08,
+                  "remainder": -0.22797179222106936,
+                  "top_features": [
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.2960349917411804,
+                      "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.5559983253479,
+                          "prose_ranges": [
+                            {
+                              "end": 411,
+                              "start": 410
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1512,
+                              "start": 1511
+                            }
+                          ],
+                          "text": "/",
+                          "token_index": 89
+                        }
+                      ],
+                      "id": 41406
+                    },
+                    {
+                      "active_tokens": 4,
+                      "contribution": 0.12424059212207794,
+                      "description": "cooking and instructional serving or assembly directions",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.140438079833984,
+                          "prose_ranges": [
+                            {
+                              "end": 540,
+                              "start": 535
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1719,
+                              "start": 1714
+                            }
+                          ],
+                          "text": " with",
+                          "token_index": 120
+                        },
+                        {
+                          "activation": 5.5731964111328125,
+                          "prose_ranges": [
+                            {
+                              "end": 527,
+                              "start": 523
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1706,
+                              "start": 1702
+                            }
+                          ],
+                          "text": " and",
+                          "token_index": 118
+                        },
+                        {
+                          "activation": 3.593986749649048,
+                          "prose_ranges": [
+                            {
+                              "end": 282,
+                              "start": 272
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1286,
+                              "start": 1276
+                            }
+                          ],
+                          "text": " deploying",
+                          "token_index": 59
+                        },
+                        {
+                          "activation": 3.4074504375457764,
+                          "prose_ranges": [
+                            {
+                              "end": 535,
+                              "start": 527
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1714,
+                              "start": 1706
+                            }
+                          ],
+                          "text": " install",
+                          "token_index": 119
+                        }
+                      ],
+                      "id": 18874
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.061597857624292374,
+                      "description": "activates on the word also and phrases containing it",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.621181011199951,
+                          "prose_ranges": [
+                            {
+                              "end": 205,
+                              "start": 195
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1209,
+                              "start": 1199
+                            }
+                          ],
+                          "text": " recommend",
+                          "token_index": 45
+                        }
+                      ],
+                      "id": 47226
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.049122199416160583,
+                      "description": "word such when used to introduce examples or comparisons",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 12.164787292480469,
+                          "prose_ranges": [
+                            {
+                              "end": 151,
+                              "start": 145
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1155,
+                              "start": 1149
+                            }
+                          ],
+                          "text": " other",
+                          "token_index": 35
+                        }
+                      ],
+                      "id": 46850
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.04085269197821617,
+                      "description": "words or phrases related to instructional titles often containing how to or specific project steps",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 7.21124792098999,
+                          "prose_ranges": [
+                            {
+                              "end": 88,
+                              "start": 81
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1092,
+                              "start": 1085
+                            }
+                          ],
+                          "text": " Server",
+                          "token_index": 19
+                        }
+                      ],
+                      "id": 43394
+                    },
+                    {
+                      "active_tokens": 4,
+                      "contribution": -0.2957550287246704,
+                      "description": "doubled words appearing as a repeated pair",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 17.517473220825195,
+                          "prose_ranges": [
+                            {
+                              "end": 12,
+                              "start": 7
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1016,
+                              "start": 1011
+                            }
+                          ],
+                          "text": " VERY",
+                          "token_index": 3
+                        },
+                        {
+                          "activation": 10.43016242980957,
+                          "prose_ranges": [
+                            {
+                              "end": 19,
+                              "start": 12
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1023,
+                              "start": 1016
+                            }
+                          ],
+                          "text": " simple",
+                          "token_index": 4
+                        },
+                        {
+                          "activation": 4.385709762573242,
+                          "prose_ranges": [
+                            {
+                              "end": 304,
+                              "start": 295
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1308,
+                              "start": 1299
+                            }
+                          ],
+                          "text": " critical",
+                          "token_index": 63
+                        },
+                        {
+                          "activation": 2.1490464210510254,
+                          "prose_ranges": [
+                            {
+                              "end": 255,
+                              "start": 249
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1259,
+                              "start": 1253
+                            }
+                          ],
+                          "text": " quick",
+                          "token_index": 55
+                        }
+                      ],
+                      "id": 794
+                    },
+                    {
+                      "active_tokens": 7,
+                      "contribution": -0.23969592154026031,
+                      "description": "parenthetical clauses or aside remarks in text",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.3650994300842285,
+                          "prose_ranges": [
+                            {
+                              "end": 488,
+                              "start": 484
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1589,
+                              "start": 1585
+                            }
+                          ],
+                          "text": " let",
+                          "token_index": 109
+                        },
+                        {
+                          "activation": 3.401745319366455,
+                          "prose_ranges": [
+                            {
+                              "end": 212,
+                              "start": 205
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1216,
+                              "start": 1209
+                            }
+                          ],
+                          "text": " firing",
+                          "token_index": 46
+                        },
+                        {
+                          "activation": 2.7456650733947754,
+                          "prose_ranges": [
+                            {
+                              "end": 136,
+                              "start": 130
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1140,
+                              "start": 1134
+                            }
+                          ],
+                          "text": " other",
+                          "token_index": 33
+                        },
+                        {
+                          "activation": 2.6625518798828125,
+                          "prose_ranges": [
+                            {
+                              "end": 505,
+                              "start": 500
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1606,
+                              "start": 1601
+                            }
+                          ],
+                          "text": " what",
+                          "token_index": 112
+                        },
+                        {
+                          "activation": 2.622854709625244,
+                          "prose_ranges": [
+                            {
+                              "end": 116,
+                              "start": 111
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1120,
+                              "start": 1115
+                            }
+                          ],
+                          "text": " seem",
+                          "token_index": 29
+                        }
+                      ],
+                      "id": 7178
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.18342474102973935,
+                      "description": "newline characters and line breaks within technical or academic documents",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.07863712310791,
+                          "prose_ranges": [
+                            {
+                              "end": 366,
+                              "start": 365
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1371,
+                              "start": 1370
+                            }
+                          ],
+                          "text": ".",
+                          "token_index": 78
+                        }
+                      ],
+                      "id": 25049
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.1355508267879486,
+                      "description": "tokenized components of medical or diagnostic phrasing and lists",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.216598987579346,
+                          "prose_ranges": [
+                            {
+                              "end": 25,
+                              "start": 24
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1029,
+                              "start": 1028
+                            }
+                          ],
+                          "text": "'",
+                          "token_index": 7
+                        }
+                      ],
+                      "id": 13528
+                    },
+                    {
+                      "active_tokens": 5,
+                      "contribution": -0.09967021644115448,
+                      "description": "words related to estimations or imprecise approximations",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 9.043134689331056,
+                          "prose_ranges": [
+                            {
+                              "end": 255,
+                              "start": 249
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1259,
+                              "start": 1253
+                            }
+                          ],
+                          "text": " quick",
+                          "token_index": 55
+                        },
+                        {
+                          "activation": 4.831732273101807,
+                          "prose_ranges": [
+                            {
+                              "end": 472,
+                              "start": 466
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1573,
+                              "start": 1567
+                            }
+                          ],
+                          "text": " quick",
+                          "token_index": 105
+                        },
+                        {
+                          "activation": 3.267817497253418,
+                          "prose_ranges": [
+                            {
+                              "end": 505,
+                              "start": 500
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1606,
+                              "start": 1601
+                            }
+                          ],
+                          "text": " what",
+                          "token_index": 112
+                        },
+                        {
+                          "activation": 3.0184507369995117,
+                          "prose_ranges": [
+                            {
+                              "end": 484,
+                              "start": 481
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1585,
+                              "start": 1582
+                            }
+                          ],
+                          "text": " to",
+                          "token_index": 108
+                        },
+                        {
+                          "activation": 2.4867868423461914,
+                          "prose_ranges": [
+                            {
+                              "end": 481,
+                              "start": 474
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1582,
+                              "start": 1575
+                            }
+                          ],
+                          "text": "comment",
+                          "token_index": 107
+                        }
+                      ],
+                      "id": 4627
+                    }
+                  ]
+                },
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 558,
+                  "start": 0
+                },
+                "raw_output": -0.0005741119384765625,
+                "source_ranges": [
+                  {
+                    "end": 1316,
+                    "start": 1004
+                  },
+                  {
+                    "end": 1371,
+                    "start": 1318
+                  },
+                  {
+                    "end": 1613,
+                    "start": 1468
+                  },
+                  {
+                    "end": 1729,
+                    "start": 1692
+                  },
+                  {
+                    "end": 1801,
+                    "start": 1794
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 8,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 57,
+                "detectorscope": {
+                  "active_features": 43,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 33,
+                  "reconstruction_residual": 3.536115400493145e-09,
+                  "remainder": -0.09981005825102328,
+                  "top_features": [
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.2763533294200897,
+                      "description": "exclamation points used at the end of emotional or emphatic sentences",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 47.317771911621094,
+                          "prose_ranges": [
+                            {
+                              "end": 770,
+                              "start": 768
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2133,
+                              "start": 2131
+                            }
+                          ],
+                          "text": "!!",
+                          "token_index": 45
+                        }
+                      ],
+                      "id": 18537
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.04188793897628784,
+                      "description": "temporal prepositional phrases during the or during his or duration",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 51.737770080566406,
+                          "prose_ranges": [
+                            {
+                              "end": 607,
+                              "start": 600
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1901,
+                              "start": 1894
+                            }
+                          ],
+                          "text": " during",
+                          "token_index": 10
+                        },
+                        {
+                          "activation": 16.64801788330078,
+                          "prose_ranges": [
+                            {
+                              "end": 611,
+                              "start": 607
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1905,
+                              "start": 1901
+                            }
+                          ],
+                          "text": " the",
+                          "token_index": 11
+                        }
+                      ],
+                      "id": 28678
+                    },
+                    {
+                      "active_tokens": 4,
+                      "contribution": 0.02343980222940445,
+                      "description": "initial setup or beginning instructions in software tutorials or project guides",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 5.606823921203613,
+                          "prose_ranges": [
+                            {
+                              "end": 624,
+                              "start": 618
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1918,
+                              "start": 1912
+                            }
+                          ],
+                          "text": " setup",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 5.500617027282715,
+                          "prose_ranges": [
+                            {
+                              "end": 607,
+                              "start": 600
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1901,
+                              "start": 1894
+                            }
+                          ],
+                          "text": " during",
+                          "token_index": 10
+                        },
+                        {
+                          "activation": 4.567600250244141,
+                          "prose_ranges": [
+                            {
+                              "end": 600,
+                              "start": 593
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1838,
+                              "start": 1837
+                            },
+                            {
+                              "end": 1845,
+                              "start": 1839
+                            }
+                          ],
+                          "text": " Tomcat",
+                          "token_index": 9
+                        },
+                        {
+                          "activation": 3.411054849624634,
+                          "prose_ranges": [
+                            {
+                              "end": 618,
+                              "start": 611
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1912,
+                              "start": 1905
+                            }
+                          ],
+                          "text": " Ubuntu",
+                          "token_index": 12
+                        }
+                      ],
+                      "id": 18558
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.02306494489312172,
+                      "description": "multiple exclamation marks or combinations of punctuation used for emphasis",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 61.472686767578125,
+                          "prose_ranges": [
+                            {
+                              "end": 770,
+                              "start": 768
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2133,
+                              "start": 2131
+                            }
+                          ],
+                          "text": "!!",
+                          "token_index": 45
+                        }
+                      ],
+                      "id": 60851
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.021115155890583992,
+                      "description": "double periods used for punctuation or pauses",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 16.117198944091797,
+                          "prose_ranges": [
+                            {
+                              "end": 770,
+                              "start": 768
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2133,
+                              "start": 2131
+                            }
+                          ],
+                          "text": "!!",
+                          "token_index": 45
+                        }
+                      ],
+                      "id": 59675
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.3805464804172516,
+                      "description": "comma punctuation following a newline or preceding sentence start",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.879449844360352,
+                          "prose_ranges": [
+                            {
+                              "end": 559,
+                              "start": 558
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1802,
+                              "start": 1801
+                            }
+                          ],
+                          "text": ":",
+                          "token_index": 1
+                        }
+                      ],
+                      "id": 14967
+                    },
+                    {
+                      "active_tokens": 13,
+                      "contribution": -0.24923376739025116,
+                      "description": "parenthetical clauses or aside remarks in text",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.538793087005615,
+                          "prose_ranges": [
+                            {
+                              "end": 717,
+                              "start": 713
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2012,
+                              "start": 2008
+                            }
+                          ],
+                          "text": " due",
+                          "token_index": 32
+                        },
+                        {
+                          "activation": 3.945555686950683,
+                          "prose_ranges": [
+                            {
+                              "end": 722,
+                              "start": 720
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2017,
+                              "start": 2015
+                            }
+                          ],
+                          "text": " a",
+                          "token_index": 34
+                        },
+                        {
+                          "activation": 3.917940139770508,
+                          "prose_ranges": [
+                            {
+                              "end": 740,
+                              "start": 732
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2035,
+                              "start": 2027
+                            }
+                          ],
+                          "text": " dispute",
+                          "token_index": 36
+                        },
+                        {
+                          "activation": 3.511407375335694,
+                          "prose_ranges": [
+                            {
+                              "end": 720,
+                              "start": 717
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2015,
+                              "start": 2012
+                            }
+                          ],
+                          "text": " to",
+                          "token_index": 33
+                        },
+                        {
+                          "activation": 2.968038558959961,
+                          "prose_ranges": [
+                            {
+                              "end": 745,
+                              "start": 740
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2040,
+                              "start": 2035
+                            }
+                          ],
+                          "text": " with",
+                          "token_index": 37
+                        }
+                      ],
+                      "id": 7178
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.11337987333536148,
+                      "description": "commas occurring within parenthetical or descriptive clauses",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.8099660873413086,
+                          "prose_ranges": [
+                            {
+                              "end": 792,
+                              "start": 786
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2150,
+                              "start": 2149
+                            },
+                            {
+                              "end": 2179,
+                              "start": 2175
+                            }
+                          ],
+                          "text": " and",
+                          "token_index": 51
+                        },
+                        {
+                          "activation": 2.9237747192382812,
+                          "prose_ranges": [
+                            {
+                              "end": 781,
+                              "start": 780
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2144,
+                              "start": 2143
+                            }
+                          ],
+                          "text": ",",
+                          "token_index": 49
+                        }
+                      ],
+                      "id": 6780
+                    },
+                    {
+                      "active_tokens": 13,
+                      "contribution": -0.023422472178936005,
+                      "description": "technical text mentioning code implementation software versions or programming concepts",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 24.630022048950195,
+                          "prose_ranges": [
+                            {
+                              "end": 654,
+                              "start": 650
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1948,
+                              "start": 1944
+                            }
+                          ],
+                          "text": " the",
+                          "token_index": 21
+                        },
+                        {
+                          "activation": 19.17695999145508,
+                          "prose_ranges": [
+                            {
+                              "end": 664,
+                              "start": 654
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1958,
+                              "start": 1948
+                            }
+                          ],
+                          "text": " preferred",
+                          "token_index": 22
+                        },
+                        {
+                          "activation": 17.81603240966797,
+                          "prose_ranges": [
+                            {
+                              "end": 768,
+                              "start": 763
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2131,
+                              "start": 2126
+                            }
+                          ],
+                          "text": " this",
+                          "token_index": 44
+                        },
+                        {
+                          "activation": 17.11924934387207,
+                          "prose_ranges": [
+                            {
+                              "end": 650,
+                              "start": 647
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1944,
+                              "start": 1941
+                            }
+                          ],
+                          "text": " be",
+                          "token_index": 20
+                        },
+                        {
+                          "activation": 15.365800857543944,
+                          "prose_ranges": [
+                            {
+                              "end": 668,
+                              "start": 664
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1962,
+                              "start": 1958
+                            }
+                          ],
+                          "text": " way",
+                          "token_index": 23
+                        }
+                      ],
+                      "id": 60089
+                    },
+                    {
+                      "active_tokens": 7,
+                      "contribution": -0.016165170818567276,
+                      "description": "words or phrases related to commercial, legal, or intellectual property rights and business interests",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 104.00587463378906,
+                          "prose_ranges": [
+                            {
+                              "end": 722,
+                              "start": 720
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2017,
+                              "start": 2015
+                            }
+                          ],
+                          "text": " a",
+                          "token_index": 34
+                        },
+                        {
+                          "activation": 103.33383178710938,
+                          "prose_ranges": [
+                            {
+                              "end": 720,
+                              "start": 717
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2015,
+                              "start": 2012
+                            }
+                          ],
+                          "text": " to",
+                          "token_index": 33
+                        },
+                        {
+                          "activation": 88.87419128417969,
+                          "prose_ranges": [
+                            {
+                              "end": 732,
+                              "start": 722
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2027,
+                              "start": 2017
+                            }
+                          ],
+                          "text": " trademark",
+                          "token_index": 35
+                        },
+                        {
+                          "activation": 38.43556594848633,
+                          "prose_ranges": [
+                            {
+                              "end": 717,
+                              "start": 713
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2012,
+                              "start": 2008
+                            }
+                          ],
+                          "text": " due",
+                          "token_index": 32
+                        },
+                        {
+                          "activation": 19.998918533325195,
+                          "prose_ranges": [
+                            {
+                              "end": 752,
+                              "start": 745
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2047,
+                              "start": 2040
+                            }
+                          ],
+                          "text": " Oracle",
+                          "token_index": 38
+                        }
+                      ],
+                      "id": 60218
+                    }
+                  ]
+                },
+                "heading": "Warning:",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 827,
+                  "start": 558
+                },
+                "raw_output": 0.1129494309425354,
+                "source_ranges": [
+                  {
+                    "end": 1802,
+                    "start": 1801
+                  },
+                  {
+                    "end": 1838,
+                    "start": 1804
+                  },
+                  {
+                    "end": 1845,
+                    "start": 1839
+                  },
+                  {
+                    "end": 1981,
+                    "start": 1894
+                  },
+                  {
+                    "end": 2047,
+                    "start": 1982
+                  },
+                  {
+                    "end": 2150,
+                    "start": 2115
+                  },
+                  {
+                    "end": 2204,
+                    "start": 2175
+                  },
+                  {
+                    "end": 2216,
+                    "start": 2207
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 15,
+                  "start": 8
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1316,
+        "start": 1004
+      }
+    ],
+    [
+      {
+        "end": 1371,
+        "start": 1318
+      }
+    ],
+    [
+      {
+        "end": 1613,
+        "start": 1468
+      }
+    ],
+    [
+      {
+        "end": 1729,
+        "start": 1692
+      }
+    ],
+    [
+      {
+        "end": 1802,
+        "start": 1794
+      }
+    ],
+    [
+      {
+        "end": 1838,
+        "start": 1804
+      },
+      {
+        "end": 1845,
+        "start": 1839
+      },
+      {
+        "end": 1981,
+        "start": 1894
+      },
+      {
+        "end": 2047,
+        "start": 1982
+      },
+      {
+        "end": 2150,
+        "start": 2115
+      }
+    ],
+    [
+      {
+        "end": 2204,
+        "start": 2175
+      }
+    ],
+    [
+      {
+        "end": 2216,
+        "start": 2207
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 3,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 3,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md",
+  "prose_words": 149,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1024,
+        "start": 1004
+      }
+    ],
+    [
+      {
+        "end": 1093,
+        "start": 1024
+      }
+    ],
+    [
+      {
+        "end": 1176,
+        "start": 1093
+      }
+    ],
+    [
+      {
+        "end": 1316,
+        "start": 1176
+      }
+    ],
+    [
+      {
+        "end": 1371,
+        "start": 1318
+      }
+    ],
+    [
+      {
+        "end": 1530,
+        "start": 1468
+      }
+    ],
+    [
+      {
+        "end": 1613,
+        "start": 1530
+      }
+    ],
+    [
+      {
+        "end": 1729,
+        "start": 1692
+      }
+    ],
+    [
+      {
+        "end": 1802,
+        "start": 1794
+      }
+    ],
+    [
+      {
+        "end": 1825,
+        "start": 1804
+      }
+    ],
+    [
+      {
+        "end": 1838,
+        "start": 1825
+      },
+      {
+        "end": 1845,
+        "start": 1839
+      },
+      {
+        "end": 1919,
+        "start": 1894
+      }
+    ],
+    [
+      {
+        "end": 1981,
+        "start": 1919
+      },
+      {
+        "end": 2047,
+        "start": 1982
+      },
+      {
+        "end": 2117,
+        "start": 2115
+      }
+    ],
+    [
+      {
+        "end": 2133,
+        "start": 2117
+      }
+    ],
+    [
+      {
+        "end": 2150,
+        "start": 2133
+      }
+    ],
+    [
+      {
+        "end": 2204,
+        "start": 2175
+      }
+    ],
+    [
+      {
+        "end": 2216,
+        "start": 2207
+      }
+    ]
+  ],
+  "sentence_count": 16,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": [],
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/report.json",
+        "sha256": "d8315b6cfbe61bdaac46ccab6f98310159b94201ebcea82e4a11e0bb1d720b4b",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/report.json",
+        "sha256": "d8315b6cfbe61bdaac46ccab6f98310159b94201ebcea82e4a11e0bb1d720b4b",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/report.json",
+        "sha256": "d8315b6cfbe61bdaac46ccab6f98310159b94201ebcea82e4a11e0bb1d720b4b",
+        "origin": "original_reused",
+        "status": "scored_full"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

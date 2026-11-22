@@ -1,0 +1,341 @@
+{
+  "active_document": "2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md",
+  "argv": [
+    "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/examples/owner_model_sweep",
+    "--model",
+    "desklib",
+    "--models-dir",
+    "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "--out",
+    "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib",
+    "--resume-from",
+    "evaluation/baselines/owner-posts-v1-models-full",
+    "--timeout-ms",
+    "1200000",
+    "--minimum-available-mib",
+    "4096"
+  ],
+  "binary_sha256": "86981ba1a30393de6e1c511c980eeedbcda20a33969ac5c411ab377fc9eb3137",
+  "documents": [
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.0496,
+      "file": "2011-05-03-format-and-mount-ebs-in-ubuntu.md",
+      "input_sha256": "f439bc7898ae8db61803f9005cc4645be2ad65b5c3cce6a7a860df052b38462b",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-05-03-format-and-mount-ebs-in-ubuntu/backend.json",
+      "reused_source_sha256": "dc7152b55e821d47bdbfbe8fe9af501181f3b21b1eb33efa9e81a7b80238aac4",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.035429999999999996,
+      "file": "2011-05-03-ssh-to-aws-quick-and-dirty.md",
+      "input_sha256": "0db5e4ebfc1fde9c7da55b3723fbc6262db848d4905271ea2ca8e78f4e2e9b36",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-05-03-ssh-to-aws-quick-and-dirty/backend.json",
+      "reused_source_sha256": "475d5a4aff595a19757cd2130c8991fb77bbaf1eb9c73c7a6dd5fe197db1847e",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.03669,
+      "file": "2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md",
+      "input_sha256": "1aa81b4df1757c426df849d16a8158705b3161791fa810165bd3f816899e740f",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/backend.json",
+      "reused_source_sha256": "000b8c50470bc225a7e793ebd498c667d18b5578f57719479058f3498b94af08",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.04124,
+      "file": "2011-08-10-networking-101-document-everything.md",
+      "input_sha256": "eda697bd6a710281f88222bde1c999ba6dc623ffc349fd6e631074105c5c897f",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-08-10-networking-101-document-everything/backend.json",
+      "reused_source_sha256": "af212fa86fbab677c4670fc49121bbefdc2c812305913265df8afcd4dbe21694",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.028059999999999998,
+      "file": "2012-03-15-c-net-check-if-user-is-in-active-directory-group.md",
+      "input_sha256": "8b1c04483714f25a644064868da5fa48e5d18ac86cfd3a4a98805ae8161af6c7",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2012-03-15-c-net-check-if-user-is-in-active-directory-group/backend.json",
+      "reused_source_sha256": "44d0ef327fbf1f3062ed47786c76841ec81ab98250f8fa892a223dd7b56b7fa0",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.03746,
+      "file": "2012-03-20-mounting-network-drives-with-c-net.md",
+      "input_sha256": "d0cf943700bb972483394d18ff7788ad11e527f442968d39842ecbc2fb2b53a0",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2012-03-20-mounting-network-drives-with-c-net/backend.json",
+      "reused_source_sha256": "1d0b4fb1faa80f125136524b669d7c737c054f0d1401e6737098a4fe420dc7c7",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.014939999999999998,
+      "file": "2012-10-05-to-the-west.md",
+      "input_sha256": "2ca185372804629b0d9d84fbba5d8d1ac6d62cda582ac63274796ed7a4601b48",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2012-10-05-to-the-west/backend.json",
+      "reused_source_sha256": "5d65dc60fc619586689a999a01263a349e060cd88ea3b0b54f2c80c44dfde5b0",
+      "status": "skipped"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.0299,
+      "file": "2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group.md",
+      "input_sha256": "5c960f53c10a40f826c2cf1ed6760f836f577c607869acf6c58948c4c163d01a",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group/backend.json",
+      "reused_source_sha256": "6a612b8c330a28172c4d4186eb231e7144d1a46bc4b21996bd70bf12b309e3aa",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.03567,
+      "file": "2014-05-26-install-git-1-8-on-rhel-6.md",
+      "input_sha256": "8954d522493f5826ab370ffd44e0f1daa79e397d861eb4e5ca3df97265cfbbfc",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2014-05-26-install-git-1-8-on-rhel-6/backend.json",
+      "reused_source_sha256": "32a68fea81d784994735275d06fea3655c3a66482a9fe8d175bcfe538ca65b25",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.080511,
+      "file": "2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+      "input_sha256": "407eb33fbe07a3eb881d268cc45fdfbd95f84664070bdbc6748a3abe901225a6",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-07-save-money-protect-your-site-with-a-cdn/backend.json",
+      "reused_source_sha256": "4f45f68138c7b955d49396b01169bc594d7234929bf9dc663bbdbec4bc269e9a",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.091321,
+      "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+      "input_sha256": "3b58e90086fc826f6f4f31825b34f8e88bffcf6dafbc55d4d295178b34374291",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-08-make-your-internet-faster-and-safer-for-free/backend.json",
+      "reused_source_sha256": "04e822511ad8a61bd0f24966059fb636e832ead0833c953abf67164186d14b3e",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.073711,
+      "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+      "input_sha256": "b00fb6feb0583682c5b15b436de92276f83e1158ff1d69eb2ab720ec1e1b684c",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-11-its-time-to-switch-to-a-new-email-provider/backend.json",
+      "reused_source_sha256": "9b93b9c06fa23a0e407b1bcfa53aa677da635b8b07e94984c790d384ecbf8577",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.08524100000000001,
+      "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+      "input_sha256": "5d5371c0b568b360880cdab42600117b57b29eb329820f159d236c09218d8f7c",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend.json",
+      "reused_source_sha256": "e613abbdf2e76a3c7f362a52f5a59bfb699dde67b457e1ee1ed989786b29119c",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.06964100000000001,
+      "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+      "input_sha256": "0fcf27c887bc3b5f00342c76e15721f7cd4c8e9243cc38823814d1db61c58b7f",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend.json",
+      "reused_source_sha256": "535df5cadf1ff3f2a3925db5f24ac8f717fa273fa4112b857480776cf995b3b7",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "medium",
+      "elapsed_ms": 0.056991,
+      "file": "2025-03-07-better-python-logging.md",
+      "input_sha256": "21edae4ab5397e763812e3dbc0c7c364e26337a7ad175cb46882625941a0a97f",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-better-python-logging/backend.json",
+      "reused_source_sha256": "4d1515118f0bb62862afe1397fd6709de9ac3a8f95d393da00d77b6c0d66bee9",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.060691,
+      "file": "2025-03-07-crossover-2025.md",
+      "input_sha256": "950ee24558ab0125e3fd2a3e596195d8978b5b5f089b3daa500576cad2d71b73",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-crossover-2025/backend.json",
+      "reused_source_sha256": "b3da0442b3e5be83f48fed6c3238a5c967894be33e1bbe71ce980b1292a772ae",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.052971,
+      "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+      "input_sha256": "4aacb44dc570d62ffcb4664ec6cb0255e03981e883f09a57c63ee04b3121bf41",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-10-using-rust-to-make-python-more-manageable-2/backend.json",
+      "reused_source_sha256": "e9af2f9bd2d58d30d147d443017bc807725e22bbbba91acf97a59ef05ac7d15e",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.049840999999999996,
+      "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+      "input_sha256": "3a0d70be5af63d61d4fa0156b2dd3ba645d8c4b1de550545264fcbad00d259da",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-13-gear-review-focusrite-scarlet-solo/backend.json",
+      "reused_source_sha256": "4b5c862bca41cc8cd622463cec5be52a3a26d7064ced524f223459d3b6bf8b64",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.058841000000000004,
+      "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+      "input_sha256": "e26b28d84c6304392413068fdd37a6f802e32139c3a0877dfc5c83ffd9871254",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-22-a-successful-beginning-not-an-end/backend.json",
+      "reused_source_sha256": "937c7dcfd1eb2a8ba559347250407c1a0d65c0223c69adeeba2ac85520e96b88",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.05253,
+      "file": "2025-03-29-delayed-but-determined.md",
+      "input_sha256": "60683284869a6aa0fb4537e25d9a1a6e12bdb471a3e2e20f5c52ce330818c637",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-delayed-but-determined/backend.json",
+      "reused_source_sha256": "19c7b3e0430a05b7d13b041abdca380258e481e2624161b5343592d7b4c33b26",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.094841,
+      "file": "2025-03-29-gsdf-patriot-25.md",
+      "input_sha256": "acc621b0998c6e509288a63bbd2feb44dc586f074ac61a3797f816158442423e",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-gsdf-patriot-25/backend.json",
+      "reused_source_sha256": "176ae0cebb22f4b8bcc4cd0330ff7501cd06f2de39ccc01264137665a3780baf",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.078751,
+      "file": "2025-04-02-museum-of-aviation-25.md",
+      "input_sha256": "8b598437806c5969b6bf45a6cf4945eb53c0bd91ede6a45a8e79bd4cc180628d",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-02-museum-of-aviation-25/backend.json",
+      "reused_source_sha256": "2e8d207ab62aaf3a856d6e6c69738c2aabfe5902cc2e0204e04bc9d84df007e7",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.043941,
+      "file": "2025-04-09-meet-me-at-the-mall.md",
+      "input_sha256": "6fad7211105b3c0bf15249aa880b55d0ca9b7e1356c538455207f2da15381a38",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-09-meet-me-at-the-mall/backend.json",
+      "reused_source_sha256": "b9f7125bb063526f4749fd0c5d8ccfb10845b907112aa46db734e2a35cfb4d09",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.073451,
+      "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+      "input_sha256": "ea460543f102311cd5e49fc764300648884efeba809763667cbd268c62a0e15f",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend.json",
+      "reused_source_sha256": "b9cf37e296dfd113566384a5cf971813c288deffd2b621ece61a7cbf7066c532",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.02817,
+      "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+      "input_sha256": "9db5e95deb92593040c1e5e2ee4aba6b49f4493e00ca0725541e3ff6a0f12c65",
+      "label": "ai_drafted",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon/backend.json",
+      "reused_source_sha256": "f1e8fa12d2ee10685351986a91a5dd4a0df2342b33c44d744718cd52120c81ca",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 34242.547896,
+      "file": "2025-05-14-the-road-ahead-2.md",
+      "input_sha256": "976c003506ec98f97053d6308b6feb5a1d890715c224780af59b874b239db718",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-14-the-road-ahead-2/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 51270.680638000005,
+      "file": "2025-05-16-investing-in-bibb-countys-future.md",
+      "input_sha256": "bbcb208f6f66fd900057be4bb28a33acd009ef09f009cf42ba7648366e97b06d",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-16-investing-in-bibb-countys-future/report-attempt-1.json",
+      "status": "scored_full"
+    }
+  ],
+  "elapsed_ms": 85544.91206,
+  "external": "none",
+  "finished": false,
+  "git_revision_at_start": "3999208c90455698827c69049e1474f4153e29aa",
+  "manifest_sha256": "7747cb4292a7a379697b83d1413db5017d2700ee2b87d8733a498d6760ba8234",
+  "model": "desklib",
+  "model_concurrency": 1,
+  "planned_documents": 43,
+  "registry_reused_within_sweep": true,
+  "resolved_documents": 27,
+  "runtime_threads": {
+    "rayon": "2",
+    "torch": "2"
+  },
+  "schema_version": "owner-model-sweep-v1",
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "status_counts": {
+    "scored_full": 26,
+    "skipped": 1
+  }
+}

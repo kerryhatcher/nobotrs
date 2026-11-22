@@ -1,0 +1,3246 @@
+{
+  "actionable_finding_count": 0,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 221.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.48570397948212557
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 92.92902575240458
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 5.391564658251966
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6475
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 6.8686316188314
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -5.730039119720459
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 3597.23447,
+            "excerpt_bytes": 1200,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 261,
+            "execution_coverage": 1.0,
+            "full_coverage_output": -1.5121654956439747,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 1200,
+            "prepared_words": 221,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -5.730039119720459,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 68,
+                "heading": "Visio is your friend",
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 305,
+                  "start": 0
+                },
+                "raw_output": -2.875910997390747,
+                "source_ranges": [
+                  {
+                    "end": 1282,
+                    "start": 1262
+                  },
+                  {
+                    "end": 1357,
+                    "start": 1288
+                  },
+                  {
+                    "end": 1375,
+                    "start": 1360
+                  },
+                  {
+                    "end": 1525,
+                    "start": 1470
+                  },
+                  {
+                    "end": 1529,
+                    "start": 1526
+                  },
+                  {
+                    "end": 1714,
+                    "start": 1578
+                  },
+                  {
+                    "end": 1798,
+                    "start": 1794
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 5,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 98,
+                "heading": "Take lots of photographs",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 769,
+                  "start": 305
+                },
+                "raw_output": -1.791387915611267,
+                "source_ranges": [
+                  {
+                    "end": 1818,
+                    "start": 1798
+                  },
+                  {
+                    "end": 1860,
+                    "start": 1824
+                  },
+                  {
+                    "end": 2261,
+                    "start": 1862
+                  },
+                  {
+                    "end": 2279,
+                    "start": 2273
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 12,
+                  "start": 5
+                }
+              },
+              {
+                "body_tokens": 41,
+                "heading": "Layout your entire plan before hand",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 966,
+                  "start": 769
+                },
+                "raw_output": 0.0802069678902626,
+                "source_ranges": [
+                  {
+                    "end": 2308,
+                    "start": 2279
+                  },
+                  {
+                    "end": 2474,
+                    "start": 2312
+                  },
+                  {
+                    "end": 2490,
+                    "start": 2486
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 16,
+                  "start": 12
+                }
+              },
+              {
+                "body_tokens": 52,
+                "heading": "Keep in mind that you are not the only one",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1200,
+                  "start": 966
+                },
+                "raw_output": -0.45810356736183167,
+                "source_ranges": [
+                  {
+                    "end": 2528,
+                    "start": 2490
+                  },
+                  {
+                    "end": 2726,
+                    "start": 2532
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 19,
+                  "start": 16
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "conpara",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+              "unit": "logit_margin",
+              "value": 8.099106311798096
+            },
+            "model_threshold": {
+              "method": "checkpoint_threshold_margin",
+              "unit": "logit",
+              "value": 2.9423828125
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "conpara",
+            "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+            "device": "cpu",
+            "elapsed_ms": 3528.304711,
+            "excerpt_bytes": 1199,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 261,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 7.0740984489558745,
+            "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 1199,
+            "prepared_words": 221,
+            "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+            "raw_output": 8.099106311798096,
+            "raw_units": "logit margin (AI - human; higher = machine-like)",
+            "runtime": "candle-debertav2",
+            "threshold": 2.9423828125,
+            "threshold_source": "checkpoint threshold_margin",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 68,
+                "heading": "Visio is your friend",
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 305,
+                  "start": 0
+                },
+                "raw_output": 7.931520462036133,
+                "source_ranges": [
+                  {
+                    "end": 1282,
+                    "start": 1262
+                  },
+                  {
+                    "end": 1357,
+                    "start": 1288
+                  },
+                  {
+                    "end": 1375,
+                    "start": 1360
+                  },
+                  {
+                    "end": 1525,
+                    "start": 1470
+                  },
+                  {
+                    "end": 1529,
+                    "start": 1526
+                  },
+                  {
+                    "end": 1714,
+                    "start": 1578
+                  },
+                  {
+                    "end": 1798,
+                    "start": 1794
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 5,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 98,
+                "heading": "Take lots of photographs",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 769,
+                  "start": 305
+                },
+                "raw_output": 7.017982482910156,
+                "source_ranges": [
+                  {
+                    "end": 1818,
+                    "start": 1798
+                  },
+                  {
+                    "end": 1860,
+                    "start": 1824
+                  },
+                  {
+                    "end": 2261,
+                    "start": 1862
+                  },
+                  {
+                    "end": 2279,
+                    "start": 2273
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 12,
+                  "start": 5
+                }
+              },
+              {
+                "body_tokens": 41,
+                "heading": "Layout your entire plan before hand",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 966,
+                  "start": 769
+                },
+                "raw_output": 4.9501729011535645,
+                "source_ranges": [
+                  {
+                    "end": 2308,
+                    "start": 2279
+                  },
+                  {
+                    "end": 2474,
+                    "start": 2312
+                  },
+                  {
+                    "end": 2490,
+                    "start": 2486
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 16,
+                  "start": 12
+                }
+              },
+              {
+                "body_tokens": 52,
+                "heading": "Keep in mind that you are not the only one",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1199,
+                  "start": 966
+                },
+                "raw_output": 7.733244895935059,
+                "source_ranges": [
+                  {
+                    "end": 2528,
+                    "start": 2490
+                  },
+                  {
+                    "end": 2726,
+                    "start": 2532
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 19,
+                  "start": 16
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "detectorscope",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 0.16331583261489868
+            },
+            "model_threshold": {
+              "method": "released logreg head",
+              "unit": "logit",
+              "value": 0.5008
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "detectorscope",
+            "code_revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+            "detectorscope": {
+              "active_features": 100,
+              "bias": 0.6096460819244385,
+              "feature_filter": 0.85,
+              "formatting_profile": "flat-whitespace-v1",
+              "omitted_features": 90,
+              "reconstruction_residual": -3.1992385629564524e-8,
+              "remainder": -0.3575724810361862,
+              "top_features": [
+                {
+                  "contribution": 0.20635771751403809,
+                  "description": "repetitive patterns or repeated words within a document",
+                  "highlights": [
+                    {
+                      "activation": 8.84163761138916,
+                      "prose_ranges": [
+                        {
+                          "end": 75,
+                          "start": 71
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1342,
+                          "start": 1338
+                        }
+                      ],
+                      "text": " say",
+                      "token_index": 14
+                    }
+                  ],
+                  "id": 45930
+                },
+                {
+                  "contribution": 0.1964393854141235,
+                  "description": "word else or else as well as the suffix elsewhere",
+                  "highlights": [
+                    {
+                      "activation": 54.88994598388672,
+                      "prose_ranges": [
+                        {
+                          "end": 1056,
+                          "start": 1051
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2583,
+                          "start": 2578
+                        }
+                      ],
+                      "text": " else",
+                      "token_index": 232
+                    },
+                    {
+                      "activation": 11.884243965148926,
+                      "prose_ranges": [
+                        {
+                          "end": 1004,
+                          "start": 1000
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2528,
+                          "start": 2524
+                        }
+                      ],
+                      "text": " one",
+                      "token_index": 220
+                    },
+                    {
+                      "activation": 5.443602561950684,
+                      "prose_ranges": [
+                        {
+                          "end": 1061,
+                          "start": 1056
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2588,
+                          "start": 2583
+                        }
+                      ],
+                      "text": " will",
+                      "token_index": 233
+                    }
+                  ],
+                  "id": 45957
+                },
+                {
+                  "contribution": 0.1701250523328781,
+                  "description": "markdown formatting for headers or list items",
+                  "highlights": [
+                    {
+                      "activation": 11.985401153564451,
+                      "prose_ranges": [
+                        {
+                          "end": 65,
+                          "start": 64
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1332,
+                          "start": 1331
+                        }
+                      ],
+                      "text": ",",
+                      "token_index": 11
+                    }
+                  ],
+                  "id": 58731
+                },
+                {
+                  "contribution": 0.10207291692495346,
+                  "description": "instructions on how to perform or accomplish specific tasks or processes",
+                  "highlights": [
+                    {
+                      "activation": 12.189828872680664,
+                      "prose_ranges": [
+                        {
+                          "end": 374,
+                          "start": 367
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1873,
+                          "start": 1866
+                        }
+                      ],
+                      "text": " making",
+                      "token_index": 84
+                    },
+                    {
+                      "activation": 12.06192398071289,
+                      "prose_ranges": [
+                        {
+                          "end": 293,
+                          "start": 289
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1707,
+                          "start": 1703
+                        }
+                      ],
+                      "text": " get",
+                      "token_index": 68
+                    },
+                    {
+                      "activation": 7.875598907470703,
+                      "prose_ranges": [
+                        {
+                          "end": 648,
+                          "start": 643
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2147,
+                          "start": 2142
+                        }
+                      ],
+                      "text": " that",
+                      "token_index": 144
+                    },
+                    {
+                      "activation": 7.863348007202148,
+                      "prose_ranges": [
+                        {
+                          "end": 509,
+                          "start": 506
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2008,
+                          "start": 2005
+                        }
+                      ],
+                      "text": " to",
+                      "token_index": 110
+                    }
+                  ],
+                  "id": 49384
+                },
+                {
+                  "contribution": 0.09912312775850296,
+                  "description": "cooking and instructional serving or assembly directions",
+                  "highlights": [
+                    {
+                      "activation": 4.899038314819336,
+                      "prose_ranges": [
+                        {
+                          "end": 1198,
+                          "start": 1193
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2725,
+                          "start": 2720
+                        }
+                      ],
+                      "text": " door",
+                      "token_index": 262
+                    },
+                    {
+                      "activation": 3.5758230686187744,
+                      "prose_ranges": [
+                        {
+                          "end": 1161,
+                          "start": 1158
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2688,
+                          "start": 2685
+                        }
+                      ],
+                      "text": " an",
+                      "token_index": 255
+                    }
+                  ],
+                  "id": 18874
+                },
+                {
+                  "contribution": -0.2275624573230743,
+                  "description": "markdown editing and formatting indicators",
+                  "highlights": [
+                    {
+                      "activation": 3.818207263946533,
+                      "prose_ranges": [
+                        {
+                          "end": 659,
+                          "start": 648
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2158,
+                          "start": 2147
+                        }
+                      ],
+                      "text": " Blackberry",
+                      "token_index": 145
+                    }
+                  ],
+                  "id": 32030
+                },
+                {
+                  "contribution": -0.22360220551490784,
+                  "description": "commas occurring within parenthetical or descriptive clauses",
+                  "highlights": [
+                    {
+                      "activation": 7.513827323913574,
+                      "prose_ranges": [
+                        {
+                          "end": 247,
+                          "start": 246
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1661,
+                          "start": 1660
+                        }
+                      ],
+                      "text": ",",
+                      "token_index": 56
+                    }
+                  ],
+                  "id": 6780
+                },
+                {
+                  "contribution": -0.18476805090904236,
+                  "description": "parenthetical clauses or aside remarks in text",
+                  "highlights": [
+                    {
+                      "activation": 3.3648085594177246,
+                      "prose_ranges": [
+                        {
+                          "end": 686,
+                          "start": 682
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2185,
+                          "start": 2181
+                        }
+                      ],
+                      "text": " are",
+                      "token_index": 153
+                    },
+                    {
+                      "activation": 2.785694122314453,
+                      "prose_ranges": [
+                        {
+                          "end": 697,
+                          "start": 686
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2196,
+                          "start": 2185
+                        }
+                      ],
+                      "text": " sufficient",
+                      "token_index": 154
+                    }
+                  ],
+                  "id": 7178
+                },
+                {
+                  "contribution": -0.14758586883544922,
+                  "description": "technical documentation related to computing hardware software and data processing systems",
+                  "highlights": [
+                    {
+                      "activation": 17.615371704101562,
+                      "prose_ranges": [
+                        {
+                          "end": 478,
+                          "start": 473
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1977,
+                          "start": 1972
+                        }
+                      ],
+                      "text": " plan",
+                      "token_index": 103
+                    },
+                    {
+                      "activation": 11.867387771606444,
+                      "prose_ranges": [
+                        {
+                          "end": 481,
+                          "start": 478
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1980,
+                          "start": 1977
+                        }
+                      ],
+                      "text": "ing",
+                      "token_index": 104
+                    },
+                    {
+                      "activation": 8.761194229125977,
+                      "prose_ranges": [
+                        {
+                          "end": 487,
+                          "start": 481
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1986,
+                          "start": 1980
+                        }
+                      ],
+                      "text": " stage",
+                      "token_index": 105
+                    },
+                    {
+                      "activation": 8.363544464111328,
+                      "prose_ranges": [
+                        {
+                          "end": 437,
+                          "start": 425
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1936,
+                          "start": 1924
+                        }
+                      ],
+                      "text": " environment",
+                      "token_index": 94
+                    }
+                  ],
+                  "id": 57796
+                },
+                {
+                  "contribution": -0.07935738563537598,
+                  "description": "doubled words appearing as a repeated pair",
+                  "highlights": [
+                    {
+                      "activation": 4.70031213760376,
+                      "prose_ranges": [
+                        {
+                          "end": 841,
+                          "start": 836
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2354,
+                          "start": 2349
+                        }
+                      ],
+                      "text": " ever",
+                      "token_index": 185
+                    },
+                    {
+                      "activation": 3.4484052658081055,
+                      "prose_ranges": [
+                        {
+                          "end": 90,
+                          "start": 89
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1357,
+                          "start": 1356
+                        }
+                      ],
+                      "text": "?",
+                      "token_index": 16
+                    },
+                    {
+                      "activation": 2.7920947074890137,
+                      "prose_ranges": [
+                        {
+                          "end": 1123,
+                          "start": 1116
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2650,
+                          "start": 2643
+                        }
+                      ],
+                      "text": " please",
+                      "token_index": 246
+                    }
+                  ],
+                  "id": 794
+                }
+              ]
+            },
+            "device": "cpu",
+            "elapsed_ms": 8135.00643,
+            "excerpt_bytes": 1200,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 264,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 0.6517947028345028,
+            "model_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 1200,
+            "prepared_words": 221,
+            "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+            "raw_output": 0.16331583261489868,
+            "raw_units": "logit (higher = machine-like at the released head threshold)",
+            "runtime": "detectorscope-worker",
+            "threshold": 0.5008,
+            "threshold_source": "released logreg head threshold",
+            "token_coverage": 1.0,
+            "token_limit": 1024,
+            "tokenizer_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 71,
+                "detectorscope": {
+                  "active_features": 44,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 34,
+                  "reconstruction_residual": -2.892284101108089e-8,
+                  "remainder": -0.06076139956712723,
+                  "top_features": [
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.20635771751403809,
+                      "description": "repetitive patterns or repeated words within a document",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 8.84163761138916,
+                          "prose_ranges": [
+                            {
+                              "end": 75,
+                              "start": 71
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1342,
+                              "start": 1338
+                            }
+                          ],
+                          "text": " say",
+                          "token_index": 14
+                        }
+                      ],
+                      "id": 45930
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.1701250523328781,
+                      "description": "markdown formatting for headers or list items",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 11.985401153564451,
+                          "prose_ranges": [
+                            {
+                              "end": 65,
+                              "start": 64
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1332,
+                              "start": 1331
+                            }
+                          ],
+                          "text": ",",
+                          "token_index": 11
+                        }
+                      ],
+                      "id": 58731
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.10100188851356506,
+                      "description": "instructions on how to perform or accomplish specific tasks or processes",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 12.06192398071289,
+                          "prose_ranges": [
+                            {
+                              "end": 293,
+                              "start": 289
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1707,
+                              "start": 1703
+                            }
+                          ],
+                          "text": " get",
+                          "token_index": 68
+                        }
+                      ],
+                      "id": 49384
+                    },
+                    {
+                      "active_tokens": 4,
+                      "contribution": 0.06839048117399216,
+                      "description": "introductory biographical or organizational identification phrases",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.2487053871154785,
+                          "prose_ranges": [
+                            {
+                              "end": 104,
+                              "start": 100
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1373,
+                              "start": 1369
+                            }
+                          ],
+                          "text": " Vis",
+                          "token_index": 18
+                        },
+                        {
+                          "activation": 3.3406200408935547,
+                          "prose_ranges": [
+                            {
+                              "end": 106,
+                              "start": 104
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1375,
+                              "start": 1373
+                            }
+                          ],
+                          "text": "io",
+                          "token_index": 19
+                        },
+                        {
+                          "activation": 2.322737693786621,
+                          "prose_ranges": [
+                            {
+                              "end": 49,
+                              "start": 35
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1316,
+                              "start": 1302
+                            }
+                          ],
+                          "text": " Documentation",
+                          "token_index": 8
+                        },
+                        {
+                          "activation": 2.1455912590026855,
+                          "prose_ranges": [
+                            {
+                              "end": 109,
+                              "start": 106
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1473,
+                              "start": 1470
+                            }
+                          ],
+                          "text": " is",
+                          "token_index": 20
+                        }
+                      ],
+                      "id": 2738
+                    },
+                    {
+                      "active_tokens": 3,
+                      "contribution": 0.06294471770524979,
+                      "description": "words and phrases that introduce supplementary information or instructions within a sequence",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 11.79745864868164,
+                          "prose_ranges": [
+                            {
+                              "end": 272,
+                              "start": 271
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1686,
+                              "start": 1685
+                            }
+                          ],
+                          "text": ",",
+                          "token_index": 63
+                        },
+                        {
+                          "activation": 10.339162826538086,
+                          "prose_ranges": [
+                            {
+                              "end": 247,
+                              "start": 246
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1661,
+                              "start": 1660
+                            }
+                          ],
+                          "text": ",",
+                          "token_index": 56
+                        },
+                        {
+                          "activation": 4.951373100280762,
+                          "prose_ranges": [
+                            {
+                              "end": 276,
+                              "start": 272
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1690,
+                              "start": 1686
+                            }
+                          ],
+                          "text": " the",
+                          "token_index": 64
+                        }
+                      ],
+                      "id": 39619
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.22360220551490784,
+                      "description": "commas occurring within parenthetical or descriptive clauses",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 7.513827323913574,
+                          "prose_ranges": [
+                            {
+                              "end": 247,
+                              "start": 246
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1661,
+                              "start": 1660
+                            }
+                          ],
+                          "text": ",",
+                          "token_index": 56
+                        }
+                      ],
+                      "id": 6780
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.07286042720079422,
+                      "description": "positive adjectives and nouns used in restaurant and service reviews",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.432707786560059,
+                          "prose_ranges": [
+                            {
+                              "end": 201,
+                              "start": 197
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1615,
+                              "start": 1611
+                            }
+                          ],
+                          "text": " app",
+                          "token_index": 45
+                        }
+                      ],
+                      "id": 40652
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.06696207076311111,
+                      "description": "words or phrases used to reference or transition to other people's contributions or answers in a discussion",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 11.478353500366213,
+                          "prose_ranges": [
+                            {
+                              "end": 71,
+                              "start": 69
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1338,
+                              "start": 1336
+                            }
+                          ],
+                          "text": " I",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 7.015211582183838,
+                          "prose_ranges": [
+                            {
+                              "end": 75,
+                              "start": 71
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1342,
+                              "start": 1338
+                            }
+                          ],
+                          "text": " say",
+                          "token_index": 14
+                        }
+                      ],
+                      "id": 39030
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.05822090432047844,
+                      "description": "doubled words appearing as a repeated pair",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.4484052658081055,
+                          "prose_ranges": [
+                            {
+                              "end": 90,
+                              "start": 89
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1357,
+                              "start": 1356
+                            }
+                          ],
+                          "text": "?",
+                          "token_index": 16
+                        }
+                      ],
+                      "id": 794
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.04865942522883415,
+                      "description": "misspelled words or typos involving phonetic or character-level variations",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.31199836730957,
+                          "prose_ranges": [
+                            {
+                              "end": 299,
+                              "start": 293
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1713,
+                              "start": 1707
+                            }
+                          ],
+                          "text": " there",
+                          "token_index": 69
+                        }
+                      ],
+                      "id": 29074
+                    }
+                  ]
+                },
+                "heading": "Visio is your friend",
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 305,
+                  "start": 0
+                },
+                "raw_output": 0.6873995065689087,
+                "source_ranges": [
+                  {
+                    "end": 1282,
+                    "start": 1262
+                  },
+                  {
+                    "end": 1357,
+                    "start": 1288
+                  },
+                  {
+                    "end": 1375,
+                    "start": 1360
+                  },
+                  {
+                    "end": 1525,
+                    "start": 1470
+                  },
+                  {
+                    "end": 1529,
+                    "start": 1526
+                  },
+                  {
+                    "end": 1714,
+                    "start": 1578
+                  },
+                  {
+                    "end": 1798,
+                    "start": 1794
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 5,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 99,
+                "detectorscope": {
+                  "active_features": 52,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 42,
+                  "reconstruction_residual": 5.043830242357217e-9,
+                  "remainder": -0.06155499815940857,
+                  "top_features": [
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.21789924800395968,
+                      "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.825602054595947,
+                          "prose_ranges": [
+                            {
+                              "end": 327,
+                              "start": 325
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1825,
+                              "start": 1824
+                            }
+                          ],
+                          "text": " A",
+                          "token_index": 4
+                        }
+                      ],
+                      "id": 41406
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.14744853973388672,
+                      "description": "instructions on how to perform or accomplish specific tasks or processes",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 17.60871124267578,
+                          "prose_ranges": [
+                            {
+                              "end": 374,
+                              "start": 367
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1873,
+                              "start": 1866
+                            }
+                          ],
+                          "text": " making",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 13.473682403564451,
+                          "prose_ranges": [
+                            {
+                              "end": 379,
+                              "start": 374
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1878,
+                              "start": 1873
+                            }
+                          ],
+                          "text": " your",
+                          "token_index": 14
+                        }
+                      ],
+                      "id": 49384
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.04439504444599152,
+                      "description": "temporal prepositional phrases during the or during his or duration",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 54.83441162109375,
+                          "prose_ranges": [
+                            {
+                              "end": 469,
+                              "start": 462
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1968,
+                              "start": 1961
+                            }
+                          ],
+                          "text": " during",
+                          "token_index": 30
+                        },
+                        {
+                          "activation": 13.217947006225586,
+                          "prose_ranges": [
+                            {
+                              "end": 473,
+                              "start": 469
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1972,
+                              "start": 1968
+                            }
+                          ],
+                          "text": " the",
+                          "token_index": 31
+                        }
+                      ],
+                      "id": 28678
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.04339422285556793,
+                      "description": "activates on the word also and phrases containing it",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.664464473724365,
+                          "prose_ranges": [
+                            {
+                              "end": 729,
+                              "start": 725
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2228,
+                              "start": 2224
+                            }
+                          ],
+                          "text": " lot",
+                          "token_index": 91
+                        }
+                      ],
+                      "id": 47226
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.04328648000955582,
+                      "description": "words and phrases that introduce supplementary information or instructions within a sequence",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 8.11299991607666,
+                          "prose_ranges": [
+                            {
+                              "end": 437,
+                              "start": 425
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1936,
+                              "start": 1924
+                            }
+                          ],
+                          "text": " environment",
+                          "token_index": 23
+                        },
+                        {
+                          "activation": 7.03651237487793,
+                          "prose_ranges": [
+                            {
+                              "end": 413,
+                              "start": 410
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1912,
+                              "start": 1909
+                            }
+                          ],
+                          "text": " of",
+                          "token_index": 20
+                        }
+                      ],
+                      "id": 39619
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.2260948121547699,
+                      "description": "markdown editing and formatting indicators",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.793581962585449,
+                          "prose_ranges": [
+                            {
+                              "end": 659,
+                              "start": 648
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2158,
+                              "start": 2147
+                            }
+                          ],
+                          "text": " Blackberry",
+                          "token_index": 74
+                        }
+                      ],
+                      "id": 32030
+                    },
+                    {
+                      "active_tokens": 4,
+                      "contribution": -0.20992302894592285,
+                      "description": "parenthetical clauses or aside remarks in text",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.8229055404663086,
+                          "prose_ranges": [
+                            {
+                              "end": 686,
+                              "start": 682
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2185,
+                              "start": 2181
+                            }
+                          ],
+                          "text": " are",
+                          "token_index": 82
+                        },
+                        {
+                          "activation": 3.326509952545166,
+                          "prose_ranges": [
+                            {
+                              "end": 697,
+                              "start": 686
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2196,
+                              "start": 2185
+                            }
+                          ],
+                          "text": " sufficient",
+                          "token_index": 83
+                        },
+                        {
+                          "activation": 2.2375717163085938,
+                          "prose_ranges": [
+                            {
+                              "end": 707,
+                              "start": 706
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2206,
+                              "start": 2205
+                            }
+                          ],
+                          "text": ",",
+                          "token_index": 86
+                        },
+                        {
+                          "activation": 2.2136693000793457,
+                          "prose_ranges": [
+                            {
+                              "end": 561,
+                              "start": 558
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2060,
+                              "start": 2057
+                            }
+                          ],
+                          "text": " as",
+                          "token_index": 51
+                        }
+                      ],
+                      "id": 7178
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.112236350774765,
+                      "description": "technical documentation related to computing hardware software and data processing systems",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 13.396167755126951,
+                          "prose_ranges": [
+                            {
+                              "end": 478,
+                              "start": 473
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1977,
+                              "start": 1972
+                            }
+                          ],
+                          "text": " plan",
+                          "token_index": 32
+                        },
+                        {
+                          "activation": 8.189674377441406,
+                          "prose_ranges": [
+                            {
+                              "end": 481,
+                              "start": 478
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1980,
+                              "start": 1977
+                            }
+                          ],
+                          "text": "ing",
+                          "token_index": 33
+                        }
+                      ],
+                      "id": 57796
+                    },
+                    {
+                      "active_tokens": 12,
+                      "contribution": -0.07640299946069717,
+                      "description": "words and phrases introducing an analogy or illustrative comparison",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 10.665870666503906,
+                          "prose_ranges": [
+                            {
+                              "end": 506,
+                              "start": 498
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2005,
+                              "start": 1997
+                            }
+                          ],
+                          "text": " explain",
+                          "token_index": 38
+                        },
+                        {
+                          "activation": 9.054208755493164,
+                          "prose_ranges": [
+                            {
+                              "end": 582,
+                              "start": 574
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2081,
+                              "start": 2073
+                            }
+                          ],
+                          "text": " showing",
+                          "token_index": 54
+                        },
+                        {
+                          "activation": 5.933526515960693,
+                          "prose_ranges": [
+                            {
+                              "end": 521,
+                              "start": 517
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2020,
+                              "start": 2016
+                            }
+                          ],
+                          "text": " how",
+                          "token_index": 41
+                        },
+                        {
+                          "activation": 5.866112232208252,
+                          "prose_ranges": [
+                            {
+                              "end": 509,
+                              "start": 506
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2008,
+                              "start": 2005
+                            }
+                          ],
+                          "text": " to",
+                          "token_index": 39
+                        },
+                        {
+                          "activation": 5.283257961273193,
+                          "prose_ranges": [
+                            {
+                              "end": 574,
+                              "start": 571
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2073,
+                              "start": 2070
+                            }
+                          ],
+                          "text": " as",
+                          "token_index": 53
+                        }
+                      ],
+                      "id": 28480
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.06964854896068573,
+                      "description": "positive adjectives and nouns used in restaurant and service reviews",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.149137496948242,
+                          "prose_ranges": [
+                            {
+                              "end": 761,
+                              "start": 756
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2260,
+                              "start": 2255
+                            }
+                          ],
+                          "text": " fast",
+                          "token_index": 97
+                        },
+                        {
+                          "activation": 5.02536678314209,
+                          "prose_ranges": [
+                            {
+                              "end": 697,
+                              "start": 686
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2196,
+                              "start": 2185
+                            }
+                          ],
+                          "text": " sufficient",
+                          "token_index": 83
+                        }
+                      ],
+                      "id": 40652
+                    }
+                  ]
+                },
+                "heading": "Take lots of photographs",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 769,
+                  "start": 305
+                },
+                "raw_output": 0.3502088785171509,
+                "source_ranges": [
+                  {
+                    "end": 1818,
+                    "start": 1798
+                  },
+                  {
+                    "end": 1860,
+                    "start": 1824
+                  },
+                  {
+                    "end": 2261,
+                    "start": 1862
+                  },
+                  {
+                    "end": 2279,
+                    "start": 2273
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 12,
+                  "start": 5
+                }
+              },
+              {
+                "body_tokens": 41,
+                "detectorscope": {
+                  "active_features": 25,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 15,
+                  "reconstruction_residual": -1.5388650353997944e-9,
+                  "remainder": -0.03346173418685794,
+                  "top_features": [
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.2909843921661377,
+                      "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.44414758682251,
+                          "prose_ranges": [
+                            {
+                              "end": 774,
+                              "start": 769
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2284,
+                              "start": 2279
+                            }
+                          ],
+                          "text": " your",
+                          "token_index": 1
+                        },
+                        {
+                          "activation": 4.691174030303955,
+                          "prose_ranges": [
+                            {
+                              "end": 781,
+                              "start": 774
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2291,
+                              "start": 2284
+                            }
+                          ],
+                          "text": " entire",
+                          "token_index": 2
+                        }
+                      ],
+                      "id": 41406
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.01275509875267744,
+                      "description": "words related to ensuring or contributing to positive outcomes or community improvements",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 11.383291244506836,
+                          "prose_ranges": [
+                            {
+                              "end": 948,
+                              "start": 936
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2461,
+                              "start": 2449
+                            }
+                          ],
+                          "text": " communicate",
+                          "token_index": 37
+                        }
+                      ],
+                      "id": 51551
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.01068359799683094,
+                      "description": "words indicating instructions, preparation, requirements, or procedural guidance",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 10.11748218536377,
+                          "prose_ranges": [
+                            {
+                              "end": 798,
+                              "start": 793
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2308,
+                              "start": 2303
+                            }
+                          ],
+                          "text": " hand",
+                          "token_index": 5
+                        }
+                      ],
+                      "id": 54569
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.003971713595092297,
+                      "description": "narrative descriptions of personal perseverance overcoming adversity or collaborative effort in stories",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 10.692800521850586,
+                          "prose_ranges": [
+                            {
+                              "end": 872,
+                              "start": 868
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2385,
+                              "start": 2381
+                            }
+                          ],
+                          "text": " but",
+                          "token_index": 20
+                        },
+                        {
+                          "activation": 8.025279998779297,
+                          "prose_ranges": [
+                            {
+                              "end": 868,
+                              "start": 862
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2381,
+                              "start": 2375
+                            }
+                          ],
+                          "text": " enemy",
+                          "token_index": 19
+                        }
+                      ],
+                      "id": 52544
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.0011689732782542706,
+                      "description": "words indicating future actions or upcoming sports match events",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 10.293861389160156,
+                          "prose_ranges": [
+                            {
+                              "end": 901,
+                              "start": 897
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2414,
+                              "start": 2410
+                            }
+                          ],
+                          "text": " can",
+                          "token_index": 28
+                        },
+                        {
+                          "activation": 9.849309921264648,
+                          "prose_ranges": [
+                            {
+                              "end": 897,
+                              "start": 893
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2410,
+                              "start": 2406
+                            }
+                          ],
+                          "text": " you",
+                          "token_index": 27
+                        }
+                      ],
+                      "id": 53207
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.07092113047838211,
+                      "description": "doubled words appearing as a repeated pair",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.2006354331970215,
+                          "prose_ranges": [
+                            {
+                              "end": 841,
+                              "start": 836
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2354,
+                              "start": 2349
+                            }
+                          ],
+                          "text": " ever",
+                          "token_index": 15
+                        }
+                      ],
+                      "id": 794
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.04228343069553375,
+                      "description": "the distal demonstrative pronoun that",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 57.06123733520508,
+                          "prose_ranges": [
+                            {
+                              "end": 877,
+                              "start": 872
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2390,
+                              "start": 2385
+                            }
+                          ],
+                          "text": " that",
+                          "token_index": 21
+                        }
+                      ],
+                      "id": 43399
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.029562702402472496,
+                      "description": "words related to narrowing focusing or dimensionality",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 5.555323600769043,
+                          "prose_ranges": [
+                            {
+                              "end": 901,
+                              "start": 897
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2414,
+                              "start": 2410
+                            }
+                          ],
+                          "text": " can",
+                          "token_index": 28
+                        },
+                        {
+                          "activation": 5.092375755310059,
+                          "prose_ranges": [
+                            {
+                              "end": 897,
+                              "start": 893
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2410,
+                              "start": 2406
+                            }
+                          ],
+                          "text": " you",
+                          "token_index": 27
+                        }
+                      ],
+                      "id": 39975
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.027886435389518734,
+                      "description": "metaphorical descriptions of complex systems or intense states",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 5.74468994140625,
+                          "prose_ranges": [
+                            {
+                              "end": 850,
+                              "start": 841
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2363,
+                              "start": 2354
+                            }
+                          ],
+                          "text": " survives",
+                          "token_index": 16
+                        }
+                      ],
+                      "id": 20533
+                    },
+                    {
+                      "active_tokens": 8,
+                      "contribution": -0.015673743560910225,
+                      "description": "military and defense terminology and associated bureaucratic designations",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 15.909587860107422,
+                          "prose_ranges": [
+                            {
+                              "end": 953,
+                              "start": 948
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2466,
+                              "start": 2461
+                            }
+                          ],
+                          "text": " with",
+                          "token_index": 38
+                        },
+                        {
+                          "activation": 11.504737854003906,
+                          "prose_ranges": [
+                            {
+                              "end": 884,
+                              "start": 883
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2397,
+                              "start": 2396
+                            }
+                          ],
+                          "text": ".",
+                          "token_index": 24
+                        },
+                        {
+                          "activation": 10.910947799682615,
+                          "prose_ranges": [
+                            {
+                              "end": 850,
+                              "start": 841
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2363,
+                              "start": 2354
+                            }
+                          ],
+                          "text": " survives",
+                          "token_index": 16
+                        },
+                        {
+                          "activation": 10.450883865356444,
+                          "prose_ranges": [
+                            {
+                              "end": 948,
+                              "start": 936
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2461,
+                              "start": 2449
+                            }
+                          ],
+                          "text": " communicate",
+                          "token_index": 37
+                        },
+                        {
+                          "activation": 9.603139877319336,
+                          "prose_ranges": [
+                            {
+                              "end": 858,
+                              "start": 850
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2371,
+                              "start": 2363
+                            }
+                          ],
+                          "text": " meeting",
+                          "token_index": 17
+                        }
+                      ],
+                      "id": 64498
+                    }
+                  ]
+                },
+                "heading": "Layout your entire plan before hand",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 966,
+                  "start": 769
+                },
+                "raw_output": 0.7094206809997559,
+                "source_ranges": [
+                  {
+                    "end": 2308,
+                    "start": 2279
+                  },
+                  {
+                    "end": 2474,
+                    "start": 2312
+                  },
+                  {
+                    "end": 2490,
+                    "start": 2486
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 16,
+                  "start": 12
+                }
+              },
+              {
+                "body_tokens": 52,
+                "detectorscope": {
+                  "active_features": 24,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 14,
+                  "reconstruction_residual": 2.731394488364458e-8,
+                  "remainder": 0.023528365418314937,
+                  "top_features": [
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.22641749680042267,
+                      "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 5.014247417449951,
+                          "prose_ranges": [
+                            {
+                              "end": 969,
+                              "start": 966
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2493,
+                              "start": 2490
+                            }
+                          ],
+                          "text": " in",
+                          "token_index": 1
+                        },
+                        {
+                          "activation": 4.939159870147705,
+                          "prose_ranges": [
+                            {
+                              "end": 1022,
+                              "start": 1018
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2549,
+                              "start": 2545
+                            }
+                          ],
+                          "text": " big",
+                          "token_index": 13
+                        }
+                      ],
+                      "id": 41406
+                    },
+                    {
+                      "active_tokens": 3,
+                      "contribution": 0.20163756608963013,
+                      "description": "word else or else as well as the suffix elsewhere",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 56.34244537353515,
+                          "prose_ranges": [
+                            {
+                              "end": 1056,
+                              "start": 1051
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2583,
+                              "start": 2578
+                            }
+                          ],
+                          "text": " else",
+                          "token_index": 21
+                        },
+                        {
+                          "activation": 10.267258644104004,
+                          "prose_ranges": [
+                            {
+                              "end": 1004,
+                              "start": 1000
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2528,
+                              "start": 2524
+                            }
+                          ],
+                          "text": " one",
+                          "token_index": 9
+                        },
+                        {
+                          "activation": 5.946667671203613,
+                          "prose_ranges": [
+                            {
+                              "end": 1061,
+                              "start": 1056
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2588,
+                              "start": 2583
+                            }
+                          ],
+                          "text": " will",
+                          "token_index": 22
+                        }
+                      ],
+                      "id": 45957
+                    },
+                    {
+                      "active_tokens": 6,
+                      "contribution": 0.11792020499706268,
+                      "description": "first person emotional reflection and regret",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 16.865699768066406,
+                          "prose_ranges": [
+                            {
+                              "end": 1018,
+                              "start": 1014
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2545,
+                              "start": 2541
+                            }
+                          ],
+                          "text": " how",
+                          "token_index": 12
+                        },
+                        {
+                          "activation": 11.13321304321289,
+                          "prose_ranges": [
+                            {
+                              "end": 1014,
+                              "start": 1007
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2541,
+                              "start": 2534
+                            }
+                          ],
+                          "text": " matter",
+                          "token_index": 11
+                        },
+                        {
+                          "activation": 10.68947982788086,
+                          "prose_ranges": [
+                            {
+                              "end": 1007,
+                              "start": 1004
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2534,
+                              "start": 2532
+                            }
+                          ],
+                          "text": " No",
+                          "token_index": 10
+                        },
+                        {
+                          "activation": 10.623542785644531,
+                          "prose_ranges": [
+                            {
+                              "end": 1022,
+                              "start": 1018
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2549,
+                              "start": 2545
+                            }
+                          ],
+                          "text": " big",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 9.66233253479004,
+                          "prose_ranges": [
+                            {
+                              "end": 1031,
+                              "start": 1025
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2558,
+                              "start": 2552
+                            }
+                          ],
+                          "text": " small",
+                          "token_index": 15
+                        }
+                      ],
+                      "id": 54102
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.07349598407745361,
+                      "description": "cooking and instructional serving or assembly directions",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.632448434829712,
+                          "prose_ranges": [
+                            {
+                              "end": 1198,
+                              "start": 1193
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2725,
+                              "start": 2720
+                            }
+                          ],
+                          "text": " door",
+                          "token_index": 51
+                        }
+                      ],
+                      "id": 18874
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.06633159518241882,
+                      "description": "random or incoherent character sequences and noise patterns",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 17.66558265686035,
+                          "prose_ranges": [
+                            {
+                              "end": 969,
+                              "start": 966
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2493,
+                              "start": 2490
+                            }
+                          ],
+                          "text": " in",
+                          "token_index": 1
+                        }
+                      ],
+                      "id": 50299
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.064736008644104,
+                      "description": "misspelled words or typos involving phonetic or character-level variations",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 5.736639022827148,
+                          "prose_ranges": [
+                            {
+                              "end": 1186,
+                              "start": 1181
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2713,
+                              "start": 2708
+                            }
+                          ],
+                          "text": " tape",
+                          "token_index": 48
+                        }
+                      ],
+                      "id": 29074
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.04347648099064827,
+                      "description": "pejorative descriptions of people or situations",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.4476280212402344,
+                          "prose_ranges": [
+                            {
+                              "end": 1148,
+                              "start": 1142
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2675,
+                              "start": 2669
+                            }
+                          ],
+                          "text": " thing",
+                          "token_index": 40
+                        }
+                      ],
+                      "id": 29376
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.02954782545566559,
+                      "description": "accounting and bookkeeping ledger entries involving debit credit and bank account transactions",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 8.246854782104492,
+                          "prose_ranges": [
+                            {
+                              "end": 1148,
+                              "start": 1142
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2675,
+                              "start": 2669
+                            }
+                          ],
+                          "text": " thing",
+                          "token_index": 40
+                        }
+                      ],
+                      "id": 60396
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.026966728270053864,
+                      "description": "words related to estimations or imprecise approximations",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 2.4467062950134277,
+                          "prose_ranges": [
+                            {
+                              "end": 974,
+                              "start": 969
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2498,
+                              "start": 2493
+                            }
+                          ],
+                          "text": " mind",
+                          "token_index": 2
+                        },
+                        {
+                          "activation": 2.280241012573242,
+                          "prose_ranges": [
+                            {
+                              "end": 979,
+                              "start": 974
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2503,
+                              "start": 2498
+                            }
+                          ],
+                          "text": " that",
+                          "token_index": 3
+                        }
+                      ],
+                      "id": 4627
+                    },
+                    {
+                      "active_tokens": 5,
+                      "contribution": -0.022332655265927315,
+                      "description": "words related to corresponding or equivalents between two things",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 11.547608375549316,
+                          "prose_ranges": [
+                            {
+                              "end": 1051,
+                              "start": 1043
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2578,
+                              "start": 2570
+                            }
+                          ],
+                          "text": " someone",
+                          "token_index": 20
+                        },
+                        {
+                          "activation": 9.81404972076416,
+                          "prose_ranges": [
+                            {
+                              "end": 1061,
+                              "start": 1056
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2588,
+                              "start": 2583
+                            }
+                          ],
+                          "text": " will",
+                          "token_index": 22
+                        },
+                        {
+                          "activation": 8.293133735656738,
+                          "prose_ranges": [
+                            {
+                              "end": 1056,
+                              "start": 1051
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2583,
+                              "start": 2578
+                            }
+                          ],
+                          "text": " else",
+                          "token_index": 21
+                        },
+                        {
+                          "activation": 6.233250141143799,
+                          "prose_ranges": [
+                            {
+                              "end": 1072,
+                              "start": 1061
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2599,
+                              "start": 2588
+                            }
+                          ],
+                          "text": " eventually",
+                          "token_index": 23
+                        },
+                        {
+                          "activation": 3.6607089042663574,
+                          "prose_ranges": [
+                            {
+                              "end": 1077,
+                              "start": 1072
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2604,
+                              "start": 2599
+                            }
+                          ],
+                          "text": " have",
+                          "token_index": 24
+                        }
+                      ],
+                      "id": 25744
+                    }
+                  ]
+                },
+                "heading": "Keep in mind that you are not the only one",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1199,
+                  "start": 966
+                },
+                "raw_output": 1.1319175958633425,
+                "source_ranges": [
+                  {
+                    "end": 2528,
+                    "start": 2490
+                  },
+                  {
+                    "end": 2726,
+                    "start": 2532
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 19,
+                  "start": 16
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1282,
+        "start": 1262
+      }
+    ],
+    [
+      {
+        "end": 1357,
+        "start": 1288
+      }
+    ],
+    [
+      {
+        "end": 1375,
+        "start": 1360
+      },
+      {
+        "end": 1525,
+        "start": 1470
+      },
+      {
+        "end": 1529,
+        "start": 1526
+      },
+      {
+        "end": 1714,
+        "start": 1578
+      }
+    ],
+    [
+      {
+        "end": 1818,
+        "start": 1794
+      }
+    ],
+    [
+      {
+        "end": 1860,
+        "start": 1824
+      }
+    ],
+    [
+      {
+        "end": 2261,
+        "start": 1862
+      }
+    ],
+    [
+      {
+        "end": 2308,
+        "start": 2273
+      }
+    ],
+    [
+      {
+        "end": 2474,
+        "start": 2312
+      }
+    ],
+    [
+      {
+        "end": 2528,
+        "start": 2486
+      }
+    ],
+    [
+      {
+        "end": 2726,
+        "start": 2532
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 0,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2011-08-10-networking-101-document-everything.md",
+  "prose_words": 221,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1282,
+        "start": 1262
+      }
+    ],
+    [
+      {
+        "end": 1357,
+        "start": 1288
+      }
+    ],
+    [
+      {
+        "end": 1375,
+        "start": 1360
+      },
+      {
+        "end": 1507,
+        "start": 1470
+      }
+    ],
+    [
+      {
+        "end": 1525,
+        "start": 1507
+      },
+      {
+        "end": 1529,
+        "start": 1526
+      },
+      {
+        "end": 1616,
+        "start": 1578
+      }
+    ],
+    [
+      {
+        "end": 1714,
+        "start": 1616
+      }
+    ],
+    [
+      {
+        "end": 1818,
+        "start": 1794
+      }
+    ],
+    [
+      {
+        "end": 1860,
+        "start": 1824
+      }
+    ],
+    [
+      {
+        "end": 1937,
+        "start": 1862
+      }
+    ],
+    [
+      {
+        "end": 1987,
+        "start": 1937
+      }
+    ],
+    [
+      {
+        "end": 2087,
+        "start": 1987
+      }
+    ],
+    [
+      {
+        "end": 2131,
+        "start": 2087
+      }
+    ],
+    [
+      {
+        "end": 2261,
+        "start": 2131
+      }
+    ],
+    [
+      {
+        "end": 2308,
+        "start": 2273
+      }
+    ],
+    [
+      {
+        "end": 2341,
+        "start": 2312
+      }
+    ],
+    [
+      {
+        "end": 2397,
+        "start": 2341
+      }
+    ],
+    [
+      {
+        "end": 2474,
+        "start": 2397
+      }
+    ],
+    [
+      {
+        "end": 2528,
+        "start": 2486
+      }
+    ],
+    [
+      {
+        "end": 2640,
+        "start": 2532
+      }
+    ],
+    [
+      {
+        "end": 2726,
+        "start": 2640
+      }
+    ]
+  ],
+  "sentence_count": 19,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

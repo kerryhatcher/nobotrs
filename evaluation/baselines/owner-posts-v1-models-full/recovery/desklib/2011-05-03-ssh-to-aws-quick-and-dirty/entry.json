@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.035429999999999996,
+  "file": "2011-05-03-ssh-to-aws-quick-and-dirty.md",
+  "input_sha256": "0db5e4ebfc1fde9c7da55b3723fbc6262db848d4905271ea2ca8e78f4e2e9b36",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-05-03-ssh-to-aws-quick-and-dirty/backend.json",
+  "reused_source_sha256": "475d5a4aff595a19757cd2130c8991fb77bbaf1eb9c73c7a6dd5fe197db1847e",
+  "status": "scored_full"
+}

@@ -1,0 +1,220 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "fail"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 122,
+        "end_column": 135,
+        "end_line": 69,
+        "line": 69,
+        "source_ranges": [
+          {
+            "end": 3955,
+            "start": 3942
+          }
+        ]
+      },
+      "matched_text": "Happy coding!",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Happy coding!",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author\u2019s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 100,
+        "end_column": 108,
+        "end_line": 34,
+        "line": 34,
+        "source_ranges": [
+          {
+            "end": 2323,
+            "start": 2315
+          }
+        ]
+      },
+      "matched_text": "seamless",
+      "message": null,
+      "rule_id": "seamless",
+      "sentence": "Unified Package Management \u2013 UV combines environment creation and package installation in a seamless way.",
+      "severity": "medium",
+      "suggestion": "smooth",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "3": 1,
+    "5": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+  "prose_words": 303,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 2,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-10-using-rust-to-make-python-more-manageable-2/backend-attempt-1.json",
+        "sha256": "e9af2f9bd2d58d30d147d443017bc807725e22bbbba91acf97a59ef05ac7d15e",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-10-using-rust-to-make-python-more-manageable-2/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-10-using-rust-to-make-python-more-manageable-2/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Remove the announcement if the following claim stands alone.",
+      "guidance_id": "structure.signposting-filler",
+      "keep_when": "Keep a warning that signals a meaningful change in scope.",
+      "leverage": 2,
+      "location": {
+        "column": 379,
+        "end_column": 395,
+        "end_line": 33,
+        "line": 33,
+        "source_ranges": [
+          {
+            "end": 4027,
+            "start": 4011
+          }
+        ]
+      },
+      "matched_text": "its worth noting",
+      "message": null,
+      "rule_id": "worth-noting",
+      "sentence": "Also its worth noting that developers are starting to pick up Vulkan due to its performance and getting up better Linux compatibility along the way.",
+      "severity": "medium",
+      "suggestion": null,
+      "suppressed": false,
+      "why": "Repeated announcements delay the useful information."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Remove the announcement if the following claim stands alone.",
+      "guidance_id": "structure.signposting-filler",
+      "keep_when": "Keep a warning that signals a meaningful change in scope.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 17,
+        "end_line": 65,
+        "line": 65,
+        "source_ranges": [
+          {
+            "end": 7184,
+            "start": 7168
+          }
+        ]
+      },
+      "matched_text": "Its worth noting",
+      "message": null,
+      "rule_id": "worth-noting",
+      "sentence": "Its worth noting that even games not officially supported by Steam Play / Proton can still run just fine.",
+      "severity": "medium",
+      "suggestion": null,
+      "suppressed": false,
+      "why": "Repeated announcements delay the useful information."
+    },
+    {
+      "category": "formatting",
+      "context": null,
+      "fix": "Use the required or established heading style consistently.",
+      "guidance_id": "structure.title-case-headings",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "leverage": 4,
+      "location": {
+        "column": 4,
+        "end_column": 23,
+        "end_line": 23,
+        "line": 23,
+        "source_ranges": [
+          {
+            "end": 1746,
+            "start": 1727
+          }
+        ]
+      },
+      "matched_text": "Drivers and Porting",
+      "message": null,
+      "rule_id": "structure.title-case-headings",
+      "sentence": "Drivers and Porting",
+      "severity": "low",
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "suppressed": false,
+      "why": "Heading capitalization may distract if it conflicts with the venue style."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "2": 2,
+    "4": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+  "prose_words": 1314,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 3,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend-attempt-1.json",
+        "sha256": "e613abbdf2e76a3c7f362a52f5a59bfb699dde67b457e1ee1ed989786b29119c",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

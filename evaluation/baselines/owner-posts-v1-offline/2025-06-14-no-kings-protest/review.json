@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-14-no-kings-protest.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 0,
+  "leverage_counts": {},
+  "findings": [],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "not_applicable",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "not_applicable",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "not_applicable",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "not_applicable",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "not_applicable",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "not_applicable",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "not_applicable",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "not_applicable",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "not_applicable",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "not_applicable",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "not_applicable",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "skipped",
+      "reason": "no analyzable prose"
+    },
+    {
+      "backend": "punctuation",
+      "status": "skipped",
+      "reason": "no analyzable prose"
+    },
+    {
+      "backend": "burstiness",
+      "status": "skipped",
+      "reason": "no analyzable prose"
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "skipped",
+      "reason": "no analyzable prose"
+    },
+    {
+      "backend": "readability",
+      "status": "skipped",
+      "reason": "no analyzable prose"
+    },
+    {
+      "backend": "compression",
+      "status": "skipped",
+      "reason": "no analyzable prose"
+    },
+    {
+      "backend": "structure",
+      "status": "skipped",
+      "reason": "no analyzable prose"
+    }
+  ],
+  "total_findings": 0,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

@@ -34,3 +34,15 @@ inconclusive. Read the report on status 1 and check diagnostics and coverage on
 status 2. Review the surrounding prose before recommending edits. Findings are
 heuristic prompts for editing. Treat authorship as undetermined, including when
 `detect` flags a document or returns a clean result.
+
+## Related skills
+
+- **`humanize-writing`** (`skills/humanize-writing/SKILL.md`): Draft tell-free prose
+  from notes or a brief, with or without the nobotrs CLI. See that skill for the
+  stand-alone drafting guide, leverage priorities and stop criteria.
+- **`review-writing`** (`skills/review-writing/SKILL.md`): Revise an existing draft
+  to remove AI tells while preserving facts, meaning and voice. Runs `review`
+  and `compare` to track findings and fact invariants.
+
+Both skills share the same stop criteria and are usable together: draft with
+`humanize-writing`, then revise with `review-writing`.

@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.06964100000000001,
+  "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+  "input_sha256": "0fcf27c887bc3b5f00342c76e15721f7cd4c8e9243cc38823814d1db61c58b7f",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend.json",
+  "reused_source_sha256": "535df5cadf1ff3f2a3925db5f24ac8f717fa273fa4112b857480776cf995b3b7",
+  "status": "scored_full"
+}

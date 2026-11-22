@@ -1,0 +1,905 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": -0.8351154923439026
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 11970.048648,
+        "excerpt_bytes": 2557,
+        "excerpt_coverage": 0.3226837060702875,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.3226837060702875,
+        "full_coverage_output": 1.0858027739079552,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.3226837060702875,
+        "precision": "float32",
+        "prepared_bytes": 7897,
+        "prepared_words": 1297,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": -0.8351154923439026,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 164,
+            "heading": "Our schools are facing a crisis in teacher retention and recruitment.",
+            "index": 0,
+            "insufficient_context": false,
+            "prose": {
+              "end": 827,
+              "start": 0
+            },
+            "raw_output": 3.7695250511169434,
+            "source_ranges": [
+              {
+                "end": 683,
+                "start": 614
+              },
+              {
+                "end": 720,
+                "start": 687
+              },
+              {
+                "end": 735,
+                "start": 722
+              },
+              {
+                "end": 738,
+                "start": 737
+              },
+              {
+                "end": 967,
+                "start": 743
+              },
+              {
+                "end": 995,
+                "start": 970
+              },
+              {
+                "end": 1023,
+                "start": 997
+              },
+              {
+                "end": 1250,
+                "start": 1025
+              },
+              {
+                "end": 1310,
+                "start": 1253
+              },
+              {
+                "end": 1424,
+                "start": 1317
+              },
+              {
+                "end": 1427,
+                "start": 1426
+              },
+              {
+                "end": 1466,
+                "start": 1428
+              },
+              {
+                "end": 1642,
+                "start": 1639
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 8,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 184,
+            "heading": "How does Bibb County compare in teacher pay?",
+            "index": 1,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1637,
+              "start": 827
+            },
+            "raw_output": -4.169644832611084,
+            "source_ranges": [
+              {
+                "end": 1683,
+                "start": 1642
+              },
+              {
+                "end": 1919,
+                "start": 1691
+              },
+              {
+                "end": 2035,
+                "start": 1925
+              },
+              {
+                "end": 2409,
+                "start": 2212
+              },
+              {
+                "end": 2633,
+                "start": 2411
+              },
+              {
+                "end": 2745,
+                "start": 2738
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 17,
+              "start": 8
+            }
+          },
+          {
+            "body_tokens": 211,
+            "heading": "Closing the funding gap",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 2814,
+              "start": 1637
+            },
+            "raw_output": 1.1103330850601196,
+            "source_ranges": [
+              {
+                "end": 2761,
+                "start": 2745
+              },
+              {
+                "end": 2776,
+                "start": 2763
+              },
+              {
+                "end": 2790,
+                "start": 2777
+              },
+              {
+                "end": 3142,
+                "start": 2875
+              },
+              {
+                "end": 3162,
+                "start": 3144
+              },
+              {
+                "end": 3254,
+                "start": 3164
+              },
+              {
+                "end": 3393,
+                "start": 3330
+              },
+              {
+                "end": 3426,
+                "start": 3395
+              },
+              {
+                "end": 3544,
+                "start": 3428
+              },
+              {
+                "end": 3586,
+                "start": 3546
+              },
+              {
+                "end": 3899,
+                "start": 3590
+              },
+              {
+                "end": 4094,
+                "start": 3901
+              },
+              {
+                "end": 4105,
+                "start": 4102
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 27,
+              "start": 17
+            }
+          },
+          {
+            "body_tokens": 91,
+            "heading": "The Solution:",
+            "index": 3,
+            "insufficient_context": true,
+            "prose": {
+              "end": 3291,
+              "start": 2814
+            },
+            "raw_output": 1.184895396232605,
+            "source_ranges": [
+              {
+                "end": 4115,
+                "start": 4105
+              },
+              {
+                "end": 4351,
+                "start": 4119
+              },
+              {
+                "end": 4360,
+                "start": 4353
+              },
+              {
+                "end": 4365,
+                "start": 4362
+              },
+              {
+                "end": 4585,
+                "start": 4367
+              },
+              {
+                "end": 4597,
+                "start": 4593
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 33,
+              "start": 27
+            }
+          },
+          {
+            "body_tokens": 491,
+            "heading": "What Is a Millage Rate?",
+            "index": 4,
+            "insufficient_context": false,
+            "prose": {
+              "end": 5425,
+              "start": 3291
+            },
+            "raw_output": 1.5629268884658813,
+            "source_ranges": [
+              {
+                "end": 4616,
+                "start": 4597
+              },
+              {
+                "end": 4832,
+                "start": 4620
+              },
+              {
+                "end": 5116,
+                "start": 4904
+              },
+              {
+                "end": 5373,
+                "start": 5118
+              },
+              {
+                "end": 5503,
+                "start": 5378
+              },
+              {
+                "end": 5606,
+                "start": 5514
+              },
+              {
+                "end": 5829,
+                "start": 5730
+              },
+              {
+                "end": 5958,
+                "start": 5910
+              },
+              {
+                "end": 6035,
+                "start": 5960
+              },
+              {
+                "end": 6109,
+                "start": 6037
+              },
+              {
+                "end": 6134,
+                "start": 6111
+              },
+              {
+                "end": 6160,
+                "start": 6136
+              },
+              {
+                "end": 6184,
+                "start": 6162
+              },
+              {
+                "end": 6219,
+                "start": 6188
+              },
+              {
+                "end": 6241,
+                "start": 6220
+              },
+              {
+                "end": 6366,
+                "start": 6251
+              },
+              {
+                "end": 6611,
+                "start": 6368
+              },
+              {
+                "end": 6752,
+                "start": 6613
+              },
+              {
+                "end": 7102,
+                "start": 6817
+              },
+              {
+                "end": 7108,
+                "start": 7104
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 59,
+              "start": 33
+            }
+          },
+          {
+            "body_tokens": 199,
+            "heading": "What Is a Millage Rate?",
+            "index": 5,
+            "insufficient_context": false,
+            "prose": {
+              "end": 6259,
+              "start": 5425
+            },
+            "raw_output": -0.4869837462902069,
+            "source_ranges": [
+              {
+                "end": 7117,
+                "start": 7108
+              },
+              {
+                "end": 7133,
+                "start": 7119
+              },
+              {
+                "end": 7140,
+                "start": 7135
+              },
+              {
+                "end": 7148,
+                "start": 7142
+              },
+              {
+                "end": 7310,
+                "start": 7150
+              },
+              {
+                "end": 7328,
+                "start": 7316
+              },
+              {
+                "end": 7350,
+                "start": 7330
+              },
+              {
+                "end": 7360,
+                "start": 7352
+              },
+              {
+                "end": 7363,
+                "start": 7362
+              },
+              {
+                "end": 7374,
+                "start": 7364
+              },
+              {
+                "end": 7473,
+                "start": 7472
+              },
+              {
+                "end": 7605,
+                "start": 7475
+              },
+              {
+                "end": 7615,
+                "start": 7607
+              },
+              {
+                "end": 7737,
+                "start": 7617
+              },
+              {
+                "end": 7762,
+                "start": 7742
+              },
+              {
+                "end": 7792,
+                "start": 7764
+              },
+              {
+                "end": 7802,
+                "start": 7794
+              },
+              {
+                "end": 7805,
+                "start": 7804
+              },
+              {
+                "end": 7812,
+                "start": 7806
+              },
+              {
+                "end": 7893,
+                "start": 7892
+              },
+              {
+                "end": 7955,
+                "start": 7895
+              },
+              {
+                "end": 7964,
+                "start": 7957
+              },
+              {
+                "end": 7995,
+                "start": 7966
+              },
+              {
+                "end": 8005,
+                "start": 7997
+              },
+              {
+                "end": 8163,
+                "start": 8007
+              },
+              {
+                "end": 8172,
+                "start": 8169
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 63,
+              "start": 59
+            }
+          },
+          {
+            "body_tokens": 109,
+            "heading": "How does Bibb County's millage rage compare?",
+            "index": 6,
+            "insufficient_context": true,
+            "prose": {
+              "end": 6690,
+              "start": 6259
+            },
+            "raw_output": -1.7039575576782227,
+            "source_ranges": [
+              {
+                "end": 8213,
+                "start": 8172
+              },
+              {
+                "end": 8223,
+                "start": 8217
+              },
+              {
+                "end": 8238,
+                "start": 8226
+              },
+              {
+                "end": 8261,
+                "start": 8257
+              },
+              {
+                "end": 8270,
+                "start": 8264
+              },
+              {
+                "end": 8283,
+                "start": 8275
+              },
+              {
+                "end": 8285,
+                "start": 8284
+              },
+              {
+                "end": 8287,
+                "start": 8286
+              },
+              {
+                "end": 8297,
+                "start": 8290
+              },
+              {
+                "end": 8299,
+                "start": 8298
+              },
+              {
+                "end": 8301,
+                "start": 8300
+              },
+              {
+                "end": 8311,
+                "start": 8306
+              },
+              {
+                "end": 8320,
+                "start": 8314
+              },
+              {
+                "end": 8331,
+                "start": 8325
+              },
+              {
+                "end": 8340,
+                "start": 8334
+              },
+              {
+                "end": 8350,
+                "start": 8345
+              },
+              {
+                "end": 8359,
+                "start": 8353
+              },
+              {
+                "end": 8379,
+                "start": 8364
+              },
+              {
+                "end": 8388,
+                "start": 8382
+              },
+              {
+                "end": 8411,
+                "start": 8393
+              },
+              {
+                "end": 8420,
+                "start": 8414
+              },
+              {
+                "end": 8444,
+                "start": 8425
+              },
+              {
+                "end": 8453,
+                "start": 8447
+              },
+              {
+                "end": 8459,
+                "start": 8458
+              },
+              {
+                "end": 8675,
+                "start": 8460
+              },
+              {
+                "end": 8750,
+                "start": 8747
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 84,
+              "start": 63
+            }
+          },
+          {
+            "body_tokens": 8,
+            "heading": "How you can help",
+            "index": 7,
+            "insufficient_context": true,
+            "prose": {
+              "end": 6730,
+              "start": 6690
+            },
+            "raw_output": 1.5379564762115479,
+            "source_ranges": [
+              {
+                "end": 8763,
+                "start": 8750
+              },
+              {
+                "end": 8789,
+                "start": 8765
+              },
+              {
+                "end": 8800,
+                "start": 8799
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 86,
+              "start": 84
+            }
+          },
+          {
+            "body_tokens": 2,
+            "heading": "1.",
+            "index": 8,
+            "insufficient_context": true,
+            "prose": {
+              "end": 6737,
+              "start": 6730
+            },
+            "raw_output": 1.2101019620895386,
+            "source_ranges": [
+              {
+                "end": 8807,
+                "start": 8800
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 87,
+              "start": 86
+            }
+          },
+          {
+            "body_tokens": 56,
+            "heading": "Email the school board and superintendent.",
+            "index": 9,
+            "insufficient_context": true,
+            "prose": {
+              "end": 7017,
+              "start": 6737
+            },
+            "raw_output": 2.5369458198547363,
+            "source_ranges": [
+              {
+                "end": 8844,
+                "start": 8807
+              },
+              {
+                "end": 8878,
+                "start": 8847
+              },
+              {
+                "end": 8990,
+                "start": 8972
+              },
+              {
+                "end": 9075,
+                "start": 8996
+              },
+              {
+                "end": 9192,
+                "start": 9083
+              },
+              {
+                "end": 9201,
+                "start": 9200
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 94,
+              "start": 87
+            }
+          },
+          {
+            "body_tokens": 2,
+            "heading": "2.",
+            "index": 10,
+            "insufficient_context": true,
+            "prose": {
+              "end": 7024,
+              "start": 7017
+            },
+            "raw_output": 1.6548757553100586,
+            "source_ranges": [
+              {
+                "end": 9208,
+                "start": 9201
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 95,
+              "start": 94
+            }
+          },
+          {
+            "body_tokens": 54,
+            "heading": "Share this blog post with as many people as possible.",
+            "index": 11,
+            "insufficient_context": true,
+            "prose": {
+              "end": 7256,
+              "start": 7024
+            },
+            "raw_output": -0.3558770716190338,
+            "source_ranges": [
+              {
+                "end": 9256,
+                "start": 9208
+              },
+              {
+                "end": 9304,
+                "start": 9258
+              },
+              {
+                "end": 9328,
+                "start": 9307
+              },
+              {
+                "end": 9446,
+                "start": 9333
+              },
+              {
+                "end": 9453,
+                "start": 9452
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 98,
+              "start": 95
+            }
+          },
+          {
+            "body_tokens": 2,
+            "heading": "3.",
+            "index": 12,
+            "insufficient_context": true,
+            "prose": {
+              "end": 7262,
+              "start": 7256
+            },
+            "raw_output": 0.9918825626373291,
+            "source_ranges": [
+              {
+                "end": 9459,
+                "start": 9453
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 99,
+              "start": 98
+            }
+          },
+          {
+            "body_tokens": 3,
+            "heading": "Sign the petition",
+            "index": 13,
+            "insufficient_context": true,
+            "prose": {
+              "end": 7279,
+              "start": 7262
+            },
+            "raw_output": 1.0423507690429688,
+            "source_ranges": [
+              {
+                "end": 9472,
+                "start": 9459
+              },
+              {
+                "end": 9697,
+                "start": 9694
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 100,
+              "start": 99
+            }
+          },
+          {
+            "body_tokens": 132,
+            "heading": "Why It Matters",
+            "index": 14,
+            "insufficient_context": false,
+            "prose": {
+              "end": 7897,
+              "start": 7279
+            },
+            "raw_output": 7.808378219604492,
+            "source_ranges": [
+              {
+                "end": 9708,
+                "start": 9697
+              },
+              {
+                "end": 9768,
+                "start": 9714
+              },
+              {
+                "end": 9783,
+                "start": 9770
+              },
+              {
+                "end": 9791,
+                "start": 9785
+              },
+              {
+                "end": 9807,
+                "start": 9793
+              },
+              {
+                "end": 9845,
+                "start": 9809
+              },
+              {
+                "end": 9882,
+                "start": 9847
+              },
+              {
+                "end": 9928,
+                "start": 9884
+              },
+              {
+                "end": 10041,
+                "start": 9930
+              },
+              {
+                "end": 10132,
+                "start": 10046
+              },
+              {
+                "end": 10154,
+                "start": 10137
+              },
+              {
+                "end": 10170,
+                "start": 10156
+              },
+              {
+                "end": 10177,
+                "start": 10171
+              },
+              {
+                "end": 10277,
+                "start": 10260
+              },
+              {
+                "end": 10431,
+                "start": 10284
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 110,
+              "start": 100
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

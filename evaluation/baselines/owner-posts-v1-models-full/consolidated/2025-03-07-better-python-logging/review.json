@@ -1,0 +1,444 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Check which units are complete sentences and which fragments need connection.",
+      "guidance_id": "structure.fragment-pattern",
+      "keep_when": "Keep dialogue, slogans, instructions and deliberate emphasis.",
+      "leverage": 2,
+      "location": {
+        "column": 241,
+        "end_column": 248,
+        "end_line": 28,
+        "line": 28,
+        "source_ranges": [
+          {
+            "end": 1716,
+            "start": 1709
+          }
+        ]
+      },
+      "matched_text": "myself.",
+      "message": null,
+      "rule_id": "structure.fragment-pattern",
+      "sentence": "myself.",
+      "severity": "low",
+      "suggestion": "9 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+      "suppressed": false,
+      "why": "Several very short units may interrupt the argument."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 241,
+        "end_column": 248,
+        "end_line": 28,
+        "line": 28,
+        "source_ranges": [
+          {
+            "end": 1716,
+            "start": 1709
+          }
+        ]
+      },
+      "matched_text": "myself.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "myself.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 14,
+        "end_line": 79,
+        "line": 79,
+        "source_ranges": [
+          {
+            "end": 2725,
+            "start": 2712
+          }
+        ]
+      },
+      "matched_text": "See all those",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "See all those",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 25,
+        "end_column": 36,
+        "end_line": 79,
+        "line": 79,
+        "source_ranges": [
+          {
+            "end": 2747,
+            "start": 2736
+          }
+        ]
+      },
+      "matched_text": "statements?",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "statements?",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 308,
+        "end_column": 319,
+        "end_line": 81,
+        "line": 81,
+        "source_ranges": [
+          {
+            "end": 3489,
+            "start": 3478
+          }
+        ]
+      },
+      "matched_text": "statements.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "statements.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 518,
+        "end_column": 533,
+        "end_line": 152,
+        "line": 152,
+        "source_ranges": [
+          {
+            "end": 6514,
+            "start": 6499
+          }
+        ]
+      },
+      "matched_text": "So for example:",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "So for example:",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 10,
+        "end_line": 215,
+        "line": 215,
+        "source_ranges": [
+          {
+            "end": 8054,
+            "start": 8045
+          }
+        ]
+      },
+      "matched_text": "Previous:",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Previous:",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 9,
+        "end_line": 231,
+        "line": 231,
+        "source_ranges": [
+          {
+            "end": 8255,
+            "start": 8247
+          }
+        ]
+      },
+      "matched_text": "Current:",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Current:",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 303,
+        "end_column": 312,
+        "end_line": 248,
+        "line": 248,
+        "source_ranges": [
+          {
+            "end": 9472,
+            "start": 9463
+          }
+        ]
+      },
+      "matched_text": "function.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "function.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 63,
+        "end_column": 73,
+        "end_line": 252,
+        "line": 252,
+        "source_ranges": [
+          {
+            "end": 9565,
+            "start": 9555
+          }
+        ]
+      },
+      "matched_text": "Simply add",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Simply add",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "2": 1,
+    "3": 9
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-03-07-better-python-logging.md",
+  "prose_words": 944,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 10,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-better-python-logging/backend-attempt-1.json",
+        "sha256": "4d1515118f0bb62862afe1397fd6709de9ac3a8f95d393da00d77b6c0d66bee9",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-07-better-python-logging/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-07-better-python-logging/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

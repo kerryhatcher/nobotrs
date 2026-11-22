@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-01-gear-review-system76-pangolin-12-2.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 746,
+  "leverage_counts": {
+    "4": 2,
+    "5": 1
+  },
+  "findings": [
+    {
+      "rule_id": "structure.list-heavy",
+      "guidance_id": "structure.list-heavy",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 26,
+        "column": 5,
+        "end_line": 26,
+        "end_column": 76,
+        "source_ranges": [
+          {
+            "start": 1107,
+            "end": 1119
+          },
+          {
+            "start": 1121,
+            "end": 1178
+          }
+        ]
+      },
+      "matched_text": "Loose Screws: Over time, I've noticed some exterior screws loosening.",
+      "sentence": "Loose Screws: Over time, I've noticed some exterior screws loosening.",
+      "context": null,
+      "suggestion": "Check whether connected prose would clarify relationships; retain procedures and factual lists.",
+      "message": null,
+      "why": "Many full-sentence list items may hide how the claims connect.",
+      "fix": "Use prose when relationships matter more than parallel scanning.",
+      "keep_when": "Keep procedures, factual lists and accessible reference material."
+    },
+    {
+      "rule_id": "structure.bold-inline-headers",
+      "guidance_id": "structure.bold-inline-headers",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 53,
+        "column": 5,
+        "end_line": 53,
+        "end_column": 99,
+        "source_ranges": [
+          {
+            "start": 3792,
+            "end": 3808
+          },
+          {
+            "start": 3810,
+            "end": 3886
+          }
+        ]
+      },
+      "matched_text": "Processor (CPU): Supports AMD Ryzen (Rembrandt) Mobile CPUs, specifically the Ryzen 7 6800U.",
+      "sentence": "Processor (CPU): Supports AMD Ryzen (Rembrandt) Mobile CPUs, specifically the Ryzen 7 6800U.",
+      "context": null,
+      "suggestion": "Use actual headings when they aid navigation; keep compact labels in forms and reference lists.",
+      "message": null,
+      "why": "Repeated bold labels may make navigation harder than real headings.",
+      "fix": "Consider semantic headings where readers need navigation.",
+      "keep_when": "Keep compact labels in forms, reference lists and venue-required layouts."
+    },
+    {
+      "rule_id": "seamless",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 41,
+        "column": 5,
+        "end_line": 41,
+        "end_column": 13,
+        "source_ranges": [
+          {
+            "start": 2568,
+            "end": 2576
+          }
+        ]
+      },
+      "matched_text": "Seamless",
+      "sentence": "Seamless Linux Integration: System76 ensures that Linux runs flawlessly out of the box.",
+      "context": null,
+      "suggestion": "smooth",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "fail",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 3,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

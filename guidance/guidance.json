@@ -1,0 +1,633 @@
+{
+  "schema_version": "1.0.0",
+  "guidance_version": "2026.11.21",
+  "entries": [
+    {
+      "id": "content.vague-attribution",
+      "rules": [
+        "studies-show",
+        "experts-agree"
+      ],
+      "category": "content",
+      "leverage": 1,
+      "title": "Name the evidence",
+      "why": "An unnamed authority leaves the reader unable to check the claim.",
+      "fix": "Name the actual source and its limits, ask for it, or remove the unsupported attribution.",
+      "keep_when": "Keep when a named study or expert follows immediately.",
+      "examples": [
+        {
+          "before": "Studies show this may help.",
+          "after": "This may help; ask the author for the study before publication."
+        }
+      ],
+      "sources": [
+        "docs/ai-writing-guide.md#practical-instructions-for-producing-genuinely-human-text",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.negative-parallelism",
+      "rules": [
+        "not-just-x-but-y",
+        "structure.negative-parallelism"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Explain the relationship",
+      "why": "A repeated contrast can obscure what changed.",
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding.",
+      "examples": [
+        {
+          "before": "It is not just a cost, but a risk.",
+          "after": "It is both a cost and a risk."
+        }
+      ],
+      "sources": [
+        "docs/ai-writing-guide.md#practical-instructions-for-producing-genuinely-human-text",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.signposting-filler",
+      "rules": [
+        "important-to-note",
+        "worth-noting",
+        "heres-the-thing",
+        "let-me-be-clear",
+        "uncomfortable-truth",
+        "thats-it-thats-the-x"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Lead with the point",
+      "why": "Repeated announcements delay the useful information.",
+      "fix": "Remove the announcement if the following claim stands alone.",
+      "keep_when": "Keep a warning that signals a meaningful change in scope.",
+      "examples": [
+        {
+          "before": "It is worth noting that approval may take a week.",
+          "after": "Approval may take a week."
+        }
+      ],
+      "sources": [
+        "docs/ai-writing-guide.md#practical-instructions-for-producing-genuinely-human-text",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.significance-inflation",
+      "rules": [
+        "cannot-be-overstated",
+        "a-testament-to",
+        "plays-a-role",
+        "rapidly-evolving",
+        "embark-on-a-journey",
+        "paradigm-shift",
+        "structure.significance-inflation"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Explain the consequence",
+      "why": "Generic significance does not explain the effect on the reader.",
+      "fix": "Use a supplied consequence, or cut the unsupported praise.",
+      "keep_when": "Keep significance supported by specific evidence in context.",
+      "examples": [
+        {
+          "before": "This marks a paradigm shift: approval may take a week.",
+          "after": "Approval may take a week."
+        }
+      ],
+      "sources": [
+        "docs/ai-writing-guide.md#practical-instructions-for-producing-genuinely-human-text",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "rhythm.uniform-sentence-length",
+      "rules": [
+        "statistics.burstiness"
+      ],
+      "category": "rhythm",
+      "leverage": 3,
+      "title": "Read for rhythm",
+      "why": "Similar sentence lengths may make distinctions hard to hear.",
+      "fix": "Read aloud and combine or split only where meaning becomes clearer.",
+      "keep_when": "Keep parallel sentences in instructions, dialogue or deliberate repetition.",
+      "examples": [
+        {
+          "before": "The queue is full. The job may wait.",
+          "after": "The queue is full, so the job may wait."
+        }
+      ],
+      "sources": [
+        "docs/ai-writing-guide.md#practical-instructions-for-producing-genuinely-human-text",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "punctuation.em-dash-connectors",
+      "rules": [
+        "punctuation.em-dash-density"
+      ],
+      "category": "punctuation",
+      "leverage": 4,
+      "title": "Check dash connections",
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading.",
+      "examples": [
+        {
+          "before": "The queue is full — the job may wait.",
+          "after": "The queue is full; the job may wait."
+        }
+      ],
+      "sources": [
+        "docs/ai-writing-guide.md#practical-instructions-for-producing-genuinely-human-text",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "vocabulary.tell-word",
+      "rules": [
+        "delve",
+        "tapestry",
+        "multifaceted",
+        "nuanced",
+        "leverage",
+        "utilize",
+        "seamless",
+        "foster",
+        "pivotal",
+        "paramount",
+        "holistic",
+        "streamline",
+        "transformative",
+        "meticulous",
+        "intricate",
+        "embark",
+        "beacon",
+        "testament",
+        "plethora",
+        "myriad",
+        "moreover",
+        "furthermore",
+        "nevertheless",
+        "underscore",
+        "showcase",
+        "emphasize",
+        "facilitate",
+        "empower",
+        "robust",
+        "cutting-edge",
+        "harness-verb"
+      ],
+      "category": "vocabulary",
+      "leverage": 5,
+      "title": "Choose a precise word",
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "examples": [
+        {
+          "before": "We must utilize the existing queue.",
+          "after": "We must use the existing queue."
+        }
+      ],
+      "sources": [
+        "docs/ai-writing-guide.md#practical-instructions-for-producing-genuinely-human-text",
+        "guidance/brief.md"
+      ],
+      "time_bound": true
+    },
+    {
+      "id": "structure.rule-of-three",
+      "rules": [
+        "structure.rule-of-three"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Rule of three",
+      "why": "General qualities can leave the reader without a concrete property.",
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories.",
+      "examples": [
+        {
+          "before": "The service is simple, powerful, and flexible.",
+          "after": "Ask which specific properties the author means before replacing this description."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.coordinated-series",
+      "rules": [
+        "structure.coordinated-series"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Coordinated series",
+      "why": "A long sequence of actions can hide their relationship or cumulative effect.",
+      "fix": "Check the relationship between the actions; split only if that clarifies it.",
+      "keep_when": "Keep an accurate sequence of real actions or a deliberate cumulative rhythm.",
+      "examples": [
+        {
+          "before": "After testing, measuring, and reviewing, we may proceed.",
+          "after": "We may proceed after testing, measuring, and reviewing."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.copula-avoidance",
+      "rules": [
+        "structure.copula-avoidance"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Copula avoidance",
+      "why": "An indirect linking phrase may add words without clarifying a role.",
+      "fix": "Consider is when the original linking phrase adds no meaning.",
+      "keep_when": "Keep acts as or serves as when describing a temporary or functional role.",
+      "examples": [
+        {
+          "before": "The library serves as a hub.",
+          "after": "The library is a hub."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.cheerful-opener",
+      "rules": [
+        "structure.cheerful-opener"
+      ],
+      "category": "content",
+      "leverage": 1,
+      "title": "Cheerful opener",
+      "why": "An automatic acknowledgement may delay the requested answer.",
+      "fix": "Lead with useful information when an acknowledgement adds nothing.",
+      "keep_when": "Keep an acknowledgement that fits the relationship or dialogue.",
+      "examples": [
+        {
+          "before": "Certainly! Approval may take a week.",
+          "after": "Approval may take a week."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.short-fragment",
+      "rules": [
+        "structure.short-fragment"
+      ],
+      "category": "rhythm",
+      "leverage": 3,
+      "title": "Short fragment",
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "examples": [
+        {
+          "before": "Still short.",
+          "after": "Still short."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.summary-close",
+      "rules": [
+        "structure.summary-close"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Summary close",
+      "why": "A generic closing announcement may repeat rather than complete the argument.",
+      "fix": "End at the useful conclusion if the announcement is unnecessary.",
+      "keep_when": "Keep summaries in reports and teaching material where readers need a recap.",
+      "examples": [
+        {
+          "before": "In conclusion, approval may take a week.",
+          "after": "Approval may take a week."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.challenges-future-formula",
+      "rules": [
+        "structure.challenges-future-formula"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Challenges future formula",
+      "why": "A generic transition can conceal what the next section actually covers.",
+      "fix": "Use the specific next point if the supplied material supports it.",
+      "keep_when": "Keep literal discussion of future challenges or venue-required headings.",
+      "examples": [
+        {
+          "before": "Looking ahead: approval may take a week.",
+          "after": "Approval may take a week."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.repeated-opening",
+      "rules": [
+        "structure.repeated-opening"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Repeated opening",
+      "why": "Repeated sentence openings can obscure changing relationships.",
+      "fix": "Check whether repetition supports emphasis before varying it.",
+      "keep_when": "Keep deliberate repetition, dialogue, procedures and learner exercises.",
+      "examples": [
+        {
+          "before": "We can read. We can vote. We can wait.",
+          "after": "We can read. We can vote. We can wait."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.fragment-pattern",
+      "rules": [
+        "structure.fragment-pattern"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Fragment pattern",
+      "why": "Several very short units may interrupt the argument.",
+      "fix": "Check which units are complete sentences and which fragments need connection.",
+      "keep_when": "Keep dialogue, slogans, instructions and deliberate emphasis.",
+      "examples": [
+        {
+          "before": "Still short. Not enough.",
+          "after": "Still short. Not enough."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.uniform-paragraphs",
+      "rules": [
+        "structure.uniform-paragraphs"
+      ],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Uniform paragraphs",
+      "why": "Similar paragraph sizes may hide differences in the argument.",
+      "fix": "Let each paragraph develop its point; vary only when useful.",
+      "keep_when": "Keep parallel reference entries, forms and technical explanations.",
+      "examples": [
+        {
+          "before": "The queue is full. The job may wait.",
+          "after": "The queue is full, so the job may wait."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.bold-inline-headers",
+      "rules": [
+        "structure.bold-inline-headers"
+      ],
+      "category": "formatting",
+      "leverage": 4,
+      "title": "Bold inline headers",
+      "why": "Repeated bold labels may make navigation harder than real headings.",
+      "fix": "Consider semantic headings where readers need navigation.",
+      "keep_when": "Keep compact labels in forms, reference lists and venue-required layouts.",
+      "examples": [
+        {
+          "before": "**Status:** Approval may take a week.",
+          "after": "## Status\n\nApproval may take a week."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.title-case-headings",
+      "rules": [
+        "structure.title-case-headings"
+      ],
+      "category": "formatting",
+      "leverage": 4,
+      "title": "Title case headings",
+      "why": "Heading capitalization may distract if it conflicts with the venue style.",
+      "fix": "Use the required or established heading style consistently.",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "examples": [
+        {
+          "before": "## Review The Queue Status",
+          "after": "## Review the queue status"
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "structure.list-heavy",
+      "rules": [
+        "structure.list-heavy"
+      ],
+      "category": "formatting",
+      "leverage": 4,
+      "title": "List heavy",
+      "why": "Many full-sentence list items may hide how the claims connect.",
+      "fix": "Use prose when relationships matter more than parallel scanning.",
+      "keep_when": "Keep procedures, factual lists and accessible reference material.",
+      "examples": [
+        {
+          "before": "- The queue is full.\n- The job may wait.",
+          "after": "The queue is full, so the job may wait."
+        }
+      ],
+      "sources": [
+        "docs/superpowers/plans/2026-11-21-humanize-2-structural-tells.md",
+        "guidance/brief.md"
+      ],
+      "time_bound": false
+    },
+    {
+      "id": "format.heading-depth",
+      "rules": ["format.heading-depth"],
+      "category": "formatting",
+      "leverage": 4,
+      "title": "Heading depth skipped",
+      "why": "Consecutive headings that jump more than one level confuse readers who rely on heading hierarchy for navigation.",
+      "fix": "Use one intermediate heading level, or restructure so the depth increase is justified by the content.",
+      "keep_when": "A deeply nested sub-section is the clearest structure even though it skips a level.",
+      "examples": [
+        {"before": "## Intro\n### Details\n#### Sub-Detail", "after": "## Intro\n### Details\n### Sub-Detail"}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    },
+    {
+      "id": "format.list-marker",
+      "rules": ["format.list-marker"],
+      "category": "formatting",
+      "leverage": 4,
+      "title": "Inconsistent list markers",
+      "why": "Mixed list markers distract from the content and may mislead readers about list structure.",
+      "fix": "Use one marker style throughout: all hyphens, all asterisks, or all numbers for ordered steps.",
+      "keep_when": "A multi-level list intentionally mixes markers to distinguish nesting levels.",
+      "examples": [
+        {"before": "- item one\n* item two", "after": "- item one\n- item two"}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    },
+    {
+      "id": "grammar.adjacent-articles",
+      "rules": ["grammar.adjacent-articles"],
+      "category": "punctuation",
+      "leverage": 4,
+      "title": "Adjacent articles",
+      "why": "Repeated articles like 'the the' are likely typos that break fluency.",
+      "fix": "Remove the duplicate article, or check that a different word was intended between them.",
+      "keep_when": "A compound noun phrase genuinely requires two articles (rare).",
+      "examples": [
+        {"before": "the the budget", "after": "the budget"},
+        {"before": "a a report", "after": "a report"}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    },
+    {
+      "id": "grammar.article-agreement",
+      "rules": ["grammar.article-agreement"],
+      "category": "punctuation",
+      "leverage": 4,
+      "title": "Wrong article before noun",
+      "why": "'An' before a consonant sound like 'an policy' breaks reader expectations.",
+      "fix": "Use 'a' before consonant sounds and 'an' before vowel sounds, regardless of spelling.",
+      "keep_when": "The word after the article is an abbreviation pronounced with the opposite sound, e.g., 'a URL'.",
+      "examples": [
+        {"before": "an policy", "after": "a policy"},
+        {"before": "a hour", "after": "an hour"}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    },
+    {
+      "id": "style.regional-spelling",
+      "rules": ["style.regional-spelling"],
+      "category": "vocabulary",
+      "leverage": 5,
+      "title": "Regional spelling variant",
+      "why": "Mixing American and British spellings in the same document can appear inconsistent.",
+      "fix": "Use the spelling that matches the declared dialect consistently throughout.",
+      "keep_when": "A direct quotation or proper name preserves its original spelling.",
+      "examples": [
+        {"before": "colour", "after": "color"},
+        {"before": "organise", "after": "organize"}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    },
+    {
+      "id": "spelling.common-typo",
+      "rules": ["spelling.common-typo"],
+      "category": "vocabulary",
+      "leverage": 5,
+      "title": "Common typo",
+      "why": "A word that matches a known typographical error pattern is likely misspelled.",
+      "fix": "Replace with the standard spelling.",
+      "keep_when": "The word is a deliberate variant: dialect, brand name, or quoted speech.",
+      "examples": [
+        {"before": "teh", "after": "the"},
+        {"before": "recieved", "after": "received"}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    },
+    {
+      "id": "complexity.long-clause-chain",
+      "rules": ["complexity.long-clause-chain"],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Long clause chain",
+      "why": "Consecutive dependent clauses create run-on constructions that are hard to parse.",
+      "fix": "Break into shorter sentences or restructure to reduce nesting.",
+      "keep_when": "The chain is a deliberate stylistic choice for rhetorical effect, and the meaning remains clear.",
+      "examples": [
+        {"before": "Because the report that was submitted by the committee that was tasked with reviewing the policy that was enacted last year...", "after": "The committee submitted its report on last year's policy. The report..."}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    },
+    {
+      "id": "readability.dense-passage",
+      "rules": ["readability.dense-passage"],
+      "category": "structure",
+      "leverage": 2,
+      "title": "Dense passage",
+      "why": "A paragraph with many long sentences and abstract nouns is harder to read.",
+      "fix": "Add shorter sentences, replace abstract nouns with concrete verbs, or break the paragraph at logical points.",
+      "keep_when": "The density serves the subject matter, e.g., a statutory definition that must preserve exact wording.",
+      "examples": [
+        {"before": "The proposed framework for the implementation of the new policy guidelines represents a significant step forward in improving the efficiency of the overall operational workflow across all departments.", "after": "The new policy framework should improve workflow efficiency across all departments."}
+      ],
+      "sources": ["guidance/brief.md"],
+      "time_bound": false
+    }
+  ]
+}

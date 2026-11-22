@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-12-11-im-running-for-the-bibb-county-board-of-education.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 776,
+  "leverage_counts": {
+    "2": 1,
+    "4": 1
+  },
+  "findings": [
+    {
+      "rule_id": "structure.negative-parallelism",
+      "guidance_id": "structure.negative-parallelism",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 31,
+        "column": 188,
+        "end_line": 31,
+        "end_column": 214,
+        "source_ranges": [
+          {
+            "start": 1806,
+            "end": 1834
+          }
+        ]
+      },
+      "matched_text": "not just a statistic; it’s",
+      "sentence": "That’s not just a statistic; it’s a warning light on the dashboard for our entire community.",
+      "context": null,
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "message": null,
+      "why": "A repeated contrast can obscure what changed.",
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding."
+    },
+    {
+      "rule_id": "structure.title-case-headings",
+      "guidance_id": "structure.title-case-headings",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 24,
+        "column": 4,
+        "end_line": 24,
+        "end_column": 41,
+        "source_ranges": [
+          {
+            "start": 1206,
+            "end": 1243
+          }
+        ]
+      },
+      "matched_text": "What I See When I Look at Our Schools",
+      "sentence": "What I See When I Look at Our Schools",
+      "context": null,
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "message": null,
+      "why": "Heading capitalization may distract if it conflicts with the venue style.",
+      "fix": "Use the required or established heading style consistently.",
+      "keep_when": "Keep title case when the publication or naming convention requires it."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "fail",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 2,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

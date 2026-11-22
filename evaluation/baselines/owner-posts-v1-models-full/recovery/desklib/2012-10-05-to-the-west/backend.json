@@ -1,0 +1,17 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "model": {
+        "backend": "desklib",
+        "code": "text_too_short",
+        "detail": "6 prepared words; the profile requires at least 25",
+        "minimum_words": 25,
+        "prepared_words": 6
+      },
+      "reason": "model_text_too_short: 6 prepared words; the profile requires at least 25"
+    },
+    "status": "abstained"
+  }
+}

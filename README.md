@@ -1,35 +1,94 @@
 # nobotrs
 
-An offline Rust prose linter and heuristic detector. The default build uses an embedded dictionary and six deterministic backends. It makes no network requests and requires no keys or model downloads. Findings are editing prompts, not proof of authorship.
+An offline Rust editor and heuristic detector for clear English that preserves the author’s facts, purpose, voice and qualifications. Start with the [canonical writing brief](guidance/brief.md), then use advisory `review` for located editing prompts. Each finding explains the reader concern, a possible edit and legitimate reasons to keep the original. The default build uses an embedded dictionary and six deterministic backends. The default build makes no network requests and requires no keys or model downloads. An opt-in build feature (`api-clients`) plus an explicit `--gptzero` flag can send the analyzed text to GPTZero for an informational comparison; that text leaves your machine, and the result never changes the nobotrs verdict (see [GPTZero comparison](#gptzero-comparison-opt-in)). Findings are editing prompts, not proof of authorship.
 
 **Authorship detection did not qualify:** the independent pilot detected 2 of
 104 generated samples and falsely flagged 2 of 89 human samples. Use findings
 for contextual editing review. See the [full assessment](docs/evaluation/final-assessment.md).
 
-Install from the checkout with `cargo install --locked --path .`. Build with `cargo build --release --locked`. Rust 1.85 or newer is required. Code is MIT licensed; dictionary data retains its separate CC BY-SA 4.0 license (see `NOTICE` and `dictionary/LICENSE`).
+The 2026-11-21 offline owner-archive baseline flagged **0 of 28 AI-drafted posts** (27 Clean, one inconclusive) and zero of 15 human-labelled posts. These are development measurements; the human posts are older and shorter. Full-archive counts include one medium-confidence human post, which primary analyses exclude. See the [baseline records](evaluation/baselines/owner-posts-v1-offline/run.json) and [provenance labels](evaluation/corpora/owner-posts-v1/manifest.json).
+
+Install the humanization release with `cargo install --locked --git https://github.com/kerryhatcher/nobotrs --tag v0.2.0`. From a checkout, run `cargo install --locked --path .`. Rust 1.85 or newer is required. Code is MIT licensed; dictionary data retains its separate CC BY-SA 4.0 license (see `NOTICE` and `dictionary/LICENSE`).
 
 ```sh
+# Draft, edit and check sources
+nobotrs review draft.md --language en
+nobotrs copyedit draft.md --language en --dialect american
+nobotrs compare draft.before.md draft.md --language en
+nobotrs facts check draft.md --reference budget-notes.md
+
+# Read-only queries
+nobotrs guide --format json
+nobotrs ai-writing-guide
+nobotrs config
+
+# Detection
 nobotrs detect README.md
 printf 'delve leverage\n' | nobotrs lint - --format json
-printf 'experts\nagree\n' | nobotrs lint - --markdown
 nobotrs lint docs/one.md docs/two.md --minimum-severity high
+printf 'experts\nagree\n' | nobotrs lint - --markdown
 nobotrs analyze essay.txt --language en --format json
 nobotrs scan docs --format sarif > prose.sarif
-nobotrs config
-nobotrs guide
-nobotrs ai-writing-guide
 ```
 
-`guide` prints the short usage-oriented writing guide. `ai-writing-guide` prints the
+`review` exits 0 for completed advisory analysis and 2 for incomplete analysis or operational errors. It rejects external services and SARIF. `--display-limit` applies once after suppression, ranking, counts and checklist calculation; limits 0 and 1 retain full counts. Checks explicitly report completed, skipped and incomplete states. Structural observations require `--language en` and remain experimental, low severity and non-voting. They run only in editorial analysis, preserving legacy detection budgets.
+
+`copyedit` runs the full editorial analysis pipeline plus the native grammar/spelling
+engine (src/copyediting.rs) and merges both into a single report.
+`--dialect american|british` controls variant spelling rules.
+`--allow-word` (repeatable) suppresses findings for project-specific vocabulary.
+`--language en` is required for structural and readability checks.
+
+`compare BEFORE AFTER` diffs two drafts: it reports which tells were removed, kept
+or introduced (grouped by leverage), diffs metrics (sentence-length CV, em-dash density,
+MTLD, Flesch–Kincaid grade), and checks hard fact invariants (numbers, quotes, URLs,
+inline code). Exit 0 when complete with all hard facts preserved; exit 1 when a hard
+fact from BEFORE is missing in AFTER; exit 2 on error. Added facts without a source
+are listed with ``status: "confirm_source"``. Use ``--language en`` for English-specific
+checks and ``--markdown`` when comparing Markdown files.
+
+`facts check` compares labelled quantities, percentages and ISO dates across text files, Markdown tables and directories. For example, it can flag a draft that gives the Parks FY27 budget as $4 million when the reference gives $8 million. Findings include the original path, line and column. Different fiscal periods, currencies and approximate amounts are grouped separately. For labels shaped like “Parks FY27 budget,” JSON separates the entity, period, attribute, unit and qualifier. A pronoun or a possible short name or acronym receives an ambiguous status and needs source review. Other label shapes retain their original wording. The command exits 1 for conflicts or missing reference claims, 2 for errors, 3 when every group is unresolved, and 0 when at least one group is compatible and no conflict or required claim is outstanding.
+
+`guide` prints the canonical brief. Its JSON includes `brief`, rule-linked `entries` with leverage, and guidance versions, while retaining the legacy `guide` field. `ai-writing-guide` prints the
 [full AI writing field guide](docs/ai-writing-guide.md) as Markdown. Use
 `--format json` for a JSON object with the full text in `guide`.
 
-## Agent skill
+## Portable agent skills
 
-Install the [nobotrs skill](skills/nobotrs/SKILL.md) with the skills.sh CLI.
-From a checkout use `npx skills add . --skill nobotrs`. Once the skill is on
-GitHub, use `npx skills add kerryhatcher/nobotrs --skill nobotrs`. The skill uses
-the separately installed `nobotrs` binary.
+Three skills are available. Install with the skills.sh CLI:
+
+| Skill | File | Purpose |
+|-------|------|---------|
+| `nobotrs` | `skills/nobotrs/SKILL.md` | CLI reference and exit-code semantics |
+| `humanize-writing` | `skills/humanize-writing/SKILL.md` | Draft from notes with no binary needed (stand-alone guide) |
+| `review-writing` | `skills/review-writing/SKILL.md` | Revise a draft using `review`, `copyedit` and `compare` |
+
+From a checkout:
+
+```sh
+npx skills add . --skill nobotrs
+npx skills add . --skill humanize-writing
+npx skills add . --skill review-writing
+```
+
+Install from GitHub with `npx skills add kerryhatcher/nobotrs --skill <name>`. The `nobotrs` skill
+requires the separately installed binary. The other two work with or without it,
+with a fallback to their embedded stand-alone guides.
+
+## GPTZero comparison (opt-in)
+
+To compare nobotrs with [GPTZero](https://gptzero.me) on the same text, build with the `api-clients` feature and pass `--gptzero` with `GPTZERO_API_KEY` set:
+
+```sh
+cargo build --release --features api-clients
+GPTZERO_API_KEY=... ./target/release/nobotrs detect --gptzero essay.md
+```
+
+- **What is sent:** the full analyzed text, to `https://api.gptzero.me/v2/predict/text`. A notice with the character count is printed to stderr before the request. Nothing is sent without `--gptzero` (or `NOBOTRS_GPTZERO=true` / `"gptzero": true` in config) and a key.
+- **What comes back:** a separate "GPTZero comparison" block (human output) or an `external` object (JSON) with GPTZero's predicted class, confidence category and class probabilities. It is labeled informational and is never part of nobotrs's verdict, families, quorum or exit status.
+- **Failures** (missing key, rejected key, quota or rate limit, network error, text over 150,000 characters) are recorded in that block and never change the heuristic result or exit code.
+- **Scope:** `detect` and `analyze` only. Using `--gptzero` with `lint` or `scan` is an error. Requests time out after 30 seconds.
+- **Caveats:** GPTZero's terms, plan limits and pricing apply to your key. Both tools make probabilistic claims that have not been validated against each other; a single agreement or disagreement on one sample is not evidence about either tool's accuracy.
 
 ## CLI behavior
 

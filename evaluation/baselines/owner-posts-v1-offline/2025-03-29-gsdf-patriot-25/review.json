@@ -1,0 +1,494 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-29-gsdf-patriot-25.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 1467,
+  "leverage_counts": {
+    "2": 3,
+    "3": 7,
+    "5": 3
+  },
+  "findings": [
+    {
+      "rule_id": "structure.rule-of-three",
+      "guidance_id": "structure.rule-of-three",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 36,
+        "column": 255,
+        "end_line": 36,
+        "end_column": 355,
+        "source_ranges": [
+          {
+            "start": 2618,
+            "end": 2720
+          }
+        ]
+      },
+      "matched_text": "This was more than just an exercise—it was a proving ground for readiness, resilience, and response.",
+      "sentence": "This was more than just an exercise—it was a proving ground for readiness, resilience, and response.",
+      "context": null,
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "message": null,
+      "why": "General qualities can leave the reader without a concrete property.",
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories."
+    },
+    {
+      "rule_id": "structure.rule-of-three",
+      "guidance_id": "structure.rule-of-three",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 312,
+        "column": 1,
+        "end_line": 312,
+        "end_column": 119,
+        "source_ranges": [
+          {
+            "start": 15923,
+            "end": 15984
+          },
+          {
+            "start": 15986,
+            "end": 16040
+          },
+          {
+            "start": 16042,
+            "end": 16043
+          }
+        ]
+      },
+      "matched_text": "Patriot 25 was more than just a training exercise—it was a proving ground for teamwork, resilience, and readiness.",
+      "sentence": "Patriot 25 was more than just a training exercise—it was a proving ground for teamwork, resilience, and readiness.",
+      "context": null,
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "message": null,
+      "why": "General qualities can leave the reader without a concrete property.",
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories."
+    },
+    {
+      "rule_id": "structure.challenges-future-formula",
+      "guidance_id": "structure.challenges-future-formula",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 316,
+        "column": 1,
+        "end_line": 316,
+        "end_column": 186,
+        "source_ranges": [
+          {
+            "start": 16870,
+            "end": 16887
+          },
+          {
+            "start": 16889,
+            "end": 16899
+          },
+          {
+            "start": 16901,
+            "end": 17059
+          }
+        ]
+      },
+      "matched_text": "Looking ahead to Patriot 26, we’re excited to build on what we’ve learned, strengthen interagency cooperation, and continue preparing to serve our communities when disaster strikes.",
+      "sentence": "Looking ahead to Patriot 26, we’re excited to build on what we’ve learned, strengthen interagency cooperation, and continue preparing to serve our communities when disaster strikes.",
+      "context": null,
+      "suggestion": "Use a heading or transition specific to the actual next point.",
+      "message": null,
+      "why": "A generic transition can conceal what the next section actually covers.",
+      "fix": "Use the specific next point if the supplied material supports it.",
+      "keep_when": "Keep literal discussion of future challenges or venue-required headings."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 46,
+        "column": 1,
+        "end_line": 46,
+        "end_column": 18,
+        "source_ranges": [
+          {
+            "start": 2989,
+            "end": 3006
+          }
+        ]
+      },
+      "matched_text": "Search and Rescue",
+      "sentence": "Search and Rescue",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 140,
+        "column": 1,
+        "end_line": 140,
+        "end_column": 24,
+        "source_ranges": [
+          {
+            "start": 8106,
+            "end": 8129
+          }
+        ]
+      },
+      "matched_text": "Searching for survivors",
+      "sentence": "Searching for survivors",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 172,
+        "column": 1,
+        "end_line": 172,
+        "end_column": 15,
+        "source_ranges": [
+          {
+            "start": 10138,
+            "end": 10152
+          }
+        ]
+      },
+      "matched_text": "Derailed plans",
+      "sentence": "Derailed plans",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 200,
+        "column": 1,
+        "end_line": 200,
+        "end_column": 16,
+        "source_ranges": [
+          {
+            "start": 11445,
+            "end": 11460
+          }
+        ]
+      },
+      "matched_text": "The great flood",
+      "sentence": "The great flood",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 228,
+        "column": 1,
+        "end_line": 228,
+        "end_column": 17,
+        "source_ranges": [
+          {
+            "start": 12618,
+            "end": 12634
+          }
+        ]
+      },
+      "matched_text": "Clearing the way",
+      "sentence": "Clearing the way",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 276,
+        "column": 1,
+        "end_line": 276,
+        "end_column": 5,
+        "source_ranges": [
+          {
+            "start": 14628,
+            "end": 14632
+          }
+        ]
+      },
+      "matched_text": "U.S.",
+      "sentence": "U.S.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 326,
+        "column": 1,
+        "end_line": 326,
+        "end_column": 15,
+        "source_ranges": [
+          {
+            "start": 17324,
+            "end": 17338
+          }
+        ]
+      },
+      "matched_text": "Ready to serve",
+      "sentence": "Ready to serve",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "seamless",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 36,
+        "column": 140,
+        "end_line": 36,
+        "end_column": 148,
+        "source_ranges": [
+          {
+            "start": 2501,
+            "end": 2509
+          }
+        ]
+      },
+      "matched_text": "seamless",
+      "sentence": "The facilities were outstanding, the coordination among agencies was seamless, and, of course, the food was some of the best I’ve had during DOMestic OPerations (DOMOPs) training!",
+      "context": null,
+      "suggestion": "smooth",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    },
+    {
+      "rule_id": "emphasize",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 52,
+        "column": 218,
+        "end_line": 52,
+        "end_column": 229,
+        "source_ranges": [
+          {
+            "start": 3961,
+            "end": 3972
+          }
+        ]
+      },
+      "matched_text": "emphasizing",
+      "sentence": "This training reinforced critical decision-making skills, emphasizing safety, coordination, and efficiency in high-risk urban search and rescue operations.",
+      "context": null,
+      "suggestion": "stress",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    },
+    {
+      "rule_id": "emphasize",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 174,
+        "column": 413,
+        "end_line": 174,
+        "end_column": 424,
+        "source_ranges": [
+          {
+            "start": 10566,
+            "end": 10577
+          }
+        ]
+      },
+      "matched_text": "emphasizing",
+      "sentence": "This hands-on training provided a realistic experience in urban disaster response, emphasizing teamwork and communication in a complex, underground environment.",
+      "context": null,
+      "suggestion": "stress",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "fail",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "fail",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 13,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

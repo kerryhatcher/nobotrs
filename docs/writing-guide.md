@@ -1,5 +1,7 @@
 # Writing guide
 
+The canonical drafting and revision instructions are in the [reader-first brief](../guidance/brief.md), embedded by `nobotrs guide`.
+
 Write for the reader's purpose. Use concrete nouns and direct verbs, and retain the writer's voice.
 
 Treat lint findings as editing prompts. A phrase in the dictionary can be appropriate in context. Avoid replacing every match mechanically.

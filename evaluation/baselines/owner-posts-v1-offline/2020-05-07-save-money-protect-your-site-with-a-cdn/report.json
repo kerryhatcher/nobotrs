@@ -1,0 +1,1458 @@
+{
+  "actionable_finding_count": 1,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [
+            {
+              "block_context": 42,
+              "column": 107,
+              "disposition": "selected",
+              "end_column": 115,
+              "end_line": 120,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 120,
+              "matched_text": "leverage",
+              "prose_offset": {
+                "end": 9249,
+                "start": 9241
+              },
+              "raw_offset": {
+                "end": 11756,
+                "start": 11748
+              },
+              "rule_id": "leverage",
+              "sentence_context": 103,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 11756,
+                  "start": 11748
+                }
+              ],
+              "suggestion": "use",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 42,
+              "column": 107,
+              "disposition": "selected",
+              "end_column": 115,
+              "end_line": 120,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 120,
+              "matched_text": "leverage",
+              "prose_offset": {
+                "end": 9249,
+                "start": 9241
+              },
+              "raw_offset": {
+                "end": 11756,
+                "start": 11748
+              },
+              "rule_id": "leverage",
+              "sentence_context": 103,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 11756,
+                  "start": 11748
+                }
+              ],
+              "suggestion": "use",
+              "suppression": null
+            }
+          ],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 1.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 1800.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.5435571000250612
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 101.13585371202444
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 8.151944936086533
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.573320255026974
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.536861354932157
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1495,
+        "start": 1090
+      }
+    ],
+    [
+      {
+        "end": 1677,
+        "start": 1497
+      }
+    ],
+    [
+      {
+        "end": 1718,
+        "start": 1683
+      }
+    ],
+    [
+      {
+        "end": 1728,
+        "start": 1722
+      },
+      {
+        "end": 1947,
+        "start": 1730
+      }
+    ],
+    [
+      {
+        "end": 1954,
+        "start": 1951
+      },
+      {
+        "end": 2173,
+        "start": 1956
+      }
+    ],
+    [
+      {
+        "end": 2187,
+        "start": 2177
+      },
+      {
+        "end": 2401,
+        "start": 2189
+      }
+    ],
+    [
+      {
+        "end": 2435,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2481,
+        "start": 2442
+      },
+      {
+        "end": 2485,
+        "start": 2482
+      },
+      {
+        "end": 3007,
+        "start": 2563
+      }
+    ],
+    [
+      {
+        "end": 3051,
+        "start": 3014
+      }
+    ],
+    [
+      {
+        "end": 3620,
+        "start": 3053
+      }
+    ],
+    [
+      {
+        "end": 3871,
+        "start": 3826
+      }
+    ],
+    [
+      {
+        "end": 3913,
+        "start": 3873
+      },
+      {
+        "end": 3938,
+        "start": 3914
+      },
+      {
+        "end": 4277,
+        "start": 4014
+      },
+      {
+        "end": 4286,
+        "start": 4278
+      },
+      {
+        "end": 4396,
+        "start": 4361
+      },
+      {
+        "end": 4419,
+        "start": 4397
+      },
+      {
+        "end": 4536,
+        "start": 4511
+      }
+    ],
+    [
+      {
+        "end": 4619,
+        "start": 4538
+      }
+    ],
+    [
+      {
+        "end": 5064,
+        "start": 4621
+      }
+    ],
+    [
+      {
+        "end": 5483,
+        "start": 5066
+      }
+    ],
+    [
+      {
+        "end": 5720,
+        "start": 5485
+      }
+    ],
+    [
+      {
+        "end": 5764,
+        "start": 5727
+      }
+    ],
+    [
+      {
+        "end": 6055,
+        "start": 5766
+      },
+      {
+        "end": 6075,
+        "start": 6056
+      },
+      {
+        "end": 6185,
+        "start": 6138
+      }
+    ],
+    [
+      {
+        "end": 6709,
+        "start": 6187
+      }
+    ],
+    [
+      {
+        "end": 6915,
+        "start": 6711
+      }
+    ],
+    [
+      {
+        "end": 6935,
+        "start": 6925
+      }
+    ],
+    [
+      {
+        "end": 7237,
+        "start": 6955
+      }
+    ],
+    [
+      {
+        "end": 7560,
+        "start": 7239
+      }
+    ],
+    [
+      {
+        "end": 7578,
+        "start": 7564
+      },
+      {
+        "end": 7827,
+        "start": 7580
+      }
+    ],
+    [
+      {
+        "end": 7907,
+        "start": 7834
+      }
+    ],
+    [
+      {
+        "end": 8054,
+        "start": 7909
+      },
+      {
+        "end": 8065,
+        "start": 8055
+      },
+      {
+        "end": 8308,
+        "start": 8186
+      }
+    ],
+    [
+      {
+        "end": 8874,
+        "start": 8310
+      }
+    ],
+    [
+      {
+        "end": 8891,
+        "start": 8884
+      }
+    ],
+    [
+      {
+        "end": 9046,
+        "start": 9013
+      }
+    ],
+    [
+      {
+        "end": 9322,
+        "start": 9048
+      }
+    ],
+    [
+      {
+        "end": 9524,
+        "start": 9324
+      }
+    ],
+    [
+      {
+        "end": 9560,
+        "start": 9527
+      }
+    ],
+    [
+      {
+        "end": 9717,
+        "start": 9629
+      }
+    ],
+    [
+      {
+        "end": 9837,
+        "start": 9831
+      }
+    ],
+    [
+      {
+        "end": 10191,
+        "start": 9839
+      }
+    ],
+    [
+      {
+        "end": 10421,
+        "start": 10193
+      }
+    ],
+    [
+      {
+        "end": 10674,
+        "start": 10423
+      },
+      {
+        "end": 10679,
+        "start": 10675
+      },
+      {
+        "end": 10818,
+        "start": 10766
+      }
+    ],
+    [
+      {
+        "end": 10926,
+        "start": 10820
+      }
+    ],
+    [
+      {
+        "end": 10984,
+        "start": 10928
+      }
+    ],
+    [
+      {
+        "end": 11056,
+        "start": 10988
+      }
+    ],
+    [
+      {
+        "end": 11179,
+        "start": 11169
+      }
+    ],
+    [
+      {
+        "end": 11243,
+        "start": 11181
+      },
+      {
+        "end": 11261,
+        "start": 11244
+      },
+      {
+        "end": 11640,
+        "start": 11337
+      }
+    ],
+    [
+      {
+        "end": 11882,
+        "start": 11642
+      }
+    ],
+    [
+      {
+        "end": 12126,
+        "start": 11884
+      },
+      {
+        "end": 12139,
+        "start": 12127
+      },
+      {
+        "end": 12191,
+        "start": 12187
+      },
+      {
+        "end": 12195,
+        "start": 12192
+      },
+      {
+        "end": 12327,
+        "start": 12262
+      }
+    ],
+    [
+      {
+        "end": 12746,
+        "start": 12329
+      }
+    ],
+    [
+      {
+        "end": 12822,
+        "start": 12749
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 1,
+  "emitted_candidates": 1,
+  "emitted_findings": 1,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+  "prose_words": 1800,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1225,
+        "start": 1090
+      }
+    ],
+    [
+      {
+        "end": 1314,
+        "start": 1225
+      }
+    ],
+    [
+      {
+        "end": 1475,
+        "start": 1314
+      }
+    ],
+    [
+      {
+        "end": 1495,
+        "start": 1475
+      }
+    ],
+    [
+      {
+        "end": 1626,
+        "start": 1497
+      }
+    ],
+    [
+      {
+        "end": 1677,
+        "start": 1626
+      }
+    ],
+    [
+      {
+        "end": 1718,
+        "start": 1683
+      }
+    ],
+    [
+      {
+        "end": 1728,
+        "start": 1722
+      },
+      {
+        "end": 1812,
+        "start": 1730
+      }
+    ],
+    [
+      {
+        "end": 1892,
+        "start": 1812
+      }
+    ],
+    [
+      {
+        "end": 1947,
+        "start": 1892
+      }
+    ],
+    [
+      {
+        "end": 1954,
+        "start": 1951
+      },
+      {
+        "end": 2038,
+        "start": 1956
+      }
+    ],
+    [
+      {
+        "end": 2118,
+        "start": 2038
+      }
+    ],
+    [
+      {
+        "end": 2173,
+        "start": 2118
+      }
+    ],
+    [
+      {
+        "end": 2187,
+        "start": 2177
+      },
+      {
+        "end": 2234,
+        "start": 2189
+      }
+    ],
+    [
+      {
+        "end": 2266,
+        "start": 2234
+      }
+    ],
+    [
+      {
+        "end": 2355,
+        "start": 2266
+      }
+    ],
+    [
+      {
+        "end": 2401,
+        "start": 2355
+      }
+    ],
+    [
+      {
+        "end": 2435,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2481,
+        "start": 2442
+      },
+      {
+        "end": 2485,
+        "start": 2482
+      },
+      {
+        "end": 2680,
+        "start": 2563
+      }
+    ],
+    [
+      {
+        "end": 2804,
+        "start": 2680
+      }
+    ],
+    [
+      {
+        "end": 2859,
+        "start": 2804
+      }
+    ],
+    [
+      {
+        "end": 3007,
+        "start": 2859
+      }
+    ],
+    [
+      {
+        "end": 3051,
+        "start": 3014
+      }
+    ],
+    [
+      {
+        "end": 3132,
+        "start": 3053
+      }
+    ],
+    [
+      {
+        "end": 3380,
+        "start": 3132
+      }
+    ],
+    [
+      {
+        "end": 3556,
+        "start": 3380
+      }
+    ],
+    [
+      {
+        "end": 3620,
+        "start": 3556
+      }
+    ],
+    [
+      {
+        "end": 3871,
+        "start": 3826
+      }
+    ],
+    [
+      {
+        "end": 3913,
+        "start": 3873
+      },
+      {
+        "end": 3938,
+        "start": 3914
+      },
+      {
+        "end": 4053,
+        "start": 4014
+      }
+    ],
+    [
+      {
+        "end": 4126,
+        "start": 4053
+      }
+    ],
+    [
+      {
+        "end": 4200,
+        "start": 4126
+      }
+    ],
+    [
+      {
+        "end": 4277,
+        "start": 4200
+      },
+      {
+        "end": 4286,
+        "start": 4278
+      },
+      {
+        "end": 4396,
+        "start": 4361
+      },
+      {
+        "end": 4419,
+        "start": 4397
+      },
+      {
+        "end": 4536,
+        "start": 4511
+      }
+    ],
+    [
+      {
+        "end": 4619,
+        "start": 4538
+      }
+    ],
+    [
+      {
+        "end": 4686,
+        "start": 4621
+      }
+    ],
+    [
+      {
+        "end": 4788,
+        "start": 4686
+      }
+    ],
+    [
+      {
+        "end": 4838,
+        "start": 4788
+      }
+    ],
+    [
+      {
+        "end": 5064,
+        "start": 4838
+      }
+    ],
+    [
+      {
+        "end": 5186,
+        "start": 5066
+      }
+    ],
+    [
+      {
+        "end": 5375,
+        "start": 5186
+      }
+    ],
+    [
+      {
+        "end": 5483,
+        "start": 5375
+      }
+    ],
+    [
+      {
+        "end": 5598,
+        "start": 5485
+      }
+    ],
+    [
+      {
+        "end": 5720,
+        "start": 5598
+      }
+    ],
+    [
+      {
+        "end": 5764,
+        "start": 5727
+      }
+    ],
+    [
+      {
+        "end": 5894,
+        "start": 5766
+      }
+    ],
+    [
+      {
+        "end": 6037,
+        "start": 5894
+      }
+    ],
+    [
+      {
+        "end": 6055,
+        "start": 6037
+      },
+      {
+        "end": 6075,
+        "start": 6056
+      },
+      {
+        "end": 6185,
+        "start": 6138
+      }
+    ],
+    [
+      {
+        "end": 6272,
+        "start": 6187
+      }
+    ],
+    [
+      {
+        "end": 6377,
+        "start": 6272
+      }
+    ],
+    [
+      {
+        "end": 6532,
+        "start": 6377
+      }
+    ],
+    [
+      {
+        "end": 6637,
+        "start": 6532
+      }
+    ],
+    [
+      {
+        "end": 6709,
+        "start": 6637
+      }
+    ],
+    [
+      {
+        "end": 6791,
+        "start": 6711
+      }
+    ],
+    [
+      {
+        "end": 6898,
+        "start": 6791
+      }
+    ],
+    [
+      {
+        "end": 6915,
+        "start": 6898
+      }
+    ],
+    [
+      {
+        "end": 6935,
+        "start": 6925
+      }
+    ],
+    [
+      {
+        "end": 7064,
+        "start": 6956
+      }
+    ],
+    [
+      {
+        "end": 7237,
+        "start": 7064
+      }
+    ],
+    [
+      {
+        "end": 7420,
+        "start": 7239
+      }
+    ],
+    [
+      {
+        "end": 7560,
+        "start": 7420
+      }
+    ],
+    [
+      {
+        "end": 7578,
+        "start": 7564
+      },
+      {
+        "end": 7676,
+        "start": 7580
+      }
+    ],
+    [
+      {
+        "end": 7749,
+        "start": 7676
+      }
+    ],
+    [
+      {
+        "end": 7827,
+        "start": 7749
+      }
+    ],
+    [
+      {
+        "end": 7907,
+        "start": 7834
+      }
+    ],
+    [
+      {
+        "end": 7917,
+        "start": 7909
+      }
+    ],
+    [
+      {
+        "end": 7939,
+        "start": 7917
+      }
+    ],
+    [
+      {
+        "end": 8053,
+        "start": 7939
+      }
+    ],
+    [
+      {
+        "end": 8054,
+        "start": 8053
+      },
+      {
+        "end": 8065,
+        "start": 8055
+      },
+      {
+        "end": 8308,
+        "start": 8186
+      }
+    ],
+    [
+      {
+        "end": 8370,
+        "start": 8310
+      }
+    ],
+    [
+      {
+        "end": 8504,
+        "start": 8370
+      }
+    ],
+    [
+      {
+        "end": 8664,
+        "start": 8504
+      }
+    ],
+    [
+      {
+        "end": 8800,
+        "start": 8664
+      }
+    ],
+    [
+      {
+        "end": 8874,
+        "start": 8800
+      }
+    ],
+    [
+      {
+        "end": 8891,
+        "start": 8884
+      }
+    ],
+    [
+      {
+        "end": 9046,
+        "start": 9013
+      }
+    ],
+    [
+      {
+        "end": 9135,
+        "start": 9048
+      }
+    ],
+    [
+      {
+        "end": 9264,
+        "start": 9135
+      }
+    ],
+    [
+      {
+        "end": 9322,
+        "start": 9264
+      }
+    ],
+    [
+      {
+        "end": 9380,
+        "start": 9324
+      }
+    ],
+    [
+      {
+        "end": 9431,
+        "start": 9380
+      }
+    ],
+    [
+      {
+        "end": 9524,
+        "start": 9431
+      }
+    ],
+    [
+      {
+        "end": 9560,
+        "start": 9527
+      }
+    ],
+    [
+      {
+        "end": 9717,
+        "start": 9629
+      }
+    ],
+    [
+      {
+        "end": 9837,
+        "start": 9831
+      }
+    ],
+    [
+      {
+        "end": 9883,
+        "start": 9839
+      }
+    ],
+    [
+      {
+        "end": 9956,
+        "start": 9883
+      }
+    ],
+    [
+      {
+        "end": 10067,
+        "start": 9956
+      }
+    ],
+    [
+      {
+        "end": 10191,
+        "start": 10067
+      }
+    ],
+    [
+      {
+        "end": 10340,
+        "start": 10193
+      }
+    ],
+    [
+      {
+        "end": 10421,
+        "start": 10340
+      }
+    ],
+    [
+      {
+        "end": 10477,
+        "start": 10423
+      }
+    ],
+    [
+      {
+        "end": 10558,
+        "start": 10477
+      }
+    ],
+    [
+      {
+        "end": 10640,
+        "start": 10558
+      }
+    ],
+    [
+      {
+        "end": 10674,
+        "start": 10640
+      },
+      {
+        "end": 10679,
+        "start": 10675
+      },
+      {
+        "end": 10818,
+        "start": 10766
+      }
+    ],
+    [
+      {
+        "end": 10926,
+        "start": 10820
+      }
+    ],
+    [
+      {
+        "end": 10958,
+        "start": 10928
+      }
+    ],
+    [
+      {
+        "end": 10984,
+        "start": 10958
+      }
+    ],
+    [
+      {
+        "end": 11056,
+        "start": 10988
+      }
+    ],
+    [
+      {
+        "end": 11179,
+        "start": 11169
+      }
+    ],
+    [
+      {
+        "end": 11243,
+        "start": 11181
+      },
+      {
+        "end": 11261,
+        "start": 11244
+      },
+      {
+        "end": 11338,
+        "start": 11337
+      }
+    ],
+    [
+      {
+        "end": 11383,
+        "start": 11338
+      }
+    ],
+    [
+      {
+        "end": 11522,
+        "start": 11383
+      }
+    ],
+    [
+      {
+        "end": 11640,
+        "start": 11522
+      }
+    ],
+    [
+      {
+        "end": 11688,
+        "start": 11642
+      }
+    ],
+    [
+      {
+        "end": 11836,
+        "start": 11688
+      }
+    ],
+    [
+      {
+        "end": 11882,
+        "start": 11836
+      }
+    ],
+    [
+      {
+        "end": 11987,
+        "start": 11884
+      }
+    ],
+    [
+      {
+        "end": 12055,
+        "start": 11987
+      }
+    ],
+    [
+      {
+        "end": 12126,
+        "start": 12055
+      },
+      {
+        "end": 12139,
+        "start": 12127
+      },
+      {
+        "end": 12191,
+        "start": 12187
+      },
+      {
+        "end": 12195,
+        "start": 12192
+      },
+      {
+        "end": 12327,
+        "start": 12262
+      }
+    ],
+    [
+      {
+        "end": 12399,
+        "start": 12329
+      }
+    ],
+    [
+      {
+        "end": 12542,
+        "start": 12399
+      }
+    ],
+    [
+      {
+        "end": 12626,
+        "start": 12542
+      }
+    ],
+    [
+      {
+        "end": 12746,
+        "start": 12626
+      }
+    ],
+    [
+      {
+        "end": 12822,
+        "start": 12749
+      }
+    ]
+  ],
+  "sentence_count": 113,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

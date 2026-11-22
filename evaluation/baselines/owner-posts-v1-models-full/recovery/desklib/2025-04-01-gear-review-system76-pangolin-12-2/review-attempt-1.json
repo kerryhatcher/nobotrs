@@ -1,0 +1,203 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "unknown"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "unknown"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "unknown"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "unknown"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": "analysis deadline exceeded",
+      "status": "incomplete"
+    },
+    {
+      "backend": "desklib",
+      "reason": "analysis deadline exceeded",
+      "status": "incomplete"
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 5,
+        "end_column": 13,
+        "end_line": 41,
+        "line": 41,
+        "source_ranges": [
+          {
+            "end": 2576,
+            "start": 2568
+          }
+        ]
+      },
+      "matched_text": "Seamless",
+      "message": null,
+      "rule_id": "seamless",
+      "sentence": "Seamless Linux Integration: System76 ensures that Linux runs flawlessly out of the box.",
+      "severity": "medium",
+      "suggestion": "smooth",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [
+          {
+            "end": 255,
+            "start": 0
+          },
+          {
+            "end": 1542,
+            "start": 255
+          },
+          {
+            "end": 2313,
+            "start": 1542
+          },
+          {
+            "end": 2722,
+            "start": 2313
+          },
+          {
+            "end": 4512,
+            "start": 2722
+          },
+          {
+            "end": 4843,
+            "start": 4512
+          }
+        ],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 0.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": "need at least two distinct eligible windows in a complete model run",
+    "validated": false
+  },
+  "incomplete_reasons": [
+    "analysis deadline exceeded",
+    "analysis deadline exceeded"
+  ],
+  "leverage_counts": {
+    "5": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-04-01-gear-review-system76-pangolin-12-2.md",
+  "prose_words": 746,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 1
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": "owner-model-measurement-status-v1",
+  "finished": false,
+  "original_records_immutable": true,
+  "original_processed_documents": 10,
+  "recovery_model": "desklib",
+  "recovery_resolved_documents": 26,
+  "recovery_status_counts": {
+    "incomplete": 1,
+    "scored_full": 24,
+    "skipped": 1
+  },
+  "uncheckpointed_active_document": "2025-05-14-the-road-ahead-2.md",
+  "known_incomplete": {
+    "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+    "model": "desklib",
+    "status": "incomplete",
+    "token_coverage": 0.0,
+    "window_statuses": [
+      "timed_out",
+      "not_run",
+      "not_run",
+      "not_run",
+      "not_run",
+      "not_run"
+    ]
+  },
+  "recovery_decision": "Wait with no model allocated for stable memory PSI/load and RAM headroom; resume unprocessed documents before retrying incomplete attempts. Native startup8GiB, DS startup15GiB (observed10.6GiB worker RSS plus4GiB nearly-full-swap headroom), per-document floor4GiB. Same CPU float32/full model configuration; runtime threads2.",
+  "validated_editorial_utility": false,
+  "joint_rankings_computed": false
+}

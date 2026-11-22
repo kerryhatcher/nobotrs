@@ -1,3 +1,8 @@
+mod compare;
+mod copyedit;
+mod facts;
+mod invariants;
+mod sections;
 use clap::{Parser, Subcommand, ValueEnum};
 use nobotrs::{
     config::{Overrides, ResolvedConfig},
@@ -36,6 +41,17 @@ pub struct Cli {
     /// Directory containing the pinned model artifacts described by models/*.json.
     #[arg(long, global = true)]
     models_dir: Option<PathBuf>,
+    /// Optional local model coverage; full adds section diagnostics under the same deadline.
+    #[arg(long, global = true, value_enum)]
+    model_coverage: Option<nobotrs::config::ModelCoverage>,
+    /// Opt-in: also send the text to GPTZero for an informational comparison (needs GPTZERO_API_KEY).
+    /// Sends your text to a third party. Supported by `detect` and `analyze` only.
+    #[arg(long, global = true)]
+    gptzero: bool,
+    /// Opt-in: ask an OpenRouter model to judge AI vs human, using the AI writing guide as reference.
+    /// Sends your text to a third party. Needs OPENROUTER_API_KEY. Supported by `detect` and `analyze`.
+    #[arg(long, global = true)]
+    openrouter_judge: bool,
     #[arg(long, global = true)]
     quorum: Option<usize>,
     #[arg(long, global = true, value_enum)]
@@ -56,6 +72,19 @@ pub struct Cli {
 }
 #[derive(Subcommand)]
 pub enum Command {
+    /// Compare editing findings and source-sensitive facts in two drafts.
+    Compare {
+        before: String,
+        after: String,
+        /// Accept an intentional removal, specified as KIND=EXACT_TEXT.
+        #[arg(long)]
+        accept_missing: Vec<String>,
+    },
+    /// Compare labelled quantities and dates in explicit project sources.
+    Facts {
+        #[command(subcommand)]
+        command: FactsCommand,
+    },
     /// Analyze a file or stdin (-) using a quorum of independent heuristic families.
     Detect { path: String },
     /// Report individual editing findings, independent of detection quorum.
@@ -63,6 +92,8 @@ pub enum Command {
         #[arg(required = true)]
         paths: Vec<String>,
     },
+    /// Give an advisory offline editorial review, ordered by leverage.
+    Review { path: String },
     /// Report raw metrics and backend outcomes for a file or stdin (-).
     Analyze { path: String },
     /// Batch detection of .txt, .md and .markdown files, in deterministic path order.
@@ -73,6 +104,27 @@ pub enum Command {
     Guide,
     /// Print the full AI writing field guide.
     AiWritingGuide,
+    /// Check grammar, spelling, style and readability for copyediting.
+    Copyedit {
+        #[arg(required = true)]
+        paths: Vec<String>,
+        /// Dialect for variant spelling rules: american (default) or british.
+        #[arg(long, default_value = "american")]
+        dialect: String,
+        /// A word to allow (never flag). Repeatable.
+        #[arg(long)]
+        allow_word: Vec<String>,
+    },
+}
+#[derive(Subcommand)]
+pub enum FactsCommand {
+    /// Compare one or more files. A reference establishes expected claims.
+    Check {
+        #[arg(required = true)]
+        paths: Vec<String>,
+        #[arg(long)]
+        reference: Option<String>,
+    },
 }
 pub fn run(cli: Cli) -> Result<i32, String> {
     if matches!(cli.command, Command::AiWritingGuide) {
@@ -89,7 +141,7 @@ pub fn run(cli: Cli) -> Result<i32, String> {
         }
         return Ok(0);
     }
-    let resolved = ResolvedConfig::load(
+    let mut resolved = ResolvedConfig::load(
         cli.config,
         Overrides {
             minimum_severity: cli.minimum_severity,
@@ -105,6 +157,14 @@ pub fn run(cli: Cli) -> Result<i32, String> {
                 Some(cli.models)
             },
             models_dir: cli.models_dir,
+            model_coverage: cli.model_coverage,
+            gptzero: if cli.gptzero { Some(true) } else { None },
+            openrouter_judge: if cli.openrouter_judge {
+                Some(true)
+            } else {
+                None
+            },
+            openrouter_strict_privacy: None,
             ignore_rules: if cli.ignore_rule.is_empty() {
                 None
             } else {
@@ -121,14 +181,141 @@ pub fn run(cli: Cli) -> Result<i32, String> {
     }
     if matches!(cli.command, Command::Guide) {
         match cli.format {
-            Format::Human=>emit(include_str!("../../docs/writing-guide.md"))?,
-            Format::Json=>emit(&serde_json::json!({"schema_version":"1.0.0","guide":include_str!("../../docs/writing-guide.md")}).to_string())?,
-            Format::Sarif=>return Err("guide does not produce SARIF".into()),
+            Format::Human => emit(&nobotrs::guidance::Guidance::embedded().brief)?,
+            Format::Json => {
+                let mut value = serde_json::to_value(nobotrs::guidance::Guidance::embedded())
+                    .map_err(|e| e.to_string())?;
+                value["guide"] = serde_json::json!(include_str!("../../docs/writing-guide.md"));
+                emit(&serde_json::to_string_pretty(&value).map_err(|e| e.to_string())?)?;
+            }
+            Format::Sarif => return Err("guide does not produce SARIF".into()),
         }
         return Ok(0);
     }
+    let single_input = matches!(
+        cli.command,
+        Command::Detect { .. } | Command::Analyze { .. }
+    );
+    if resolved.settings.gptzero {
+        if !single_input {
+            return Err("--gptzero is supported by detect and analyze only".into());
+        }
+        if !cfg!(feature = "api-clients") {
+            return Err(
+                "this build has no GPTZero support; rebuild with --features api-clients".into(),
+            );
+        }
+    }
+    if resolved.settings.openrouter_judge {
+        if !single_input {
+            return Err("--openrouter-judge is supported by detect and analyze only".into());
+        }
+        if !cfg!(feature = "api-clients") {
+            return Err(
+                "this build has no OpenRouter support; rebuild with --features api-clients".into(),
+            );
+        }
+    }
+    if let Command::Facts {
+        command: FactsCommand::Check { paths, reference },
+    } = &cli.command
+    {
+        return facts::check(
+            paths,
+            reference.as_deref(),
+            cli.format,
+            &resolved.settings,
+            cli.markdown,
+        );
+    }
+    if let Command::Review { path } = &cli.command {
+        if matches!(cli.format, Format::Sarif) {
+            return Err("review does not produce SARIF".into());
+        }
+        if resolved
+            .origins
+            .get("minimum_severity")
+            .is_some_and(|o| o == "default")
+        {
+            resolved.settings.minimum_severity = nobotrs::score::Severity::Low;
+        }
+        if !resolved.settings.models.is_empty()
+            && resolved
+                .origins
+                .get("model_coverage")
+                .is_some_and(|o| o == "default")
+        {
+            resolved.settings.model_coverage = nobotrs::config::ModelCoverage::Full;
+        }
+        let input = load(path, resolved.settings.max_bytes)?;
+        let mut report = engine.review(
+            input.text,
+            cli.markdown || nobotrs::document::Document::is_markdown(Path::new(path)),
+            path,
+            &resolved.settings,
+        )?;
+        if input.truncated {
+            report.mark_input_truncated();
+        }
+        match cli.format {
+            Format::Json => {
+                emit(&serde_json::to_string_pretty(&report).map_err(|e| e.to_string())?)?
+            }
+            Format::Human => emit(&nobotrs::review::human(&report))?,
+            Format::Sarif => unreachable!(),
+        }
+        return Ok(if report.complete { 0 } else { 2 });
+    }
+    if let Command::Compare {
+        before,
+        after,
+        accept_missing,
+    } = &cli.command
+    {
+        if resolved
+            .origins
+            .get("minimum_severity")
+            .is_some_and(|o| o == "default")
+        {
+            resolved.settings.minimum_severity = nobotrs::score::Severity::Low;
+        }
+        if !resolved.settings.models.is_empty()
+            && resolved
+                .origins
+                .get("model_coverage")
+                .is_some_and(|o| o == "default")
+        {
+            resolved.settings.model_coverage = nobotrs::config::ModelCoverage::Full;
+        }
+        return compare::run(
+            before,
+            after,
+            accept_missing,
+            cli.format,
+            &resolved.settings,
+            cli.markdown,
+            &engine,
+        );
+    }
     // Retain the registry across inputs so analysis can reuse loaded models.
     let models = nobotrs::models::ModelRegistry::resolve(&resolved.settings)?;
+    if let Command::Copyedit {
+        paths,
+        dialect,
+        allow_word,
+    } = &cli.command
+    {
+        return copyedit::run(
+            paths,
+            dialect.as_str(),
+            allow_word.as_slice(),
+            cli.format,
+            &resolved.settings,
+            cli.markdown,
+            &engine,
+            &models,
+        );
+    }
     let scan = matches!(cli.command, Command::Scan { .. });
     let lint = matches!(cli.command, Command::Lint { .. });
     let mut reports = vec![];
@@ -136,6 +323,8 @@ pub fn run(cli: Cli) -> Result<i32, String> {
     match cli.command {
         Command::Detect { path } | Command::Analyze { path } => {
             match load(&path, resolved.settings.max_bytes).and_then(|input| {
+                let side_text = (resolved.settings.gptzero || resolved.settings.openrouter_judge)
+                    .then(|| input.text.clone());
                 let mut report = engine.analyze_with_models(
                     input.text,
                     cli.markdown || nobotrs::document::Document::is_markdown(Path::new(&path)),
@@ -145,6 +334,24 @@ pub fn run(cli: Cli) -> Result<i32, String> {
                 )?;
                 if input.truncated {
                     report.mark_input_truncated();
+                }
+                if let Some(text) = side_text {
+                    if resolved.settings.gptzero {
+                        let key = std::env::var("GPTZERO_API_KEY").ok();
+                        report.external = Some(nobotrs::external::gptzero::compare(
+                            &resolved.settings,
+                            &text,
+                            key.as_deref(),
+                        ));
+                    }
+                    if resolved.settings.openrouter_judge {
+                        let key = std::env::var("OPENROUTER_API_KEY").ok();
+                        report.openrouter = Some(nobotrs::external::openrouter::judge(
+                            &resolved.settings,
+                            &text,
+                            key.as_deref(),
+                        ));
+                    }
                 }
                 Ok(report)
             }) {
@@ -229,7 +436,13 @@ pub fn run(cli: Cli) -> Result<i32, String> {
                 }
             }
         }
-        Command::Config | Command::Guide | Command::AiWritingGuide => unreachable!(),
+        Command::Review { .. }
+        | Command::Compare { .. }
+        | Command::Copyedit { .. }
+        | Command::Facts { .. }
+        | Command::Config
+        | Command::Guide
+        | Command::AiWritingGuide => unreachable!(),
     }
     let code = if !errors.is_empty() {
         2

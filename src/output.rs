@@ -48,6 +48,9 @@ pub fn human(report: &Report) -> String {
                         m.prepared_words,
                         m.elapsed_ms
                     ));
+                    if let Some(coverage) = m.token_coverage {
+                        out.push_str(&format!("  {}: full diagnostics, {} windows, {:.4} token coverage, aggregate {:?}, {} gap ranges\n", b.backend, m.windows.len(), coverage, m.full_coverage_output, m.coverage_gaps.len()));
+                    }
                     if let Some(ds) = &m.detectorscope {
                         out.push_str(&format!(
                             "  {}: DetectorScope bias {:.6}, residual {:.3e}, {} active features, omitted {}, remainder {:.6}, filter {:.2}, formatting {}\n",
@@ -103,6 +106,96 @@ pub fn human(report: &Report) -> String {
     for reason in &report.incomplete_reasons {
         out.push_str(&format!("  incomplete: {reason}\n"));
     }
+    if let Some(external) = &report.external {
+        out.push_str(&external_section(external));
+    }
+    if let Some(judge) = &report.openrouter {
+        out.push_str(&judge_section(judge));
+    }
+    out
+}
+
+fn status_word(status: crate::external::ExternalStatus) -> &'static str {
+    use crate::external::ExternalStatus;
+    match status {
+        ExternalStatus::Ok => "ok",
+        ExternalStatus::Skipped => "skipped",
+        ExternalStatus::Failed => "failed",
+    }
+}
+
+/// Rendered separately from the verdict: the LLM judgment is informational, not a decision.
+fn judge_section(judge: &crate::external::openrouter::JudgeReport) -> String {
+    let mut out = String::from("OpenRouter judgment (informational; not part of the verdict)\n");
+    match &judge.verdict {
+        Some(v) => {
+            let confidence = v
+                .confidence
+                .map(|c| format!("{c}/100"))
+                .unwrap_or_else(|| "not stated".into());
+            out.push_str(&format!(
+                "  verdict: {} (confidence {confidence})\n",
+                v.label
+            ));
+        }
+        None => out.push_str(&format!(
+            "  {}: {}\n",
+            status_word(judge.status),
+            judge.reason.as_deref().unwrap_or("no detail")
+        )),
+    }
+    out.push_str(&format!(
+        "  model: {} ({})\n",
+        judge.model,
+        if judge.strict_privacy {
+            "zero-retention routing"
+        } else {
+            "routing without privacy restrictions"
+        }
+    ));
+    out.push_str(&format!(
+        "  sent to OpenRouter: {} ({} characters)\n",
+        if judge.sent { "yes" } else { "no" },
+        judge.input_characters
+    ));
+    out
+}
+
+/// Rendered separately from the verdict: GPTZero output is comparison evidence, not a decision.
+fn external_section(external: &crate::external::gptzero::ExternalReport) -> String {
+    use crate::external::ExternalStatus;
+    let mut out = String::from("GPTZero comparison (informational; not part of the verdict)\n");
+    match (&external.status, &external.verdict) {
+        (ExternalStatus::Ok, Some(v)) => {
+            out.push_str(&format!(
+                "  predicted: {} (confidence {}; document classification {})\n",
+                v.predicted_class,
+                v.confidence_category,
+                v.document_classification
+                    .as_deref()
+                    .unwrap_or("not reported")
+            ));
+            out.push_str(&format!(
+                "  probabilities: human {:.4}, ai {:.4}, mixed {:.4}\n",
+                v.class_probabilities.human, v.class_probabilities.ai, v.class_probabilities.mixed
+            ));
+            if let Some(message) = &v.result_message {
+                out.push_str(&format!("  {message}\n"));
+            }
+        }
+        (status, _) => {
+            out.push_str(&format!(
+                "  {}: {}\n",
+                status_word(*status),
+                external.reason.as_deref().unwrap_or("no detail")
+            ));
+        }
+    }
+    out.push_str(&format!(
+        "  sent to GPTZero: {} ({} characters)\n",
+        if external.sent { "yes" } else { "no" },
+        external.input_characters
+    ));
     out
 }
 pub fn sarif(reports: &[Report]) -> Value {

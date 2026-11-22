@@ -17,12 +17,29 @@ pub struct Language {
     pub language: Option<String>,
     pub reason: String,
 }
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[serde(rename_all = "snake_case")]
+pub enum BlockKind {
+    Paragraph,
+    Heading,
+    ListItem,
+    TableCell,
+}
 #[derive(Debug, Clone)]
 pub struct Document {
     pub raw: String,
     pub prose: String,
     /// Byte ranges in prepared prose. Matches may not cross these gaps/blocks.
     pub prose_spans: Vec<Range<usize>>,
+    pub block_kinds: Vec<BlockKind>,
+    /// Logical blocks survive preparation gaps such as inline code.
+    pub block_ids: Vec<usize>,
+    pub strong_spans: Vec<Range<usize>>,
+    /// Populated only by bounded editorial analysis; never needed for legacy detection.
+    pub editorial_units: Option<Vec<crate::sentences::SentenceUnit>>,
+    pub suppressed_rules: Vec<String>,
+    block_kind: BlockKind,
+    block_id: usize,
     pub content_type: ContentType,
     pub words: Vec<Range<usize>>,
     pub sentences: Vec<Range<usize>>,
@@ -59,6 +76,13 @@ impl Document {
             raw,
             prose: String::new(),
             prose_spans: vec![],
+            block_kinds: vec![],
+            block_ids: vec![],
+            strong_spans: vec![],
+            editorial_units: None,
+            suppressed_rules: vec![],
+            block_kind: BlockKind::Paragraph,
+            block_id: 0,
             content_type: if markdown {
                 ContentType::Markdown
             } else {
@@ -158,6 +182,9 @@ impl Document {
         let (end_line, end_column) = self.location(end);
         crate::score::Evidence {
             rule_id: id.into(),
+            guidance_id: None,
+            leverage: None,
+            context: None,
             raw_offset: start..end,
             source_ranges,
             prose_offset: range.clone(),
@@ -198,6 +225,8 @@ impl Document {
         let start = self.prose_spans.last().map_or(0, |r| r.end + 1);
         if start < self.prose.len() {
             self.prose_spans.push(start..self.prose.len());
+            self.block_kinds.push(self.block_kind);
+            self.block_ids.push(self.block_id);
             self.prose.push('\n');
             self.mapping.push(0..0);
         }
@@ -233,6 +262,9 @@ impl Document {
             ));
         }
         let mut excluded = 0usize;
+        let mut ancestry = Vec::new();
+        let mut serial = 0usize;
+        let mut strong = Vec::new();
         for (event, range) in events {
             poll(deadline)?;
             match event {
@@ -250,11 +282,37 @@ impl Document {
                 Event::Code(_) => self.boundary(),
                 Event::InlineHtml(text) if text.starts_with("<!--") => {} // rendered adjacency
                 Event::InlineHtml(_) | Event::Html(_) => self.boundary(),
-                Event::Start(Tag::Paragraph | Tag::Heading { .. } | Tag::Item | Tag::TableCell)
-                | Event::End(
+                Event::Start(
+                    tag @ (Tag::Paragraph | Tag::Heading { .. } | Tag::Item | Tag::TableCell),
+                ) => {
+                    self.boundary();
+                    ancestry.push((self.block_kind, self.block_id));
+                    serial += 1;
+                    self.block_id = serial;
+                    self.block_kind = match tag {
+                        Tag::Heading { .. } => BlockKind::Heading,
+                        Tag::Item => BlockKind::ListItem,
+                        Tag::TableCell => BlockKind::TableCell,
+                        _ if self.block_kind == BlockKind::ListItem => BlockKind::ListItem,
+                        _ => BlockKind::Paragraph,
+                    };
+                }
+                Event::End(
                     TagEnd::Paragraph | TagEnd::Heading(_) | TagEnd::Item | TagEnd::TableCell,
-                )
-                | Event::Rule => self.boundary(),
+                ) => {
+                    self.boundary();
+                    if let Some((kind, id)) = ancestry.pop() {
+                        self.block_kind = kind;
+                        self.block_id = id;
+                    }
+                }
+                Event::Start(Tag::Strong) => strong.push(self.prose.len()),
+                Event::End(TagEnd::Strong) => {
+                    if let Some(start) = strong.pop() {
+                        self.strong_spans.push(start..self.prose.len());
+                    }
+                }
+                Event::Rule => self.boundary(),
                 _ => {}
             }
         }
@@ -275,7 +333,7 @@ fn poll(deadline: Option<Deadline>) -> Result<(), Error> {
 pub fn sentence_ranges(text: &str, blocks: &[Range<usize>]) -> Vec<Range<usize>> {
     sentence_ranges_bounded(text, blocks, None).expect("unbounded segmentation cannot time out")
 }
-fn sentence_ranges_bounded(
+pub(crate) fn sentence_ranges_bounded(
     text: &str,
     blocks: &[Range<usize>],
     deadline: Option<Deadline>,

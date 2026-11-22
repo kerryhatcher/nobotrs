@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 1314,
+  "leverage_counts": {
+    "2": 2,
+    "4": 1
+  },
+  "findings": [
+    {
+      "rule_id": "worth-noting",
+      "guidance_id": "structure.signposting-filler",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 33,
+        "column": 379,
+        "end_line": 33,
+        "end_column": 395,
+        "source_ranges": [
+          {
+            "start": 4011,
+            "end": 4027
+          }
+        ]
+      },
+      "matched_text": "its worth noting",
+      "sentence": "Also its worth noting that developers are starting to pick up Vulkan due to its performance and getting up better Linux compatibility along the way.",
+      "context": null,
+      "suggestion": null,
+      "message": null,
+      "why": "Repeated announcements delay the useful information.",
+      "fix": "Remove the announcement if the following claim stands alone.",
+      "keep_when": "Keep a warning that signals a meaningful change in scope."
+    },
+    {
+      "rule_id": "worth-noting",
+      "guidance_id": "structure.signposting-filler",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 65,
+        "column": 1,
+        "end_line": 65,
+        "end_column": 17,
+        "source_ranges": [
+          {
+            "start": 7168,
+            "end": 7184
+          }
+        ]
+      },
+      "matched_text": "Its worth noting",
+      "sentence": "Its worth noting that even games not officially supported by Steam Play / Proton can still run just fine.",
+      "context": null,
+      "suggestion": null,
+      "message": null,
+      "why": "Repeated announcements delay the useful information.",
+      "fix": "Remove the announcement if the following claim stands alone.",
+      "keep_when": "Keep a warning that signals a meaningful change in scope."
+    },
+    {
+      "rule_id": "structure.title-case-headings",
+      "guidance_id": "structure.title-case-headings",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 23,
+        "column": 4,
+        "end_line": 23,
+        "end_column": 23,
+        "source_ranges": [
+          {
+            "start": 1727,
+            "end": 1746
+          }
+        ]
+      },
+      "matched_text": "Drivers and Porting",
+      "sentence": "Drivers and Porting",
+      "context": null,
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "message": null,
+      "why": "Heading capitalization may distract if it conflicts with the venue style.",
+      "fix": "Use the required or established heading style consistently.",
+      "keep_when": "Keep title case when the publication or naming convention requires it."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 3,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

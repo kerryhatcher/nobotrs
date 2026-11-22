@@ -48,6 +48,12 @@ pub struct Report {
     pub omitted_candidates: usize,
     pub display_limit: usize,
     pub omitted_document_findings: usize,
+    /// Opt-in GPTZero comparison. Informational only; never part of `verdict`. Absent unless requested.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub external: Option<crate::external::gptzero::ExternalReport>,
+    /// Opt-in OpenRouter LLM judgment. Informational only; never part of `verdict`. Absent unless requested.
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub openrouter: Option<crate::external::openrouter::JudgeReport>,
 }
 impl Report {
     pub fn mark_input_truncated(&mut self) {
@@ -83,6 +89,12 @@ impl Engine {
         let dictionary = Dictionary::embedded();
         let mut known: HashSet<_> = dictionary.entries.iter().map(|e| e.id.clone()).collect();
         known.extend(["punctuation.em-dash-density", "statistics.burstiness"].map(str::to_string));
+        known.extend(
+            crate::backends::structure::RULE_IDS
+                .iter()
+                .map(|s| s.to_string()),
+        );
+        known.extend(crate::copyediting::RULE_IDS.iter().map(|id| id.to_string()));
         Ok(Self {
             dictionary_version: dictionary.dictionary_version.clone(),
             vocabulary: Vocabulary::new(dictionary)?,
@@ -95,6 +107,15 @@ impl Engine {
             ],
             known,
         })
+    }
+    pub fn suppression_directives(
+        &self,
+        doc: &Document,
+        settings: &Settings,
+        path: &str,
+        deadline: Deadline,
+    ) -> Result<Vec<crate::suppression::Directive>, String> {
+        crate::suppression::directives_with_deadline(doc, settings, path, &self.known, deadline)
     }
     pub fn validate_settings(&self, settings: &Settings) -> Result<(), String> {
         settings.validate()?;
@@ -130,6 +151,47 @@ impl Engine {
         settings: &Settings,
         models: &crate::models::ModelRegistry,
     ) -> Result<Report, String> {
+        self.analyze_internal(raw, markdown, path, settings, models, false)
+            .map(|(report, _)| report)
+    }
+
+    /// Offline editorial analysis ranks unsliced outcomes before applying the display limit.
+    pub fn review(
+        &self,
+        raw: String,
+        markdown: bool,
+        path: &str,
+        settings: &Settings,
+    ) -> Result<crate::review::ReviewReport, String> {
+        if settings.gptzero || settings.openrouter_judge {
+            return Err("review does not support external services".into());
+        }
+        let models = crate::models::ModelRegistry::resolve(settings)?;
+        let (report, doc) = self.analyze_internal(raw, markdown, path, settings, &models, true)?;
+        Ok(crate::review::review(&report, &doc))
+    }
+
+    /// Shared unsliced editorial analysis for review and comparison consumers.
+    pub fn editorial_analysis(
+        &self,
+        raw: String,
+        markdown: bool,
+        path: &str,
+        settings: &Settings,
+        models: &crate::models::ModelRegistry,
+    ) -> Result<(Report, Document), String> {
+        self.analyze_internal(raw, markdown, path, settings, models, true)
+    }
+
+    fn analyze_internal(
+        &self,
+        raw: String,
+        markdown: bool,
+        path: &str,
+        settings: &Settings,
+        models: &crate::models::ModelRegistry,
+        editorial: bool,
+    ) -> Result<(Report, Document), String> {
         self.validate_settings(settings)?;
         models.validate_settings(settings)?;
         let deadline = Deadline::new(Duration::from_millis(settings.timeout_ms));
@@ -144,6 +206,11 @@ impl Engine {
             Err(error) => return Err(error.to_string()),
         };
         doc.assert_language(settings.language.as_deref());
+        if editorial {
+            doc.editorial_units = Some(
+                crate::sentences::sentence_units_with_deadline(&doc, deadline).unwrap_or_default(),
+            );
+        }
         let directives = if deadline.expired() {
             Vec::new()
         } else {
@@ -159,10 +226,21 @@ impl Engine {
                 Err(error) => return Err(error),
             }
         };
+        if editorial {
+            doc.suppressed_rules = directives
+                .iter()
+                .flat_map(|d| d.ids.iter().cloned())
+                .collect();
+        }
+        let structure = crate::backends::structure::Structure;
         let registry: Vec<&dyn DetectorBackend> =
             std::iter::once(&self.vocabulary as &dyn DetectorBackend)
                 .chain(self.backends.iter().map(|b| b.as_ref()))
                 .chain(models.backends().iter().map(|b| b.as_ref()))
+                .chain(
+                    (editorial || settings.experiment_enabled("structure-votes"))
+                        .then_some(&structure as &dyn DetectorBackend),
+                )
                 .filter(|b| {
                     if b.family() == SignalFamily::Model {
                         settings.models.iter().any(|n| n == b.name())
@@ -187,17 +265,45 @@ impl Engine {
                     reason: "no analyzable prose".into(),
                     model: None,
                 }
+            } else if backend.family() == SignalFamily::Model
+                && settings.model_coverage == crate::config::ModelCoverage::Full
+            {
+                backend.score_full(&doc, deadline)
             } else if backend.name() == "vocabulary" {
                 self.vocabulary
                     .score_limited(&doc, deadline, settings.max_candidates)
+            } else if backend.name() == "burstiness"
+                && settings.experiment_enabled("burstiness-units")
+            {
+                crate::experiments::burstiness(&doc, deadline)
+            } else if backend.name() == "punctuation"
+                && settings.experiment_enabled("punctuation-skip-list-separators")
+            {
+                crate::experiments::punctuation(&doc, deadline, settings.max_candidates)
             } else if backend.name() == "punctuation" {
                 Punctuation.score_limited(&doc, deadline, settings.max_candidates)
+            } else if backend.name() == "structure" {
+                structure.score_limited(&doc, deadline, settings.max_candidates)
             } else {
                 backend.score(&doc, deadline)
             };
             if let ScoreOutcome::Scored(mut score) = outcome {
                 let suppression_error =
                     crate::suppression::apply(&mut score, &directives, deadline).err();
+                if score.family == SignalFamily::Structure
+                    && settings.experiment_enabled("structure-votes")
+                {
+                    let distinct: HashSet<_> = score
+                        .evidence
+                        .iter()
+                        .filter(|e| e.suppression.is_none())
+                        .map(|e| &e.rule_id)
+                        .collect();
+                    score.voting_eligible = true;
+                    if distinct.len() >= 2 {
+                        score.vote = crate::score::VoteStrength::Suspicious;
+                    }
+                }
                 outcome = if deadline.expired() || suppression_error.is_some() {
                     score.voting_eligible = false;
                     ScoreOutcome::Incomplete {
@@ -232,6 +338,46 @@ impl Engine {
                 outcome,
             })
             .collect();
+        // Additive metadata never changes selection, SARIF construction or voting.
+        for b in &mut backends {
+            if let ScoreOutcome::Scored(s) | ScoreOutcome::Incomplete { score: s, .. } =
+                &mut b.outcome
+            {
+                for e in s.evidence.iter_mut().chain(&mut s.candidates) {
+                    if let Some(units) = &doc.editorial_units {
+                        if e.rule_id == "punctuation.em-dash-density" {
+                            let i =
+                                units.partition_point(|u| u.prose.start <= e.prose_offset.start);
+                            if let Some(unit) =
+                                i.checked_sub(1).and_then(|i| units.get(i)).filter(|u| {
+                                    e.prose_offset.end <= u.prose.end
+                                        && u.kind == crate::sentences::UnitKind::ListItem
+                                })
+                            {
+                                let tail = doc.prose[e.prose_offset.end..unit.prose.end]
+                                    .trim_start()
+                                    .trim_start_matches('~');
+                                e.context =
+                                    Some(
+                                        if tail.starts_with('$')
+                                            || tail.starts_with(char::is_numeric)
+                                        {
+                                            "list_separator"
+                                        } else {
+                                            "list_item"
+                                        }
+                                        .into(),
+                                    );
+                            }
+                        }
+                    }
+                    if let Some(g) = crate::guidance::Guidance::embedded().for_rule(&e.rule_id) {
+                        e.guidance_id = Some(g.id.clone());
+                        e.leverage = Some(g.leverage);
+                    }
+                }
+            }
+        }
         let effective_finding_count = backends
             .iter()
             .map(|b| match &b.outcome {
@@ -271,6 +417,9 @@ impl Engine {
             if let ScoreOutcome::Scored(s) | ScoreOutcome::Incomplete { score: s, .. } =
                 &mut b.outcome
             {
+                if editorial {
+                    continue;
+                }
                 let n = s
                     .evidence
                     .len()
@@ -316,34 +465,43 @@ impl Engine {
             incomplete_reasons.push(Error::Timeout.to_string());
             coverage = 0.0;
         }
-        Ok(Report {
-            schema_version: "1.0.0",
-            engine_version: env!("CARGO_PKG_VERSION"),
-            dictionary_version: self.dictionary_version.clone(),
-            metric_contract: "prepared-prose-v1/uncalibrated",
-            path: path.into(),
-            settings: settings.clone(),
-            language: doc.language,
-            prose_words: doc.words.len(),
-            sentence_count: doc.sentences.len(),
-            block_contexts,
-            sentence_contexts,
-            complete: incomplete_reasons.is_empty(),
-            analyzed_coverage: coverage,
-            incomplete_reasons,
-            verdict: result.verdict,
-            families: result.families,
-            warnings: result.warnings,
-            backends,
-            effective_finding_count,
-            actionable_finding_count,
-            emitted_findings: emitted,
-            omitted_findings: effective_finding_count - emitted,
-            emitted_candidates,
-            omitted_candidates,
-            display_limit: settings.display_limit,
-            omitted_document_findings,
-        })
+        Ok((
+            Report {
+                schema_version: "1.0.0",
+                engine_version: env!("CARGO_PKG_VERSION"),
+                dictionary_version: self.dictionary_version.clone(),
+                metric_contract: if settings.experiment.is_empty() {
+                    "prepared-prose-v1/uncalibrated"
+                } else {
+                    "prepared-prose-v1/uncalibrated+experimental"
+                },
+                path: path.into(),
+                settings: settings.clone(),
+                language: doc.language.clone(),
+                prose_words: doc.words.len(),
+                sentence_count: doc.sentences.len(),
+                block_contexts,
+                sentence_contexts,
+                complete: incomplete_reasons.is_empty(),
+                analyzed_coverage: coverage,
+                incomplete_reasons,
+                verdict: result.verdict,
+                families: result.families,
+                warnings: result.warnings,
+                backends,
+                effective_finding_count,
+                actionable_finding_count,
+                emitted_findings: emitted,
+                omitted_findings: effective_finding_count - emitted,
+                emitted_candidates,
+                omitted_candidates,
+                display_limit: settings.display_limit,
+                omitted_document_findings,
+                external: None,
+                openrouter: None,
+            },
+            doc,
+        ))
     }
 }
 /// Prefix retained when the byte budget stops reading. Total stream size is deliberately unknown.

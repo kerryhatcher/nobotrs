@@ -1,0 +1,860 @@
+{
+  "actionable_finding_count": 3,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [
+            {
+              "block_context": 1,
+              "column": 179,
+              "disposition": "selected",
+              "end_column": 180,
+              "end_line": 20,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 20,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 525,
+                "start": 522
+              },
+              "raw_offset": {
+                "end": 1026,
+                "start": 1023
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 3,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1026,
+                  "start": 1023
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 10,
+              "column": 114,
+              "disposition": "selected",
+              "end_column": 115,
+              "end_line": 102,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 102,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1467,
+                "start": 1464
+              },
+              "raw_offset": {
+                "end": 4205,
+                "start": 4202
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4205,
+                  "start": 4202
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 11,
+              "column": 37,
+              "disposition": "selected",
+              "end_column": 38,
+              "end_line": 106,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 106,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1753,
+                "start": 1750
+              },
+              "raw_offset": {
+                "end": 4559,
+                "start": 4556
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4559,
+                  "start": 4556
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 1,
+              "column": 179,
+              "disposition": "selected",
+              "end_column": 180,
+              "end_line": 20,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 20,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 525,
+                "start": 522
+              },
+              "raw_offset": {
+                "end": 1026,
+                "start": 1023
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 3,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1026,
+                  "start": 1023
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 10,
+              "column": 114,
+              "disposition": "selected",
+              "end_column": 115,
+              "end_line": 102,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 102,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1467,
+                "start": 1464
+              },
+              "raw_offset": {
+                "end": 4205,
+                "start": 4202
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4205,
+                  "start": 4202
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 11,
+              "column": 37,
+              "disposition": "selected",
+              "end_column": 38,
+              "end_line": 106,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 106,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1753,
+                "start": 1750
+              },
+              "raw_offset": {
+                "end": 4559,
+                "start": 4556
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4559,
+                  "start": 4556
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            }
+          ],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 3.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 3.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.8522727272727273
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 352.0
+            }
+          },
+          "vote": "suspicious",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.5807696517809381
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 159.35317534561744
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 10.54534090909091
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6400862068965517
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.561211975862024
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 575,
+        "start": 425
+      },
+      {
+        "end": 602,
+        "start": 577
+      },
+      {
+        "end": 774,
+        "start": 604
+      }
+    ],
+    [
+      {
+        "end": 858,
+        "start": 843
+      },
+      {
+        "end": 875,
+        "start": 860
+      },
+      {
+        "end": 1140,
+        "start": 877
+      }
+    ],
+    [
+      {
+        "end": 1269,
+        "start": 1209
+      }
+    ],
+    [
+      {
+        "end": 1306,
+        "start": 1275
+      }
+    ],
+    [
+      {
+        "end": 1332,
+        "start": 1312
+      },
+      {
+        "end": 1388,
+        "start": 1334
+      },
+      {
+        "end": 1416,
+        "start": 1390
+      }
+    ],
+    [
+      {
+        "end": 1783,
+        "start": 1765
+      },
+      {
+        "end": 1798,
+        "start": 1785
+      },
+      {
+        "end": 1831,
+        "start": 1800
+      },
+      {
+        "end": 1872,
+        "start": 1833
+      }
+    ],
+    [
+      {
+        "end": 2245,
+        "start": 2217
+      },
+      {
+        "end": 2265,
+        "start": 2247
+      },
+      {
+        "end": 2294,
+        "start": 2267
+      }
+    ],
+    [
+      {
+        "end": 2393,
+        "start": 2369
+      },
+      {
+        "end": 2403,
+        "start": 2395
+      },
+      {
+        "end": 2455,
+        "start": 2405
+      },
+      {
+        "end": 2500,
+        "start": 2457
+      }
+    ],
+    [
+      {
+        "end": 2627,
+        "start": 2571
+      },
+      {
+        "end": 2648,
+        "start": 2629
+      },
+      {
+        "end": 2699,
+        "start": 2650
+      }
+    ],
+    [
+      {
+        "end": 3409,
+        "start": 3381
+      },
+      {
+        "end": 3413,
+        "start": 3411
+      },
+      {
+        "end": 3434,
+        "start": 3415
+      },
+      {
+        "end": 3438,
+        "start": 3436
+      },
+      {
+        "end": 3456,
+        "start": 3440
+      },
+      {
+        "end": 3464,
+        "start": 3458
+      },
+      {
+        "end": 3480,
+        "start": 3466
+      }
+    ],
+    [
+      {
+        "end": 4449,
+        "start": 4087
+      }
+    ],
+    [
+      {
+        "end": 4817,
+        "start": 4518
+      }
+    ],
+    [
+      {
+        "end": 4973,
+        "start": 4886
+      }
+    ],
+    [
+      {
+        "end": 5571,
+        "start": 5516
+      }
+    ],
+    [
+      {
+        "end": 5620,
+        "start": 5583
+      }
+    ],
+    [
+      {
+        "end": 5676,
+        "start": 5624
+      }
+    ],
+    [
+      {
+        "end": 5835,
+        "start": 5812
+      }
+    ],
+    [
+      {
+        "end": 5971,
+        "start": 5923
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 3,
+  "emitted_candidates": 3,
+  "emitted_findings": 3,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "suspicious"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-09-meet-me-at-the-mall.md",
+  "prose_words": 352,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 575,
+        "start": 425
+      },
+      {
+        "end": 602,
+        "start": 577
+      },
+      {
+        "end": 611,
+        "start": 604
+      }
+    ],
+    [
+      {
+        "end": 774,
+        "start": 611
+      }
+    ],
+    [
+      {
+        "end": 858,
+        "start": 843
+      },
+      {
+        "end": 875,
+        "start": 860
+      },
+      {
+        "end": 986,
+        "start": 877
+      }
+    ],
+    [
+      {
+        "end": 1140,
+        "start": 986
+      }
+    ],
+    [
+      {
+        "end": 1269,
+        "start": 1209
+      }
+    ],
+    [
+      {
+        "end": 1306,
+        "start": 1275
+      }
+    ],
+    [
+      {
+        "end": 1332,
+        "start": 1312
+      },
+      {
+        "end": 1388,
+        "start": 1334
+      },
+      {
+        "end": 1416,
+        "start": 1390
+      }
+    ],
+    [
+      {
+        "end": 1783,
+        "start": 1765
+      },
+      {
+        "end": 1798,
+        "start": 1785
+      },
+      {
+        "end": 1831,
+        "start": 1800
+      },
+      {
+        "end": 1872,
+        "start": 1833
+      }
+    ],
+    [
+      {
+        "end": 2245,
+        "start": 2217
+      },
+      {
+        "end": 2265,
+        "start": 2247
+      },
+      {
+        "end": 2294,
+        "start": 2267
+      }
+    ],
+    [
+      {
+        "end": 2393,
+        "start": 2369
+      },
+      {
+        "end": 2403,
+        "start": 2395
+      },
+      {
+        "end": 2455,
+        "start": 2405
+      },
+      {
+        "end": 2500,
+        "start": 2457
+      }
+    ],
+    [
+      {
+        "end": 2627,
+        "start": 2571
+      },
+      {
+        "end": 2648,
+        "start": 2629
+      },
+      {
+        "end": 2699,
+        "start": 2650
+      }
+    ],
+    [
+      {
+        "end": 3409,
+        "start": 3381
+      },
+      {
+        "end": 3413,
+        "start": 3411
+      },
+      {
+        "end": 3434,
+        "start": 3415
+      },
+      {
+        "end": 3438,
+        "start": 3436
+      },
+      {
+        "end": 3456,
+        "start": 3440
+      },
+      {
+        "end": 3464,
+        "start": 3458
+      },
+      {
+        "end": 3480,
+        "start": 3466
+      }
+    ],
+    [
+      {
+        "end": 4272,
+        "start": 4087
+      }
+    ],
+    [
+      {
+        "end": 4449,
+        "start": 4272
+      }
+    ],
+    [
+      {
+        "end": 4694,
+        "start": 4518
+      }
+    ],
+    [
+      {
+        "end": 4817,
+        "start": 4694
+      }
+    ],
+    [
+      {
+        "end": 4944,
+        "start": 4886
+      }
+    ],
+    [
+      {
+        "end": 4973,
+        "start": 4944
+      }
+    ],
+    [
+      {
+        "end": 5552,
+        "start": 5516
+      }
+    ],
+    [
+      {
+        "end": 5571,
+        "start": 5552
+      }
+    ],
+    [
+      {
+        "end": 5620,
+        "start": 5583
+      }
+    ],
+    [
+      {
+        "end": 5676,
+        "start": 5624
+      }
+    ],
+    [
+      {
+        "end": 5835,
+        "start": 5812
+      }
+    ],
+    [
+      {
+        "end": 5971,
+        "start": 5923
+      }
+    ]
+  ],
+  "sentence_count": 24,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

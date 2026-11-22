@@ -1,0 +1,448 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "fail"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "punctuation",
+      "context": null,
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading.",
+      "leverage": 4,
+      "location": {
+        "column": 179,
+        "end_column": 180,
+        "end_line": 20,
+        "line": 20,
+        "source_ranges": [
+          {
+            "end": 1026,
+            "start": 1023
+          }
+        ]
+      },
+      "matched_text": "—",
+      "message": null,
+      "rule_id": "punctuation.em-dash-density",
+      "sentence": "The event wasn’t just about school—it was about building bridges between families and the many resources available to them right here in Bibb County.",
+      "severity": "medium",
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "suppressed": false,
+      "why": "Many interruptions can obscure a sentence’s main connection."
+    },
+    {
+      "category": "punctuation",
+      "context": null,
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading.",
+      "leverage": 4,
+      "location": {
+        "column": 114,
+        "end_column": 115,
+        "end_line": 102,
+        "line": 102,
+        "source_ranges": [
+          {
+            "end": 4205,
+            "start": 4202
+          }
+        ]
+      },
+      "matched_text": "—",
+      "message": null,
+      "rule_id": "punctuation.em-dash-density",
+      "sentence": "One of the evening’s most heartwarming elements was the visible pride students took in representing their schools—whether through music, dance, or simply sharing their achievements.",
+      "severity": "medium",
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "suppressed": false,
+      "why": "Many interruptions can obscure a sentence’s main connection."
+    },
+    {
+      "category": "punctuation",
+      "context": null,
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading.",
+      "leverage": 4,
+      "location": {
+        "column": 37,
+        "end_column": 38,
+        "end_line": 106,
+        "line": 106,
+        "source_ranges": [
+          {
+            "end": 4559,
+            "start": 4556
+          }
+        ]
+      },
+      "matched_text": "—",
+      "message": null,
+      "rule_id": "punctuation.em-dash-density",
+      "sentence": "And let’s not forget the little ones—plenty of activities were on hand to keep young attendees smiling and spinning (sometimes literally, thanks to hula hoops and bubbles).",
+      "severity": "medium",
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "suppressed": false,
+      "why": "Many interruptions can obscure a sentence’s main connection."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 134,
+        "end_line": 24,
+        "features": [],
+        "heading": null,
+        "line": 16,
+        "mean_z": 1.0,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": 8.712395668029785,
+            "z": 1.0
+          }
+        ],
+        "prose": {
+          "end": 701,
+          "start": 0
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 575,
+            "start": 425
+          },
+          {
+            "end": 602,
+            "start": 577
+          },
+          {
+            "end": 774,
+            "start": 604
+          },
+          {
+            "end": 858,
+            "start": 843
+          },
+          {
+            "end": 875,
+            "start": 860
+          },
+          {
+            "end": 1140,
+            "start": 877
+          },
+          {
+            "end": 1269,
+            "start": 1209
+          }
+        ],
+        "units": {
+          "end": 5,
+          "start": 0
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 316,
+        "end_line": 138,
+        "features": [],
+        "heading": "🎉 Event Highlights Included:",
+        "line": 26,
+        "mean_z": -1.0,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": 8.436705589294434,
+            "z": -1.0
+          }
+        ],
+        "prose": {
+          "end": 2320,
+          "start": 701
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 1306,
+            "start": 1275
+          },
+          {
+            "end": 1332,
+            "start": 1312
+          },
+          {
+            "end": 1388,
+            "start": 1334
+          },
+          {
+            "end": 1416,
+            "start": 1390
+          },
+          {
+            "end": 1783,
+            "start": 1765
+          },
+          {
+            "end": 1798,
+            "start": 1785
+          },
+          {
+            "end": 1831,
+            "start": 1800
+          },
+          {
+            "end": 1872,
+            "start": 1833
+          },
+          {
+            "end": 2245,
+            "start": 2217
+          },
+          {
+            "end": 2265,
+            "start": 2247
+          },
+          {
+            "end": 2294,
+            "start": 2267
+          },
+          {
+            "end": 2393,
+            "start": 2369
+          },
+          {
+            "end": 2403,
+            "start": 2395
+          },
+          {
+            "end": 2455,
+            "start": 2405
+          },
+          {
+            "end": 2500,
+            "start": 2457
+          },
+          {
+            "end": 2627,
+            "start": 2571
+          },
+          {
+            "end": 2648,
+            "start": 2629
+          },
+          {
+            "end": 2699,
+            "start": 2650
+          },
+          {
+            "end": 3409,
+            "start": 3381
+          },
+          {
+            "end": 3413,
+            "start": 3411
+          },
+          {
+            "end": 3434,
+            "start": 3415
+          },
+          {
+            "end": 3438,
+            "start": 3436
+          },
+          {
+            "end": 3456,
+            "start": 3440
+          },
+          {
+            "end": 3464,
+            "start": 3458
+          },
+          {
+            "end": 3480,
+            "start": 3466
+          },
+          {
+            "end": 4449,
+            "start": 4087
+          },
+          {
+            "end": 4817,
+            "start": 4518
+          },
+          {
+            "end": 4973,
+            "start": 4886
+          },
+          {
+            "end": 5571,
+            "start": 5516
+          },
+          {
+            "end": 5620,
+            "start": 5583
+          },
+          {
+            "end": 5676,
+            "start": 5624
+          },
+          {
+            "end": 5835,
+            "start": 5812
+          },
+          {
+            "end": 5971,
+            "start": 5923
+          }
+        ],
+        "units": {
+          "end": 24,
+          "start": 5
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "4": 3
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-04-09-meet-me-at-the-mall.md",
+  "prose_words": 352,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 3
+}

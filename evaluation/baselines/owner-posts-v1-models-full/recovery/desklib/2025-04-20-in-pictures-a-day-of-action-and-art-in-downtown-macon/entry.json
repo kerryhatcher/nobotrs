@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.02817,
+  "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+  "input_sha256": "9db5e95deb92593040c1e5e2ee4aba6b49f4493e00ca0725541e3ff6a0f12c65",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon/backend.json",
+  "reused_source_sha256": "f1e8fa12d2ee10685351986a91a5dd4a0df2342b33c44d744718cd52120c81ca",
+  "status": "scored_full"
+}

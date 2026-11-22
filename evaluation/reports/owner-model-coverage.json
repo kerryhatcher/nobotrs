@@ -1,0 +1,79 @@
+{
+  "backend_status_counts": {
+    "conpara": {
+      "failed": 0,
+      "incomplete": 0,
+      "missing": 0,
+      "missing_backend": 0,
+      "missing_full_evidence": 0,
+      "missing_output": 0,
+      "scored_full": 41,
+      "skipped": 2
+    },
+    "desklib": {
+      "failed": 0,
+      "incomplete": 0,
+      "missing": 0,
+      "missing_backend": 0,
+      "missing_full_evidence": 0,
+      "missing_output": 0,
+      "scored_full": 41,
+      "skipped": 2
+    },
+    "detectorscope": {
+      "failed": 0,
+      "incomplete": 0,
+      "missing": 0,
+      "missing_backend": 0,
+      "missing_full_evidence": 0,
+      "missing_output": 0,
+      "scored_full": 41,
+      "skipped": 2
+    }
+  },
+  "binary_sha256": null,
+  "catalogued_documents": 43,
+  "elapsed_ms": 6600019.229492,
+  "empty_ranking_reasons": {
+    "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.": 43
+  },
+  "finished": true,
+  "fully_resolved_documents": 43,
+  "git_revision_at_run_start": "multiple immutable attempts; see per-model run metadata",
+  "incomplete_documents": [],
+  "incomplete_or_failed": [],
+  "label_confidence_counts": {
+    "ai_drafted:high": 28,
+    "human:high": 14,
+    "human:medium": 1
+  },
+  "manifest_sha256": "7747cb4292a7a379697b83d1413db5017d2700ee2b87d8733a498d6760ba8234",
+  "missing_output_files": [],
+  "note": "One registry reused, no remote services. Authorship scores and feature presence do not establish editorial utility. The medium-confidence human post is retained for sensitivity analysis only.",
+  "planned_documents": 43,
+  "processed_documents": 43,
+  "run_sha256": "1bcc3179d01066f3a7d24dd0b666ff59e385ca392cbec6009a2a64cfe0f100a7",
+  "schema_version": "owner-model-coverage-summary-v1",
+  "unprocessed_documents": 0,
+  "validated_editorial_utility": false,
+  "window_counts": {
+    "conpara": {
+      "eligible_context": 173,
+      "insufficient_context": 156,
+      "scored": 329,
+      "total": 329
+    },
+    "desklib": {
+      "eligible_context": 173,
+      "insufficient_context": 156,
+      "scored": 329,
+      "total": 329
+    },
+    "detectorscope": {
+      "eligible_context": 154,
+      "insufficient_context": 152,
+      "scored": 306,
+      "total": 306
+    }
+  }
+}

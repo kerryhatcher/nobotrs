@@ -1,0 +1,157 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "unknown"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "fail"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": "text has 6 words, below the 150-word floor",
+      "status": "skipped"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": "text has 6 words, below the 150-word floor",
+      "status": "skipped"
+    },
+    {
+      "backend": "readability",
+      "reason": "text has 6 words, below the 150-word floor",
+      "status": "skipped"
+    },
+    {
+      "backend": "compression",
+      "reason": "text has 6 words, below the 150-word floor",
+      "status": "skipped"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "skipped",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "skipped",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "skipped",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {},
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2012-10-05-to-the-west.md",
+  "prose_words": 6,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 0,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2012-10-05-to-the-west/report.json",
+        "sha256": "aa5bd821b281cd0bb85032260ec30ce7623abee57da77f1a767c3adbf59effd2",
+        "origin": "original_reused",
+        "status": "skipped"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2012-10-05-to-the-west/report.json",
+        "sha256": "aa5bd821b281cd0bb85032260ec30ce7623abee57da77f1a767c3adbf59effd2",
+        "origin": "original_reused",
+        "status": "skipped"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2012-10-05-to-the-west/report.json",
+        "sha256": "aa5bd821b281cd0bb85032260ec30ce7623abee57da77f1a767c3adbf59effd2",
+        "origin": "original_reused",
+        "status": "skipped"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 91,
+        "end_column": 104,
+        "end_line": 80,
+        "line": 80,
+        "source_ranges": [
+          {
+            "end": 6040,
+            "start": 6027
+          }
+        ]
+      },
+      "matched_text": "Kerry Hatcher",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Kerry Hatcher",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 3,
+        "end_column": 10,
+        "end_line": 90,
+        "line": 90,
+        "source_ranges": [
+          {
+            "end": 6242,
+            "start": 6233
+          }
+        ]
+      },
+      "matched_text": "\u2014 Kerry",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "\u2014 Kerry",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "formatting",
+      "context": null,
+      "fix": "Use the required or established heading style consistently.",
+      "guidance_id": "structure.title-case-headings",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "leverage": 4,
+      "location": {
+        "column": 6,
+        "end_column": 33,
+        "end_line": 20,
+        "line": 20,
+        "source_ranges": [
+          {
+            "end": 1618,
+            "start": 1589
+          }
+        ]
+      },
+      "matched_text": "The School District\u2019s Delay",
+      "message": null,
+      "rule_id": "structure.title-case-headings",
+      "sentence": "The School District\u2019s Delay",
+      "severity": "low",
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "suppressed": false,
+      "why": "Heading capitalization may distract if it conflicts with the venue style."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "3": 2,
+    "4": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+  "prose_words": 661,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 3,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend-attempt-1.json",
+        "sha256": "b9cf37e296dfd113566384a5cf971813c288deffd2b621ece61a7cbf7066c532",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

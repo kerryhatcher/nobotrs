@@ -1,0 +1,661 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": -2.841381311416626
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 14194.216659,
+        "excerpt_bytes": 2663,
+        "excerpt_coverage": 0.3457809224318658,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.3457809224318658,
+        "full_coverage_output": -1.8272420310257405,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.3457809224318658,
+        "precision": "float32",
+        "prepared_bytes": 7686,
+        "prepared_words": 1314,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": -2.841381311416626,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 206,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": false,
+            "prose": {
+              "end": 998,
+              "start": 0
+            },
+            "raw_output": -3.8548831939697266,
+            "source_ranges": [
+              {
+                "end": 716,
+                "start": 563
+              },
+              {
+                "end": 721,
+                "start": 718
+              },
+              {
+                "end": 803,
+                "start": 780
+              },
+              {
+                "end": 1101,
+                "start": 804
+              },
+              {
+                "end": 1558,
+                "start": 1103
+              },
+              {
+                "end": 1573,
+                "start": 1559
+              },
+              {
+                "end": 1631,
+                "start": 1626
+              },
+              {
+                "end": 1671,
+                "start": 1632
+              },
+              {
+                "end": 1734,
+                "start": 1727
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 11,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 61,
+            "heading": "Drivers and Porting",
+            "index": 1,
+            "insufficient_context": true,
+            "prose": {
+              "end": 1303,
+              "start": 998
+            },
+            "raw_output": -1.9694758653640747,
+            "source_ranges": [
+              {
+                "end": 1746,
+                "start": 1734
+              },
+              {
+                "end": 1872,
+                "start": 1748
+              },
+              {
+                "end": 1902,
+                "start": 1873
+              },
+              {
+                "end": 2125,
+                "start": 1992
+              },
+              {
+                "end": 2136,
+                "start": 2131
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 15,
+              "start": 11
+            }
+          },
+          {
+            "body_tokens": 231,
+            "heading": "Video Card Drivers",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 2594,
+              "start": 1303
+            },
+            "raw_output": -4.538379192352295,
+            "source_ranges": [
+              {
+                "end": 2149,
+                "start": 2136
+              },
+              {
+                "end": 2675,
+                "start": 2151
+              },
+              {
+                "end": 2704,
+                "start": 2677
+              },
+              {
+                "end": 2747,
+                "start": 2705
+              },
+              {
+                "end": 2868,
+                "start": 2832
+              },
+              {
+                "end": 2935,
+                "start": 2869
+              },
+              {
+                "end": 3096,
+                "start": 3094
+              },
+              {
+                "end": 3103,
+                "start": 3097
+              },
+              {
+                "end": 3215,
+                "start": 3210
+              },
+              {
+                "end": 3219,
+                "start": 3216
+              },
+              {
+                "end": 3396,
+                "start": 3316
+              },
+              {
+                "end": 3431,
+                "start": 3397
+              },
+              {
+                "end": 3524,
+                "start": 3517
+              },
+              {
+                "end": 3557,
+                "start": 3525
+              },
+              {
+                "end": 3631,
+                "start": 3630
+              },
+              {
+                "end": 3688,
+                "start": 3633
+              },
+              {
+                "end": 3708,
+                "start": 3689
+              },
+              {
+                "end": 3940,
+                "start": 3763
+              },
+              {
+                "end": 3945,
+                "start": 3941
+              },
+              {
+                "end": 4079,
+                "start": 4004
+              },
+              {
+                "end": 4098,
+                "start": 4080
+              },
+              {
+                "end": 4244,
+                "start": 4228
+              },
+              {
+                "end": 4271,
+                "start": 4245
+              },
+              {
+                "end": 4364,
+                "start": 4349
+              },
+              {
+                "end": 4374,
+                "start": 4370
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 27,
+              "start": 15
+            }
+          },
+          {
+            "body_tokens": 395,
+            "heading": "Porting to Linux",
+            "index": 3,
+            "insufficient_context": false,
+            "prose": {
+              "end": 4538,
+              "start": 2594
+            },
+            "raw_output": -2.0539445877075195,
+            "source_ranges": [
+              {
+                "end": 4386,
+                "start": 4374
+              },
+              {
+                "end": 4613,
+                "start": 4388
+              },
+              {
+                "end": 4797,
+                "start": 4615
+              },
+              {
+                "end": 4810,
+                "start": 4798
+              },
+              {
+                "end": 5160,
+                "start": 4857
+              },
+              {
+                "end": 5244,
+                "start": 5162
+              },
+              {
+                "end": 5274,
+                "start": 5245
+              },
+              {
+                "end": 5567,
+                "start": 5378
+              },
+              {
+                "end": 5580,
+                "start": 5568
+              },
+              {
+                "end": 5630,
+                "start": 5629
+              },
+              {
+                "end": 5785,
+                "start": 5717
+              },
+              {
+                "end": 5809,
+                "start": 5786
+              },
+              {
+                "end": 6104,
+                "start": 5858
+              },
+              {
+                "end": 6326,
+                "start": 6191
+              },
+              {
+                "end": 6331,
+                "start": 6327
+              },
+              {
+                "end": 6387,
+                "start": 6382
+              },
+              {
+                "end": 6396,
+                "start": 6388
+              },
+              {
+                "end": 6566,
+                "start": 6456
+              },
+              {
+                "end": 6581,
+                "start": 6567
+              },
+              {
+                "end": 6754,
+                "start": 6634
+              },
+              {
+                "end": 6761,
+                "start": 6756
+              },
+              {
+                "end": 6798,
+                "start": 6762
+              },
+              {
+                "end": 6924,
+                "start": 6858
+              },
+              {
+                "end": 6972,
+                "start": 6927
+              },
+              {
+                "end": 6987,
+                "start": 6983
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 48,
+              "start": 27
+            }
+          },
+          {
+            "body_tokens": 19,
+            "heading": "What about games not supported by Steam Play?",
+            "index": 4,
+            "insufficient_context": true,
+            "prose": {
+              "end": 4627,
+              "start": 4538
+            },
+            "raw_output": 2.4484848976135254,
+            "source_ranges": [
+              {
+                "end": 7028,
+                "start": 6987
+              },
+              {
+                "end": 7071,
+                "start": 7030
+              },
+              {
+                "end": 7082,
+                "start": 7077
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 50,
+              "start": 48
+            }
+          },
+          {
+            "body_tokens": 89,
+            "heading": "Steam",
+            "index": 5,
+            "insufficient_context": true,
+            "prose": {
+              "end": 5068,
+              "start": 4627
+            },
+            "raw_output": -0.0870874747633934,
+            "source_ranges": [
+              {
+                "end": 7308,
+                "start": 7168
+              },
+              {
+                "end": 7326,
+                "start": 7309
+              },
+              {
+                "end": 7603,
+                "start": 7397
+              },
+              {
+                "end": 7676,
+                "start": 7604
+              },
+              {
+                "end": 7741,
+                "start": 7737
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 55,
+              "start": 50
+            }
+          },
+          {
+            "body_tokens": 192,
+            "heading": "Wine / CodeWeavers",
+            "index": 6,
+            "insufficient_context": false,
+            "prose": {
+              "end": 5997,
+              "start": 5068
+            },
+            "raw_output": 1.0466593503952026,
+            "source_ranges": [
+              {
+                "end": 7755,
+                "start": 7741
+              },
+              {
+                "end": 8184,
+                "start": 7841
+              },
+              {
+                "end": 8464,
+                "start": 8186
+              },
+              {
+                "end": 8753,
+                "start": 8466
+              },
+              {
+                "end": 8767,
+                "start": 8764
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 65,
+              "start": 55
+            }
+          },
+          {
+            "body_tokens": 96,
+            "heading": "How you can help",
+            "index": 7,
+            "insufficient_context": true,
+            "prose": {
+              "end": 6403,
+              "start": 5997
+            },
+            "raw_output": -0.7144723534584045,
+            "source_ranges": [
+              {
+                "end": 8780,
+                "start": 8767
+              },
+              {
+                "end": 9043,
+                "start": 8867
+              },
+              {
+                "end": 9051,
+                "start": 9045
+              },
+              {
+                "end": 9064,
+                "start": 9052
+              },
+              {
+                "end": 9151,
+                "start": 9113
+              },
+              {
+                "end": 9208,
+                "start": 9153
+              },
+              {
+                "end": 9225,
+                "start": 9209
+              },
+              {
+                "end": 9322,
+                "start": 9276
+              },
+              {
+                "end": 9356,
+                "start": 9323
+              },
+              {
+                "end": 9437,
+                "start": 9431
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 71,
+              "start": 65
+            }
+          },
+          {
+            "body_tokens": 44,
+            "heading": "Native Games",
+            "index": 8,
+            "insufficient_context": true,
+            "prose": {
+              "end": 6624,
+              "start": 6403
+            },
+            "raw_output": 3.3410305976867676,
+            "source_ranges": [
+              {
+                "end": 9443,
+                "start": 9437
+              },
+              {
+                "end": 9622,
+                "start": 9445
+              },
+              {
+                "end": 9655,
+                "start": 9624
+              },
+              {
+                "end": 9665,
+                "start": 9661
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 74,
+              "start": 71
+            }
+          },
+          {
+            "body_tokens": 88,
+            "heading": "FreeCiv (Free)",
+            "index": 9,
+            "insufficient_context": true,
+            "prose": {
+              "end": 7035,
+              "start": 6624
+            },
+            "raw_output": 0.35307568311691284,
+            "source_ranges": [
+              {
+                "end": 9675,
+                "start": 9665
+              },
+              {
+                "end": 9685,
+                "start": 9678
+              },
+              {
+                "end": 9751,
+                "start": 9732
+              },
+              {
+                "end": 9771,
+                "start": 9752
+              },
+              {
+                "end": 10105,
+                "start": 9820
+              },
+              {
+                "end": 10169,
+                "start": 10107
+              },
+              {
+                "end": 10214,
+                "start": 10208
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 80,
+              "start": 74
+            }
+          },
+          {
+            "body_tokens": 130,
+            "heading": "Factorio (Paid)",
+            "index": 10,
+            "insufficient_context": false,
+            "prose": {
+              "end": 7686,
+              "start": 7035
+            },
+            "raw_output": -3.1488492488861084,
+            "source_ranges": [
+              {
+                "end": 10223,
+                "start": 10214
+              },
+              {
+                "end": 10698,
+                "start": 10310
+              },
+              {
+                "end": 10951,
+                "start": 10700
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 89,
+              "start": 80
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

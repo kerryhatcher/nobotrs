@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "description": "Corpora used by the humanization evaluation. Non-owner corpora are read in place from $NOBOTRS_INTERNAL_DIR (default /mnt/storage/projects/nobotrs/docs/internal) and never committed. Only the owner-posts corpus has committed text, approved by the owner on 2026-11-21 (roadmap decision 1). Reports may carry counts, rates, intervals, rule IDs and hashed sample IDs only.",
+  "corpora": [
+    {
+      "id": "owner-posts-v1",
+      "owner": true,
+      "root": "test-artifacts/kerryhatcher-posts",
+      "committed": "evaluation/corpora/owner-posts-v1/samples",
+      "manifest": "evaluation/corpora/owner-posts-v1/manifest.json",
+      "checksums": "test-artifacts/SHA256SUMS",
+      "licence": "Owner's own blog posts, already published at kerryhatcher.com. Committed with owner approval (2026-11-21).",
+      "labels": ["ai_drafted", "human"],
+      "group_key": "post (one document per file)",
+      "use": "Primary owner-corpus comparison: rule lift (Task 3), editor-independent checks, hotspot AUROC (Task 6). Confounded by genre and era; report stratified by genre with the caveat."
+    },
+    {
+      "id": "beemo",
+      "owner": false,
+      "root": "test-artifacts/beemo",
+      "checksums": "test-artifacts/SHA256SUMS",
+      "licence": "Dataset card: human outputs and prompts CC BY-NC 4.0; model_output under the generating models' terms; human_edits MIT unless model terms apply. Never committed.",
+      "labels": ["human", "ai", "ai_edited_by_human"],
+      "group_key": "prompt_id (variants stay together)",
+      "use": "Model output vs human output on the same prompts (Task 3 comparison b); editor alignment model_output to human_edits (Task 4); hotspot validity (Task 6). Showing excerpts to readers is open roadmap decision 6."
+    },
+    {
+      "id": "apt-eval",
+      "owner": false,
+      "root": "test-artifacts/apt-eval",
+      "checksums": "test-artifacts/SHA256SUMS",
+      "licence": "Dataset card declares MIT. Never committed.",
+      "labels": ["human", "ai_polished"],
+      "group_key": "source human text; polished variants linked by 5-gram Jaccard, unlinked variants kept as singletons",
+      "use": "Polish sensitivity: which rules appear after AI polishing of human drafts (Task 4 introduced_by_polish); development set in Task 7."
+    },
+    {
+      "id": "coauthor",
+      "owner": false,
+      "root": "test-artifacts/coauthor",
+      "checksums": "test-artifacts/SHA256SUMS",
+      "licence": "Public research download; reuse terms unconfirmed. Confirm before any redistribution. Never committed.",
+      "labels": ["mixed_provenance (reconstructed final text per session)"],
+      "group_key": "session (writer grouping not implemented: metadata workbook not parsed)",
+      "use": "Provenance research: reconstructed final text per session, for the guard and any later event-level analysis. No performance measure is planned."
+    },
+    {
+      "id": "govinfo-gao-2008",
+      "owner": false,
+      "root": "test-artifacts/govinfo-gao-2008",
+      "checksums": "test-artifacts/SHA256SUMS",
+      "licence": "U.S. Government Publishing Office collection. Confirm reuse terms before redistribution. Never committed.",
+      "labels": ["human"],
+      "group_key": "GAO report number",
+      "use": "Pre-LLM civic human control (Task 3 comparison c); held-out human controls in Task 7 after exclusion from Tasks 3-6."
+    },
+    {
+      "id": "wi-locness",
+      "owner": false,
+      "root": "test-artifacts/wi-locness",
+      "checksums": "test-artifacts/SHA256SUMS",
+      "licence": "Noncommercial research and education (W&I and LOCNESS licences in the archive). Never committed.",
+      "labels": ["human"],
+      "group_key": "essay (file and index)",
+      "use": "Non-native false-positive check (Task 3 comparison d). Learner bands A-C and native band N are kept separate."
+    }
+  ]
+}

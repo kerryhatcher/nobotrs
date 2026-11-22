@@ -1,0 +1,541 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 91,
+        "end_column": 104,
+        "end_line": 80,
+        "line": 80,
+        "source_ranges": [
+          {
+            "end": 6040,
+            "start": 6027
+          }
+        ]
+      },
+      "matched_text": "Kerry Hatcher",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Kerry Hatcher",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 3,
+        "end_column": 10,
+        "end_line": 90,
+        "line": 90,
+        "source_ranges": [
+          {
+            "end": 6242,
+            "start": 6233
+          }
+        ]
+      },
+      "matched_text": "— Kerry",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "— Kerry",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "formatting",
+      "context": null,
+      "fix": "Use the required or established heading style consistently.",
+      "guidance_id": "structure.title-case-headings",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "leverage": 4,
+      "location": {
+        "column": 6,
+        "end_column": 33,
+        "end_line": 20,
+        "line": 20,
+        "source_ranges": [
+          {
+            "end": 1618,
+            "start": 1589
+          }
+        ]
+      },
+      "matched_text": "The School District’s Delay",
+      "message": null,
+      "rule_id": "structure.title-case-headings",
+      "sentence": "The School District’s Delay",
+      "severity": "low",
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "suppressed": false,
+      "why": "Heading capitalization may distract if it conflicts with the venue style."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 140,
+        "end_line": 57,
+        "features": [],
+        "heading": "We’ve Requested State Review",
+        "line": 45,
+        "mean_z": 1.6723761692665702,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": 7.6391143798828125,
+            "z": 1.6723761692665702
+          }
+        ],
+        "prose": {
+          "end": 3281,
+          "start": 2458
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 3940,
+            "start": 3912
+          },
+          {
+            "end": 4087,
+            "start": 3944
+          },
+          {
+            "end": 4122,
+            "start": 4089
+          },
+          {
+            "end": 4207,
+            "start": 4124
+          },
+          {
+            "end": 4225,
+            "start": 4209
+          },
+          {
+            "end": 4231,
+            "start": 4227
+          },
+          {
+            "end": 4250,
+            "start": 4233
+          },
+          {
+            "end": 4272,
+            "start": 4252
+          },
+          {
+            "end": 4587,
+            "start": 4274
+          },
+          {
+            "end": 4623,
+            "start": 4589
+          },
+          {
+            "end": 4640,
+            "start": 4624
+          },
+          {
+            "end": 4722,
+            "start": 4721
+          },
+          {
+            "end": 4829,
+            "start": 4724
+          },
+          {
+            "end": 4846,
+            "start": 4841
+          }
+        ],
+        "units": {
+          "end": 28,
+          "start": 21
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 164,
+        "end_line": 45,
+        "features": [],
+        "heading": "The State Superintendent's Response: Not Our Lane",
+        "line": 32,
+        "mean_z": -0.34396151904523053,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": 3.340902805328369,
+            "z": -0.34396151904523053
+          }
+        ],
+        "prose": {
+          "end": 2458,
+          "start": 1594
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 2957,
+            "start": 2911
+          },
+          {
+            "end": 3346,
+            "start": 2961
+          },
+          {
+            "end": 3466,
+            "start": 3350
+          },
+          {
+            "end": 3718,
+            "start": 3468
+          },
+          {
+            "end": 3746,
+            "start": 3721
+          },
+          {
+            "end": 3805,
+            "start": 3804
+          },
+          {
+            "end": 3840,
+            "start": 3806
+          },
+          {
+            "end": 3912,
+            "start": 3910
+          }
+        ],
+        "units": {
+          "end": 21,
+          "start": 15
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 155,
+        "end_line": 90,
+        "features": [],
+        "heading": "💥 Help Us Fund the Fight",
+        "line": 65,
+        "mean_z": -0.3460048106454091,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": 3.3365471363067627,
+            "z": -0.3460048106454091
+          }
+        ],
+        "prose": {
+          "end": 4378,
+          "start": 3682
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 5265,
+            "start": 5260
+          },
+          {
+            "end": 5289,
+            "start": 5267
+          },
+          {
+            "end": 5468,
+            "start": 5293
+          },
+          {
+            "end": 5475,
+            "start": 5470
+          },
+          {
+            "end": 5492,
+            "start": 5477
+          },
+          {
+            "end": 5501,
+            "start": 5494
+          },
+          {
+            "end": 5541,
+            "start": 5502
+          },
+          {
+            "end": 5766,
+            "start": 5597
+          },
+          {
+            "end": 5796,
+            "start": 5767
+          },
+          {
+            "end": 5838,
+            "start": 5837
+          },
+          {
+            "end": 5869,
+            "start": 5845
+          },
+          {
+            "end": 5935,
+            "start": 5871
+          },
+          {
+            "end": 6040,
+            "start": 6027
+          },
+          {
+            "end": 6156,
+            "start": 6112
+          },
+          {
+            "end": 6191,
+            "start": 6158
+          },
+          {
+            "end": 6229,
+            "start": 6198
+          },
+          {
+            "end": 6242,
+            "start": 6233
+          }
+        ],
+        "units": {
+          "end": 45,
+          "start": 33
+        }
+      },
+      {
+        "agreement": 0,
+        "body_tokens": 237,
+        "end_line": 32,
+        "features": [],
+        "heading": "The School District’s Delay",
+        "line": 20,
+        "mean_z": -0.9824098395759305,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 4,
+            "raw_output": 1.97992742061615,
+            "z": -0.9824098395759305
+          }
+        ],
+        "prose": {
+          "end": 1594,
+          "start": 302
+        },
+        "rank": 4,
+        "source_ranges": [
+          {
+            "end": 1618,
+            "start": 1592
+          },
+          {
+            "end": 1943,
+            "start": 1622
+          },
+          {
+            "end": 1972,
+            "start": 1944
+          },
+          {
+            "end": 2068,
+            "start": 1973
+          },
+          {
+            "end": 2104,
+            "start": 2071
+          },
+          {
+            "end": 2149,
+            "start": 2107
+          },
+          {
+            "end": 2237,
+            "start": 2151
+          },
+          {
+            "end": 2696,
+            "start": 2241
+          },
+          {
+            "end": 2896,
+            "start": 2698
+          },
+          {
+            "end": 2911,
+            "start": 2908
+          }
+        ],
+        "units": {
+          "end": 15,
+          "start": 3
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "3": 2,
+    "4": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+  "prose_words": 661,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 3
+}

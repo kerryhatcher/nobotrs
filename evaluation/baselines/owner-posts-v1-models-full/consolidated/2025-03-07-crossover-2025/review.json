@@ -1,0 +1,338 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "fail"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Check whether repetition supports emphasis before varying it.",
+      "guidance_id": "structure.repeated-opening",
+      "keep_when": "Keep deliberate repetition, dialogue, procedures and learner exercises.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 40,
+        "end_line": 39,
+        "line": 39,
+        "source_ranges": [
+          {
+            "end": 1929,
+            "start": 1903
+          },
+          {
+            "end": 1942,
+            "start": 1930
+          }
+        ]
+      },
+      "matched_text": "Photos by Kerry Hatcher - CC BY-SA 4.0",
+      "message": null,
+      "rule_id": "structure.repeated-opening",
+      "sentence": "Photos by Kerry Hatcher - CC BY-SA 4.0",
+      "severity": "low",
+      "suggestion": "Repeated opening annotation: retain deliberate repetition, dialogue and parallel instructions.",
+      "suppressed": false,
+      "why": "Repeated sentence openings can obscure changing relationships."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "guidance_id": "structure.rule-of-three",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories.",
+      "leverage": 2,
+      "location": {
+        "column": 138,
+        "end_column": 304,
+        "end_line": 81,
+        "line": 81,
+        "source_ranges": [
+          {
+            "end": 3658,
+            "start": 3492
+          }
+        ]
+      },
+      "matched_text": "For the Arrow of light, this moment signifies the culmination of their hard work, dedication, and preparation to embrace the challenges of the next phase of Scouting.",
+      "message": null,
+      "rule_id": "structure.rule-of-three",
+      "sentence": "For the Arrow of light, this moment signifies the culmination of their hard work, dedication, and preparation to embrace the challenges of the next phase of Scouting.",
+      "severity": "low",
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "suppressed": false,
+      "why": "General qualities can leave the reader without a concrete property."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "guidance_id": "structure.rule-of-three",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 123,
+        "end_line": 133,
+        "line": 133,
+        "source_ranges": [
+          {
+            "end": 7063,
+            "start": 6941
+          }
+        ]
+      },
+      "matched_text": "This ceremony also reinforces the core values of Scouting: responsibility, community, and a commitment to personal growth.",
+      "message": null,
+      "rule_id": "structure.rule-of-three",
+      "sentence": "This ceremony also reinforces the core values of Scouting: responsibility, community, and a commitment to personal growth.",
+      "severity": "low",
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "suppressed": false,
+      "why": "General qualities can leave the reader without a concrete property."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 135,
+        "end_column": 148,
+        "end_line": 139,
+        "line": 139,
+        "source_ranges": [
+          {
+            "end": 7398,
+            "start": 7385
+          }
+        ]
+      },
+      "matched_text": "Kerry Hatcher",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Kerry Hatcher",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "formatting",
+      "context": null,
+      "fix": "Use the required or established heading style consistently.",
+      "guidance_id": "structure.title-case-headings",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "leverage": 4,
+      "location": {
+        "column": 4,
+        "end_column": 33,
+        "end_line": 79,
+        "line": 79,
+        "source_ranges": [
+          {
+            "end": 3353,
+            "start": 3324
+          }
+        ]
+      },
+      "matched_text": "What Is a Crossover Ceremony?",
+      "message": null,
+      "rule_id": "structure.title-case-headings",
+      "sentence": "What Is a Crossover Ceremony?",
+      "severity": "low",
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "suppressed": false,
+      "why": "Heading capitalization may distract if it conflicts with the venue style."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author\u2019s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 132,
+        "end_column": 139,
+        "end_line": 131,
+        "line": 131,
+        "source_ranges": [
+          {
+            "end": 6704,
+            "start": 6697
+          }
+        ]
+      },
+      "matched_text": "fosters",
+      "message": null,
+      "rule_id": "foster",
+      "sentence": "The Crossover Ceremony is more than just a formal event; it\u2019s a meaningful experience that builds confidence, instills values, and fosters excitement for the journey ahead.",
+      "severity": "medium",
+      "suggestion": "encourage",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "2": 3,
+    "3": 1,
+    "4": 1,
+    "5": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-03-07-crossover-2025.md",
+  "prose_words": 628,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 6,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-crossover-2025/backend-attempt-1.json",
+        "sha256": "b3da0442b3e5be83f48fed6c3238a5c967894be33e1bbe71ce980b1292a772ae",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-07-crossover-2025/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-07-crossover-2025/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

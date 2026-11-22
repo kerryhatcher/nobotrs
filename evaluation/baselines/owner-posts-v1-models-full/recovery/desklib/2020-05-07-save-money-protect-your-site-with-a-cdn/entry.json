@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.080511,
+  "file": "2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+  "input_sha256": "407eb33fbe07a3eb881d268cc45fdfbd95f84664070bdbc6748a3abe901225a6",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-07-save-money-protect-your-site-with-a-cdn/backend.json",
+  "reused_source_sha256": "4f45f68138c7b955d49396b01169bc594d7234929bf9dc663bbdbec4bc269e9a",
+  "status": "scored_full"
+}

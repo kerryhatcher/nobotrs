@@ -15,6 +15,8 @@ pub enum SignalFamily {
     LexicalDiversity,
     Readability,
     Compression,
+    /// Editorial observations; review only, never voting.
+    Structure,
     /// Informational local-model evidence. Never eligible for a heuristic quorum vote.
     Model,
 }
@@ -45,6 +47,11 @@ pub trait DetectorBackend: Send + Sync {
     fn family(&self) -> SignalFamily;
     fn availability(&self) -> Availability;
     fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome;
+
+    /// Opt-in local-model diagnostics. Heuristic backends retain their ordinary pass.
+    fn score_full(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        self.score(doc, deadline)
+    }
 
     fn score_batch(&self, docs: &[Document], deadline: Deadline) -> Vec<ScoreOutcome> {
         docs.iter().map(|doc| self.score(doc, deadline)).collect()

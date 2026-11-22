@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.049840999999999996,
+  "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+  "input_sha256": "3a0d70be5af63d61d4fa0156b2dd3ba645d8c4b1de550545264fcbad00d259da",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-13-gear-review-focusrite-scarlet-solo/backend.json",
+  "reused_source_sha256": "4b5c862bca41cc8cd622463cec5be52a3a26d7064ced524f223459d3b6bf8b64",
+  "status": "scored_full"
+}

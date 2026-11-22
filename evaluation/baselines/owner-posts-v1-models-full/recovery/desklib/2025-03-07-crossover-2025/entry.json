@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.060691,
+  "file": "2025-03-07-crossover-2025.md",
+  "input_sha256": "950ee24558ab0125e3fd2a3e596195d8978b5b5f089b3daa500576cad2d71b73",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-crossover-2025/backend.json",
+  "reused_source_sha256": "b3da0442b3e5be83f48fed6c3238a5c967894be33e1bbe71ce980b1292a772ae",
+  "status": "scored_full"
+}

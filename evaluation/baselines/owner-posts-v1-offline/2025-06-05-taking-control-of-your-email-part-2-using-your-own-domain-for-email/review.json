@@ -1,0 +1,486 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 3114,
+  "leverage_counts": {
+    "2": 2,
+    "3": 8,
+    "4": 3
+  },
+  "findings": [
+    {
+      "rule_id": "structure.rule-of-three",
+      "guidance_id": "structure.rule-of-three",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 64,
+        "column": 1,
+        "end_line": 64,
+        "end_column": 103,
+        "source_ranges": [
+          {
+            "start": 7856,
+            "end": 7958
+          }
+        ]
+      },
+      "matched_text": "Cloudflare is widely recommended for DNS hosting due to its speed, reliability, and security measures.",
+      "sentence": "Cloudflare is widely recommended for DNS hosting due to its speed, reliability, and security measures.",
+      "context": null,
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "message": null,
+      "why": "General qualities can leave the reader without a concrete property.",
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories."
+    },
+    {
+      "rule_id": "structure.rule-of-three",
+      "guidance_id": "structure.rule-of-three",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 137,
+        "column": 179,
+        "end_line": 137,
+        "end_column": 244,
+        "source_ranges": [
+          {
+            "start": 24251,
+            "end": 24316
+          }
+        ]
+      },
+      "matched_text": "It provides an excellent mix of usability, security, and privacy.",
+      "sentence": "It provides an excellent mix of usability, security, and privacy.",
+      "context": null,
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "message": null,
+      "why": "General qualities can leave the reader without a concrete property.",
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 23,
+        "column": 92,
+        "end_line": 23,
+        "end_column": 118,
+        "source_ranges": [
+          {
+            "start": 1963,
+            "end": 1989
+          }
+        ]
+      },
+      "matched_text": "Kerry HatcherKerry Hatcher",
+      "sentence": "Kerry HatcherKerry Hatcher",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 52,
+        "column": 298,
+        "end_line": 52,
+        "end_column": 300,
+        "source_ranges": [
+          {
+            "start": 6987,
+            "end": 6989
+          }
+        ]
+      },
+      "matched_text": "or",
+      "sentence": "or",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 99,
+        "column": 4,
+        "end_line": 99,
+        "end_column": 23,
+        "source_ranges": [
+          {
+            "start": 15461,
+            "end": 15480
+          }
+        ]
+      },
+      "matched_text": "Cloudflare Example:",
+      "sentence": "Cloudflare Example:",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 133,
+        "column": 109,
+        "end_line": 133,
+        "end_column": 112,
+        "source_ranges": [
+          {
+            "start": 23635,
+            "end": 23638
+          }
+        ]
+      },
+      "matched_text": "Set",
+      "sentence": "Set",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 147,
+        "column": 1,
+        "end_line": 147,
+        "end_column": 10,
+        "source_ranges": [
+          {
+            "start": 25475,
+            "end": 25484
+          }
+        ]
+      },
+      "matched_text": "Subscribe",
+      "sentence": "Subscribe",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 149,
+        "column": 1,
+        "end_line": 149,
+        "end_column": 12,
+        "source_ranges": [
+          {
+            "start": 25486,
+            "end": 25497
+          }
+        ]
+      },
+      "matched_text": "Email sent!",
+      "sentence": "Email sent!",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 151,
+        "column": 1,
+        "end_line": 151,
+        "end_column": 9,
+        "source_ranges": [
+          {
+            "start": 25541,
+            "end": 25549
+          }
+        ]
+      },
+      "matched_text": "No spam.",
+      "sentence": "No spam.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 151,
+        "column": 10,
+        "end_line": 151,
+        "end_column": 30,
+        "source_ranges": [
+          {
+            "start": 25550,
+            "end": 25570
+          }
+        ]
+      },
+      "matched_text": "Unsubscribe anytime.",
+      "sentence": "Unsubscribe anytime.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.title-case-headings",
+      "guidance_id": "structure.title-case-headings",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 29,
+        "column": 5,
+        "end_line": 29,
+        "end_column": 39,
+        "source_ranges": [
+          {
+            "start": 2225,
+            "end": 2259
+          }
+        ]
+      },
+      "matched_text": "Why Use a Custom Domain for Email?",
+      "sentence": "Why Use a Custom Domain for Email?",
+      "context": null,
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "message": null,
+      "why": "Heading capitalization may distract if it conflicts with the venue style.",
+      "fix": "Use the required or established heading style consistently.",
+      "keep_when": "Keep title case when the publication or naming convention requires it."
+    },
+    {
+      "rule_id": "structure.bold-inline-headers",
+      "guidance_id": "structure.bold-inline-headers",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 31,
+        "column": 5,
+        "end_line": 31,
+        "end_column": 59,
+        "source_ranges": [
+          {
+            "start": 2265,
+            "end": 2303
+          },
+          {
+            "start": 2305,
+            "end": 2319
+          }
+        ]
+      },
+      "matched_text": "Professionalism and Personal Branding: An email like",
+      "sentence": "Professionalism and Personal Branding: An email like",
+      "context": null,
+      "suggestion": "Use actual headings when they aid navigation; keep compact labels in forms and reference lists.",
+      "message": null,
+      "why": "Repeated bold labels may make navigation harder than real headings.",
+      "fix": "Consider semantic headings where readers need navigation.",
+      "keep_when": "Keep compact labels in forms, reference lists and venue-required layouts."
+    },
+    {
+      "rule_id": "structure.list-heavy",
+      "guidance_id": "structure.list-heavy",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 31,
+        "column": 5,
+        "end_line": 31,
+        "end_column": 59,
+        "source_ranges": [
+          {
+            "start": 2265,
+            "end": 2303
+          },
+          {
+            "start": 2305,
+            "end": 2319
+          }
+        ]
+      },
+      "matched_text": "Professionalism and Personal Branding: An email like",
+      "sentence": "Professionalism and Personal Branding: An email like",
+      "context": null,
+      "suggestion": "Check whether connected prose would clarify relationships; retain procedures and factual lists.",
+      "message": null,
+      "why": "Many full-sentence list items may hide how the claims connect.",
+      "fix": "Use prose when relationships matter more than parallel scanning.",
+      "keep_when": "Keep procedures, factual lists and accessible reference material."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "fail",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 13,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

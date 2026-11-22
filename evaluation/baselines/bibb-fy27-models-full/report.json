@@ -1,0 +1,3848 @@
+{
+  "actionable_finding_count": 9,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [
+            {
+              "block_context": 0,
+              "column": 28,
+              "disposition": "selected",
+              "end_column": 29,
+              "end_line": 13,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 13,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 904,
+                "start": 901
+              },
+              "raw_offset": {
+                "end": 904,
+                "start": 901
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 904,
+                  "start": 901
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 90,
+              "disposition": "selected",
+              "end_column": 91,
+              "end_line": 14,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 14,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1005,
+                "start": 1002
+              },
+              "raw_offset": {
+                "end": 1005,
+                "start": 1002
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1005,
+                  "start": 1002
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 26,
+              "disposition": "selected",
+              "end_column": 27,
+              "end_line": 15,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 15,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1041,
+                "start": 1038
+              },
+              "raw_offset": {
+                "end": 1041,
+                "start": 1038
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1041,
+                  "start": 1038
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 43,
+              "disposition": "selected",
+              "end_column": 44,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1094,
+                "start": 1091
+              },
+              "raw_offset": {
+                "end": 1094,
+                "start": 1091
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1094,
+                  "start": 1091
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 45,
+              "disposition": "selected",
+              "end_column": 46,
+              "end_line": 17,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 17,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1149,
+                "start": 1146
+              },
+              "raw_offset": {
+                "end": 1149,
+                "start": 1146
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1149,
+                  "start": 1146
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 18,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 18,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 18,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1267,
+                "start": 1264
+              },
+              "raw_offset": {
+                "end": 1267,
+                "start": 1264
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1267,
+                  "start": 1264
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 22,
+              "disposition": "selected",
+              "end_column": 23,
+              "end_line": 21,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 21,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1366,
+                "start": 1363
+              },
+              "raw_offset": {
+                "end": 1366,
+                "start": 1363
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1366,
+                  "start": 1363
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 32,
+              "disposition": "selected",
+              "end_column": 33,
+              "end_line": 22,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 22,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1408,
+                "start": 1405
+              },
+              "raw_offset": {
+                "end": 1408,
+                "start": 1405
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1408,
+                  "start": 1405
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 23,
+              "disposition": "selected",
+              "end_column": 24,
+              "end_line": 23,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 23,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1441,
+                "start": 1438
+              },
+              "raw_offset": {
+                "end": 1441,
+                "start": 1438
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1441,
+                  "start": 1438
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 0,
+              "column": 28,
+              "disposition": "selected",
+              "end_column": 29,
+              "end_line": 13,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 13,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 904,
+                "start": 901
+              },
+              "raw_offset": {
+                "end": 904,
+                "start": 901
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 904,
+                  "start": 901
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 90,
+              "disposition": "selected",
+              "end_column": 91,
+              "end_line": 14,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 14,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1005,
+                "start": 1002
+              },
+              "raw_offset": {
+                "end": 1005,
+                "start": 1002
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1005,
+                  "start": 1002
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 26,
+              "disposition": "selected",
+              "end_column": 27,
+              "end_line": 15,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 15,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1041,
+                "start": 1038
+              },
+              "raw_offset": {
+                "end": 1041,
+                "start": 1038
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1041,
+                  "start": 1038
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 43,
+              "disposition": "selected",
+              "end_column": 44,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1094,
+                "start": 1091
+              },
+              "raw_offset": {
+                "end": 1094,
+                "start": 1091
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1094,
+                  "start": 1091
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 45,
+              "disposition": "selected",
+              "end_column": 46,
+              "end_line": 17,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 17,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1149,
+                "start": 1146
+              },
+              "raw_offset": {
+                "end": 1149,
+                "start": 1146
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1149,
+                  "start": 1146
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 18,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 18,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 18,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1267,
+                "start": 1264
+              },
+              "raw_offset": {
+                "end": 1267,
+                "start": 1264
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1267,
+                  "start": 1264
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 22,
+              "disposition": "selected",
+              "end_column": 23,
+              "end_line": 21,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 21,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1366,
+                "start": 1363
+              },
+              "raw_offset": {
+                "end": 1366,
+                "start": 1363
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1366,
+                  "start": 1363
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 32,
+              "disposition": "selected",
+              "end_column": 33,
+              "end_line": 22,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 22,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1408,
+                "start": 1405
+              },
+              "raw_offset": {
+                "end": 1408,
+                "start": 1405
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1408,
+                  "start": 1405
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 0,
+              "column": 23,
+              "disposition": "selected",
+              "end_column": 24,
+              "end_line": 23,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 23,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1441,
+                "start": 1438
+              },
+              "raw_offset": {
+                "end": 1441,
+                "start": 1438
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1441,
+                  "start": 1438
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            }
+          ],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 9.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 9.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 2.586206896551724
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 348.0
+            }
+          },
+          "vote": "strong",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.9920162871203322
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 199.31173119489097
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 9.284926108374385
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6544479213232007
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.663431146944646
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -6.111106872558594
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 15848.525529999999,
+            "excerpt_bytes": 2235,
+            "excerpt_coverage": 0.9990880072959416,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.9990880072959416,
+            "full_coverage_output": -4.107330648399846,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.9990880072959416,
+            "precision": "float32",
+            "prepared_bytes": 2237,
+            "prepared_words": 348,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -6.111106872558594,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 169,
+                "heading": "Why 7.8% matters more than $23M",
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 722,
+                  "start": 0
+                },
+                "raw_output": -5.273125171661377,
+                "source_ranges": [
+                  {
+                    "end": 722,
+                    "start": 0
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 10,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 28,
+                "heading": "The cut menu",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 851,
+                  "start": 722
+                },
+                "raw_output": -0.7943753004074097,
+                "source_ranges": [
+                  {
+                    "end": 851,
+                    "start": 722
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 14,
+                  "start": 10
+                }
+              },
+              {
+                "body_tokens": 111,
+                "heading": "The categories, roughly:",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1283,
+                  "start": 851
+                },
+                "raw_output": -2.806673765182495,
+                "source_ranges": [
+                  {
+                    "end": 1283,
+                    "start": 851
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 21,
+                  "start": 14
+                }
+              },
+              {
+                "body_tokens": 203,
+                "heading": "Further cuts have been discussed previously outside the meeting:",
+                "index": 3,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2237,
+                  "start": 1283
+                },
+                "raw_output": -4.304948329925537,
+                "source_ranges": [
+                  {
+                    "end": 2236,
+                    "start": 1283
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 34,
+                  "start": 21
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "conpara",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+              "unit": "logit_margin",
+              "value": -9.756165504455566
+            },
+            "model_threshold": {
+              "method": "checkpoint_threshold_margin",
+              "unit": "logit",
+              "value": 2.9423828125
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "conpara",
+            "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+            "device": "cpu",
+            "elapsed_ms": 15154.625912,
+            "excerpt_bytes": 2149,
+            "excerpt_coverage": 0.9799361605107159,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.9799361605107159,
+            "full_coverage_output": -6.7433714210987095,
+            "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.9799361605107159,
+            "precision": "float32",
+            "prepared_bytes": 2193,
+            "prepared_words": 348,
+            "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+            "raw_output": -9.756165504455566,
+            "raw_units": "logit margin (AI - human; higher = machine-like)",
+            "runtime": "candle-debertav2",
+            "threshold": 2.9423828125,
+            "threshold_source": "checkpoint threshold_margin",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 169,
+                "heading": "Why 7.8% matters more than $23M",
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 722,
+                  "start": 0
+                },
+                "raw_output": -8.318933248519897,
+                "source_ranges": [
+                  {
+                    "end": 722,
+                    "start": 0
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 10,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 28,
+                "heading": "The cut menu",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 851,
+                  "start": 722
+                },
+                "raw_output": 9.038330078125,
+                "source_ranges": [
+                  {
+                    "end": 851,
+                    "start": 722
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 14,
+                  "start": 10
+                }
+              },
+              {
+                "body_tokens": 117,
+                "heading": "The categories, roughly:",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1283,
+                  "start": 851
+                },
+                "raw_output": -9.087918281555176,
+                "source_ranges": [
+                  {
+                    "end": 1283,
+                    "start": 851
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 21,
+                  "start": 14
+                }
+              },
+              {
+                "body_tokens": 206,
+                "heading": "Further cuts have been discussed previously outside the meeting:",
+                "index": 3,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2236,
+                  "start": 1283
+                },
+                "raw_output": -6.264272928237915,
+                "source_ranges": [
+                  {
+                    "end": 2236,
+                    "start": 1283
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 34,
+                  "start": 21
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "detectorscope",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -0.4390256404876709
+            },
+            "model_threshold": {
+              "method": "released logreg head",
+              "unit": "logit",
+              "value": 0.5008
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "detectorscope",
+            "code_revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+            "detectorscope": {
+              "active_features": 163,
+              "bias": 0.6096460819244385,
+              "feature_filter": 0.85,
+              "formatting_profile": "flat-whitespace-v1",
+              "omitted_features": 153,
+              "reconstruction_residual": -9.922086974256673e-8,
+              "remainder": -1.2202280014753342,
+              "top_features": [
+                {
+                  "contribution": 0.5466586947441101,
+                  "description": "repeated phrases or sequences in text",
+                  "highlights": [
+                    {
+                      "activation": 17.71303939819336,
+                      "prose_ranges": [
+                        {
+                          "end": 1441,
+                          "start": 1437
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1441,
+                          "start": 1437
+                        }
+                      ],
+                      "text": " —",
+                      "token_index": 359
+                    },
+                    {
+                      "activation": 15.389217376708984,
+                      "prose_ranges": [
+                        {
+                          "end": 1408,
+                          "start": 1404
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1408,
+                          "start": 1404
+                        }
+                      ],
+                      "text": " —",
+                      "token_index": 349
+                    },
+                    {
+                      "activation": 13.743873596191406,
+                      "prose_ranges": [
+                        {
+                          "end": 1094,
+                          "start": 1090
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1094,
+                          "start": 1090
+                        }
+                      ],
+                      "text": " —",
+                      "token_index": 276
+                    },
+                    {
+                      "activation": 13.489036560058594,
+                      "prose_ranges": [
+                        {
+                          "end": 1149,
+                          "start": 1145
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1149,
+                          "start": 1145
+                        }
+                      ],
+                      "text": " —",
+                      "token_index": 293
+                    },
+                    {
+                      "activation": 10.195627212524414,
+                      "prose_ranges": [
+                        {
+                          "end": 1041,
+                          "start": 1037
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1041,
+                          "start": 1037
+                        }
+                      ],
+                      "text": " —",
+                      "token_index": 261
+                    }
+                  ],
+                  "id": 33943
+                },
+                {
+                  "contribution": 0.3860209584236145,
+                  "description": "critical commentary or argumentative analysis of student policies and social responsibility",
+                  "highlights": [
+                    {
+                      "activation": 5.957821846008301,
+                      "prose_ranges": [
+                        {
+                          "end": 203,
+                          "start": 195
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 203,
+                          "start": 195
+                        }
+                      ],
+                      "text": " reserve",
+                      "token_index": 48
+                    },
+                    {
+                      "activation": 5.464982986450195,
+                      "prose_ranges": [
+                        {
+                          "end": 107,
+                          "start": 101
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 107,
+                          "start": 101
+                        }
+                      ],
+                      "text": " money",
+                      "token_index": 29
+                    },
+                    {
+                      "activation": 4.7890777587890625,
+                      "prose_ranges": [
+                        {
+                          "end": 222,
+                          "start": 221
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 222,
+                          "start": 221
+                        }
+                      ],
+                      "text": ")",
+                      "token_index": 53
+                    }
+                  ],
+                  "id": 44946
+                },
+                {
+                  "contribution": 0.23827515542507172,
+                  "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                  "highlights": [
+                    {
+                      "activation": 5.2768473625183105,
+                      "prose_ranges": [
+                        {
+                          "end": 627,
+                          "start": 623
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 627,
+                          "start": 623
+                        }
+                      ],
+                      "text": " the",
+                      "token_index": 164
+                    }
+                  ],
+                  "id": 41406
+                },
+                {
+                  "contribution": 0.18464499711990356,
+                  "description": "markdown formatting for headers or list items",
+                  "highlights": [
+                    {
+                      "activation": 13.008338928222656,
+                      "prose_ranges": [
+                        {
+                          "end": 1477,
+                          "start": 1476
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1477,
+                          "start": 1476
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 375
+                    },
+                    {
+                      "activation": 10.344947814941406,
+                      "prose_ranges": [
+                        {
+                          "end": 1777,
+                          "start": 1776
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1777,
+                          "start": 1776
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 432
+                    },
+                    {
+                      "activation": 8.024101257324219,
+                      "prose_ranges": [
+                        {
+                          "end": 1622,
+                          "start": 1621
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1622,
+                          "start": 1621
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 405
+                    }
+                  ],
+                  "id": 58731
+                },
+                {
+                  "contribution": 0.1354319155216217,
+                  "description": "the word been in passive voice or present perfect verb constructions",
+                  "highlights": [
+                    {
+                      "activation": 35.305809020996094,
+                      "prose_ranges": [
+                        {
+                          "end": 704,
+                          "start": 699
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 704,
+                          "start": 699
+                        }
+                      ],
+                      "text": " been",
+                      "token_index": 179
+                    },
+                    {
+                      "activation": 35.17510223388672,
+                      "prose_ranges": [
+                        {
+                          "end": 1298,
+                          "start": 1293
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1298,
+                          "start": 1293
+                        }
+                      ],
+                      "text": " been",
+                      "token_index": 329
+                    },
+                    {
+                      "activation": 17.563617706298828,
+                      "prose_ranges": [
+                        {
+                          "end": 1877,
+                          "start": 1873
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1877,
+                          "start": 1873
+                        }
+                      ],
+                      "text": " had",
+                      "token_index": 449
+                    }
+                  ],
+                  "id": 17065
+                },
+                {
+                  "contribution": -0.3146614730358124,
+                  "description": "numbers representing monetary amounts or currency values",
+                  "highlights": [
+                    {
+                      "activation": 115.98179626464844,
+                      "prose_ranges": [
+                        {
+                          "end": 29,
+                          "start": 28
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 29,
+                          "start": 28
+                        }
+                      ],
+                      "text": "2",
+                      "token_index": 11
+                    },
+                    {
+                      "activation": 106.25767517089844,
+                      "prose_ranges": [
+                        {
+                          "end": 30,
+                          "start": 29
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 30,
+                          "start": 29
+                        }
+                      ],
+                      "text": "3",
+                      "token_index": 12
+                    },
+                    {
+                      "activation": 90.52342224121094,
+                      "prose_ranges": [
+                        {
+                          "end": 2148,
+                          "start": 2147
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2148,
+                          "start": 2147
+                        }
+                      ],
+                      "text": "3",
+                      "token_index": 509
+                    },
+                    {
+                      "activation": 81.90282440185547,
+                      "prose_ranges": [
+                        {
+                          "end": 911,
+                          "start": 910
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 911,
+                          "start": 910
+                        }
+                      ],
+                      "text": "5",
+                      "token_index": 224
+                    },
+                    {
+                      "activation": 79.39617156982422,
+                      "prose_ranges": [
+                        {
+                          "end": 908,
+                          "start": 907
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 908,
+                          "start": 907
+                        }
+                      ],
+                      "text": "1",
+                      "token_index": 221
+                    }
+                  ],
+                  "id": 64867
+                },
+                {
+                  "contribution": -0.2950609028339386,
+                  "description": "markdown editing and formatting indicators",
+                  "highlights": [
+                    {
+                      "activation": 4.95074462890625,
+                      "prose_ranges": [
+                        {
+                          "end": 1568,
+                          "start": 1558
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1568,
+                          "start": 1558
+                        }
+                      ],
+                      "text": " recommend",
+                      "token_index": 390
+                    },
+                    {
+                      "activation": 4.407735824584961,
+                      "prose_ranges": [
+                        {
+                          "end": 1855,
+                          "start": 1848
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1855,
+                          "start": 1848
+                        }
+                      ],
+                      "text": " relief",
+                      "token_index": 444
+                    },
+                    {
+                      "activation": 3.6711692810058594,
+                      "prose_ranges": [
+                        {
+                          "end": 1834,
+                          "start": 1820
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1834,
+                          "start": 1820
+                        }
+                      ],
+                      "text": " consolidation",
+                      "token_index": 440
+                    }
+                  ],
+                  "id": 32030
+                },
+                {
+                  "contribution": -0.2503114640712738,
+                  "description": "words related to estimations or imprecise approximations",
+                  "highlights": [
+                    {
+                      "activation": 22.710899353027344,
+                      "prose_ranges": [
+                        {
+                          "end": 871,
+                          "start": 863
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 871,
+                          "start": 863
+                        }
+                      ],
+                      "text": " roughly",
+                      "token_index": 214
+                    },
+                    {
+                      "activation": 9.018315315246582,
+                      "prose_ranges": [
+                        {
+                          "end": 872,
+                          "start": 871
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 872,
+                          "start": 871
+                        }
+                      ],
+                      "text": ":",
+                      "token_index": 215
+                    },
+                    {
+                      "activation": 3.2771763801574707,
+                      "prose_ranges": [
+                        {
+                          "end": 862,
+                          "start": 851
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 862,
+                          "start": 851
+                        }
+                      ],
+                      "text": " categories",
+                      "token_index": 212
+                    },
+                    {
+                      "activation": 2.37349271774292,
+                      "prose_ranges": [
+                        {
+                          "end": 771,
+                          "start": 766
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 771,
+                          "start": 766
+                        }
+                      ],
+                      "text": " what",
+                      "token_index": 192
+                    },
+                    {
+                      "activation": 2.3205723762512207,
+                      "prose_ranges": [
+                        {
+                          "end": 863,
+                          "start": 862
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 863,
+                          "start": 862
+                        }
+                      ],
+                      "text": ",",
+                      "token_index": 213
+                    }
+                  ],
+                  "id": 4627
+                },
+                {
+                  "contribution": -0.24583636224269867,
+                  "description": "parenthetical clauses or aside remarks in text",
+                  "highlights": [
+                    {
+                      "activation": 4.476922988891602,
+                      "prose_ranges": [
+                        {
+                          "end": 1226,
+                          "start": 1223
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1226,
+                          "start": 1223
+                        }
+                      ],
+                      "text": " as",
+                      "token_index": 311
+                    },
+                    {
+                      "activation": 3.4779062271118164,
+                      "prose_ranges": [
+                        {
+                          "end": 1228,
+                          "start": 1226
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1228,
+                          "start": 1226
+                        }
+                      ],
+                      "text": " a",
+                      "token_index": 312
+                    },
+                    {
+                      "activation": 3.1086678504943848,
+                      "prose_ranges": [
+                        {
+                          "end": 1245,
+                          "start": 1240
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1245,
+                          "start": 1240
+                        }
+                      ],
+                      "text": " risk",
+                      "token_index": 314
+                    },
+                    {
+                      "activation": 2.59613037109375,
+                      "prose_ranges": [
+                        {
+                          "end": 695,
+                          "start": 690
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 695,
+                          "start": 690
+                        }
+                      ],
+                      "text": " that",
+                      "token_index": 176
+                    },
+                    {
+                      "activation": 2.5599989891052246,
+                      "prose_ranges": [
+                        {
+                          "end": 1223,
+                          "start": 1218
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1223,
+                          "start": 1218
+                        }
+                      ],
+                      "text": " this",
+                      "token_index": 310
+                    }
+                  ],
+                  "id": 7178
+                },
+                {
+                  "contribution": -0.21360523998737335,
+                  "description": "the symbol sequence -> commonly used for arrows or transition markers",
+                  "highlights": [
+                    {
+                      "activation": 15.199336051940918,
+                      "prose_ranges": [
+                        {
+                          "end": 373,
+                          "start": 370
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 373,
+                          "start": 370
+                        }
+                      ],
+                      "text": "–",
+                      "token_index": 83
+                    }
+                  ],
+                  "id": 50166
+                }
+              ]
+            },
+            "device": "cpu",
+            "elapsed_ms": 32775.096355,
+            "excerpt_bytes": 2237,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 530,
+            "execution_coverage": 1.0,
+            "full_coverage_output": -0.10769589310107024,
+            "model_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 2237,
+            "prepared_words": 348,
+            "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+            "raw_output": -0.4390256404876709,
+            "raw_units": "logit (higher = machine-like at the released head threshold)",
+            "runtime": "detectorscope-worker",
+            "threshold": 0.5008,
+            "threshold_source": "released logreg head threshold",
+            "token_coverage": 1.0,
+            "token_limit": 1024,
+            "tokenizer_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 183,
+                "detectorscope": {
+                  "active_features": 89,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 79,
+                  "reconstruction_residual": 7.043217919999735e-8,
+                  "remainder": -0.392644464969635,
+                  "top_features": [
+                    {
+                      "contribution": 0.3860209584236145,
+                      "description": "critical commentary or argumentative analysis of student policies and social responsibility",
+                      "highlights": [
+                        {
+                          "activation": 5.957821846008301,
+                          "prose_ranges": [
+                            {
+                              "end": 203,
+                              "start": 195
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 203,
+                              "start": 195
+                            }
+                          ],
+                          "text": " reserve",
+                          "token_index": 48
+                        },
+                        {
+                          "activation": 5.464982986450195,
+                          "prose_ranges": [
+                            {
+                              "end": 107,
+                              "start": 101
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 107,
+                              "start": 101
+                            }
+                          ],
+                          "text": " money",
+                          "token_index": 29
+                        },
+                        {
+                          "activation": 4.7890777587890625,
+                          "prose_ranges": [
+                            {
+                              "end": 222,
+                              "start": 221
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 222,
+                              "start": 221
+                            }
+                          ],
+                          "text": ")",
+                          "token_index": 53
+                        }
+                      ],
+                      "id": 44946
+                    },
+                    {
+                      "contribution": 0.23827515542507172,
+                      "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                      "highlights": [
+                        {
+                          "activation": 5.2768473625183105,
+                          "prose_ranges": [
+                            {
+                              "end": 627,
+                              "start": 623
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 627,
+                              "start": 623
+                            }
+                          ],
+                          "text": " the",
+                          "token_index": 164
+                        }
+                      ],
+                      "id": 41406
+                    },
+                    {
+                      "contribution": 0.1354319155216217,
+                      "description": "the word been in passive voice or present perfect verb constructions",
+                      "highlights": [
+                        {
+                          "activation": 35.305809020996094,
+                          "prose_ranges": [
+                            {
+                              "end": 704,
+                              "start": 699
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 704,
+                              "start": 699
+                            }
+                          ],
+                          "text": " been",
+                          "token_index": 179
+                        }
+                      ],
+                      "id": 17065
+                    },
+                    {
+                      "contribution": 0.07596862316131592,
+                      "description": "instructions on how to perform or accomplish specific tasks or processes",
+                      "highlights": [
+                        {
+                          "activation": 9.072381973266602,
+                          "prose_ranges": [
+                            {
+                              "end": 4,
+                              "start": 3
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 4,
+                              "start": 3
+                            }
+                          ],
+                          "text": " ",
+                          "token_index": 2
+                        }
+                      ],
+                      "id": 49384
+                    },
+                    {
+                      "contribution": 0.07328245043754578,
+                      "description": "words or phrases related to instructional titles often containing how to or specific project steps",
+                      "highlights": [
+                        {
+                          "activation": 12.935693740844728,
+                          "prose_ranges": [
+                            {
+                              "end": 16,
+                              "start": 8
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 16,
+                              "start": 8
+                            }
+                          ],
+                          "text": " matters",
+                          "token_index": 7
+                        },
+                        {
+                          "activation": 4.978694438934326,
+                          "prose_ranges": [
+                            {
+                              "end": 39,
+                              "start": 31
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 39,
+                              "start": 31
+                            }
+                          ],
+                          "text": " Schools",
+                          "token_index": 14
+                        },
+                        {
+                          "activation": 4.742419719696045,
+                          "prose_ranges": [
+                            {
+                              "end": 8,
+                              "start": 7
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 8,
+                              "start": 7
+                            }
+                          ],
+                          "text": "%",
+                          "token_index": 6
+                        },
+                        {
+                          "activation": 4.445031642913818,
+                          "prose_ranges": [
+                            {
+                              "end": 6,
+                              "start": 5
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 6,
+                              "start": 5
+                            }
+                          ],
+                          "text": ".",
+                          "token_index": 4
+                        }
+                      ],
+                      "id": 43394
+                    },
+                    {
+                      "contribution": -0.3146614730358124,
+                      "description": "numbers representing monetary amounts or currency values",
+                      "highlights": [
+                        {
+                          "activation": 115.98179626464844,
+                          "prose_ranges": [
+                            {
+                              "end": 29,
+                              "start": 28
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 29,
+                              "start": 28
+                            }
+                          ],
+                          "text": "2",
+                          "token_index": 11
+                        },
+                        {
+                          "activation": 106.25767517089844,
+                          "prose_ranges": [
+                            {
+                              "end": 30,
+                              "start": 29
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 30,
+                              "start": 29
+                            }
+                          ],
+                          "text": "3",
+                          "token_index": 12
+                        },
+                        {
+                          "activation": 25.64938735961914,
+                          "prose_ranges": [
+                            {
+                              "end": 31,
+                              "start": 30
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 31,
+                              "start": 30
+                            }
+                          ],
+                          "text": "M",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 17.829418182373047,
+                          "prose_ranges": [
+                            {
+                              "end": 8,
+                              "start": 7
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 8,
+                              "start": 7
+                            }
+                          ],
+                          "text": "%",
+                          "token_index": 6
+                        }
+                      ],
+                      "id": 64867
+                    },
+                    {
+                      "contribution": -0.21360523998737335,
+                      "description": "the symbol sequence -> commonly used for arrows or transition markers",
+                      "highlights": [
+                        {
+                          "activation": 15.199336051940918,
+                          "prose_ranges": [
+                            {
+                              "end": 373,
+                              "start": 370
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 373,
+                              "start": 370
+                            }
+                          ],
+                          "text": "–",
+                          "token_index": 83
+                        }
+                      ],
+                      "id": 50166
+                    },
+                    {
+                      "contribution": -0.14255845546722412,
+                      "description": "parenthetical clauses or aside remarks in text",
+                      "highlights": [
+                        {
+                          "activation": 2.59613037109375,
+                          "prose_ranges": [
+                            {
+                              "end": 695,
+                              "start": 690
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 695,
+                              "start": 690
+                            }
+                          ],
+                          "text": " that",
+                          "token_index": 176
+                        },
+                        {
+                          "activation": 2.533860683441162,
+                          "prose_ranges": [
+                            {
+                              "end": 716,
+                              "start": 712
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 716,
+                              "start": 712
+                            }
+                          ],
+                          "text": " out",
+                          "token_index": 181
+                        },
+                        {
+                          "activation": 2.3175549507141113,
+                          "prose_ranges": [
+                            {
+                              "end": 699,
+                              "start": 698
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 699,
+                              "start": 698
+                            }
+                          ],
+                          "text": "s",
+                          "token_index": 178
+                        }
+                      ],
+                      "id": 7178
+                    },
+                    {
+                      "contribution": -0.1423063725233078,
+                      "description": "subjective judgment phrases or opinions about quality",
+                      "highlights": [
+                        {
+                          "activation": 35.302330017089844,
+                          "prose_ranges": [
+                            {
+                              "end": 376,
+                              "start": 375
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 376,
+                              "start": 375
+                            }
+                          ],
+                          "text": "%",
+                          "token_index": 86
+                        },
+                        {
+                          "activation": 19.571908950805664,
+                          "prose_ranges": [
+                            {
+                              "end": 363,
+                              "start": 360
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 363,
+                              "start": 360
+                            }
+                          ],
+                          "text": " in",
+                          "token_index": 78
+                        },
+                        {
+                          "activation": 18.821544647216797,
+                          "prose_ranges": [
+                            {
+                              "end": 391,
+                              "start": 388
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 391,
+                              "start": 388
+                            }
+                          ],
+                          "text": " is",
+                          "token_index": 91
+                        },
+                        {
+                          "activation": 17.859119415283203,
+                          "prose_ranges": [
+                            {
+                              "end": 409,
+                              "start": 404
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 409,
+                              "start": 404
+                            }
+                          ],
+                          "text": " drop",
+                          "token_index": 94
+                        },
+                        {
+                          "activation": 16.085935592651367,
+                          "prose_ranges": [
+                            {
+                              "end": 375,
+                              "start": 374
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 375,
+                              "start": 374
+                            }
+                          ],
+                          "text": "0",
+                          "token_index": 85
+                        }
+                      ],
+                      "id": 46455
+                    },
+                    {
+                      "contribution": -0.13262630999088287,
+                      "description": "words describing specific physical shapes or objects used as visual descriptors",
+                      "highlights": [
+                        {
+                          "activation": 17.34008026123047,
+                          "prose_ranges": [
+                            {
+                              "end": 479,
+                              "start": 474
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 479,
+                              "start": 474
+                            }
+                          ],
+                          "text": " deck",
+                          "token_index": 118
+                        },
+                        {
+                          "activation": 7.45306921005249,
+                          "prose_ranges": [
+                            {
+                              "end": 387,
+                              "start": 383
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 387,
+                              "start": 383
+                            }
+                          ],
+                          "text": " Bib",
+                          "token_index": 89
+                        }
+                      ],
+                      "id": 41667
+                    }
+                  ]
+                },
+                "heading": "Why 7.8% matters more than $23M",
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 722,
+                  "start": 0
+                },
+                "raw_output": 0.18022286891937256,
+                "source_ranges": [
+                  {
+                    "end": 722,
+                    "start": 0
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 10,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 28,
+                "detectorscope": {
+                  "active_features": 22,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 12,
+                  "reconstruction_residual": -2.9627699404954914e-8,
+                  "remainder": -0.037164583714911714,
+                  "top_features": [
+                    {
+                      "contribution": 0.24503974616527557,
+                      "description": "neuron activates on random text fragments and noisy character sequences often found in garbled or fragmented data",
+                      "highlights": [
+                        {
+                          "activation": 5.426656246185303,
+                          "prose_ranges": [
+                            {
+                              "end": 731,
+                              "start": 726
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 731,
+                              "start": 726
+                            }
+                          ],
+                          "text": " menu",
+                          "token_index": 2
+                        }
+                      ],
+                      "id": 41406
+                    },
+                    {
+                      "contribution": 0.0445433109998703,
+                      "description": "random or incoherent character sequences and noise patterns",
+                      "highlights": [
+                        {
+                          "activation": 11.862876892089844,
+                          "prose_ranges": [
+                            {
+                              "end": 751,
+                              "start": 744
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 751,
+                              "start": 744
+                            }
+                          ],
+                          "text": " slides",
+                          "token_index": 6
+                        },
+                        {
+                          "activation": 11.50682258605957,
+                          "prose_ranges": [
+                            {
+                              "end": 726,
+                              "start": 722
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 726,
+                              "start": 722
+                            }
+                          ],
+                          "text": " cut",
+                          "token_index": 1
+                        },
+                        {
+                          "activation": 9.584787368774414,
+                          "prose_ranges": [
+                            {
+                              "end": 731,
+                              "start": 726
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 731,
+                              "start": 726
+                            }
+                          ],
+                          "text": " menu",
+                          "token_index": 2
+                        }
+                      ],
+                      "id": 50299
+                    },
+                    {
+                      "contribution": 0.026546698063611984,
+                      "description": "words or phrases related to gaining understanding or testing information",
+                      "highlights": [
+                        {
+                          "activation": 8.55864143371582,
+                          "prose_ranges": [
+                            {
+                              "end": 836,
+                              "start": 821
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 836,
+                              "start": 821
+                            }
+                          ],
+                          "text": " recommendation",
+                          "token_index": 23
+                        }
+                      ],
+                      "id": 36884
+                    },
+                    {
+                      "contribution": 0.0010152189061045649,
+                      "description": "emotional distress or tragic narratives",
+                      "highlights": [
+                        {
+                          "activation": 9.62653636932373,
+                          "prose_ranges": [
+                            {
+                              "end": 851,
+                              "start": 846
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 851,
+                              "start": 846
+                            }
+                          ],
+                          "text": " The",
+                          "token_index": 28
+                        }
+                      ],
+                      "id": 54983
+                    },
+                    {
+                      "contribution": 0.00021998296142555773,
+                      "description": "word today followed by the possessive apostrophe or as a standalone temporal adverb",
+                      "highlights": [
+                        {
+                          "activation": 13.643144607543944,
+                          "prose_ranges": [
+                            {
+                              "end": 744,
+                              "start": 743
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 744,
+                              "start": 743
+                            }
+                          ],
+                          "text": "s",
+                          "token_index": 5
+                        }
+                      ],
+                      "id": 49475
+                    },
+                    {
+                      "contribution": -0.1065741702914238,
+                      "description": "words describing specific physical shapes or objects used as visual descriptors",
+                      "highlights": [
+                        {
+                          "activation": 13.933921813964844,
+                          "prose_ranges": [
+                            {
+                              "end": 845,
+                              "start": 839
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 845,
+                              "start": 839
+                            }
+                          ],
+                          "text": " floor",
+                          "token_index": 26
+                        },
+                        {
+                          "activation": 5.188507556915283,
+                          "prose_ranges": [
+                            {
+                              "end": 758,
+                              "start": 751
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 758,
+                              "start": 751
+                            }
+                          ],
+                          "text": " walked",
+                          "token_index": 7
+                        },
+                        {
+                          "activation": 5.036130905151367,
+                          "prose_ranges": [
+                            {
+                              "end": 731,
+                              "start": 726
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 731,
+                              "start": 726
+                            }
+                          ],
+                          "text": " menu",
+                          "token_index": 2
+                        }
+                      ],
+                      "id": 41667
+                    },
+                    {
+                      "contribution": -0.04217652603983879,
+                      "description": "words related to estimations or imprecise approximations",
+                      "highlights": [
+                        {
+                          "activation": 3.826699733734131,
+                          "prose_ranges": [
+                            {
+                              "end": 771,
+                              "start": 766
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 771,
+                              "start": 766
+                            }
+                          ],
+                          "text": " what",
+                          "token_index": 9
+                        }
+                      ],
+                      "id": 4627
+                    },
+                    {
+                      "contribution": -0.038912881165742874,
+                      "description": "first person past tense narrative reflecting on a completed interaction or decision",
+                      "highlights": [
+                        {
+                          "activation": 5.123411178588867,
+                          "prose_ranges": [
+                            {
+                              "end": 839,
+                              "start": 837
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 839,
+                              "start": 837
+                            }
+                          ],
+                          "text": " A",
+                          "token_index": 25
+                        }
+                      ],
+                      "id": 19102
+                    },
+                    {
+                      "contribution": -0.028047090396285057,
+                      "description": "words or phrases used to reference or transition to other people's contributions or answers in a discussion",
+                      "highlights": [
+                        {
+                          "activation": 4.807713031768799,
+                          "prose_ranges": [
+                            {
+                              "end": 751,
+                              "start": 744
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 751,
+                              "start": 744
+                            }
+                          ],
+                          "text": " slides",
+                          "token_index": 6
+                        }
+                      ],
+                      "id": 39030
+                    },
+                    {
+                      "contribution": -0.022465689107775688,
+                      "description": "subjective judgment phrases or opinions about quality",
+                      "highlights": [
+                        {
+                          "activation": 5.573124408721924,
+                          "prose_ranges": [
+                            {
+                              "end": 758,
+                              "start": 751
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 758,
+                              "start": 751
+                            }
+                          ],
+                          "text": " walked",
+                          "token_index": 7
+                        }
+                      ],
+                      "id": 46455
+                    }
+                  ]
+                },
+                "heading": "The cut menu",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 851,
+                  "start": 722
+                },
+                "raw_output": 0.6516700983047485,
+                "source_ranges": [
+                  {
+                    "end": 851,
+                    "start": 722
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 14,
+                  "start": 10
+                }
+              },
+              {
+                "body_tokens": 115,
+                "detectorscope": {
+                  "active_features": 59,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 49,
+                  "reconstruction_residual": 5.297260941006243e-8,
+                  "remainder": -0.3676802543923259,
+                  "top_features": [
+                    {
+                      "contribution": 0.5234650373458862,
+                      "description": "repeated phrases or sequences in text",
+                      "highlights": [
+                        {
+                          "activation": 16.961509704589844,
+                          "prose_ranges": [
+                            {
+                              "end": 1094,
+                              "start": 1090
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1094,
+                              "start": 1090
+                            }
+                          ],
+                          "text": " —",
+                          "token_index": 65
+                        },
+                        {
+                          "activation": 15.25082015991211,
+                          "prose_ranges": [
+                            {
+                              "end": 1149,
+                              "start": 1145
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1149,
+                              "start": 1145
+                            }
+                          ],
+                          "text": " —",
+                          "token_index": 82
+                        },
+                        {
+                          "activation": 12.62106704711914,
+                          "prose_ranges": [
+                            {
+                              "end": 1041,
+                              "start": 1037
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1041,
+                              "start": 1037
+                            }
+                          ],
+                          "text": " —",
+                          "token_index": 50
+                        },
+                        {
+                          "activation": 10.594207763671877,
+                          "prose_ranges": [
+                            {
+                              "end": 1090,
+                              "start": 1089
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1090,
+                              "start": 1089
+                            }
+                          ],
+                          "text": ")",
+                          "token_index": 64
+                        },
+                        {
+                          "activation": 7.760350704193115,
+                          "prose_ranges": [
+                            {
+                              "end": 1100,
+                              "start": 1099
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1100,
+                              "start": 1099
+                            }
+                          ],
+                          "text": "8",
+                          "token_index": 69
+                        }
+                      ],
+                      "id": 33943
+                    },
+                    {
+                      "contribution": 0.02454855479300022,
+                      "description": "wikipedia category labels or related metadata markers",
+                      "highlights": [
+                        {
+                          "activation": 14.051069259643556,
+                          "prose_ranges": [
+                            {
+                              "end": 862,
+                              "start": 851
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 862,
+                              "start": 851
+                            }
+                          ],
+                          "text": " categories",
+                          "token_index": 1
+                        }
+                      ],
+                      "id": 34180
+                    },
+                    {
+                      "contribution": 0.01812697760760784,
+                      "description": "word important and its synonyms like crucial when used to emphasize the significance of advice or caution",
+                      "highlights": [
+                        {
+                          "activation": 7.759639739990234,
+                          "prose_ranges": [
+                            {
+                              "end": 1009,
+                              "start": 1008
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1009,
+                              "start": 1008
+                            }
+                          ],
+                          "text": "1",
+                          "token_index": 41
+                        }
+                      ],
+                      "id": 64577
+                    },
+                    {
+                      "contribution": 0.008084536530077457,
+                      "description": "dates and timestamps in forum signatures or metadata",
+                      "highlights": [
+                        {
+                          "activation": 11.05327320098877,
+                          "prose_ranges": [
+                            {
+                              "end": 911,
+                              "start": 910
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 911,
+                              "start": 910
+                            }
+                          ],
+                          "text": "5",
+                          "token_index": 13
+                        }
+                      ],
+                      "id": 51995
+                    },
+                    {
+                      "contribution": 0.00508028082549572,
+                      "description": "word this used as a demonstrative pronoun or subject",
+                      "highlights": [
+                        {
+                          "activation": 37.799949645996094,
+                          "prose_ranges": [
+                            {
+                              "end": 1223,
+                              "start": 1218
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1223,
+                              "start": 1218
+                            }
+                          ],
+                          "text": " this",
+                          "token_index": 99
+                        }
+                      ],
+                      "id": 4181
+                    },
+                    {
+                      "contribution": -0.26110169291496277,
+                      "description": "words related to estimations or imprecise approximations",
+                      "highlights": [
+                        {
+                          "activation": 23.689903259277344,
+                          "prose_ranges": [
+                            {
+                              "end": 871,
+                              "start": 863
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 871,
+                              "start": 863
+                            }
+                          ],
+                          "text": " roughly",
+                          "token_index": 3
+                        },
+                        {
+                          "activation": 11.965869903564451,
+                          "prose_ranges": [
+                            {
+                              "end": 872,
+                              "start": 871
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 872,
+                              "start": 871
+                            }
+                          ],
+                          "text": ":",
+                          "token_index": 4
+                        }
+                      ],
+                      "id": 4627
+                    },
+                    {
+                      "contribution": -0.24834634363651276,
+                      "description": "parenthetical clauses or aside remarks in text",
+                      "highlights": [
+                        {
+                          "activation": 4.522632122039795,
+                          "prose_ranges": [
+                            {
+                              "end": 1226,
+                              "start": 1223
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1226,
+                              "start": 1223
+                            }
+                          ],
+                          "text": " as",
+                          "token_index": 100
+                        },
+                        {
+                          "activation": 3.535533905029297,
+                          "prose_ranges": [
+                            {
+                              "end": 1228,
+                              "start": 1226
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1228,
+                              "start": 1226
+                            }
+                          ],
+                          "text": " a",
+                          "token_index": 101
+                        },
+                        {
+                          "activation": 2.821718692779541,
+                          "prose_ranges": [
+                            {
+                              "end": 1223,
+                              "start": 1218
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1223,
+                              "start": 1218
+                            }
+                          ],
+                          "text": " this",
+                          "token_index": 99
+                        },
+                        {
+                          "activation": 2.7683000564575195,
+                          "prose_ranges": [
+                            {
+                              "end": 1245,
+                              "start": 1240
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1245,
+                              "start": 1240
+                            }
+                          ],
+                          "text": " risk",
+                          "token_index": 103
+                        },
+                        {
+                          "activation": 2.492290496826172,
+                          "prose_ranges": [
+                            {
+                              "end": 1196,
+                              "start": 1195
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1196,
+                              "start": 1195
+                            }
+                          ],
+                          "text": ";",
+                          "token_index": 95
+                        }
+                      ],
+                      "id": 7178
+                    },
+                    {
+                      "contribution": -0.2430957406759262,
+                      "description": "numbers representing monetary amounts or currency values",
+                      "highlights": [
+                        {
+                          "activation": 89.60321807861328,
+                          "prose_ranges": [
+                            {
+                              "end": 911,
+                              "start": 910
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 911,
+                              "start": 910
+                            }
+                          ],
+                          "text": "5",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 84.7219009399414,
+                          "prose_ranges": [
+                            {
+                              "end": 908,
+                              "start": 907
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 908,
+                              "start": 907
+                            }
+                          ],
+                          "text": "1",
+                          "token_index": 10
+                        },
+                        {
+                          "activation": 72.92044067382812,
+                          "prose_ranges": [
+                            {
+                              "end": 910,
+                              "start": 909
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 910,
+                              "start": 909
+                            }
+                          ],
+                          "text": "2",
+                          "token_index": 12
+                        },
+                        {
+                          "activation": 71.96306610107422,
+                          "prose_ranges": [
+                            {
+                              "end": 1009,
+                              "start": 1008
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1009,
+                              "start": 1008
+                            }
+                          ],
+                          "text": "1",
+                          "token_index": 41
+                        },
+                        {
+                          "activation": 68.21892547607422,
+                          "prose_ranges": [
+                            {
+                              "end": 1045,
+                              "start": 1044
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1045,
+                              "start": 1044
+                            }
+                          ],
+                          "text": "2",
+                          "token_index": 52
+                        }
+                      ],
+                      "id": 64867
+                    },
+                    {
+                      "contribution": -0.09939680248498917,
+                      "description": "accounting and bookkeeping ledger entries involving debit credit and bank account transactions",
+                      "highlights": [
+                        {
+                          "activation": 27.741838455200195,
+                          "prose_ranges": [
+                            {
+                              "end": 1258,
+                              "start": 1252
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1258,
+                              "start": 1252
+                            }
+                          ],
+                          "text": " small",
+                          "token_index": 106
+                        },
+                        {
+                          "activation": 13.594175338745115,
+                          "prose_ranges": [
+                            {
+                              "end": 1252,
+                              "start": 1246
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1252,
+                              "start": 1246
+                            }
+                          ],
+                          "text": " Other",
+                          "token_index": 105
+                        },
+                        {
+                          "activation": 12.028545379638672,
+                          "prose_ranges": [
+                            {
+                              "end": 1263,
+                              "start": 1258
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1263,
+                              "start": 1258
+                            }
+                          ],
+                          "text": " cuts",
+                          "token_index": 107
+                        },
+                        {
+                          "activation": 10.840333938598633,
+                          "prose_ranges": [
+                            {
+                              "end": 1275,
+                              "start": 1274
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1275,
+                              "start": 1274
+                            }
+                          ],
+                          "text": "M",
+                          "token_index": 114
+                        },
+                        {
+                          "activation": 9.824138641357422,
+                          "prose_ranges": [
+                            {
+                              "end": 1223,
+                              "start": 1218
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1223,
+                              "start": 1218
+                            }
+                          ],
+                          "text": " this",
+                          "token_index": 99
+                        }
+                      ],
+                      "id": 60396
+                    },
+                    {
+                      "contribution": -0.05894651636481285,
+                      "description": "mathematical notation or formal logical proof structures",
+                      "highlights": [
+                        {
+                          "activation": 2.3000104427337646,
+                          "prose_ranges": [
+                            {
+                              "end": 871,
+                              "start": 863
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 871,
+                              "start": 863
+                            }
+                          ],
+                          "text": " roughly",
+                          "token_index": 3
+                        }
+                      ],
+                      "id": 15773
+                    }
+                  ]
+                },
+                "heading": "The categories, roughly:",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1283,
+                  "start": 851
+                },
+                "raw_output": -0.08961588144302368,
+                "source_ranges": [
+                  {
+                    "end": 1283,
+                    "start": 851
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 21,
+                  "start": 14
+                }
+              },
+              {
+                "body_tokens": 203,
+                "detectorscope": {
+                  "active_features": 91,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 81,
+                  "reconstruction_residual": 6.170012056827545e-9,
+                  "remainder": -0.8025128208100796,
+                  "top_features": [
+                    {
+                      "contribution": 0.22419309616088867,
+                      "description": "repeated phrases or sequences in text",
+                      "highlights": [
+                        {
+                          "activation": 7.264388561248779,
+                          "prose_ranges": [
+                            {
+                              "end": 1441,
+                              "start": 1437
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1441,
+                              "start": 1437
+                            }
+                          ],
+                          "text": " —",
+                          "token_index": 33
+                        }
+                      ],
+                      "id": 33943
+                    },
+                    {
+                      "contribution": 0.13693462312221527,
+                      "description": "the word been in passive voice or present perfect verb constructions",
+                      "highlights": [
+                        {
+                          "activation": 35.69755172729492,
+                          "prose_ranges": [
+                            {
+                              "end": 1298,
+                              "start": 1293
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1298,
+                              "start": 1293
+                            }
+                          ],
+                          "text": " been",
+                          "token_index": 3
+                        },
+                        {
+                          "activation": 17.205486297607422,
+                          "prose_ranges": [
+                            {
+                              "end": 1877,
+                              "start": 1873
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1877,
+                              "start": 1873
+                            }
+                          ],
+                          "text": " had",
+                          "token_index": 123
+                        }
+                      ],
+                      "id": 17065
+                    },
+                    {
+                      "contribution": 0.11439815163612366,
+                      "description": "relative pronoun who or whose often following a noun or pronoun",
+                      "highlights": [
+                        {
+                          "activation": 38.22443008422851,
+                          "prose_ranges": [
+                            {
+                              "end": 1735,
+                              "start": 1731
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1735,
+                              "start": 1731
+                            }
+                          ],
+                          "text": " who",
+                          "token_index": 98
+                        }
+                      ],
+                      "id": 22576
+                    },
+                    {
+                      "contribution": 0.06522933393716812,
+                      "description": "past participle been often following has or have",
+                      "highlights": [
+                        {
+                          "activation": 28.025821685791016,
+                          "prose_ranges": [
+                            {
+                              "end": 1298,
+                              "start": 1293
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1298,
+                              "start": 1293
+                            }
+                          ],
+                          "text": " been",
+                          "token_index": 3
+                        },
+                        {
+                          "activation": 9.66100788116455,
+                          "prose_ranges": [
+                            {
+                              "end": 1877,
+                              "start": 1873
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1877,
+                              "start": 1873
+                            }
+                          ],
+                          "text": " had",
+                          "token_index": 123
+                        }
+                      ],
+                      "id": 14424
+                    },
+                    {
+                      "contribution": 0.04522432014346123,
+                      "description": "introductory transition words signaling a summary or final thought",
+                      "highlights": [
+                        {
+                          "activation": 9.157069206237791,
+                          "prose_ranges": [
+                            {
+                              "end": 1456,
+                              "start": 1455
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1456,
+                              "start": 1455
+                            }
+                          ],
+                          "text": ":",
+                          "token_index": 41
+                        },
+                        {
+                          "activation": 7.11106014251709,
+                          "prose_ranges": [
+                            {
+                              "end": 1455,
+                              "start": 1449
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1455,
+                              "start": 1449
+                            }
+                          ],
+                          "text": " Total",
+                          "token_index": 40
+                        }
+                      ],
+                      "id": 37105
+                    },
+                    {
+                      "contribution": -0.2531120181083679,
+                      "description": "markdown editing and formatting indicators",
+                      "highlights": [
+                        {
+                          "activation": 4.246896266937256,
+                          "prose_ranges": [
+                            {
+                              "end": 1834,
+                              "start": 1820
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1834,
+                              "start": 1820
+                            }
+                          ],
+                          "text": " consolidation",
+                          "token_index": 114
+                        }
+                      ],
+                      "id": 32030
+                    },
+                    {
+                      "contribution": -0.24012868106365204,
+                      "description": "numbers representing monetary amounts or currency values",
+                      "highlights": [
+                        {
+                          "activation": 88.50958251953125,
+                          "prose_ranges": [
+                            {
+                              "end": 2148,
+                              "start": 2147
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2148,
+                              "start": 2147
+                            }
+                          ],
+                          "text": "3",
+                          "token_index": 183
+                        },
+                        {
+                          "activation": 87.0956802368164,
+                          "prose_ranges": [
+                            {
+                              "end": 1370,
+                              "start": 1369
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1370,
+                              "start": 1369
+                            }
+                          ],
+                          "text": "3",
+                          "token_index": 14
+                        },
+                        {
+                          "activation": 79.39777374267578,
+                          "prose_ranges": [
+                            {
+                              "end": 1589,
+                              "start": 1588
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1589,
+                              "start": 1588
+                            }
+                          ],
+                          "text": "8",
+                          "token_index": 71
+                        },
+                        {
+                          "activation": 63.06990051269531,
+                          "prose_ranges": [
+                            {
+                              "end": 1412,
+                              "start": 1411
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1412,
+                              "start": 1411
+                            }
+                          ],
+                          "text": "1",
+                          "token_index": 25
+                        },
+                        {
+                          "activation": 61.720603942871094,
+                          "prose_ranges": [
+                            {
+                              "end": 1466,
+                              "start": 1465
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1466,
+                              "start": 1465
+                            }
+                          ],
+                          "text": "5",
+                          "token_index": 45
+                        }
+                      ],
+                      "id": 64867
+                    },
+                    {
+                      "contribution": -0.14196044206619263,
+                      "description": "parenthetical clauses or aside remarks in text",
+                      "highlights": [
+                        {
+                          "activation": 2.585239887237549,
+                          "prose_ranges": [
+                            {
+                              "end": 1558,
+                              "start": 1554
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1558,
+                              "start": 1554
+                            }
+                          ],
+                          "text": " not",
+                          "token_index": 63
+                        }
+                      ],
+                      "id": 7178
+                    },
+                    {
+                      "contribution": -0.1224275678396225,
+                      "description": "informal intensifiers and conversational fillers like effing super and ol",
+                      "highlights": [
+                        {
+                          "activation": 14.34042739868164,
+                          "prose_ranges": [
+                            {
+                              "end": 1549,
+                              "start": 1542
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1549,
+                              "start": 1542
+                            }
+                          ],
+                          "text": " flatly",
+                          "token_index": 61
+                        },
+                        {
+                          "activation": 4.785900115966797,
+                          "prose_ranges": [
+                            {
+                              "end": 1848,
+                              "start": 1842
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1848,
+                              "start": 1842
+                            }
+                          ],
+                          "text": " sharp",
+                          "token_index": 117
+                        }
+                      ],
+                      "id": 48215
+                    },
+                    {
+                      "contribution": -0.11771485954523088,
+                      "description": "accounting and bookkeeping ledger entries involving debit credit and bank account transactions",
+                      "highlights": [
+                        {
+                          "activation": 32.85444259643555,
+                          "prose_ranges": [
+                            {
+                              "end": 1839,
+                              "start": 1834
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1839,
+                              "start": 1834
+                            }
+                          ],
+                          "text": " line",
+                          "token_index": 115
+                        },
+                        {
+                          "activation": 18.279462814331055,
+                          "prose_ranges": [
+                            {
+                              "end": 1503,
+                              "start": 1497
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1503,
+                              "start": 1497
+                            }
+                          ],
+                          "text": " those",
+                          "token_index": 54
+                        },
+                        {
+                          "activation": 15.437826156616213,
+                          "prose_ranges": [
+                            {
+                              "end": 1597,
+                              "start": 1589
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1597,
+                              "start": 1589
+                            }
+                          ],
+                          "text": " million",
+                          "token_index": 72
+                        },
+                        {
+                          "activation": 13.294015884399414,
+                          "prose_ranges": [
+                            {
+                              "end": 1616,
+                              "start": 1606
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1616,
+                              "start": 1606
+                            }
+                          ],
+                          "text": " balancing",
+                          "token_index": 75
+                        },
+                        {
+                          "activation": 12.810283660888672,
+                          "prose_ranges": [
+                            {
+                              "end": 1484,
+                              "start": 1477
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1484,
+                              "start": 1477
+                            }
+                          ],
+                          "text": " Apply",
+                          "token_index": 50
+                        }
+                      ],
+                      "id": 60396
+                    }
+                  ]
+                },
+                "heading": "Further cuts have been discussed previously outside the meeting:",
+                "index": 3,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2236,
+                  "start": 1283
+                },
+                "raw_output": -0.4822307825088501,
+                "source_ranges": [
+                  {
+                    "end": 2236,
+                    "start": 1283
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 34,
+                  "start": 21
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 2236,
+        "start": 0
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 200,
+  "effective_finding_count": 9,
+  "emitted_candidates": 9,
+  "emitted_findings": 9,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "strong"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "evaluation/fixtures/bibb-fy27.txt",
+  "prose_words": 348,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 83,
+        "start": 0
+      }
+    ],
+    [
+      {
+        "end": 159,
+        "start": 83
+      }
+    ],
+    [
+      {
+        "end": 279,
+        "start": 159
+      }
+    ],
+    [
+      {
+        "end": 383,
+        "start": 279
+      }
+    ],
+    [
+      {
+        "end": 437,
+        "start": 383
+      }
+    ],
+    [
+      {
+        "end": 556,
+        "start": 437
+      }
+    ],
+    [
+      {
+        "end": 612,
+        "start": 556
+      }
+    ],
+    [
+      {
+        "end": 662,
+        "start": 612
+      }
+    ],
+    [
+      {
+        "end": 717,
+        "start": 662
+      }
+    ],
+    [
+      {
+        "end": 808,
+        "start": 717
+      }
+    ],
+    [
+      {
+        "end": 837,
+        "start": 808
+      }
+    ],
+    [
+      {
+        "end": 846,
+        "start": 837
+      }
+    ],
+    [
+      {
+        "end": 1477,
+        "start": 846
+      }
+    ],
+    [
+      {
+        "end": 1622,
+        "start": 1477
+      }
+    ],
+    [
+      {
+        "end": 1764,
+        "start": 1622
+      }
+    ],
+    [
+      {
+        "end": 1777,
+        "start": 1764
+      }
+    ],
+    [
+      {
+        "end": 1976,
+        "start": 1777
+      }
+    ],
+    [
+      {
+        "end": 2021,
+        "start": 1976
+      }
+    ],
+    [
+      {
+        "end": 2141,
+        "start": 2021
+      }
+    ],
+    [
+      {
+        "end": 2190,
+        "start": 2141
+      }
+    ],
+    [
+      {
+        "end": 2236,
+        "start": 2190
+      }
+    ]
+  ],
+  "sentence_count": 21,
+  "settings": {
+    "display_limit": 200,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 180000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

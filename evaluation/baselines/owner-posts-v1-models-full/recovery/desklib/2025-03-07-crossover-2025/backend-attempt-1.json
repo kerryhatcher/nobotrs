@@ -1,0 +1,315 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 10.914000511169434
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 14752.361061,
+        "excerpt_bytes": 2500,
+        "excerpt_coverage": 0.6385387188062773,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.6385387188062773,
+        "full_coverage_output": 9.39662176968883,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.6385387188062773,
+        "precision": "float32",
+        "prepared_bytes": 3919,
+        "prepared_words": 628,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 10.914000511169434,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 221,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1046,
+              "start": 0
+            },
+            "raw_output": 9.602593421936035,
+            "source_ranges": [
+              {
+                "end": 1145,
+                "start": 665
+              },
+              {
+                "end": 1239,
+                "start": 1214
+              },
+              {
+                "end": 1252,
+                "start": 1240
+              },
+              {
+                "end": 1491,
+                "start": 1325
+              },
+              {
+                "end": 1929,
+                "start": 1903
+              },
+              {
+                "end": 1942,
+                "start": 1930
+              },
+              {
+                "end": 2113,
+                "start": 2087
+              },
+              {
+                "end": 2126,
+                "start": 2114
+              },
+              {
+                "end": 2291,
+                "start": 2199
+              },
+              {
+                "end": 2731,
+                "start": 2705
+              },
+              {
+                "end": 2744,
+                "start": 2732
+              },
+              {
+                "end": 2995,
+                "start": 2889
+              },
+              {
+                "end": 3161,
+                "start": 3135
+              },
+              {
+                "end": 3174,
+                "start": 3162
+              },
+              {
+                "end": 3328,
+                "start": 3324
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 14,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 167,
+            "heading": "What Is a Crossover Ceremony?",
+            "index": 1,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1838,
+              "start": 1046
+            },
+            "raw_output": 6.4923882484436035,
+            "source_ranges": [
+              {
+                "end": 3353,
+                "start": 3328
+              },
+              {
+                "end": 3720,
+                "start": 3355
+              },
+              {
+                "end": 4018,
+                "start": 3992
+              },
+              {
+                "end": 4031,
+                "start": 4019
+              },
+              {
+                "end": 4422,
+                "start": 4104
+              },
+              {
+                "end": 4720,
+                "start": 4694
+              },
+              {
+                "end": 4733,
+                "start": 4721
+              },
+              {
+                "end": 4814,
+                "start": 4811
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 22,
+              "start": 14
+            }
+          },
+          {
+            "body_tokens": 221,
+            "heading": "Key Elements of the Ceremony",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 3055,
+              "start": 1838
+            },
+            "raw_output": 10.504765510559082,
+            "source_ranges": [
+              {
+                "end": 4839,
+                "start": 4814
+              },
+              {
+                "end": 4973,
+                "start": 4841
+              },
+              {
+                "end": 4990,
+                "start": 4980
+              },
+              {
+                "end": 5216,
+                "start": 4992
+              },
+              {
+                "end": 5246,
+                "start": 5222
+              },
+              {
+                "end": 5443,
+                "start": 5248
+              },
+              {
+                "end": 5471,
+                "start": 5449
+              },
+              {
+                "end": 5687,
+                "start": 5473
+              },
+              {
+                "end": 5707,
+                "start": 5693
+              },
+              {
+                "end": 5836,
+                "start": 5709
+              },
+              {
+                "end": 5875,
+                "start": 5842
+              },
+              {
+                "end": 6025,
+                "start": 5877
+              },
+              {
+                "end": 6457,
+                "start": 6431
+              },
+              {
+                "end": 6470,
+                "start": 6458
+              },
+              {
+                "end": 6551,
+                "start": 6548
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 35,
+              "start": 22
+            }
+          },
+          {
+            "body_tokens": 198,
+            "heading": "Why It Matters",
+            "index": 3,
+            "insufficient_context": false,
+            "prose": {
+              "end": 3919,
+              "start": 3055
+            },
+            "raw_output": 10.379386901855469,
+            "source_ranges": [
+              {
+                "end": 6562,
+                "start": 6551
+              },
+              {
+                "end": 6939,
+                "start": 6564
+              },
+              {
+                "end": 7210,
+                "start": 6941
+              },
+              {
+                "end": 7249,
+                "start": 7217
+              },
+              {
+                "end": 7398,
+                "start": 7385
+              },
+              {
+                "end": 7579,
+                "start": 7488
+              },
+              {
+                "end": 7635,
+                "start": 7581
+              },
+              {
+                "end": 7648,
+                "start": 7636
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 45,
+              "start": 35
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

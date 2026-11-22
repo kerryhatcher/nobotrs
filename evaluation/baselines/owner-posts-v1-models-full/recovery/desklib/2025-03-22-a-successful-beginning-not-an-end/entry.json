@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.058841000000000004,
+  "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+  "input_sha256": "e26b28d84c6304392413068fdd37a6f802e32139c3a0877dfc5c83ffd9871254",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-22-a-successful-beginning-not-an-end/backend.json",
+  "reused_source_sha256": "937c7dcfd1eb2a8ba559347250407c1a0d65c0223c69adeeba2ac85520e96b88",
+  "status": "scored_full"
+}

@@ -175,3 +175,18 @@ fn scan_keeps_path_order_and_reports_incomplete_model_requests() {
         }
     }
 }
+
+#[test]
+fn model_coverage_defaults_to_opening_and_full_flag_is_explicit() {
+    assert_eq!(
+        Settings::default().model_coverage,
+        nobotrs::config::ModelCoverage::Opening
+    );
+    let (_, value) = run(&["config", "--model-coverage", "full"], "");
+    assert_eq!(value["configuration"]["settings"]["model_coverage"], "full");
+    let o = Command::new(env!("CARGO_BIN_EXE_nobotrs"))
+        .args(["config", "--model-coverage", "unknown"])
+        .output()
+        .unwrap();
+    assert_eq!(o.status.code(), Some(2));
+}

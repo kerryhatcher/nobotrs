@@ -1,0 +1,96 @@
+{
+  "backend_completion": {
+    "burstiness": "scored",
+    "compression": "scored",
+    "conpara": "scored",
+    "desklib": "scored",
+    "detectorscope": "scored",
+    "lexical-diversity": "scored",
+    "punctuation": "scored",
+    "readability": "scored",
+    "vocabulary": "scored"
+  },
+  "binary_sha256": "95a8121dcb864b1f55a9cbfe1418f42b828911f4dc32f1a6677553171dc12485",
+  "bytes": 2236,
+  "chars": 2192,
+  "commands": [
+    [
+      "nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--language",
+      "en",
+      "--timeout-ms",
+      "180000",
+      "--models",
+      "desklib,conpara,detectorscope",
+      "--models-dir",
+      "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+      "evaluation/fixtures/bibb-fy27.txt"
+    ],
+    [
+      "nobotrs",
+      "review",
+      "--language",
+      "en",
+      "--format",
+      "json",
+      "evaluation/fixtures/bibb-fy27.txt"
+    ],
+    [
+      "nobotrs",
+      "lint",
+      "--language",
+      "en",
+      "--format",
+      "json",
+      "evaluation/fixtures/bibb-fy27.txt"
+    ]
+  ],
+  "devices": {
+    "cpu": "AMD Ryzen 7 5800X 8-Core Processor",
+    "python": "3.15.2"
+  },
+  "exit_codes": {
+    "detect": 0,
+    "lint": 1,
+    "review": 0
+  },
+  "external": {
+    "gptzero": {
+      "status": "not_run"
+    },
+    "openrouter_failed_repeats": 0,
+    "openrouter_label_agreement": null,
+    "openrouter_repeats": []
+  },
+  "git_dirty": true,
+  "git_revision": "2a0d899bdeaeb9b579b7793a0314cbc3b4f15014",
+  "guide_sha256": "993644e73b89d934b5d6389399a3ff617aef6c99ee6907079409c47e1e891ac3",
+  "input_sha256": "5c45d6d3edb1f09cf567915a1ea14699316fdeefe7576d9ac805aa7d69aa23d4",
+  "manifest_hashes": {
+    "models/conpara-unicode-v2.json": "97e72872dbae20f7db727a2bfb73ca3d29b50f21564b5ba96f73bfbae8cd2446",
+    "models/conpara.json": "4b5be779ff146560fba82552524eb1942badbc39e4c62fb468c7fba6c0b2197d",
+    "models/desklib.json": "0768af36c07469693df906a64c45e04eacc33a964ce1a527c534ce0c67c5bf7d",
+    "models/detectorscope.json": "ecda1cce9453f150dae230801264f2c2f9c753d0fbc8ed21f493ae6874f64cf0"
+  },
+  "model_preprocessing": {
+    "conpara": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+    "desklib": "prepared-prose-v1/opening-excerpt-v1",
+    "detectorscope": "detectorscope-flat-whitespace-v1/opening-excerpt-v1"
+  },
+  "pipeline_contract": "prepared-prose-v1/uncalibrated",
+  "review_status": "recorded",
+  "settings": {
+    "external": false,
+    "judge_repeats": 1,
+    "language": "en",
+    "model_coverage": "opening",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ]
+  }
+}

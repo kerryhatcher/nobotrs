@@ -13,7 +13,10 @@ The JSON file accepts these settings (defaults shown):
   "language": null,
   "enabled_backends": ["vocabulary", "punctuation", "burstiness", "lexical-diversity", "readability", "compression"],
   "models": [],
+  "model_coverage": "opening",
   "models_dir": null,
+  "gptzero": false,
+  "gptzero_base_url": "https://api.gptzero.me",
   "ignore_rules": [],
   "path_ignores": { "docs/examples/*": ["embark-on-a-journey"] }
 }
@@ -21,7 +24,11 @@ The JSON file accepts these settings (defaults shown):
 
 Path patterns use `*` (any sequence, including `/`) and `?` (one character); matching uses the displayed input path, so absolute invocation paths require absolute patterns. Scans skip symlinks and do not follow them. Direct file commands follow a supplied file symlink normally.
 
-CLI settings replace the corresponding environment/file setting. Environment names are `NOBOTRS_QUORUM`, `NOBOTRS_MINIMUM_SEVERITY`, `NOBOTRS_MAX_BYTES`, `NOBOTRS_MAX_CANDIDATES`, `NOBOTRS_TIMEOUT_MS`, `NOBOTRS_DISPLAY_LIMIT`, `NOBOTRS_LANGUAGE`, `NOBOTRS_MODELS` (comma-separated), `NOBOTRS_MODELS_DIR`, and `NOBOTRS_IGNORE_RULES` (comma-separated). `models` is empty by default and never contributes quorum votes; see [local model evidence](local-models.md). Configuration path precedence is `--config` > `NOBOTRS_CONFIG` > platform path. Origins are per setting. Environment variables with malformed values produce errors. CLI global ignore IDs replace, rather than append to, configured global IDs; path and inline scopes still apply.
+CLI settings replace the corresponding environment/file setting. Environment names are `NOBOTRS_QUORUM`, `NOBOTRS_MINIMUM_SEVERITY`, `NOBOTRS_MAX_BYTES`, `NOBOTRS_MAX_CANDIDATES`, `NOBOTRS_TIMEOUT_MS`, `NOBOTRS_DISPLAY_LIMIT`, `NOBOTRS_LANGUAGE`, `NOBOTRS_MODELS` (comma-separated), `NOBOTRS_MODELS_DIR`, `NOBOTRS_IGNORE_RULES` (comma-separated), `NOBOTRS_GPTZERO` (`true`/`false`), and `NOBOTRS_GPTZERO_BASE_URL`. `models` is empty by default and never contributes quorum votes; see [local model evidence](local-models.md).
+
+Use `--model-coverage opening|full` or `NOBOTRS_MODEL_COVERAGE` to select model coverage. Detection defaults to opening coverage. Editorial review with explicit models defaults to full coverage and respects an explicit opening selection.
+
+`gptzero` is `false` by default and requires a build with `--features api-clients`. Enabling it sends the analyzed text to GPTZero. The API key is read only from the `GPTZERO_API_KEY` environment variable. It is never a configuration field, so a config file containing a key field is rejected as unknown, and the key is never printed. See [GPTZero comparison](../README.md#gptzero-comparison-opt-in). Configuration path precedence is `--config` > `NOBOTRS_CONFIG` > platform path. Origins are per setting. Environment variables with malformed values produce errors. CLI global ignore IDs replace, rather than append to, configured global IDs; path and inline scopes still apply.
 
 ```markdown
 <!-- nobotrs-ignore-file statistics.burstiness -->

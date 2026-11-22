@@ -1,0 +1,1303 @@
+{
+  "binary": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+  "binary_sha256": "fce0d0ea0d6f16e3cd2aa8d381b5d79c51078b977d3035ba176b03a2fed1053a",
+  "commands": [
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-05-03-format-and-mount-ebs-in-ubuntu.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-05-03-format-and-mount-ebs-in-ubuntu.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-05-03-ssh-to-aws-quick-and-dirty.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-05-03-ssh-to-aws-quick-and-dirty.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-08-10-networking-101-document-everything.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2011-08-10-networking-101-document-everything.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2012-03-15-c-net-check-if-user-is-in-active-directory-group.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2012-03-15-c-net-check-if-user-is-in-active-directory-group.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2012-03-20-mounting-network-drives-with-c-net.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2012-03-20-mounting-network-drives-with-c-net.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2012-10-05-to-the-west.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2012-10-05-to-the-west.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2014-05-26-install-git-1-8-on-rhel-6.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2014-05-26-install-git-1-8-on-rhel-6.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-07-save-money-protect-your-site-with-a-cdn.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-07-save-money-protect-your-site-with-a-cdn.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-08-make-your-internet-faster-and-safer-for-free.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-08-make-your-internet-faster-and-safer-for-free.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-11-its-time-to-switch-to-a-new-email-provider.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-11-its-time-to-switch-to-a-new-email-provider.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-07-better-python-logging.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-07-better-python-logging.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-07-crossover-2025.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-07-crossover-2025.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-10-using-rust-to-make-python-more-manageable-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-10-using-rust-to-make-python-more-manageable-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-13-gear-review-focusrite-scarlet-solo.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-13-gear-review-focusrite-scarlet-solo.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-22-a-successful-beginning-not-an-end.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-22-a-successful-beginning-not-an-end.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-29-delayed-but-determined.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-29-delayed-but-determined.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-29-gsdf-patriot-25.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-29-gsdf-patriot-25.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-01-gear-review-system76-pangolin-12-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-01-gear-review-system76-pangolin-12-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-02-museum-of-aviation-25.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-02-museum-of-aviation-25.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-09-meet-me-at-the-mall.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-09-meet-me-at-the-mall.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-14-the-road-ahead-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-14-the-road-ahead-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-16-investing-in-bibb-countys-future.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-16-investing-in-bibb-countys-future.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-09-better-schools-brighter-futures-literacy-special-edition.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-09-better-schools-brighter-futures-literacy-special-edition.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-13-digital-privacy-and-freedoms-are-under-threat.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-13-digital-privacy-and-freedoms-are-under-threat.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-14-no-kings-protest.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-14-no-kings-protest.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-19-yesterday-and-tomorrow.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-19-yesterday-and-tomorrow.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-12-02-restoring-state-funding-for-state-mandated-costs.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-12-02-restoring-state-funding-for-state-mandated-costs.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-12-11-im-running-for-the-bibb-county-board-of-education.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-12-11-im-running-for-the-bibb-county-board-of-education.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2026-02-11-trust-then-verify-1-035-reasons-why.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2026-02-11-trust-then-verify-1-035-reasons-why.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "review",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2026-05-27-out-of-runway-the-fy27-bcsd-budget.md"
+    ],
+    [
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/nobotrs",
+      "detect",
+      "--format",
+      "json",
+      "--config",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/baselines/config-empty.json",
+      "--language",
+      "en",
+      "--display-limit",
+      "100000",
+      "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2026-05-27-out-of-runway-the-fy27-bcsd-budget.md"
+    ]
+  ],
+  "config": "evaluation/baselines/config-empty.json",
+  "config_sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+  "display_limit": 100000,
+  "external": "none",
+  "git_revision": "c679652c49c1081751272d4486bba12fdf9f2fef",
+  "posts": {
+    "2011-05-03-format-and-mount-ebs-in-ubuntu": {
+      "detect": 0,
+      "review": 0
+    },
+    "2011-05-03-ssh-to-aws-quick-and-dirty": {
+      "detect": 0,
+      "review": 0
+    },
+    "2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts": {
+      "detect": 0,
+      "review": 0
+    },
+    "2011-08-10-networking-101-document-everything": {
+      "detect": 0,
+      "review": 0
+    },
+    "2012-03-15-c-net-check-if-user-is-in-active-directory-group": {
+      "detect": 0,
+      "review": 0
+    },
+    "2012-03-20-mounting-network-drives-with-c-net": {
+      "detect": 0,
+      "review": 0
+    },
+    "2012-10-05-to-the-west": {
+      "detect": 0,
+      "review": 0
+    },
+    "2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group": {
+      "detect": 0,
+      "review": 0
+    },
+    "2014-05-26-install-git-1-8-on-rhel-6": {
+      "detect": 0,
+      "review": 0
+    },
+    "2020-05-07-save-money-protect-your-site-with-a-cdn": {
+      "detect": 0,
+      "review": 0
+    },
+    "2020-05-08-make-your-internet-faster-and-safer-for-free": {
+      "detect": 0,
+      "review": 0
+    },
+    "2020-05-11-its-time-to-switch-to-a-new-email-provider": {
+      "detect": 0,
+      "review": 0
+    },
+    "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s": {
+      "detect": 0,
+      "review": 0
+    },
+    "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-03-07-better-python-logging": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-03-07-crossover-2025": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-03-10-using-rust-to-make-python-more-manageable-2": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-03-13-gear-review-focusrite-scarlet-solo": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-03-22-a-successful-beginning-not-an-end": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-03-29-delayed-but-determined": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-03-29-gsdf-patriot-25": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-04-01-gear-review-system76-pangolin-12-2": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-04-02-museum-of-aviation-25": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-04-09-meet-me-at-the-mall": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-05-14-the-road-ahead-2": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-05-16-investing-in-bibb-countys-future": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-05-29-make-your-voice-heard-on-the-fy2026-budget": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-06-09-better-schools-brighter-futures-literacy-special-edition": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-06-13-digital-privacy-and-freedoms-are-under-threat": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-06-14-no-kings-protest": {
+      "detect": 3,
+      "review": 0
+    },
+    "2025-06-19-yesterday-and-tomorrow": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-12-02-restoring-state-funding-for-state-mandated-costs": {
+      "detect": 0,
+      "review": 0
+    },
+    "2025-12-11-im-running-for-the-bibb-county-board-of-education": {
+      "detect": 0,
+      "review": 0
+    },
+    "2026-02-11-trust-then-verify-1-035-reasons-why": {
+      "detect": 0,
+      "review": 0
+    },
+    "2026-05-27-out-of-runway-the-fy27-bcsd-budget": {
+      "detect": 0,
+      "review": 0
+    }
+  }
+}

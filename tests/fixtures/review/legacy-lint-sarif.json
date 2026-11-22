@@ -1,0 +1,923 @@
+{
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "columnKind": "unicodeCodePoints",
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "toolExecutionNotifications": []
+        }
+      ],
+      "properties": {
+        "displayTruncated": false,
+        "uncalibrated": true
+      },
+      "results": [
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "-"
+                },
+                "region": {
+                  "endColumn": 13,
+                  "endLine": 1,
+                  "startColumn": 1,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "Heuristic writing tell: Studies show"
+          },
+          "properties": {
+            "discontinuous": false,
+            "sourceRanges": [
+              {
+                "end": 12,
+                "start": 0
+              }
+            ]
+          },
+          "ruleId": "studies-show"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "-"
+                },
+                "region": {
+                  "endColumn": 27,
+                  "endLine": 1,
+                  "startColumn": 22,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "look into"
+          },
+          "properties": {
+            "discontinuous": false,
+            "sourceRanges": [
+              {
+                "end": 26,
+                "start": 21
+              }
+            ]
+          },
+          "ruleId": "delve"
+        },
+        {
+          "level": "warning",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "-"
+                },
+                "region": {
+                  "endColumn": 39,
+                  "endLine": 1,
+                  "startColumn": 33,
+                  "startLine": 1
+                }
+              }
+            }
+          ],
+          "message": {
+            "text": "strong"
+          },
+          "properties": {
+            "discontinuous": false,
+            "sourceRanges": [
+              {
+                "end": 38,
+                "start": 32
+              }
+            ]
+          },
+          "ruleId": "robust"
+        }
+      ],
+      "tool": {
+        "driver": {
+          "informationUri": "https://github.com/kerryhatcher/nobotrs",
+          "name": "nobotrs",
+          "rules": [
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "delve",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "delve",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: delve"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "tapestry",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "tapestry",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: tapestry"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "multifaceted",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "multifaceted",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: multifaceted"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "nuanced",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "nuanced",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: nuanced"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "leverage",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "leverage",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: leverage"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "utilize",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "utilize",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: utilize"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "seamless",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "seamless",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: seamless"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "foster",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "foster",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: foster"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "pivotal",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "pivotal",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: pivotal"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "paramount",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "paramount",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: paramount"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "holistic",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "holistic",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: holistic"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "streamline",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "streamline",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: streamline"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "transformative",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "transformative",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: transformative"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "meticulous",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "meticulous",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: meticulous"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "intricate",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "intricate",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: intricate"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "embark",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "embark",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: embark"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "beacon",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "beacon",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: beacon"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "testament",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "testament",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: testament"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "plethora",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "plethora",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: plethora"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "myriad",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "myriad",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: myriad"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "moreover",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "moreover",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: moreover"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "furthermore",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "furthermore",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: furthermore"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "nevertheless",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "nevertheless",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: nevertheless"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "underscore",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "underscores",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: underscore"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "showcase",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "showcase",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: showcase"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "emphasize",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "emphasize",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: emphasize"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "facilitate",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "facilitate",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: facilitate"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "empower",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "empower",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: empower"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "robust",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "robust",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: robust"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "cutting-edge",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "cutting-edge",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: cutting-edge"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "paradigm-shift",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "paradigm shift",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: paradigm-shift"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md; whole_word:true avoids matching inside e.g. proper nouns"
+              },
+              "id": "harness-verb",
+              "properties": {
+                "category": "vocabulary",
+                "pattern": "harness",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: harness-verb"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "negative parallelism"
+              },
+              "id": "not-just-x-but-y",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "it'?s not just [a-z ]+, it'?s",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: not-just-x-but-y"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "important-to-note",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "it is important to note that",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: important-to-note"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "rapidly-evolving",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "in today'?s rapidly evolving",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: rapidly-evolving"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "cannot-be-overstated",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "cannot be overstated",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: cannot-be-overstated"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "embark-on-a-journey",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "embark on a journey",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: embark-on-a-journey"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "a-testament-to",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "a testament to",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: a-testament-to"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "plays-a-role",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "plays a (crucial|vital|pivotal) role",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: plays-a-role"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "Editing prompt only; not an authorship determination."
+              },
+              "id": "worth-noting",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "it'?s worth noting",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: worth-noting"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "heres-the-thing",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "here'?s the thing",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: heres-the-thing"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "let-me-be-clear",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "let me be clear",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: let-me-be-clear"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "uncomfortable-truth",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "the uncomfortable truth is",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: uncomfortable-truth"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "experts-agree",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "experts agree",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: experts-agree"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "studies-show",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "studies show",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: studies-show"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "help": {
+                "text": "from docs/research/09-no-ai-slop-review.md"
+              },
+              "id": "thats-it-thats-the-x",
+              "properties": {
+                "category": "structural-phrase",
+                "pattern": "that'?s it, that'?s the [a-z ]+",
+                "source": null
+              },
+              "shortDescription": {
+                "text": "Heuristic vocabulary tell: thats-it-thats-the-x"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "id": "punctuation.em-dash-density",
+              "shortDescription": {
+                "text": "Em dash density"
+              }
+            },
+            {
+              "defaultConfiguration": {
+                "level": "note"
+              },
+              "id": "statistics.burstiness",
+              "shortDescription": {
+                "text": "Document-wide sentence length variation"
+              }
+            }
+          ],
+          "version": "0.2.0"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

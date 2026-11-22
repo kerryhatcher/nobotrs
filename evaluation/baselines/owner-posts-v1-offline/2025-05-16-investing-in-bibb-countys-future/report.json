@@ -1,0 +1,1788 @@
+{
+  "actionable_finding_count": 0,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 7.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.5397070161912105
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 1297.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.7885894888748102
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 106.15110469976315
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 7.231584846148454
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.5983284791693048
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.640343067719458
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 683,
+        "start": 614
+      }
+    ],
+    [
+      {
+        "end": 720,
+        "start": 687
+      },
+      {
+        "end": 735,
+        "start": 722
+      },
+      {
+        "end": 738,
+        "start": 737
+      }
+    ],
+    [
+      {
+        "end": 967,
+        "start": 743
+      }
+    ],
+    [
+      {
+        "end": 995,
+        "start": 970
+      },
+      {
+        "end": 1023,
+        "start": 997
+      },
+      {
+        "end": 1250,
+        "start": 1025
+      },
+      {
+        "end": 1310,
+        "start": 1253
+      }
+    ],
+    [
+      {
+        "end": 1424,
+        "start": 1317
+      },
+      {
+        "end": 1427,
+        "start": 1426
+      },
+      {
+        "end": 1466,
+        "start": 1428
+      }
+    ],
+    [
+      {
+        "end": 1683,
+        "start": 1639
+      }
+    ],
+    [
+      {
+        "end": 1919,
+        "start": 1691
+      }
+    ],
+    [
+      {
+        "end": 2035,
+        "start": 1925
+      }
+    ],
+    [
+      {
+        "end": 2409,
+        "start": 2212
+      }
+    ],
+    [
+      {
+        "end": 2633,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2761,
+        "start": 2738
+      }
+    ],
+    [
+      {
+        "end": 2776,
+        "start": 2763
+      },
+      {
+        "end": 2790,
+        "start": 2777
+      },
+      {
+        "end": 3142,
+        "start": 2875
+      },
+      {
+        "end": 3162,
+        "start": 3144
+      },
+      {
+        "end": 3254,
+        "start": 3164
+      }
+    ],
+    [
+      {
+        "end": 3393,
+        "start": 3330
+      },
+      {
+        "end": 3426,
+        "start": 3395
+      },
+      {
+        "end": 3544,
+        "start": 3428
+      },
+      {
+        "end": 3586,
+        "start": 3546
+      }
+    ],
+    [
+      {
+        "end": 3899,
+        "start": 3590
+      }
+    ],
+    [
+      {
+        "end": 4094,
+        "start": 3901
+      }
+    ],
+    [
+      {
+        "end": 4115,
+        "start": 4102
+      }
+    ],
+    [
+      {
+        "end": 4351,
+        "start": 4119
+      }
+    ],
+    [
+      {
+        "end": 4360,
+        "start": 4353
+      },
+      {
+        "end": 4365,
+        "start": 4362
+      },
+      {
+        "end": 4585,
+        "start": 4367
+      }
+    ],
+    [
+      {
+        "end": 4616,
+        "start": 4593
+      }
+    ],
+    [
+      {
+        "end": 4832,
+        "start": 4620
+      }
+    ],
+    [
+      {
+        "end": 5116,
+        "start": 4904
+      }
+    ],
+    [
+      {
+        "end": 5373,
+        "start": 5118
+      }
+    ],
+    [
+      {
+        "end": 5503,
+        "start": 5378
+      }
+    ],
+    [
+      {
+        "end": 5606,
+        "start": 5514
+      }
+    ],
+    [
+      {
+        "end": 5829,
+        "start": 5730
+      }
+    ],
+    [
+      {
+        "end": 5958,
+        "start": 5910
+      }
+    ],
+    [
+      {
+        "end": 6035,
+        "start": 5960
+      }
+    ],
+    [
+      {
+        "end": 6109,
+        "start": 6037
+      }
+    ],
+    [
+      {
+        "end": 6134,
+        "start": 6111
+      }
+    ],
+    [
+      {
+        "end": 6160,
+        "start": 6136
+      }
+    ],
+    [
+      {
+        "end": 6184,
+        "start": 6162
+      }
+    ],
+    [
+      {
+        "end": 6219,
+        "start": 6188
+      },
+      {
+        "end": 6241,
+        "start": 6220
+      }
+    ],
+    [
+      {
+        "end": 6366,
+        "start": 6251
+      }
+    ],
+    [
+      {
+        "end": 6611,
+        "start": 6368
+      }
+    ],
+    [
+      {
+        "end": 6752,
+        "start": 6613
+      }
+    ],
+    [
+      {
+        "end": 7102,
+        "start": 6817
+      }
+    ],
+    [
+      {
+        "end": 7117,
+        "start": 7104
+      },
+      {
+        "end": 7133,
+        "start": 7119
+      },
+      {
+        "end": 7140,
+        "start": 7135
+      },
+      {
+        "end": 7148,
+        "start": 7142
+      },
+      {
+        "end": 7310,
+        "start": 7150
+      }
+    ],
+    [
+      {
+        "end": 7328,
+        "start": 7316
+      },
+      {
+        "end": 7350,
+        "start": 7330
+      },
+      {
+        "end": 7360,
+        "start": 7352
+      },
+      {
+        "end": 7363,
+        "start": 7362
+      },
+      {
+        "end": 7374,
+        "start": 7364
+      },
+      {
+        "end": 7473,
+        "start": 7472
+      },
+      {
+        "end": 7605,
+        "start": 7475
+      },
+      {
+        "end": 7615,
+        "start": 7607
+      },
+      {
+        "end": 7737,
+        "start": 7617
+      }
+    ],
+    [
+      {
+        "end": 7762,
+        "start": 7742
+      },
+      {
+        "end": 7792,
+        "start": 7764
+      },
+      {
+        "end": 7802,
+        "start": 7794
+      },
+      {
+        "end": 7805,
+        "start": 7804
+      },
+      {
+        "end": 7812,
+        "start": 7806
+      },
+      {
+        "end": 7893,
+        "start": 7892
+      },
+      {
+        "end": 7955,
+        "start": 7895
+      },
+      {
+        "end": 7964,
+        "start": 7957
+      },
+      {
+        "end": 7995,
+        "start": 7966
+      },
+      {
+        "end": 8005,
+        "start": 7997
+      },
+      {
+        "end": 8163,
+        "start": 8007
+      }
+    ],
+    [
+      {
+        "end": 8213,
+        "start": 8169
+      }
+    ],
+    [
+      {
+        "end": 8223,
+        "start": 8217
+      }
+    ],
+    [
+      {
+        "end": 8238,
+        "start": 8226
+      }
+    ],
+    [
+      {
+        "end": 8261,
+        "start": 8257
+      }
+    ],
+    [
+      {
+        "end": 8270,
+        "start": 8264
+      }
+    ],
+    [
+      {
+        "end": 8283,
+        "start": 8275
+      },
+      {
+        "end": 8285,
+        "start": 8284
+      },
+      {
+        "end": 8287,
+        "start": 8286
+      }
+    ],
+    [
+      {
+        "end": 8297,
+        "start": 8290
+      },
+      {
+        "end": 8299,
+        "start": 8298
+      },
+      {
+        "end": 8301,
+        "start": 8300
+      }
+    ],
+    [
+      {
+        "end": 8311,
+        "start": 8306
+      }
+    ],
+    [
+      {
+        "end": 8320,
+        "start": 8314
+      }
+    ],
+    [
+      {
+        "end": 8331,
+        "start": 8325
+      }
+    ],
+    [
+      {
+        "end": 8340,
+        "start": 8334
+      }
+    ],
+    [
+      {
+        "end": 8350,
+        "start": 8345
+      }
+    ],
+    [
+      {
+        "end": 8359,
+        "start": 8353
+      }
+    ],
+    [
+      {
+        "end": 8379,
+        "start": 8364
+      }
+    ],
+    [
+      {
+        "end": 8388,
+        "start": 8382
+      }
+    ],
+    [
+      {
+        "end": 8411,
+        "start": 8393
+      }
+    ],
+    [
+      {
+        "end": 8420,
+        "start": 8414
+      }
+    ],
+    [
+      {
+        "end": 8444,
+        "start": 8425
+      }
+    ],
+    [
+      {
+        "end": 8453,
+        "start": 8447
+      }
+    ],
+    [
+      {
+        "end": 8459,
+        "start": 8458
+      },
+      {
+        "end": 8675,
+        "start": 8460
+      }
+    ],
+    [
+      {
+        "end": 8763,
+        "start": 8747
+      }
+    ],
+    [
+      {
+        "end": 8789,
+        "start": 8765
+      }
+    ],
+    [
+      {
+        "end": 8844,
+        "start": 8799
+      }
+    ],
+    [
+      {
+        "end": 8878,
+        "start": 8847
+      }
+    ],
+    [
+      {
+        "end": 8990,
+        "start": 8972
+      }
+    ],
+    [
+      {
+        "end": 9075,
+        "start": 8996
+      }
+    ],
+    [
+      {
+        "end": 9192,
+        "start": 9083
+      }
+    ],
+    [
+      {
+        "end": 9256,
+        "start": 9200
+      }
+    ],
+    [
+      {
+        "end": 9304,
+        "start": 9258
+      },
+      {
+        "end": 9328,
+        "start": 9307
+      }
+    ],
+    [
+      {
+        "end": 9446,
+        "start": 9333
+      }
+    ],
+    [
+      {
+        "end": 9472,
+        "start": 9452
+      }
+    ],
+    [
+      {
+        "end": 9708,
+        "start": 9694
+      }
+    ],
+    [
+      {
+        "end": 9768,
+        "start": 9714
+      }
+    ],
+    [
+      {
+        "end": 9783,
+        "start": 9770
+      },
+      {
+        "end": 9791,
+        "start": 9785
+      },
+      {
+        "end": 9807,
+        "start": 9793
+      },
+      {
+        "end": 9845,
+        "start": 9809
+      },
+      {
+        "end": 9882,
+        "start": 9847
+      },
+      {
+        "end": 9928,
+        "start": 9884
+      },
+      {
+        "end": 10041,
+        "start": 9930
+      }
+    ],
+    [
+      {
+        "end": 10132,
+        "start": 10046
+      }
+    ],
+    [
+      {
+        "end": 10154,
+        "start": 10137
+      }
+    ],
+    [
+      {
+        "end": 10170,
+        "start": 10156
+      },
+      {
+        "end": 10177,
+        "start": 10171
+      },
+      {
+        "end": 10277,
+        "start": 10260
+      }
+    ],
+    [
+      {
+        "end": 10431,
+        "start": 10284
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 0,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-16-investing-in-bibb-countys-future.md",
+  "prose_words": 1297,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 683,
+        "start": 614
+      }
+    ],
+    [
+      {
+        "end": 720,
+        "start": 687
+      },
+      {
+        "end": 735,
+        "start": 722
+      },
+      {
+        "end": 738,
+        "start": 737
+      }
+    ],
+    [
+      {
+        "end": 852,
+        "start": 743
+      }
+    ],
+    [
+      {
+        "end": 964,
+        "start": 852
+      }
+    ],
+    [
+      {
+        "end": 995,
+        "start": 970
+      },
+      {
+        "end": 1023,
+        "start": 997
+      },
+      {
+        "end": 1065,
+        "start": 1025
+      }
+    ],
+    [
+      {
+        "end": 1192,
+        "start": 1065
+      }
+    ],
+    [
+      {
+        "end": 1250,
+        "start": 1192
+      },
+      {
+        "end": 1310,
+        "start": 1253
+      }
+    ],
+    [
+      {
+        "end": 1424,
+        "start": 1317
+      },
+      {
+        "end": 1427,
+        "start": 1426
+      },
+      {
+        "end": 1466,
+        "start": 1428
+      }
+    ],
+    [
+      {
+        "end": 1683,
+        "start": 1639
+      }
+    ],
+    [
+      {
+        "end": 1783,
+        "start": 1691
+      }
+    ],
+    [
+      {
+        "end": 1840,
+        "start": 1783
+      }
+    ],
+    [
+      {
+        "end": 1919,
+        "start": 1840
+      }
+    ],
+    [
+      {
+        "end": 2035,
+        "start": 1925
+      }
+    ],
+    [
+      {
+        "end": 2304,
+        "start": 2212
+      }
+    ],
+    [
+      {
+        "end": 2409,
+        "start": 2304
+      }
+    ],
+    [
+      {
+        "end": 2489,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2633,
+        "start": 2489
+      }
+    ],
+    [
+      {
+        "end": 2761,
+        "start": 2738
+      }
+    ],
+    [
+      {
+        "end": 2776,
+        "start": 2763
+      },
+      {
+        "end": 2790,
+        "start": 2777
+      },
+      {
+        "end": 3097,
+        "start": 2875
+      }
+    ],
+    [
+      {
+        "end": 3142,
+        "start": 3097
+      },
+      {
+        "end": 3162,
+        "start": 3144
+      },
+      {
+        "end": 3254,
+        "start": 3164
+      }
+    ],
+    [
+      {
+        "end": 3393,
+        "start": 3330
+      },
+      {
+        "end": 3426,
+        "start": 3395
+      }
+    ],
+    [
+      {
+        "end": 3544,
+        "start": 3428
+      },
+      {
+        "end": 3586,
+        "start": 3546
+      }
+    ],
+    [
+      {
+        "end": 3748,
+        "start": 3590
+      }
+    ],
+    [
+      {
+        "end": 3786,
+        "start": 3748
+      }
+    ],
+    [
+      {
+        "end": 3899,
+        "start": 3786
+      }
+    ],
+    [
+      {
+        "end": 4016,
+        "start": 3901
+      }
+    ],
+    [
+      {
+        "end": 4094,
+        "start": 4016
+      }
+    ],
+    [
+      {
+        "end": 4115,
+        "start": 4102
+      }
+    ],
+    [
+      {
+        "end": 4229,
+        "start": 4119
+      }
+    ],
+    [
+      {
+        "end": 4351,
+        "start": 4229
+      }
+    ],
+    [
+      {
+        "end": 4360,
+        "start": 4353
+      },
+      {
+        "end": 4365,
+        "start": 4362
+      },
+      {
+        "end": 4398,
+        "start": 4367
+      }
+    ],
+    [
+      {
+        "end": 4505,
+        "start": 4398
+      }
+    ],
+    [
+      {
+        "end": 4585,
+        "start": 4505
+      }
+    ],
+    [
+      {
+        "end": 4616,
+        "start": 4593
+      }
+    ],
+    [
+      {
+        "end": 4734,
+        "start": 4620
+      }
+    ],
+    [
+      {
+        "end": 4832,
+        "start": 4734
+      }
+    ],
+    [
+      {
+        "end": 5013,
+        "start": 4904
+      }
+    ],
+    [
+      {
+        "end": 5116,
+        "start": 5013
+      }
+    ],
+    [
+      {
+        "end": 5218,
+        "start": 5118
+      }
+    ],
+    [
+      {
+        "end": 5271,
+        "start": 5218
+      }
+    ],
+    [
+      {
+        "end": 5373,
+        "start": 5271
+      }
+    ],
+    [
+      {
+        "end": 5503,
+        "start": 5378
+      }
+    ],
+    [
+      {
+        "end": 5606,
+        "start": 5514
+      }
+    ],
+    [
+      {
+        "end": 5829,
+        "start": 5730
+      }
+    ],
+    [
+      {
+        "end": 5958,
+        "start": 5910
+      }
+    ],
+    [
+      {
+        "end": 6035,
+        "start": 5960
+      }
+    ],
+    [
+      {
+        "end": 6075,
+        "start": 6037
+      }
+    ],
+    [
+      {
+        "end": 6109,
+        "start": 6075
+      }
+    ],
+    [
+      {
+        "end": 6134,
+        "start": 6111
+      }
+    ],
+    [
+      {
+        "end": 6160,
+        "start": 6136
+      }
+    ],
+    [
+      {
+        "end": 6184,
+        "start": 6162
+      }
+    ],
+    [
+      {
+        "end": 6219,
+        "start": 6188
+      },
+      {
+        "end": 6241,
+        "start": 6220
+      }
+    ],
+    [
+      {
+        "end": 6366,
+        "start": 6251
+      }
+    ],
+    [
+      {
+        "end": 6499,
+        "start": 6368
+      }
+    ],
+    [
+      {
+        "end": 6611,
+        "start": 6499
+      }
+    ],
+    [
+      {
+        "end": 6669,
+        "start": 6613
+      }
+    ],
+    [
+      {
+        "end": 6752,
+        "start": 6669
+      }
+    ],
+    [
+      {
+        "end": 6968,
+        "start": 6817
+      }
+    ],
+    [
+      {
+        "end": 7102,
+        "start": 6968
+      }
+    ],
+    [
+      {
+        "end": 7117,
+        "start": 7104
+      },
+      {
+        "end": 7133,
+        "start": 7119
+      },
+      {
+        "end": 7140,
+        "start": 7135
+      },
+      {
+        "end": 7148,
+        "start": 7142
+      },
+      {
+        "end": 7310,
+        "start": 7150
+      }
+    ],
+    [
+      {
+        "end": 7328,
+        "start": 7316
+      },
+      {
+        "end": 7350,
+        "start": 7330
+      },
+      {
+        "end": 7360,
+        "start": 7352
+      },
+      {
+        "end": 7363,
+        "start": 7362
+      },
+      {
+        "end": 7374,
+        "start": 7364
+      },
+      {
+        "end": 7473,
+        "start": 7472
+      },
+      {
+        "end": 7483,
+        "start": 7475
+      }
+    ],
+    [
+      {
+        "end": 7605,
+        "start": 7483
+      },
+      {
+        "end": 7615,
+        "start": 7607
+      },
+      {
+        "end": 7737,
+        "start": 7617
+      }
+    ],
+    [
+      {
+        "end": 7762,
+        "start": 7742
+      },
+      {
+        "end": 7792,
+        "start": 7764
+      },
+      {
+        "end": 7802,
+        "start": 7794
+      },
+      {
+        "end": 7805,
+        "start": 7804
+      },
+      {
+        "end": 7812,
+        "start": 7806
+      },
+      {
+        "end": 7893,
+        "start": 7892
+      },
+      {
+        "end": 7955,
+        "start": 7895
+      },
+      {
+        "end": 7964,
+        "start": 7957
+      },
+      {
+        "end": 7995,
+        "start": 7966
+      },
+      {
+        "end": 8005,
+        "start": 7997
+      },
+      {
+        "end": 8163,
+        "start": 8007
+      }
+    ],
+    [
+      {
+        "end": 8213,
+        "start": 8169
+      }
+    ],
+    [
+      {
+        "end": 8223,
+        "start": 8217
+      }
+    ],
+    [
+      {
+        "end": 8238,
+        "start": 8226
+      }
+    ],
+    [
+      {
+        "end": 8261,
+        "start": 8257
+      }
+    ],
+    [
+      {
+        "end": 8270,
+        "start": 8264
+      }
+    ],
+    [
+      {
+        "end": 8283,
+        "start": 8275
+      },
+      {
+        "end": 8285,
+        "start": 8284
+      },
+      {
+        "end": 8287,
+        "start": 8286
+      }
+    ],
+    [
+      {
+        "end": 8297,
+        "start": 8290
+      },
+      {
+        "end": 8299,
+        "start": 8298
+      },
+      {
+        "end": 8301,
+        "start": 8300
+      }
+    ],
+    [
+      {
+        "end": 8311,
+        "start": 8306
+      }
+    ],
+    [
+      {
+        "end": 8320,
+        "start": 8314
+      }
+    ],
+    [
+      {
+        "end": 8331,
+        "start": 8325
+      }
+    ],
+    [
+      {
+        "end": 8340,
+        "start": 8334
+      }
+    ],
+    [
+      {
+        "end": 8350,
+        "start": 8345
+      }
+    ],
+    [
+      {
+        "end": 8359,
+        "start": 8353
+      }
+    ],
+    [
+      {
+        "end": 8379,
+        "start": 8364
+      }
+    ],
+    [
+      {
+        "end": 8388,
+        "start": 8382
+      }
+    ],
+    [
+      {
+        "end": 8411,
+        "start": 8393
+      }
+    ],
+    [
+      {
+        "end": 8420,
+        "start": 8414
+      }
+    ],
+    [
+      {
+        "end": 8444,
+        "start": 8425
+      }
+    ],
+    [
+      {
+        "end": 8453,
+        "start": 8447
+      }
+    ],
+    [
+      {
+        "end": 8459,
+        "start": 8458
+      },
+      {
+        "end": 8579,
+        "start": 8460
+      }
+    ],
+    [
+      {
+        "end": 8675,
+        "start": 8579
+      }
+    ],
+    [
+      {
+        "end": 8763,
+        "start": 8747
+      }
+    ],
+    [
+      {
+        "end": 8789,
+        "start": 8765
+      }
+    ],
+    [
+      {
+        "end": 8801,
+        "start": 8799
+      }
+    ],
+    [
+      {
+        "end": 8844,
+        "start": 8801
+      }
+    ],
+    [
+      {
+        "end": 8878,
+        "start": 8847
+      }
+    ],
+    [
+      {
+        "end": 8990,
+        "start": 8972
+      }
+    ],
+    [
+      {
+        "end": 8998,
+        "start": 8996
+      }
+    ],
+    [
+      {
+        "end": 9075,
+        "start": 8998
+      }
+    ],
+    [
+      {
+        "end": 9085,
+        "start": 9083
+      }
+    ],
+    [
+      {
+        "end": 9192,
+        "start": 9085
+      }
+    ],
+    [
+      {
+        "end": 9202,
+        "start": 9200
+      }
+    ],
+    [
+      {
+        "end": 9256,
+        "start": 9202
+      }
+    ],
+    [
+      {
+        "end": 9304,
+        "start": 9258
+      },
+      {
+        "end": 9328,
+        "start": 9307
+      }
+    ],
+    [
+      {
+        "end": 9446,
+        "start": 9333
+      }
+    ],
+    [
+      {
+        "end": 9454,
+        "start": 9452
+      }
+    ],
+    [
+      {
+        "end": 9472,
+        "start": 9454
+      }
+    ],
+    [
+      {
+        "end": 9708,
+        "start": 9694
+      }
+    ],
+    [
+      {
+        "end": 9768,
+        "start": 9714
+      }
+    ],
+    [
+      {
+        "end": 9783,
+        "start": 9770
+      },
+      {
+        "end": 9791,
+        "start": 9785
+      },
+      {
+        "end": 9807,
+        "start": 9793
+      },
+      {
+        "end": 9845,
+        "start": 9809
+      },
+      {
+        "end": 9882,
+        "start": 9847
+      },
+      {
+        "end": 9928,
+        "start": 9884
+      }
+    ],
+    [
+      {
+        "end": 10041,
+        "start": 9930
+      }
+    ],
+    [
+      {
+        "end": 10132,
+        "start": 10046
+      }
+    ],
+    [
+      {
+        "end": 10154,
+        "start": 10137
+      }
+    ],
+    [
+      {
+        "end": 10170,
+        "start": 10156
+      },
+      {
+        "end": 10177,
+        "start": 10171
+      },
+      {
+        "end": 10277,
+        "start": 10260
+      }
+    ],
+    [
+      {
+        "end": 10310,
+        "start": 10284
+      }
+    ],
+    [
+      {
+        "end": 10371,
+        "start": 10310
+      }
+    ],
+    [
+      {
+        "end": 10431,
+        "start": 10371
+      }
+    ]
+  ],
+  "sentence_count": 110,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

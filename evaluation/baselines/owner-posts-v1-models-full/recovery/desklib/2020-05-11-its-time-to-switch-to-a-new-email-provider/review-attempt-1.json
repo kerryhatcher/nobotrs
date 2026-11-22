@@ -1,0 +1,545 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 659,
+        "end_column": 674,
+        "end_line": 42,
+        "line": 42,
+        "source_ranges": [
+          {
+            "end": 3507,
+            "start": 3492
+          }
+        ]
+      },
+      "matched_text": "Read more here.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Read more here.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 357,
+        "end_column": 371,
+        "end_line": 84,
+        "line": 84,
+        "source_ranges": [
+          {
+            "end": 5943,
+            "start": 5929
+          }
+        ]
+      },
+      "matched_text": "Take that NSA!",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Take that NSA!",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 517,
+        "end_column": 525,
+        "end_line": 24,
+        "line": 24,
+        "source_ranges": [
+          {
+            "end": 2119,
+            "start": 2111
+          }
+        ]
+      },
+      "matched_text": "seamless",
+      "message": null,
+      "rule_id": "seamless",
+      "sentence": "The best security is that which is seamless and easy for users.",
+      "severity": "medium",
+      "suggestion": "smooth",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 9,
+        "end_column": 19,
+        "end_line": 98,
+        "line": 98,
+        "source_ranges": [
+          {
+            "end": 7015,
+            "start": 7005
+          }
+        ]
+      },
+      "matched_text": "facilitate",
+      "message": null,
+      "rule_id": "facilitate",
+      "sentence": "To help facilitate the use of ProtonMail by journalists and dissidents in repressive countries (or for those of us in the tinfoil hat crowd) ProtonMail operates a dedicated “onion” page accessible via the Tor Browser (a custom version of FireFox).",
+      "severity": "medium",
+      "suggestion": "help",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 191,
+        "end_column": 199,
+        "end_line": 100,
+        "line": 100,
+        "source_ranges": [
+          {
+            "end": 7618,
+            "start": 7610
+          }
+        ]
+      },
+      "matched_text": "seamless",
+      "message": null,
+      "rule_id": "seamless",
+      "sentence": "Tor browser was created to make that seamless and easy for non-technical users.",
+      "severity": "medium",
+      "suggestion": "smooth",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 377,
+        "end_line": 108,
+        "features": [],
+        "heading": "Warning, its about to get real nerdy.",
+        "line": 90,
+        "mean_z": 1.3095803081349275,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": 3.084984064102173,
+            "z": 1.3095803081349275
+          }
+        ],
+        "prose": {
+          "end": 6179,
+          "start": 4423
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 6092,
+            "start": 6062
+          },
+          {
+            "end": 6190,
+            "start": 6161
+          },
+          {
+            "end": 6285,
+            "start": 6192
+          },
+          {
+            "end": 6305,
+            "start": 6286
+          },
+          {
+            "end": 6446,
+            "start": 6444
+          },
+          {
+            "end": 6473,
+            "start": 6447
+          },
+          {
+            "end": 6723,
+            "start": 6538
+          },
+          {
+            "end": 6737,
+            "start": 6724
+          },
+          {
+            "end": 6901,
+            "start": 6804
+          },
+          {
+            "end": 6925,
+            "start": 6902
+          },
+          {
+            "end": 6995,
+            "start": 6993
+          },
+          {
+            "end": 7138,
+            "start": 6997
+          },
+          {
+            "end": 7170,
+            "start": 7139
+          },
+          {
+            "end": 7221,
+            "start": 7220
+          },
+          {
+            "end": 7238,
+            "start": 7222
+          },
+          {
+            "end": 7313,
+            "start": 7293
+          },
+          {
+            "end": 7325,
+            "start": 7314
+          },
+          {
+            "end": 7416,
+            "start": 7385
+          },
+          {
+            "end": 7738,
+            "start": 7418
+          },
+          {
+            "end": 7767,
+            "start": 7740
+          },
+          {
+            "end": 7797,
+            "start": 7768
+          },
+          {
+            "end": 7882,
+            "start": 7859
+          },
+          {
+            "end": 8142,
+            "start": 7889
+          },
+          {
+            "end": 8470,
+            "start": 8144
+          }
+        ],
+        "units": {
+          "end": 76,
+          "start": 55
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 323,
+        "end_line": 28,
+        "features": [],
+        "heading": null,
+        "line": 18,
+        "mean_z": -0.19245957708934422,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": 0.35622766613960266,
+            "z": -0.19245957708934422
+          }
+        ],
+        "prose": {
+          "end": 1548,
+          "start": 0
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 840,
+            "start": 473
+          },
+          {
+            "end": 1186,
+            "start": 842
+          },
+          {
+            "end": 1587,
+            "start": 1188
+          },
+          {
+            "end": 1748,
+            "start": 1589
+          },
+          {
+            "end": 1752,
+            "start": 1749
+          },
+          {
+            "end": 1831,
+            "start": 1825
+          },
+          {
+            "end": 1835,
+            "start": 1832
+          },
+          {
+            "end": 2139,
+            "start": 1877
+          },
+          {
+            "end": 2150,
+            "start": 2149
+          }
+        ],
+        "units": {
+          "end": 18,
+          "start": 0
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 158,
+        "end_line": 56,
+        "features": [],
+        "heading": "Security",
+        "line": 42,
+        "mean_z": -1.1171207310455833,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": -1.3236045837402344,
+            "z": -1.1171207310455833
+          }
+        ],
+        "prose": {
+          "end": 2731,
+          "start": 1937
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 3177,
+            "start": 2830
+          },
+          {
+            "end": 3181,
+            "start": 3178
+          },
+          {
+            "end": 3491,
+            "start": 3259
+          },
+          {
+            "end": 3507,
+            "start": 3492
+          },
+          {
+            "end": 3578,
+            "start": 3572
+          },
+          {
+            "end": 3624,
+            "start": 3579
+          },
+          {
+            "end": 3785,
+            "start": 3720
+          },
+          {
+            "end": 3821,
+            "start": 3786
+          },
+          {
+            "end": 3938,
+            "start": 3903
+          },
+          {
+            "end": 4036,
+            "start": 4029
+          }
+        ],
+        "units": {
+          "end": 32,
+          "start": 23
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "3": 2,
+    "5": 3
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+  "prose_words": 1071,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 5
+}

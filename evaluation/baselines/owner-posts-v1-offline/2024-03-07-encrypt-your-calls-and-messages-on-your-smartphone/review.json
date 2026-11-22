@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 831,
+  "leverage_counts": {
+    "2": 2,
+    "3": 4
+  },
+  "findings": [
+    {
+      "rule_id": "structure.negative-parallelism",
+      "guidance_id": "structure.negative-parallelism",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 60,
+        "column": 206,
+        "end_line": 60,
+        "end_column": 245,
+        "source_ranges": [
+          {
+            "start": 5484,
+            "end": 5523
+          }
+        ]
+      },
+      "matched_text": "not only are your messages private, but",
+      "sentence": "With E2EE you can be assured that not only are your messages private, but also are coming from the person (well device) you expect it to.",
+      "context": null,
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "message": null,
+      "why": "A repeated contrast can obscure what changed.",
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding."
+    },
+    {
+      "rule_id": "structure.summary-close",
+      "guidance_id": "structure.summary-close",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 90,
+        "column": 1,
+        "end_line": 90,
+        "end_column": 46,
+        "source_ranges": [
+          {
+            "start": 7988,
+            "end": 8033
+          }
+        ]
+      },
+      "matched_text": "Overall Signal is worth your time to try out.",
+      "sentence": "Overall Signal is worth your time to try out.",
+      "context": null,
+      "suggestion": "End on the useful conclusion; keep a summary when readers need one.",
+      "message": null,
+      "why": "A generic closing announcement may repeat rather than complete the argument.",
+      "fix": "End at the useful conclusion if the announcement is unnecessary.",
+      "keep_when": "Keep summaries in reports and teaching material where readers need a recap."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 18,
+        "column": 174,
+        "end_line": 18,
+        "end_column": 189,
+        "source_ranges": [
+          {
+            "start": 1297,
+            "end": 1312
+          }
+        ]
+      },
+      "matched_text": "Well good news!",
+      "sentence": "Well good news!",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 24,
+        "column": 1,
+        "end_line": 24,
+        "end_column": 7,
+        "source_ranges": [
+          {
+            "start": 2406,
+            "end": 2412
+          }
+        ]
+      },
+      "matched_text": "Update",
+      "sentence": "Update",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 28,
+        "column": 2,
+        "end_line": 28,
+        "end_column": 12,
+        "source_ranges": [
+          {
+            "start": 2612,
+            "end": 2622
+          }
+        ]
+      },
+      "matched_text": "Learn more",
+      "sentence": "Learn more",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 86,
+        "column": 209,
+        "end_line": 86,
+        "end_column": 221,
+        "source_ranges": [
+          {
+            "start": 7967,
+            "end": 7981
+          }
+        ]
+      },
+      "matched_text": "I’m a fan :)",
+      "sentence": "I’m a fan :)",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "fail",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "fail",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 6,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

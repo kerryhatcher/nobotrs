@@ -1,0 +1,179 @@
+{
+  "schema_version": 1,
+  "exceptions": [
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/curation.json",
+      "sha256": "ad89bf0ea3822e7001ca6cc2ec5dab48c51abb534b1283712094bf675cfc1fba",
+      "corpus": "govinfo-gao-2008",
+      "sample": "4c7a86cb1938"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/curation.json",
+      "sha256": "ad89bf0ea3822e7001ca6cc2ec5dab48c51abb534b1283712094bf675cfc1fba",
+      "corpus": "govinfo-gao-2008",
+      "sample": "84e2b3ab5957"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/manifest.json",
+      "sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
+      "corpus": "govinfo-gao-2008",
+      "sample": "4c7a86cb1938"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/manifest.json",
+      "sha256": "7d6ffed1ea1172221b98ed650b0c79d78364646355d74f8a8089973c0e6ecf06",
+      "corpus": "govinfo-gao-2008",
+      "sample": "84e2b3ab5957"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/samples/hc3-finance-q28-g0.txt",
+      "sha256": "c6fdfed1c09d16353ae905ce88eaf67c0e895c49cb5de109fd47aa1cd4a96040",
+      "corpus": "apt-eval",
+      "sample": "737443127b0b"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/samples/hc3-finance-q28-g0.txt",
+      "sha256": "c6fdfed1c09d16353ae905ce88eaf67c0e895c49cb5de109fd47aa1cd4a96040",
+      "corpus": "apt-eval",
+      "sample": "93aa3b4adc50"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/samples/hc3-finance-q28-g0.txt",
+      "sha256": "c6fdfed1c09d16353ae905ce88eaf67c0e895c49cb5de109fd47aa1cd4a96040",
+      "corpus": "beemo",
+      "sample": "1c8f82503b8d"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/samples/hc3-finance-q28-g0.txt",
+      "sha256": "c6fdfed1c09d16353ae905ce88eaf67c0e895c49cb5de109fd47aa1cd4a96040",
+      "corpus": "beemo",
+      "sample": "327ff2701e68"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/samples/hc3-finance-q28-g0.txt",
+      "sha256": "c6fdfed1c09d16353ae905ce88eaf67c0e895c49cb5de109fd47aa1cd4a96040",
+      "corpus": "beemo",
+      "sample": "51daea29eddc"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/samples/hc3-finance-q28-g0.txt",
+      "sha256": "c6fdfed1c09d16353ae905ce88eaf67c0e895c49cb5de109fd47aa1cd4a96040",
+      "corpus": "beemo",
+      "sample": "e11e8c83c1f7"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/samples/hc3-open_qa-q8-g0.txt",
+      "sha256": "9977b1ddc5528cd8b59c053cc82290c9d0776eb4240d4cf8b3089766030b521d",
+      "corpus": "govinfo-gao-2008",
+      "sample": "f1a36c82ab87"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/acquisition.json",
+      "sha256": "1573b64158363ec21edb4c2a3b14c1e5134bff3dec386aa6d14c9e3eaf177c93",
+      "corpus": "govinfo-gao-2008",
+      "sample": "4c7a86cb1938"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/acquisition.json",
+      "sha256": "1573b64158363ec21edb4c2a3b14c1e5134bff3dec386aa6d14c9e3eaf177c93",
+      "corpus": "govinfo-gao-2008",
+      "sample": "84e2b3ab5957"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/responses/finance.jsonl",
+      "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+      "corpus": "apt-eval",
+      "sample": "737443127b0b"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/responses/finance.jsonl",
+      "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+      "corpus": "apt-eval",
+      "sample": "93aa3b4adc50"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/responses/finance.jsonl",
+      "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+      "corpus": "beemo",
+      "sample": "1c8f82503b8d"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/responses/finance.jsonl",
+      "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+      "corpus": "beemo",
+      "sample": "327ff2701e68"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/responses/finance.jsonl",
+      "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+      "corpus": "beemo",
+      "sample": "51daea29eddc"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/responses/finance.jsonl",
+      "sha256": "945d51705b894fe0710c8895f319fbc750a32a115c5fe7acb31e7401bdb76c2f",
+      "corpus": "beemo",
+      "sample": "e11e8c83c1f7"
+    },
+    {
+      "path": "evaluation/corpora/assessment-pilot-v1/source/hc3/responses/open_qa.jsonl",
+      "sha256": "79b908206aa97593ffc1238e74499e2ef1dfb824ea983e39f8eb3b9edcf3980f",
+      "corpus": "govinfo-gao-2008",
+      "sample": "f1a36c82ab87"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/samples/mixed-91bbbcf7cd67615fc023f76d.txt",
+      "sha256": "21659d25b45597bf8ff1fc0366b511cc099b54a8f5e3cee27250166b8d394b47",
+      "corpus": "apt-eval",
+      "sample": "737443127b0b"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/samples/mixed-91bbbcf7cd67615fc023f76d.txt",
+      "sha256": "21659d25b45597bf8ff1fc0366b511cc099b54a8f5e3cee27250166b8d394b47",
+      "corpus": "apt-eval",
+      "sample": "93aa3b4adc50"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/samples/mixed-91bbbcf7cd67615fc023f76d.txt",
+      "sha256": "21659d25b45597bf8ff1fc0366b511cc099b54a8f5e3cee27250166b8d394b47",
+      "corpus": "beemo",
+      "sample": "1c8f82503b8d"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/samples/mixed-91bbbcf7cd67615fc023f76d.txt",
+      "sha256": "21659d25b45597bf8ff1fc0366b511cc099b54a8f5e3cee27250166b8d394b47",
+      "corpus": "beemo",
+      "sample": "327ff2701e68"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/samples/mixed-91bbbcf7cd67615fc023f76d.txt",
+      "sha256": "21659d25b45597bf8ff1fc0366b511cc099b54a8f5e3cee27250166b8d394b47",
+      "corpus": "beemo",
+      "sample": "51daea29eddc"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/samples/mixed-91bbbcf7cd67615fc023f76d.txt",
+      "sha256": "21659d25b45597bf8ff1fc0366b511cc099b54a8f5e3cee27250166b8d394b47",
+      "corpus": "beemo",
+      "sample": "e11e8c83c1f7"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/samples/mixed-a618a3b9783b4e526059e84f.txt",
+      "sha256": "8bd6c946ab935c70acaf10d97399aa424c58310a7351e8505e43820797ec2665",
+      "corpus": "govinfo-gao-2008",
+      "sample": "f1a36c82ab87"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/source/hc3/acquisition.json",
+      "sha256": "1573b64158363ec21edb4c2a3b14c1e5134bff3dec386aa6d14c9e3eaf177c93",
+      "corpus": "govinfo-gao-2008",
+      "sample": "4c7a86cb1938"
+    },
+    {
+      "path": "evaluation/corpora/mixed-controls-v1/source/hc3/acquisition.json",
+      "sha256": "1573b64158363ec21edb4c2a3b14c1e5134bff3dec386aa6d14c9e3eaf177c93",
+      "corpus": "govinfo-gao-2008",
+      "sample": "84e2b3ab5957"
+    }
+  ]
+}

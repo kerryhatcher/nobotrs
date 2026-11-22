@@ -1,0 +1,10 @@
+{
+  "attempt": 1,
+  "confidence": "high",
+  "elapsed_ms": 34242.547896,
+  "file": "2025-05-14-the-road-ahead-2.md",
+  "input_sha256": "976c003506ec98f97053d6308b6feb5a1d890715c224780af59b874b239db718",
+  "label": "ai_drafted",
+  "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-14-the-road-ahead-2/report-attempt-1.json",
+  "status": "scored_full"
+}

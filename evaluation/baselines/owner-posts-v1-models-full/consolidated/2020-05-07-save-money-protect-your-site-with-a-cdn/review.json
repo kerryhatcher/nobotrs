@@ -1,0 +1,333 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "unknown"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "unknown"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "fail"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "guidance_id": "structure.negative-parallelism",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding.",
+      "leverage": 2,
+      "location": {
+        "column": 175,
+        "end_column": 215,
+        "end_line": 56,
+        "line": 56,
+        "source_ranges": [
+          {
+            "end": 5699,
+            "start": 5659
+          }
+        ]
+      },
+      "matched_text": "not only can you speed up your page, but",
+      "message": null,
+      "rule_id": "structure.negative-parallelism",
+      "sentence": "So if you are using a free or low cost CDN like CloudFlare, not only can you speed up your page, but also save some ca$h.",
+      "severity": "low",
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "suppressed": false,
+      "why": "A repeated contrast can obscure what changed."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 189,
+        "end_column": 204,
+        "end_line": 64,
+        "line": 64,
+        "source_ranges": [
+          {
+            "end": 6914,
+            "start": 6899
+          }
+        ]
+      },
+      "matched_text": "So for example,",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "So for example,",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 216,
+        "end_column": 224,
+        "end_line": 64,
+        "line": 64,
+        "source_ranges": [
+          {
+            "end": 6934,
+            "start": 6926
+          }
+        ]
+      },
+      "matched_text": "might be",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "might be",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 9,
+        "end_line": 72,
+        "line": 72,
+        "source_ranges": [
+          {
+            "end": 7917,
+            "start": 7909
+          }
+        ]
+      },
+      "matched_text": "Sort of.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Sort of.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "formatting",
+      "context": null,
+      "fix": "Use the required or established heading style consistently.",
+      "guidance_id": "structure.title-case-headings",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "leverage": 4,
+      "location": {
+        "column": 4,
+        "end_column": 28,
+        "end_line": 34,
+        "line": 34,
+        "source_ranges": [
+          {
+            "end": 2435,
+            "start": 2411
+          }
+        ]
+      },
+      "matched_text": "Content Delivery Network",
+      "message": null,
+      "rule_id": "structure.title-case-headings",
+      "sentence": "Content Delivery Network",
+      "severity": "low",
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "suppressed": false,
+      "why": "Heading capitalization may distract if it conflicts with the venue style."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author\u2019s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 107,
+        "end_column": 115,
+        "end_line": 120,
+        "line": 120,
+        "source_ranges": [
+          {
+            "end": 11756,
+            "start": 11748
+          }
+        ]
+      },
+      "matched_text": "leverage",
+      "message": null,
+      "rule_id": "leverage",
+      "sentence": "By acting as a proxy in front of my webservers, they could leverage the vast visibility they had across the internet to block and thwart attackers.",
+      "severity": "medium",
+      "suggestion": "use",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "2": 1,
+    "3": 3,
+    "4": 1,
+    "5": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+  "prose_words": 1800,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 6,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-07-save-money-protect-your-site-with-a-cdn/backend.json",
+        "sha256": "4f45f68138c7b955d49396b01169bc594d7234929bf9dc663bbdbec4bc269e9a",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2020-05-07-save-money-protect-your-site-with-a-cdn/report.json",
+        "sha256": "8465c8e056b51c2c7b4651f8418995fcf7757285f53d369907c56c4a02d2394b",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2020-05-07-save-money-protect-your-site-with-a-cdn/report.json",
+        "sha256": "8465c8e056b51c2c7b4651f8418995fcf7757285f53d369907c56c4a02d2394b",
+        "origin": "original_failure",
+        "status": "failed"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "termination": "SIGTERM sent only to owned model process group",
+  "root_pid": 2135416,
+  "resolved_documents": 26,
+  "active_document_without_completed_result": "2025-05-14-the-road-ahead-2.md",
+  "reason": "Host pressure caused doc22 to overrun deadline; new launches require stable PSI/load and higher RAM floor. Completed and incomplete attempt files retained."
+}

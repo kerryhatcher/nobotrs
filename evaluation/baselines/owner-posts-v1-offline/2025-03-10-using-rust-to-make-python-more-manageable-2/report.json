@@ -1,0 +1,762 @@
+{
+  "actionable_finding_count": 1,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [
+            {
+              "block_context": 6,
+              "column": 100,
+              "disposition": "selected",
+              "end_column": 108,
+              "end_line": 34,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 34,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 746,
+                "start": 738
+              },
+              "raw_offset": {
+                "end": 2323,
+                "start": 2315
+              },
+              "rule_id": "seamless",
+              "sentence_context": 8,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2323,
+                  "start": 2315
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 6,
+              "column": 100,
+              "disposition": "selected",
+              "end_column": 108,
+              "end_line": 34,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 34,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 746,
+                "start": 738
+              },
+              "raw_offset": {
+                "end": 2323,
+                "start": 2315
+              },
+              "rule_id": "seamless",
+              "sentence_context": 8,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2323,
+                  "start": 2315
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            }
+          ],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 1.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 303.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.5892822220591009
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 107.55181959030095
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 10.196524752475248
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6405260594252313
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.1484480974701174
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1509,
+        "start": 1495
+      }
+    ],
+    [
+      {
+        "end": 1585,
+        "start": 1513
+      }
+    ],
+    [
+      {
+        "end": 1590,
+        "start": 1588
+      },
+      {
+        "end": 1948,
+        "start": 1640
+      }
+    ],
+    [
+      {
+        "end": 1961,
+        "start": 1954
+      }
+    ],
+    [
+      {
+        "end": 1980,
+        "start": 1968
+      },
+      {
+        "end": 2072,
+        "start": 1982
+      }
+    ],
+    [
+      {
+        "end": 2098,
+        "start": 2078
+      },
+      {
+        "end": 2213,
+        "start": 2100
+      }
+    ],
+    [
+      {
+        "end": 2245,
+        "start": 2219
+      },
+      {
+        "end": 2328,
+        "start": 2247
+      }
+    ],
+    [
+      {
+        "end": 2353,
+        "start": 2334
+      },
+      {
+        "end": 2400,
+        "start": 2355
+      }
+    ],
+    [
+      {
+        "end": 2407,
+        "start": 2405
+      }
+    ],
+    [
+      {
+        "end": 2420,
+        "start": 2418
+      }
+    ],
+    [
+      {
+        "end": 2434,
+        "start": 2432
+      }
+    ],
+    [
+      {
+        "end": 2442,
+        "start": 2440
+      }
+    ],
+    [
+      {
+        "end": 2470,
+        "start": 2448
+      }
+    ],
+    [
+      {
+        "end": 2479,
+        "start": 2478
+      }
+    ],
+    [
+      {
+        "end": 2508,
+        "start": 2485
+      }
+    ],
+    [
+      {
+        "end": 2629,
+        "start": 2510
+      }
+    ],
+    [
+      {
+        "end": 2750,
+        "start": 2688
+      },
+      {
+        "end": 2776,
+        "start": 2751
+      },
+      {
+        "end": 2827,
+        "start": 2826
+      }
+    ],
+    [
+      {
+        "end": 2922,
+        "start": 2829
+      }
+    ],
+    [
+      {
+        "end": 3110,
+        "start": 2990
+      }
+    ],
+    [
+      {
+        "end": 3133,
+        "start": 3116
+      }
+    ],
+    [
+      {
+        "end": 3190,
+        "start": 3135
+      }
+    ],
+    [
+      {
+        "end": 3236,
+        "start": 3196
+      },
+      {
+        "end": 3295,
+        "start": 3238
+      }
+    ],
+    [
+      {
+        "end": 3336,
+        "start": 3300
+      },
+      {
+        "end": 3358,
+        "start": 3338
+      }
+    ],
+    [
+      {
+        "end": 3368,
+        "start": 3363
+      }
+    ],
+    [
+      {
+        "end": 3391,
+        "start": 3376
+      }
+    ],
+    [
+      {
+        "end": 3418,
+        "start": 3396
+      },
+      {
+        "end": 3477,
+        "start": 3420
+      }
+    ],
+    [
+      {
+        "end": 3497,
+        "start": 3483
+      }
+    ],
+    [
+      {
+        "end": 3819,
+        "start": 3499
+      }
+    ],
+    [
+      {
+        "end": 3868,
+        "start": 3821
+      },
+      {
+        "end": 3890,
+        "start": 3869
+      },
+      {
+        "end": 3955,
+        "start": 3940
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 1,
+  "emitted_candidates": 1,
+  "emitted_findings": 1,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+  "prose_words": 303,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1509,
+        "start": 1495
+      }
+    ],
+    [
+      {
+        "end": 1584,
+        "start": 1513
+      }
+    ],
+    [
+      {
+        "end": 1590,
+        "start": 1588
+      },
+      {
+        "end": 1711,
+        "start": 1640
+      }
+    ],
+    [
+      {
+        "end": 1851,
+        "start": 1711
+      }
+    ],
+    [
+      {
+        "end": 1948,
+        "start": 1851
+      }
+    ],
+    [
+      {
+        "end": 1961,
+        "start": 1954
+      }
+    ],
+    [
+      {
+        "end": 1980,
+        "start": 1968
+      },
+      {
+        "end": 2072,
+        "start": 1982
+      }
+    ],
+    [
+      {
+        "end": 2098,
+        "start": 2078
+      },
+      {
+        "end": 2213,
+        "start": 2100
+      }
+    ],
+    [
+      {
+        "end": 2245,
+        "start": 2219
+      },
+      {
+        "end": 2328,
+        "start": 2247
+      }
+    ],
+    [
+      {
+        "end": 2353,
+        "start": 2334
+      },
+      {
+        "end": 2400,
+        "start": 2355
+      }
+    ],
+    [
+      {
+        "end": 2470,
+        "start": 2448
+      }
+    ],
+    [
+      {
+        "end": 2508,
+        "start": 2485
+      }
+    ],
+    [
+      {
+        "end": 2545,
+        "start": 2510
+      }
+    ],
+    [
+      {
+        "end": 2629,
+        "start": 2545
+      }
+    ],
+    [
+      {
+        "end": 2750,
+        "start": 2688
+      },
+      {
+        "end": 2776,
+        "start": 2751
+      },
+      {
+        "end": 2827,
+        "start": 2826
+      }
+    ],
+    [
+      {
+        "end": 2922,
+        "start": 2829
+      }
+    ],
+    [
+      {
+        "end": 3110,
+        "start": 2990
+      }
+    ],
+    [
+      {
+        "end": 3133,
+        "start": 3116
+      }
+    ],
+    [
+      {
+        "end": 3190,
+        "start": 3135
+      }
+    ],
+    [
+      {
+        "end": 3236,
+        "start": 3196
+      },
+      {
+        "end": 3295,
+        "start": 3238
+      }
+    ],
+    [
+      {
+        "end": 3336,
+        "start": 3300
+      },
+      {
+        "end": 3358,
+        "start": 3338
+      }
+    ],
+    [
+      {
+        "end": 3368,
+        "start": 3363
+      }
+    ],
+    [
+      {
+        "end": 3391,
+        "start": 3376
+      }
+    ],
+    [
+      {
+        "end": 3418,
+        "start": 3396
+      },
+      {
+        "end": 3477,
+        "start": 3420
+      }
+    ],
+    [
+      {
+        "end": 3497,
+        "start": 3483
+      }
+    ],
+    [
+      {
+        "end": 3597,
+        "start": 3499
+      }
+    ],
+    [
+      {
+        "end": 3677,
+        "start": 3597
+      }
+    ],
+    [
+      {
+        "end": 3819,
+        "start": 3677
+      }
+    ],
+    [
+      {
+        "end": 3868,
+        "start": 3821
+      },
+      {
+        "end": 3890,
+        "start": 3869
+      },
+      {
+        "end": 3941,
+        "start": 3940
+      }
+    ],
+    [
+      {
+        "end": 3955,
+        "start": 3941
+      }
+    ]
+  ],
+  "sentence_count": 30,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

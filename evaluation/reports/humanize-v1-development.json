@@ -1,0 +1,195 @@
+{
+  "baseline_revision": "aef3b239c6266ae53f09f0b2a5d8f54e8f1de680",
+  "candidate_engine_commit": "c229acc",
+  "candidates": {
+    "burstiness-units": {
+      "abstentions": {
+        "ai": 1
+      },
+      "eligible_on_development": false,
+      "generated": 28,
+      "genres": {
+        "civic": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": null,
+          "n": 0,
+          "pass": false
+        },
+        "personal": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.7934567085261071
+          ],
+          "n": 1,
+          "pass": false
+        },
+        "review": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.7934567085261071
+          ],
+          "n": 1,
+          "pass": false
+        },
+        "technical": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.2425007574992425
+          ],
+          "n": 12,
+          "pass": false
+        }
+      },
+      "human": {
+        "baseline_false_positives": 0,
+        "false_positives": 0,
+        "interval": [
+          0.0,
+          0.21531701192718142
+        ],
+        "n": 14,
+        "pass": false
+      },
+      "recall_gain": 0.0,
+      "recall_gain_interval": [
+        -0.5133141236899359,
+        0.5133141236899359
+      ],
+      "split": "development"
+    },
+    "punctuation-skip-list-separators": {
+      "abstentions": {
+        "ai": 1
+      },
+      "eligible_on_development": false,
+      "generated": 28,
+      "genres": {
+        "civic": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": null,
+          "n": 0,
+          "pass": false
+        },
+        "personal": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.7934567085261071
+          ],
+          "n": 1,
+          "pass": false
+        },
+        "review": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.7934567085261071
+          ],
+          "n": 1,
+          "pass": false
+        },
+        "technical": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.2425007574992425
+          ],
+          "n": 12,
+          "pass": false
+        }
+      },
+      "human": {
+        "baseline_false_positives": 0,
+        "false_positives": 0,
+        "interval": [
+          0.0,
+          0.21531701192718142
+        ],
+        "n": 14,
+        "pass": false
+      },
+      "recall_gain": 0.0,
+      "recall_gain_interval": [
+        -0.5133141236899359,
+        0.5133141236899359
+      ],
+      "split": "development"
+    },
+    "structure-votes": {
+      "abstentions": {
+        "ai": 1
+      },
+      "eligible_on_development": false,
+      "generated": 28,
+      "genres": {
+        "civic": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": null,
+          "n": 0,
+          "pass": false
+        },
+        "personal": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.7934567085261071
+          ],
+          "n": 1,
+          "pass": false
+        },
+        "review": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.7934567085261071
+          ],
+          "n": 1,
+          "pass": false
+        },
+        "technical": {
+          "baseline_false_positives": 0,
+          "false_positives": 0,
+          "interval": [
+            0.0,
+            0.2425007574992425
+          ],
+          "n": 12,
+          "pass": false
+        }
+      },
+      "human": {
+        "baseline_false_positives": 0,
+        "false_positives": 0,
+        "interval": [
+          0.0,
+          0.21531701192718142
+        ],
+        "n": 14,
+        "pass": false
+      },
+      "recall_gain": 0.25,
+      "recall_gain_interval": [
+        0.10714285714285714,
+        0.42857142857142855
+      ],
+      "split": "development"
+    }
+  },
+  "confidence": "high",
+  "corpus": "owner-posts-v1",
+  "split": "development"
+}

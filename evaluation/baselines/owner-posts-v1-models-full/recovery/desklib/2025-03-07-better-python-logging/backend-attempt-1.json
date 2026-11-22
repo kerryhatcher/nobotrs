@@ -1,0 +1,371 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": -1.2708780765533447
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 13312.095587,
+        "excerpt_bytes": 2612,
+        "excerpt_coverage": 0.5043613103314596,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.5043613103314596,
+        "full_coverage_output": -1.9317997776624443,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.5043613103314596,
+        "precision": "float32",
+        "prepared_bytes": 5177,
+        "prepared_words": 944,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": -1.2708780765533447,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 19,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": true,
+            "prose": {
+              "end": 105,
+              "start": 0
+            },
+            "raw_output": 5.066019535064697,
+            "source_ranges": [
+              {
+                "end": 1284,
+                "start": 1210
+              },
+              {
+                "end": 1304,
+                "start": 1285
+              },
+              {
+                "end": 1446,
+                "start": 1435
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 1,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 384,
+            "heading": "Recognizing you have a problem",
+            "index": 1,
+            "insufficient_context": false,
+            "prose": {
+              "end": 2085,
+              "start": 105
+            },
+            "raw_output": -0.7071926593780518,
+            "source_ranges": [
+              {
+                "end": 1465,
+                "start": 1446
+              },
+              {
+                "end": 1617,
+                "start": 1467
+              },
+              {
+                "end": 1699,
+                "start": 1626
+              },
+              {
+                "end": 1801,
+                "start": 1708
+              },
+              {
+                "end": 2726,
+                "start": 2712
+              },
+              {
+                "end": 3169,
+                "start": 2735
+              },
+              {
+                "end": 3468,
+                "start": 3171
+              },
+              {
+                "end": 3706,
+                "start": 3477
+              },
+              {
+                "end": 5900,
+                "start": 5241
+              },
+              {
+                "end": 5908,
+                "start": 5905
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 28,
+              "start": 1
+            }
+          },
+          {
+            "body_tokens": 161,
+            "heading": "Loguru",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 2895,
+              "start": 2085
+            },
+            "raw_output": -1.8246389627456665,
+            "source_ranges": [
+              {
+                "end": 5911,
+                "start": 5908
+              },
+              {
+                "end": 5983,
+                "start": 5977
+              },
+              {
+                "end": 6152,
+                "start": 6039
+              },
+              {
+                "end": 6159,
+                "start": 6153
+              },
+              {
+                "end": 6231,
+                "start": 6215
+              },
+              {
+                "end": 6515,
+                "start": 6276
+              },
+              {
+                "end": 6558,
+                "start": 6557
+              },
+              {
+                "end": 6695,
+                "start": 6560
+              },
+              {
+                "end": 8043,
+                "start": 7969
+              },
+              {
+                "end": 8054,
+                "start": 8045
+              },
+              {
+                "end": 8255,
+                "start": 8247
+              },
+              {
+                "end": 9126,
+                "start": 8939
+              },
+              {
+                "end": 9136,
+                "start": 9132
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 42,
+              "start": 28
+            }
+          },
+          {
+            "body_tokens": 65,
+            "heading": "What to do with your logs",
+            "index": 3,
+            "insufficient_context": true,
+            "prose": {
+              "end": 3221,
+              "start": 2895
+            },
+            "raw_output": -3.7285919189453125,
+            "source_ranges": [
+              {
+                "end": 9157,
+                "start": 9136
+              },
+              {
+                "end": 9448,
+                "start": 9159
+              },
+              {
+                "end": 9472,
+                "start": 9462
+              },
+              {
+                "end": 9484,
+                "start": 9481
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 47,
+              "start": 42
+            }
+          },
+          {
+            "body_tokens": 131,
+            "heading": "Log File",
+            "index": 4,
+            "insufficient_context": false,
+            "prose": {
+              "end": 3852,
+              "start": 3221
+            },
+            "raw_output": -2.423576831817627,
+            "source_ranges": [
+              {
+                "end": 9489,
+                "start": 9484
+              },
+              {
+                "end": 9566,
+                "start": 9493
+              },
+              {
+                "end": 9668,
+                "start": 9589
+              },
+              {
+                "end": 9761,
+                "start": 9677
+              },
+              {
+                "end": 10230,
+                "start": 9848
+              },
+              {
+                "end": 10242,
+                "start": 10239
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 55,
+              "start": 47
+            }
+          },
+          {
+            "body_tokens": 279,
+            "heading": "Log Service",
+            "index": 5,
+            "insufficient_context": false,
+            "prose": {
+              "end": 5177,
+              "start": 3852
+            },
+            "raw_output": -3.5061593055725098,
+            "source_ranges": [
+              {
+                "end": 10250,
+                "start": 10242
+              },
+              {
+                "end": 10549,
+                "start": 10254
+              },
+              {
+                "end": 10577,
+                "start": 10551
+              },
+              {
+                "end": 10597,
+                "start": 10578
+              },
+              {
+                "end": 10890,
+                "start": 10703
+              },
+              {
+                "end": 10901,
+                "start": 10891
+              },
+              {
+                "end": 11000,
+                "start": 10969
+              },
+              {
+                "end": 11076,
+                "start": 11001
+              },
+              {
+                "end": 11179,
+                "start": 11128
+              },
+              {
+                "end": 11195,
+                "start": 11180
+              },
+              {
+                "end": 11340,
+                "start": 11297
+              },
+              {
+                "end": 11411,
+                "start": 11342
+              },
+              {
+                "end": 11605,
+                "start": 11529
+              },
+              {
+                "end": 13174,
+                "start": 12902
+              },
+              {
+                "end": 13387,
+                "start": 13246
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 72,
+              "start": 55
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

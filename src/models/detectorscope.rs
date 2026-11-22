@@ -105,6 +105,10 @@ struct WorkerFeature {
     description: String,
     contribution: f64,
     #[serde(default)]
+    active_tokens: Option<usize>,
+    #[serde(default)]
+    highlight_limit: Option<usize>,
+    #[serde(default)]
     highlights: Vec<WorkerHighlight>,
 }
 
@@ -188,6 +192,107 @@ impl DetectorBackend for DetectorScopeBackend {
     }
     fn availability(&self) -> Availability {
         Availability::Ready
+    }
+
+    fn score_full(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        let opening = self.score(doc, deadline);
+        let ScoreOutcome::Scored(score) = opening else {
+            return opening;
+        };
+        let tokenizer = match self.tokenizer() {
+            Ok(t) => t,
+            Err(e) => return super::full::planning_failure(score, doc, e),
+        };
+        let (text, mapping) = super::full::flatten_with_map(&doc.prose);
+        let windows = match super::full::plan(
+            doc,
+            &tokenizer,
+            &text,
+            &mapping,
+            self.manifest.max_tokens,
+            deadline,
+        ) {
+            Ok(w) => w,
+            Err(e) => return super::full::planning_failure(score, doc, e),
+        };
+        let mut index = 0;
+        let mut features = vec![None; windows.len()];
+        let run = super::windows::run_windows(&windows, deadline, |ids| {
+            let window = &windows[index];
+            let current = index;
+            index += 1;
+            let substring = &text[window.text.clone()];
+            let mut local = (*tokenizer).clone();
+            local
+                .with_truncation(None)
+                .map_err(|e| Error::InternalError(e.to_string()))?;
+            local.with_padding(None);
+            let actual = local
+                .encode(substring, true)
+                .map_err(|e| Error::InternalError(e.to_string()))?;
+            if actual.get_ids() != ids {
+                return Err(Error::ModelLoadFailed(
+                    "window retokenization differs from planned IDs; coverage not claimed".into(),
+                ));
+            }
+            let (response, _, _) = self.request(substring, deadline)?;
+            if response.tokens != ids.len() {
+                return Err(Error::ModelLoadFailed(format!(
+                    "window worker token mismatch: {} vs {}",
+                    response.tokens,
+                    ids.len()
+                )));
+            }
+            let raw = response.logit;
+            let mut top_features = Vec::new();
+            for feature in response.features {
+                let mut highlights = Vec::new();
+                for h in feature.highlights {
+                    let prose = flat_range_to_prose(
+                        &mapping,
+                        window.text.start + h.start..window.text.start + h.end,
+                    );
+                    let source_ranges = prose
+                        .as_ref()
+                        .map(|r| doc.source_ranges(r.clone()))
+                        .unwrap_or_default();
+                    if source_ranges.is_empty() {
+                        continue;
+                    }
+                    highlights.push(FeatureHighlight {
+                        token_index: h.token_index,
+                        text: h.text,
+                        activation: h.activation,
+                        prose_ranges: prose.into_iter().collect(),
+                        source_ranges,
+                    });
+                }
+                top_features.push(FeatureContribution {
+                    id: feature.id,
+                    description: feature.description,
+                    contribution: feature.contribution,
+                    active_tokens: feature.active_tokens,
+                    highlight_limit: feature.highlight_limit,
+                    highlights,
+                });
+            }
+            features[current] = Some(DetectorScopeEvidence {
+                bias: response.bias,
+                reconstruction_residual: response.reconstruction_residual,
+                active_features: response.active_features,
+                feature_filter: self
+                    .manifest
+                    .head
+                    .as_ref()
+                    .map_or(0.85, |h| h.feature_filter),
+                formatting_profile: "flat-whitespace-v1".into(),
+                top_features,
+                omitted_features: response.omitted_features,
+                remainder: response.remainder,
+            });
+            Ok(raw)
+        });
+        super::full::finish(score, doc, &mapping, &windows, run, features)
     }
 
     fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
@@ -324,6 +429,8 @@ impl DetectorBackend for DetectorScopeBackend {
                 id: feature.id,
                 description: feature.description,
                 contribution: feature.contribution,
+                active_tokens: None,
+                highlight_limit: None,
                 highlights,
             });
         }
@@ -360,6 +467,12 @@ impl DetectorBackend for DetectorScopeBackend {
             execution_coverage: coverage,
             excerpt_coverage: coverage,
             elapsed_ms: started.elapsed().as_secs_f64() * 1000.0,
+            packing_policy: None,
+            aggregation_policy: None,
+            windows: vec![],
+            full_coverage_output: None,
+            token_coverage: None,
+            coverage_gaps: vec![],
             detectorscope: Some(DetectorScopeEvidence {
                 bias: response.bias,
                 reconstruction_residual: response.reconstruction_residual,

@@ -1,0 +1,308 @@
+{
+  "backend_status_counts": {
+    "conpara": {
+      "failed": 0,
+      "incomplete": 0,
+      "missing": 33,
+      "missing_backend": 0,
+      "missing_full_evidence": 0,
+      "missing_output": 0,
+      "scored_full": 9,
+      "skipped": 1
+    },
+    "desklib": {
+      "failed": 0,
+      "incomplete": 1,
+      "missing": 15,
+      "missing_backend": 0,
+      "missing_full_evidence": 0,
+      "missing_output": 0,
+      "scored_full": 26,
+      "skipped": 1
+    },
+    "detectorscope": {
+      "failed": 1,
+      "incomplete": 0,
+      "missing": 33,
+      "missing_backend": 0,
+      "missing_full_evidence": 0,
+      "missing_output": 0,
+      "scored_full": 8,
+      "skipped": 1
+    }
+  },
+  "binary_sha256": null,
+  "catalogued_documents": 43,
+  "elapsed_ms": 1476886.6407690002,
+  "empty_ranking_reasons": {
+    "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.": 28
+  },
+  "finished": false,
+  "fully_resolved_documents": 9,
+  "git_revision_at_run_start": "multiple immutable attempts; see per-model run metadata",
+  "incomplete_documents": [
+    "2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+    "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+    "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+    "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+    "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+    "2025-03-07-better-python-logging.md",
+    "2025-03-07-crossover-2025.md",
+    "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+    "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+    "2025-03-22-a-successful-beginning-not-an-end.md",
+    "2025-03-29-delayed-but-determined.md",
+    "2025-03-29-gsdf-patriot-25.md",
+    "2025-04-01-gear-review-system76-pangolin-12-2.md",
+    "2025-04-02-museum-of-aviation-25.md",
+    "2025-04-09-meet-me-at-the-mall.md",
+    "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+    "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+    "2025-05-14-the-road-ahead-2.md",
+    "2025-05-16-investing-in-bibb-countys-future.md"
+  ],
+  "incomplete_or_failed": [
+    {
+      "backend": "detectorscope",
+      "file": "2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+      "status": "failed"
+    },
+    {
+      "backend": "conpara",
+      "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-03-07-better-python-logging.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-03-07-better-python-logging.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-03-07-crossover-2025.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-03-07-crossover-2025.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-03-29-delayed-but-determined.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-03-29-delayed-but-determined.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-03-29-gsdf-patriot-25.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-03-29-gsdf-patriot-25.md",
+      "status": "missing"
+    },
+    {
+      "backend": "desklib",
+      "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+      "status": "incomplete"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-04-02-museum-of-aviation-25.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-04-02-museum-of-aviation-25.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-04-09-meet-me-at-the-mall.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-04-09-meet-me-at-the-mall.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-05-14-the-road-ahead-2.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-05-14-the-road-ahead-2.md",
+      "status": "missing"
+    },
+    {
+      "backend": "conpara",
+      "file": "2025-05-16-investing-in-bibb-countys-future.md",
+      "status": "missing"
+    },
+    {
+      "backend": "detectorscope",
+      "file": "2025-05-16-investing-in-bibb-countys-future.md",
+      "status": "missing"
+    }
+  ],
+  "label_confidence_counts": {
+    "ai_drafted:high": 28,
+    "human:high": 14,
+    "human:medium": 1
+  },
+  "manifest_sha256": "7747cb4292a7a379697b83d1413db5017d2700ee2b87d8733a498d6760ba8234",
+  "missing_output_files": [
+    "2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md",
+    "2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md",
+    "2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md",
+    "2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md",
+    "2025-06-09-better-schools-brighter-futures-literacy-special-edition.md",
+    "2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md",
+    "2025-06-13-digital-privacy-and-freedoms-are-under-threat.md",
+    "2025-06-14-no-kings-protest.md",
+    "2025-06-19-yesterday-and-tomorrow.md",
+    "2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+    "2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md",
+    "2025-12-02-restoring-state-funding-for-state-mandated-costs.md",
+    "2025-12-11-im-running-for-the-bibb-county-board-of-education.md",
+    "2026-02-11-trust-then-verify-1-035-reasons-why.md",
+    "2026-05-27-out-of-runway-the-fy27-bcsd-budget.md"
+  ],
+  "note": "One registry reused, no remote services. Authorship scores and feature presence do not establish editorial utility. The medium-confidence human post is retained for sensitivity analysis only.",
+  "planned_documents": 43,
+  "processed_documents": 28,
+  "run_sha256": "59918a9732f06fcad414672735212349e257fdb624d9726e1e2a4ddff138babc",
+  "schema_version": "owner-model-coverage-summary-v1",
+  "unprocessed_documents": 15,
+  "validated_editorial_utility": false,
+  "window_counts": {
+    "conpara": {
+      "eligible_context": 11,
+      "insufficient_context": 12,
+      "scored": 23,
+      "total": 23
+    },
+    "desklib": {
+      "eligible_context": 65,
+      "insufficient_context": 90,
+      "not_run": 5,
+      "scored": 149,
+      "timed_out": 1,
+      "total": 155
+    },
+    "detectorscope": {
+      "eligible_context": 4,
+      "insufficient_context": 8,
+      "scored": 12,
+      "total": 12
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.03669,
+  "file": "2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md",
+  "input_sha256": "1aa81b4df1757c426df849d16a8158705b3161791fa810165bd3f816899e740f",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/backend.json",
+  "reused_source_sha256": "000b8c50470bc225a7e793ebd498c667d18b5578f57719479058f3498b94af08",
+  "status": "scored_full"
+}

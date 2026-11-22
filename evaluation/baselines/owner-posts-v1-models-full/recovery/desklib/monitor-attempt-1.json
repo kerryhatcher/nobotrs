@@ -1,0 +1,35 @@
+{
+  "argv": [
+    "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/examples/owner_model_sweep",
+    "--model",
+    "desklib",
+    "--models-dir",
+    "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "--out",
+    "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib",
+    "--resume-from",
+    "evaluation/baselines/owner-posts-v1-models-full",
+    "--timeout-ms",
+    "1200000",
+    "--minimum-available-mib",
+    "1024"
+  ],
+  "device": "cpu",
+  "elapsed_seconds": 2718.924530653021,
+  "exit_code": -15,
+  "minimum_available_mib": 1420,
+  "model": "desklib",
+  "model_concurrency": 1,
+  "peak_group_rss_kib": 2755176,
+  "precision": "float32",
+  "process_high_water_kib": {
+    "2135416": 3505264
+  },
+  "required_start_mib": 4096,
+  "root_pid": 2135416,
+  "start_available_mib": 12228,
+  "start_swap_free_mib": 0,
+  "status": "incomplete",
+  "threads": 2,
+  "timeout_ms": 1200000
+}

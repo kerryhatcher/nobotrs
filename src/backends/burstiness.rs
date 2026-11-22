@@ -45,6 +45,16 @@ impl DetectorBackend for Burstiness {
     }
 
     fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        self.score_ranges(doc, deadline, &doc.sentences)
+    }
+}
+impl Burstiness {
+    pub(crate) fn score_ranges(
+        &self,
+        doc: &Document,
+        deadline: Deadline,
+        ranges: &[std::ops::Range<usize>],
+    ) -> ScoreOutcome {
         if deadline.expired() {
             return ScoreOutcome::Failed(crate::error::Error::Timeout);
         }
@@ -59,7 +69,7 @@ impl DetectorBackend for Burstiness {
         }
 
         let mut lengths = Vec::new();
-        for range in &doc.sentences {
+        for range in ranges {
             if deadline.expired() {
                 return ScoreOutcome::Failed(crate::error::Error::Timeout);
             }

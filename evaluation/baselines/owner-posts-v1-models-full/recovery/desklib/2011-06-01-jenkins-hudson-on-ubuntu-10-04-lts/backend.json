@@ -1,0 +1,147 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": -3.326629877090454
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 2368.769861,
+        "excerpt_bytes": 828,
+        "excerpt_coverage": 1.0,
+        "excerpt_tokens": 187,
+        "execution_coverage": 1.0,
+        "full_coverage_output": 0.7214967856536041,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 1.0,
+        "precision": "float32",
+        "prepared_bytes": 828,
+        "prepared_words": 149,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": -3.326629877090454,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": false,
+        "windows": [
+          {
+            "body_tokens": 126,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": true,
+            "prose": {
+              "end": 558,
+              "start": 0
+            },
+            "raw_output": 2.1008780002593994,
+            "source_ranges": [
+              {
+                "end": 1316,
+                "start": 1004
+              },
+              {
+                "end": 1371,
+                "start": 1318
+              },
+              {
+                "end": 1613,
+                "start": 1468
+              },
+              {
+                "end": 1729,
+                "start": 1692
+              },
+              {
+                "end": 1801,
+                "start": 1794
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 8,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 59,
+            "heading": "Warning:",
+            "index": 1,
+            "insufficient_context": true,
+            "prose": {
+              "end": 828,
+              "start": 558
+            },
+            "raw_output": -2.2243003845214844,
+            "source_ranges": [
+              {
+                "end": 1802,
+                "start": 1801
+              },
+              {
+                "end": 1838,
+                "start": 1804
+              },
+              {
+                "end": 1845,
+                "start": 1839
+              },
+              {
+                "end": 1981,
+                "start": 1894
+              },
+              {
+                "end": 2047,
+                "start": 1982
+              },
+              {
+                "end": 2150,
+                "start": 2115
+              },
+              {
+                "end": 2204,
+                "start": 2175
+              },
+              {
+                "end": 2216,
+                "start": 2207
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 15,
+              "start": 8
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "active_model": "desklib",
+  "argv": [
+    "scripts/deferred_owner_model_measurements.py",
+    "--binary",
+    "target/release/examples/owner_model_sweep",
+    "--models-dir",
+    "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "--python",
+    "/home/kwhatcher/.cache/nobotrs-local-ai/venv/bin/python",
+    "--root",
+    "evaluation/baselines/owner-posts-v1-models-full",
+    "--max-wait-seconds",
+    "1800",
+    "--quiet-seconds",
+    "300",
+    "--max-pressure-recoveries",
+    "3"
+  ],
+  "available_mib": 1496,
+  "max_pressure_recoveries": 3,
+  "max_wait_seconds": 1800,
+  "memory_full_avg300": 85.5,
+  "model_allocated_while_waiting": false,
+  "models": {},
+  "quiet_elapsed_seconds": 0,
+  "quiet_seconds": 300,
+  "recovery_round": 0,
+  "required_start_mib": 8192,
+  "schema_version": "deferred-owner-model-scheduler-v1",
+  "status": "deferred_headroom_unavailable",
+  "swap_free_mib": 0,
+  "wait_seconds": 2005.3845974679862,
+  "workload": {
+    "load1": 1002.9375,
+    "load_limit": 32,
+    "memory_full_avg10": 95.83,
+    "memory_full_avg60": 96.45
+  }
+}
