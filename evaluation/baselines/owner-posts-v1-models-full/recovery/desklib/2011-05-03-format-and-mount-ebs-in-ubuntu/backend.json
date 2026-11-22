@@ -1,0 +1,141 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 0.7542449235916138
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 6751.796492,
+        "excerpt_bytes": 645,
+        "excerpt_coverage": 1.0,
+        "excerpt_tokens": 198,
+        "execution_coverage": 1.0,
+        "full_coverage_output": 0.7542449235916138,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 1.0,
+        "precision": "float32",
+        "prepared_bytes": 645,
+        "prepared_words": 129,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 0.7542449235916138,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": false,
+        "windows": [
+          {
+            "body_tokens": 196,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": false,
+            "prose": {
+              "end": 645,
+              "start": 0
+            },
+            "raw_output": 0.7542449235916138,
+            "source_ranges": [
+              {
+                "end": 1118,
+                "start": 999
+              },
+              {
+                "end": 1173,
+                "start": 1121
+              },
+              {
+                "end": 1200,
+                "start": 1178
+              },
+              {
+                "end": 1209,
+                "start": 1204
+              },
+              {
+                "end": 1289,
+                "start": 1213
+              },
+              {
+                "end": 1300,
+                "start": 1293
+              },
+              {
+                "end": 1361,
+                "start": 1304
+              },
+              {
+                "end": 1379,
+                "start": 1365
+              },
+              {
+                "end": 1402,
+                "start": 1383
+              },
+              {
+                "end": 1437,
+                "start": 1406
+              },
+              {
+                "end": 1468,
+                "start": 1441
+              },
+              {
+                "end": 1519,
+                "start": 1473
+              },
+              {
+                "end": 1561,
+                "start": 1524
+              },
+              {
+                "end": 1609,
+                "start": 1566
+              },
+              {
+                "end": 1637,
+                "start": 1614
+              },
+              {
+                "end": 1693,
+                "start": 1642
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 16,
+              "start": 0
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

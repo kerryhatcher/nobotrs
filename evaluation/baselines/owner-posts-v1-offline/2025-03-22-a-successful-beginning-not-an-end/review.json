@@ -1,0 +1,477 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-22-a-successful-beginning-not-an-end.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 785,
+  "leverage_counts": {
+    "2": 2,
+    "3": 11
+  },
+  "findings": [
+    {
+      "rule_id": "structure.fragment-pattern",
+      "guidance_id": "structure.fragment-pattern",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 17,
+        "column": 4,
+        "end_line": 17,
+        "end_column": 8,
+        "source_ranges": [
+          {
+            "start": 526,
+            "end": 530
+          }
+        ]
+      },
+      "matched_text": "WOW!",
+      "sentence": "WOW!",
+      "context": null,
+      "suggestion": "11 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+      "message": null,
+      "why": "Several very short units may interrupt the argument.",
+      "fix": "Check which units are complete sentences and which fragments need connection.",
+      "keep_when": "Keep dialogue, slogans, instructions and deliberate emphasis."
+    },
+    {
+      "rule_id": "a-testament-to",
+      "guidance_id": "structure.significance-inflation",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 55,
+        "column": 221,
+        "end_line": 55,
+        "end_column": 235,
+        "source_ranges": [
+          {
+            "start": 3340,
+            "end": 3354
+          }
+        ]
+      },
+      "matched_text": "a testament to",
+      "sentence": "What a testament to their leadership and inspiration, as well as to the partnership forged between school and community.",
+      "context": null,
+      "suggestion": null,
+      "message": null,
+      "why": "Generic significance does not explain the effect on the reader.",
+      "fix": "Use a supplied consequence, or cut the unsupported praise.",
+      "keep_when": "Keep significance supported by specific evidence in context."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 17,
+        "column": 4,
+        "end_line": 17,
+        "end_column": 8,
+        "source_ranges": [
+          {
+            "start": 526,
+            "end": 530
+          }
+        ]
+      },
+      "matched_text": "WOW!",
+      "sentence": "WOW!",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 57,
+        "column": 62,
+        "end_line": 57,
+        "end_column": 73,
+        "source_ranges": [
+          {
+            "start": 3520,
+            "end": 3531
+          }
+        ]
+      },
+      "matched_text": "THANK YOU!!",
+      "sentence": "THANK YOU!!",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 89,
+        "column": 1,
+        "end_line": 89,
+        "end_column": 25,
+        "source_ranges": [
+          {
+            "start": 5942,
+            "end": 5966
+          }
+        ]
+      },
+      "matched_text": "[Delayed, But Determined",
+      "sentence": "[Delayed, But Determined",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 93,
+        "column": 91,
+        "end_line": 93,
+        "end_column": 117,
+        "source_ranges": [
+          {
+            "start": 6313,
+            "end": 6339
+          }
+        ]
+      },
+      "matched_text": "Kerry HatcherKerry Hatcher",
+      "sentence": "Kerry HatcherKerry Hatcher",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 101,
+        "column": 1,
+        "end_line": 101,
+        "end_column": 10,
+        "source_ranges": [
+          {
+            "start": 6556,
+            "end": 6565
+          }
+        ]
+      },
+      "matched_text": "Subscribe",
+      "sentence": "Subscribe",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 103,
+        "column": 1,
+        "end_line": 103,
+        "end_column": 12,
+        "source_ranges": [
+          {
+            "start": 6567,
+            "end": 6578
+          }
+        ]
+      },
+      "matched_text": "Email sent!",
+      "sentence": "Email sent!",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 105,
+        "column": 1,
+        "end_line": 105,
+        "end_column": 9,
+        "source_ranges": [
+          {
+            "start": 6622,
+            "end": 6630
+          }
+        ]
+      },
+      "matched_text": "No spam.",
+      "sentence": "No spam.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 105,
+        "column": 10,
+        "end_line": 105,
+        "end_column": 30,
+        "source_ranges": [
+          {
+            "start": 6631,
+            "end": 6651
+          }
+        ]
+      },
+      "matched_text": "Unsubscribe anytime.",
+      "sentence": "Unsubscribe anytime.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 109,
+        "column": 91,
+        "end_line": 109,
+        "end_column": 108,
+        "source_ranges": [
+          {
+            "start": 6791,
+            "end": 6808
+          }
+        ]
+      },
+      "matched_text": "Check back often!",
+      "sentence": "Check back often!",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 111,
+        "column": 89,
+        "end_line": 111,
+        "end_column": 115,
+        "source_ranges": [
+          {
+            "start": 7041,
+            "end": 7067
+          }
+        ]
+      },
+      "matched_text": "Kerry HatcherKerry Hatcher",
+      "sentence": "Kerry HatcherKerry Hatcher",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 113,
+        "column": 72,
+        "end_line": 113,
+        "end_column": 110,
+        "source_ranges": [
+          {
+            "start": 7140,
+            "end": 7178
+          }
+        ]
+      },
+      "matched_text": "](https://www.kerryhatcher.com/alex2/)",
+      "sentence": "](https://www.kerryhatcher.com/alex2/)",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 13,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

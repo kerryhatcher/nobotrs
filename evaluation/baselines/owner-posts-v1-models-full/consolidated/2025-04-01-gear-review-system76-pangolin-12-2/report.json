@@ -1,0 +1,1928 @@
+{
+  "actionable_finding_count": 1,
+  "analyzed_coverage": 0.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [
+            {
+              "block_context": 12,
+              "column": 5,
+              "disposition": "selected",
+              "end_column": 13,
+              "end_line": 41,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 41,
+              "matched_text": "Seamless",
+              "prose_offset": {
+                "end": 1743,
+                "start": 1735
+              },
+              "raw_offset": {
+                "end": 2576,
+                "start": 2568
+              },
+              "rule_id": "seamless",
+              "sentence_context": 21,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2576,
+                  "start": 2568
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 12,
+              "column": 5,
+              "disposition": "selected",
+              "end_column": 13,
+              "end_line": 41,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 41,
+              "matched_text": "Seamless",
+              "prose_offset": {
+                "end": 1743,
+                "start": 1735
+              },
+              "raw_offset": {
+                "end": 2576,
+                "start": 2568
+              },
+              "rule_id": "seamless",
+              "sentence_context": 21,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2576,
+                  "start": 2568
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            }
+          ],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 1.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 746.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.6124171823623822
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 176.71440562917746
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 9.145106089620839
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6281230642163947
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.323414716399109
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": "Timeout",
+        "status": "failed"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "coverage": 0.0,
+          "reason": "Timeout",
+          "score": {
+            "backend": "desklib",
+            "candidates": [],
+            "confidence": "low",
+            "document_findings": [],
+            "evidence": [],
+            "family": "Model",
+            "metrics": {
+              "model_score": {
+                "method": "prepared-prose-v1/opening-excerpt-v1",
+                "unit": "logit",
+                "value": 7.887574195861816
+              },
+              "model_threshold": {
+                "method": "pilot_development_1pct",
+                "unit": "logit",
+                "value": 3.6327714920043945
+              }
+            },
+            "model_evidence": {
+              "aggregation_policy": "token-weighted-mean-v1",
+              "backend": "desklib",
+              "code_revision": null,
+              "coverage_gaps": [
+                {
+                  "end": 255,
+                  "start": 0
+                },
+                {
+                  "end": 1542,
+                  "start": 255
+                },
+                {
+                  "end": 2313,
+                  "start": 1542
+                },
+                {
+                  "end": 2722,
+                  "start": 2313
+                },
+                {
+                  "end": 4512,
+                  "start": 2722
+                },
+                {
+                  "end": 4843,
+                  "start": 4512
+                }
+              ],
+              "device": "cpu",
+              "elapsed_ms": 590051.272889,
+              "excerpt_bytes": 2604,
+              "excerpt_coverage": 0.5375232582179037,
+              "excerpt_tokens": 512,
+              "execution_coverage": 0.5375232582179037,
+              "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+              "packing_policy": "section-packed-v1",
+              "planned_coverage": 0.5375232582179037,
+              "precision": "float32",
+              "prepared_bytes": 4843,
+              "prepared_words": 746,
+              "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+              "raw_output": 7.887574195861816,
+              "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+              "runtime": "candle-debertav2",
+              "threshold": 3.6327714920043945,
+              "threshold_source": "pilot development 1% target",
+              "token_coverage": 0.0,
+              "token_limit": 512,
+              "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+              "truncated": true,
+              "windows": [
+                {
+                  "body_tokens": 50,
+                  "error": "analysis deadline exceeded",
+                  "heading": null,
+                  "index": 0,
+                  "insufficient_context": true,
+                  "prose": {
+                    "end": 255,
+                    "start": 0
+                  },
+                  "raw_output": null,
+                  "source_ranges": [
+                    {
+                      "end": 962,
+                      "start": 711
+                    },
+                    {
+                      "end": 971,
+                      "start": 968
+                    }
+                  ],
+                  "status": "timed_out",
+                  "units": {
+                    "end": 2,
+                    "start": 0
+                  }
+                },
+                {
+                  "body_tokens": 249,
+                  "heading": "The Bad",
+                  "index": 1,
+                  "insufficient_context": false,
+                  "prose": {
+                    "end": 1542,
+                    "start": 255
+                  },
+                  "raw_output": null,
+                  "source_ranges": [
+                    {
+                      "end": 975,
+                      "start": 971
+                    },
+                    {
+                      "end": 1101,
+                      "start": 977
+                    },
+                    {
+                      "end": 1119,
+                      "start": 1107
+                    },
+                    {
+                      "end": 1247,
+                      "start": 1121
+                    },
+                    {
+                      "end": 1284,
+                      "start": 1252
+                    },
+                    {
+                      "end": 1587,
+                      "start": 1286
+                    },
+                    {
+                      "end": 1616,
+                      "start": 1592
+                    },
+                    {
+                      "end": 1811,
+                      "start": 1618
+                    },
+                    {
+                      "end": 1835,
+                      "start": 1816
+                    },
+                    {
+                      "end": 2092,
+                      "start": 1837
+                    },
+                    {
+                      "end": 2117,
+                      "start": 2097
+                    },
+                    {
+                      "end": 2232,
+                      "start": 2119
+                    },
+                    {
+                      "end": 2354,
+                      "start": 2301
+                    },
+                    {
+                      "end": 2363,
+                      "start": 2360
+                    }
+                  ],
+                  "status": "not_run",
+                  "units": {
+                    "end": 17,
+                    "start": 2
+                  }
+                },
+                {
+                  "body_tokens": 150,
+                  "heading": "The Good",
+                  "index": 2,
+                  "insufficient_context": false,
+                  "prose": {
+                    "end": 2313,
+                    "start": 1542
+                  },
+                  "raw_output": null,
+                  "source_ranges": [
+                    {
+                      "end": 2368,
+                      "start": 2363
+                    },
+                    {
+                      "end": 2395,
+                      "start": 2370
+                    },
+                    {
+                      "end": 2419,
+                      "start": 2401
+                    },
+                    {
+                      "end": 2563,
+                      "start": 2421
+                    },
+                    {
+                      "end": 2594,
+                      "start": 2568
+                    },
+                    {
+                      "end": 2747,
+                      "start": 2596
+                    },
+                    {
+                      "end": 2780,
+                      "start": 2752
+                    },
+                    {
+                      "end": 2986,
+                      "start": 2782
+                    },
+                    {
+                      "end": 3003,
+                      "start": 2991
+                    },
+                    {
+                      "end": 3153,
+                      "start": 3005
+                    },
+                    {
+                      "end": 3165,
+                      "start": 3159
+                    }
+                  ],
+                  "status": "not_run",
+                  "units": {
+                    "end": 26,
+                    "start": 17
+                  }
+                },
+                {
+                  "body_tokens": 87,
+                  "heading": "Gaming on the Pangolin 12",
+                  "index": 3,
+                  "insufficient_context": true,
+                  "prose": {
+                    "end": 2722,
+                    "start": 2313
+                  },
+                  "raw_output": null,
+                  "source_ranges": [
+                    {
+                      "end": 3184,
+                      "start": 3165
+                    },
+                    {
+                      "end": 3355,
+                      "start": 3186
+                    },
+                    {
+                      "end": 3367,
+                      "start": 3356
+                    },
+                    {
+                      "end": 3371,
+                      "start": 3368
+                    },
+                    {
+                      "end": 3388,
+                      "start": 3372
+                    },
+                    {
+                      "end": 3392,
+                      "start": 3389
+                    },
+                    {
+                      "end": 3401,
+                      "start": 3393
+                    },
+                    {
+                      "end": 3405,
+                      "start": 3402
+                    },
+                    {
+                      "end": 3415,
+                      "start": 3406
+                    },
+                    {
+                      "end": 3573,
+                      "start": 3416
+                    },
+                    {
+                      "end": 3588,
+                      "start": 3579
+                    }
+                  ],
+                  "status": "not_run",
+                  "units": {
+                    "end": 31,
+                    "start": 26
+                  }
+                },
+                {
+                  "body_tokens": 434,
+                  "heading": "Technical Specifications of the System76 Pangolin 12",
+                  "index": 4,
+                  "insufficient_context": false,
+                  "prose": {
+                    "end": 4512,
+                    "start": 2722
+                  },
+                  "raw_output": null,
+                  "source_ranges": [
+                    {
+                      "end": 3631,
+                      "start": 3588
+                    },
+                    {
+                      "end": 3786,
+                      "start": 3633
+                    },
+                    {
+                      "end": 3808,
+                      "start": 3792
+                    },
+                    {
+                      "end": 3886,
+                      "start": 3810
+                    },
+                    {
+                      "end": 3922,
+                      "start": 3891
+                    },
+                    {
+                      "end": 3952,
+                      "start": 3924
+                    },
+                    {
+                      "end": 3965,
+                      "start": 3957
+                    },
+                    {
+                      "end": 3983,
+                      "start": 3974
+                    },
+                    {
+                      "end": 4132,
+                      "start": 3985
+                    },
+                    {
+                      "end": 4161,
+                      "start": 4139
+                    },
+                    {
+                      "end": 4188,
+                      "start": 4170
+                    },
+                    {
+                      "end": 4226,
+                      "start": 4195
+                    },
+                    {
+                      "end": 4240,
+                      "start": 4231
+                    },
+                    {
+                      "end": 4254,
+                      "start": 4249
+                    },
+                    {
+                      "end": 4375,
+                      "start": 4256
+                    },
+                    {
+                      "end": 4407,
+                      "start": 4382
+                    },
+                    {
+                      "end": 4477,
+                      "start": 4409
+                    },
+                    {
+                      "end": 4495,
+                      "start": 4482
+                    },
+                    {
+                      "end": 4595,
+                      "start": 4497
+                    },
+                    {
+                      "end": 4608,
+                      "start": 4600
+                    },
+                    {
+                      "end": 4665,
+                      "start": 4610
+                    },
+                    {
+                      "end": 4681,
+                      "start": 4670
+                    },
+                    {
+                      "end": 4699,
+                      "start": 4690
+                    },
+                    {
+                      "end": 4832,
+                      "start": 4701
+                    },
+                    {
+                      "end": 4845,
+                      "start": 4839
+                    },
+                    {
+                      "end": 4904,
+                      "start": 4847
+                    },
+                    {
+                      "end": 4932,
+                      "start": 4909
+                    },
+                    {
+                      "end": 4954,
+                      "start": 4939
+                    },
+                    {
+                      "end": 5004,
+                      "start": 4959
+                    },
+                    {
+                      "end": 5035,
+                      "start": 5009
+                    },
+                    {
+                      "end": 5054,
+                      "start": 5040
+                    },
+                    {
+                      "end": 5073,
+                      "start": 5059
+                    },
+                    {
+                      "end": 5099,
+                      "start": 5078
+                    },
+                    {
+                      "end": 5165,
+                      "start": 5104
+                    },
+                    {
+                      "end": 5176,
+                      "start": 5170
+                    },
+                    {
+                      "end": 5223,
+                      "start": 5178
+                    },
+                    {
+                      "end": 5238,
+                      "start": 5228
+                    },
+                    {
+                      "end": 5268,
+                      "start": 5247
+                    },
+                    {
+                      "end": 5280,
+                      "start": 5270
+                    },
+                    {
+                      "end": 5311,
+                      "start": 5287
+                    },
+                    {
+                      "end": 5322,
+                      "start": 5313
+                    },
+                    {
+                      "end": 5363,
+                      "start": 5329
+                    },
+                    {
+                      "end": 5374,
+                      "start": 5365
+                    },
+                    {
+                      "end": 5394,
+                      "start": 5381
+                    },
+                    {
+                      "end": 5406,
+                      "start": 5396
+                    },
+                    {
+                      "end": 5514,
+                      "start": 5408
+                    },
+                    {
+                      "end": 5550,
+                      "start": 5515
+                    },
+                    {
+                      "end": 5631,
+                      "start": 5630
+                    },
+                    {
+                      "end": 5647,
+                      "start": 5637
+                    }
+                  ],
+                  "status": "not_run",
+                  "units": {
+                    "end": 66,
+                    "start": 31
+                  }
+                },
+                {
+                  "body_tokens": 61,
+                  "heading": "Conclusion",
+                  "index": 5,
+                  "insufficient_context": true,
+                  "prose": {
+                    "end": 4843,
+                    "start": 4512
+                  },
+                  "raw_output": null,
+                  "source_ranges": [
+                    {
+                      "end": 5908,
+                      "start": 5649
+                    },
+                    {
+                      "end": 6046,
+                      "start": 5977
+                    }
+                  ],
+                  "status": "not_run",
+                  "units": {
+                    "end": 70,
+                    "start": 66
+                  }
+                }
+              ]
+            },
+            "vote": "none",
+            "voting_eligible": false
+          }
+        },
+        "status": "incomplete"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "status": "failed",
+        "details": {
+          "ModelLoadFailed": "no completed attempt available"
+        }
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "status": "failed",
+        "details": {
+          "ModelLoadFailed": "no completed attempt available"
+        }
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 962,
+        "start": 711
+      }
+    ],
+    [
+      {
+        "end": 975,
+        "start": 968
+      }
+    ],
+    [
+      {
+        "end": 1101,
+        "start": 977
+      }
+    ],
+    [
+      {
+        "end": 1119,
+        "start": 1107
+      },
+      {
+        "end": 1247,
+        "start": 1121
+      }
+    ],
+    [
+      {
+        "end": 1284,
+        "start": 1252
+      },
+      {
+        "end": 1587,
+        "start": 1286
+      }
+    ],
+    [
+      {
+        "end": 1616,
+        "start": 1592
+      },
+      {
+        "end": 1811,
+        "start": 1618
+      }
+    ],
+    [
+      {
+        "end": 1835,
+        "start": 1816
+      },
+      {
+        "end": 2092,
+        "start": 1837
+      }
+    ],
+    [
+      {
+        "end": 2117,
+        "start": 2097
+      },
+      {
+        "end": 2232,
+        "start": 2119
+      }
+    ],
+    [
+      {
+        "end": 2354,
+        "start": 2301
+      }
+    ],
+    [
+      {
+        "end": 2368,
+        "start": 2360
+      }
+    ],
+    [
+      {
+        "end": 2395,
+        "start": 2370
+      }
+    ],
+    [
+      {
+        "end": 2419,
+        "start": 2401
+      },
+      {
+        "end": 2563,
+        "start": 2421
+      }
+    ],
+    [
+      {
+        "end": 2594,
+        "start": 2568
+      },
+      {
+        "end": 2747,
+        "start": 2596
+      }
+    ],
+    [
+      {
+        "end": 2780,
+        "start": 2752
+      },
+      {
+        "end": 2986,
+        "start": 2782
+      }
+    ],
+    [
+      {
+        "end": 3003,
+        "start": 2991
+      },
+      {
+        "end": 3153,
+        "start": 3005
+      }
+    ],
+    [
+      {
+        "end": 3184,
+        "start": 3159
+      }
+    ],
+    [
+      {
+        "end": 3355,
+        "start": 3186
+      },
+      {
+        "end": 3367,
+        "start": 3356
+      },
+      {
+        "end": 3371,
+        "start": 3368
+      },
+      {
+        "end": 3388,
+        "start": 3372
+      },
+      {
+        "end": 3392,
+        "start": 3389
+      },
+      {
+        "end": 3401,
+        "start": 3393
+      },
+      {
+        "end": 3405,
+        "start": 3402
+      },
+      {
+        "end": 3415,
+        "start": 3406
+      },
+      {
+        "end": 3573,
+        "start": 3416
+      }
+    ],
+    [
+      {
+        "end": 3631,
+        "start": 3579
+      }
+    ],
+    [
+      {
+        "end": 3786,
+        "start": 3633
+      }
+    ],
+    [
+      {
+        "end": 3808,
+        "start": 3792
+      },
+      {
+        "end": 3886,
+        "start": 3810
+      }
+    ],
+    [
+      {
+        "end": 3922,
+        "start": 3891
+      },
+      {
+        "end": 3952,
+        "start": 3924
+      }
+    ],
+    [
+      {
+        "end": 3965,
+        "start": 3957
+      }
+    ],
+    [
+      {
+        "end": 3983,
+        "start": 3974
+      },
+      {
+        "end": 4132,
+        "start": 3985
+      }
+    ],
+    [
+      {
+        "end": 4161,
+        "start": 4139
+      }
+    ],
+    [
+      {
+        "end": 4188,
+        "start": 4170
+      }
+    ],
+    [
+      {
+        "end": 4226,
+        "start": 4195
+      }
+    ],
+    [
+      {
+        "end": 4240,
+        "start": 4231
+      }
+    ],
+    [
+      {
+        "end": 4254,
+        "start": 4249
+      },
+      {
+        "end": 4375,
+        "start": 4256
+      }
+    ],
+    [
+      {
+        "end": 4407,
+        "start": 4382
+      },
+      {
+        "end": 4477,
+        "start": 4409
+      }
+    ],
+    [
+      {
+        "end": 4495,
+        "start": 4482
+      },
+      {
+        "end": 4595,
+        "start": 4497
+      }
+    ],
+    [
+      {
+        "end": 4608,
+        "start": 4600
+      },
+      {
+        "end": 4665,
+        "start": 4610
+      }
+    ],
+    [
+      {
+        "end": 4681,
+        "start": 4670
+      }
+    ],
+    [
+      {
+        "end": 4699,
+        "start": 4690
+      },
+      {
+        "end": 4832,
+        "start": 4701
+      }
+    ],
+    [
+      {
+        "end": 4845,
+        "start": 4839
+      },
+      {
+        "end": 4904,
+        "start": 4847
+      }
+    ],
+    [
+      {
+        "end": 4932,
+        "start": 4909
+      }
+    ],
+    [
+      {
+        "end": 4954,
+        "start": 4939
+      }
+    ],
+    [
+      {
+        "end": 5004,
+        "start": 4959
+      }
+    ],
+    [
+      {
+        "end": 5035,
+        "start": 5009
+      }
+    ],
+    [
+      {
+        "end": 5054,
+        "start": 5040
+      }
+    ],
+    [
+      {
+        "end": 5073,
+        "start": 5059
+      }
+    ],
+    [
+      {
+        "end": 5099,
+        "start": 5078
+      }
+    ],
+    [
+      {
+        "end": 5165,
+        "start": 5104
+      }
+    ],
+    [
+      {
+        "end": 5176,
+        "start": 5170
+      },
+      {
+        "end": 5223,
+        "start": 5178
+      }
+    ],
+    [
+      {
+        "end": 5238,
+        "start": 5228
+      }
+    ],
+    [
+      {
+        "end": 5268,
+        "start": 5247
+      },
+      {
+        "end": 5280,
+        "start": 5270
+      }
+    ],
+    [
+      {
+        "end": 5311,
+        "start": 5287
+      },
+      {
+        "end": 5322,
+        "start": 5313
+      }
+    ],
+    [
+      {
+        "end": 5363,
+        "start": 5329
+      },
+      {
+        "end": 5374,
+        "start": 5365
+      }
+    ],
+    [
+      {
+        "end": 5394,
+        "start": 5381
+      },
+      {
+        "end": 5406,
+        "start": 5396
+      }
+    ],
+    [
+      {
+        "end": 5514,
+        "start": 5408
+      },
+      {
+        "end": 5550,
+        "start": 5515
+      },
+      {
+        "end": 5631,
+        "start": 5630
+      }
+    ],
+    [
+      {
+        "end": 5647,
+        "start": 5637
+      }
+    ],
+    [
+      {
+        "end": 5908,
+        "start": 5649
+      }
+    ],
+    [
+      {
+        "end": 6046,
+        "start": 5977
+      }
+    ]
+  ],
+  "complete": false,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 1,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [
+    "structure: failed",
+    "desklib: incomplete",
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 1,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-04-01-gear-review-system76-pangolin-12-2.md",
+  "prose_words": 746,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 852,
+        "start": 711
+      }
+    ],
+    [
+      {
+        "end": 962,
+        "start": 852
+      }
+    ],
+    [
+      {
+        "end": 975,
+        "start": 968
+      }
+    ],
+    [
+      {
+        "end": 1011,
+        "start": 977
+      }
+    ],
+    [
+      {
+        "end": 1101,
+        "start": 1011
+      }
+    ],
+    [
+      {
+        "end": 1119,
+        "start": 1107
+      },
+      {
+        "end": 1178,
+        "start": 1121
+      }
+    ],
+    [
+      {
+        "end": 1247,
+        "start": 1178
+      }
+    ],
+    [
+      {
+        "end": 1284,
+        "start": 1252
+      },
+      {
+        "end": 1401,
+        "start": 1286
+      }
+    ],
+    [
+      {
+        "end": 1499,
+        "start": 1401
+      }
+    ],
+    [
+      {
+        "end": 1587,
+        "start": 1499
+      }
+    ],
+    [
+      {
+        "end": 1616,
+        "start": 1592
+      },
+      {
+        "end": 1728,
+        "start": 1618
+      }
+    ],
+    [
+      {
+        "end": 1811,
+        "start": 1728
+      }
+    ],
+    [
+      {
+        "end": 1835,
+        "start": 1816
+      },
+      {
+        "end": 1932,
+        "start": 1837
+      }
+    ],
+    [
+      {
+        "end": 2024,
+        "start": 1932
+      }
+    ],
+    [
+      {
+        "end": 2092,
+        "start": 2024
+      }
+    ],
+    [
+      {
+        "end": 2117,
+        "start": 2097
+      },
+      {
+        "end": 2232,
+        "start": 2119
+      }
+    ],
+    [
+      {
+        "end": 2354,
+        "start": 2301
+      }
+    ],
+    [
+      {
+        "end": 2368,
+        "start": 2360
+      }
+    ],
+    [
+      {
+        "end": 2395,
+        "start": 2370
+      }
+    ],
+    [
+      {
+        "end": 2419,
+        "start": 2401
+      },
+      {
+        "end": 2477,
+        "start": 2421
+      }
+    ],
+    [
+      {
+        "end": 2563,
+        "start": 2477
+      }
+    ],
+    [
+      {
+        "end": 2594,
+        "start": 2568
+      },
+      {
+        "end": 2657,
+        "start": 2596
+      }
+    ],
+    [
+      {
+        "end": 2747,
+        "start": 2657
+      }
+    ],
+    [
+      {
+        "end": 2780,
+        "start": 2752
+      },
+      {
+        "end": 2908,
+        "start": 2782
+      }
+    ],
+    [
+      {
+        "end": 2986,
+        "start": 2908
+      }
+    ],
+    [
+      {
+        "end": 3003,
+        "start": 2991
+      },
+      {
+        "end": 3153,
+        "start": 3005
+      }
+    ],
+    [
+      {
+        "end": 3184,
+        "start": 3159
+      }
+    ],
+    [
+      {
+        "end": 3268,
+        "start": 3186
+      }
+    ],
+    [
+      {
+        "end": 3341,
+        "start": 3268
+      }
+    ],
+    [
+      {
+        "end": 3355,
+        "start": 3341
+      },
+      {
+        "end": 3367,
+        "start": 3356
+      },
+      {
+        "end": 3371,
+        "start": 3368
+      },
+      {
+        "end": 3388,
+        "start": 3372
+      },
+      {
+        "end": 3392,
+        "start": 3389
+      },
+      {
+        "end": 3401,
+        "start": 3393
+      },
+      {
+        "end": 3405,
+        "start": 3402
+      },
+      {
+        "end": 3415,
+        "start": 3406
+      },
+      {
+        "end": 3459,
+        "start": 3416
+      }
+    ],
+    [
+      {
+        "end": 3573,
+        "start": 3459
+      }
+    ],
+    [
+      {
+        "end": 3631,
+        "start": 3579
+      }
+    ],
+    [
+      {
+        "end": 3734,
+        "start": 3633
+      }
+    ],
+    [
+      {
+        "end": 3786,
+        "start": 3734
+      }
+    ],
+    [
+      {
+        "end": 3808,
+        "start": 3792
+      },
+      {
+        "end": 3886,
+        "start": 3810
+      }
+    ],
+    [
+      {
+        "end": 3922,
+        "start": 3891
+      },
+      {
+        "end": 3952,
+        "start": 3924
+      }
+    ],
+    [
+      {
+        "end": 3965,
+        "start": 3957
+      }
+    ],
+    [
+      {
+        "end": 3983,
+        "start": 3974
+      },
+      {
+        "end": 4066,
+        "start": 3985
+      }
+    ],
+    [
+      {
+        "end": 4132,
+        "start": 4066
+      }
+    ],
+    [
+      {
+        "end": 4161,
+        "start": 4139
+      }
+    ],
+    [
+      {
+        "end": 4188,
+        "start": 4170
+      }
+    ],
+    [
+      {
+        "end": 4226,
+        "start": 4195
+      }
+    ],
+    [
+      {
+        "end": 4240,
+        "start": 4231
+      }
+    ],
+    [
+      {
+        "end": 4254,
+        "start": 4249
+      },
+      {
+        "end": 4375,
+        "start": 4256
+      }
+    ],
+    [
+      {
+        "end": 4407,
+        "start": 4382
+      },
+      {
+        "end": 4477,
+        "start": 4409
+      }
+    ],
+    [
+      {
+        "end": 4495,
+        "start": 4482
+      },
+      {
+        "end": 4595,
+        "start": 4497
+      }
+    ],
+    [
+      {
+        "end": 4608,
+        "start": 4600
+      },
+      {
+        "end": 4665,
+        "start": 4610
+      }
+    ],
+    [
+      {
+        "end": 4681,
+        "start": 4670
+      }
+    ],
+    [
+      {
+        "end": 4699,
+        "start": 4690
+      },
+      {
+        "end": 4832,
+        "start": 4701
+      }
+    ],
+    [
+      {
+        "end": 4845,
+        "start": 4839
+      },
+      {
+        "end": 4904,
+        "start": 4847
+      }
+    ],
+    [
+      {
+        "end": 4932,
+        "start": 4909
+      }
+    ],
+    [
+      {
+        "end": 4954,
+        "start": 4939
+      }
+    ],
+    [
+      {
+        "end": 5004,
+        "start": 4959
+      }
+    ],
+    [
+      {
+        "end": 5035,
+        "start": 5009
+      }
+    ],
+    [
+      {
+        "end": 5054,
+        "start": 5040
+      }
+    ],
+    [
+      {
+        "end": 5073,
+        "start": 5059
+      }
+    ],
+    [
+      {
+        "end": 5099,
+        "start": 5078
+      }
+    ],
+    [
+      {
+        "end": 5165,
+        "start": 5104
+      }
+    ],
+    [
+      {
+        "end": 5176,
+        "start": 5170
+      },
+      {
+        "end": 5223,
+        "start": 5178
+      }
+    ],
+    [
+      {
+        "end": 5238,
+        "start": 5228
+      }
+    ],
+    [
+      {
+        "end": 5268,
+        "start": 5247
+      },
+      {
+        "end": 5280,
+        "start": 5270
+      }
+    ],
+    [
+      {
+        "end": 5311,
+        "start": 5287
+      },
+      {
+        "end": 5322,
+        "start": 5313
+      }
+    ],
+    [
+      {
+        "end": 5363,
+        "start": 5329
+      },
+      {
+        "end": 5374,
+        "start": 5365
+      }
+    ],
+    [
+      {
+        "end": 5394,
+        "start": 5381
+      },
+      {
+        "end": 5406,
+        "start": 5396
+      }
+    ],
+    [
+      {
+        "end": 5513,
+        "start": 5408
+      }
+    ],
+    [
+      {
+        "end": 5514,
+        "start": 5513
+      },
+      {
+        "end": 5550,
+        "start": 5515
+      },
+      {
+        "end": 5631,
+        "start": 5630
+      }
+    ],
+    [
+      {
+        "end": 5647,
+        "start": 5637
+      }
+    ],
+    [
+      {
+        "end": 5772,
+        "start": 5649
+      }
+    ],
+    [
+      {
+        "end": 5908,
+        "start": 5772
+      }
+    ],
+    [
+      {
+        "end": 6046,
+        "start": 5977
+      }
+    ]
+  ],
+  "sentence_count": 70,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": [
+    {
+      "error": "Timeout",
+      "family": "Structure"
+    }
+  ],
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-01-gear-review-system76-pangolin-12-2/backend-attempt-1.json",
+        "sha256": "75066a4b588965a2f2a59e2b2d6185e1ec1f61df73a379a816a866f72432ad53",
+        "origin": "recovery_attempt",
+        "status": "incomplete"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-01-gear-review-system76-pangolin-12-2/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-01-gear-review-system76-pangolin-12-2/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

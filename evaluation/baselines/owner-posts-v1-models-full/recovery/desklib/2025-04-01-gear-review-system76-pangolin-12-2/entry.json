@@ -1,0 +1,10 @@
+{
+  "attempt": 1,
+  "confidence": "high",
+  "elapsed_ms": 1723664.96145,
+  "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+  "input_sha256": "b09c14e4a56286594a26a45cc4bd232b66026466a515c1ef8f7b64f181ef2885",
+  "label": "ai_drafted",
+  "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-01-gear-review-system76-pangolin-12-2/report-attempt-1.json",
+  "status": "incomplete"
+}

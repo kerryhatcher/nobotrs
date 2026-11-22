@@ -1,0 +1,1931 @@
+{
+  "actionable_finding_count": 6,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 831.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.5903002393734081
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 123.29926831616444
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 8.272848873397237
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.5853002070393375
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.993364806603754
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -1.2200071811676025
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 13573.654073,
+            "excerpt_bytes": 2538,
+            "excerpt_coverage": 0.523192645215211,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.523192645215211,
+            "full_coverage_output": -0.24438837403095837,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.523192645215211,
+            "precision": "float32",
+            "prepared_bytes": 4830,
+            "prepared_words": 831,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -1.2200071811676025,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 47,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 221,
+                  "start": 0
+                },
+                "raw_output": 2.400672435760498,
+                "source_ranges": [
+                  {
+                    "end": 1336,
+                    "start": 1120
+                  },
+                  {
+                    "end": 1345,
+                    "start": 1341
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 4,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 166,
+                "heading": "What’s there to be worried about?",
+                "index": 1,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 1034,
+                  "start": 221
+                },
+                "raw_output": 0.052580539137125015,
+                "source_ranges": [
+                  {
+                    "end": 1376,
+                    "start": 1345
+                  },
+                  {
+                    "end": 1543,
+                    "start": 1378
+                  },
+                  {
+                    "end": 1600,
+                    "start": 1544
+                  },
+                  {
+                    "end": 1702,
+                    "start": 1688
+                  },
+                  {
+                    "end": 1711,
+                    "start": 1703
+                  },
+                  {
+                    "end": 1799,
+                    "start": 1794
+                  },
+                  {
+                    "end": 1807,
+                    "start": 1800
+                  },
+                  {
+                    "end": 1925,
+                    "start": 1889
+                  },
+                  {
+                    "end": 1961,
+                    "start": 1926
+                  },
+                  {
+                    "end": 2100,
+                    "start": 2097
+                  },
+                  {
+                    "end": 2120,
+                    "start": 2102
+                  },
+                  {
+                    "end": 2203,
+                    "start": 2122
+                  },
+                  {
+                    "end": 2250,
+                    "start": 2204
+                  },
+                  {
+                    "end": 2404,
+                    "start": 2317
+                  },
+                  {
+                    "end": 2412,
+                    "start": 2406
+                  },
+                  {
+                    "end": 2609,
+                    "start": 2414
+                  },
+                  {
+                    "end": 2622,
+                    "start": 2612
+                  },
+                  {
+                    "end": 2772,
+                    "start": 2767
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 15,
+                  "start": 4
+                }
+              },
+              {
+                "body_tokens": 44,
+                "heading": "Voice Calls",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1273,
+                  "start": 1034
+                },
+                "raw_output": -1.2591636180877686,
+                "source_ranges": [
+                  {
+                    "end": 2778,
+                    "start": 2772
+                  },
+                  {
+                    "end": 2908,
+                    "start": 2780
+                  },
+                  {
+                    "end": 2925,
+                    "start": 2909
+                  },
+                  {
+                    "end": 3160,
+                    "start": 3076
+                  },
+                  {
+                    "end": 3174,
+                    "start": 3171
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 18,
+                  "start": 15
+                }
+              },
+              {
+                "body_tokens": 40,
+                "heading": "SMS Messages",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1481,
+                  "start": 1273
+                },
+                "raw_output": -1.2884081602096558,
+                "source_ranges": [
+                  {
+                    "end": 3183,
+                    "start": 3174
+                  },
+                  {
+                    "end": 3232,
+                    "start": 3185
+                  },
+                  {
+                    "end": 3257,
+                    "start": 3233
+                  },
+                  {
+                    "end": 3477,
+                    "start": 3354
+                  },
+                  {
+                    "end": 3553,
+                    "start": 3550
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 22,
+                  "start": 18
+                }
+              },
+              {
+                "body_tokens": 240,
+                "heading": "Spoofing and SIM swapping",
+                "index": 4,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2685,
+                  "start": 1481
+                },
+                "raw_output": -0.889307975769043,
+                "source_ranges": [
+                  {
+                    "end": 3575,
+                    "start": 3553
+                  },
+                  {
+                    "end": 3888,
+                    "start": 3577
+                  },
+                  {
+                    "end": 4349,
+                    "start": 3890
+                  },
+                  {
+                    "end": 4399,
+                    "start": 4352
+                  },
+                  {
+                    "end": 4807,
+                    "start": 4500
+                  },
+                  {
+                    "end": 4815,
+                    "start": 4808
+                  },
+                  {
+                    "end": 4912,
+                    "start": 4911
+                  },
+                  {
+                    "end": 4917,
+                    "start": 4913
+                  },
+                  {
+                    "end": 5042,
+                    "start": 5041
+                  },
+                  {
+                    "end": 5053,
+                    "start": 5043
+                  },
+                  {
+                    "end": 5180,
+                    "start": 5155
+                  },
+                  {
+                    "end": 5263,
+                    "start": 5257
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 33,
+                  "start": 22
+                }
+              },
+              {
+                "body_tokens": 90,
+                "heading": "Signal to the rescue",
+                "index": 5,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 3086,
+                  "start": 2685
+                },
+                "raw_output": 0.11965946108102798,
+                "source_ranges": [
+                  {
+                    "end": 5277,
+                    "start": 5263
+                  },
+                  {
+                    "end": 5308,
+                    "start": 5280
+                  },
+                  {
+                    "end": 5751,
+                    "start": 5399
+                  },
+                  {
+                    "end": 5763,
+                    "start": 5758
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 37,
+                  "start": 33
+                }
+              },
+              {
+                "body_tokens": 86,
+                "heading": "Trust via transparency",
+                "index": 6,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 3553,
+                  "start": 3086
+                },
+                "raw_output": -1.5826774835586548,
+                "source_ranges": [
+                  {
+                    "end": 5780,
+                    "start": 5763
+                  },
+                  {
+                    "end": 5950,
+                    "start": 5782
+                  },
+                  {
+                    "end": 5997,
+                    "start": 5951
+                  },
+                  {
+                    "end": 6105,
+                    "start": 6049
+                  },
+                  {
+                    "end": 6118,
+                    "start": 6106
+                  },
+                  {
+                    "end": 6338,
+                    "start": 6179
+                  },
+                  {
+                    "end": 6422,
+                    "start": 6415
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 42,
+                  "start": 37
+                }
+              },
+              {
+                "body_tokens": 176,
+                "heading": "Trusted by the government",
+                "index": 7,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 4452,
+                  "start": 3553
+                },
+                "raw_output": -1.916168212890625,
+                "source_ranges": [
+                  {
+                    "end": 6440,
+                    "start": 6422
+                  },
+                  {
+                    "end": 6572,
+                    "start": 6442
+                  },
+                  {
+                    "end": 6596,
+                    "start": 6574
+                  },
+                  {
+                    "end": 6619,
+                    "start": 6597
+                  },
+                  {
+                    "end": 6805,
+                    "start": 6701
+                  },
+                  {
+                    "end": 6824,
+                    "start": 6806
+                  },
+                  {
+                    "end": 6974,
+                    "start": 6906
+                  },
+                  {
+                    "end": 7125,
+                    "start": 6976
+                  },
+                  {
+                    "end": 7155,
+                    "start": 7126
+                  },
+                  {
+                    "end": 7408,
+                    "start": 7328
+                  },
+                  {
+                    "end": 7659,
+                    "start": 7410
+                  },
+                  {
+                    "end": 7741,
+                    "start": 7736
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 51,
+                  "start": 42
+                }
+              },
+              {
+                "body_tokens": 82,
+                "heading": "Bonus: Signal Desktop",
+                "index": 8,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 4830,
+                  "start": 4452
+                },
+                "raw_output": 5.171937465667725,
+                "source_ranges": [
+                  {
+                    "end": 7757,
+                    "start": 7741
+                  },
+                  {
+                    "end": 7799,
+                    "start": 7759
+                  },
+                  {
+                    "end": 7811,
+                    "start": 7800
+                  },
+                  {
+                    "end": 7981,
+                    "start": 7866
+                  },
+                  {
+                    "end": 8181,
+                    "start": 7988
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 58,
+                  "start": 51
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 0,
+              "column": 174,
+              "disposition": "selected",
+              "end_column": 189,
+              "end_line": 18,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 18,
+              "matched_text": "Well good news!",
+              "prose_offset": {
+                "end": 192,
+                "start": 177
+              },
+              "raw_offset": {
+                "end": 1312,
+                "start": 1297
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 2,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1312,
+                  "start": 1297
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 3,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 24,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 24,
+              "matched_text": "Update",
+              "prose_offset": {
+                "end": 821,
+                "start": 815
+              },
+              "raw_offset": {
+                "end": 2412,
+                "start": 2406
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 11,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2412,
+                  "start": 2406
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 5,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 12,
+              "end_line": 28,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 28,
+              "matched_text": "Learn more",
+              "prose_offset": {
+                "end": 1028,
+                "start": 1018
+              },
+              "raw_offset": {
+                "end": 2622,
+                "start": 2612
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 14,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2622,
+                  "start": 2612
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 15,
+              "column": 206,
+              "disposition": "selected",
+              "end_column": 245,
+              "end_line": 60,
+              "guidance_id": "structure.negative-parallelism",
+              "leverage": 2,
+              "line": 60,
+              "matched_text": "not only are your messages private, but",
+              "prose_offset": {
+                "end": 2852,
+                "start": 2813
+              },
+              "raw_offset": {
+                "end": 5523,
+                "start": 5484
+              },
+              "rule_id": "structure.negative-parallelism",
+              "sentence_context": 35,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 5523,
+                  "start": 5484
+                }
+              ],
+              "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+              "suppression": null
+            },
+            {
+              "block_context": 24,
+              "column": 209,
+              "disposition": "selected",
+              "end_column": 221,
+              "end_line": 86,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 86,
+              "matched_text": "I’m a fan :)",
+              "prose_offset": {
+                "end": 4635,
+                "start": 4621
+              },
+              "raw_offset": {
+                "end": 7981,
+                "start": 7967
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 54,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 7981,
+                  "start": 7967
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 25,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 46,
+              "end_line": 90,
+              "guidance_id": "structure.summary-close",
+              "leverage": 2,
+              "line": 90,
+              "matched_text": "Overall Signal is worth your time to try out.",
+              "prose_offset": {
+                "end": 4681,
+                "start": 4636
+              },
+              "raw_offset": {
+                "end": 8033,
+                "start": 7988
+              },
+              "rule_id": "structure.summary-close",
+              "sentence_context": 55,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8033,
+                  "start": 7988
+                }
+              ],
+              "suggestion": "End on the useful conclusion; keep a summary when readers need one.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 0,
+              "column": 174,
+              "disposition": "selected",
+              "end_column": 189,
+              "end_line": 18,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 18,
+              "matched_text": "Well good news!",
+              "prose_offset": {
+                "end": 192,
+                "start": 177
+              },
+              "raw_offset": {
+                "end": 1312,
+                "start": 1297
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 2,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1312,
+                  "start": 1297
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 3,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 24,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 24,
+              "matched_text": "Update",
+              "prose_offset": {
+                "end": 821,
+                "start": 815
+              },
+              "raw_offset": {
+                "end": 2412,
+                "start": 2406
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 11,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2412,
+                  "start": 2406
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 5,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 12,
+              "end_line": 28,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 28,
+              "matched_text": "Learn more",
+              "prose_offset": {
+                "end": 1028,
+                "start": 1018
+              },
+              "raw_offset": {
+                "end": 2622,
+                "start": 2612
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 14,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2622,
+                  "start": 2612
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 15,
+              "column": 206,
+              "disposition": "selected",
+              "end_column": 245,
+              "end_line": 60,
+              "guidance_id": "structure.negative-parallelism",
+              "leverage": 2,
+              "line": 60,
+              "matched_text": "not only are your messages private, but",
+              "prose_offset": {
+                "end": 2852,
+                "start": 2813
+              },
+              "raw_offset": {
+                "end": 5523,
+                "start": 5484
+              },
+              "rule_id": "structure.negative-parallelism",
+              "sentence_context": 35,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 5523,
+                  "start": 5484
+                }
+              ],
+              "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+              "suppression": null
+            },
+            {
+              "block_context": 24,
+              "column": 209,
+              "disposition": "selected",
+              "end_column": 221,
+              "end_line": 86,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 86,
+              "matched_text": "I’m a fan :)",
+              "prose_offset": {
+                "end": 4635,
+                "start": 4621
+              },
+              "raw_offset": {
+                "end": 7981,
+                "start": 7967
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 54,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 7981,
+                  "start": 7967
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 25,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 46,
+              "end_line": 90,
+              "guidance_id": "structure.summary-close",
+              "leverage": 2,
+              "line": 90,
+              "matched_text": "Overall Signal is worth your time to try out.",
+              "prose_offset": {
+                "end": 4681,
+                "start": 4636
+              },
+              "raw_offset": {
+                "end": 8033,
+                "start": 7988
+              },
+              "rule_id": "structure.summary-close",
+              "sentence_context": 55,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8033,
+                  "start": 7988
+                }
+              ],
+              "suggestion": "End on the useful conclusion; keep a summary when readers need one.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 7.2202166064981945
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1336,
+        "start": 1120
+      }
+    ],
+    [
+      {
+        "end": 1376,
+        "start": 1341
+      }
+    ],
+    [
+      {
+        "end": 1543,
+        "start": 1378
+      },
+      {
+        "end": 1600,
+        "start": 1544
+      },
+      {
+        "end": 1702,
+        "start": 1688
+      },
+      {
+        "end": 1711,
+        "start": 1703
+      },
+      {
+        "end": 1799,
+        "start": 1794
+      },
+      {
+        "end": 1807,
+        "start": 1800
+      },
+      {
+        "end": 1925,
+        "start": 1889
+      },
+      {
+        "end": 1961,
+        "start": 1926
+      },
+      {
+        "end": 2100,
+        "start": 2097
+      },
+      {
+        "end": 2120,
+        "start": 2102
+      },
+      {
+        "end": 2203,
+        "start": 2122
+      },
+      {
+        "end": 2250,
+        "start": 2204
+      },
+      {
+        "end": 2404,
+        "start": 2317
+      }
+    ],
+    [
+      {
+        "end": 2412,
+        "start": 2406
+      }
+    ],
+    [
+      {
+        "end": 2609,
+        "start": 2414
+      }
+    ],
+    [
+      {
+        "end": 2622,
+        "start": 2612
+      }
+    ],
+    [
+      {
+        "end": 2778,
+        "start": 2767
+      }
+    ],
+    [
+      {
+        "end": 2908,
+        "start": 2780
+      },
+      {
+        "end": 2925,
+        "start": 2909
+      },
+      {
+        "end": 3160,
+        "start": 3076
+      }
+    ],
+    [
+      {
+        "end": 3183,
+        "start": 3171
+      }
+    ],
+    [
+      {
+        "end": 3232,
+        "start": 3185
+      },
+      {
+        "end": 3257,
+        "start": 3233
+      },
+      {
+        "end": 3477,
+        "start": 3354
+      }
+    ],
+    [
+      {
+        "end": 3575,
+        "start": 3550
+      }
+    ],
+    [
+      {
+        "end": 3888,
+        "start": 3577
+      }
+    ],
+    [
+      {
+        "end": 4349,
+        "start": 3890
+      }
+    ],
+    [
+      {
+        "end": 4399,
+        "start": 4352
+      },
+      {
+        "end": 4807,
+        "start": 4500
+      },
+      {
+        "end": 4815,
+        "start": 4808
+      },
+      {
+        "end": 4912,
+        "start": 4911
+      },
+      {
+        "end": 4917,
+        "start": 4913
+      },
+      {
+        "end": 5042,
+        "start": 5041
+      },
+      {
+        "end": 5053,
+        "start": 5043
+      },
+      {
+        "end": 5180,
+        "start": 5155
+      }
+    ],
+    [
+      {
+        "end": 5277,
+        "start": 5257
+      }
+    ],
+    [
+      {
+        "end": 5308,
+        "start": 5280
+      },
+      {
+        "end": 5751,
+        "start": 5399
+      }
+    ],
+    [
+      {
+        "end": 5780,
+        "start": 5758
+      }
+    ],
+    [
+      {
+        "end": 5950,
+        "start": 5782
+      },
+      {
+        "end": 5997,
+        "start": 5951
+      },
+      {
+        "end": 6105,
+        "start": 6049
+      },
+      {
+        "end": 6118,
+        "start": 6106
+      },
+      {
+        "end": 6338,
+        "start": 6179
+      }
+    ],
+    [
+      {
+        "end": 6440,
+        "start": 6415
+      }
+    ],
+    [
+      {
+        "end": 6572,
+        "start": 6442
+      }
+    ],
+    [
+      {
+        "end": 6596,
+        "start": 6574
+      },
+      {
+        "end": 6619,
+        "start": 6597
+      },
+      {
+        "end": 6805,
+        "start": 6701
+      },
+      {
+        "end": 6824,
+        "start": 6806
+      },
+      {
+        "end": 6974,
+        "start": 6906
+      }
+    ],
+    [
+      {
+        "end": 7125,
+        "start": 6976
+      },
+      {
+        "end": 7155,
+        "start": 7126
+      },
+      {
+        "end": 7408,
+        "start": 7328
+      }
+    ],
+    [
+      {
+        "end": 7659,
+        "start": 7410
+      }
+    ],
+    [
+      {
+        "end": 7757,
+        "start": 7736
+      }
+    ],
+    [
+      {
+        "end": 7799,
+        "start": 7759
+      },
+      {
+        "end": 7811,
+        "start": 7800
+      },
+      {
+        "end": 7981,
+        "start": 7866
+      }
+    ],
+    [
+      {
+        "end": 8181,
+        "start": 7988
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 6,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 6,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+  "prose_words": 831,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1180,
+        "start": 1120
+      }
+    ],
+    [
+      {
+        "end": 1296,
+        "start": 1180
+      }
+    ],
+    [
+      {
+        "end": 1312,
+        "start": 1296
+      }
+    ],
+    [
+      {
+        "end": 1336,
+        "start": 1312
+      }
+    ],
+    [
+      {
+        "end": 1376,
+        "start": 1341
+      }
+    ],
+    [
+      {
+        "end": 1490,
+        "start": 1378
+      }
+    ],
+    [
+      {
+        "end": 1533,
+        "start": 1490
+      }
+    ],
+    [
+      {
+        "end": 1543,
+        "start": 1533
+      },
+      {
+        "end": 1573,
+        "start": 1544
+      }
+    ],
+    [
+      {
+        "end": 1600,
+        "start": 1573
+      },
+      {
+        "end": 1702,
+        "start": 1688
+      },
+      {
+        "end": 1711,
+        "start": 1703
+      },
+      {
+        "end": 1799,
+        "start": 1794
+      },
+      {
+        "end": 1807,
+        "start": 1800
+      },
+      {
+        "end": 1925,
+        "start": 1889
+      },
+      {
+        "end": 1961,
+        "start": 1926
+      },
+      {
+        "end": 2098,
+        "start": 2097
+      }
+    ],
+    [
+      {
+        "end": 2100,
+        "start": 2098
+      },
+      {
+        "end": 2120,
+        "start": 2102
+      },
+      {
+        "end": 2203,
+        "start": 2122
+      },
+      {
+        "end": 2250,
+        "start": 2204
+      },
+      {
+        "end": 2318,
+        "start": 2317
+      }
+    ],
+    [
+      {
+        "end": 2404,
+        "start": 2318
+      }
+    ],
+    [
+      {
+        "end": 2412,
+        "start": 2406
+      }
+    ],
+    [
+      {
+        "end": 2548,
+        "start": 2414
+      }
+    ],
+    [
+      {
+        "end": 2609,
+        "start": 2548
+      }
+    ],
+    [
+      {
+        "end": 2622,
+        "start": 2612
+      }
+    ],
+    [
+      {
+        "end": 2778,
+        "start": 2767
+      }
+    ],
+    [
+      {
+        "end": 2908,
+        "start": 2780
+      },
+      {
+        "end": 2925,
+        "start": 2909
+      },
+      {
+        "end": 3077,
+        "start": 3076
+      }
+    ],
+    [
+      {
+        "end": 3160,
+        "start": 3077
+      }
+    ],
+    [
+      {
+        "end": 3183,
+        "start": 3171
+      }
+    ],
+    [
+      {
+        "end": 3232,
+        "start": 3185
+      },
+      {
+        "end": 3257,
+        "start": 3233
+      },
+      {
+        "end": 3355,
+        "start": 3354
+      }
+    ],
+    [
+      {
+        "end": 3410,
+        "start": 3355
+      }
+    ],
+    [
+      {
+        "end": 3477,
+        "start": 3410
+      }
+    ],
+    [
+      {
+        "end": 3575,
+        "start": 3550
+      }
+    ],
+    [
+      {
+        "end": 3696,
+        "start": 3577
+      }
+    ],
+    [
+      {
+        "end": 3888,
+        "start": 3696
+      }
+    ],
+    [
+      {
+        "end": 3982,
+        "start": 3890
+      }
+    ],
+    [
+      {
+        "end": 4124,
+        "start": 3982
+      }
+    ],
+    [
+      {
+        "end": 4237,
+        "start": 4124
+      }
+    ],
+    [
+      {
+        "end": 4349,
+        "start": 4237
+      }
+    ],
+    [
+      {
+        "end": 4399,
+        "start": 4352
+      },
+      {
+        "end": 4524,
+        "start": 4500
+      }
+    ],
+    [
+      {
+        "end": 4659,
+        "start": 4524
+      }
+    ],
+    [
+      {
+        "end": 4796,
+        "start": 4659
+      }
+    ],
+    [
+      {
+        "end": 4807,
+        "start": 4796
+      },
+      {
+        "end": 4815,
+        "start": 4808
+      },
+      {
+        "end": 4912,
+        "start": 4911
+      },
+      {
+        "end": 4917,
+        "start": 4913
+      },
+      {
+        "end": 5042,
+        "start": 5041
+      },
+      {
+        "end": 5053,
+        "start": 5043
+      },
+      {
+        "end": 5180,
+        "start": 5155
+      }
+    ],
+    [
+      {
+        "end": 5277,
+        "start": 5257
+      }
+    ],
+    [
+      {
+        "end": 5308,
+        "start": 5280
+      },
+      {
+        "end": 5449,
+        "start": 5399
+      }
+    ],
+    [
+      {
+        "end": 5587,
+        "start": 5449
+      }
+    ],
+    [
+      {
+        "end": 5751,
+        "start": 5587
+      }
+    ],
+    [
+      {
+        "end": 5780,
+        "start": 5758
+      }
+    ],
+    [
+      {
+        "end": 5867,
+        "start": 5782
+      }
+    ],
+    [
+      {
+        "end": 5934,
+        "start": 5867
+      }
+    ],
+    [
+      {
+        "end": 5950,
+        "start": 5934
+      },
+      {
+        "end": 5997,
+        "start": 5951
+      },
+      {
+        "end": 6105,
+        "start": 6049
+      },
+      {
+        "end": 6118,
+        "start": 6106
+      },
+      {
+        "end": 6180,
+        "start": 6179
+      }
+    ],
+    [
+      {
+        "end": 6338,
+        "start": 6180
+      }
+    ],
+    [
+      {
+        "end": 6440,
+        "start": 6415
+      }
+    ],
+    [
+      {
+        "end": 6572,
+        "start": 6442
+      }
+    ],
+    [
+      {
+        "end": 6596,
+        "start": 6574
+      },
+      {
+        "end": 6619,
+        "start": 6597
+      },
+      {
+        "end": 6713,
+        "start": 6701
+      }
+    ],
+    [
+      {
+        "end": 6801,
+        "start": 6713
+      }
+    ],
+    [
+      {
+        "end": 6805,
+        "start": 6801
+      },
+      {
+        "end": 6824,
+        "start": 6806
+      },
+      {
+        "end": 6974,
+        "start": 6906
+      }
+    ],
+    [
+      {
+        "end": 7055,
+        "start": 6976
+      }
+    ],
+    [
+      {
+        "end": 7125,
+        "start": 7055
+      },
+      {
+        "end": 7155,
+        "start": 7126
+      },
+      {
+        "end": 7408,
+        "start": 7328
+      }
+    ],
+    [
+      {
+        "end": 7544,
+        "start": 7410
+      }
+    ],
+    [
+      {
+        "end": 7659,
+        "start": 7544
+      }
+    ],
+    [
+      {
+        "end": 7757,
+        "start": 7736
+      }
+    ],
+    [
+      {
+        "end": 7799,
+        "start": 7759
+      },
+      {
+        "end": 7811,
+        "start": 7800
+      },
+      {
+        "end": 7867,
+        "start": 7866
+      }
+    ],
+    [
+      {
+        "end": 7966,
+        "start": 7867
+      }
+    ],
+    [
+      {
+        "end": 7981,
+        "start": 7966
+      }
+    ],
+    [
+      {
+        "end": 8033,
+        "start": 7988
+      }
+    ],
+    [
+      {
+        "end": 8115,
+        "start": 8033
+      }
+    ],
+    [
+      {
+        "end": 8181,
+        "start": 8115
+      }
+    ]
+  ],
+  "sentence_count": 58,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

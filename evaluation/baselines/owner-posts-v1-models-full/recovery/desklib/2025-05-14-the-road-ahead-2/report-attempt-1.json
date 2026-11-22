@@ -1,0 +1,1435 @@
+{
+  "actionable_finding_count": 3,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 2.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.4854368932038835
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 412.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.7648365977177135
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 176.64359490710666
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 8.590106796116505
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6348659003831417
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.87231693926305
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 6.665421009063721
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 19437.443115000002,
+            "excerpt_bytes": 2610,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 509,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 2.892104443948885,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 2610,
+            "prepared_words": 412,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": 6.665421009063721,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 66,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 343,
+                  "start": 0
+                },
+                "raw_output": 7.815695285797119,
+                "source_ranges": [
+                  {
+                    "end": 1500,
+                    "start": 1159
+                  },
+                  {
+                    "end": 1506,
+                    "start": 1505
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 4,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 2,
+                "heading": "1.",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 355,
+                  "start": 343
+                },
+                "raw_output": 0.5648555159568787,
+                "source_ranges": [
+                  {
+                    "end": 1518,
+                    "start": 1506
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 5,
+                  "start": 4
+                }
+              },
+              {
+                "body_tokens": 4,
+                "heading": "Settlement & Enforcement Path",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 378,
+                  "start": 355
+                },
+                "raw_output": 1.233797550201416,
+                "source_ranges": [
+                  {
+                    "end": 1537,
+                    "start": 1518
+                  },
+                  {
+                    "end": 1546,
+                    "start": 1543
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 6,
+                  "start": 5
+                }
+              },
+              {
+                "body_tokens": 52,
+                "heading": "BCSD’s “Hard No”",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 632,
+                  "start": 378
+                },
+                "raw_output": 3.3981189727783203,
+                "source_ranges": [
+                  {
+                    "end": 1565,
+                    "start": 1546
+                  },
+                  {
+                    "end": 1793,
+                    "start": 1567
+                  },
+                  {
+                    "end": 1806,
+                    "start": 1799
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 9,
+                  "start": 6
+                }
+              },
+              {
+                "body_tokens": 84,
+                "heading": "Georgia Attorney General’s Input",
+                "index": 4,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1073,
+                  "start": 632
+                },
+                "raw_output": 3.2408034801483154,
+                "source_ranges": [
+                  {
+                    "end": 1833,
+                    "start": 1806
+                  },
+                  {
+                    "end": 2050,
+                    "start": 1835
+                  },
+                  {
+                    "end": 2054,
+                    "start": 2052
+                  },
+                  {
+                    "end": 2076,
+                    "start": 2057
+                  },
+                  {
+                    "end": 2253,
+                    "start": 2079
+                  },
+                  {
+                    "end": 2264,
+                    "start": 2263
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 13,
+                  "start": 9
+                }
+              },
+              {
+                "body_tokens": 2,
+                "heading": "2.",
+                "index": 5,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1085,
+                  "start": 1073
+                },
+                "raw_output": 0.5276134610176086,
+                "source_ranges": [
+                  {
+                    "end": 2276,
+                    "start": 2264
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 14,
+                  "start": 13
+                }
+              },
+              {
+                "body_tokens": 3,
+                "heading": "Disruption Email Production",
+                "index": 6,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1107,
+                  "start": 1085
+                },
+                "raw_output": 2.109078884124756,
+                "source_ranges": [
+                  {
+                    "end": 2293,
+                    "start": 2276
+                  },
+                  {
+                    "end": 2303,
+                    "start": 2299
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 15,
+                  "start": 14
+                }
+              },
+              {
+                "body_tokens": 76,
+                "heading": "What We’ve Seen So Far",
+                "index": 7,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1549,
+                  "start": 1107
+                },
+                "raw_output": 4.865822792053223,
+                "source_ranges": [
+                  {
+                    "end": 2323,
+                    "start": 2303
+                  },
+                  {
+                    "end": 2482,
+                    "start": 2325
+                  },
+                  {
+                    "end": 2565,
+                    "start": 2486
+                  },
+                  {
+                    "end": 2746,
+                    "start": 2568
+                  },
+                  {
+                    "end": 2756,
+                    "start": 2752
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 19,
+                  "start": 15
+                }
+              },
+              {
+                "body_tokens": 43,
+                "heading": "Next Steps",
+                "index": 8,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1777,
+                  "start": 1549
+                },
+                "raw_output": 3.6440861225128174,
+                "source_ranges": [
+                  {
+                    "end": 2762,
+                    "start": 2756
+                  },
+                  {
+                    "end": 2983,
+                    "start": 2764
+                  },
+                  {
+                    "end": 2994,
+                    "start": 2993
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 22,
+                  "start": 19
+                }
+              },
+              {
+                "body_tokens": 2,
+                "heading": "3.",
+                "index": 9,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1785,
+                  "start": 1777
+                },
+                "raw_output": 0.8597412109375,
+                "source_ranges": [
+                  {
+                    "end": 3002,
+                    "start": 2994
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 23,
+                  "start": 22
+                }
+              },
+              {
+                "body_tokens": 5,
+                "heading": "Campus-Police Call Records",
+                "index": 10,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1809,
+                  "start": 1785
+                },
+                "raw_output": 2.28832745552063,
+                "source_ranges": [
+                  {
+                    "end": 3022,
+                    "start": 3002
+                  },
+                  {
+                    "end": 3031,
+                    "start": 3028
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 24,
+                  "start": 23
+                }
+              },
+              {
+                "body_tokens": 47,
+                "heading": "Our Requests",
+                "index": 11,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 2045,
+                  "start": 1809
+                },
+                "raw_output": 1.605898141860962,
+                "source_ranges": [
+                  {
+                    "end": 3040,
+                    "start": 3031
+                  },
+                  {
+                    "end": 3104,
+                    "start": 3042
+                  },
+                  {
+                    "end": 3198,
+                    "start": 3109
+                  },
+                  {
+                    "end": 3269,
+                    "start": 3202
+                  },
+                  {
+                    "end": 3280,
+                    "start": 3275
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 28,
+                  "start": 24
+                }
+              },
+              {
+                "body_tokens": 121,
+                "heading": "Early Observations",
+                "index": 12,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 2610,
+                  "start": 2045
+                },
+                "raw_output": -1.0500210523605347,
+                "source_ranges": [
+                  {
+                    "end": 3293,
+                    "start": 3280
+                  },
+                  {
+                    "end": 3427,
+                    "start": 3295
+                  },
+                  {
+                    "end": 3486,
+                    "start": 3429
+                  },
+                  {
+                    "end": 3504,
+                    "start": 3489
+                  },
+                  {
+                    "end": 3604,
+                    "start": 3603
+                  },
+                  {
+                    "end": 3650,
+                    "start": 3605
+                  },
+                  {
+                    "end": 3771,
+                    "start": 3753
+                  },
+                  {
+                    "end": 3849,
+                    "start": 3848
+                  },
+                  {
+                    "end": 3880,
+                    "start": 3850
+                  },
+                  {
+                    "end": 4012,
+                    "start": 3984
+                  },
+                  {
+                    "end": 4197,
+                    "start": 4097
+                  },
+                  {
+                    "end": 4264,
+                    "start": 4203
+                  },
+                  {
+                    "end": 4280,
+                    "start": 4270
+                  },
+                  {
+                    "end": 4290,
+                    "start": 4284
+                  },
+                  {
+                    "end": 4307,
+                    "start": 4293
+                  },
+                  {
+                    "end": 4314,
+                    "start": 4308
+                  },
+                  {
+                    "end": 4414,
+                    "start": 4397
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 40,
+                  "start": 28
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 27,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 12,
+              "end_line": 79,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 79,
+              "matched_text": "Thank you,",
+              "prose_offset": {
+                "end": 2564,
+                "start": 2554
+              },
+              "raw_offset": {
+                "end": 4280,
+                "start": 4270
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 37,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 4280,
+                  "start": 4270
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 28,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 8,
+              "end_line": 81,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 81,
+              "matched_text": "-Kerry",
+              "prose_offset": {
+                "end": 2571,
+                "start": 2565
+              },
+              "raw_offset": {
+                "end": 4290,
+                "start": 4284
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 38,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 4290,
+                  "start": 4284
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 1,
+              "column": 7,
+              "disposition": "selected",
+              "end_column": 36,
+              "end_line": 21,
+              "guidance_id": "structure.title-case-headings",
+              "leverage": 4,
+              "line": 21,
+              "matched_text": "Settlement & Enforcement Path",
+              "prose_offset": {
+                "end": 374,
+                "start": 345
+              },
+              "raw_offset": {
+                "end": 1537,
+                "start": 1508
+              },
+              "rule_id": "structure.title-case-headings",
+              "sentence_context": 5,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1537,
+                  "start": 1508
+                }
+              ],
+              "suggestion": "Check heading case against the venue's style; title case may be required.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 27,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 12,
+              "end_line": 79,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 79,
+              "matched_text": "Thank you,",
+              "prose_offset": {
+                "end": 2564,
+                "start": 2554
+              },
+              "raw_offset": {
+                "end": 4280,
+                "start": 4270
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 37,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 4280,
+                  "start": 4270
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 28,
+              "column": 2,
+              "disposition": "selected",
+              "end_column": 8,
+              "end_line": 81,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 81,
+              "matched_text": "-Kerry",
+              "prose_offset": {
+                "end": 2571,
+                "start": 2565
+              },
+              "raw_offset": {
+                "end": 4290,
+                "start": 4284
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 38,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 4290,
+                  "start": 4284
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 1,
+              "column": 7,
+              "disposition": "selected",
+              "end_column": 36,
+              "end_line": 21,
+              "guidance_id": "structure.title-case-headings",
+              "leverage": 4,
+              "line": 21,
+              "matched_text": "Settlement & Enforcement Path",
+              "prose_offset": {
+                "end": 374,
+                "start": 345
+              },
+              "raw_offset": {
+                "end": 1537,
+                "start": 1508
+              },
+              "rule_id": "structure.title-case-headings",
+              "sentence_context": 5,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1537,
+                  "start": 1508
+                }
+              ],
+              "suggestion": "Check heading case against the venue's style; title case may be required.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 7.281553398058253
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1500,
+        "start": 1159
+      }
+    ],
+    [
+      {
+        "end": 1537,
+        "start": 1505
+      }
+    ],
+    [
+      {
+        "end": 1565,
+        "start": 1543
+      }
+    ],
+    [
+      {
+        "end": 1793,
+        "start": 1567
+      }
+    ],
+    [
+      {
+        "end": 1833,
+        "start": 1799
+      }
+    ],
+    [
+      {
+        "end": 2050,
+        "start": 1835
+      }
+    ],
+    [
+      {
+        "end": 2054,
+        "start": 2052
+      },
+      {
+        "end": 2076,
+        "start": 2057
+      },
+      {
+        "end": 2253,
+        "start": 2079
+      }
+    ],
+    [
+      {
+        "end": 2293,
+        "start": 2263
+      }
+    ],
+    [
+      {
+        "end": 2323,
+        "start": 2299
+      }
+    ],
+    [
+      {
+        "end": 2482,
+        "start": 2325
+      }
+    ],
+    [
+      {
+        "end": 2565,
+        "start": 2486
+      }
+    ],
+    [
+      {
+        "end": 2746,
+        "start": 2568
+      }
+    ],
+    [
+      {
+        "end": 2762,
+        "start": 2752
+      }
+    ],
+    [
+      {
+        "end": 2983,
+        "start": 2764
+      }
+    ],
+    [
+      {
+        "end": 3022,
+        "start": 2993
+      }
+    ],
+    [
+      {
+        "end": 3040,
+        "start": 3028
+      }
+    ],
+    [
+      {
+        "end": 3104,
+        "start": 3042
+      }
+    ],
+    [
+      {
+        "end": 3198,
+        "start": 3109
+      }
+    ],
+    [
+      {
+        "end": 3269,
+        "start": 3202
+      }
+    ],
+    [
+      {
+        "end": 3293,
+        "start": 3275
+      }
+    ],
+    [
+      {
+        "end": 3427,
+        "start": 3295
+      }
+    ],
+    [
+      {
+        "end": 3486,
+        "start": 3429
+      }
+    ],
+    [
+      {
+        "end": 3504,
+        "start": 3489
+      },
+      {
+        "end": 3604,
+        "start": 3603
+      },
+      {
+        "end": 3650,
+        "start": 3605
+      }
+    ],
+    [
+      {
+        "end": 3771,
+        "start": 3753
+      },
+      {
+        "end": 3849,
+        "start": 3848
+      },
+      {
+        "end": 3880,
+        "start": 3850
+      }
+    ],
+    [
+      {
+        "end": 4012,
+        "start": 3984
+      }
+    ],
+    [
+      {
+        "end": 4197,
+        "start": 4097
+      }
+    ],
+    [
+      {
+        "end": 4264,
+        "start": 4203
+      }
+    ],
+    [
+      {
+        "end": 4280,
+        "start": 4270
+      }
+    ],
+    [
+      {
+        "end": 4290,
+        "start": 4284
+      }
+    ],
+    [
+      {
+        "end": 4307,
+        "start": 4293
+      },
+      {
+        "end": 4314,
+        "start": 4308
+      },
+      {
+        "end": 4414,
+        "start": 4397
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 3,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 3,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-05-14-the-road-ahead-2.md",
+  "prose_words": 412,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1285,
+        "start": 1159
+      }
+    ],
+    [
+      {
+        "end": 1350,
+        "start": 1285
+      }
+    ],
+    [
+      {
+        "end": 1410,
+        "start": 1350
+      }
+    ],
+    [
+      {
+        "end": 1500,
+        "start": 1410
+      }
+    ],
+    [
+      {
+        "end": 1507,
+        "start": 1505
+      }
+    ],
+    [
+      {
+        "end": 1537,
+        "start": 1507
+      }
+    ],
+    [
+      {
+        "end": 1565,
+        "start": 1543
+      }
+    ],
+    [
+      {
+        "end": 1704,
+        "start": 1567
+      }
+    ],
+    [
+      {
+        "end": 1793,
+        "start": 1704
+      }
+    ],
+    [
+      {
+        "end": 1833,
+        "start": 1799
+      }
+    ],
+    [
+      {
+        "end": 1914,
+        "start": 1835
+      }
+    ],
+    [
+      {
+        "end": 2050,
+        "start": 1914
+      }
+    ],
+    [
+      {
+        "end": 2054,
+        "start": 2052
+      },
+      {
+        "end": 2076,
+        "start": 2057
+      },
+      {
+        "end": 2253,
+        "start": 2079
+      }
+    ],
+    [
+      {
+        "end": 2265,
+        "start": 2263
+      }
+    ],
+    [
+      {
+        "end": 2293,
+        "start": 2265
+      }
+    ],
+    [
+      {
+        "end": 2323,
+        "start": 2299
+      }
+    ],
+    [
+      {
+        "end": 2482,
+        "start": 2325
+      }
+    ],
+    [
+      {
+        "end": 2565,
+        "start": 2486
+      }
+    ],
+    [
+      {
+        "end": 2746,
+        "start": 2568
+      }
+    ],
+    [
+      {
+        "end": 2762,
+        "start": 2752
+      }
+    ],
+    [
+      {
+        "end": 2848,
+        "start": 2764
+      }
+    ],
+    [
+      {
+        "end": 2983,
+        "start": 2848
+      }
+    ],
+    [
+      {
+        "end": 2995,
+        "start": 2993
+      }
+    ],
+    [
+      {
+        "end": 3022,
+        "start": 2995
+      }
+    ],
+    [
+      {
+        "end": 3040,
+        "start": 3028
+      }
+    ],
+    [
+      {
+        "end": 3104,
+        "start": 3042
+      }
+    ],
+    [
+      {
+        "end": 3198,
+        "start": 3109
+      }
+    ],
+    [
+      {
+        "end": 3269,
+        "start": 3202
+      }
+    ],
+    [
+      {
+        "end": 3293,
+        "start": 3275
+      }
+    ],
+    [
+      {
+        "end": 3396,
+        "start": 3295
+      }
+    ],
+    [
+      {
+        "end": 3427,
+        "start": 3396
+      }
+    ],
+    [
+      {
+        "end": 3486,
+        "start": 3429
+      }
+    ],
+    [
+      {
+        "end": 3504,
+        "start": 3489
+      },
+      {
+        "end": 3604,
+        "start": 3603
+      },
+      {
+        "end": 3650,
+        "start": 3605
+      }
+    ],
+    [
+      {
+        "end": 3771,
+        "start": 3753
+      },
+      {
+        "end": 3849,
+        "start": 3848
+      },
+      {
+        "end": 3880,
+        "start": 3850
+      }
+    ],
+    [
+      {
+        "end": 4012,
+        "start": 3984
+      }
+    ],
+    [
+      {
+        "end": 4197,
+        "start": 4097
+      }
+    ],
+    [
+      {
+        "end": 4264,
+        "start": 4203
+      }
+    ],
+    [
+      {
+        "end": 4280,
+        "start": 4270
+      }
+    ],
+    [
+      {
+        "end": 4290,
+        "start": 4284
+      }
+    ],
+    [
+      {
+        "end": 4307,
+        "start": 4293
+      },
+      {
+        "end": 4314,
+        "start": 4308
+      },
+      {
+        "end": 4414,
+        "start": 4397
+      }
+    ]
+  ],
+  "sentence_count": 40,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

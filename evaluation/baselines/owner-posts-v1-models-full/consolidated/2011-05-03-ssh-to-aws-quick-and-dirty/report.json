@@ -1,0 +1,1586 @@
+{
+  "actionable_finding_count": 1,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 117.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "reason": "text has 117 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "reason": "text has 117 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "reason": "text has 117 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "reason": "text has 117 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 4,
+              "column": 75,
+              "disposition": "selected",
+              "end_column": 79,
+              "end_line": 23,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 23,
+              "matched_text": "Why?",
+              "prose_offset": {
+                "end": 517,
+                "start": 513
+              },
+              "raw_offset": {
+                "end": 1521,
+                "start": 1517
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 9,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1521,
+                  "start": 1517
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 4,
+              "column": 75,
+              "disposition": "selected",
+              "end_column": 79,
+              "end_line": 23,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 23,
+              "matched_text": "Why?",
+              "prose_offset": {
+                "end": 517,
+                "start": 513
+              },
+              "raw_offset": {
+                "end": 1521,
+                "start": 1517
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 9,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1521,
+                  "start": 1517
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 8.547008547008547
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -1.6879247426986694
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 2692.497246,
+            "excerpt_bytes": 671,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 191,
+            "execution_coverage": 1.0,
+            "full_coverage_output": -1.6879247426986694,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 671,
+            "prepared_words": 117,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -1.6879247426986694,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 189,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 671,
+                  "start": 0
+                },
+                "raw_output": -1.6879247426986694,
+                "source_ranges": [
+                  {
+                    "end": 1356,
+                    "start": 993
+                  },
+                  {
+                    "end": 1374,
+                    "start": 1361
+                  },
+                  {
+                    "end": 1409,
+                    "start": 1378
+                  },
+                  {
+                    "end": 1441,
+                    "start": 1413
+                  },
+                  {
+                    "end": 1674,
+                    "start": 1443
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 12,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "conpara",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+              "unit": "logit_margin",
+              "value": -7.39609956741333
+            },
+            "model_threshold": {
+              "method": "checkpoint_threshold_margin",
+              "unit": "logit",
+              "value": 2.9423828125
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "conpara",
+            "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+            "device": "cpu",
+            "elapsed_ms": 2473.2841639999997,
+            "excerpt_bytes": 670,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 191,
+            "execution_coverage": 1.0,
+            "full_coverage_output": -7.39609956741333,
+            "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 670,
+            "prepared_words": 117,
+            "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+            "raw_output": -7.39609956741333,
+            "raw_units": "logit margin (AI - human; higher = machine-like)",
+            "runtime": "candle-debertav2",
+            "threshold": 2.9423828125,
+            "threshold_source": "checkpoint threshold_margin",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 189,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 670,
+                  "start": 0
+                },
+                "raw_output": -7.39609956741333,
+                "source_ranges": [
+                  {
+                    "end": 1356,
+                    "start": 993
+                  },
+                  {
+                    "end": 1374,
+                    "start": 1361
+                  },
+                  {
+                    "end": 1409,
+                    "start": 1378
+                  },
+                  {
+                    "end": 1441,
+                    "start": 1413
+                  },
+                  {
+                    "end": 1674,
+                    "start": 1443
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 12,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "detectorscope",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 0.6791025400161743
+            },
+            "model_threshold": {
+              "method": "released logreg head",
+              "unit": "logit",
+              "value": 0.5008
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "detectorscope",
+            "code_revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+            "detectorscope": {
+              "active_features": 80,
+              "bias": 0.6096460819244385,
+              "feature_filter": 0.85,
+              "formatting_profile": "flat-whitespace-v1",
+              "omitted_features": 70,
+              "reconstruction_residual": 1.3220869732322173e-08,
+              "remainder": -0.1243767775595188,
+              "top_features": [
+                {
+                  "contribution": 0.19091138243675232,
+                  "description": "conversational filler phrases used in informal speech",
+                  "highlights": [
+                    {
+                      "activation": 2.3774101734161377,
+                      "prose_ranges": [
+                        {
+                          "end": 19,
+                          "start": 14
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1012,
+                          "start": 1007
+                        }
+                      ],
+                      "text": " your",
+                      "token_index": 7
+                    }
+                  ],
+                  "id": 1076
+                },
+                {
+                  "contribution": 0.16878660023212433,
+                  "description": "cooking and instructional serving or assembly directions",
+                  "highlights": [
+                    {
+                      "activation": 8.342069625854492,
+                      "prose_ranges": [
+                        {
+                          "end": 467,
+                          "start": 463
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1471,
+                          "start": 1467
+                        }
+                      ],
+                      "text": " try",
+                      "token_index": 116
+                    },
+                    {
+                      "activation": 6.542621612548828,
+                      "prose_ranges": [
+                        {
+                          "end": 463,
+                          "start": 459
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1467,
+                          "start": 1463
+                        }
+                      ],
+                      "text": " and",
+                      "token_index": 115
+                    },
+                    {
+                      "activation": 5.851160049438477,
+                      "prose_ranges": [
+                        {
+                          "end": 446,
+                          "start": 443
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1450,
+                          "start": 1447
+                        }
+                      ],
+                      "text": " if",
+                      "token_index": 111
+                    },
+                    {
+                      "activation": 5.324767112731934,
+                      "prose_ranges": [
+                        {
+                          "end": 450,
+                          "start": 446
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1454,
+                          "start": 1450
+                        }
+                      ],
+                      "text": " you",
+                      "token_index": 112
+                    },
+                    {
+                      "activation": 5.221011161804199,
+                      "prose_ranges": [
+                        {
+                          "end": 493,
+                          "start": 489
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1497,
+                          "start": 1493
+                        }
+                      ],
+                      "text": " you",
+                      "token_index": 123
+                    }
+                  ],
+                  "id": 18874
+                },
+                {
+                  "contribution": 0.13534553349018097,
+                  "description": "repeated phrases or sequences in text",
+                  "highlights": [
+                    {
+                      "activation": 4.38551664352417,
+                      "prose_ranges": [
+                        {
+                          "end": 612,
+                          "start": 610
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1616,
+                          "start": 1614
+                        }
+                      ],
+                      "text": " -",
+                      "token_index": 157
+                    }
+                  ],
+                  "id": 33943
+                },
+                {
+                  "contribution": 0.06810624152421951,
+                  "description": "dates and timestamps in forum posts or metadata",
+                  "highlights": [
+                    {
+                      "activation": 7.369746685028076,
+                      "prose_ranges": [
+                        {
+                          "end": 656,
+                          "start": 655
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1660,
+                          "start": 1659
+                        }
+                      ],
+                      "text": "2",
+                      "token_index": 183
+                    },
+                    {
+                      "activation": 6.110378742218018,
+                      "prose_ranges": [
+                        {
+                          "end": 636,
+                          "start": 635
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1640,
+                          "start": 1639
+                        }
+                      ],
+                      "text": "0",
+                      "token_index": 169
+                    }
+                  ],
+                  "id": 33713
+                },
+                {
+                  "contribution": 0.06169738247990608,
+                  "description": "initial setup or beginning instructions in software tutorials or project guides",
+                  "highlights": [
+                    {
+                      "activation": 14.758075714111328,
+                      "prose_ranges": [
+                        {
+                          "end": 106,
+                          "start": 97
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1099,
+                          "start": 1090
+                        }
+                      ],
+                      "text": " instance",
+                      "token_index": 27
+                    },
+                    {
+                      "activation": 11.00491714477539,
+                      "prose_ranges": [
+                        {
+                          "end": 377,
+                          "start": 368
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1374,
+                          "start": 1365
+                        }
+                      ],
+                      "text": " terminal",
+                      "token_index": 85
+                    },
+                    {
+                      "activation": 10.42302703857422,
+                      "prose_ranges": [
+                        {
+                          "end": 35,
+                          "start": 32
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1028,
+                          "start": 1025
+                        }
+                      ],
+                      "text": " up",
+                      "token_index": 11
+                    },
+                    {
+                      "activation": 9.497297286987305,
+                      "prose_ranges": [
+                        {
+                          "end": 47,
+                          "start": 39
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1040,
+                          "start": 1032
+                        }
+                      ],
+                      "text": " running",
+                      "token_index": 13
+                    },
+                    {
+                      "activation": 8.294147491455078,
+                      "prose_ranges": [
+                        {
+                          "end": 48,
+                          "start": 47
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1041,
+                          "start": 1040
+                        }
+                      ],
+                      "text": "?",
+                      "token_index": 14
+                    }
+                  ],
+                  "id": 18558
+                },
+                {
+                  "contribution": -0.1685202419757843,
+                  "description": "neuron fires on the digit 0 inside url placeholders like url 0",
+                  "highlights": [
+                    {
+                      "activation": 3.5038199424743652,
+                      "prose_ranges": [
+                        {
+                          "end": 635,
+                          "start": 634
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1639,
+                          "start": 1638
+                        }
+                      ],
+                      "text": "4",
+                      "token_index": 168
+                    },
+                    {
+                      "activation": 3.1189866065979004,
+                      "prose_ranges": [
+                        {
+                          "end": 656,
+                          "start": 655
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1660,
+                          "start": 1659
+                        }
+                      ],
+                      "text": "2",
+                      "token_index": 183
+                    }
+                  ],
+                  "id": 10954
+                },
+                {
+                  "contribution": -0.1219855397939682,
+                  "description": "coding and networking technical terminology",
+                  "highlights": [
+                    {
+                      "activation": 9.941965103149414,
+                      "prose_ranges": [
+                        {
+                          "end": 517,
+                          "start": 516
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1521,
+                          "start": 1520
+                        }
+                      ],
+                      "text": "?",
+                      "token_index": 130
+                    }
+                  ],
+                  "id": 38113
+                },
+                {
+                  "contribution": -0.05285492166876793,
+                  "description": "words or phrases related to deception, faking, simulation, or optical illusions",
+                  "highlights": [
+                    {
+                      "activation": 6.969878196716309,
+                      "prose_ranges": [
+                        {
+                          "end": 555,
+                          "start": 551
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1559,
+                          "start": 1555
+                        }
+                      ],
+                      "text": " you",
+                      "token_index": 140
+                    },
+                    {
+                      "activation": 4.866935729980469,
+                      "prose_ranges": [
+                        {
+                          "end": 573,
+                          "start": 572
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1577,
+                          "start": 1576
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 144
+                    }
+                  ],
+                  "id": 33211
+                },
+                {
+                  "contribution": -0.04850030690431595,
+                  "description": "words describing specific physical shapes or objects used as visual descriptors",
+                  "highlights": [
+                    {
+                      "activation": 6.341118812561035,
+                      "prose_ranges": [
+                        {
+                          "end": 647,
+                          "start": 646
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1651,
+                          "start": 1650
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 180
+                    }
+                  ],
+                  "id": 41667
+                },
+                {
+                  "contribution": -0.03915289416909218,
+                  "description": "words or phrases used to express proportions or parts of a whole",
+                  "highlights": [
+                    {
+                      "activation": 15.00319480895996,
+                      "prose_ranges": [
+                        {
+                          "end": 654,
+                          "start": 647
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1658,
+                          "start": 1651
+                        }
+                      ],
+                      "text": "compute",
+                      "token_index": 181
+                    }
+                  ],
+                  "id": 57304
+                }
+              ]
+            },
+            "device": "cpu",
+            "elapsed_ms": 7169.166268999999,
+            "excerpt_bytes": 671,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 188,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 0.6791025400161743,
+            "model_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 671,
+            "prepared_words": 117,
+            "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+            "raw_output": 0.6791025400161743,
+            "raw_units": "logit (higher = machine-like at the released head threshold)",
+            "runtime": "detectorscope-worker",
+            "threshold": 0.5008,
+            "threshold_source": "released logreg head threshold",
+            "token_coverage": 1.0,
+            "token_limit": 1024,
+            "tokenizer_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 187,
+                "detectorscope": {
+                  "active_features": 80,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 70,
+                  "reconstruction_residual": 1.3220869732322173e-08,
+                  "remainder": -0.1243767775595188,
+                  "top_features": [
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.19091138243675232,
+                      "description": "conversational filler phrases used in informal speech",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 2.3774101734161377,
+                          "prose_ranges": [
+                            {
+                              "end": 19,
+                              "start": 14
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1012,
+                              "start": 1007
+                            }
+                          ],
+                          "text": " your",
+                          "token_index": 7
+                        }
+                      ],
+                      "id": 1076
+                    },
+                    {
+                      "active_tokens": 7,
+                      "contribution": 0.16878660023212433,
+                      "description": "cooking and instructional serving or assembly directions",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 8.342069625854492,
+                          "prose_ranges": [
+                            {
+                              "end": 467,
+                              "start": 463
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1471,
+                              "start": 1467
+                            }
+                          ],
+                          "text": " try",
+                          "token_index": 116
+                        },
+                        {
+                          "activation": 6.542621612548828,
+                          "prose_ranges": [
+                            {
+                              "end": 463,
+                              "start": 459
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1467,
+                              "start": 1463
+                            }
+                          ],
+                          "text": " and",
+                          "token_index": 115
+                        },
+                        {
+                          "activation": 5.851160049438477,
+                          "prose_ranges": [
+                            {
+                              "end": 446,
+                              "start": 443
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1450,
+                              "start": 1447
+                            }
+                          ],
+                          "text": " if",
+                          "token_index": 111
+                        },
+                        {
+                          "activation": 5.324767112731934,
+                          "prose_ranges": [
+                            {
+                              "end": 450,
+                              "start": 446
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1454,
+                              "start": 1450
+                            }
+                          ],
+                          "text": " you",
+                          "token_index": 112
+                        },
+                        {
+                          "activation": 5.221011161804199,
+                          "prose_ranges": [
+                            {
+                              "end": 493,
+                              "start": 489
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1497,
+                              "start": 1493
+                            }
+                          ],
+                          "text": " you",
+                          "token_index": 123
+                        }
+                      ],
+                      "id": 18874
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.13534553349018097,
+                      "description": "repeated phrases or sequences in text",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 4.38551664352417,
+                          "prose_ranges": [
+                            {
+                              "end": 612,
+                              "start": 610
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1616,
+                              "start": 1614
+                            }
+                          ],
+                          "text": " -",
+                          "token_index": 157
+                        }
+                      ],
+                      "id": 33943
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.06810624152421951,
+                      "description": "dates and timestamps in forum posts or metadata",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 7.369746685028076,
+                          "prose_ranges": [
+                            {
+                              "end": 656,
+                              "start": 655
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1660,
+                              "start": 1659
+                            }
+                          ],
+                          "text": "2",
+                          "token_index": 183
+                        },
+                        {
+                          "activation": 6.110378742218018,
+                          "prose_ranges": [
+                            {
+                              "end": 636,
+                              "start": 635
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1640,
+                              "start": 1639
+                            }
+                          ],
+                          "text": "0",
+                          "token_index": 169
+                        }
+                      ],
+                      "id": 33713
+                    },
+                    {
+                      "active_tokens": 17,
+                      "contribution": 0.06169738247990608,
+                      "description": "initial setup or beginning instructions in software tutorials or project guides",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 14.758075714111328,
+                          "prose_ranges": [
+                            {
+                              "end": 106,
+                              "start": 97
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1099,
+                              "start": 1090
+                            }
+                          ],
+                          "text": " instance",
+                          "token_index": 27
+                        },
+                        {
+                          "activation": 11.00491714477539,
+                          "prose_ranges": [
+                            {
+                              "end": 377,
+                              "start": 368
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1374,
+                              "start": 1365
+                            }
+                          ],
+                          "text": " terminal",
+                          "token_index": 85
+                        },
+                        {
+                          "activation": 10.42302703857422,
+                          "prose_ranges": [
+                            {
+                              "end": 35,
+                              "start": 32
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1028,
+                              "start": 1025
+                            }
+                          ],
+                          "text": " up",
+                          "token_index": 11
+                        },
+                        {
+                          "activation": 9.497297286987305,
+                          "prose_ranges": [
+                            {
+                              "end": 47,
+                              "start": 39
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1040,
+                              "start": 1032
+                            }
+                          ],
+                          "text": " running",
+                          "token_index": 13
+                        },
+                        {
+                          "activation": 8.294147491455078,
+                          "prose_ranges": [
+                            {
+                              "end": 48,
+                              "start": 47
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1041,
+                              "start": 1040
+                            }
+                          ],
+                          "text": "?",
+                          "token_index": 14
+                        }
+                      ],
+                      "id": 18558
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.1685202419757843,
+                      "description": "neuron fires on the digit 0 inside url placeholders like url 0",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.5038199424743652,
+                          "prose_ranges": [
+                            {
+                              "end": 635,
+                              "start": 634
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1639,
+                              "start": 1638
+                            }
+                          ],
+                          "text": "4",
+                          "token_index": 168
+                        },
+                        {
+                          "activation": 3.1189866065979004,
+                          "prose_ranges": [
+                            {
+                              "end": 656,
+                              "start": 655
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1660,
+                              "start": 1659
+                            }
+                          ],
+                          "text": "2",
+                          "token_index": 183
+                        }
+                      ],
+                      "id": 10954
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.1219855397939682,
+                      "description": "coding and networking technical terminology",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 9.941965103149414,
+                          "prose_ranges": [
+                            {
+                              "end": 517,
+                              "start": 516
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1521,
+                              "start": 1520
+                            }
+                          ],
+                          "text": "?",
+                          "token_index": 130
+                        }
+                      ],
+                      "id": 38113
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.05285492166876793,
+                      "description": "words or phrases related to deception, faking, simulation, or optical illusions",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.969878196716309,
+                          "prose_ranges": [
+                            {
+                              "end": 555,
+                              "start": 551
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1559,
+                              "start": 1555
+                            }
+                          ],
+                          "text": " you",
+                          "token_index": 140
+                        },
+                        {
+                          "activation": 4.866935729980469,
+                          "prose_ranges": [
+                            {
+                              "end": 573,
+                              "start": 572
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1577,
+                              "start": 1576
+                            }
+                          ],
+                          "text": ".",
+                          "token_index": 144
+                        }
+                      ],
+                      "id": 33211
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.04850030690431595,
+                      "description": "words describing specific physical shapes or objects used as visual descriptors",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 6.341118812561035,
+                          "prose_ranges": [
+                            {
+                              "end": 647,
+                              "start": 646
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1651,
+                              "start": 1650
+                            }
+                          ],
+                          "text": ".",
+                          "token_index": 180
+                        }
+                      ],
+                      "id": 41667
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": -0.03915289416909218,
+                      "description": "words or phrases used to express proportions or parts of a whole",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 15.00319480895996,
+                          "prose_ranges": [
+                            {
+                              "end": 654,
+                              "start": 647
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1658,
+                              "start": 1651
+                            }
+                          ],
+                          "text": "compute",
+                          "token_index": 181
+                        }
+                      ],
+                      "id": 57304
+                    }
+                  ]
+                },
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 670,
+                  "start": 0
+                },
+                "raw_output": 0.6791025400161743,
+                "source_ranges": [
+                  {
+                    "end": 1356,
+                    "start": 993
+                  },
+                  {
+                    "end": 1374,
+                    "start": 1361
+                  },
+                  {
+                    "end": 1409,
+                    "start": 1378
+                  },
+                  {
+                    "end": 1441,
+                    "start": 1413
+                  },
+                  {
+                    "end": 1674,
+                    "start": 1443
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 12,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1356,
+        "start": 993
+      }
+    ],
+    [
+      {
+        "end": 1374,
+        "start": 1361
+      }
+    ],
+    [
+      {
+        "end": 1409,
+        "start": 1378
+      }
+    ],
+    [
+      {
+        "end": 1441,
+        "start": 1413
+      }
+    ],
+    [
+      {
+        "end": 1674,
+        "start": 1443
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 1,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 1,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2011-05-03-ssh-to-aws-quick-and-dirty.md",
+  "prose_words": 117,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1041,
+        "start": 993
+      }
+    ],
+    [
+      {
+        "end": 1156,
+        "start": 1041
+      }
+    ],
+    [
+      {
+        "end": 1280,
+        "start": 1156
+      }
+    ],
+    [
+      {
+        "end": 1314,
+        "start": 1280
+      }
+    ],
+    [
+      {
+        "end": 1356,
+        "start": 1314
+      }
+    ],
+    [
+      {
+        "end": 1374,
+        "start": 1361
+      }
+    ],
+    [
+      {
+        "end": 1409,
+        "start": 1378
+      }
+    ],
+    [
+      {
+        "end": 1441,
+        "start": 1413
+      }
+    ],
+    [
+      {
+        "end": 1516,
+        "start": 1443
+      }
+    ],
+    [
+      {
+        "end": 1521,
+        "start": 1516
+      }
+    ],
+    [
+      {
+        "end": 1577,
+        "start": 1521
+      }
+    ],
+    [
+      {
+        "end": 1674,
+        "start": 1577
+      }
+    ]
+  ],
+  "sentence_count": 12,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": [],
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-ssh-to-aws-quick-and-dirty/report.json",
+        "sha256": "b61256cd0026b528aa90de3eef6dd25a8ea6bde84580366b2459eba77afa95f6",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-ssh-to-aws-quick-and-dirty/report.json",
+        "sha256": "b61256cd0026b528aa90de3eef6dd25a8ea6bde84580366b2459eba77afa95f6",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-ssh-to-aws-quick-and-dirty/report.json",
+        "sha256": "b61256cd0026b528aa90de3eef6dd25a8ea6bde84580366b2459eba77afa95f6",
+        "origin": "original_reused",
+        "status": "scored_full"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

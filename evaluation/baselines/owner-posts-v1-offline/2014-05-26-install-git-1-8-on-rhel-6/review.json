@@ -1,0 +1,225 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2014-05-26-install-git-1-8-on-rhel-6.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 288,
+  "leverage_counts": {
+    "2": 2,
+    "3": 2
+  },
+  "findings": [
+    {
+      "rule_id": "structure.fragment-pattern",
+      "guidance_id": "structure.fragment-pattern",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 39,
+        "column": 1,
+        "end_line": 39,
+        "end_column": 9,
+        "source_ranges": [
+          {
+            "start": 2574,
+            "end": 2582
+          }
+        ]
+      },
+      "matched_text": "As Root:",
+      "sentence": "As Root:",
+      "context": null,
+      "suggestion": "2 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+      "message": null,
+      "why": "Several very short units may interrupt the argument.",
+      "fix": "Check which units are complete sentences and which fragments need connection.",
+      "keep_when": "Keep dialogue, slogans, instructions and deliberate emphasis."
+    },
+    {
+      "rule_id": "structure.repeated-opening",
+      "guidance_id": "structure.repeated-opening",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 43,
+        "column": 3,
+        "end_line": 43,
+        "end_column": 42,
+        "source_ranges": [
+          {
+            "start": 2682,
+            "end": 2721
+          }
+        ]
+      },
+      "matched_text": "yum install epel-release-6-5.noarch.rpm",
+      "sentence": "yum install epel-release-6-5.noarch.rpm",
+      "context": null,
+      "suggestion": "Repeated opening annotation: retain deliberate repetition, dialogue and parallel instructions.",
+      "message": null,
+      "why": "Repeated sentence openings can obscure changing relationships.",
+      "fix": "Check whether repetition supports emphasis before varying it.",
+      "keep_when": "Keep deliberate repetition, dialogue, procedures and learner exercises."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 39,
+        "column": 1,
+        "end_line": 39,
+        "end_column": 9,
+        "source_ranges": [
+          {
+            "start": 2574,
+            "end": 2582
+          }
+        ]
+      },
+      "matched_text": "As Root:",
+      "sentence": "As Root:",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 49,
+        "column": 3,
+        "end_line": 49,
+        "end_column": 20,
+        "source_ranges": [
+          {
+            "start": 2886,
+            "end": 2903
+          }
+        ]
+      },
+      "matched_text": "yum install git18",
+      "sentence": "yum install git18",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 4,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

@@ -1,0 +1,10 @@
+{
+  "confidence": "medium",
+  "elapsed_ms": 0.056991,
+  "file": "2025-03-07-better-python-logging.md",
+  "input_sha256": "21edae4ab5397e763812e3dbc0c7c364e26337a7ad175cb46882625941a0a97f",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-better-python-logging/backend.json",
+  "reused_source_sha256": "4d1515118f0bb62862afe1397fd6709de9ac3a8f95d393da00d77b6c0d66bee9",
+  "status": "scored_full"
+}

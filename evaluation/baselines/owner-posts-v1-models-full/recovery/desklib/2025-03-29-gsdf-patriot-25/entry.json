@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.094841,
+  "file": "2025-03-29-gsdf-patriot-25.md",
+  "input_sha256": "acc621b0998c6e509288a63bbd2feb44dc586f074ac61a3797f816158442423e",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-gsdf-patriot-25/backend.json",
+  "reused_source_sha256": "176ae0cebb22f4b8bcc4cd0330ff7501cd06f2de39ccc01264137665a3780baf",
+  "status": "scored_full"
+}

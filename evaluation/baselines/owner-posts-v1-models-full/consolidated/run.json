@@ -1,0 +1,1906 @@
+{
+  "schema_version": "owner-model-consolidated-v1",
+  "finished": false,
+  "planned_documents": 43,
+  "catalogued_documents": 43,
+  "completed_documents": 28,
+  "fully_resolved_documents": 9,
+  "documents": [
+    {
+      "file": "2011-05-03-format-and-mount-ebs-in-ubuntu.md",
+      "input_sha256": "f439bc7898ae8db61803f9005cc4645be2ad65b5c3cce6a7a860df052b38462b",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-format-and-mount-ebs-in-ubuntu/report.json",
+          "sha256": "b2d594edbd1295f0c355a580b72bf92ea303217af03b4657a91069a0307a0998",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-format-and-mount-ebs-in-ubuntu/report.json",
+          "sha256": "b2d594edbd1295f0c355a580b72bf92ea303217af03b4657a91069a0307a0998",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-format-and-mount-ebs-in-ubuntu/report.json",
+          "sha256": "b2d594edbd1295f0c355a580b72bf92ea303217af03b4657a91069a0307a0998",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2011-05-03-ssh-to-aws-quick-and-dirty.md",
+      "input_sha256": "0db5e4ebfc1fde9c7da55b3723fbc6262db848d4905271ea2ca8e78f4e2e9b36",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-ssh-to-aws-quick-and-dirty/report.json",
+          "sha256": "b61256cd0026b528aa90de3eef6dd25a8ea6bde84580366b2459eba77afa95f6",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-ssh-to-aws-quick-and-dirty/report.json",
+          "sha256": "b61256cd0026b528aa90de3eef6dd25a8ea6bde84580366b2459eba77afa95f6",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-ssh-to-aws-quick-and-dirty/report.json",
+          "sha256": "b61256cd0026b528aa90de3eef6dd25a8ea6bde84580366b2459eba77afa95f6",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md",
+      "input_sha256": "1aa81b4df1757c426df849d16a8158705b3161791fa810165bd3f816899e740f",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/report.json",
+          "sha256": "d8315b6cfbe61bdaac46ccab6f98310159b94201ebcea82e4a11e0bb1d720b4b",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/report.json",
+          "sha256": "d8315b6cfbe61bdaac46ccab6f98310159b94201ebcea82e4a11e0bb1d720b4b",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/report.json",
+          "sha256": "d8315b6cfbe61bdaac46ccab6f98310159b94201ebcea82e4a11e0bb1d720b4b",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2011-08-10-networking-101-document-everything.md",
+      "input_sha256": "eda697bd6a710281f88222bde1c999ba6dc623ffc349fd6e631074105c5c897f",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-08-10-networking-101-document-everything/report.json",
+          "sha256": "807b6779d92c4408c14129183d87750d957c6685b9f3f9557adecb83aaa21360",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-08-10-networking-101-document-everything/report.json",
+          "sha256": "807b6779d92c4408c14129183d87750d957c6685b9f3f9557adecb83aaa21360",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2011-08-10-networking-101-document-everything/report.json",
+          "sha256": "807b6779d92c4408c14129183d87750d957c6685b9f3f9557adecb83aaa21360",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2012-03-15-c-net-check-if-user-is-in-active-directory-group.md",
+      "input_sha256": "8b1c04483714f25a644064868da5fa48e5d18ac86cfd3a4a98805ae8161af6c7",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-15-c-net-check-if-user-is-in-active-directory-group/report.json",
+          "sha256": "3fb41eadd3f30a4fac8d523b001b01119f00ec728fde5edc6c9f11fb984508cf",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-15-c-net-check-if-user-is-in-active-directory-group/report.json",
+          "sha256": "3fb41eadd3f30a4fac8d523b001b01119f00ec728fde5edc6c9f11fb984508cf",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-15-c-net-check-if-user-is-in-active-directory-group/report.json",
+          "sha256": "3fb41eadd3f30a4fac8d523b001b01119f00ec728fde5edc6c9f11fb984508cf",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2012-03-20-mounting-network-drives-with-c-net.md",
+      "input_sha256": "d0cf943700bb972483394d18ff7788ad11e527f442968d39842ecbc2fb2b53a0",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-20-mounting-network-drives-with-c-net/report.json",
+          "sha256": "996db7b57bb4cfe2ac0c9039b2540181d098fba4cf27914ec34c00690728173c",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-20-mounting-network-drives-with-c-net/report.json",
+          "sha256": "996db7b57bb4cfe2ac0c9039b2540181d098fba4cf27914ec34c00690728173c",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-03-20-mounting-network-drives-with-c-net/report.json",
+          "sha256": "996db7b57bb4cfe2ac0c9039b2540181d098fba4cf27914ec34c00690728173c",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2012-10-05-to-the-west.md",
+      "input_sha256": "2ca185372804629b0d9d84fbba5d8d1ac6d62cda582ac63274796ed7a4601b48",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "skipped",
+        "conpara": "skipped",
+        "detectorscope": "skipped"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-10-05-to-the-west/report.json",
+          "sha256": "aa5bd821b281cd0bb85032260ec30ce7623abee57da77f1a767c3adbf59effd2",
+          "origin": "original_reused",
+          "status": "skipped"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-10-05-to-the-west/report.json",
+          "sha256": "aa5bd821b281cd0bb85032260ec30ce7623abee57da77f1a767c3adbf59effd2",
+          "origin": "original_reused",
+          "status": "skipped"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2012-10-05-to-the-west/report.json",
+          "sha256": "aa5bd821b281cd0bb85032260ec30ce7623abee57da77f1a767c3adbf59effd2",
+          "origin": "original_reused",
+          "status": "skipped"
+        }
+      }
+    },
+    {
+      "file": "2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group.md",
+      "input_sha256": "5c960f53c10a40f826c2cf1ed6760f836f577c607869acf6c58948c4c163d01a",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group/report.json",
+          "sha256": "7b9fa3a4a9b0426d8b4302f0cee2a8f40cb11d25b3911f00a38579ee644af3eb",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group/report.json",
+          "sha256": "7b9fa3a4a9b0426d8b4302f0cee2a8f40cb11d25b3911f00a38579ee644af3eb",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group/report.json",
+          "sha256": "7b9fa3a4a9b0426d8b4302f0cee2a8f40cb11d25b3911f00a38579ee644af3eb",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2014-05-26-install-git-1-8-on-rhel-6.md",
+      "input_sha256": "8954d522493f5826ab370ffd44e0f1daa79e397d861eb4e5ca3df97265cfbbfc",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2014-05-26-install-git-1-8-on-rhel-6/report.json",
+          "sha256": "b09987a6c8af78db3d9502e4c9ba3a44a8283bb182f80a22c17908263ecf1cff",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2014-05-26-install-git-1-8-on-rhel-6/report.json",
+          "sha256": "b09987a6c8af78db3d9502e4c9ba3a44a8283bb182f80a22c17908263ecf1cff",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2014-05-26-install-git-1-8-on-rhel-6/report.json",
+          "sha256": "b09987a6c8af78db3d9502e4c9ba3a44a8283bb182f80a22c17908263ecf1cff",
+          "origin": "original_reused",
+          "status": "scored_full"
+        }
+      }
+    },
+    {
+      "file": "2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+      "input_sha256": "407eb33fbe07a3eb881d268cc45fdfbd95f84664070bdbc6748a3abe901225a6",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "scored_full",
+        "detectorscope": "failed"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-07-save-money-protect-your-site-with-a-cdn/backend.json",
+          "sha256": "4f45f68138c7b955d49396b01169bc594d7234929bf9dc663bbdbec4bc269e9a",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2020-05-07-save-money-protect-your-site-with-a-cdn/report.json",
+          "sha256": "8465c8e056b51c2c7b4651f8418995fcf7757285f53d369907c56c4a02d2394b",
+          "origin": "original_reused",
+          "status": "scored_full"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/2020-05-07-save-money-protect-your-site-with-a-cdn/report.json",
+          "sha256": "8465c8e056b51c2c7b4651f8418995fcf7757285f53d369907c56c4a02d2394b",
+          "origin": "original_failure",
+          "status": "failed"
+        }
+      }
+    },
+    {
+      "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+      "input_sha256": "3b58e90086fc826f6f4f31825b34f8e88bffcf6dafbc55d4d295178b34374291",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-08-make-your-internet-faster-and-safer-for-free/backend-attempt-1.json",
+          "sha256": "04e822511ad8a61bd0f24966059fb636e832ead0833c953abf67164186d14b3e",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2020-05-08-make-your-internet-faster-and-safer-for-free/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2020-05-08-make-your-internet-faster-and-safer-for-free/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+      "input_sha256": "b00fb6feb0583682c5b15b436de92276f83e1158ff1d69eb2ab720ec1e1b684c",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-11-its-time-to-switch-to-a-new-email-provider/backend-attempt-1.json",
+          "sha256": "9b93b9c06fa23a0e407b1bcfa53aa677da635b8b07e94984c790d384ecbf8577",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2020-05-11-its-time-to-switch-to-a-new-email-provider/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2020-05-11-its-time-to-switch-to-a-new-email-provider/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+      "input_sha256": "5d5371c0b568b360880cdab42600117b57b29eb329820f159d236c09218d8f7c",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend-attempt-1.json",
+          "sha256": "e613abbdf2e76a3c7f362a52f5a59bfb699dde67b457e1ee1ed989786b29119c",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+      "input_sha256": "0fcf27c887bc3b5f00342c76e15721f7cd4c8e9243cc38823814d1db61c58b7f",
+      "label": "human",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend-attempt-1.json",
+          "sha256": "535df5cadf1ff3f2a3925db5f24ac8f717fa273fa4112b857480776cf995b3b7",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-03-07-better-python-logging.md",
+      "input_sha256": "21edae4ab5397e763812e3dbc0c7c364e26337a7ad175cb46882625941a0a97f",
+      "label": "human",
+      "confidence": "medium",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-better-python-logging/backend-attempt-1.json",
+          "sha256": "4d1515118f0bb62862afe1397fd6709de9ac3a8f95d393da00d77b6c0d66bee9",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-07-better-python-logging/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-07-better-python-logging/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-03-07-crossover-2025.md",
+      "input_sha256": "950ee24558ab0125e3fd2a3e596195d8978b5b5f089b3daa500576cad2d71b73",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-crossover-2025/backend-attempt-1.json",
+          "sha256": "b3da0442b3e5be83f48fed6c3238a5c967894be33e1bbe71ce980b1292a772ae",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-07-crossover-2025/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-07-crossover-2025/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+      "input_sha256": "4aacb44dc570d62ffcb4664ec6cb0255e03981e883f09a57c63ee04b3121bf41",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-10-using-rust-to-make-python-more-manageable-2/backend-attempt-1.json",
+          "sha256": "e9af2f9bd2d58d30d147d443017bc807725e22bbbba91acf97a59ef05ac7d15e",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-10-using-rust-to-make-python-more-manageable-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-10-using-rust-to-make-python-more-manageable-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+      "input_sha256": "3a0d70be5af63d61d4fa0156b2dd3ba645d8c4b1de550545264fcbad00d259da",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-13-gear-review-focusrite-scarlet-solo/backend-attempt-1.json",
+          "sha256": "4b5c862bca41cc8cd622463cec5be52a3a26d7064ced524f223459d3b6bf8b64",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-13-gear-review-focusrite-scarlet-solo/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-13-gear-review-focusrite-scarlet-solo/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+      "input_sha256": "e26b28d84c6304392413068fdd37a6f802e32139c3a0877dfc5c83ffd9871254",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-22-a-successful-beginning-not-an-end/backend-attempt-1.json",
+          "sha256": "937c7dcfd1eb2a8ba559347250407c1a0d65c0223c69adeeba2ac85520e96b88",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-22-a-successful-beginning-not-an-end/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-22-a-successful-beginning-not-an-end/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-03-29-delayed-but-determined.md",
+      "input_sha256": "60683284869a6aa0fb4537e25d9a1a6e12bdb471a3e2e20f5c52ce330818c637",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-delayed-but-determined/backend-attempt-1.json",
+          "sha256": "19c7b3e0430a05b7d13b041abdca380258e481e2624161b5343592d7b4c33b26",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-29-delayed-but-determined/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-29-delayed-but-determined/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-03-29-gsdf-patriot-25.md",
+      "input_sha256": "acc621b0998c6e509288a63bbd2feb44dc586f074ac61a3797f816158442423e",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-gsdf-patriot-25/backend-attempt-1.json",
+          "sha256": "176ae0cebb22f4b8bcc4cd0330ff7501cd06f2de39ccc01264137665a3780baf",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-29-gsdf-patriot-25/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-29-gsdf-patriot-25/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+      "input_sha256": "b09c14e4a56286594a26a45cc4bd232b66026466a515c1ef8f7b64f181ef2885",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "incomplete",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-01-gear-review-system76-pangolin-12-2/backend-attempt-1.json",
+          "sha256": "75066a4b588965a2f2a59e2b2d6185e1ec1f61df73a379a816a866f72432ad53",
+          "origin": "recovery_attempt",
+          "status": "incomplete"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-01-gear-review-system76-pangolin-12-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-01-gear-review-system76-pangolin-12-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-04-02-museum-of-aviation-25.md",
+      "input_sha256": "8b598437806c5969b6bf45a6cf4945eb53c0bd91ede6a45a8e79bd4cc180628d",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-02-museum-of-aviation-25/backend-attempt-1.json",
+          "sha256": "2e8d207ab62aaf3a856d6e6c69738c2aabfe5902cc2e0204e04bc9d84df007e7",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-02-museum-of-aviation-25/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-02-museum-of-aviation-25/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-04-09-meet-me-at-the-mall.md",
+      "input_sha256": "6fad7211105b3c0bf15249aa880b55d0ca9b7e1356c538455207f2da15381a38",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-09-meet-me-at-the-mall/backend-attempt-1.json",
+          "sha256": "b9f7125bb063526f4749fd0c5d8ccfb10845b907112aa46db734e2a35cfb4d09",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-09-meet-me-at-the-mall/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-09-meet-me-at-the-mall/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+      "input_sha256": "ea460543f102311cd5e49fc764300648884efeba809763667cbd268c62a0e15f",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend-attempt-1.json",
+          "sha256": "b9cf37e296dfd113566384a5cf971813c288deffd2b621ece61a7cbf7066c532",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+      "input_sha256": "9db5e95deb92593040c1e5e2ee4aba6b49f4493e00ca0725541e3ff6a0f12c65",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon/backend-attempt-1.json",
+          "sha256": "f1e8fa12d2ee10685351986a91a5dd4a0df2342b33c44d744718cd52120c81ca",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-05-14-the-road-ahead-2.md",
+      "input_sha256": "976c003506ec98f97053d6308b6feb5a1d890715c224780af59b874b239db718",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-14-the-road-ahead-2/backend-attempt-1.json",
+          "sha256": "45c818987d6a6b2edb28cd2b3014eec8b72e231c2a30f5f59003e1bc71a0288e",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-05-14-the-road-ahead-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-05-14-the-road-ahead-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-05-16-investing-in-bibb-countys-future.md",
+      "input_sha256": "bbcb208f6f66fd900057be4bb28a33acd009ef09f009cf42ba7648366e97b06d",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": true,
+      "backends": {
+        "desklib": "scored_full",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "complete": false,
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-16-investing-in-bibb-countys-future/backend-attempt-1.json",
+          "sha256": "140b5cc837bbf3b01806779a450b4981809548b14c4c966368765c917b29e48e",
+          "origin": "recovery_attempt",
+          "status": "scored_full"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-05-16-investing-in-bibb-countys-future/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-05-16-investing-in-bibb-countys-future/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md",
+      "input_sha256": "7f48ffce4ba53723f95fdf1b925a3e0e0682d9e97b71357d6e79ac611254d5a6",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-29-make-your-voice-heard-on-the-fy2026-budget/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-05-29-make-your-voice-heard-on-the-fy2026-budget/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-05-29-make-your-voice-heard-on-the-fy2026-budget/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md",
+      "input_sha256": "69ece98833da39655d0e0e3880c752261404f4011efe4116f6a7b88248453702",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md",
+      "input_sha256": "f8967d7c6509866d8a9fbaea8d9e6aabca04f276a3b4e4a703e6dd46d93d83d3",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md",
+      "input_sha256": "2827272adf1ff6424e6ae8c2aa234fbc5dd612d6fde55bd7791b2c6f5220834e",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-09-better-schools-brighter-futures-literacy-special-edition.md",
+      "input_sha256": "da2f120a7aa9dae4423ff6c2f9b0f202506473b7694c36d598f4aae3ee1c9b0f",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-09-better-schools-brighter-futures-literacy-special-edition/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-09-better-schools-brighter-futures-literacy-special-edition/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-09-better-schools-brighter-futures-literacy-special-edition/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md",
+      "input_sha256": "7f07c1562b0f354d0f44c2d387b9eff287e059b93a52717fbe5db542f51f898f",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-13-digital-privacy-and-freedoms-are-under-threat.md",
+      "input_sha256": "f837935ccea2c7629580a05fd7ad31613f7e34f48e4ffa28efafaf96e5f1c265",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-13-digital-privacy-and-freedoms-are-under-threat/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-13-digital-privacy-and-freedoms-are-under-threat/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-13-digital-privacy-and-freedoms-are-under-threat/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-14-no-kings-protest.md",
+      "input_sha256": "53c09669a5a09019f12969ead982799bbfed0aaac214d0273bb80fb5c7da5e8a",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-14-no-kings-protest/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-14-no-kings-protest/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-14-no-kings-protest/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-06-19-yesterday-and-tomorrow.md",
+      "input_sha256": "4a5d2af7932a2426b484ed0976c3eaa7c3289ed2b3963e591944e077554e556a",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-06-19-yesterday-and-tomorrow/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-06-19-yesterday-and-tomorrow/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-06-19-yesterday-and-tomorrow/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+      "input_sha256": "01fbd2e322e1867fea1b9feb898fd96c53d72025c1302a08953946cc7de96116",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md",
+      "input_sha256": "1e7bfcc12c99fca66bb416ae19e934a498c313c9461c389988379f4c137247d9",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-12-02-restoring-state-funding-for-state-mandated-costs.md",
+      "input_sha256": "ffd6e75afbdc6b92dcfd723d5dfc6ec0e6c019333e58fdebf4e17ef1678f742c",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-12-02-restoring-state-funding-for-state-mandated-costs/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-12-02-restoring-state-funding-for-state-mandated-costs/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-12-02-restoring-state-funding-for-state-mandated-costs/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2025-12-11-im-running-for-the-bibb-county-board-of-education.md",
+      "input_sha256": "1d2a15c6c7a2f1e4a8d621625370076251daec6af7230f7e89e1821c993dc8e7",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-12-11-im-running-for-the-bibb-county-board-of-education/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-12-11-im-running-for-the-bibb-county-board-of-education/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-12-11-im-running-for-the-bibb-county-board-of-education/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2026-02-11-trust-then-verify-1-035-reasons-why.md",
+      "input_sha256": "d2434630697ff44b40b5a49cbb319c4bf8d660d060dc42d016f55bce0e48c1fd",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2026-02-11-trust-then-verify-1-035-reasons-why/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2026-02-11-trust-then-verify-1-035-reasons-why/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2026-02-11-trust-then-verify-1-035-reasons-why/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    },
+    {
+      "file": "2026-05-27-out-of-runway-the-fy27-bcsd-budget.md",
+      "input_sha256": "6c787cf009ae43dbab197d3d6e1e99a280b7dce044270dcb9fb17625f54f6c0e",
+      "label": "ai_drafted",
+      "confidence": "high",
+      "attempted": false,
+      "backends": {
+        "desklib": "missing",
+        "conpara": "missing",
+        "detectorscope": "missing"
+      },
+      "sources": {
+        "desklib": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2026-05-27-out-of-runway-the-fy27-bcsd-budget/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "conpara": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2026-05-27-out-of-runway-the-fy27-bcsd-budget/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        },
+        "detectorscope": {
+          "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2026-05-27-out-of-runway-the-fy27-bcsd-budget/backend.json",
+          "sha256": null,
+          "origin": "unprocessed",
+          "status": "missing"
+        }
+      }
+    }
+  ],
+  "backend_status_counts": {
+    "desklib": {
+      "scored_full": 26,
+      "skipped": 1,
+      "failed": 0,
+      "incomplete": 1,
+      "missing": 15,
+      "missing_full_evidence": 0
+    },
+    "conpara": {
+      "scored_full": 9,
+      "skipped": 1,
+      "failed": 0,
+      "incomplete": 0,
+      "missing": 33,
+      "missing_full_evidence": 0
+    },
+    "detectorscope": {
+      "scored_full": 8,
+      "skipped": 1,
+      "failed": 1,
+      "incomplete": 0,
+      "missing": 33,
+      "missing_full_evidence": 0
+    }
+  },
+  "origin_counts": {
+    "desklib": {
+      "original_reused": 9,
+      "recovery_attempt": 19,
+      "unprocessed": 15
+    },
+    "conpara": {
+      "original_reused": 10,
+      "unprocessed": 33
+    },
+    "detectorscope": {
+      "original_reused": 9,
+      "original_failure": 1,
+      "unprocessed": 33
+    }
+  },
+  "unresolved": [
+    {
+      "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-03-07-better-python-logging.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-03-07-better-python-logging.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-03-07-crossover-2025.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-03-07-crossover-2025.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-03-29-delayed-but-determined.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-03-29-delayed-but-determined.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-03-29-gsdf-patriot-25.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-03-29-gsdf-patriot-25.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-04-02-museum-of-aviation-25.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-04-02-museum-of-aviation-25.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-04-09-meet-me-at-the-mall.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-04-09-meet-me-at-the-mall.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-05-14-the-road-ahead-2.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-05-14-the-road-ahead-2.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-05-16-investing-in-bibb-countys-future.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-05-16-investing-in-bibb-countys-future.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-05-29-make-your-voice-heard-on-the-fy2026-budget.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-04-introducing-the-better-schools-brighter-futures-series-learning-from-schools-that-beat-the-odds-2.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-05-taking-control-of-your-email-part-2-using-your-own-domain-for-email.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-09-better-schools-brighter-futures-literacy-special-edition.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-09-better-schools-brighter-futures-literacy-special-edition.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-09-better-schools-brighter-futures-literacy-special-edition.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-09-better-schools-brighter-futures-literacy-special-edition.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-11-empty-chairs-and-big-decisions-why-the-final-bcsd-budget-hearing-matters.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-13-digital-privacy-and-freedoms-are-under-threat.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-13-digital-privacy-and-freedoms-are-under-threat.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-13-digital-privacy-and-freedoms-are-under-threat.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-13-digital-privacy-and-freedoms-are-under-threat.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-14-no-kings-protest.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-14-no-kings-protest.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-14-no-kings-protest.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-14-no-kings-protest.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-06-19-yesterday-and-tomorrow.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-06-19-yesterday-and-tomorrow.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-06-19-yesterday-and-tomorrow.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-06-19-yesterday-and-tomorrow.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-09-02-coding-with-ai-episode-2-supercharging-your-python-workflow-with-github-copilot-ruff.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-12-02-restoring-state-funding-for-state-mandated-costs.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-12-02-restoring-state-funding-for-state-mandated-costs.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-12-02-restoring-state-funding-for-state-mandated-costs.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-12-02-restoring-state-funding-for-state-mandated-costs.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2025-12-11-im-running-for-the-bibb-county-board-of-education.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2025-12-11-im-running-for-the-bibb-county-board-of-education.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2025-12-11-im-running-for-the-bibb-county-board-of-education.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2025-12-11-im-running-for-the-bibb-county-board-of-education.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2026-02-11-trust-then-verify-1-035-reasons-why.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2026-02-11-trust-then-verify-1-035-reasons-why.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2026-02-11-trust-then-verify-1-035-reasons-why.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2026-02-11-trust-then-verify-1-035-reasons-why.md",
+      "backend": "core_template"
+    },
+    {
+      "file": "2026-05-27-out-of-runway-the-fy27-bcsd-budget.md",
+      "backend": "desklib"
+    },
+    {
+      "file": "2026-05-27-out-of-runway-the-fy27-bcsd-budget.md",
+      "backend": "conpara"
+    },
+    {
+      "file": "2026-05-27-out-of-runway-the-fy27-bcsd-budget.md",
+      "backend": "detectorscope"
+    },
+    {
+      "file": "2026-05-27-out-of-runway-the-fy27-bcsd-budget.md",
+      "backend": "core_template"
+    }
+  ],
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "binary_sha256": null,
+  "binary_sha256_by_sweep": {
+    "desklib": "86981ba1a30393de6e1c511c980eeedbcda20a33969ac5c411ab377fc9eb3137",
+    "conpara": null,
+    "detectorscope": null
+  },
+  "git_revision": "multiple immutable attempts; see per-model run metadata",
+  "corpus_manifest_sha256": "7747cb4292a7a379697b83d1413db5017d2700ee2b87d8733a498d6760ba8234",
+  "elapsed_ms": 1476886.6407690002,
+  "original_run": {
+    "path": "evaluation/baselines/owner-posts-v1-models-full/run.json",
+    "sha256": "73fbcbb1a4ffab2c4703beba1bf1acf6f6fc5a1d56be6b453fc0c9d53fa60177",
+    "status_counts": {
+      "conpara": {
+        "scored_full": 9,
+        "skipped": 1
+      },
+      "desklib": {
+        "scored_full": 9,
+        "skipped": 1
+      },
+      "detectorscope": {
+        "failed": 1,
+        "scored_full": 8,
+        "skipped": 1
+      }
+    }
+  },
+  "single_concurrent_run": false,
+  "external": "none",
+  "validated_editorial_utility": false
+}

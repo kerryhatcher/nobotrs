@@ -51,7 +51,7 @@ def main():
         detector = detector.to("cuda")
         torch.set_float32_matmul_precision("highest")
     else:
-        torch.set_num_threads(max(1, min(8, os.cpu_count() or 1)))
+        torch.set_num_threads(int(os.environ.get("NOBOTRS_MODEL_THREADS", max(1, min(8, os.cpu_count() or 1)))))
     threshold = float(head_obj.threshold)
     emit({
         "type": "ready",
@@ -109,6 +109,8 @@ def main():
                     "id": int(feature.id),
                     "description": feature.description or "",
                     "contribution": float(feature.importance),
+                    "active_tokens": len(feature.highlights or []),
+                    "highlight_limit": 5,
                     "highlights": [
                         {
                             "token_index": int(index),

@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.091321,
+  "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+  "input_sha256": "3b58e90086fc826f6f4f31825b34f8e88bffcf6dafbc55d4d295178b34374291",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-08-make-your-internet-faster-and-safer-for-free/backend.json",
+  "reused_source_sha256": "04e822511ad8a61bd0f24966059fb636e832ead0833c953abf67164186d14b3e",
+  "status": "scored_full"
+}

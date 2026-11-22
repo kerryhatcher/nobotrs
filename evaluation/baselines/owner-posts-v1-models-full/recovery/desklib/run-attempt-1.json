@@ -1,0 +1,332 @@
+{
+  "active_document": "2025-05-14-the-road-ahead-2.md",
+  "argv": [
+    "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/examples/owner_model_sweep",
+    "--model",
+    "desklib",
+    "--models-dir",
+    "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "--out",
+    "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib",
+    "--resume-from",
+    "evaluation/baselines/owner-posts-v1-models-full",
+    "--timeout-ms",
+    "1200000",
+    "--minimum-available-mib",
+    "1024"
+  ],
+  "binary_sha256": "ef85ce0516e27374ad0210fb1eed7ab9897b7f7c0123116acbb5817f5871db58",
+  "documents": [
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.435275,
+      "file": "2011-05-03-format-and-mount-ebs-in-ubuntu.md",
+      "input_sha256": "f439bc7898ae8db61803f9005cc4645be2ad65b5c3cce6a7a860df052b38462b",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-format-and-mount-ebs-in-ubuntu/report.json",
+      "reused_source_sha256": "b2d594edbd1295f0c355a580b72bf92ea303217af03b4657a91069a0307a0998",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.499335,
+      "file": "2011-05-03-ssh-to-aws-quick-and-dirty.md",
+      "input_sha256": "0db5e4ebfc1fde9c7da55b3723fbc6262db848d4905271ea2ca8e78f4e2e9b36",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2011-05-03-ssh-to-aws-quick-and-dirty/report.json",
+      "reused_source_sha256": "b61256cd0026b528aa90de3eef6dd25a8ea6bde84580366b2459eba77afa95f6",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.690507,
+      "file": "2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md",
+      "input_sha256": "1aa81b4df1757c426df849d16a8158705b3161791fa810165bd3f816899e740f",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts/report.json",
+      "reused_source_sha256": "d8315b6cfbe61bdaac46ccab6f98310159b94201ebcea82e4a11e0bb1d720b4b",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.775478,
+      "file": "2011-08-10-networking-101-document-everything.md",
+      "input_sha256": "eda697bd6a710281f88222bde1c999ba6dc623ffc349fd6e631074105c5c897f",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2011-08-10-networking-101-document-everything/report.json",
+      "reused_source_sha256": "807b6779d92c4408c14129183d87750d957c6685b9f3f9557adecb83aaa21360",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.505665,
+      "file": "2012-03-15-c-net-check-if-user-is-in-active-directory-group.md",
+      "input_sha256": "8b1c04483714f25a644064868da5fa48e5d18ac86cfd3a4a98805ae8161af6c7",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2012-03-15-c-net-check-if-user-is-in-active-directory-group/report.json",
+      "reused_source_sha256": "3fb41eadd3f30a4fac8d523b001b01119f00ec728fde5edc6c9f11fb984508cf",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.547996,
+      "file": "2012-03-20-mounting-network-drives-with-c-net.md",
+      "input_sha256": "d0cf943700bb972483394d18ff7788ad11e527f442968d39842ecbc2fb2b53a0",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2012-03-20-mounting-network-drives-with-c-net/report.json",
+      "reused_source_sha256": "996db7b57bb4cfe2ac0c9039b2540181d098fba4cf27914ec34c00690728173c",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.281623,
+      "file": "2012-10-05-to-the-west.md",
+      "input_sha256": "2ca185372804629b0d9d84fbba5d8d1ac6d62cda582ac63274796ed7a4601b48",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2012-10-05-to-the-west/report.json",
+      "reused_source_sha256": "aa5bd821b281cd0bb85032260ec30ce7623abee57da77f1a767c3adbf59effd2",
+      "status": "skipped"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.478494,
+      "file": "2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group.md",
+      "input_sha256": "5c960f53c10a40f826c2cf1ed6760f836f577c607869acf6c58948c4c163d01a",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group/report.json",
+      "reused_source_sha256": "7b9fa3a4a9b0426d8b4302f0cee2a8f40cb11d25b3911f00a38579ee644af3eb",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.599127,
+      "file": "2014-05-26-install-git-1-8-on-rhel-6.md",
+      "input_sha256": "8954d522493f5826ab370ffd44e0f1daa79e397d861eb4e5ca3df97265cfbbfc",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2014-05-26-install-git-1-8-on-rhel-6/report.json",
+      "reused_source_sha256": "b09987a6c8af78db3d9502e4c9ba3a44a8283bb182f80a22c17908263ecf1cff",
+      "status": "scored_full"
+    },
+    {
+      "confidence": "high",
+      "elapsed_ms": 0.8305889999999999,
+      "file": "2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+      "input_sha256": "407eb33fbe07a3eb881d268cc45fdfbd95f84664070bdbc6748a3abe901225a6",
+      "label": "human",
+      "reused_from": "evaluation/baselines/owner-posts-v1-models-full/2020-05-07-save-money-protect-your-site-with-a-cdn/report.json",
+      "reused_source_sha256": "8465c8e056b51c2c7b4651f8418995fcf7757285f53d369907c56c4a02d2394b",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 49473.890458,
+      "file": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+      "input_sha256": "3b58e90086fc826f6f4f31825b34f8e88bffcf6dafbc55d4d295178b34374291",
+      "label": "human",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-08-make-your-internet-faster-and-safer-for-free/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 42604.445768,
+      "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+      "input_sha256": "b00fb6feb0583682c5b15b436de92276f83e1158ff1d69eb2ab720ec1e1b684c",
+      "label": "human",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-11-its-time-to-switch-to-a-new-email-provider/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 64465.028453,
+      "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+      "input_sha256": "5d5371c0b568b360880cdab42600117b57b29eb329820f159d236c09218d8f7c",
+      "label": "human",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 31851.710879,
+      "file": "2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+      "input_sha256": "0fcf27c887bc3b5f00342c76e15721f7cd4c8e9243cc38823814d1db61c58b7f",
+      "label": "human",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "medium",
+      "elapsed_ms": 46824.511445,
+      "file": "2025-03-07-better-python-logging.md",
+      "input_sha256": "21edae4ab5397e763812e3dbc0c7c364e26337a7ad175cb46882625941a0a97f",
+      "label": "human",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-better-python-logging/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 33119.976676,
+      "file": "2025-03-07-crossover-2025.md",
+      "input_sha256": "950ee24558ab0125e3fd2a3e596195d8978b5b5f089b3daa500576cad2d71b73",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-07-crossover-2025/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 38529.691453,
+      "file": "2025-03-10-using-rust-to-make-python-more-manageable-2.md",
+      "input_sha256": "4aacb44dc570d62ffcb4664ec6cb0255e03981e883f09a57c63ee04b3121bf41",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-10-using-rust-to-make-python-more-manageable-2/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 49204.35631,
+      "file": "2025-03-13-gear-review-focusrite-scarlet-solo.md",
+      "input_sha256": "3a0d70be5af63d61d4fa0156b2dd3ba645d8c4b1de550545264fcbad00d259da",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-13-gear-review-focusrite-scarlet-solo/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 41432.221107,
+      "file": "2025-03-22-a-successful-beginning-not-an-end.md",
+      "input_sha256": "e26b28d84c6304392413068fdd37a6f802e32139c3a0877dfc5c83ffd9871254",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-22-a-successful-beginning-not-an-end/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 33893.172388,
+      "file": "2025-03-29-delayed-but-determined.md",
+      "input_sha256": "60683284869a6aa0fb4537e25d9a1a6e12bdb471a3e2e20f5c52ce330818c637",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-delayed-but-determined/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 438384.176509,
+      "file": "2025-03-29-gsdf-patriot-25.md",
+      "input_sha256": "acc621b0998c6e509288a63bbd2feb44dc586f074ac61a3797f816158442423e",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-gsdf-patriot-25/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 1723664.96145,
+      "file": "2025-04-01-gear-review-system76-pangolin-12-2.md",
+      "input_sha256": "b09c14e4a56286594a26a45cc4bd232b66026466a515c1ef8f7b64f181ef2885",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-01-gear-review-system76-pangolin-12-2/report-attempt-1.json",
+      "status": "incomplete"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 46013.264747,
+      "file": "2025-04-02-museum-of-aviation-25.md",
+      "input_sha256": "8b598437806c5969b6bf45a6cf4945eb53c0bd91ede6a45a8e79bd4cc180628d",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-02-museum-of-aviation-25/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 19964.114936,
+      "file": "2025-04-09-meet-me-at-the-mall.md",
+      "input_sha256": "6fad7211105b3c0bf15249aa880b55d0ca9b7e1356c538455207f2da15381a38",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-09-meet-me-at-the-mall/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 29134.146140999997,
+      "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+      "input_sha256": "ea460543f102311cd5e49fc764300648884efeba809763667cbd268c62a0e15f",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/report-attempt-1.json",
+      "status": "scored_full"
+    },
+    {
+      "attempt": 1,
+      "confidence": "high",
+      "elapsed_ms": 2582.291573,
+      "file": "2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon.md",
+      "input_sha256": "9db5e95deb92593040c1e5e2ee4aba6b49f4493e00ca0725541e3ff6a0f12c65",
+      "label": "ai_drafted",
+      "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-20-in-pictures-a-day-of-action-and-art-in-downtown-macon/report-attempt-1.json",
+      "status": "scored_full"
+    }
+  ],
+  "elapsed_ms": 2691443.677026,
+  "external": "none",
+  "finished": false,
+  "git_revision_at_start": "c8f29dd8bfcbdfa0abb4f6c54266904cb3e65658",
+  "manifest_sha256": "7747cb4292a7a379697b83d1413db5017d2700ee2b87d8733a498d6760ba8234",
+  "model": "desklib",
+  "model_concurrency": 1,
+  "planned_documents": 43,
+  "registry_reused_within_sweep": true,
+  "resolved_documents": 26,
+  "runtime_threads": {
+    "rayon": "2",
+    "torch": "2"
+  },
+  "schema_version": "owner-model-sweep-v1",
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "status_counts": {
+    "incomplete": 1,
+    "scored_full": 24,
+    "skipped": 1
+  }
+}

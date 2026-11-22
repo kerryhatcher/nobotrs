@@ -1,0 +1,1859 @@
+{
+  "actionable_finding_count": 5,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [
+            {
+              "block_context": 3,
+              "column": 517,
+              "disposition": "selected",
+              "end_column": 525,
+              "end_line": 24,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 24,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 1526,
+                "start": 1518
+              },
+              "raw_offset": {
+                "end": 2119,
+                "start": 2111
+              },
+              "rule_id": "seamless",
+              "sentence_context": 17,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2119,
+                  "start": 2111
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            },
+            {
+              "block_context": 23,
+              "column": 9,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 98,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 98,
+              "matched_text": "facilitate",
+              "prose_offset": {
+                "end": 4963,
+                "start": 4953
+              },
+              "raw_offset": {
+                "end": 7015,
+                "start": 7005
+              },
+              "rule_id": "facilitate",
+              "sentence_context": 61,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 7015,
+                  "start": 7005
+                }
+              ],
+              "suggestion": "help",
+              "suppression": null
+            },
+            {
+              "block_context": 24,
+              "column": 191,
+              "disposition": "selected",
+              "end_column": 199,
+              "end_line": 100,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 100,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 5397,
+                "start": 5389
+              },
+              "raw_offset": {
+                "end": 7618,
+                "start": 7610
+              },
+              "rule_id": "seamless",
+              "sentence_context": 63,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 7618,
+                  "start": 7610
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 3,
+              "column": 517,
+              "disposition": "selected",
+              "end_column": 525,
+              "end_line": 24,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 24,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 1526,
+                "start": 1518
+              },
+              "raw_offset": {
+                "end": 2119,
+                "start": 2111
+              },
+              "rule_id": "seamless",
+              "sentence_context": 17,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2119,
+                  "start": 2111
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            },
+            {
+              "block_context": 23,
+              "column": 9,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 98,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 98,
+              "matched_text": "facilitate",
+              "prose_offset": {
+                "end": 4963,
+                "start": 4953
+              },
+              "raw_offset": {
+                "end": 7015,
+                "start": 7005
+              },
+              "rule_id": "facilitate",
+              "sentence_context": 61,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 7015,
+                  "start": 7005
+                }
+              ],
+              "suggestion": "help",
+              "suppression": null
+            },
+            {
+              "block_context": 24,
+              "column": 191,
+              "disposition": "selected",
+              "end_column": 199,
+              "end_line": 100,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 100,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 5397,
+                "start": 5389
+              },
+              "raw_offset": {
+                "end": 7618,
+                "start": 7610
+              },
+              "rule_id": "seamless",
+              "sentence_context": 63,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 7618,
+                  "start": 7610
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            }
+          ],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 3.0
+            }
+          },
+          "vote": "suspicious",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 1071.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.5580622777649636
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 107.19579606440071
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 7.952979876160992
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.585531639423855
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.15992715799163
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 0.37209352850914
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 15551.073335,
+            "excerpt_bytes": 2469,
+            "excerpt_coverage": 0.39866297081363117,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.39866297081363117,
+            "full_coverage_output": 0.4958639264386804,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.39866297081363117,
+            "precision": "float32",
+            "prepared_bytes": 6179,
+            "prepared_words": 1071,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": 0.37209352850914,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 323,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 1548,
+                  "start": 0
+                },
+                "raw_output": 0.35622766613960266,
+                "source_ranges": [
+                  {
+                    "end": 840,
+                    "start": 473
+                  },
+                  {
+                    "end": 1186,
+                    "start": 842
+                  },
+                  {
+                    "end": 1587,
+                    "start": 1188
+                  },
+                  {
+                    "end": 1748,
+                    "start": 1589
+                  },
+                  {
+                    "end": 1752,
+                    "start": 1749
+                  },
+                  {
+                    "end": 1831,
+                    "start": 1825
+                  },
+                  {
+                    "end": 1835,
+                    "start": 1832
+                  },
+                  {
+                    "end": 2139,
+                    "start": 1877
+                  },
+                  {
+                    "end": 2150,
+                    "start": 2149
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 18,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 75,
+                "heading": "I recommend you consider ProtonMail",
+                "index": 1,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1937,
+                  "start": 1548
+                },
+                "raw_output": 0.4919584095478058,
+                "source_ranges": [
+                  {
+                    "end": 2174,
+                    "start": 2150
+                  },
+                  {
+                    "end": 2185,
+                    "start": 2175
+                  },
+                  {
+                    "end": 2605,
+                    "start": 2300
+                  },
+                  {
+                    "end": 2647,
+                    "start": 2608
+                  },
+                  {
+                    "end": 2828,
+                    "start": 2820
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 23,
+                  "start": 18
+                }
+              },
+              {
+                "body_tokens": 158,
+                "heading": "Security",
+                "index": 2,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2731,
+                  "start": 1937
+                },
+                "raw_output": -1.3236045837402344,
+                "source_ranges": [
+                  {
+                    "end": 3177,
+                    "start": 2830
+                  },
+                  {
+                    "end": 3181,
+                    "start": 3178
+                  },
+                  {
+                    "end": 3491,
+                    "start": 3259
+                  },
+                  {
+                    "end": 3507,
+                    "start": 3492
+                  },
+                  {
+                    "end": 3578,
+                    "start": 3572
+                  },
+                  {
+                    "end": 3624,
+                    "start": 3579
+                  },
+                  {
+                    "end": 3785,
+                    "start": 3720
+                  },
+                  {
+                    "end": 3821,
+                    "start": 3786
+                  },
+                  {
+                    "end": 3938,
+                    "start": 3903
+                  },
+                  {
+                    "end": 4036,
+                    "start": 4029
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 32,
+                  "start": 23
+                }
+              },
+              {
+                "body_tokens": 79,
+                "heading": "Privacy",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 3157,
+                  "start": 2731
+                },
+                "raw_output": -0.7555175423622131,
+                "source_ranges": [
+                  {
+                    "end": 4453,
+                    "start": 4038
+                  },
+                  {
+                    "end": 4554,
+                    "start": 4545
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 38,
+                  "start": 32
+                }
+              },
+              {
+                "body_tokens": 64,
+                "heading": "Encrypted Email on the Go",
+                "index": 4,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 3455,
+                  "start": 3157
+                },
+                "raw_output": 1.0541529655456543,
+                "source_ranges": [
+                  {
+                    "end": 4570,
+                    "start": 4554
+                  },
+                  {
+                    "end": 4847,
+                    "start": 4572
+                  },
+                  {
+                    "end": 4926,
+                    "start": 4921
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 42,
+                  "start": 38
+                }
+              },
+              {
+                "body_tokens": 100,
+                "heading": "Price",
+                "index": 5,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 3926,
+                  "start": 3455
+                },
+                "raw_output": -2.2584316730499268,
+                "source_ranges": [
+                  {
+                    "end": 5392,
+                    "start": 4928
+                  },
+                  {
+                    "end": 5473,
+                    "start": 5468
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 48,
+                  "start": 42
+                }
+              },
+              {
+                "body_tokens": 101,
+                "heading": "Bonus: VPN service",
+                "index": 6,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 4423,
+                  "start": 3926
+                },
+                "raw_output": -2.5206573009490967,
+                "source_ranges": [
+                  {
+                    "end": 5486,
+                    "start": 5473
+                  },
+                  {
+                    "end": 5943,
+                    "start": 5567
+                  },
+                  {
+                    "end": 6043,
+                    "start": 5945
+                  },
+                  {
+                    "end": 6062,
+                    "start": 6055
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 55,
+                  "start": 48
+                }
+              },
+              {
+                "body_tokens": 377,
+                "heading": "Warning, its about to get real nerdy.",
+                "index": 7,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 6179,
+                  "start": 4423
+                },
+                "raw_output": 3.084984064102173,
+                "source_ranges": [
+                  {
+                    "end": 6092,
+                    "start": 6062
+                  },
+                  {
+                    "end": 6190,
+                    "start": 6161
+                  },
+                  {
+                    "end": 6285,
+                    "start": 6192
+                  },
+                  {
+                    "end": 6305,
+                    "start": 6286
+                  },
+                  {
+                    "end": 6446,
+                    "start": 6444
+                  },
+                  {
+                    "end": 6473,
+                    "start": 6447
+                  },
+                  {
+                    "end": 6723,
+                    "start": 6538
+                  },
+                  {
+                    "end": 6737,
+                    "start": 6724
+                  },
+                  {
+                    "end": 6901,
+                    "start": 6804
+                  },
+                  {
+                    "end": 6925,
+                    "start": 6902
+                  },
+                  {
+                    "end": 6995,
+                    "start": 6993
+                  },
+                  {
+                    "end": 7138,
+                    "start": 6997
+                  },
+                  {
+                    "end": 7170,
+                    "start": 7139
+                  },
+                  {
+                    "end": 7221,
+                    "start": 7220
+                  },
+                  {
+                    "end": 7238,
+                    "start": 7222
+                  },
+                  {
+                    "end": 7313,
+                    "start": 7293
+                  },
+                  {
+                    "end": 7325,
+                    "start": 7314
+                  },
+                  {
+                    "end": 7416,
+                    "start": 7385
+                  },
+                  {
+                    "end": 7738,
+                    "start": 7418
+                  },
+                  {
+                    "end": 7767,
+                    "start": 7740
+                  },
+                  {
+                    "end": 7797,
+                    "start": 7768
+                  },
+                  {
+                    "end": 7882,
+                    "start": 7859
+                  },
+                  {
+                    "end": 8142,
+                    "start": 7889
+                  },
+                  {
+                    "end": 8470,
+                    "start": 8144
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 76,
+                  "start": 55
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 8,
+              "column": 659,
+              "disposition": "selected",
+              "end_column": 674,
+              "end_line": 42,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 42,
+              "matched_text": "Read more here.",
+              "prose_offset": {
+                "end": 2535,
+                "start": 2520
+              },
+              "raw_offset": {
+                "end": 3507,
+                "start": 3492
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 28,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 3507,
+                  "start": 3492
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 18,
+              "column": 357,
+              "disposition": "selected",
+              "end_column": 371,
+              "end_line": 84,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 84,
+              "matched_text": "Take that NSA!",
+              "prose_offset": {
+                "end": 4316,
+                "start": 4302
+              },
+              "raw_offset": {
+                "end": 5943,
+                "start": 5929
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 53,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 5943,
+                  "start": 5929
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 8,
+              "column": 659,
+              "disposition": "selected",
+              "end_column": 674,
+              "end_line": 42,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 42,
+              "matched_text": "Read more here.",
+              "prose_offset": {
+                "end": 2535,
+                "start": 2520
+              },
+              "raw_offset": {
+                "end": 3507,
+                "start": 3492
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 28,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 3507,
+                  "start": 3492
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 18,
+              "column": 357,
+              "disposition": "selected",
+              "end_column": 371,
+              "end_line": 84,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 84,
+              "matched_text": "Take that NSA!",
+              "prose_offset": {
+                "end": 4316,
+                "start": 4302
+              },
+              "raw_offset": {
+                "end": 5943,
+                "start": 5929
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 53,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 5943,
+                  "start": 5929
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 1.8674136321195145
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 840,
+        "start": 473
+      }
+    ],
+    [
+      {
+        "end": 1186,
+        "start": 842
+      }
+    ],
+    [
+      {
+        "end": 1587,
+        "start": 1188
+      }
+    ],
+    [
+      {
+        "end": 1748,
+        "start": 1589
+      },
+      {
+        "end": 1752,
+        "start": 1749
+      },
+      {
+        "end": 1831,
+        "start": 1825
+      },
+      {
+        "end": 1835,
+        "start": 1832
+      },
+      {
+        "end": 2139,
+        "start": 1877
+      }
+    ],
+    [
+      {
+        "end": 2174,
+        "start": 2149
+      },
+      {
+        "end": 2185,
+        "start": 2175
+      }
+    ],
+    [
+      {
+        "end": 2605,
+        "start": 2300
+      }
+    ],
+    [
+      {
+        "end": 2647,
+        "start": 2608
+      }
+    ],
+    [
+      {
+        "end": 2828,
+        "start": 2820
+      }
+    ],
+    [
+      {
+        "end": 3177,
+        "start": 2830
+      },
+      {
+        "end": 3181,
+        "start": 3178
+      },
+      {
+        "end": 3491,
+        "start": 3259
+      },
+      {
+        "end": 3507,
+        "start": 3492
+      }
+    ],
+    [
+      {
+        "end": 3578,
+        "start": 3572
+      },
+      {
+        "end": 3624,
+        "start": 3579
+      },
+      {
+        "end": 3785,
+        "start": 3720
+      },
+      {
+        "end": 3821,
+        "start": 3786
+      }
+    ],
+    [
+      {
+        "end": 3938,
+        "start": 3903
+      }
+    ],
+    [
+      {
+        "end": 4036,
+        "start": 4029
+      }
+    ],
+    [
+      {
+        "end": 4453,
+        "start": 4038
+      }
+    ],
+    [
+      {
+        "end": 4570,
+        "start": 4545
+      }
+    ],
+    [
+      {
+        "end": 4847,
+        "start": 4572
+      }
+    ],
+    [
+      {
+        "end": 4926,
+        "start": 4921
+      }
+    ],
+    [
+      {
+        "end": 5392,
+        "start": 4928
+      }
+    ],
+    [
+      {
+        "end": 5486,
+        "start": 5468
+      }
+    ],
+    [
+      {
+        "end": 5943,
+        "start": 5567
+      }
+    ],
+    [
+      {
+        "end": 6043,
+        "start": 5945
+      }
+    ],
+    [
+      {
+        "end": 6092,
+        "start": 6055
+      }
+    ],
+    [
+      {
+        "end": 6190,
+        "start": 6161
+      }
+    ],
+    [
+      {
+        "end": 6285,
+        "start": 6192
+      },
+      {
+        "end": 6305,
+        "start": 6286
+      },
+      {
+        "end": 6446,
+        "start": 6444
+      },
+      {
+        "end": 6473,
+        "start": 6447
+      },
+      {
+        "end": 6723,
+        "start": 6538
+      },
+      {
+        "end": 6737,
+        "start": 6724
+      },
+      {
+        "end": 6901,
+        "start": 6804
+      },
+      {
+        "end": 6925,
+        "start": 6902
+      },
+      {
+        "end": 6995,
+        "start": 6993
+      }
+    ],
+    [
+      {
+        "end": 7138,
+        "start": 6997
+      },
+      {
+        "end": 7170,
+        "start": 7139
+      },
+      {
+        "end": 7221,
+        "start": 7220
+      },
+      {
+        "end": 7238,
+        "start": 7222
+      },
+      {
+        "end": 7313,
+        "start": 7293
+      },
+      {
+        "end": 7325,
+        "start": 7314
+      },
+      {
+        "end": 7416,
+        "start": 7385
+      }
+    ],
+    [
+      {
+        "end": 7738,
+        "start": 7418
+      }
+    ],
+    [
+      {
+        "end": 7767,
+        "start": 7740
+      },
+      {
+        "end": 7797,
+        "start": 7768
+      },
+      {
+        "end": 7882,
+        "start": 7859
+      }
+    ],
+    [
+      {
+        "end": 8142,
+        "start": 7889
+      }
+    ],
+    [
+      {
+        "end": 8470,
+        "start": 8144
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 5,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "suspicious"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 5,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+  "prose_words": 1071,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 569,
+        "start": 473
+      }
+    ],
+    [
+      {
+        "end": 623,
+        "start": 569
+      }
+    ],
+    [
+      {
+        "end": 738,
+        "start": 623
+      }
+    ],
+    [
+      {
+        "end": 840,
+        "start": 738
+      }
+    ],
+    [
+      {
+        "end": 889,
+        "start": 842
+      }
+    ],
+    [
+      {
+        "end": 955,
+        "start": 889
+      }
+    ],
+    [
+      {
+        "end": 981,
+        "start": 955
+      }
+    ],
+    [
+      {
+        "end": 1094,
+        "start": 981
+      }
+    ],
+    [
+      {
+        "end": 1186,
+        "start": 1094
+      }
+    ],
+    [
+      {
+        "end": 1273,
+        "start": 1188
+      }
+    ],
+    [
+      {
+        "end": 1327,
+        "start": 1273
+      }
+    ],
+    [
+      {
+        "end": 1423,
+        "start": 1327
+      }
+    ],
+    [
+      {
+        "end": 1498,
+        "start": 1423
+      }
+    ],
+    [
+      {
+        "end": 1587,
+        "start": 1498
+      }
+    ],
+    [
+      {
+        "end": 1747,
+        "start": 1589
+      }
+    ],
+    [
+      {
+        "end": 1748,
+        "start": 1747
+      },
+      {
+        "end": 1752,
+        "start": 1749
+      },
+      {
+        "end": 1831,
+        "start": 1825
+      },
+      {
+        "end": 1835,
+        "start": 1832
+      },
+      {
+        "end": 1985,
+        "start": 1877
+      }
+    ],
+    [
+      {
+        "end": 2075,
+        "start": 1985
+      }
+    ],
+    [
+      {
+        "end": 2139,
+        "start": 2075
+      }
+    ],
+    [
+      {
+        "end": 2174,
+        "start": 2149
+      },
+      {
+        "end": 2185,
+        "start": 2175
+      }
+    ],
+    [
+      {
+        "end": 2371,
+        "start": 2300
+      }
+    ],
+    [
+      {
+        "end": 2507,
+        "start": 2371
+      }
+    ],
+    [
+      {
+        "end": 2605,
+        "start": 2507
+      }
+    ],
+    [
+      {
+        "end": 2647,
+        "start": 2608
+      }
+    ],
+    [
+      {
+        "end": 2828,
+        "start": 2820
+      }
+    ],
+    [
+      {
+        "end": 2980,
+        "start": 2830
+      }
+    ],
+    [
+      {
+        "end": 3115,
+        "start": 2980
+      }
+    ],
+    [
+      {
+        "end": 3177,
+        "start": 3115
+      },
+      {
+        "end": 3181,
+        "start": 3178
+      },
+      {
+        "end": 3377,
+        "start": 3259
+      }
+    ],
+    [
+      {
+        "end": 3490,
+        "start": 3377
+      }
+    ],
+    [
+      {
+        "end": 3491,
+        "start": 3490
+      },
+      {
+        "end": 3507,
+        "start": 3492
+      }
+    ],
+    [
+      {
+        "end": 3578,
+        "start": 3572
+      },
+      {
+        "end": 3624,
+        "start": 3579
+      },
+      {
+        "end": 3721,
+        "start": 3720
+      }
+    ],
+    [
+      {
+        "end": 3785,
+        "start": 3721
+      },
+      {
+        "end": 3821,
+        "start": 3786
+      }
+    ],
+    [
+      {
+        "end": 3938,
+        "start": 3903
+      }
+    ],
+    [
+      {
+        "end": 4036,
+        "start": 4029
+      }
+    ],
+    [
+      {
+        "end": 4070,
+        "start": 4038
+      }
+    ],
+    [
+      {
+        "end": 4184,
+        "start": 4070
+      }
+    ],
+    [
+      {
+        "end": 4249,
+        "start": 4184
+      }
+    ],
+    [
+      {
+        "end": 4365,
+        "start": 4249
+      }
+    ],
+    [
+      {
+        "end": 4453,
+        "start": 4365
+      }
+    ],
+    [
+      {
+        "end": 4570,
+        "start": 4545
+      }
+    ],
+    [
+      {
+        "end": 4679,
+        "start": 4572
+      }
+    ],
+    [
+      {
+        "end": 4757,
+        "start": 4679
+      }
+    ],
+    [
+      {
+        "end": 4847,
+        "start": 4757
+      }
+    ],
+    [
+      {
+        "end": 4926,
+        "start": 4921
+      }
+    ],
+    [
+      {
+        "end": 5009,
+        "start": 4928
+      }
+    ],
+    [
+      {
+        "end": 5066,
+        "start": 5009
+      }
+    ],
+    [
+      {
+        "end": 5181,
+        "start": 5066
+      }
+    ],
+    [
+      {
+        "end": 5320,
+        "start": 5181
+      }
+    ],
+    [
+      {
+        "end": 5392,
+        "start": 5320
+      }
+    ],
+    [
+      {
+        "end": 5486,
+        "start": 5468
+      }
+    ],
+    [
+      {
+        "end": 5663,
+        "start": 5567
+      }
+    ],
+    [
+      {
+        "end": 5759,
+        "start": 5663
+      }
+    ],
+    [
+      {
+        "end": 5819,
+        "start": 5759
+      }
+    ],
+    [
+      {
+        "end": 5928,
+        "start": 5819
+      }
+    ],
+    [
+      {
+        "end": 5943,
+        "start": 5928
+      }
+    ],
+    [
+      {
+        "end": 6043,
+        "start": 5945
+      }
+    ],
+    [
+      {
+        "end": 6092,
+        "start": 6055
+      }
+    ],
+    [
+      {
+        "end": 6190,
+        "start": 6161
+      }
+    ],
+    [
+      {
+        "end": 6285,
+        "start": 6192
+      },
+      {
+        "end": 6305,
+        "start": 6286
+      },
+      {
+        "end": 6445,
+        "start": 6444
+      }
+    ],
+    [
+      {
+        "end": 6446,
+        "start": 6445
+      },
+      {
+        "end": 6473,
+        "start": 6447
+      },
+      {
+        "end": 6550,
+        "start": 6538
+      }
+    ],
+    [
+      {
+        "end": 6723,
+        "start": 6550
+      },
+      {
+        "end": 6737,
+        "start": 6724
+      },
+      {
+        "end": 6805,
+        "start": 6804
+      }
+    ],
+    [
+      {
+        "end": 6901,
+        "start": 6805
+      },
+      {
+        "end": 6925,
+        "start": 6902
+      },
+      {
+        "end": 6995,
+        "start": 6993
+      }
+    ],
+    [
+      {
+        "end": 7138,
+        "start": 6997
+      },
+      {
+        "end": 7170,
+        "start": 7139
+      },
+      {
+        "end": 7221,
+        "start": 7220
+      },
+      {
+        "end": 7238,
+        "start": 7222
+      },
+      {
+        "end": 7313,
+        "start": 7293
+      },
+      {
+        "end": 7325,
+        "start": 7314
+      },
+      {
+        "end": 7416,
+        "start": 7385
+      }
+    ],
+    [
+      {
+        "end": 7572,
+        "start": 7418
+      }
+    ],
+    [
+      {
+        "end": 7652,
+        "start": 7572
+      }
+    ],
+    [
+      {
+        "end": 7738,
+        "start": 7652
+      }
+    ],
+    [
+      {
+        "end": 7767,
+        "start": 7740
+      },
+      {
+        "end": 7797,
+        "start": 7768
+      },
+      {
+        "end": 7860,
+        "start": 7859
+      }
+    ],
+    [
+      {
+        "end": 7882,
+        "start": 7860
+      }
+    ],
+    [
+      {
+        "end": 7962,
+        "start": 7889
+      }
+    ],
+    [
+      {
+        "end": 8018,
+        "start": 7962
+      }
+    ],
+    [
+      {
+        "end": 8079,
+        "start": 8018
+      }
+    ],
+    [
+      {
+        "end": 8142,
+        "start": 8079
+      }
+    ],
+    [
+      {
+        "end": 8181,
+        "start": 8144
+      }
+    ],
+    [
+      {
+        "end": 8219,
+        "start": 8181
+      }
+    ],
+    [
+      {
+        "end": 8280,
+        "start": 8219
+      }
+    ],
+    [
+      {
+        "end": 8378,
+        "start": 8280
+      }
+    ],
+    [
+      {
+        "end": 8470,
+        "start": 8378
+      }
+    ]
+  ],
+  "sentence_count": 76,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

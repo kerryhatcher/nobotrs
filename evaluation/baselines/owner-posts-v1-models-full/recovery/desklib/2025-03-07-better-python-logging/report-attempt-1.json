@@ -1,0 +1,1981 @@
+{
+  "actionable_finding_count": 10,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 944.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.6484989186248712
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 87.79505040773049
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 6.785833333333336
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.5758161097160518
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.841417483452323
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -1.2708780765533447
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 13312.095587,
+            "excerpt_bytes": 2612,
+            "excerpt_coverage": 0.5043613103314596,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.5043613103314596,
+            "full_coverage_output": -1.9317997776624443,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.5043613103314596,
+            "precision": "float32",
+            "prepared_bytes": 5177,
+            "prepared_words": 944,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -1.2708780765533447,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 19,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 105,
+                  "start": 0
+                },
+                "raw_output": 5.066019535064697,
+                "source_ranges": [
+                  {
+                    "end": 1284,
+                    "start": 1210
+                  },
+                  {
+                    "end": 1304,
+                    "start": 1285
+                  },
+                  {
+                    "end": 1446,
+                    "start": 1435
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 1,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 384,
+                "heading": "Recognizing you have a problem",
+                "index": 1,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2085,
+                  "start": 105
+                },
+                "raw_output": -0.7071926593780518,
+                "source_ranges": [
+                  {
+                    "end": 1465,
+                    "start": 1446
+                  },
+                  {
+                    "end": 1617,
+                    "start": 1467
+                  },
+                  {
+                    "end": 1699,
+                    "start": 1626
+                  },
+                  {
+                    "end": 1801,
+                    "start": 1708
+                  },
+                  {
+                    "end": 2726,
+                    "start": 2712
+                  },
+                  {
+                    "end": 3169,
+                    "start": 2735
+                  },
+                  {
+                    "end": 3468,
+                    "start": 3171
+                  },
+                  {
+                    "end": 3706,
+                    "start": 3477
+                  },
+                  {
+                    "end": 5900,
+                    "start": 5241
+                  },
+                  {
+                    "end": 5908,
+                    "start": 5905
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 28,
+                  "start": 1
+                }
+              },
+              {
+                "body_tokens": 161,
+                "heading": "Loguru",
+                "index": 2,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2895,
+                  "start": 2085
+                },
+                "raw_output": -1.8246389627456665,
+                "source_ranges": [
+                  {
+                    "end": 5911,
+                    "start": 5908
+                  },
+                  {
+                    "end": 5983,
+                    "start": 5977
+                  },
+                  {
+                    "end": 6152,
+                    "start": 6039
+                  },
+                  {
+                    "end": 6159,
+                    "start": 6153
+                  },
+                  {
+                    "end": 6231,
+                    "start": 6215
+                  },
+                  {
+                    "end": 6515,
+                    "start": 6276
+                  },
+                  {
+                    "end": 6558,
+                    "start": 6557
+                  },
+                  {
+                    "end": 6695,
+                    "start": 6560
+                  },
+                  {
+                    "end": 8043,
+                    "start": 7969
+                  },
+                  {
+                    "end": 8054,
+                    "start": 8045
+                  },
+                  {
+                    "end": 8255,
+                    "start": 8247
+                  },
+                  {
+                    "end": 9126,
+                    "start": 8939
+                  },
+                  {
+                    "end": 9136,
+                    "start": 9132
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 42,
+                  "start": 28
+                }
+              },
+              {
+                "body_tokens": 65,
+                "heading": "What to do with your logs",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 3221,
+                  "start": 2895
+                },
+                "raw_output": -3.7285919189453125,
+                "source_ranges": [
+                  {
+                    "end": 9157,
+                    "start": 9136
+                  },
+                  {
+                    "end": 9448,
+                    "start": 9159
+                  },
+                  {
+                    "end": 9472,
+                    "start": 9462
+                  },
+                  {
+                    "end": 9484,
+                    "start": 9481
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 47,
+                  "start": 42
+                }
+              },
+              {
+                "body_tokens": 131,
+                "heading": "Log File",
+                "index": 4,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 3852,
+                  "start": 3221
+                },
+                "raw_output": -2.423576831817627,
+                "source_ranges": [
+                  {
+                    "end": 9489,
+                    "start": 9484
+                  },
+                  {
+                    "end": 9566,
+                    "start": 9493
+                  },
+                  {
+                    "end": 9668,
+                    "start": 9589
+                  },
+                  {
+                    "end": 9761,
+                    "start": 9677
+                  },
+                  {
+                    "end": 10230,
+                    "start": 9848
+                  },
+                  {
+                    "end": 10242,
+                    "start": 10239
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 55,
+                  "start": 47
+                }
+              },
+              {
+                "body_tokens": 279,
+                "heading": "Log Service",
+                "index": 5,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 5177,
+                  "start": 3852
+                },
+                "raw_output": -3.5061593055725098,
+                "source_ranges": [
+                  {
+                    "end": 10250,
+                    "start": 10242
+                  },
+                  {
+                    "end": 10549,
+                    "start": 10254
+                  },
+                  {
+                    "end": 10577,
+                    "start": 10551
+                  },
+                  {
+                    "end": 10597,
+                    "start": 10578
+                  },
+                  {
+                    "end": 10890,
+                    "start": 10703
+                  },
+                  {
+                    "end": 10901,
+                    "start": 10891
+                  },
+                  {
+                    "end": 11000,
+                    "start": 10969
+                  },
+                  {
+                    "end": 11076,
+                    "start": 11001
+                  },
+                  {
+                    "end": 11179,
+                    "start": 11128
+                  },
+                  {
+                    "end": 11195,
+                    "start": 11180
+                  },
+                  {
+                    "end": 11340,
+                    "start": 11297
+                  },
+                  {
+                    "end": 11411,
+                    "start": 11342
+                  },
+                  {
+                    "end": 11605,
+                    "start": 11529
+                  },
+                  {
+                    "end": 13174,
+                    "start": 12902
+                  },
+                  {
+                    "end": 13387,
+                    "start": 13246
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 72,
+                  "start": 55
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 4,
+              "column": 241,
+              "disposition": "selected",
+              "end_column": 248,
+              "end_line": 28,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 28,
+              "matched_text": "myself.",
+              "prose_offset": {
+                "end": 358,
+                "start": 351
+              },
+              "raw_offset": {
+                "end": 1716,
+                "start": 1709
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 7,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1716,
+                  "start": 1709
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 5,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 14,
+              "end_line": 79,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 79,
+              "matched_text": "See all those",
+              "prose_offset": {
+                "end": 457,
+                "start": 444
+              },
+              "raw_offset": {
+                "end": 2725,
+                "start": 2712
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 9,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2725,
+                  "start": 2712
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 6,
+              "column": 25,
+              "disposition": "selected",
+              "end_column": 36,
+              "end_line": 79,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 79,
+              "matched_text": "statements?",
+              "prose_offset": {
+                "end": 471,
+                "start": 460
+              },
+              "raw_offset": {
+                "end": 2747,
+                "start": 2736
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 10,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2747,
+                  "start": 2736
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 8,
+              "column": 308,
+              "disposition": "selected",
+              "end_column": 319,
+              "end_line": 81,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 81,
+              "matched_text": "statements.",
+              "prose_offset": {
+                "end": 1204,
+                "start": 1193
+              },
+              "raw_offset": {
+                "end": 3489,
+                "start": 3478
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 18,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 3489,
+                  "start": 3478
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 12,
+              "column": 518,
+              "disposition": "selected",
+              "end_column": 533,
+              "end_line": 152,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 152,
+              "matched_text": "So for example:",
+              "prose_offset": {
+                "end": 2469,
+                "start": 2454
+              },
+              "raw_offset": {
+                "end": 6514,
+                "start": 6499
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 34,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6514,
+                  "start": 6499
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 16,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 10,
+              "end_line": 215,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 215,
+              "matched_text": "Previous:",
+              "prose_offset": {
+                "end": 2693,
+                "start": 2684
+              },
+              "raw_offset": {
+                "end": 8054,
+                "start": 8045
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 38,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8054,
+                  "start": 8045
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 17,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 231,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 231,
+              "matched_text": "Current:",
+              "prose_offset": {
+                "end": 2702,
+                "start": 2694
+              },
+              "raw_offset": {
+                "end": 8255,
+                "start": 8247
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 39,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8255,
+                  "start": 8247
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 21,
+              "column": 303,
+              "disposition": "selected",
+              "end_column": 312,
+              "end_line": 248,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 248,
+              "matched_text": "function.",
+              "prose_offset": {
+                "end": 3217,
+                "start": 3208
+              },
+              "raw_offset": {
+                "end": 9472,
+                "start": 9463
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 46,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 9472,
+                  "start": 9463
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 23,
+              "column": 63,
+              "disposition": "selected",
+              "end_column": 73,
+              "end_line": 252,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 252,
+              "matched_text": "Simply add",
+              "prose_offset": {
+                "end": 3299,
+                "start": 3289
+              },
+              "raw_offset": {
+                "end": 9565,
+                "start": 9555
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 49,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 9565,
+                  "start": 9555
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 4,
+              "column": 241,
+              "disposition": "selected",
+              "end_column": 248,
+              "end_line": 28,
+              "guidance_id": "structure.fragment-pattern",
+              "leverage": 2,
+              "line": 28,
+              "matched_text": "myself.",
+              "prose_offset": {
+                "end": 358,
+                "start": 351
+              },
+              "raw_offset": {
+                "end": 1716,
+                "start": 1709
+              },
+              "rule_id": "structure.fragment-pattern",
+              "sentence_context": 7,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1716,
+                  "start": 1709
+                }
+              ],
+              "suggestion": "9 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 4,
+              "column": 241,
+              "disposition": "selected",
+              "end_column": 248,
+              "end_line": 28,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 28,
+              "matched_text": "myself.",
+              "prose_offset": {
+                "end": 358,
+                "start": 351
+              },
+              "raw_offset": {
+                "end": 1716,
+                "start": 1709
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 7,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1716,
+                  "start": 1709
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 5,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 14,
+              "end_line": 79,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 79,
+              "matched_text": "See all those",
+              "prose_offset": {
+                "end": 457,
+                "start": 444
+              },
+              "raw_offset": {
+                "end": 2725,
+                "start": 2712
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 9,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2725,
+                  "start": 2712
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 6,
+              "column": 25,
+              "disposition": "selected",
+              "end_column": 36,
+              "end_line": 79,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 79,
+              "matched_text": "statements?",
+              "prose_offset": {
+                "end": 471,
+                "start": 460
+              },
+              "raw_offset": {
+                "end": 2747,
+                "start": 2736
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 10,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2747,
+                  "start": 2736
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 8,
+              "column": 308,
+              "disposition": "selected",
+              "end_column": 319,
+              "end_line": 81,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 81,
+              "matched_text": "statements.",
+              "prose_offset": {
+                "end": 1204,
+                "start": 1193
+              },
+              "raw_offset": {
+                "end": 3489,
+                "start": 3478
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 18,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 3489,
+                  "start": 3478
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 12,
+              "column": 518,
+              "disposition": "selected",
+              "end_column": 533,
+              "end_line": 152,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 152,
+              "matched_text": "So for example:",
+              "prose_offset": {
+                "end": 2469,
+                "start": 2454
+              },
+              "raw_offset": {
+                "end": 6514,
+                "start": 6499
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 34,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6514,
+                  "start": 6499
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 16,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 10,
+              "end_line": 215,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 215,
+              "matched_text": "Previous:",
+              "prose_offset": {
+                "end": 2693,
+                "start": 2684
+              },
+              "raw_offset": {
+                "end": 8054,
+                "start": 8045
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 38,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8054,
+                  "start": 8045
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 17,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 231,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 231,
+              "matched_text": "Current:",
+              "prose_offset": {
+                "end": 2702,
+                "start": 2694
+              },
+              "raw_offset": {
+                "end": 8255,
+                "start": 8247
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 39,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8255,
+                  "start": 8247
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 21,
+              "column": 303,
+              "disposition": "selected",
+              "end_column": 312,
+              "end_line": 248,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 248,
+              "matched_text": "function.",
+              "prose_offset": {
+                "end": 3217,
+                "start": 3208
+              },
+              "raw_offset": {
+                "end": 9472,
+                "start": 9463
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 46,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 9472,
+                  "start": 9463
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 23,
+              "column": 63,
+              "disposition": "selected",
+              "end_column": 73,
+              "end_line": 252,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 252,
+              "matched_text": "Simply add",
+              "prose_offset": {
+                "end": 3299,
+                "start": 3289
+              },
+              "raw_offset": {
+                "end": 9565,
+                "start": 9555
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 49,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 9565,
+                  "start": 9555
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 4,
+              "column": 241,
+              "disposition": "selected",
+              "end_column": 248,
+              "end_line": 28,
+              "guidance_id": "structure.fragment-pattern",
+              "leverage": 2,
+              "line": 28,
+              "matched_text": "myself.",
+              "prose_offset": {
+                "end": 358,
+                "start": 351
+              },
+              "raw_offset": {
+                "end": 1716,
+                "start": 1709
+              },
+              "rule_id": "structure.fragment-pattern",
+              "sentence_context": 7,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 1716,
+                  "start": 1709
+                }
+              ],
+              "suggestion": "9 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 10.59322033898305
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1284,
+        "start": 1210
+      },
+      {
+        "end": 1304,
+        "start": 1285
+      }
+    ],
+    [
+      {
+        "end": 1465,
+        "start": 1435
+      }
+    ],
+    [
+      {
+        "end": 1617,
+        "start": 1467
+      }
+    ],
+    [
+      {
+        "end": 1699,
+        "start": 1626
+      }
+    ],
+    [
+      {
+        "end": 1801,
+        "start": 1708
+      }
+    ],
+    [
+      {
+        "end": 2726,
+        "start": 2712
+      }
+    ],
+    [
+      {
+        "end": 3169,
+        "start": 2735
+      }
+    ],
+    [
+      {
+        "end": 3468,
+        "start": 3171
+      }
+    ],
+    [
+      {
+        "end": 3706,
+        "start": 3477
+      }
+    ],
+    [
+      {
+        "end": 5900,
+        "start": 5241
+      }
+    ],
+    [
+      {
+        "end": 5911,
+        "start": 5905
+      }
+    ],
+    [
+      {
+        "end": 5983,
+        "start": 5977
+      },
+      {
+        "end": 6152,
+        "start": 6039
+      },
+      {
+        "end": 6159,
+        "start": 6153
+      },
+      {
+        "end": 6231,
+        "start": 6215
+      }
+    ],
+    [
+      {
+        "end": 6515,
+        "start": 6276
+      }
+    ],
+    [
+      {
+        "end": 6558,
+        "start": 6557
+      }
+    ],
+    [
+      {
+        "end": 6695,
+        "start": 6560
+      }
+    ],
+    [
+      {
+        "end": 8043,
+        "start": 7969
+      }
+    ],
+    [
+      {
+        "end": 8054,
+        "start": 8045
+      }
+    ],
+    [
+      {
+        "end": 8255,
+        "start": 8247
+      }
+    ],
+    [
+      {
+        "end": 9126,
+        "start": 8939
+      }
+    ],
+    [
+      {
+        "end": 9157,
+        "start": 9132
+      }
+    ],
+    [
+      {
+        "end": 9448,
+        "start": 9159
+      }
+    ],
+    [
+      {
+        "end": 9472,
+        "start": 9462
+      }
+    ],
+    [
+      {
+        "end": 9489,
+        "start": 9481
+      }
+    ],
+    [
+      {
+        "end": 9566,
+        "start": 9493
+      }
+    ],
+    [
+      {
+        "end": 9668,
+        "start": 9589
+      }
+    ],
+    [
+      {
+        "end": 9761,
+        "start": 9677
+      }
+    ],
+    [
+      {
+        "end": 10230,
+        "start": 9848
+      }
+    ],
+    [
+      {
+        "end": 10250,
+        "start": 10239
+      }
+    ],
+    [
+      {
+        "end": 10549,
+        "start": 10254
+      }
+    ],
+    [
+      {
+        "end": 10577,
+        "start": 10551
+      },
+      {
+        "end": 10597,
+        "start": 10578
+      },
+      {
+        "end": 10890,
+        "start": 10703
+      },
+      {
+        "end": 10901,
+        "start": 10891
+      },
+      {
+        "end": 11000,
+        "start": 10969
+      },
+      {
+        "end": 11076,
+        "start": 11001
+      },
+      {
+        "end": 11179,
+        "start": 11128
+      },
+      {
+        "end": 11195,
+        "start": 11180
+      },
+      {
+        "end": 11340,
+        "start": 11297
+      }
+    ],
+    [
+      {
+        "end": 11411,
+        "start": 11342
+      }
+    ],
+    [
+      {
+        "end": 11605,
+        "start": 11529
+      }
+    ],
+    [
+      {
+        "end": 13174,
+        "start": 12902
+      }
+    ],
+    [
+      {
+        "end": 13387,
+        "start": 13246
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 10,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 10,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-03-07-better-python-logging.md",
+  "prose_words": 944,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1284,
+        "start": 1210
+      },
+      {
+        "end": 1304,
+        "start": 1285
+      }
+    ],
+    [
+      {
+        "end": 1465,
+        "start": 1435
+      }
+    ],
+    [
+      {
+        "end": 1506,
+        "start": 1467
+      }
+    ],
+    [
+      {
+        "end": 1542,
+        "start": 1506
+      }
+    ],
+    [
+      {
+        "end": 1617,
+        "start": 1542
+      }
+    ],
+    [
+      {
+        "end": 1658,
+        "start": 1626
+      }
+    ],
+    [
+      {
+        "end": 1699,
+        "start": 1658
+      }
+    ],
+    [
+      {
+        "end": 1716,
+        "start": 1708
+      }
+    ],
+    [
+      {
+        "end": 1801,
+        "start": 1716
+      }
+    ],
+    [
+      {
+        "end": 2726,
+        "start": 2712
+      }
+    ],
+    [
+      {
+        "end": 2747,
+        "start": 2735
+      }
+    ],
+    [
+      {
+        "end": 2843,
+        "start": 2747
+      }
+    ],
+    [
+      {
+        "end": 2922,
+        "start": 2843
+      }
+    ],
+    [
+      {
+        "end": 3019,
+        "start": 2922
+      }
+    ],
+    [
+      {
+        "end": 3169,
+        "start": 3019
+      }
+    ],
+    [
+      {
+        "end": 3236,
+        "start": 3171
+      }
+    ],
+    [
+      {
+        "end": 3334,
+        "start": 3236
+      }
+    ],
+    [
+      {
+        "end": 3468,
+        "start": 3334
+      }
+    ],
+    [
+      {
+        "end": 3489,
+        "start": 3477
+      }
+    ],
+    [
+      {
+        "end": 3618,
+        "start": 3489
+      }
+    ],
+    [
+      {
+        "end": 3638,
+        "start": 3618
+      }
+    ],
+    [
+      {
+        "end": 3706,
+        "start": 3638
+      }
+    ],
+    [
+      {
+        "end": 5268,
+        "start": 5241
+      }
+    ],
+    [
+      {
+        "end": 5352,
+        "start": 5268
+      }
+    ],
+    [
+      {
+        "end": 5567,
+        "start": 5352
+      }
+    ],
+    [
+      {
+        "end": 5604,
+        "start": 5567
+      }
+    ],
+    [
+      {
+        "end": 5764,
+        "start": 5604
+      }
+    ],
+    [
+      {
+        "end": 5900,
+        "start": 5764
+      }
+    ],
+    [
+      {
+        "end": 5911,
+        "start": 5905
+      }
+    ],
+    [
+      {
+        "end": 5983,
+        "start": 5977
+      },
+      {
+        "end": 6102,
+        "start": 6039
+      }
+    ],
+    [
+      {
+        "end": 6152,
+        "start": 6102
+      },
+      {
+        "end": 6159,
+        "start": 6153
+      },
+      {
+        "end": 6231,
+        "start": 6215
+      }
+    ],
+    [
+      {
+        "end": 6312,
+        "start": 6276
+      }
+    ],
+    [
+      {
+        "end": 6410,
+        "start": 6312
+      }
+    ],
+    [
+      {
+        "end": 6498,
+        "start": 6410
+      }
+    ],
+    [
+      {
+        "end": 6515,
+        "start": 6498
+      }
+    ],
+    [
+      {
+        "end": 6637,
+        "start": 6560
+      }
+    ],
+    [
+      {
+        "end": 6695,
+        "start": 6637
+      }
+    ],
+    [
+      {
+        "end": 8043,
+        "start": 7969
+      }
+    ],
+    [
+      {
+        "end": 8054,
+        "start": 8045
+      }
+    ],
+    [
+      {
+        "end": 8255,
+        "start": 8247
+      }
+    ],
+    [
+      {
+        "end": 9035,
+        "start": 8939
+      }
+    ],
+    [
+      {
+        "end": 9126,
+        "start": 9035
+      }
+    ],
+    [
+      {
+        "end": 9157,
+        "start": 9132
+      }
+    ],
+    [
+      {
+        "end": 9225,
+        "start": 9159
+      }
+    ],
+    [
+      {
+        "end": 9378,
+        "start": 9225
+      }
+    ],
+    [
+      {
+        "end": 9448,
+        "start": 9378
+      }
+    ],
+    [
+      {
+        "end": 9472,
+        "start": 9462
+      }
+    ],
+    [
+      {
+        "end": 9489,
+        "start": 9481
+      }
+    ],
+    [
+      {
+        "end": 9554,
+        "start": 9493
+      }
+    ],
+    [
+      {
+        "end": 9566,
+        "start": 9554
+      }
+    ],
+    [
+      {
+        "end": 9668,
+        "start": 9589
+      }
+    ],
+    [
+      {
+        "end": 9761,
+        "start": 9678
+      }
+    ],
+    [
+      {
+        "end": 9981,
+        "start": 9848
+      }
+    ],
+    [
+      {
+        "end": 10104,
+        "start": 9981
+      }
+    ],
+    [
+      {
+        "end": 10230,
+        "start": 10104
+      }
+    ],
+    [
+      {
+        "end": 10250,
+        "start": 10239
+      }
+    ],
+    [
+      {
+        "end": 10343,
+        "start": 10254
+      }
+    ],
+    [
+      {
+        "end": 10427,
+        "start": 10343
+      }
+    ],
+    [
+      {
+        "end": 10549,
+        "start": 10427
+      }
+    ],
+    [
+      {
+        "end": 10577,
+        "start": 10551
+      },
+      {
+        "end": 10597,
+        "start": 10578
+      },
+      {
+        "end": 10704,
+        "start": 10703
+      }
+    ],
+    [
+      {
+        "end": 10834,
+        "start": 10704
+      }
+    ],
+    [
+      {
+        "end": 10890,
+        "start": 10834
+      },
+      {
+        "end": 10901,
+        "start": 10891
+      },
+      {
+        "end": 10970,
+        "start": 10969
+      }
+    ],
+    [
+      {
+        "end": 11000,
+        "start": 10970
+      },
+      {
+        "end": 11076,
+        "start": 11001
+      },
+      {
+        "end": 11129,
+        "start": 11128
+      }
+    ],
+    [
+      {
+        "end": 11179,
+        "start": 11129
+      },
+      {
+        "end": 11195,
+        "start": 11180
+      },
+      {
+        "end": 11340,
+        "start": 11297
+      }
+    ],
+    [
+      {
+        "end": 11385,
+        "start": 11342
+      }
+    ],
+    [
+      {
+        "end": 11411,
+        "start": 11385
+      }
+    ],
+    [
+      {
+        "end": 11605,
+        "start": 11529
+      }
+    ],
+    [
+      {
+        "end": 12989,
+        "start": 12902
+      }
+    ],
+    [
+      {
+        "end": 13095,
+        "start": 12989
+      }
+    ],
+    [
+      {
+        "end": 13174,
+        "start": 13095
+      }
+    ],
+    [
+      {
+        "end": 13332,
+        "start": 13246
+      }
+    ],
+    [
+      {
+        "end": 13387,
+        "start": 13332
+      }
+    ]
+  ],
+  "sentence_count": 72,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

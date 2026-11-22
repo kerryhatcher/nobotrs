@@ -1,0 +1,1765 @@
+{
+  "actionable_finding_count": 0,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 134.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "reason": "text has 134 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "reason": "text has 134 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "reason": "text has 134 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "reason": "text has 134 words, below the 150-word floor"
+        },
+        "status": "abstained"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 0.5438494086265564
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 2444.040475,
+            "excerpt_bytes": 845,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 185,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 0.5438494086265564,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 845,
+            "prepared_words": 134,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": 0.5438494086265564,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 183,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 845,
+                  "start": 0
+                },
+                "raw_output": 0.5438494086265564,
+                "source_ranges": [
+                  {
+                    "end": 1489,
+                    "start": 1170
+                  },
+                  {
+                    "end": 1585,
+                    "start": 1493
+                  },
+                  {
+                    "end": 1691,
+                    "start": 1587
+                  },
+                  {
+                    "end": 1831,
+                    "start": 1695
+                  },
+                  {
+                    "end": 1986,
+                    "start": 1833
+                  },
+                  {
+                    "end": 2023,
+                    "start": 1988
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 8,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "conpara",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+              "unit": "logit_margin",
+              "value": -4.82580304145813
+            },
+            "model_threshold": {
+              "method": "checkpoint_threshold_margin",
+              "unit": "logit",
+              "value": 2.9423828125
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "conpara",
+            "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+            "device": "cpu",
+            "elapsed_ms": 2362.309265,
+            "excerpt_bytes": 838,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 185,
+            "execution_coverage": 1.0,
+            "full_coverage_output": -4.82580304145813,
+            "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 838,
+            "prepared_words": 134,
+            "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+            "raw_output": -4.82580304145813,
+            "raw_units": "logit margin (AI - human; higher = machine-like)",
+            "runtime": "candle-debertav2",
+            "threshold": 2.9423828125,
+            "threshold_source": "checkpoint threshold_margin",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 183,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 844,
+                  "start": 0
+                },
+                "raw_output": -4.82580304145813,
+                "source_ranges": [
+                  {
+                    "end": 1489,
+                    "start": 1170
+                  },
+                  {
+                    "end": 1585,
+                    "start": 1493
+                  },
+                  {
+                    "end": 1691,
+                    "start": 1587
+                  },
+                  {
+                    "end": 1831,
+                    "start": 1695
+                  },
+                  {
+                    "end": 1986,
+                    "start": 1833
+                  },
+                  {
+                    "end": 2023,
+                    "start": 1988
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 8,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "detectorscope",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 0.49318134784698486
+            },
+            "model_threshold": {
+              "method": "released logreg head",
+              "unit": "logit",
+              "value": 0.5008
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "detectorscope",
+            "code_revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+            "detectorscope": {
+              "active_features": 86,
+              "bias": 0.6096460819244385,
+              "feature_filter": 0.85,
+              "formatting_profile": "flat-whitespace-v1",
+              "omitted_features": 76,
+              "reconstruction_residual": 2.1075265976833183e-8,
+              "remainder": -0.3999706655740738,
+              "top_features": [
+                {
+                  "contribution": 0.3716183602809906,
+                  "description": "repeated phrases or sequences in text",
+                  "highlights": [
+                    {
+                      "activation": 12.041316986083984,
+                      "prose_ranges": [
+                        {
+                          "end": 537,
+                          "start": 528
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1714,
+                          "start": 1705
+                        }
+                      ],
+                      "text": "Recipient",
+                      "token_index": 113
+                    },
+                    {
+                      "activation": 10.844366073608398,
+                      "prose_ranges": [
+                        {
+                          "end": 586,
+                          "start": 577
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1763,
+                          "start": 1754
+                        }
+                      ],
+                      "text": "Principal",
+                      "token_index": 122
+                    },
+                    {
+                      "activation": 9.069429397583008,
+                      "prose_ranges": [
+                        {
+                          "end": 594,
+                          "start": 592
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1771,
+                          "start": 1769
+                        }
+                      ],
+                      "text": "ne",
+                      "token_index": 125
+                    },
+                    {
+                      "activation": 6.737188816070557,
+                      "prose_ranges": [
+                        {
+                          "end": 541,
+                          "start": 537
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1718,
+                          "start": 1714
+                        }
+                      ],
+                      "text": "Type",
+                      "token_index": 114
+                    },
+                    {
+                      "activation": 6.3486647605896,
+                      "prose_ranges": [
+                        {
+                          "end": 577,
+                          "start": 572
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1754,
+                          "start": 1749
+                        }
+                      ],
+                      "text": " User",
+                      "token_index": 121
+                    }
+                  ],
+                  "id": 33943
+                },
+                {
+                  "contribution": 0.1563752293586731,
+                  "description": "metadata indicating authorship and timestamps in online forum or blog posts",
+                  "highlights": [
+                    {
+                      "activation": 5.396307468414307,
+                      "prose_ranges": [
+                        {
+                          "end": 844,
+                          "start": 839
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2023,
+                          "start": 2018
+                        }
+                      ],
+                      "text": "Kerry",
+                      "token_index": 180
+                    }
+                  ],
+                  "id": 14073
+                },
+                {
+                  "contribution": 0.0931786522269249,
+                  "description": "instructions on how to perform or accomplish specific tasks or processes",
+                  "highlights": [
+                    {
+                      "activation": 11.12765121459961,
+                      "prose_ranges": [
+                        {
+                          "end": 45,
+                          "start": 42
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1215,
+                          "start": 1212
+                        }
+                      ],
+                      "text": " up",
+                      "token_index": 9
+                    },
+                    {
+                      "activation": 11.008207321166992,
+                      "prose_ranges": [
+                        {
+                          "end": 48,
+                          "start": 45
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1218,
+                          "start": 1215
+                        }
+                      ],
+                      "text": " an",
+                      "token_index": 10
+                    },
+                    {
+                      "activation": 9.87640380859375,
+                      "prose_ranges": [
+                        {
+                          "end": 42,
+                          "start": 34
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1212,
+                          "start": 1204
+                        }
+                      ],
+                      "text": " setting",
+                      "token_index": 8
+                    }
+                  ],
+                  "id": 49384
+                },
+                {
+                  "contribution": 0.08853666484355927,
+                  "description": "activates on the word also and phrases containing it",
+                  "highlights": [
+                    {
+                      "activation": 9.516845703125,
+                      "prose_ranges": [
+                        {
+                          "end": 434,
+                          "start": 426
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1608,
+                          "start": 1600
+                        }
+                      ],
+                      "text": " created",
+                      "token_index": 89
+                    },
+                    {
+                      "activation": 6.816090106964111,
+                      "prose_ranges": [
+                        {
+                          "end": 426,
+                          "start": 418
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1600,
+                          "start": 1592
+                        }
+                      ],
+                      "text": " already",
+                      "token_index": 88
+                    }
+                  ],
+                  "id": 47226
+                },
+                {
+                  "contribution": 0.07124626636505127,
+                  "description": "cooking and instructional serving or assembly directions",
+                  "highlights": [
+                    {
+                      "activation": 3.521259069442749,
+                      "prose_ranges": [
+                        {
+                          "end": 642,
+                          "start": 634
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1819,
+                          "start": 1811
+                        }
+                      ],
+                      "text": "Identity",
+                      "token_index": 136
+                    }
+                  ],
+                  "id": 18874
+                },
+                {
+                  "contribution": -0.1226312890648842,
+                  "description": "tokenized components of medical or diagnostic phrasing and lists",
+                  "highlights": [
+                    {
+                      "activation": 3.814709186553955,
+                      "prose_ranges": [
+                        {
+                          "end": 132,
+                          "start": 126
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1302,
+                          "start": 1296
+                        }
+                      ],
+                      "text": " users",
+                      "token_index": 26
+                    },
+                    {
+                      "activation": 3.7144274711608887,
+                      "prose_ranges": [
+                        {
+                          "end": 839,
+                          "start": 837
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 2018,
+                          "start": 2016
+                        }
+                      ],
+                      "text": " -",
+                      "token_index": 179
+                    },
+                    {
+                      "activation": 2.228315830230713,
+                      "prose_ranges": [
+                        {
+                          "end": 180,
+                          "start": 179
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1350,
+                          "start": 1349
+                        }
+                      ],
+                      "text": ".",
+                      "token_index": 35
+                    }
+                  ],
+                  "id": 13528
+                },
+                {
+                  "contribution": -0.11646249145269394,
+                  "description": "opening double quotation marks following a closing single quote and comma",
+                  "highlights": [
+                    {
+                      "activation": 10.588919639587402,
+                      "prose_ranges": [
+                        {
+                          "end": 365,
+                          "start": 363
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1538,
+                          "start": 1536
+                        }
+                      ],
+                      "text": " {",
+                      "token_index": 73
+                    },
+                    {
+                      "activation": 8.783625602722168,
+                      "prose_ranges": [
+                        {
+                          "end": 572,
+                          "start": 570
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1749,
+                          "start": 1747
+                        }
+                      ],
+                      "text": " {",
+                      "token_index": 120
+                    }
+                  ],
+                  "id": 48316
+                },
+                {
+                  "contribution": -0.1065378338098526,
+                  "description": "technical documentation related to computing hardware software and data processing systems",
+                  "highlights": [
+                    {
+                      "activation": 12.71601104736328,
+                      "prose_ranges": [
+                        {
+                          "end": 762,
+                          "start": 754
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1940,
+                          "start": 1932
+                        }
+                      ],
+                      "text": " members",
+                      "token_index": 160
+                    },
+                    {
+                      "activation": 8.949661254882812,
+                      "prose_ranges": [
+                        {
+                          "end": 725,
+                          "start": 716
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1903,
+                          "start": 1894
+                        }
+                      ],
+                      "text": " warnings",
+                      "token_index": 154
+                    }
+                  ],
+                  "id": 57796
+                },
+                {
+                  "contribution": -0.08209951967000961,
+                  "description": "accounting and bookkeeping ledger entries involving debit credit and bank account transactions",
+                  "highlights": [
+                    {
+                      "activation": 22.914133071899418,
+                      "prose_ranges": [
+                        {
+                          "end": 203,
+                          "start": 194
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1373,
+                          "start": 1364
+                        }
+                      ],
+                      "text": " manually",
+                      "token_index": 39
+                    },
+                    {
+                      "activation": 15.710886001586914,
+                      "prose_ranges": [
+                        {
+                          "end": 167,
+                          "start": 159
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1337,
+                          "start": 1329
+                        }
+                      ],
+                      "text": " created",
+                      "token_index": 32
+                    },
+                    {
+                      "activation": 12.52553939819336,
+                      "prose_ranges": [
+                        {
+                          "end": 792,
+                          "start": 789
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1970,
+                          "start": 1967
+                        }
+                      ],
+                      "text": " no",
+                      "token_index": 168
+                    },
+                    {
+                      "activation": 11.726459503173828,
+                      "prose_ranges": [
+                        {
+                          "end": 684,
+                          "start": 679
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1862,
+                          "start": 1857
+                        }
+                      ],
+                      "text": " last",
+                      "token_index": 147
+                    },
+                    {
+                      "activation": 11.652517318725586,
+                      "prose_ranges": [
+                        {
+                          "end": 692,
+                          "start": 684
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1870,
+                          "start": 1862
+                        }
+                      ],
+                      "text": " command",
+                      "token_index": 148
+                    }
+                  ],
+                  "id": 60396
+                },
+                {
+                  "contribution": -0.06971810758113861,
+                  "description": "first person past tense narrative reflecting on a completed interaction or decision",
+                  "highlights": [
+                    {
+                      "activation": 9.179338455200195,
+                      "prose_ranges": [
+                        {
+                          "end": 675,
+                          "start": 672
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1853,
+                          "start": 1850
+                        }
+                      ],
+                      "text": " on",
+                      "token_index": 145
+                    },
+                    {
+                      "activation": 8.360907554626465,
+                      "prose_ranges": [
+                        {
+                          "end": 711,
+                          "start": 706
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1889,
+                          "start": 1884
+                        }
+                      ],
+                      "text": " were",
+                      "token_index": 152
+                    },
+                    {
+                      "activation": 7.779023170471191,
+                      "prose_ranges": [
+                        {
+                          "end": 706,
+                          "start": 701
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1884,
+                          "start": 1879
+                        }
+                      ],
+                      "text": " they",
+                      "token_index": 151
+                    },
+                    {
+                      "activation": 7.572856903076172,
+                      "prose_ranges": [
+                        {
+                          "end": 672,
+                          "start": 665
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1850,
+                          "start": 1843
+                        }
+                      ],
+                      "text": " errors",
+                      "token_index": 144
+                    },
+                    {
+                      "activation": 7.409856796264648,
+                      "prose_ranges": [
+                        {
+                          "end": 701,
+                          "start": 693
+                        }
+                      ],
+                      "source_ranges": [
+                        {
+                          "end": 1879,
+                          "start": 1871
+                        }
+                      ],
+                      "text": " however",
+                      "token_index": 150
+                    }
+                  ],
+                  "id": 19102
+                }
+              ]
+            },
+            "device": "cpu",
+            "elapsed_ms": 7543.502853999999,
+            "excerpt_bytes": 845,
+            "excerpt_coverage": 1.0,
+            "excerpt_tokens": 181,
+            "execution_coverage": 1.0,
+            "full_coverage_output": 0.49318134784698486,
+            "model_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 1.0,
+            "precision": "float32",
+            "prepared_bytes": 845,
+            "prepared_words": 134,
+            "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+            "raw_output": 0.49318134784698486,
+            "raw_units": "logit (higher = machine-like at the released head threshold)",
+            "runtime": "detectorscope-worker",
+            "threshold": 0.5008,
+            "threshold_source": "released logreg head threshold",
+            "token_coverage": 1.0,
+            "token_limit": 1024,
+            "tokenizer_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+            "truncated": false,
+            "windows": [
+              {
+                "body_tokens": 180,
+                "detectorscope": {
+                  "active_features": 86,
+                  "bias": 0.6096460819244385,
+                  "feature_filter": 0.85,
+                  "formatting_profile": "flat-whitespace-v1",
+                  "omitted_features": 76,
+                  "reconstruction_residual": 2.1075265976833183e-8,
+                  "remainder": -0.3999706655740738,
+                  "top_features": [
+                    {
+                      "active_tokens": 6,
+                      "contribution": 0.3716183602809906,
+                      "description": "repeated phrases or sequences in text",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 12.041316986083984,
+                          "prose_ranges": [
+                            {
+                              "end": 537,
+                              "start": 528
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1714,
+                              "start": 1705
+                            }
+                          ],
+                          "text": "Recipient",
+                          "token_index": 113
+                        },
+                        {
+                          "activation": 10.844366073608398,
+                          "prose_ranges": [
+                            {
+                              "end": 586,
+                              "start": 577
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1763,
+                              "start": 1754
+                            }
+                          ],
+                          "text": "Principal",
+                          "token_index": 122
+                        },
+                        {
+                          "activation": 9.069429397583008,
+                          "prose_ranges": [
+                            {
+                              "end": 594,
+                              "start": 592
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1771,
+                              "start": 1769
+                            }
+                          ],
+                          "text": "ne",
+                          "token_index": 125
+                        },
+                        {
+                          "activation": 6.737188816070557,
+                          "prose_ranges": [
+                            {
+                              "end": 541,
+                              "start": 537
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1718,
+                              "start": 1714
+                            }
+                          ],
+                          "text": "Type",
+                          "token_index": 114
+                        },
+                        {
+                          "activation": 6.3486647605896,
+                          "prose_ranges": [
+                            {
+                              "end": 577,
+                              "start": 572
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1754,
+                              "start": 1749
+                            }
+                          ],
+                          "text": " User",
+                          "token_index": 121
+                        }
+                      ],
+                      "id": 33943
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.1563752293586731,
+                      "description": "metadata indicating authorship and timestamps in online forum or blog posts",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 5.396307468414307,
+                          "prose_ranges": [
+                            {
+                              "end": 844,
+                              "start": 839
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2023,
+                              "start": 2018
+                            }
+                          ],
+                          "text": "Kerry",
+                          "token_index": 180
+                        }
+                      ],
+                      "id": 14073
+                    },
+                    {
+                      "active_tokens": 3,
+                      "contribution": 0.0931786522269249,
+                      "description": "instructions on how to perform or accomplish specific tasks or processes",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 11.12765121459961,
+                          "prose_ranges": [
+                            {
+                              "end": 45,
+                              "start": 42
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1215,
+                              "start": 1212
+                            }
+                          ],
+                          "text": " up",
+                          "token_index": 9
+                        },
+                        {
+                          "activation": 11.008207321166992,
+                          "prose_ranges": [
+                            {
+                              "end": 48,
+                              "start": 45
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1218,
+                              "start": 1215
+                            }
+                          ],
+                          "text": " an",
+                          "token_index": 10
+                        },
+                        {
+                          "activation": 9.87640380859375,
+                          "prose_ranges": [
+                            {
+                              "end": 42,
+                              "start": 34
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1212,
+                              "start": 1204
+                            }
+                          ],
+                          "text": " setting",
+                          "token_index": 8
+                        }
+                      ],
+                      "id": 49384
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": 0.08853666484355927,
+                      "description": "activates on the word also and phrases containing it",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 9.516845703125,
+                          "prose_ranges": [
+                            {
+                              "end": 434,
+                              "start": 426
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1608,
+                              "start": 1600
+                            }
+                          ],
+                          "text": " created",
+                          "token_index": 89
+                        },
+                        {
+                          "activation": 6.816090106964111,
+                          "prose_ranges": [
+                            {
+                              "end": 426,
+                              "start": 418
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1600,
+                              "start": 1592
+                            }
+                          ],
+                          "text": " already",
+                          "token_index": 88
+                        }
+                      ],
+                      "id": 47226
+                    },
+                    {
+                      "active_tokens": 1,
+                      "contribution": 0.07124626636505127,
+                      "description": "cooking and instructional serving or assembly directions",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.521259069442749,
+                          "prose_ranges": [
+                            {
+                              "end": 642,
+                              "start": 634
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1819,
+                              "start": 1811
+                            }
+                          ],
+                          "text": "Identity",
+                          "token_index": 136
+                        }
+                      ],
+                      "id": 18874
+                    },
+                    {
+                      "active_tokens": 3,
+                      "contribution": -0.1226312890648842,
+                      "description": "tokenized components of medical or diagnostic phrasing and lists",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 3.814709186553955,
+                          "prose_ranges": [
+                            {
+                              "end": 132,
+                              "start": 126
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1302,
+                              "start": 1296
+                            }
+                          ],
+                          "text": " users",
+                          "token_index": 26
+                        },
+                        {
+                          "activation": 3.7144274711608887,
+                          "prose_ranges": [
+                            {
+                              "end": 839,
+                              "start": 837
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 2018,
+                              "start": 2016
+                            }
+                          ],
+                          "text": " -",
+                          "token_index": 179
+                        },
+                        {
+                          "activation": 2.228315830230713,
+                          "prose_ranges": [
+                            {
+                              "end": 180,
+                              "start": 179
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1350,
+                              "start": 1349
+                            }
+                          ],
+                          "text": ".",
+                          "token_index": 35
+                        }
+                      ],
+                      "id": 13528
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.11646249145269394,
+                      "description": "opening double quotation marks following a closing single quote and comma",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 10.588919639587402,
+                          "prose_ranges": [
+                            {
+                              "end": 365,
+                              "start": 363
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1538,
+                              "start": 1536
+                            }
+                          ],
+                          "text": " {",
+                          "token_index": 73
+                        },
+                        {
+                          "activation": 8.783625602722168,
+                          "prose_ranges": [
+                            {
+                              "end": 572,
+                              "start": 570
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1749,
+                              "start": 1747
+                            }
+                          ],
+                          "text": " {",
+                          "token_index": 120
+                        }
+                      ],
+                      "id": 48316
+                    },
+                    {
+                      "active_tokens": 2,
+                      "contribution": -0.1065378338098526,
+                      "description": "technical documentation related to computing hardware software and data processing systems",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 12.71601104736328,
+                          "prose_ranges": [
+                            {
+                              "end": 762,
+                              "start": 754
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1940,
+                              "start": 1932
+                            }
+                          ],
+                          "text": " members",
+                          "token_index": 160
+                        },
+                        {
+                          "activation": 8.949661254882812,
+                          "prose_ranges": [
+                            {
+                              "end": 725,
+                              "start": 716
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1903,
+                              "start": 1894
+                            }
+                          ],
+                          "text": " warnings",
+                          "token_index": 154
+                        }
+                      ],
+                      "id": 57796
+                    },
+                    {
+                      "active_tokens": 15,
+                      "contribution": -0.08209951967000961,
+                      "description": "accounting and bookkeeping ledger entries involving debit credit and bank account transactions",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 22.914133071899418,
+                          "prose_ranges": [
+                            {
+                              "end": 203,
+                              "start": 194
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1373,
+                              "start": 1364
+                            }
+                          ],
+                          "text": " manually",
+                          "token_index": 39
+                        },
+                        {
+                          "activation": 15.710886001586914,
+                          "prose_ranges": [
+                            {
+                              "end": 167,
+                              "start": 159
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1337,
+                              "start": 1329
+                            }
+                          ],
+                          "text": " created",
+                          "token_index": 32
+                        },
+                        {
+                          "activation": 12.52553939819336,
+                          "prose_ranges": [
+                            {
+                              "end": 792,
+                              "start": 789
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1970,
+                              "start": 1967
+                            }
+                          ],
+                          "text": " no",
+                          "token_index": 168
+                        },
+                        {
+                          "activation": 11.726459503173828,
+                          "prose_ranges": [
+                            {
+                              "end": 684,
+                              "start": 679
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1862,
+                              "start": 1857
+                            }
+                          ],
+                          "text": " last",
+                          "token_index": 147
+                        },
+                        {
+                          "activation": 11.652517318725586,
+                          "prose_ranges": [
+                            {
+                              "end": 692,
+                              "start": 684
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1870,
+                              "start": 1862
+                            }
+                          ],
+                          "text": " command",
+                          "token_index": 148
+                        }
+                      ],
+                      "id": 60396
+                    },
+                    {
+                      "active_tokens": 26,
+                      "contribution": -0.06971810758113861,
+                      "description": "first person past tense narrative reflecting on a completed interaction or decision",
+                      "highlight_limit": 5,
+                      "highlights": [
+                        {
+                          "activation": 9.179338455200195,
+                          "prose_ranges": [
+                            {
+                              "end": 675,
+                              "start": 672
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1853,
+                              "start": 1850
+                            }
+                          ],
+                          "text": " on",
+                          "token_index": 145
+                        },
+                        {
+                          "activation": 8.360907554626465,
+                          "prose_ranges": [
+                            {
+                              "end": 711,
+                              "start": 706
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1889,
+                              "start": 1884
+                            }
+                          ],
+                          "text": " were",
+                          "token_index": 152
+                        },
+                        {
+                          "activation": 7.779023170471191,
+                          "prose_ranges": [
+                            {
+                              "end": 706,
+                              "start": 701
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1884,
+                              "start": 1879
+                            }
+                          ],
+                          "text": " they",
+                          "token_index": 151
+                        },
+                        {
+                          "activation": 7.572856903076172,
+                          "prose_ranges": [
+                            {
+                              "end": 672,
+                              "start": 665
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1850,
+                              "start": 1843
+                            }
+                          ],
+                          "text": " errors",
+                          "token_index": 144
+                        },
+                        {
+                          "activation": 7.409856796264648,
+                          "prose_ranges": [
+                            {
+                              "end": 701,
+                              "start": 693
+                            }
+                          ],
+                          "source_ranges": [
+                            {
+                              "end": 1879,
+                              "start": 1871
+                            }
+                          ],
+                          "text": " however",
+                          "token_index": 150
+                        }
+                      ],
+                      "id": 19102
+                    }
+                  ]
+                },
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 844,
+                  "start": 0
+                },
+                "raw_output": 0.49318134784698486,
+                "source_ranges": [
+                  {
+                    "end": 1489,
+                    "start": 1170
+                  },
+                  {
+                    "end": 1585,
+                    "start": 1493
+                  },
+                  {
+                    "end": 1691,
+                    "start": 1587
+                  },
+                  {
+                    "end": 1831,
+                    "start": 1695
+                  },
+                  {
+                    "end": 1986,
+                    "start": 1833
+                  },
+                  {
+                    "end": 2023,
+                    "start": 1988
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 8,
+                  "start": 0
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1489,
+        "start": 1170
+      }
+    ],
+    [
+      {
+        "end": 1585,
+        "start": 1493
+      }
+    ],
+    [
+      {
+        "end": 1691,
+        "start": 1587
+      }
+    ],
+    [
+      {
+        "end": 1831,
+        "start": 1695
+      }
+    ],
+    [
+      {
+        "end": 1986,
+        "start": 1833
+      }
+    ],
+    [
+      {
+        "end": 2023,
+        "start": 1988
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 0,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group.md",
+  "prose_words": 134,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1255,
+        "start": 1170
+      }
+    ],
+    [
+      {
+        "end": 1350,
+        "start": 1255
+      }
+    ],
+    [
+      {
+        "end": 1489,
+        "start": 1350
+      }
+    ],
+    [
+      {
+        "end": 1585,
+        "start": 1493
+      }
+    ],
+    [
+      {
+        "end": 1691,
+        "start": 1587
+      }
+    ],
+    [
+      {
+        "end": 1831,
+        "start": 1695
+      }
+    ],
+    [
+      {
+        "end": 1986,
+        "start": 1833
+      }
+    ],
+    [
+      {
+        "end": 2023,
+        "start": 1988
+      }
+    ]
+  ],
+  "sentence_count": 8,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

@@ -104,6 +104,35 @@ impl DetectorBackend for EncoderBackend {
         Availability::Ready
     }
 
+    fn score_full(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
+        let opening = self.score(doc, deadline);
+        let ScoreOutcome::Scored(score) = opening else {
+            return opening;
+        };
+        let session = match self.session.get(self.manifest, &self.root) {
+            Ok(session) => session,
+            Err(error) => return super::full::planning_failure(score, doc, error),
+        };
+        let (text, mapping) = if self.manifest.id == "conpara" {
+            super::normalize_input_with_map(&doc.prose)
+        } else {
+            (doc.prose.clone(), super::full::identity_map(&doc.prose))
+        };
+        let windows = match super::full::plan(
+            doc,
+            &session.tokenizer,
+            &text,
+            &mapping,
+            session.max_tokens,
+            deadline,
+        ) {
+            Ok(windows) => windows,
+            Err(error) => return super::full::planning_failure(score, doc, error),
+        };
+        let run = super::windows::run_windows(&windows, deadline, |ids| session.infer(ids));
+        super::full::finish(score, doc, &mapping, &windows, run, vec![])
+    }
+
     fn score(&self, doc: &Document, deadline: Deadline) -> ScoreOutcome {
         if !doc.english_supported() {
             let unknown = doc.language.applicability == "unknown";
@@ -222,6 +251,12 @@ impl DetectorBackend for EncoderBackend {
             execution_coverage: excerpt.coverage,
             excerpt_coverage: excerpt.coverage,
             elapsed_ms: started.elapsed().as_secs_f64() * 1000.0,
+            packing_policy: None,
+            aggregation_policy: None,
+            windows: vec![],
+            full_coverage_output: None,
+            token_coverage: None,
+            coverage_gaps: vec![],
             detectorscope: None,
         };
         let mut score: Score = model_score(&self.manifest.id);

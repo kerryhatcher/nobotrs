@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.078751,
+  "file": "2025-04-02-museum-of-aviation-25.md",
+  "input_sha256": "8b598437806c5969b6bf45a6cf4945eb53c0bd91ede6a45a8e79bd4cc180628d",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-02-museum-of-aviation-25/backend.json",
+  "reused_source_sha256": "2e8d207ab62aaf3a856d6e6c69738c2aabfe5902cc2e0204e04bc9d84df007e7",
+  "status": "scored_full"
+}

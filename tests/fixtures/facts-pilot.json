@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Developer-annotated pilot: 12 fact-check cases covering conflicts, compatibility, missing and ambiguous scenarios. Each entry has expected status and the author's honest notes on actual CLI output.",
+  "pilot_date": "2026-11-21",
+  "cases": [
+    {
+      "id": "c01",
+      "type": "conflict",
+      "scenario": "Same FY, same currency, different amounts",
+      "text": "Parks FY27: $8 million\nParks FY27: $4 million",
+      "markdown": false,
+      "expected": "conflict",
+      "observed": "conflict",
+      "exit_code": 1,
+      "notes": "Straightforward. Groups under 'parks fy27' with unit=$. Normalized values 8e6 vs 4e6 produce conflict status. Exit 1."
+    },
+    {
+      "id": "c02",
+      "type": "conflict",
+      "scenario": "Table with same agency and year heading, different figures",
+      "text": "| Agency | FY27 budget |\n|---|---|\n| Parks | $4 million |\n| Parks | $8 million |",
+      "markdown": true,
+      "expected": "conflict",
+      "observed": "conflict",
+      "exit_code": 1,
+      "notes": "Table coordinates retained correctly. Label is 'parks fy27 budget'. Row 3 has $4M, row 4 has $8M. Conflict detected."
+    },
+    {
+      "id": "c03",
+      "type": "conflict",
+      "scenario": "Decimal vs integer representation of same value",
+      "text": "FY26 total: $7.2 million\nFY26 total: $7,200,000",
+      "markdown": false,
+      "expected": "compatible",
+      "observed": "compatible",
+      "exit_code": 0,
+      "notes": "Decimal 72e5 normalised identically to comma-grouped integer 72e5. Correctly compatible. No false positive."
+    },
+    {
+      "id": "c04",
+      "type": "compatible",
+      "scenario": "Exact repetition (same text twice)",
+      "text": "FY27: £8 million\nFY27: £8 million",
+      "markdown": false,
+      "expected": "compatible",
+      "observed": "compatible",
+      "exit_code": 0,
+      "notes": "Trivially compatible identical mentions. £ unit handled correctly."
+    },
+    {
+      "id": "c05",
+      "type": "compatible",
+      "scenario": "Same amount, different syntactic forms (comma grouping)",
+      "text": "FY27: $8 million\nFY27: $8,000,000",
+      "markdown": false,
+      "expected": "compatible",
+      "observed": "compatible",
+      "exit_code": 0,
+      "notes": "Comma grouping stripped. Both normalise to 8e6. Compatible."
+    },
+    {
+      "id": "c06",
+      "type": "compatible",
+      "scenario": "Percentage from two sources agreeing",
+      "text": "Approval rate: 62.5%\nApproval rate: 62.5%",
+      "markdown": false,
+      "expected": "compatible",
+      "observed": "compatible",
+      "exit_code": 0,
+      "notes": "Percentage unit (%) handled. Identical normalised values are compatible."
+    },
+    {
+      "id": "c07",
+      "type": "compatible",
+      "scenario": "Different attribute words ('shortfall' vs 'deficit'), same FY and value",
+      "text": "FY27 shortfall: $8 million\nFY27 deficit: $8 million",
+      "markdown": false,
+      "expected": "compatible",
+      "observed": "unresolved (2 groups)",
+      "exit_code": 3,
+      "notes": "Labels are 'fy27 shortfall' and 'fy27 deficit' — two separate groups, both unresolved. The anchor 'FY27' does not merge across different attribute words. Conservative but misses a compatibility relationship a human would see."
+    },
+    {
+      "id": "c08",
+      "type": "missing",
+      "scenario": "Single claim — nothing to compare",
+      "text": "Reserve fund: $3.2 billion",
+      "markdown": false,
+      "expected": "unresolved",
+      "observed": "unresolved",
+      "exit_code": 3,
+      "notes": "Single mention, one group, status unresolved. Correctly refuses to judge."
+    },
+    {
+      "id": "c09",
+      "type": "ambiguous",
+      "scenario": "Same label, different currencies ($ vs £), same magnitude",
+      "text": "FY27 grant: $8 million\nFY27 grant: £8 million",
+      "markdown": false,
+      "expected": "ambiguous",
+      "observed": "unresolved (2 groups, different units)",
+      "exit_code": 3,
+      "notes": "Two groups both labelled 'fy27 grant' — one unit=$, one unit=£. Each has one mention, both unresolved. The tool partitions by unit so they are never compared. No unit-mismatch warning is emitted. A human reviewer would need to notice the split groups."
+    },
+    {
+      "id": "c10",
+      "type": "ambiguous",
+      "scenario": "Approximate qualifier (~) — assumed blocked, actually handled",
+      "text": "Estimate: ~$8 million\nEstimate: ~$8 million",
+      "markdown": false,
+      "expected": "ambiguous (author assumption: ~ blocks extraction)",
+      "observed": "compatible",
+      "exit_code": 0,
+      "notes": "SURPRISE: The tilde does NOT block extraction. The checker parses '~$8 million' with unit 'approximate $' and normalised value '8e6'. Two identical approximate values are compatible. This is better than the author expected. Risk: exact $8M and ~$8M form different units and are never compared."
+    },
+    {
+      "id": "c11",
+      "type": "missing",
+      "scenario": "Same label, percentage vs raw count — different semantics",
+      "text": "Support: 50%\nSupport: 50",
+      "markdown": false,
+      "expected": "unresolved",
+      "observed": "unresolved (2 groups)",
+      "exit_code": 3,
+      "notes": "Two groups both labelled 'support'. One unit=%, one unit=count. Both unresolved. Tool partitions by unit so they are never compared. A human would ask: is 50 an absolute count or a percentage?"
+    },
+    {
+      "id": "c12",
+      "type": "missing",
+      "scenario": "Two programmes, same FY and same dollar amount, different names",
+      "text": "FY27 food aid: $5 million\nFY27 fuel aid: $5 million",
+      "markdown": false,
+      "expected": "unresolved",
+      "observed": "unresolved (2 groups)",
+      "exit_code": 3,
+      "notes": "Labels 'fy27 food aid' and 'fy27 fuel aid' are separate groups. Both contain one mention, both unresolved. Same $5 million value but tool cannot confirm they refer to different programmes. At two lines this works; on one line with '. ' separator the tool extracts 0 facts."
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-06-03-taking-control-of-your-email-part-1-choosing-a-private-email-provider.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 3484,
+  "leverage_counts": {
+    "2": 1,
+    "4": 3,
+    "5": 2
+  },
+  "findings": [
+    {
+      "rule_id": "structure.rule-of-three",
+      "guidance_id": "structure.rule-of-three",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 37,
+        "column": 102,
+        "end_line": 37,
+        "end_column": 228,
+        "source_ranges": [
+          {
+            "start": 3993,
+            "end": 4121
+          }
+        ]
+      },
+      "matched_text": "A strong password, reliable spam filtering, and assurance that your inbox isn’t being sold to advertisers might be sufficient.",
+      "sentence": "A strong password, reliable spam filtering, and assurance that your inbox isn’t being sold to advertisers might be sufficient.",
+      "context": null,
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "message": null,
+      "why": "General qualities can leave the reader without a concrete property.",
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories."
+    },
+    {
+      "rule_id": "structure.title-case-headings",
+      "guidance_id": "structure.title-case-headings",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 25,
+        "column": 19,
+        "end_line": 25,
+        "end_column": 49,
+        "source_ranges": [
+          {
+            "start": 2528,
+            "end": 2560
+          }
+        ]
+      },
+      "matched_text": "Security – Know the Difference",
+      "sentence": "Security – Know the Difference",
+      "context": null,
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "message": null,
+      "why": "Heading capitalization may distract if it conflicts with the venue style.",
+      "fix": "Use the required or established heading style consistently.",
+      "keep_when": "Keep title case when the publication or naming convention requires it."
+    },
+    {
+      "rule_id": "structure.bold-inline-headers",
+      "guidance_id": "structure.bold-inline-headers",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 49,
+        "column": 5,
+        "end_line": 49,
+        "end_column": 94,
+        "source_ranges": [
+          {
+            "start": 5635,
+            "end": 5649
+          },
+          {
+            "start": 5651,
+            "end": 5724
+          }
+        ]
+      },
+      "matched_text": "United States: Providers like Gmail (Google) or Outlook.com (Microsoft) fall under U.S.",
+      "sentence": "United States: Providers like Gmail (Google) or Outlook.com (Microsoft) fall under U.S.",
+      "context": null,
+      "suggestion": "Use actual headings when they aid navigation; keep compact labels in forms and reference lists.",
+      "message": null,
+      "why": "Repeated bold labels may make navigation harder than real headings.",
+      "fix": "Consider semantic headings where readers need navigation.",
+      "keep_when": "Keep compact labels in forms, reference lists and venue-required layouts."
+    },
+    {
+      "rule_id": "structure.list-heavy",
+      "guidance_id": "structure.list-heavy",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 49,
+        "column": 5,
+        "end_line": 49,
+        "end_column": 94,
+        "source_ranges": [
+          {
+            "start": 5635,
+            "end": 5649
+          },
+          {
+            "start": 5651,
+            "end": 5724
+          }
+        ]
+      },
+      "matched_text": "United States: Providers like Gmail (Google) or Outlook.com (Microsoft) fall under U.S.",
+      "sentence": "United States: Providers like Gmail (Google) or Outlook.com (Microsoft) fall under U.S.",
+      "context": null,
+      "suggestion": "Check whether connected prose would clarify relationships; retain procedures and factual lists.",
+      "message": null,
+      "why": "Many full-sentence list items may hide how the claims connect.",
+      "fix": "Use prose when relationships matter more than parallel scanning.",
+      "keep_when": "Keep procedures, factual lists and accessible reference material."
+    },
+    {
+      "rule_id": "robust",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 27,
+        "column": 559,
+        "end_line": 27,
+        "end_column": 565,
+        "source_ranges": [
+          {
+            "start": 3128,
+            "end": 3134
+          }
+        ]
+      },
+      "matched_text": "robust",
+      "sentence": "Gmail, for instance, has robust security measures yet historically scanned emails for ad targeting; in contrast, a privacy-focused provider might promise not to read your emails at all.",
+      "context": null,
+      "suggestion": "strong",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    },
+    {
+      "rule_id": "emphasize",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 84,
+        "column": 1106,
+        "end_line": 84,
+        "end_column": 1116,
+        "source_ranges": [
+          {
+            "start": 17340,
+            "end": 17350
+          }
+        ]
+      },
+      "matched_text": "emphasizes",
+      "sentence": "Fastmail, in Australia, emphasizes user privacy in a more traditional (non-E2EE) way: they don’t mine your emails, and their Privacy Principles highlight that you own your data.",
+      "context": null,
+      "suggestion": "stress",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "fail",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "fail",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 6,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

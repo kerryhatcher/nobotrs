@@ -1,0 +1,51 @@
+{
+  "active_available_floor_mib": 4096,
+  "argv": [
+    "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/target/release/examples/owner_model_sweep",
+    "--model",
+    "desklib",
+    "--models-dir",
+    "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "--out",
+    "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib",
+    "--resume-from",
+    "evaluation/baselines/owner-posts-v1-models-full",
+    "--timeout-ms",
+    "1200000",
+    "--minimum-available-mib",
+    "4096"
+  ],
+  "current_workload": {
+    "load1": 12.2685546875,
+    "load_limit": 32,
+    "memory_full_avg10": 2.59,
+    "memory_full_avg60": 0.87
+  },
+  "device": "cpu",
+  "elapsed_seconds": 160.28362934099277,
+  "exit_code": -15,
+  "minimum_available_mib": 2817,
+  "model": "desklib",
+  "model_concurrency": 1,
+  "peak_group_rss_kib": 2210836,
+  "precision": "float32",
+  "preflight": {
+    "available_mib": 12323,
+    "load1": 10.85498046875,
+    "load_limit": 32,
+    "memory_full_avg10": 0.0,
+    "memory_full_avg60": 0.29,
+    "swap_free_mib": 6
+  },
+  "process_high_water_kib": {
+    "2279214": 3505420
+  },
+  "required_start_mib": 8192,
+  "root_pid": 2279214,
+  "start_available_mib": 12323,
+  "start_swap_free_mib": 6,
+  "status": "terminated_memory_pressure",
+  "stop_signal": null,
+  "threads": 2,
+  "timeout_ms": 1200000
+}

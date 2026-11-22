@@ -1,0 +1,18 @@
+{
+  "schema_version": "owner-model-diagnostics-status-v1",
+  "status": "measurements_finished_review_required",
+  "measurement_finished": true,
+  "coverage_summary": "evaluation/reports/owner-model-coverage.json",
+  "owner_auroc": {
+    "status": "computed",
+    "report": "evaluation/reports/owner-model-diagnostics.json"
+  },
+  "feature_survey": {
+    "status": "computed",
+    "report": "evaluation/reports/detectorscope-feature-survey.json",
+    "human_reviewed": false
+  },
+  "editorial_utility_validated": false,
+  "automatic_model_retry_active": false,
+  "next_action": "Review the completed diagnostics. Editorial utility requires blinded evaluation."
+}

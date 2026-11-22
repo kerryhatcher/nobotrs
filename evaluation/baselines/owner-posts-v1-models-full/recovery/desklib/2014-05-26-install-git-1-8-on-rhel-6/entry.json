@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.03567,
+  "file": "2014-05-26-install-git-1-8-on-rhel-6.md",
+  "input_sha256": "8954d522493f5826ab370ffd44e0f1daa79e397d861eb4e5ca3df97265cfbbfc",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2014-05-26-install-git-1-8-on-rhel-6/backend.json",
+  "reused_source_sha256": "32a68fea81d784994735275d06fea3655c3a66482a9fe8d175bcfe538ca65b25",
+  "status": "scored_full"
+}

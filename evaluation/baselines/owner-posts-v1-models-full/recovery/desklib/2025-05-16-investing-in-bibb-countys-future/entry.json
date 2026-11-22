@@ -1,0 +1,10 @@
+{
+  "attempt": 1,
+  "confidence": "high",
+  "elapsed_ms": 51270.680638000005,
+  "file": "2025-05-16-investing-in-bibb-countys-future.md",
+  "input_sha256": "bbcb208f6f66fd900057be4bb28a33acd009ef09f009cf42ba7648366e97b06d",
+  "label": "ai_drafted",
+  "report_source": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-16-investing-in-bibb-countys-future/report-attempt-1.json",
+  "status": "scored_full"
+}

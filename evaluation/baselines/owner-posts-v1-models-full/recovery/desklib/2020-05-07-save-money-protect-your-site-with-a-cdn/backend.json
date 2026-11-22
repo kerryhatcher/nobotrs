@@ -1,0 +1,565 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": -1.6084280014038086
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 12968.396497,
+        "excerpt_bytes": 2418,
+        "excerpt_coverage": 0.2349689011748445,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.2349689011748445,
+        "full_coverage_output": -3.3682824971585803,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.2349689011748445,
+        "precision": "float32",
+        "prepared_bytes": 10195,
+        "prepared_words": 1800,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": -1.6084280014038086,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 123,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": true,
+            "prose": {
+              "end": 596,
+              "start": 0
+            },
+            "raw_output": -2.2191174030303955,
+            "source_ranges": [
+              {
+                "end": 1495,
+                "start": 1090
+              },
+              {
+                "end": 1677,
+                "start": 1497
+              },
+              {
+                "end": 1692,
+                "start": 1683
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 6,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 156,
+            "heading": "Corporate relationships disclaimer:",
+            "index": 1,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1298,
+              "start": 596
+            },
+            "raw_output": 0.09877722710371016,
+            "source_ranges": [
+              {
+                "end": 1718,
+                "start": 1692
+              },
+              {
+                "end": 1728,
+                "start": 1722
+              },
+              {
+                "end": 1947,
+                "start": 1730
+              },
+              {
+                "end": 1954,
+                "start": 1951
+              },
+              {
+                "end": 2173,
+                "start": 1956
+              },
+              {
+                "end": 2187,
+                "start": 2177
+              },
+              {
+                "end": 2401,
+                "start": 2189
+              },
+              {
+                "end": 2418,
+                "start": 2411
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 17,
+              "start": 6
+            }
+          },
+          {
+            "body_tokens": 102,
+            "heading": "Content Delivery Network",
+            "index": 2,
+            "insufficient_context": true,
+            "prose": {
+              "end": 1807,
+              "start": 1298
+            },
+            "raw_output": -1.8223109245300293,
+            "source_ranges": [
+              {
+                "end": 2435,
+                "start": 2418
+              },
+              {
+                "end": 2481,
+                "start": 2442
+              },
+              {
+                "end": 2485,
+                "start": 2482
+              },
+              {
+                "end": 3007,
+                "start": 2563
+              },
+              {
+                "end": 3018,
+                "start": 3014
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 22,
+              "start": 17
+            }
+          },
+          {
+            "body_tokens": 127,
+            "heading": "What’s a “Network Hop” you say?",
+            "index": 3,
+            "insufficient_context": true,
+            "prose": {
+              "end": 2413,
+              "start": 1807
+            },
+            "raw_output": -2.8737642765045166,
+            "source_ranges": [
+              {
+                "end": 3051,
+                "start": 3018
+              },
+              {
+                "end": 3620,
+                "start": 3053
+              },
+              {
+                "end": 3830,
+                "start": 3826
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 27,
+              "start": 22
+            }
+          },
+          {
+            "body_tokens": 360,
+            "heading": "Cool, but how do I get my content into a CDN?",
+            "index": 4,
+            "insufficient_context": false,
+            "prose": {
+              "end": 4055,
+              "start": 2413
+            },
+            "raw_output": -2.362340927124023,
+            "source_ranges": [
+              {
+                "end": 3871,
+                "start": 3830
+              },
+              {
+                "end": 3913,
+                "start": 3873
+              },
+              {
+                "end": 3938,
+                "start": 3914
+              },
+              {
+                "end": 4277,
+                "start": 4014
+              },
+              {
+                "end": 4286,
+                "start": 4278
+              },
+              {
+                "end": 4396,
+                "start": 4361
+              },
+              {
+                "end": 4419,
+                "start": 4397
+              },
+              {
+                "end": 4536,
+                "start": 4511
+              },
+              {
+                "end": 4619,
+                "start": 4538
+              },
+              {
+                "end": 5064,
+                "start": 4621
+              },
+              {
+                "end": 5483,
+                "start": 5066
+              },
+              {
+                "end": 5720,
+                "start": 5485
+              },
+              {
+                "end": 5729,
+                "start": 5727
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 42,
+              "start": 27
+            }
+          },
+          {
+            "body_tokens": 402,
+            "heading": "So what happens when my files change?",
+            "index": 5,
+            "insufficient_context": false,
+            "prose": {
+              "end": 6057,
+              "start": 4055
+            },
+            "raw_output": -7.278419017791748,
+            "source_ranges": [
+              {
+                "end": 5764,
+                "start": 5729
+              },
+              {
+                "end": 6055,
+                "start": 5766
+              },
+              {
+                "end": 6075,
+                "start": 6056
+              },
+              {
+                "end": 6185,
+                "start": 6138
+              },
+              {
+                "end": 6709,
+                "start": 6187
+              },
+              {
+                "end": 6915,
+                "start": 6711
+              },
+              {
+                "end": 6935,
+                "start": 6925
+              },
+              {
+                "end": 7237,
+                "start": 6955
+              },
+              {
+                "end": 7560,
+                "start": 7239
+              },
+              {
+                "end": 7578,
+                "start": 7564
+              },
+              {
+                "end": 7827,
+                "start": 7580
+              },
+              {
+                "end": 7838,
+                "start": 7834
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 62,
+              "start": 42
+            }
+          },
+          {
+            "body_tokens": 190,
+            "heading": "Does this mean that if my webserver goes offline my website stays online?",
+            "index": 6,
+            "insufficient_context": false,
+            "prose": {
+              "end": 6977,
+              "start": 6057
+            },
+            "raw_output": -4.324402332305908,
+            "source_ranges": [
+              {
+                "end": 7907,
+                "start": 7838
+              },
+              {
+                "end": 8054,
+                "start": 7909
+              },
+              {
+                "end": 8065,
+                "start": 8055
+              },
+              {
+                "end": 8308,
+                "start": 8186
+              },
+              {
+                "end": 8874,
+                "start": 8310
+              },
+              {
+                "end": 8891,
+                "start": 8884
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 72,
+              "start": 62
+            }
+          },
+          {
+            "body_tokens": 1,
+            "heading": "Reviews",
+            "index": 7,
+            "insufficient_context": true,
+            "prose": {
+              "end": 6984,
+              "start": 6977
+            },
+            "raw_output": -0.1124475970864296,
+            "source_ranges": [
+              {
+                "end": 9019,
+                "start": 9013
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 73,
+              "start": 72
+            }
+          },
+          {
+            "body_tokens": 128,
+            "heading": "Amazon Web Services’ CloudFront",
+            "index": 8,
+            "insufficient_context": false,
+            "prose": {
+              "end": 7617,
+              "start": 6984
+            },
+            "raw_output": 1.7527945041656494,
+            "source_ranges": [
+              {
+                "end": 9046,
+                "start": 9019
+              },
+              {
+                "end": 9322,
+                "start": 9048
+              },
+              {
+                "end": 9524,
+                "start": 9324
+              },
+              {
+                "end": 9560,
+                "start": 9527
+              },
+              {
+                "end": 9717,
+                "start": 9629
+              },
+              {
+                "end": 9837,
+                "start": 9831
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 82,
+              "start": 73
+            }
+          },
+          {
+            "body_tokens": 230,
+            "heading": "Akamai",
+            "index": 9,
+            "insufficient_context": false,
+            "prose": {
+              "end": 8751,
+              "start": 7617
+            },
+            "raw_output": -5.242144584655762,
+            "source_ranges": [
+              {
+                "end": 10191,
+                "start": 9839
+              },
+              {
+                "end": 10421,
+                "start": 10193
+              },
+              {
+                "end": 10674,
+                "start": 10423
+              },
+              {
+                "end": 10679,
+                "start": 10675
+              },
+              {
+                "end": 10818,
+                "start": 10766
+              },
+              {
+                "end": 10926,
+                "start": 10820
+              },
+              {
+                "end": 10984,
+                "start": 10928
+              },
+              {
+                "end": 11056,
+                "start": 10988
+              },
+              {
+                "end": 11179,
+                "start": 11169
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 97,
+              "start": 82
+            }
+          },
+          {
+            "body_tokens": 292,
+            "heading": "CloudFlare",
+            "index": 10,
+            "insufficient_context": false,
+            "prose": {
+              "end": 10195,
+              "start": 8751
+            },
+            "raw_output": -2.4746806621551514,
+            "source_ranges": [
+              {
+                "end": 11243,
+                "start": 11181
+              },
+              {
+                "end": 11261,
+                "start": 11244
+              },
+              {
+                "end": 11640,
+                "start": 11337
+              },
+              {
+                "end": 11882,
+                "start": 11642
+              },
+              {
+                "end": 12126,
+                "start": 11884
+              },
+              {
+                "end": 12139,
+                "start": 12127
+              },
+              {
+                "end": 12191,
+                "start": 12187
+              },
+              {
+                "end": 12195,
+                "start": 12192
+              },
+              {
+                "end": 12327,
+                "start": 12262
+              },
+              {
+                "end": 12746,
+                "start": 12329
+              },
+              {
+                "end": 12822,
+                "start": 12749
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 113,
+              "start": 97
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

@@ -1,0 +1,1618 @@
+{
+  "actionable_finding_count": 10,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [
+            {
+              "block_context": 1,
+              "column": 94,
+              "disposition": "selected",
+              "end_column": 95,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 111,
+                "start": 108
+              },
+              "raw_offset": {
+                "end": 1305,
+                "start": 1302
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 1,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1305,
+                  "start": 1302
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 1,
+              "column": 111,
+              "disposition": "selected",
+              "end_column": 112,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 130,
+                "start": 127
+              },
+              "raw_offset": {
+                "end": 1324,
+                "start": 1321
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 1,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1324,
+                  "start": 1321
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 1,
+              "column": 357,
+              "disposition": "selected",
+              "end_column": 358,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 380,
+                "start": 377
+              },
+              "raw_offset": {
+                "end": 1578,
+                "start": 1575
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 4,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1578,
+                  "start": 1575
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 6,
+              "column": 99,
+              "disposition": "selected",
+              "end_column": 100,
+              "end_line": 26,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 26,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 820,
+                "start": 817
+              },
+              "raw_offset": {
+                "end": 2047,
+                "start": 2044
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 10,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2047,
+                  "start": 2044
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 9,
+              "column": 18,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 32,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 32,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1076,
+                "start": 1073
+              },
+              "raw_offset": {
+                "end": 2309,
+                "start": 2306
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2309,
+                  "start": 2306
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 11,
+              "column": 27,
+              "disposition": "selected",
+              "end_column": 28,
+              "end_line": 36,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 36,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1174,
+                "start": 1171
+              },
+              "raw_offset": {
+                "end": 2411,
+                "start": 2408
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 16,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2411,
+                  "start": 2408
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 14,
+              "column": 138,
+              "disposition": "selected",
+              "end_column": 139,
+              "end_line": 40,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 40,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1497,
+                "start": 1494
+              },
+              "raw_offset": {
+                "end": 2749,
+                "start": 2746
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 20,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2749,
+                  "start": 2746
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 21,
+              "column": 66,
+              "disposition": "selected",
+              "end_column": 67,
+              "end_line": 56,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 56,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 2237,
+                "start": 2234
+              },
+              "raw_offset": {
+                "end": 3531,
+                "start": 3528
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 27,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 3531,
+                  "start": 3528
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 34,
+              "column": 56,
+              "disposition": "selected",
+              "end_column": 57,
+              "end_line": 80,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 80,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 2944,
+                "start": 2941
+              },
+              "raw_offset": {
+                "end": 4304,
+                "start": 4301
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 37,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4304,
+                  "start": 4301
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 39,
+              "column": 26,
+              "disposition": "selected",
+              "end_column": 27,
+              "end_line": 90,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 90,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 3233,
+                "start": 3230
+              },
+              "raw_offset": {
+                "end": 4607,
+                "start": 4604
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 42,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4607,
+                  "start": 4604
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 1,
+              "column": 94,
+              "disposition": "selected",
+              "end_column": 95,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 111,
+                "start": 108
+              },
+              "raw_offset": {
+                "end": 1305,
+                "start": 1302
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 1,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1305,
+                  "start": 1302
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 1,
+              "column": 111,
+              "disposition": "selected",
+              "end_column": 112,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 130,
+                "start": 127
+              },
+              "raw_offset": {
+                "end": 1324,
+                "start": 1321
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 1,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1324,
+                  "start": 1321
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 1,
+              "column": 357,
+              "disposition": "selected",
+              "end_column": 358,
+              "end_line": 16,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 16,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 380,
+                "start": 377
+              },
+              "raw_offset": {
+                "end": 1578,
+                "start": 1575
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 4,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1578,
+                  "start": 1575
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 6,
+              "column": 99,
+              "disposition": "selected",
+              "end_column": 100,
+              "end_line": 26,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 26,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 820,
+                "start": 817
+              },
+              "raw_offset": {
+                "end": 2047,
+                "start": 2044
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 10,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2047,
+                  "start": 2044
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 9,
+              "column": 18,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 32,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 32,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1076,
+                "start": 1073
+              },
+              "raw_offset": {
+                "end": 2309,
+                "start": 2306
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2309,
+                  "start": 2306
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 11,
+              "column": 27,
+              "disposition": "selected",
+              "end_column": 28,
+              "end_line": 36,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 36,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1174,
+                "start": 1171
+              },
+              "raw_offset": {
+                "end": 2411,
+                "start": 2408
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 16,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2411,
+                  "start": 2408
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 14,
+              "column": 138,
+              "disposition": "selected",
+              "end_column": 139,
+              "end_line": 40,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 40,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 1497,
+                "start": 1494
+              },
+              "raw_offset": {
+                "end": 2749,
+                "start": 2746
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 20,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2749,
+                  "start": 2746
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 21,
+              "column": 66,
+              "disposition": "selected",
+              "end_column": 67,
+              "end_line": 56,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 56,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 2237,
+                "start": 2234
+              },
+              "raw_offset": {
+                "end": 3531,
+                "start": 3528
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 27,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 3531,
+                  "start": 3528
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 34,
+              "column": 56,
+              "disposition": "selected",
+              "end_column": 57,
+              "end_line": 80,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 80,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 2944,
+                "start": 2941
+              },
+              "raw_offset": {
+                "end": 4304,
+                "start": 4301
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 37,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4304,
+                  "start": 4301
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 39,
+              "column": 26,
+              "disposition": "selected",
+              "end_column": 27,
+              "end_line": 90,
+              "guidance_id": "punctuation.em-dash-connectors",
+              "leverage": 4,
+              "line": 90,
+              "matched_text": "—",
+              "prose_offset": {
+                "end": 3233,
+                "start": 3230
+              },
+              "raw_offset": {
+                "end": 4607,
+                "start": 4604
+              },
+              "rule_id": "punctuation.em-dash-density",
+              "sentence_context": 42,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 4607,
+                  "start": 4604
+                }
+              ],
+              "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+              "suppression": null
+            }
+          ],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 10.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 10.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 1.7699115044247788
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 565.0
+            }
+          },
+          "vote": "strong",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.5694743555113687
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 188.33333333333334
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 7.550805309734514
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6317100166021029
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.158551203692813
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1205,
+        "start": 1193
+      }
+    ],
+    [
+      {
+        "end": 1349,
+        "start": 1207
+      },
+      {
+        "end": 1364,
+        "start": 1351
+      },
+      {
+        "end": 1628,
+        "start": 1366
+      }
+    ],
+    [
+      {
+        "end": 1668,
+        "start": 1638
+      }
+    ],
+    [
+      {
+        "end": 1736,
+        "start": 1670
+      }
+    ],
+    [
+      {
+        "end": 1763,
+        "start": 1742
+      },
+      {
+        "end": 1850,
+        "start": 1765
+      }
+    ],
+    [
+      {
+        "end": 1875,
+        "start": 1855
+      },
+      {
+        "end": 1945,
+        "start": 1877
+      }
+    ],
+    [
+      {
+        "end": 1970,
+        "start": 1950
+      },
+      {
+        "end": 2091,
+        "start": 1972
+      }
+    ],
+    [
+      {
+        "end": 2097,
+        "start": 2093
+      }
+    ],
+    [
+      {
+        "end": 2287,
+        "start": 2099
+      }
+    ],
+    [
+      {
+        "end": 2329,
+        "start": 2292
+      }
+    ],
+    [
+      {
+        "end": 2380,
+        "start": 2331
+      }
+    ],
+    [
+      {
+        "end": 2443,
+        "start": 2384
+      },
+      {
+        "end": 2456,
+        "start": 2445
+      },
+      {
+        "end": 2459,
+        "start": 2458
+      }
+    ],
+    [
+      {
+        "end": 2523,
+        "start": 2462
+      }
+    ],
+    [
+      {
+        "end": 2603,
+        "start": 2526
+      }
+    ],
+    [
+      {
+        "end": 2621,
+        "start": 2605
+      },
+      {
+        "end": 2640,
+        "start": 2623
+      },
+      {
+        "end": 2729,
+        "start": 2642
+      },
+      {
+        "end": 2735,
+        "start": 2730
+      },
+      {
+        "end": 2785,
+        "start": 2736
+      }
+    ],
+    [
+      {
+        "end": 2834,
+        "start": 2790
+      }
+    ],
+    [
+      {
+        "end": 2888,
+        "start": 2836
+      }
+    ],
+    [
+      {
+        "end": 2919,
+        "start": 2895
+      },
+      {
+        "end": 2922,
+        "start": 2921
+      },
+      {
+        "end": 3032,
+        "start": 2925
+      }
+    ],
+    [
+      {
+        "end": 3069,
+        "start": 3038
+      },
+      {
+        "end": 3072,
+        "start": 3071
+      },
+      {
+        "end": 3183,
+        "start": 3075
+      }
+    ],
+    [
+      {
+        "end": 3215,
+        "start": 3189
+      },
+      {
+        "end": 3218,
+        "start": 3217
+      },
+      {
+        "end": 3340,
+        "start": 3221
+      }
+    ],
+    [
+      {
+        "end": 3363,
+        "start": 3344
+      },
+      {
+        "end": 3457,
+        "start": 3365
+      }
+    ],
+    [
+      {
+        "end": 3655,
+        "start": 3459
+      }
+    ],
+    [
+      {
+        "end": 3686,
+        "start": 3660
+      }
+    ],
+    [
+      {
+        "end": 3708,
+        "start": 3692
+      },
+      {
+        "end": 3764,
+        "start": 3710
+      }
+    ],
+    [
+      {
+        "end": 3784,
+        "start": 3769
+      },
+      {
+        "end": 3831,
+        "start": 3786
+      }
+    ],
+    [
+      {
+        "end": 3853,
+        "start": 3836
+      },
+      {
+        "end": 3910,
+        "start": 3855
+      }
+    ],
+    [
+      {
+        "end": 3925,
+        "start": 3915
+      }
+    ],
+    [
+      {
+        "end": 3931,
+        "start": 3927
+      }
+    ],
+    [
+      {
+        "end": 3955,
+        "start": 3937
+      },
+      {
+        "end": 3990,
+        "start": 3959
+      }
+    ],
+    [
+      {
+        "end": 3998,
+        "start": 3992
+      }
+    ],
+    [
+      {
+        "end": 4027,
+        "start": 4004
+      },
+      {
+        "end": 4070,
+        "start": 4031
+      }
+    ],
+    [
+      {
+        "end": 4076,
+        "start": 4072
+      }
+    ],
+    [
+      {
+        "end": 4109,
+        "start": 4082
+      },
+      {
+        "end": 4189,
+        "start": 4113
+      }
+    ],
+    [
+      {
+        "end": 4242,
+        "start": 4194
+      }
+    ],
+    [
+      {
+        "end": 4274,
+        "start": 4244
+      },
+      {
+        "end": 4299,
+        "start": 4276
+      },
+      {
+        "end": 4374,
+        "start": 4301
+      }
+    ],
+    [
+      {
+        "end": 4396,
+        "start": 4378
+      }
+    ],
+    [
+      {
+        "end": 4459,
+        "start": 4399
+      }
+    ],
+    [
+      {
+        "end": 4514,
+        "start": 4462
+      }
+    ],
+    [
+      {
+        "end": 4570,
+        "start": 4516
+      }
+    ],
+    [
+      {
+        "end": 4820,
+        "start": 4577
+      }
+    ],
+    [
+      {
+        "end": 4962,
+        "start": 4822
+      }
+    ],
+    [
+      {
+        "end": 4982,
+        "start": 4964
+      }
+    ],
+    [
+      {
+        "end": 4990,
+        "start": 4984
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 10,
+  "emitted_candidates": 10,
+  "emitted_findings": 10,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "strong"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+  "prose_words": 565,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1205,
+        "start": 1193
+      }
+    ],
+    [
+      {
+        "end": 1339,
+        "start": 1207
+      }
+    ],
+    [
+      {
+        "end": 1349,
+        "start": 1339
+      },
+      {
+        "end": 1364,
+        "start": 1351
+      },
+      {
+        "end": 1435,
+        "start": 1366
+      }
+    ],
+    [
+      {
+        "end": 1522,
+        "start": 1435
+      }
+    ],
+    [
+      {
+        "end": 1628,
+        "start": 1522
+      }
+    ],
+    [
+      {
+        "end": 1668,
+        "start": 1638
+      }
+    ],
+    [
+      {
+        "end": 1736,
+        "start": 1670
+      }
+    ],
+    [
+      {
+        "end": 1763,
+        "start": 1742
+      },
+      {
+        "end": 1850,
+        "start": 1765
+      }
+    ],
+    [
+      {
+        "end": 1875,
+        "start": 1855
+      },
+      {
+        "end": 1945,
+        "start": 1877
+      }
+    ],
+    [
+      {
+        "end": 1970,
+        "start": 1950
+      },
+      {
+        "end": 2010,
+        "start": 1972
+      }
+    ],
+    [
+      {
+        "end": 2091,
+        "start": 2010
+      }
+    ],
+    [
+      {
+        "end": 2148,
+        "start": 2099
+      }
+    ],
+    [
+      {
+        "end": 2225,
+        "start": 2148
+      }
+    ],
+    [
+      {
+        "end": 2287,
+        "start": 2225
+      }
+    ],
+    [
+      {
+        "end": 2329,
+        "start": 2292
+      }
+    ],
+    [
+      {
+        "end": 2380,
+        "start": 2331
+      }
+    ],
+    [
+      {
+        "end": 2443,
+        "start": 2384
+      },
+      {
+        "end": 2456,
+        "start": 2445
+      },
+      {
+        "end": 2459,
+        "start": 2458
+      }
+    ],
+    [
+      {
+        "end": 2523,
+        "start": 2462
+      }
+    ],
+    [
+      {
+        "end": 2603,
+        "start": 2526
+      }
+    ],
+    [
+      {
+        "end": 2621,
+        "start": 2605
+      },
+      {
+        "end": 2640,
+        "start": 2623
+      },
+      {
+        "end": 2695,
+        "start": 2642
+      }
+    ],
+    [
+      {
+        "end": 2729,
+        "start": 2695
+      },
+      {
+        "end": 2735,
+        "start": 2730
+      },
+      {
+        "end": 2785,
+        "start": 2736
+      }
+    ],
+    [
+      {
+        "end": 2834,
+        "start": 2790
+      }
+    ],
+    [
+      {
+        "end": 2888,
+        "start": 2836
+      }
+    ],
+    [
+      {
+        "end": 2919,
+        "start": 2895
+      },
+      {
+        "end": 2922,
+        "start": 2921
+      },
+      {
+        "end": 3032,
+        "start": 2925
+      }
+    ],
+    [
+      {
+        "end": 3069,
+        "start": 3038
+      },
+      {
+        "end": 3072,
+        "start": 3071
+      },
+      {
+        "end": 3183,
+        "start": 3075
+      }
+    ],
+    [
+      {
+        "end": 3215,
+        "start": 3189
+      },
+      {
+        "end": 3218,
+        "start": 3217
+      },
+      {
+        "end": 3340,
+        "start": 3221
+      }
+    ],
+    [
+      {
+        "end": 3363,
+        "start": 3344
+      },
+      {
+        "end": 3457,
+        "start": 3365
+      }
+    ],
+    [
+      {
+        "end": 3655,
+        "start": 3459
+      }
+    ],
+    [
+      {
+        "end": 3686,
+        "start": 3660
+      }
+    ],
+    [
+      {
+        "end": 3708,
+        "start": 3692
+      },
+      {
+        "end": 3764,
+        "start": 3710
+      }
+    ],
+    [
+      {
+        "end": 3784,
+        "start": 3769
+      },
+      {
+        "end": 3831,
+        "start": 3786
+      }
+    ],
+    [
+      {
+        "end": 3853,
+        "start": 3836
+      },
+      {
+        "end": 3910,
+        "start": 3855
+      }
+    ],
+    [
+      {
+        "end": 3925,
+        "start": 3915
+      }
+    ],
+    [
+      {
+        "end": 3955,
+        "start": 3937
+      },
+      {
+        "end": 3990,
+        "start": 3959
+      }
+    ],
+    [
+      {
+        "end": 4027,
+        "start": 4004
+      },
+      {
+        "end": 4070,
+        "start": 4031
+      }
+    ],
+    [
+      {
+        "end": 4109,
+        "start": 4082
+      },
+      {
+        "end": 4189,
+        "start": 4113
+      }
+    ],
+    [
+      {
+        "end": 4242,
+        "start": 4194
+      }
+    ],
+    [
+      {
+        "end": 4274,
+        "start": 4244
+      },
+      {
+        "end": 4299,
+        "start": 4276
+      },
+      {
+        "end": 4374,
+        "start": 4301
+      }
+    ],
+    [
+      {
+        "end": 4396,
+        "start": 4378
+      }
+    ],
+    [
+      {
+        "end": 4459,
+        "start": 4399
+      }
+    ],
+    [
+      {
+        "end": 4514,
+        "start": 4462
+      }
+    ],
+    [
+      {
+        "end": 4570,
+        "start": 4516
+      }
+    ],
+    [
+      {
+        "end": 4627,
+        "start": 4577
+      }
+    ],
+    [
+      {
+        "end": 4708,
+        "start": 4627
+      }
+    ],
+    [
+      {
+        "end": 4820,
+        "start": 4708
+      }
+    ],
+    [
+      {
+        "end": 4906,
+        "start": 4822
+      }
+    ],
+    [
+      {
+        "end": 4925,
+        "start": 4906
+      }
+    ],
+    [
+      {
+        "end": 4962,
+        "start": 4925
+      }
+    ],
+    [
+      {
+        "end": 4982,
+        "start": 4964
+      }
+    ],
+    [
+      {
+        "end": 4990,
+        "start": 4984
+      }
+    ]
+  ],
+  "sentence_count": 50,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

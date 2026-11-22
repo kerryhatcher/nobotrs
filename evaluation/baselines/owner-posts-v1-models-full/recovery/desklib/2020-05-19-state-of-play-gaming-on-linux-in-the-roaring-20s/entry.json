@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.08524100000000001,
+  "file": "2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+  "input_sha256": "5d5371c0b568b360880cdab42600117b57b29eb329820f159d236c09218d8f7c",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s/backend.json",
+  "reused_source_sha256": "e613abbdf2e76a3c7f362a52f5a59bfb699dde67b457e1ee1ed989786b29119c",
+  "status": "scored_full"
+}

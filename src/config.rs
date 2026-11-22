@@ -1,14 +1,23 @@
 use serde::{Deserialize, Serialize};
 use std::{collections::BTreeMap, path::PathBuf};
 
-pub const BACKENDS: [&str; 6] = [
+pub const BACKENDS: [&str; 7] = [
     "vocabulary",
     "punctuation",
     "burstiness",
     "lexical-diversity",
     "readability",
     "compression",
+    "structure",
 ];
+#[derive(Debug, Clone, Copy, Default, PartialEq, Eq, Serialize, Deserialize, clap::ValueEnum)]
+#[serde(rename_all = "snake_case")]
+pub enum ModelCoverage {
+    #[default]
+    Opening,
+    Full,
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(default, deny_unknown_fields)]
 pub struct Settings {
@@ -20,10 +29,28 @@ pub struct Settings {
     pub timeout_ms: u64,
     pub language: Option<String>,
     pub enabled_backends: Vec<String>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub experiment: Vec<String>,
     /// Optional local evidence backends requested with --models. Empty by default.
     pub models: Vec<String>,
+    pub model_coverage: ModelCoverage,
     /// Directory containing the pinned model artifacts described by models/*.json.
     pub models_dir: Option<PathBuf>,
+    /// Opt-in: send the analyzed text to GPTZero as informational comparison evidence.
+    /// Requires the `api-clients` feature and a `GPTZERO_API_KEY` in the environment.
+    /// The key is never a setting and is never read from or written to config files.
+    pub gptzero: bool,
+    /// Base URL for the GPTZero API. Overridable for proxies and local test servers.
+    pub gptzero_base_url: String,
+    /// Opt-in: ask an OpenRouter model to judge AI vs human using the writing guide as reference.
+    /// Requires the `api-clients` feature and `OPENROUTER_API_KEY`. Informational only.
+    pub openrouter_judge: bool,
+    /// Pinned OpenRouter model slug used by the judge.
+    pub openrouter_model: String,
+    /// Base URL for the OpenRouter API. Overridable for proxies and local test servers.
+    pub openrouter_base_url: String,
+    /// When true (default), only zero-data-retention endpoints that do not train on inputs.
+    pub openrouter_strict_privacy: bool,
     pub ignore_rules: Vec<String>,
     pub path_ignores: BTreeMap<String, Vec<String>>,
 }
@@ -37,9 +64,17 @@ impl Default for Settings {
             display_limit: 200,
             timeout_ms: 5000,
             language: None,
+            experiment: Vec::new(),
             enabled_backends: BACKENDS.iter().map(|s| s.to_string()).collect(),
             models: vec![],
+            model_coverage: ModelCoverage::Opening,
             models_dir: None,
+            gptzero: false,
+            gptzero_base_url: "https://api.gptzero.me".into(),
+            openrouter_judge: false,
+            openrouter_model: crate::external::openrouter::DEFAULT_MODEL.into(),
+            openrouter_base_url: crate::external::openrouter::DEFAULT_BASE_URL.into(),
+            openrouter_strict_privacy: true,
             ignore_rules: vec![],
             path_ignores: BTreeMap::new(),
         }
@@ -61,7 +96,11 @@ pub struct Overrides {
     pub timeout_ms: Option<u64>,
     pub language: Option<String>,
     pub models: Option<Vec<String>>,
+    pub model_coverage: Option<ModelCoverage>,
     pub models_dir: Option<PathBuf>,
+    pub gptzero: Option<bool>,
+    pub openrouter_judge: Option<bool>,
+    pub openrouter_strict_privacy: Option<bool>,
     pub ignore_rules: Option<Vec<String>>,
 }
 impl ResolvedConfig {
@@ -86,6 +125,13 @@ impl ResolvedConfig {
             "enabled_backends",
             "models",
             "models_dir",
+            "model_coverage",
+            "gptzero",
+            "gptzero_base_url",
+            "openrouter_judge",
+            "openrouter_model",
+            "openrouter_base_url",
+            "openrouter_strict_privacy",
             "ignore_rules",
             "path_ignores",
         ] {
@@ -146,6 +192,18 @@ impl ResolvedConfig {
             settings.minimum_severity = value;
             origins.insert("minimum_severity".into(), "cli".into());
         }
+        if let Some(raw) = env_text("NOBOTRS_MODEL_COVERAGE")? {
+            settings.model_coverage = serde_json::from_value(serde_json::Value::String(raw))
+                .map_err(|e| e.to_string())?;
+            origins.insert(
+                "model_coverage".into(),
+                "environment:NOBOTRS_MODEL_COVERAGE".into(),
+            );
+        }
+        if let Some(value) = cli.model_coverage {
+            settings.model_coverage = value;
+            origins.insert("model_coverage".into(), "cli".into());
+        }
         setting!(quorum, "NOBOTRS_QUORUM", usize);
         setting!(max_bytes, "NOBOTRS_MAX_BYTES", usize);
         setting!(max_candidates, "NOBOTRS_MAX_CANDIDATES", usize);
@@ -169,6 +227,43 @@ impl ResolvedConfig {
         if let Some(value) = cli.models_dir {
             settings.models_dir = Some(value);
             origins.insert("models_dir".into(), "cli".into());
+        }
+        setting!(gptzero, "NOBOTRS_GPTZERO", bool);
+        if let Some(raw) = env_text("NOBOTRS_GPTZERO_BASE_URL")? {
+            settings.gptzero_base_url = raw;
+            origins.insert(
+                "gptzero_base_url".into(),
+                "environment:NOBOTRS_GPTZERO_BASE_URL".into(),
+            );
+        }
+        setting!(openrouter_judge, "NOBOTRS_OPENROUTER_JUDGE", bool);
+        setting!(
+            openrouter_strict_privacy,
+            "NOBOTRS_OPENROUTER_STRICT_PRIVACY",
+            bool
+        );
+        if let Some(raw) = env_text("NOBOTRS_OPENROUTER_MODEL")? {
+            settings.openrouter_model = raw;
+            origins.insert(
+                "openrouter_model".into(),
+                "environment:NOBOTRS_OPENROUTER_MODEL".into(),
+            );
+        }
+        if let Some(raw) = env_text("NOBOTRS_OPENROUTER_BASE_URL")? {
+            settings.openrouter_base_url = raw;
+            origins.insert(
+                "openrouter_base_url".into(),
+                "environment:NOBOTRS_OPENROUTER_BASE_URL".into(),
+            );
+        }
+        if let Some(raw) = env_text("NOBOTRS_EXPERIMENT")? {
+            settings.experiment = raw
+                .split(',')
+                .map(str::trim)
+                .filter(|s| !s.is_empty())
+                .map(str::to_owned)
+                .collect();
+            origins.insert("experiment".into(), "environment:NOBOTRS_EXPERIMENT".into());
         }
         if let Some(raw) = env_text("NOBOTRS_MODELS")? {
             settings.models = raw
@@ -206,7 +301,16 @@ impl ResolvedConfig {
     }
 }
 impl Settings {
+    pub fn experiment_enabled(&self, id: &str) -> bool {
+        self.experiment.iter().any(|s| s == id)
+    }
     pub fn validate(&self) -> Result<(), String> {
+        let mut seen = std::collections::BTreeSet::new();
+        for id in &self.experiment {
+            if !crate::experiments::IDS.contains(&id.as_str()) || !seen.insert(id) {
+                return Err(format!("unknown or repeated experiment: {id}"));
+            }
+        }
         if !(1..=3).contains(&self.quorum) {
             return Err("quorum must be 1..=3".into());
         }
@@ -244,6 +348,19 @@ impl Settings {
                 return Err("models_dir must not be empty".into());
             }
         }
+        if !(self.gptzero_base_url.starts_with("https://")
+            || self.gptzero_base_url.starts_with("http://"))
+        {
+            return Err("gptzero_base_url must start with http:// or https://".into());
+        }
+        if !(self.openrouter_base_url.starts_with("https://")
+            || self.openrouter_base_url.starts_with("http://"))
+        {
+            return Err("openrouter_base_url must start with http:// or https://".into());
+        }
+        if self.openrouter_model.trim().is_empty() {
+            return Err("openrouter_model must not be empty".into());
+        }
         Ok(())
     }
 }
@@ -276,6 +393,27 @@ mod tests {
             Settings::default().enabled_backends
         );
         assert!(Settings::default().models.is_empty());
+    }
+
+    #[test]
+    fn gptzero_is_off_by_default_and_has_no_key_field() {
+        let defaults = Settings::default();
+        assert!(!defaults.gptzero);
+        assert_eq!(defaults.gptzero_base_url, "https://api.gptzero.me");
+        // A key smuggled into the config file must be rejected, not stored.
+        let rejected = serde_json::from_str::<Settings>(r#"{"gptzero_api_key":"secret"}"#).is_err();
+        assert!(rejected, "config files must not accept an API key field");
+    }
+
+    #[test]
+    fn gptzero_base_url_must_be_http_or_https() {
+        let mut settings = Settings {
+            gptzero_base_url: "ftp://example.test".into(),
+            ..Default::default()
+        };
+        assert!(settings.validate().is_err());
+        settings.gptzero_base_url = "http://127.0.0.1:9".into();
+        assert!(settings.validate().is_ok());
     }
 
     #[test]

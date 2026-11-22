@@ -94,3 +94,51 @@ fn detector_scope_preserves_signed_evidence_and_reports_token_clipping() {
     let retained = observed.excerpt_coverage.unwrap();
     assert!((0.42..0.44).contains(&retained), "retained {retained}");
 }
+
+#[test]
+#[ignore = "requires staged model artifacts"]
+fn detector_scope_tokens_and_offsets_match_reference() {
+    use sha2::{Digest, Sha256};
+    let root = std::path::PathBuf::from(std::env::var_os("NOBOTRS_MODELS_DIR").unwrap());
+    let manifest = nobotrs::models::manifest("detectorscope").unwrap();
+    let pin = manifest.tokenizer.as_ref().unwrap();
+    let bytes = nobotrs::models::read_verified(&root.join(&pin.file), &pin.sha256).unwrap();
+    let mut tokenizer = tokenizers::Tokenizer::from_bytes(bytes).unwrap();
+    tokenizer.with_truncation(None).unwrap();
+    tokenizer.with_padding(None);
+    let text = include_str!("../evaluation/fixtures/bibb-fy27.txt")
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ");
+    let reference: serde_json::Value = serde_json::from_str(include_str!(
+        "fixtures/models/detectorscope-bibb-tokens.json"
+    ))
+    .unwrap();
+    assert_eq!(reference["tokenizer_revision"], pin.revision);
+    assert_eq!(
+        reference["text_sha256"],
+        format!("{:x}", Sha256::digest(text.as_bytes()))
+    );
+    let observed = tokenizer.encode(text, true).unwrap();
+    let ids: Vec<u32> = serde_json::from_value(reference["ids"].clone()).unwrap();
+    let offsets: Vec<(usize, usize)> =
+        serde_json::from_value(reference["offsets"].clone()).unwrap();
+    assert_eq!(observed.len(), ids.len());
+    for i in 0..ids.len() {
+        let context = i.saturating_sub(3)..(i + 4).min(ids.len());
+        assert_eq!(
+            observed.get_ids()[i],
+            ids[i],
+            "token {i}, observed {:?}, expected {:?}",
+            &observed.get_ids()[context.clone()],
+            &ids[context.clone()]
+        );
+        assert_eq!(
+            observed.get_offsets()[i],
+            offsets[i],
+            "offset {i}, observed {:?}, expected {:?}",
+            &observed.get_offsets()[context.clone()],
+            &offsets[context]
+        );
+    }
+}

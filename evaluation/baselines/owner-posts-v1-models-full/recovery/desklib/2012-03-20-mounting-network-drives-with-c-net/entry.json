@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.03746,
+  "file": "2012-03-20-mounting-network-drives-with-c-net.md",
+  "input_sha256": "d0cf943700bb972483394d18ff7788ad11e527f442968d39842ecbc2fb2b53a0",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2012-03-20-mounting-network-drives-with-c-net/backend.json",
+  "reused_source_sha256": "1d0b4fb1faa80f125136524b669d7c737c054f0d1401e6737098a4fe420dc7c7",
+  "status": "scored_full"
+}

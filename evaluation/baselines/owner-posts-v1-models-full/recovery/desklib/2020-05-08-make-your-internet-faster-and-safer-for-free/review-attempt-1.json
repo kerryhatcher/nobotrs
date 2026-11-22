@@ -1,0 +1,389 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 420,
+        "end_line": 51,
+        "features": [],
+        "heading": null,
+        "line": 19,
+        "mean_z": 0.8681400781709495,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": -0.6652047634124756,
+            "z": 0.8681400781709495
+          }
+        ],
+        "prose": {
+          "end": 1967,
+          "start": 0
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 1275,
+            "start": 1075
+          },
+          {
+            "end": 1322,
+            "start": 1297
+          },
+          {
+            "end": 1460,
+            "start": 1336
+          },
+          {
+            "end": 1746,
+            "start": 1470
+          },
+          {
+            "end": 1779,
+            "start": 1756
+          },
+          {
+            "end": 1812,
+            "start": 1780
+          },
+          {
+            "end": 2069,
+            "start": 1856
+          },
+          {
+            "end": 2275,
+            "start": 2138
+          },
+          {
+            "end": 2388,
+            "start": 2292
+          },
+          {
+            "end": 2593,
+            "start": 2390
+          },
+          {
+            "end": 2785,
+            "start": 2666
+          },
+          {
+            "end": 3166,
+            "start": 2792
+          },
+          {
+            "end": 3174,
+            "start": 3167
+          },
+          {
+            "end": 3224,
+            "start": 3222
+          },
+          {
+            "end": 3235,
+            "start": 3225
+          },
+          {
+            "end": 3307,
+            "start": 3305
+          },
+          {
+            "end": 3313,
+            "start": 3308
+          },
+          {
+            "end": 3377,
+            "start": 3359
+          },
+          {
+            "end": 3392,
+            "start": 3378
+          },
+          {
+            "end": 3433,
+            "start": 3432
+          },
+          {
+            "end": 3586,
+            "start": 3530
+          },
+          {
+            "end": 3589,
+            "start": 3588
+          },
+          {
+            "end": 3608,
+            "start": 3592
+          },
+          {
+            "end": 3772,
+            "start": 3770
+          }
+        ],
+        "units": {
+          "end": 23,
+          "start": 0
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 186,
+        "end_line": 89,
+        "features": [],
+        "heading": "Cool, so how I get started?",
+        "line": 79,
+        "mean_z": 0.5327544555902667,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": -1.1603349447250366,
+            "z": 0.5327544555902667
+          }
+        ],
+        "prose": {
+          "end": 4806,
+          "start": 3970
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 6403,
+            "start": 6380
+          },
+          {
+            "end": 6543,
+            "start": 6405
+          },
+          {
+            "end": 6943,
+            "start": 6545
+          },
+          {
+            "end": 6988,
+            "start": 6945
+          },
+          {
+            "end": 7009,
+            "start": 6989
+          },
+          {
+            "end": 7126,
+            "start": 7053
+          },
+          {
+            "end": 7135,
+            "start": 7130
+          },
+          {
+            "end": 7223,
+            "start": 7137
+          },
+          {
+            "end": 7247,
+            "start": 7224
+          },
+          {
+            "end": 7312,
+            "start": 7294
+          },
+          {
+            "end": 7321,
+            "start": 7317
+          }
+        ],
+        "units": {
+          "end": 63,
+          "start": 55
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 133,
+        "end_line": 69,
+        "features": [],
+        "heading": "DNS Specs",
+        "line": 63,
+        "mean_z": -1.4008945337612164,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": -4.014983177185059,
+            "z": -1.4008945337612164
+          }
+        ],
+        "prose": {
+          "end": 3155,
+          "start": 2507
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 4813,
+            "start": 4807
+          },
+          {
+            "end": 5253,
+            "start": 4815
+          },
+          {
+            "end": 5303,
+            "start": 5264
+          },
+          {
+            "end": 5465,
+            "start": 5305
+          },
+          {
+            "end": 5474,
+            "start": 5473
+          }
+        ],
+        "units": {
+          "end": 44,
+          "start": 34
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {},
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+  "prose_words": 955,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 0
+}

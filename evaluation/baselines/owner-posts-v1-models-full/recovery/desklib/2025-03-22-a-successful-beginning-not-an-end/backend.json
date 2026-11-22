@@ -1,0 +1,409 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 0.7588351368904114
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 17255.964147,
+        "excerpt_bytes": 2409,
+        "excerpt_coverage": 0.5314576871953921,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.5314576871953921,
+        "full_coverage_output": 1.8098542158626068,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.5314576871953921,
+        "precision": "float32",
+        "prepared_bytes": 4533,
+        "prepared_words": 785,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 0.7588351368904114,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 47,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": true,
+            "prose": {
+              "end": 202,
+              "start": 0
+            },
+            "raw_output": 4.783201694488525,
+            "source_ranges": [
+              {
+                "end": 726,
+                "start": 526
+              },
+              {
+                "end": 804,
+                "start": 803
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 4,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 312,
+            "heading": "A proud start",
+            "index": 1,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1729,
+              "start": 202
+            },
+            "raw_output": 1.3316137790679932,
+            "source_ranges": [
+              {
+                "end": 816,
+                "start": 804
+              },
+              {
+                "end": 857,
+                "start": 821
+              },
+              {
+                "end": 861,
+                "start": 860
+              },
+              {
+                "end": 878,
+                "start": 865
+              },
+              {
+                "end": 934,
+                "start": 933
+              },
+              {
+                "end": 938,
+                "start": 937
+              },
+              {
+                "end": 942,
+                "start": 941
+              },
+              {
+                "end": 955,
+                "start": 946
+              },
+              {
+                "end": 1035,
+                "start": 1028
+              },
+              {
+                "end": 1082,
+                "start": 1036
+              },
+              {
+                "end": 1503,
+                "start": 1198
+              },
+              {
+                "end": 1678,
+                "start": 1647
+              },
+              {
+                "end": 1824,
+                "start": 1749
+              },
+              {
+                "end": 1837,
+                "start": 1829
+              },
+              {
+                "end": 1843,
+                "start": 1842
+              },
+              {
+                "end": 1862,
+                "start": 1849
+              },
+              {
+                "end": 1920,
+                "start": 1919
+              },
+              {
+                "end": 1926,
+                "start": 1925
+              },
+              {
+                "end": 1932,
+                "start": 1931
+              },
+              {
+                "end": 1947,
+                "start": 1938
+              },
+              {
+                "end": 2372,
+                "start": 2022
+              },
+              {
+                "end": 2834,
+                "start": 2790
+              },
+              {
+                "end": 2837,
+                "start": 2836
+              },
+              {
+                "end": 2853,
+                "start": 2840
+              },
+              {
+                "end": 2908,
+                "start": 2907
+              },
+              {
+                "end": 2911,
+                "start": 2910
+              },
+              {
+                "end": 2914,
+                "start": 2913
+              },
+              {
+                "end": 2926,
+                "start": 2917
+              },
+              {
+                "end": 3059,
+                "start": 2998
+              },
+              {
+                "end": 3118,
+                "start": 3061
+              },
+              {
+                "end": 3455,
+                "start": 3122
+              },
+              {
+                "end": 3517,
+                "start": 3459
+              },
+              {
+                "end": 3531,
+                "start": 3520
+              },
+              {
+                "end": 3619,
+                "start": 3615
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 25,
+              "start": 4
+            }
+          },
+          {
+            "body_tokens": 147,
+            "heading": "FOIA Updates",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 2399,
+              "start": 1729
+            },
+            "raw_output": -0.17102095484733582,
+            "source_ranges": [
+              {
+                "end": 3627,
+                "start": 3619
+              },
+              {
+                "end": 4120,
+                "start": 3629
+              },
+              {
+                "end": 4140,
+                "start": 4123
+              },
+              {
+                "end": 4277,
+                "start": 4244
+              },
+              {
+                "end": 4298,
+                "start": 4278
+              },
+              {
+                "end": 4432,
+                "start": 4399
+              },
+              {
+                "end": 4461,
+                "start": 4433
+              },
+              {
+                "end": 4597,
+                "start": 4564
+              },
+              {
+                "end": 4682,
+                "start": 4678
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 33,
+              "start": 25
+            }
+          },
+          {
+            "body_tokens": 335,
+            "heading": "What’s next?",
+            "index": 3,
+            "insufficient_context": false,
+            "prose": {
+              "end": 4012,
+              "start": 2399
+            },
+            "raw_output": 1.1857109069824219,
+            "source_ranges": [
+              {
+                "end": 4692,
+                "start": 4682
+              },
+              {
+                "end": 4872,
+                "start": 4694
+              },
+              {
+                "end": 4886,
+                "start": 4874
+              },
+              {
+                "end": 5300,
+                "start": 4888
+              },
+              {
+                "end": 5810,
+                "start": 5302
+              },
+              {
+                "end": 5940,
+                "start": 5817
+              },
+              {
+                "end": 5966,
+                "start": 5942
+              },
+              {
+                "end": 6221,
+                "start": 5968
+              },
+              {
+                "end": 6339,
+                "start": 6313
+              },
+              {
+                "end": 6482,
+                "start": 6427
+              },
+              {
+                "end": 6491,
+                "start": 6487
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 54,
+              "start": 33
+            }
+          },
+          {
+            "body_tokens": 117,
+            "heading": "Sign up for updates",
+            "index": 4,
+            "insufficient_context": true,
+            "prose": {
+              "end": 4533,
+              "start": 4012
+            },
+            "raw_output": 6.166609287261963,
+            "source_ranges": [
+              {
+                "end": 6506,
+                "start": 6491
+              },
+              {
+                "end": 6554,
+                "start": 6508
+              },
+              {
+                "end": 6565,
+                "start": 6556
+              },
+              {
+                "end": 6620,
+                "start": 6567
+              },
+              {
+                "end": 6651,
+                "start": 6622
+              },
+              {
+                "end": 6699,
+                "start": 6653
+              },
+              {
+                "end": 6951,
+                "start": 6701
+              },
+              {
+                "end": 7067,
+                "start": 7041
+              },
+              {
+                "end": 7178,
+                "start": 7140
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 67,
+              "start": 54
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

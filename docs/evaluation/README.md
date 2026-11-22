@@ -1,5 +1,11 @@
 # Evaluation protocol
 
+## Editorial rule evaluation
+
+The offline review processed 246 GAO reports, 350 W&I development essays and 6,561 Beemo texts without an operational failure. The rule comparison counts both located findings and document-wide findings. The overlap analysis uses original UTF-8 byte ranges from located findings. The 2,187 paired Beemo prompts yielded 1,192 documents with evidence for the pooled estimate. Findings overlapped expert edits 1.23 times as often as random passages of matched length in the same document (95% prompt-bootstrap interval 1.17–1.30). This measures where editors intervened. Reader preference and the quality of a particular suggestion still require independent evidence. [Rule comparisons](../../evaluation/reports/rule-lift-v1.md) · [Editor alignment](../../evaluation/reports/editor-alignment-v1.md)
+
+To reproduce the review, build `cargo build --release --locked --example corpus_review` and run `scripts/local_review_rows.py DATASET --worker target/release/examples/corpus_review` for `gao`, `wi-dev` and `beemo`. The Beemo reader needs PyArrow. Set `NOBOTRS_INTERNAL_DIR` to the private corpus root. Use the derived rows with `scripts/rule_lift.py` and `scripts/editor_alignment.py`. The aggregate calculations require NumPy. The single-process worker returned the same review JSON as the CLI on the pinned Bibb input.
+
 Run the reusable CI baseline after building:
 
 ```sh

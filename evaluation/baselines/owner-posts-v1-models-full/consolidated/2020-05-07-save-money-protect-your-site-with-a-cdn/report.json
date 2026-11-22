@@ -1,0 +1,2966 @@
+{
+  "actionable_finding_count": 6,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [
+            {
+              "block_context": 42,
+              "column": 107,
+              "disposition": "selected",
+              "end_column": 115,
+              "end_line": 120,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 120,
+              "matched_text": "leverage",
+              "prose_offset": {
+                "end": 9249,
+                "start": 9241
+              },
+              "raw_offset": {
+                "end": 11756,
+                "start": 11748
+              },
+              "rule_id": "leverage",
+              "sentence_context": 103,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 11756,
+                  "start": 11748
+                }
+              ],
+              "suggestion": "use",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 42,
+              "column": 107,
+              "disposition": "selected",
+              "end_column": 115,
+              "end_line": 120,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 120,
+              "matched_text": "leverage",
+              "prose_offset": {
+                "end": 9249,
+                "start": 9241
+              },
+              "raw_offset": {
+                "end": 11756,
+                "start": 11748
+              },
+              "rule_id": "leverage",
+              "sentence_context": 103,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 11756,
+                  "start": 11748
+                }
+              ],
+              "suggestion": "use",
+              "suppression": null
+            }
+          ],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 1.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 1800.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.5435571000250612
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 101.13585371202444
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 8.151944936086533
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.573320255026974
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.536861354932181
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 15,
+              "column": 175,
+              "disposition": "selected",
+              "end_column": 215,
+              "end_line": 56,
+              "guidance_id": "structure.negative-parallelism",
+              "leverage": 2,
+              "line": 56,
+              "matched_text": "not only can you speed up your page, but",
+              "prose_offset": {
+                "end": 4031,
+                "start": 3991
+              },
+              "raw_offset": {
+                "end": 5699,
+                "start": 5659
+              },
+              "rule_id": "structure.negative-parallelism",
+              "sentence_context": 41,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 5699,
+                  "start": 5659
+                }
+              ],
+              "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+              "suppression": null
+            },
+            {
+              "block_context": 19,
+              "column": 189,
+              "disposition": "selected",
+              "end_column": 204,
+              "end_line": 64,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 64,
+              "matched_text": "So for example,",
+              "prose_offset": {
+                "end": 5173,
+                "start": 5158
+              },
+              "raw_offset": {
+                "end": 6914,
+                "start": 6899
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 53,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6914,
+                  "start": 6899
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 20,
+              "column": 216,
+              "disposition": "selected",
+              "end_column": 224,
+              "end_line": 64,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 64,
+              "matched_text": "might be",
+              "prose_offset": {
+                "end": 5184,
+                "start": 5176
+              },
+              "raw_offset": {
+                "end": 6934,
+                "start": 6926
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 54,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6934,
+                  "start": 6926
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 25,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 72,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 72,
+              "matched_text": "Sort of.",
+              "prose_offset": {
+                "end": 6135,
+                "start": 6127
+              },
+              "raw_offset": {
+                "end": 7917,
+                "start": 7909
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 63,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 7917,
+                  "start": 7909
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 6,
+              "column": 4,
+              "disposition": "selected",
+              "end_column": 28,
+              "end_line": 34,
+              "guidance_id": "structure.title-case-headings",
+              "leverage": 4,
+              "line": 34,
+              "matched_text": "Content Delivery Network",
+              "prose_offset": {
+                "end": 1315,
+                "start": 1291
+              },
+              "raw_offset": {
+                "end": 2435,
+                "start": 2411
+              },
+              "rule_id": "structure.title-case-headings",
+              "sentence_context": 17,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2435,
+                  "start": 2411
+                }
+              ],
+              "suggestion": "Check heading case against the venue's style; title case may be required.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 15,
+              "column": 175,
+              "disposition": "selected",
+              "end_column": 215,
+              "end_line": 56,
+              "guidance_id": "structure.negative-parallelism",
+              "leverage": 2,
+              "line": 56,
+              "matched_text": "not only can you speed up your page, but",
+              "prose_offset": {
+                "end": 4031,
+                "start": 3991
+              },
+              "raw_offset": {
+                "end": 5699,
+                "start": 5659
+              },
+              "rule_id": "structure.negative-parallelism",
+              "sentence_context": 41,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 5699,
+                  "start": 5659
+                }
+              ],
+              "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+              "suppression": null
+            },
+            {
+              "block_context": 19,
+              "column": 189,
+              "disposition": "selected",
+              "end_column": 204,
+              "end_line": 64,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 64,
+              "matched_text": "So for example,",
+              "prose_offset": {
+                "end": 5173,
+                "start": 5158
+              },
+              "raw_offset": {
+                "end": 6914,
+                "start": 6899
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 53,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6914,
+                  "start": 6899
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 20,
+              "column": 216,
+              "disposition": "selected",
+              "end_column": 224,
+              "end_line": 64,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 64,
+              "matched_text": "might be",
+              "prose_offset": {
+                "end": 5184,
+                "start": 5176
+              },
+              "raw_offset": {
+                "end": 6934,
+                "start": 6926
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 54,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6934,
+                  "start": 6926
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 25,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 72,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 72,
+              "matched_text": "Sort of.",
+              "prose_offset": {
+                "end": 6135,
+                "start": 6127
+              },
+              "raw_offset": {
+                "end": 7917,
+                "start": 7909
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 63,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 7917,
+                  "start": 7909
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 6,
+              "column": 4,
+              "disposition": "selected",
+              "end_column": 28,
+              "end_line": 34,
+              "guidance_id": "structure.title-case-headings",
+              "leverage": 4,
+              "line": 34,
+              "matched_text": "Content Delivery Network",
+              "prose_offset": {
+                "end": 1315,
+                "start": 1291
+              },
+              "raw_offset": {
+                "end": 2435,
+                "start": 2411
+              },
+              "rule_id": "structure.title-case-headings",
+              "sentence_context": 17,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2435,
+                  "start": 2411
+                }
+              ],
+              "suggestion": "Check heading case against the venue's style; title case may be required.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 2.7777777777777777
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -1.6084280014038086
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 12968.396497,
+            "excerpt_bytes": 2418,
+            "excerpt_coverage": 0.2349689011748445,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.2349689011748445,
+            "full_coverage_output": -3.3682824971585803,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.2349689011748445,
+            "precision": "float32",
+            "prepared_bytes": 10195,
+            "prepared_words": 1800,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -1.6084280014038086,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 123,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 596,
+                  "start": 0
+                },
+                "raw_output": -2.2191174030303955,
+                "source_ranges": [
+                  {
+                    "end": 1495,
+                    "start": 1090
+                  },
+                  {
+                    "end": 1677,
+                    "start": 1497
+                  },
+                  {
+                    "end": 1692,
+                    "start": 1683
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 6,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 156,
+                "heading": "Corporate relationships disclaimer:",
+                "index": 1,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 1298,
+                  "start": 596
+                },
+                "raw_output": 0.09877722710371016,
+                "source_ranges": [
+                  {
+                    "end": 1718,
+                    "start": 1692
+                  },
+                  {
+                    "end": 1728,
+                    "start": 1722
+                  },
+                  {
+                    "end": 1947,
+                    "start": 1730
+                  },
+                  {
+                    "end": 1954,
+                    "start": 1951
+                  },
+                  {
+                    "end": 2173,
+                    "start": 1956
+                  },
+                  {
+                    "end": 2187,
+                    "start": 2177
+                  },
+                  {
+                    "end": 2401,
+                    "start": 2189
+                  },
+                  {
+                    "end": 2418,
+                    "start": 2411
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 17,
+                  "start": 6
+                }
+              },
+              {
+                "body_tokens": 102,
+                "heading": "Content Delivery Network",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1807,
+                  "start": 1298
+                },
+                "raw_output": -1.8223109245300293,
+                "source_ranges": [
+                  {
+                    "end": 2435,
+                    "start": 2418
+                  },
+                  {
+                    "end": 2481,
+                    "start": 2442
+                  },
+                  {
+                    "end": 2485,
+                    "start": 2482
+                  },
+                  {
+                    "end": 3007,
+                    "start": 2563
+                  },
+                  {
+                    "end": 3018,
+                    "start": 3014
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 22,
+                  "start": 17
+                }
+              },
+              {
+                "body_tokens": 127,
+                "heading": "What\u2019s a \u201cNetwork Hop\u201d you say?",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 2413,
+                  "start": 1807
+                },
+                "raw_output": -2.8737642765045166,
+                "source_ranges": [
+                  {
+                    "end": 3051,
+                    "start": 3018
+                  },
+                  {
+                    "end": 3620,
+                    "start": 3053
+                  },
+                  {
+                    "end": 3830,
+                    "start": 3826
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 27,
+                  "start": 22
+                }
+              },
+              {
+                "body_tokens": 360,
+                "heading": "Cool, but how do I get my content into a CDN?",
+                "index": 4,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 4055,
+                  "start": 2413
+                },
+                "raw_output": -2.362340927124023,
+                "source_ranges": [
+                  {
+                    "end": 3871,
+                    "start": 3830
+                  },
+                  {
+                    "end": 3913,
+                    "start": 3873
+                  },
+                  {
+                    "end": 3938,
+                    "start": 3914
+                  },
+                  {
+                    "end": 4277,
+                    "start": 4014
+                  },
+                  {
+                    "end": 4286,
+                    "start": 4278
+                  },
+                  {
+                    "end": 4396,
+                    "start": 4361
+                  },
+                  {
+                    "end": 4419,
+                    "start": 4397
+                  },
+                  {
+                    "end": 4536,
+                    "start": 4511
+                  },
+                  {
+                    "end": 4619,
+                    "start": 4538
+                  },
+                  {
+                    "end": 5064,
+                    "start": 4621
+                  },
+                  {
+                    "end": 5483,
+                    "start": 5066
+                  },
+                  {
+                    "end": 5720,
+                    "start": 5485
+                  },
+                  {
+                    "end": 5729,
+                    "start": 5727
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 42,
+                  "start": 27
+                }
+              },
+              {
+                "body_tokens": 402,
+                "heading": "So what happens when my files change?",
+                "index": 5,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 6057,
+                  "start": 4055
+                },
+                "raw_output": -7.278419017791748,
+                "source_ranges": [
+                  {
+                    "end": 5764,
+                    "start": 5729
+                  },
+                  {
+                    "end": 6055,
+                    "start": 5766
+                  },
+                  {
+                    "end": 6075,
+                    "start": 6056
+                  },
+                  {
+                    "end": 6185,
+                    "start": 6138
+                  },
+                  {
+                    "end": 6709,
+                    "start": 6187
+                  },
+                  {
+                    "end": 6915,
+                    "start": 6711
+                  },
+                  {
+                    "end": 6935,
+                    "start": 6925
+                  },
+                  {
+                    "end": 7237,
+                    "start": 6955
+                  },
+                  {
+                    "end": 7560,
+                    "start": 7239
+                  },
+                  {
+                    "end": 7578,
+                    "start": 7564
+                  },
+                  {
+                    "end": 7827,
+                    "start": 7580
+                  },
+                  {
+                    "end": 7838,
+                    "start": 7834
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 62,
+                  "start": 42
+                }
+              },
+              {
+                "body_tokens": 190,
+                "heading": "Does this mean that if my webserver goes offline my website stays online?",
+                "index": 6,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 6977,
+                  "start": 6057
+                },
+                "raw_output": -4.324402332305908,
+                "source_ranges": [
+                  {
+                    "end": 7907,
+                    "start": 7838
+                  },
+                  {
+                    "end": 8054,
+                    "start": 7909
+                  },
+                  {
+                    "end": 8065,
+                    "start": 8055
+                  },
+                  {
+                    "end": 8308,
+                    "start": 8186
+                  },
+                  {
+                    "end": 8874,
+                    "start": 8310
+                  },
+                  {
+                    "end": 8891,
+                    "start": 8884
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 72,
+                  "start": 62
+                }
+              },
+              {
+                "body_tokens": 1,
+                "heading": "Reviews",
+                "index": 7,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 6984,
+                  "start": 6977
+                },
+                "raw_output": -0.1124475970864296,
+                "source_ranges": [
+                  {
+                    "end": 9019,
+                    "start": 9013
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 73,
+                  "start": 72
+                }
+              },
+              {
+                "body_tokens": 128,
+                "heading": "Amazon Web Services\u2019 CloudFront",
+                "index": 8,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 7617,
+                  "start": 6984
+                },
+                "raw_output": 1.7527945041656494,
+                "source_ranges": [
+                  {
+                    "end": 9046,
+                    "start": 9019
+                  },
+                  {
+                    "end": 9322,
+                    "start": 9048
+                  },
+                  {
+                    "end": 9524,
+                    "start": 9324
+                  },
+                  {
+                    "end": 9560,
+                    "start": 9527
+                  },
+                  {
+                    "end": 9717,
+                    "start": 9629
+                  },
+                  {
+                    "end": 9837,
+                    "start": 9831
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 82,
+                  "start": 73
+                }
+              },
+              {
+                "body_tokens": 230,
+                "heading": "Akamai",
+                "index": 9,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 8751,
+                  "start": 7617
+                },
+                "raw_output": -5.242144584655762,
+                "source_ranges": [
+                  {
+                    "end": 10191,
+                    "start": 9839
+                  },
+                  {
+                    "end": 10421,
+                    "start": 10193
+                  },
+                  {
+                    "end": 10674,
+                    "start": 10423
+                  },
+                  {
+                    "end": 10679,
+                    "start": 10675
+                  },
+                  {
+                    "end": 10818,
+                    "start": 10766
+                  },
+                  {
+                    "end": 10926,
+                    "start": 10820
+                  },
+                  {
+                    "end": 10984,
+                    "start": 10928
+                  },
+                  {
+                    "end": 11056,
+                    "start": 10988
+                  },
+                  {
+                    "end": 11179,
+                    "start": 11169
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 97,
+                  "start": 82
+                }
+              },
+              {
+                "body_tokens": 292,
+                "heading": "CloudFlare",
+                "index": 10,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 10195,
+                  "start": 8751
+                },
+                "raw_output": -2.4746806621551514,
+                "source_ranges": [
+                  {
+                    "end": 11243,
+                    "start": 11181
+                  },
+                  {
+                    "end": 11261,
+                    "start": 11244
+                  },
+                  {
+                    "end": 11640,
+                    "start": 11337
+                  },
+                  {
+                    "end": 11882,
+                    "start": 11642
+                  },
+                  {
+                    "end": 12126,
+                    "start": 11884
+                  },
+                  {
+                    "end": 12139,
+                    "start": 12127
+                  },
+                  {
+                    "end": 12191,
+                    "start": 12187
+                  },
+                  {
+                    "end": 12195,
+                    "start": 12192
+                  },
+                  {
+                    "end": 12327,
+                    "start": 12262
+                  },
+                  {
+                    "end": 12746,
+                    "start": 12329
+                  },
+                  {
+                    "end": 12822,
+                    "start": 12749
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 113,
+                  "start": 97
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "conpara",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+              "unit": "logit_margin",
+              "value": -9.83728837966919
+            },
+            "model_threshold": {
+              "method": "checkpoint_threshold_margin",
+              "unit": "logit",
+              "value": 2.9423828125
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "conpara",
+            "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+            "device": "cpu",
+            "elapsed_ms": 60040.284913,
+            "excerpt_bytes": 2382,
+            "excerpt_coverage": 0.23521279747210427,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.23521279747210427,
+            "full_coverage_output": -3.9650891696260415,
+            "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.23521279747210427,
+            "precision": "float32",
+            "prepared_bytes": 10127,
+            "prepared_words": 1800,
+            "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+            "raw_output": -9.83728837966919,
+            "raw_units": "logit margin (AI - human; higher = machine-like)",
+            "runtime": "candle-debertav2",
+            "threshold": 2.9423828125,
+            "threshold_source": "checkpoint threshold_margin",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 123,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 596,
+                  "start": 0
+                },
+                "raw_output": -4.0560184717178345,
+                "source_ranges": [
+                  {
+                    "end": 1495,
+                    "start": 1090
+                  },
+                  {
+                    "end": 1677,
+                    "start": 1497
+                  },
+                  {
+                    "end": 1692,
+                    "start": 1683
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 6,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 156,
+                "heading": "Corporate relationships disclaimer:",
+                "index": 1,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 1298,
+                  "start": 596
+                },
+                "raw_output": 5.142408847808838,
+                "source_ranges": [
+                  {
+                    "end": 1718,
+                    "start": 1692
+                  },
+                  {
+                    "end": 1728,
+                    "start": 1722
+                  },
+                  {
+                    "end": 1947,
+                    "start": 1730
+                  },
+                  {
+                    "end": 1954,
+                    "start": 1951
+                  },
+                  {
+                    "end": 2173,
+                    "start": 1956
+                  },
+                  {
+                    "end": 2187,
+                    "start": 2177
+                  },
+                  {
+                    "end": 2401,
+                    "start": 2189
+                  },
+                  {
+                    "end": 2418,
+                    "start": 2411
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 17,
+                  "start": 6
+                }
+              },
+              {
+                "body_tokens": 102,
+                "heading": "Content Delivery Network",
+                "index": 2,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 1807,
+                  "start": 1298
+                },
+                "raw_output": -10.019353866577148,
+                "source_ranges": [
+                  {
+                    "end": 2435,
+                    "start": 2418
+                  },
+                  {
+                    "end": 2481,
+                    "start": 2442
+                  },
+                  {
+                    "end": 2485,
+                    "start": 2482
+                  },
+                  {
+                    "end": 3007,
+                    "start": 2563
+                  },
+                  {
+                    "end": 3018,
+                    "start": 3014
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 22,
+                  "start": 17
+                }
+              },
+              {
+                "body_tokens": 127,
+                "heading": "What\u2019s a \u201cNetwork Hop\u201d you say?",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 2413,
+                  "start": 1807
+                },
+                "raw_output": -10.425650596618652,
+                "source_ranges": [
+                  {
+                    "end": 3051,
+                    "start": 3018
+                  },
+                  {
+                    "end": 3620,
+                    "start": 3053
+                  },
+                  {
+                    "end": 3830,
+                    "start": 3826
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 27,
+                  "start": 22
+                }
+              },
+              {
+                "body_tokens": 360,
+                "heading": "Cool, but how do I get my content into a CDN?",
+                "index": 4,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 4055,
+                  "start": 2413
+                },
+                "raw_output": -5.234368801116943,
+                "source_ranges": [
+                  {
+                    "end": 3871,
+                    "start": 3830
+                  },
+                  {
+                    "end": 3913,
+                    "start": 3873
+                  },
+                  {
+                    "end": 3938,
+                    "start": 3914
+                  },
+                  {
+                    "end": 4277,
+                    "start": 4014
+                  },
+                  {
+                    "end": 4286,
+                    "start": 4278
+                  },
+                  {
+                    "end": 4396,
+                    "start": 4361
+                  },
+                  {
+                    "end": 4419,
+                    "start": 4397
+                  },
+                  {
+                    "end": 4536,
+                    "start": 4511
+                  },
+                  {
+                    "end": 4619,
+                    "start": 4538
+                  },
+                  {
+                    "end": 5064,
+                    "start": 4621
+                  },
+                  {
+                    "end": 5483,
+                    "start": 5066
+                  },
+                  {
+                    "end": 5720,
+                    "start": 5485
+                  },
+                  {
+                    "end": 5729,
+                    "start": 5727
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 42,
+                  "start": 27
+                }
+              },
+              {
+                "body_tokens": 402,
+                "heading": "So what happens when my files change?",
+                "index": 5,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 6057,
+                  "start": 4055
+                },
+                "raw_output": 4.1886069774627686,
+                "source_ranges": [
+                  {
+                    "end": 5764,
+                    "start": 5729
+                  },
+                  {
+                    "end": 6055,
+                    "start": 5766
+                  },
+                  {
+                    "end": 6075,
+                    "start": 6056
+                  },
+                  {
+                    "end": 6185,
+                    "start": 6138
+                  },
+                  {
+                    "end": 6709,
+                    "start": 6187
+                  },
+                  {
+                    "end": 6915,
+                    "start": 6711
+                  },
+                  {
+                    "end": 6935,
+                    "start": 6925
+                  },
+                  {
+                    "end": 7237,
+                    "start": 6955
+                  },
+                  {
+                    "end": 7560,
+                    "start": 7239
+                  },
+                  {
+                    "end": 7578,
+                    "start": 7564
+                  },
+                  {
+                    "end": 7827,
+                    "start": 7580
+                  },
+                  {
+                    "end": 7838,
+                    "start": 7834
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 62,
+                  "start": 42
+                }
+              },
+              {
+                "body_tokens": 190,
+                "heading": "Does this mean that if my webserver goes offline my website stays online?",
+                "index": 6,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 6977,
+                  "start": 6057
+                },
+                "raw_output": -10.40879201889038,
+                "source_ranges": [
+                  {
+                    "end": 7907,
+                    "start": 7838
+                  },
+                  {
+                    "end": 8054,
+                    "start": 7909
+                  },
+                  {
+                    "end": 8065,
+                    "start": 8055
+                  },
+                  {
+                    "end": 8308,
+                    "start": 8186
+                  },
+                  {
+                    "end": 8874,
+                    "start": 8310
+                  },
+                  {
+                    "end": 8891,
+                    "start": 8884
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 72,
+                  "start": 62
+                }
+              },
+              {
+                "body_tokens": 1,
+                "heading": "Reviews",
+                "index": 7,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 6984,
+                  "start": 6977
+                },
+                "raw_output": -5.134782552719116,
+                "source_ranges": [
+                  {
+                    "end": 9019,
+                    "start": 9013
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 73,
+                  "start": 72
+                }
+              },
+              {
+                "body_tokens": 128,
+                "heading": "Amazon Web Services\u2019 CloudFront",
+                "index": 8,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 7617,
+                  "start": 6984
+                },
+                "raw_output": 8.742660522460938,
+                "source_ranges": [
+                  {
+                    "end": 9046,
+                    "start": 9019
+                  },
+                  {
+                    "end": 9322,
+                    "start": 9048
+                  },
+                  {
+                    "end": 9524,
+                    "start": 9324
+                  },
+                  {
+                    "end": 9560,
+                    "start": 9527
+                  },
+                  {
+                    "end": 9717,
+                    "start": 9629
+                  },
+                  {
+                    "end": 9837,
+                    "start": 9831
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 82,
+                  "start": 73
+                }
+              },
+              {
+                "body_tokens": 230,
+                "heading": "Akamai",
+                "index": 9,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 8751,
+                  "start": 7617
+                },
+                "raw_output": -10.152916431427002,
+                "source_ranges": [
+                  {
+                    "end": 10191,
+                    "start": 9839
+                  },
+                  {
+                    "end": 10421,
+                    "start": 10193
+                  },
+                  {
+                    "end": 10674,
+                    "start": 10423
+                  },
+                  {
+                    "end": 10679,
+                    "start": 10675
+                  },
+                  {
+                    "end": 10818,
+                    "start": 10766
+                  },
+                  {
+                    "end": 10926,
+                    "start": 10820
+                  },
+                  {
+                    "end": 10984,
+                    "start": 10928
+                  },
+                  {
+                    "end": 11056,
+                    "start": 10988
+                  },
+                  {
+                    "end": 11179,
+                    "start": 11169
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 97,
+                  "start": 82
+                }
+              },
+              {
+                "body_tokens": 292,
+                "heading": "CloudFlare",
+                "index": 10,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 10194,
+                  "start": 8751
+                },
+                "raw_output": -10.027838230133057,
+                "source_ranges": [
+                  {
+                    "end": 11243,
+                    "start": 11181
+                  },
+                  {
+                    "end": 11261,
+                    "start": 11244
+                  },
+                  {
+                    "end": 11640,
+                    "start": 11337
+                  },
+                  {
+                    "end": 11882,
+                    "start": 11642
+                  },
+                  {
+                    "end": 12126,
+                    "start": 11884
+                  },
+                  {
+                    "end": 12139,
+                    "start": 12127
+                  },
+                  {
+                    "end": 12191,
+                    "start": 12187
+                  },
+                  {
+                    "end": 12195,
+                    "start": 12192
+                  },
+                  {
+                    "end": 12327,
+                    "start": 12262
+                  },
+                  {
+                    "end": 12746,
+                    "start": 12329
+                  },
+                  {
+                    "end": 12822,
+                    "start": 12749
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 113,
+                  "start": 97
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "ModelFailure": {
+            "message": "analysis deadline exceeded",
+            "planned": {
+              "coverage": 0.4669760094777372,
+              "excerpt_bytes": 4770,
+              "excerpt_tokens": 1024,
+              "prepared_bytes": 10195,
+              "prepared_words": 1800,
+              "token_limit": 1024,
+              "truncated": true
+            }
+          }
+        },
+        "status": "failed"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1495,
+        "start": 1090
+      }
+    ],
+    [
+      {
+        "end": 1677,
+        "start": 1497
+      }
+    ],
+    [
+      {
+        "end": 1718,
+        "start": 1683
+      }
+    ],
+    [
+      {
+        "end": 1728,
+        "start": 1722
+      },
+      {
+        "end": 1947,
+        "start": 1730
+      }
+    ],
+    [
+      {
+        "end": 1954,
+        "start": 1951
+      },
+      {
+        "end": 2173,
+        "start": 1956
+      }
+    ],
+    [
+      {
+        "end": 2187,
+        "start": 2177
+      },
+      {
+        "end": 2401,
+        "start": 2189
+      }
+    ],
+    [
+      {
+        "end": 2435,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2481,
+        "start": 2442
+      },
+      {
+        "end": 2485,
+        "start": 2482
+      },
+      {
+        "end": 3007,
+        "start": 2563
+      }
+    ],
+    [
+      {
+        "end": 3051,
+        "start": 3014
+      }
+    ],
+    [
+      {
+        "end": 3620,
+        "start": 3053
+      }
+    ],
+    [
+      {
+        "end": 3871,
+        "start": 3826
+      }
+    ],
+    [
+      {
+        "end": 3913,
+        "start": 3873
+      },
+      {
+        "end": 3938,
+        "start": 3914
+      },
+      {
+        "end": 4277,
+        "start": 4014
+      },
+      {
+        "end": 4286,
+        "start": 4278
+      },
+      {
+        "end": 4396,
+        "start": 4361
+      },
+      {
+        "end": 4419,
+        "start": 4397
+      },
+      {
+        "end": 4536,
+        "start": 4511
+      }
+    ],
+    [
+      {
+        "end": 4619,
+        "start": 4538
+      }
+    ],
+    [
+      {
+        "end": 5064,
+        "start": 4621
+      }
+    ],
+    [
+      {
+        "end": 5483,
+        "start": 5066
+      }
+    ],
+    [
+      {
+        "end": 5720,
+        "start": 5485
+      }
+    ],
+    [
+      {
+        "end": 5764,
+        "start": 5727
+      }
+    ],
+    [
+      {
+        "end": 6055,
+        "start": 5766
+      },
+      {
+        "end": 6075,
+        "start": 6056
+      },
+      {
+        "end": 6185,
+        "start": 6138
+      }
+    ],
+    [
+      {
+        "end": 6709,
+        "start": 6187
+      }
+    ],
+    [
+      {
+        "end": 6915,
+        "start": 6711
+      }
+    ],
+    [
+      {
+        "end": 6935,
+        "start": 6925
+      }
+    ],
+    [
+      {
+        "end": 7237,
+        "start": 6955
+      }
+    ],
+    [
+      {
+        "end": 7560,
+        "start": 7239
+      }
+    ],
+    [
+      {
+        "end": 7578,
+        "start": 7564
+      },
+      {
+        "end": 7827,
+        "start": 7580
+      }
+    ],
+    [
+      {
+        "end": 7907,
+        "start": 7834
+      }
+    ],
+    [
+      {
+        "end": 8054,
+        "start": 7909
+      },
+      {
+        "end": 8065,
+        "start": 8055
+      },
+      {
+        "end": 8308,
+        "start": 8186
+      }
+    ],
+    [
+      {
+        "end": 8874,
+        "start": 8310
+      }
+    ],
+    [
+      {
+        "end": 8891,
+        "start": 8884
+      }
+    ],
+    [
+      {
+        "end": 9046,
+        "start": 9013
+      }
+    ],
+    [
+      {
+        "end": 9322,
+        "start": 9048
+      }
+    ],
+    [
+      {
+        "end": 9524,
+        "start": 9324
+      }
+    ],
+    [
+      {
+        "end": 9560,
+        "start": 9527
+      }
+    ],
+    [
+      {
+        "end": 9717,
+        "start": 9629
+      }
+    ],
+    [
+      {
+        "end": 9837,
+        "start": 9831
+      }
+    ],
+    [
+      {
+        "end": 10191,
+        "start": 9839
+      }
+    ],
+    [
+      {
+        "end": 10421,
+        "start": 10193
+      }
+    ],
+    [
+      {
+        "end": 10674,
+        "start": 10423
+      },
+      {
+        "end": 10679,
+        "start": 10675
+      },
+      {
+        "end": 10818,
+        "start": 10766
+      }
+    ],
+    [
+      {
+        "end": 10926,
+        "start": 10820
+      }
+    ],
+    [
+      {
+        "end": 10984,
+        "start": 10928
+      }
+    ],
+    [
+      {
+        "end": 11056,
+        "start": 10988
+      }
+    ],
+    [
+      {
+        "end": 11179,
+        "start": 11169
+      }
+    ],
+    [
+      {
+        "end": 11243,
+        "start": 11181
+      },
+      {
+        "end": 11261,
+        "start": 11244
+      },
+      {
+        "end": 11640,
+        "start": 11337
+      }
+    ],
+    [
+      {
+        "end": 11882,
+        "start": 11642
+      }
+    ],
+    [
+      {
+        "end": 12126,
+        "start": 11884
+      },
+      {
+        "end": 12139,
+        "start": 12127
+      },
+      {
+        "end": 12191,
+        "start": 12187
+      },
+      {
+        "end": 12195,
+        "start": 12192
+      },
+      {
+        "end": 12327,
+        "start": 12262
+      }
+    ],
+    [
+      {
+        "end": 12746,
+        "start": 12329
+      }
+    ],
+    [
+      {
+        "end": 12822,
+        "start": 12749
+      }
+    ]
+  ],
+  "complete": false,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 6,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [
+    "detectorscope: failed"
+  ],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 6,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+  "prose_words": 1800,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1225,
+        "start": 1090
+      }
+    ],
+    [
+      {
+        "end": 1314,
+        "start": 1225
+      }
+    ],
+    [
+      {
+        "end": 1475,
+        "start": 1314
+      }
+    ],
+    [
+      {
+        "end": 1495,
+        "start": 1475
+      }
+    ],
+    [
+      {
+        "end": 1626,
+        "start": 1497
+      }
+    ],
+    [
+      {
+        "end": 1677,
+        "start": 1626
+      }
+    ],
+    [
+      {
+        "end": 1718,
+        "start": 1683
+      }
+    ],
+    [
+      {
+        "end": 1728,
+        "start": 1722
+      },
+      {
+        "end": 1812,
+        "start": 1730
+      }
+    ],
+    [
+      {
+        "end": 1892,
+        "start": 1812
+      }
+    ],
+    [
+      {
+        "end": 1947,
+        "start": 1892
+      }
+    ],
+    [
+      {
+        "end": 1954,
+        "start": 1951
+      },
+      {
+        "end": 2038,
+        "start": 1956
+      }
+    ],
+    [
+      {
+        "end": 2118,
+        "start": 2038
+      }
+    ],
+    [
+      {
+        "end": 2173,
+        "start": 2118
+      }
+    ],
+    [
+      {
+        "end": 2187,
+        "start": 2177
+      },
+      {
+        "end": 2234,
+        "start": 2189
+      }
+    ],
+    [
+      {
+        "end": 2266,
+        "start": 2234
+      }
+    ],
+    [
+      {
+        "end": 2355,
+        "start": 2266
+      }
+    ],
+    [
+      {
+        "end": 2401,
+        "start": 2355
+      }
+    ],
+    [
+      {
+        "end": 2435,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2481,
+        "start": 2442
+      },
+      {
+        "end": 2485,
+        "start": 2482
+      },
+      {
+        "end": 2680,
+        "start": 2563
+      }
+    ],
+    [
+      {
+        "end": 2804,
+        "start": 2680
+      }
+    ],
+    [
+      {
+        "end": 2859,
+        "start": 2804
+      }
+    ],
+    [
+      {
+        "end": 3007,
+        "start": 2859
+      }
+    ],
+    [
+      {
+        "end": 3051,
+        "start": 3014
+      }
+    ],
+    [
+      {
+        "end": 3132,
+        "start": 3053
+      }
+    ],
+    [
+      {
+        "end": 3380,
+        "start": 3132
+      }
+    ],
+    [
+      {
+        "end": 3556,
+        "start": 3380
+      }
+    ],
+    [
+      {
+        "end": 3620,
+        "start": 3556
+      }
+    ],
+    [
+      {
+        "end": 3871,
+        "start": 3826
+      }
+    ],
+    [
+      {
+        "end": 3913,
+        "start": 3873
+      },
+      {
+        "end": 3938,
+        "start": 3914
+      },
+      {
+        "end": 4053,
+        "start": 4014
+      }
+    ],
+    [
+      {
+        "end": 4126,
+        "start": 4053
+      }
+    ],
+    [
+      {
+        "end": 4200,
+        "start": 4126
+      }
+    ],
+    [
+      {
+        "end": 4277,
+        "start": 4200
+      },
+      {
+        "end": 4286,
+        "start": 4278
+      },
+      {
+        "end": 4396,
+        "start": 4361
+      },
+      {
+        "end": 4419,
+        "start": 4397
+      },
+      {
+        "end": 4536,
+        "start": 4511
+      }
+    ],
+    [
+      {
+        "end": 4619,
+        "start": 4538
+      }
+    ],
+    [
+      {
+        "end": 4686,
+        "start": 4621
+      }
+    ],
+    [
+      {
+        "end": 4788,
+        "start": 4686
+      }
+    ],
+    [
+      {
+        "end": 4838,
+        "start": 4788
+      }
+    ],
+    [
+      {
+        "end": 5064,
+        "start": 4838
+      }
+    ],
+    [
+      {
+        "end": 5186,
+        "start": 5066
+      }
+    ],
+    [
+      {
+        "end": 5375,
+        "start": 5186
+      }
+    ],
+    [
+      {
+        "end": 5483,
+        "start": 5375
+      }
+    ],
+    [
+      {
+        "end": 5598,
+        "start": 5485
+      }
+    ],
+    [
+      {
+        "end": 5720,
+        "start": 5598
+      }
+    ],
+    [
+      {
+        "end": 5764,
+        "start": 5727
+      }
+    ],
+    [
+      {
+        "end": 5894,
+        "start": 5766
+      }
+    ],
+    [
+      {
+        "end": 6037,
+        "start": 5894
+      }
+    ],
+    [
+      {
+        "end": 6055,
+        "start": 6037
+      },
+      {
+        "end": 6075,
+        "start": 6056
+      },
+      {
+        "end": 6185,
+        "start": 6138
+      }
+    ],
+    [
+      {
+        "end": 6272,
+        "start": 6187
+      }
+    ],
+    [
+      {
+        "end": 6377,
+        "start": 6272
+      }
+    ],
+    [
+      {
+        "end": 6532,
+        "start": 6377
+      }
+    ],
+    [
+      {
+        "end": 6637,
+        "start": 6532
+      }
+    ],
+    [
+      {
+        "end": 6709,
+        "start": 6637
+      }
+    ],
+    [
+      {
+        "end": 6791,
+        "start": 6711
+      }
+    ],
+    [
+      {
+        "end": 6898,
+        "start": 6791
+      }
+    ],
+    [
+      {
+        "end": 6915,
+        "start": 6898
+      }
+    ],
+    [
+      {
+        "end": 6935,
+        "start": 6925
+      }
+    ],
+    [
+      {
+        "end": 7064,
+        "start": 6956
+      }
+    ],
+    [
+      {
+        "end": 7237,
+        "start": 7064
+      }
+    ],
+    [
+      {
+        "end": 7420,
+        "start": 7239
+      }
+    ],
+    [
+      {
+        "end": 7560,
+        "start": 7420
+      }
+    ],
+    [
+      {
+        "end": 7578,
+        "start": 7564
+      },
+      {
+        "end": 7676,
+        "start": 7580
+      }
+    ],
+    [
+      {
+        "end": 7749,
+        "start": 7676
+      }
+    ],
+    [
+      {
+        "end": 7827,
+        "start": 7749
+      }
+    ],
+    [
+      {
+        "end": 7907,
+        "start": 7834
+      }
+    ],
+    [
+      {
+        "end": 7917,
+        "start": 7909
+      }
+    ],
+    [
+      {
+        "end": 7939,
+        "start": 7917
+      }
+    ],
+    [
+      {
+        "end": 8053,
+        "start": 7939
+      }
+    ],
+    [
+      {
+        "end": 8054,
+        "start": 8053
+      },
+      {
+        "end": 8065,
+        "start": 8055
+      },
+      {
+        "end": 8308,
+        "start": 8186
+      }
+    ],
+    [
+      {
+        "end": 8370,
+        "start": 8310
+      }
+    ],
+    [
+      {
+        "end": 8504,
+        "start": 8370
+      }
+    ],
+    [
+      {
+        "end": 8664,
+        "start": 8504
+      }
+    ],
+    [
+      {
+        "end": 8800,
+        "start": 8664
+      }
+    ],
+    [
+      {
+        "end": 8874,
+        "start": 8800
+      }
+    ],
+    [
+      {
+        "end": 8891,
+        "start": 8884
+      }
+    ],
+    [
+      {
+        "end": 9046,
+        "start": 9013
+      }
+    ],
+    [
+      {
+        "end": 9135,
+        "start": 9048
+      }
+    ],
+    [
+      {
+        "end": 9264,
+        "start": 9135
+      }
+    ],
+    [
+      {
+        "end": 9322,
+        "start": 9264
+      }
+    ],
+    [
+      {
+        "end": 9380,
+        "start": 9324
+      }
+    ],
+    [
+      {
+        "end": 9431,
+        "start": 9380
+      }
+    ],
+    [
+      {
+        "end": 9524,
+        "start": 9431
+      }
+    ],
+    [
+      {
+        "end": 9560,
+        "start": 9527
+      }
+    ],
+    [
+      {
+        "end": 9717,
+        "start": 9629
+      }
+    ],
+    [
+      {
+        "end": 9837,
+        "start": 9831
+      }
+    ],
+    [
+      {
+        "end": 9883,
+        "start": 9839
+      }
+    ],
+    [
+      {
+        "end": 9956,
+        "start": 9883
+      }
+    ],
+    [
+      {
+        "end": 10067,
+        "start": 9956
+      }
+    ],
+    [
+      {
+        "end": 10191,
+        "start": 10067
+      }
+    ],
+    [
+      {
+        "end": 10340,
+        "start": 10193
+      }
+    ],
+    [
+      {
+        "end": 10421,
+        "start": 10340
+      }
+    ],
+    [
+      {
+        "end": 10477,
+        "start": 10423
+      }
+    ],
+    [
+      {
+        "end": 10558,
+        "start": 10477
+      }
+    ],
+    [
+      {
+        "end": 10640,
+        "start": 10558
+      }
+    ],
+    [
+      {
+        "end": 10674,
+        "start": 10640
+      },
+      {
+        "end": 10679,
+        "start": 10675
+      },
+      {
+        "end": 10818,
+        "start": 10766
+      }
+    ],
+    [
+      {
+        "end": 10926,
+        "start": 10820
+      }
+    ],
+    [
+      {
+        "end": 10958,
+        "start": 10928
+      }
+    ],
+    [
+      {
+        "end": 10984,
+        "start": 10958
+      }
+    ],
+    [
+      {
+        "end": 11056,
+        "start": 10988
+      }
+    ],
+    [
+      {
+        "end": 11179,
+        "start": 11169
+      }
+    ],
+    [
+      {
+        "end": 11243,
+        "start": 11181
+      },
+      {
+        "end": 11261,
+        "start": 11244
+      },
+      {
+        "end": 11338,
+        "start": 11337
+      }
+    ],
+    [
+      {
+        "end": 11383,
+        "start": 11338
+      }
+    ],
+    [
+      {
+        "end": 11522,
+        "start": 11383
+      }
+    ],
+    [
+      {
+        "end": 11640,
+        "start": 11522
+      }
+    ],
+    [
+      {
+        "end": 11688,
+        "start": 11642
+      }
+    ],
+    [
+      {
+        "end": 11836,
+        "start": 11688
+      }
+    ],
+    [
+      {
+        "end": 11882,
+        "start": 11836
+      }
+    ],
+    [
+      {
+        "end": 11987,
+        "start": 11884
+      }
+    ],
+    [
+      {
+        "end": 12055,
+        "start": 11987
+      }
+    ],
+    [
+      {
+        "end": 12126,
+        "start": 12055
+      },
+      {
+        "end": 12139,
+        "start": 12127
+      },
+      {
+        "end": 12191,
+        "start": 12187
+      },
+      {
+        "end": 12195,
+        "start": 12192
+      },
+      {
+        "end": 12327,
+        "start": 12262
+      }
+    ],
+    [
+      {
+        "end": 12399,
+        "start": 12329
+      }
+    ],
+    [
+      {
+        "end": 12542,
+        "start": 12399
+      }
+    ],
+    [
+      {
+        "end": 12626,
+        "start": 12542
+      }
+    ],
+    [
+      {
+        "end": 12746,
+        "start": 12626
+      }
+    ],
+    [
+      {
+        "end": 12822,
+        "start": 12749
+      }
+    ]
+  ],
+  "sentence_count": 113,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": [],
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-07-save-money-protect-your-site-with-a-cdn/backend.json",
+        "sha256": "4f45f68138c7b955d49396b01169bc594d7234929bf9dc663bbdbec4bc269e9a",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2020-05-07-save-money-protect-your-site-with-a-cdn/report.json",
+        "sha256": "8465c8e056b51c2c7b4651f8418995fcf7757285f53d369907c56c4a02d2394b",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2020-05-07-save-money-protect-your-site-with-a-cdn/report.json",
+        "sha256": "8465c8e056b51c2c7b4651f8418995fcf7757285f53d369907c56c4a02d2394b",
+        "origin": "original_failure",
+        "status": "failed"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

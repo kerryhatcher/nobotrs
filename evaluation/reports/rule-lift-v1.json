@@ -1,0 +1,1984 @@
+{
+  "comparisons": {
+    "(a) owner ai_drafted vs owner human (primary)": {
+      "a-testament-to": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "emphasize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.1352026336701102,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "empower": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "facilitate": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "foster": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "let-me-be-clear": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "leverage": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "pivotal": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.681121580202066,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "punctuation.em-dash-density": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 5.221932114882507,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "robust": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.9081621069360881,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "seamless": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.681121580202066,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "showcase": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.bold-inline-headers": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.5892836871381542,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.challenges-future-formula": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.coordinated-series": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.copula-avoidance": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.fragment-pattern": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 2.2704052673402204,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.list-heavy": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.9081621069360881,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.negative-parallelism": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.362243160404132,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.repeated-opening": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.rule-of-three": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 2.043364740606198,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.short-fragment": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 56.07901010330344,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.summary-close": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.title-case-headings": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 2.9515268475422864,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.uniform-paragraphs": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "underscore": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "utilize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "worth-noting": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      }
+    },
+    "(a-sensitivity) owner incl. medium-confidence post": {
+      "a-testament-to": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "emphasize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.1352026336701102,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "empower": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "facilitate": {
+        "lift": 0.49145192416846406,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 0.9239582370876837,
+        "reason": null
+      },
+      "foster": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "let-me-be-clear": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "leverage": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.9239582370876837,
+        "reason": null
+      },
+      "pivotal": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.681121580202066,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "punctuation.em-dash-density": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 5.221932114882507,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "robust": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.9081621069360881,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "seamless": {
+        "lift": 0.36858894312634805,
+        "ci": null,
+        "ai_per_10k": 0.681121580202066,
+        "human_per_10k": 1.8479164741753673,
+        "reason": null
+      },
+      "showcase": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.bold-inline-headers": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.5892836871381542,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.challenges-future-formula": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.coordinated-series": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.copula-avoidance": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.fragment-pattern": {
+        "lift": 0.8190865402807734,
+        "ci": null,
+        "ai_per_10k": 2.2704052673402204,
+        "human_per_10k": 2.771874711263051,
+        "reason": null
+      },
+      "structure.list-heavy": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.9081621069360881,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.negative-parallelism": {
+        "lift": 0.7371778862526961,
+        "ci": null,
+        "ai_per_10k": 1.362243160404132,
+        "human_per_10k": 1.8479164741753673,
+        "reason": null
+      },
+      "structure.repeated-opening": {
+        "lift": 0.24572596208423203,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.9239582370876837,
+        "reason": null
+      },
+      "structure.rule-of-three": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 2.043364740606198,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.short-fragment": {
+        "lift": 2.5289296931168876,
+        "ci": [
+          1.0449069967807243,
+          7.720225958814739
+        ],
+        "ai_per_10k": 56.07901010330344,
+        "human_per_10k": 22.17499769010441,
+        "reason": null
+      },
+      "structure.summary-close": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.9239582370876837,
+        "reason": null
+      },
+      "structure.title-case-headings": {
+        "lift": 1.5972187535475082,
+        "ci": null,
+        "ai_per_10k": 2.9515268475422864,
+        "human_per_10k": 1.8479164741753673,
+        "reason": null
+      },
+      "structure.uniform-paragraphs": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "underscore": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "utilize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "worth-noting": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 1.8479164741753673,
+        "reason": null
+      }
+    },
+    "(a) owner by genre: civic": {
+      "emphasize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.8209169642490662,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "empower": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.4104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "facilitate": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.8209169642490662,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "let-me-be-clear": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.4104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "pivotal": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.4104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "punctuation.em-dash-density": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 4.104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "robust": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.4104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.bold-inline-headers": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.2313754463735993,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.coordinated-series": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.4104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.fragment-pattern": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 2.0522924106226657,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.list-heavy": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.4104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.negative-parallelism": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.2313754463735993,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.short-fragment": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 73.88252678241597,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.title-case-headings": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 2.4627508927471986,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "underscore": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.4104584821245331,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      }
+    },
+    "(a) owner by genre: personal": {
+      "a-testament-to": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "emphasize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "foster": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "punctuation.em-dash-density": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "seamless": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.bold-inline-headers": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.challenges-future-formula": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.fragment-pattern": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.repeated-opening": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.rule-of-three": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.short-fragment": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.title-case-headings": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.uniform-paragraphs": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      }
+    },
+    "(a) owner by genre: review": {
+      "a-testament-to": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "foster": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "pivotal": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "robust": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "seamless": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "showcase": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.bold-inline-headers": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.fragment-pattern": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.list-heavy": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.negative-parallelism": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.rule-of-three": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.short-fragment": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.title-case-headings": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "utilize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "worth-noting": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      }
+    },
+    "(a) owner by genre: technical": {
+      "emphasize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "facilitate": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "leverage": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "punctuation.em-dash-density": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "robust": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "seamless": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.bold-inline-headers": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.challenges-future-formula": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.copula-avoidance": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.fragment-pattern": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.list-heavy": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.negative-parallelism": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.repeated-opening": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.rule-of-three": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.short-fragment": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.summary-close": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.title-case-headings": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": null,
+        "reason": "small denominator (see null_reason)"
+      }
+    },
+    "(b) Beemo model_output vs human_output": {
+      "a-testament-to": {
+        "lift": 4.227518127517352,
+        "ci": [
+          1.643098435770595,
+          19.84092304309488
+        ],
+        "ai_per_10k": 1.0606182110733715,
+        "human_per_10k": 0.2508843673950676,
+        "reason": null
+      },
+      "beacon": {
+        "lift": 4.691514019561939,
+        "ci": null,
+        "ai_per_10k": 0.33629357912082514,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "cutting-edge": {
+        "lift": 1.0826570814373706,
+        "ci": [
+          0.1736391120530353,
+          8.17942025711329
+        ],
+        "ai_per_10k": 0.15521242113268852,
+        "human_per_10k": 0.14336249565432435,
+        "reason": null
+      },
+      "delve": {
+        "lift": 2.3457570097809697,
+        "ci": [
+          0.5265730201892854,
+          15.64949586590604
+        ],
+        "ai_per_10k": 0.33629357912082514,
+        "human_per_10k": 0.14336249565432435,
+        "reason": null
+      },
+      "embark": {
+        "lift": 1.8044284690622843,
+        "ci": [
+          0.529821347021812,
+          8.45418194185231
+        ],
+        "ai_per_10k": 0.3880310528317213,
+        "human_per_10k": 0.21504374348148653,
+        "reason": null
+      },
+      "embark-on-a-journey": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.07760621056634426,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "emphasize": {
+        "lift": 4.619336880799447,
+        "ci": [
+          1.5436212596642038,
+          33.66243291629774
+        ],
+        "ai_per_10k": 0.8277995793743387,
+        "human_per_10k": 0.17920311956790544,
+        "reason": null
+      },
+      "empower": {
+        "lift": 0.5774171100999309,
+        "ci": [
+          0.0,
+          15.139207545450393
+        ],
+        "ai_per_10k": 0.20694989484358467,
+        "human_per_10k": 0.3584062391358109,
+        "reason": null
+      },
+      "facilitate": {
+        "lift": 1.0826570814373706,
+        "ci": [
+          0.2579342559860978,
+          5.530322097000141
+        ],
+        "ai_per_10k": 0.23281863169903277,
+        "human_per_10k": 0.21504374348148653,
+        "reason": null
+      },
+      "foster": {
+        "lift": 2.165314162874741,
+        "ci": [
+          0.44872839164703476,
+          17.64941066422255
+        ],
+        "ai_per_10k": 0.3880310528317213,
+        "human_per_10k": 0.17920311956790544,
+        "reason": null
+      },
+      "furthermore": {
+        "lift": 1.0425586710137644,
+        "ci": [
+          0.28551710746415465,
+          4.794428027009761
+        ],
+        "ai_per_10k": 0.33629357912082514,
+        "human_per_10k": 0.32256561522222976,
+        "reason": null
+      },
+      "harness-verb": {
+        "lift": 1.2630999283435989,
+        "ci": [
+          0.18087349399490488,
+          9.14734447394703
+        ],
+        "ai_per_10k": 0.1810811579881366,
+        "human_per_10k": 0.14336249565432435,
+        "reason": null
+      },
+      "heres-the-thing": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.025868736855448084,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "holistic": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.07760621056634426,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "important-to-note": {
+        "lift": 9.383028039123879,
+        "ci": null,
+        "ai_per_10k": 0.33629357912082514,
+        "human_per_10k": 0.03584062391358109,
+        "reason": null
+      },
+      "intricate": {
+        "lift": 2.004920521180316,
+        "ci": [
+          0.6210926577828504,
+          9.042673802272123
+        ],
+        "ai_per_10k": 0.6467184213862022,
+        "human_per_10k": 0.32256561522222976,
+        "reason": null
+      },
+      "let-me-be-clear": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.03584062391358109,
+        "reason": null
+      },
+      "leverage": {
+        "lift": 0.48118092508327576,
+        "ci": null,
+        "ai_per_10k": 0.05173747371089617,
+        "human_per_10k": 0.10752187174074326,
+        "reason": null
+      },
+      "meticulous": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.10347494742179233,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "moreover": {
+        "lift": 3.2479712443121116,
+        "ci": null,
+        "ai_per_10k": 0.23281863169903277,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "multifaceted": {
+        "lift": 1.0826570814373706,
+        "ci": null,
+        "ai_per_10k": 0.07760621056634426,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "myriad": {
+        "lift": 2.165314162874741,
+        "ci": null,
+        "ai_per_10k": 0.07760621056634426,
+        "human_per_10k": 0.03584062391358109,
+        "reason": null
+      },
+      "nevertheless": {
+        "lift": 1.0826570814373706,
+        "ci": null,
+        "ai_per_10k": 0.07760621056634426,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "not-just-x-but-y": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.05173747371089617,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "nuanced": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.025868736855448084,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "paradigm-shift": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.025868736855448084,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "paramount": {
+        "lift": 1.8044284690622843,
+        "ci": null,
+        "ai_per_10k": 0.12934368427724044,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "pivotal": {
+        "lift": 0.5774171100999309,
+        "ci": [
+          0.0,
+          6.790396425847702
+        ],
+        "ai_per_10k": 0.10347494742179233,
+        "human_per_10k": 0.17920311956790544,
+        "reason": null
+      },
+      "plays-a-role": {
+        "lift": 1.4435427752498273,
+        "ci": null,
+        "ai_per_10k": 0.10347494742179233,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "plethora": {
+        "lift": 1.4435427752498273,
+        "ci": null,
+        "ai_per_10k": 0.10347494742179233,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "punctuation.em-dash-density": {
+        "lift": 0.18044284690622844,
+        "ci": [
+          0.0,
+          2.714606464375272
+        ],
+        "ai_per_10k": 0.12934368427724044,
+        "human_per_10k": 0.7168124782716218,
+        "reason": null
+      },
+      "robust": {
+        "lift": 0.48118092508327576,
+        "ci": null,
+        "ai_per_10k": 0.05173747371089617,
+        "human_per_10k": 0.10752187174074326,
+        "reason": null
+      },
+      "seamless": {
+        "lift": 2.165314162874741,
+        "ci": null,
+        "ai_per_10k": 0.07760621056634426,
+        "human_per_10k": 0.03584062391358109,
+        "reason": null
+      },
+      "showcase": {
+        "lift": 1.52373959609704,
+        "ci": [
+          0.45672949446776684,
+          6.929301525056573
+        ],
+        "ai_per_10k": 0.4915060002535136,
+        "human_per_10k": 0.32256561522222976,
+        "reason": null
+      },
+      "statistics.burstiness": {
+        "lift": 2.249091198938347,
+        "ci": [
+          1.7362603601907713,
+          2.9685233572767924
+        ],
+        "ai_per_10k": 9.028189162551381,
+        "human_per_10k": 4.014149878321081,
+        "reason": null
+      },
+      "streamline": {
+        "lift": 2.165314162874741,
+        "ci": null,
+        "ai_per_10k": 0.07760621056634426,
+        "human_per_10k": 0.03584062391358109,
+        "reason": null
+      },
+      "structure.cheerful-opener": {
+        "lift": 4.932104482103576,
+        "ci": [
+          1.789147355027584,
+          20.301662264434487
+        ],
+        "ai_per_10k": 1.0606182110733715,
+        "human_per_10k": 0.21504374348148653,
+        "reason": null
+      },
+      "structure.coordinated-series": {
+        "lift": 1.0170415007441966,
+        "ci": [
+          0.4825482404739261,
+          2.2297823327503243
+        ],
+        "ai_per_10k": 0.8019308425188907,
+        "human_per_10k": 0.7884937260987839,
+        "reason": null
+      },
+      "structure.copula-avoidance": {
+        "lift": 0.24059046254163788,
+        "ci": null,
+        "ai_per_10k": 0.025868736855448084,
+        "human_per_10k": 0.10752187174074326,
+        "reason": null
+      },
+      "structure.fragment-pattern": {
+        "lift": 0.9938068042373432,
+        "ci": [
+          0.8317334874196186,
+          1.1918470096932852
+        ],
+        "ai_per_10k": 11.718537795517983,
+        "human_per_10k": 11.791565267568178,
+        "reason": null
+      },
+      "structure.negative-parallelism": {
+        "lift": 2.7266919088052295,
+        "ci": [
+          1.054802818577383,
+          8.611425056205256
+        ],
+        "ai_per_10k": 0.8795370530852349,
+        "human_per_10k": 0.32256561522222976,
+        "reason": null
+      },
+      "structure.repeated-opening": {
+        "lift": 1.207326684754401,
+        "ci": [
+          0.7548623676259967,
+          2.0299034089938086
+        ],
+        "ai_per_10k": 2.379923790701224,
+        "human_per_10k": 1.9712343152469598,
+        "reason": null
+      },
+      "structure.rule-of-three": {
+        "lift": 1.9934638324878566,
+        "ci": [
+          1.0078753370102944,
+          4.412726992531434
+        ],
+        "ai_per_10k": 1.500386737615989,
+        "human_per_10k": 0.7526531021852029,
+        "reason": null
+      },
+      "structure.short-fragment": {
+        "lift": 1.0244497114676194,
+        "ci": [
+          0.8403297386813459,
+          1.2434029677403895
+        ],
+        "ai_per_10k": 80.81393393641982,
+        "human_per_10k": 78.88521323379197,
+        "reason": null
+      },
+      "structure.significance-inflation": {
+        "lift": 2.6464950879580167,
+        "ci": [
+          0.8174307160824663,
+          12.316191146782527
+        ],
+        "ai_per_10k": 0.5691122108198579,
+        "human_per_10k": 0.21504374348148653,
+        "reason": null
+      },
+      "structure.summary-close": {
+        "lift": 7.939485263874051,
+        "ci": [
+          3.846897136457326,
+          21.825728739798
+        ],
+        "ai_per_10k": 2.5610049486893605,
+        "human_per_10k": 0.32256561522222976,
+        "reason": null
+      },
+      "structure.title-case-headings": {
+        "lift": 1.0363896847947478,
+        "ci": [
+          0.5872131730610501,
+          1.8849721305096379
+        ],
+        "ai_per_10k": 1.4486492639050927,
+        "human_per_10k": 1.3977843326296624,
+        "reason": null
+      },
+      "structure.uniform-paragraphs": {
+        "lift": 2.7362676486078814,
+        "ci": [
+          2.008871286223627,
+          3.838671454559799
+        ],
+        "ai_per_10k": 6.570659161283814,
+        "human_per_10k": 2.401321802209933,
+        "reason": null
+      },
+      "studies-show": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.025868736855448084,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "tapestry": {
+        "lift": 1.3833951596144178,
+        "ci": [
+          0.41202667256879677,
+          5.247314250965109
+        ],
+        "ai_per_10k": 0.594980947675306,
+        "human_per_10k": 0.43008748696297305,
+        "reason": null
+      },
+      "testament": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.12934368427724044,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "transformative": {
+        "lift": 2.8870855504996547,
+        "ci": null,
+        "ai_per_10k": 0.20694989484358467,
+        "human_per_10k": 0.07168124782716218,
+        "reason": null
+      },
+      "underscore": {
+        "lift": 0.7217713876249137,
+        "ci": null,
+        "ai_per_10k": 0.025868736855448084,
+        "human_per_10k": 0.03584062391358109,
+        "reason": null
+      },
+      "utilize": {
+        "lift": 2.165314162874741,
+        "ci": [
+          0.5154953618546099,
+          14.621497080836875
+        ],
+        "ai_per_10k": 0.31042484226537703,
+        "human_per_10k": 0.14336249565432435,
+        "reason": null
+      },
+      "worth-noting": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.5691122108198579,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      }
+    },
+    "(c) owner ai_drafted vs GAO 2008 (civic human control)": {
+      "a-testament-to": {
+        "lift": 111.33422635940516,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 0.004078539621788863,
+        "reason": null
+      },
+      "beacon": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.008157079243577727,
+        "reason": null
+      },
+      "cannot-be-overstated": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.0020392698108944317,
+        "reason": null
+      },
+      "cutting-edge": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.014274888676261024,
+        "reason": null
+      },
+      "embark": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.01019634905447216,
+        "reason": null
+      },
+      "emphasize": {
+        "lift": 3.2939120224676084,
+        "ci": [
+          0.5552352081503078,
+          8.170274890844569
+        ],
+        "ai_per_10k": 1.1352026336701102,
+        "human_per_10k": 0.344636598041159,
+        "reason": null
+      },
+      "empower": {
+        "lift": 5.301629826638341,
+        "ci": [
+          0.0,
+          38.5118985675941
+        ],
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.04282466602878307,
+        "reason": null
+      },
+      "facilitate": {
+        "lift": 0.3029502758079052,
+        "ci": [
+          0.0,
+          1.0793764218313233
+        ],
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 1.4988633110074074,
+        "reason": null
+      },
+      "foster": {
+        "lift": 1.3098144277577077,
+        "ci": [
+          0.0,
+          7.404411057413203
+        ],
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 0.3466758678520534,
+        "reason": null
+      },
+      "furthermore": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 1.3418395355685362,
+        "reason": null
+      },
+      "harness-verb": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.008157079243577727,
+        "reason": null
+      },
+      "holistic": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.034667586785205345,
+        "reason": null
+      },
+      "important-to-note": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.050981745272360796,
+        "reason": null
+      },
+      "intricate": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.0061178094326832955,
+        "reason": null
+      },
+      "let-me-be-clear": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "leverage": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 1.7741647354781558,
+        "reason": null
+      },
+      "moreover": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 1.2867792506743865,
+        "reason": null
+      },
+      "multifaceted": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.026510507541627613,
+        "reason": null
+      },
+      "myriad": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.034667586785205345,
+        "reason": null
+      },
+      "nevertheless": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.3466758678520534,
+        "reason": null
+      },
+      "nuanced": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.004078539621788863,
+        "reason": null
+      },
+      "paradigm-shift": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.0020392698108944317,
+        "reason": null
+      },
+      "paramount": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.03670685659609978,
+        "reason": null
+      },
+      "pivotal": {
+        "lift": 66.80053581564309,
+        "ci": [
+          0.0,
+          877.4554499870135
+        ],
+        "ai_per_10k": 0.681121580202066,
+        "human_per_10k": 0.01019634905447216,
+        "reason": null
+      },
+      "plays-a-role": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.0061178094326832955,
+        "reason": null
+      },
+      "punctuation.em-dash-density": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 5.221932114882507,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "robust": {
+        "lift": 5.36550488479061,
+        "ci": [
+          0.9548131968339231,
+          15.265462233264536
+        ],
+        "ai_per_10k": 0.9081621069360881,
+        "human_per_10k": 0.16925939430423784,
+        "reason": null
+      },
+      "seamless": {
+        "lift": 15.90488947991502,
+        "ci": [
+          0.0,
+          98.82595778426051
+        ],
+        "ai_per_10k": 0.681121580202066,
+        "human_per_10k": 0.04282466602878307,
+        "reason": null
+      },
+      "showcase": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "streamline": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.09176714149024943,
+        "reason": null
+      },
+      "structure.bold-inline-headers": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 1.5892836871381542,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.challenges-future-formula": {
+        "lift": 111.33422635940516,
+        "ci": null,
+        "ai_per_10k": 0.45408105346804406,
+        "human_per_10k": 0.004078539621788863,
+        "reason": null
+      },
+      "structure.cheerful-opener": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.0020392698108944317,
+        "reason": null
+      },
+      "structure.coordinated-series": {
+        "lift": 0.3674396909551325,
+        "ci": [
+          0.0,
+          1.4844405587092044
+        ],
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.6178987527010129,
+        "reason": null
+      },
+      "structure.copula-avoidance": {
+        "lift": 11.133422635940516,
+        "ci": [
+          0.0,
+          145.11103290257185
+        ],
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.02039269810894432,
+        "reason": null
+      },
+      "structure.fragment-pattern": {
+        "lift": 14.844563514587355,
+        "ci": [
+          6.0734540555807675,
+          30.211682529063363
+        ],
+        "ai_per_10k": 2.2704052673402204,
+        "human_per_10k": 0.1529452358170824,
+        "reason": null
+      },
+      "structure.list-heavy": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.9081621069360881,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "structure.negative-parallelism": {
+        "lift": 12.60387468219681,
+        "ci": [
+          1.8207648091864685,
+          38.03217768151457
+        ],
+        "ai_per_10k": 1.362243160404132,
+        "human_per_10k": 0.10808129997740488,
+        "reason": null
+      },
+      "structure.repeated-opening": {
+        "lift": 0.3236460068587359,
+        "ci": [
+          0.0,
+          1.362209239152399
+        ],
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.7015088149476846,
+        "reason": null
+      },
+      "structure.rule-of-three": {
+        "lift": 1.176065771402167,
+        "ci": [
+          0.34235111710752647,
+          2.4124055512730673
+        ],
+        "ai_per_10k": 2.043364740606198,
+        "human_per_10k": 1.737457878882056,
+        "reason": null
+      },
+      "structure.short-fragment": {
+        "lift": 0.9988215135396292,
+        "ci": [
+          0.6001919464348839,
+          1.5449730793999576
+        ],
+        "ai_per_10k": 56.07901010330344,
+        "human_per_10k": 56.1451764335455,
+        "reason": null
+      },
+      "structure.significance-inflation": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.04078539621788864,
+        "reason": null
+      },
+      "structure.title-case-headings": {
+        "lift": 5.883516027123037,
+        "ci": [
+          3.5195977791835635,
+          9.216507892638594
+        ],
+        "ai_per_10k": 2.9515268475422864,
+        "human_per_10k": 0.5016603734800302,
+        "reason": null
+      },
+      "structure.uniform-paragraphs": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.0,
+        "reason": "human rate is zero, so lift is undefined"
+      },
+      "studies-show": {
+        "lift": 0.0,
+        "ci": [
+          0.0,
+          0.0
+        ],
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.02039269810894432,
+        "reason": null
+      },
+      "tapestry": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.0061178094326832955,
+        "reason": null
+      },
+      "transformative": {
+        "lift": 0.0,
+        "ci": null,
+        "ai_per_10k": 0.0,
+        "human_per_10k": 0.0020392698108944317,
+        "reason": null
+      },
+      "underscore": {
+        "lift": 7.952444739957511,
+        "ci": [
+          0.0,
+          48.510102134350824
+        ],
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.028549777352522048,
+        "reason": null
+      },
+      "utilize": {
+        "lift": 0.8370994463113169,
+        "ci": [
+          0.0,
+          4.201300078164698
+        ],
+        "ai_per_10k": 0.22704052673402203,
+        "human_per_10k": 0.27122288484895946,
+        "reason": null
+      }
+    },
+    "(d) AI sets vs W&I native (non-native check)": {
+      "facilitate": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      },
+      "furthermore": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      },
+      "harness-verb": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      },
+      "moreover": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      },
+      "statistics.burstiness": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 4.349717268377556,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.coordinated-series": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.copula-avoidance": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.fragment-pattern": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.9666038374172345,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.negative-parallelism": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 1.449905756125852,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.repeated-opening": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.rule-of-three": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 1.933207674834469,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.short-fragment": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 7.732830699337876,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.uniform-paragraphs": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.9666038374172345,
+        "reason": "small denominator (see null_reason)"
+      },
+      "utilize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.4833019187086173,
+        "reason": "small denominator (see null_reason)"
+      }
+    },
+    "(d) AI sets vs W&I learner (non-native check)": {
+      "embark": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.17549709552306908,
+        "reason": "small denominator (see null_reason)"
+      },
+      "foster": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.17549709552306908,
+        "reason": "small denominator (see null_reason)"
+      },
+      "furthermore": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 2.281462241799898,
+        "reason": "small denominator (see null_reason)"
+      },
+      "moreover": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 3.334444814938313,
+        "reason": "small denominator (see null_reason)"
+      },
+      "nevertheless": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.8774854776153455,
+        "reason": "small denominator (see null_reason)"
+      },
+      "not-just-x-but-y": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.17549709552306908,
+        "reason": "small denominator (see null_reason)"
+      },
+      "plays-a-role": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.17549709552306908,
+        "reason": "small denominator (see null_reason)"
+      },
+      "plethora": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.17549709552306908,
+        "reason": "small denominator (see null_reason)"
+      },
+      "statistics.burstiness": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 6.3178954388304875,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.coordinated-series": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.8774854776153455,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.fragment-pattern": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 4.211930292553658,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.negative-parallelism": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.7019883820922763,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.repeated-opening": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 1.2284796686614836,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.rule-of-three": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 1.5794738597076219,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.short-fragment": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 21.761639844860568,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.summary-close": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 2.8079535283691053,
+        "reason": "small denominator (see null_reason)"
+      },
+      "structure.uniform-paragraphs": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.5264912865692073,
+        "reason": "small denominator (see null_reason)"
+      },
+      "studies-show": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.17549709552306908,
+        "reason": "small denominator (see null_reason)"
+      },
+      "utilize": {
+        "lift": null,
+        "ci": null,
+        "ai_per_10k": null,
+        "human_per_10k": 0.17549709552306908,
+        "reason": "small denominator (see null_reason)"
+      }
+    }
+  },
+  "caveats": [
+    "Owner corpus confounds authorship with genre and era (human posts are technical tutorials, AI drafts mostly civic).",
+    "W&I uses the dev split only.",
+    "Beemo and GAO texts are local; this file holds aggregates only.",
+    "Owner word counts come from scripts/corpora.py (front matter included)."
+  ]
+}

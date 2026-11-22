@@ -1,0 +1,613 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 10.220383644104004
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 16447.630571,
+        "excerpt_bytes": 2217,
+        "excerpt_coverage": 0.41066121842496284,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.41066121842496284,
+        "full_coverage_output": 8.24696609327185,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.41066121842496284,
+        "precision": "float32",
+        "prepared_bytes": 5394,
+        "prepared_words": 904,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 10.220383644104004,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 130,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": false,
+            "prose": {
+              "end": 524,
+              "start": 0
+            },
+            "raw_output": 8.148292541503906,
+            "source_ranges": [
+              {
+                "end": 872,
+                "start": 830
+              },
+              {
+                "end": 986,
+                "start": 945
+              },
+              {
+                "end": 1202,
+                "start": 1103
+              },
+              {
+                "end": 1536,
+                "start": 1204
+              },
+              {
+                "end": 1547,
+                "start": 1541
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 5,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 33,
+            "heading": "Bottom line up front:",
+            "index": 1,
+            "insufficient_context": true,
+            "prose": {
+              "end": 665,
+              "start": 524
+            },
+            "raw_output": 5.128729343414307,
+            "source_ranges": [
+              {
+                "end": 1562,
+                "start": 1547
+              },
+              {
+                "end": 1687,
+                "start": 1564
+              },
+              {
+                "end": 1764,
+                "start": 1763
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 8,
+              "start": 5
+            }
+          },
+          {
+            "body_tokens": 166,
+            "heading": "A Treasure Trove of Exhibits",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1434,
+              "start": 665
+            },
+            "raw_output": 4.110452175140381,
+            "source_ranges": [
+              {
+                "end": 1791,
+                "start": 1764
+              },
+              {
+                "end": 1824,
+                "start": 1800
+              },
+              {
+                "end": 1826,
+                "start": 1825
+              },
+              {
+                "end": 1840,
+                "start": 1828
+              },
+              {
+                "end": 2625,
+                "start": 2517
+              },
+              {
+                "end": 2638,
+                "start": 2626
+              },
+              {
+                "end": 3161,
+                "start": 2711
+              },
+              {
+                "end": 3687,
+                "start": 3632
+              },
+              {
+                "end": 3700,
+                "start": 3688
+              },
+              {
+                "end": 4216,
+                "start": 4175
+              },
+              {
+                "end": 4229,
+                "start": 4217
+              },
+              {
+                "end": 4385,
+                "start": 4376
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 20,
+              "start": 8
+            }
+          },
+          {
+            "body_tokens": 499,
+            "heading": "Spotlight on Iconic Aircraft",
+            "index": 3,
+            "insufficient_context": false,
+            "prose": {
+              "end": 3557,
+              "start": 1434
+            },
+            "raw_output": 10.180456161499023,
+            "source_ranges": [
+              {
+                "end": 4404,
+                "start": 4385
+              },
+              {
+                "end": 4437,
+                "start": 4413
+              },
+              {
+                "end": 4439,
+                "start": 4438
+              },
+              {
+                "end": 4453,
+                "start": 4441
+              },
+              {
+                "end": 4652,
+                "start": 4527
+              },
+              {
+                "end": 4668,
+                "start": 4658
+              },
+              {
+                "end": 4865,
+                "start": 4670
+              },
+              {
+                "end": 4959,
+                "start": 4934
+              },
+              {
+                "end": 4985,
+                "start": 4961
+              },
+              {
+                "end": 4988,
+                "start": 4987
+              },
+              {
+                "end": 5003,
+                "start": 4991
+              },
+              {
+                "end": 5102,
+                "start": 5082
+              },
+              {
+                "end": 5277,
+                "start": 5104
+              },
+              {
+                "end": 5375,
+                "start": 5346
+              },
+              {
+                "end": 5401,
+                "start": 5377
+              },
+              {
+                "end": 5404,
+                "start": 5403
+              },
+              {
+                "end": 5419,
+                "start": 5407
+              },
+              {
+                "end": 5508,
+                "start": 5498
+              },
+              {
+                "end": 5645,
+                "start": 5510
+              },
+              {
+                "end": 5721,
+                "start": 5714
+              },
+              {
+                "end": 5747,
+                "start": 5723
+              },
+              {
+                "end": 5750,
+                "start": 5749
+              },
+              {
+                "end": 5765,
+                "start": 5753
+              },
+              {
+                "end": 5859,
+                "start": 5844
+              },
+              {
+                "end": 5983,
+                "start": 5861
+              },
+              {
+                "end": 6060,
+                "start": 6054
+              },
+              {
+                "end": 6086,
+                "start": 6062
+              },
+              {
+                "end": 6089,
+                "start": 6088
+              },
+              {
+                "end": 6104,
+                "start": 6092
+              },
+              {
+                "end": 6198,
+                "start": 6183
+              },
+              {
+                "end": 6346,
+                "start": 6200
+              },
+              {
+                "end": 6425,
+                "start": 6417
+              },
+              {
+                "end": 6451,
+                "start": 6427
+              },
+              {
+                "end": 6454,
+                "start": 6453
+              },
+              {
+                "end": 6469,
+                "start": 6457
+              },
+              {
+                "end": 6566,
+                "start": 6548
+              },
+              {
+                "end": 6714,
+                "start": 6568
+              },
+              {
+                "end": 6813,
+                "start": 6783
+              },
+              {
+                "end": 6839,
+                "start": 6815
+              },
+              {
+                "end": 6842,
+                "start": 6841
+              },
+              {
+                "end": 6857,
+                "start": 6845
+              },
+              {
+                "end": 6948,
+                "start": 6936
+              },
+              {
+                "end": 7073,
+                "start": 6950
+              },
+              {
+                "end": 7151,
+                "start": 7144
+              },
+              {
+                "end": 7177,
+                "start": 7153
+              },
+              {
+                "end": 7180,
+                "start": 7179
+              },
+              {
+                "end": 7195,
+                "start": 7183
+              },
+              {
+                "end": 7294,
+                "start": 7274
+              },
+              {
+                "end": 7633,
+                "start": 7296
+              },
+              {
+                "end": 7737,
+                "start": 7706
+              },
+              {
+                "end": 7740,
+                "start": 7739
+              },
+              {
+                "end": 7755,
+                "start": 7743
+              },
+              {
+                "end": 7915,
+                "start": 7904
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 45,
+              "start": 20
+            }
+          },
+          {
+            "body_tokens": 79,
+            "heading": "Educational Opportunities",
+            "index": 4,
+            "insufficient_context": true,
+            "prose": {
+              "end": 3968,
+              "start": 3557
+            },
+            "raw_output": 9.69727611541748,
+            "source_ranges": [
+              {
+                "end": 7929,
+                "start": 7915
+              },
+              {
+                "end": 7951,
+                "start": 7939
+              },
+              {
+                "end": 8453,
+                "start": 8072
+              },
+              {
+                "end": 8530,
+                "start": 8529
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 50,
+              "start": 45
+            }
+          },
+          {
+            "body_tokens": 291,
+            "heading": "A Family-Friendly Destination",
+            "index": 5,
+            "insufficient_context": false,
+            "prose": {
+              "end": 5193,
+              "start": 3968
+            },
+            "raw_output": 7.8933820724487305,
+            "source_ranges": [
+              {
+                "end": 8558,
+                "start": 8530
+              },
+              {
+                "end": 8598,
+                "start": 8564
+              },
+              {
+                "end": 8627,
+                "start": 8603
+              },
+              {
+                "end": 8629,
+                "start": 8628
+              },
+              {
+                "end": 8643,
+                "start": 8631
+              },
+              {
+                "end": 9079,
+                "start": 9054
+              },
+              {
+                "end": 9082,
+                "start": 9081
+              },
+              {
+                "end": 9097,
+                "start": 9085
+              },
+              {
+                "end": 9558,
+                "start": 9172
+              },
+              {
+                "end": 10235,
+                "start": 10165
+              },
+              {
+                "end": 10238,
+                "start": 10237
+              },
+              {
+                "end": 10253,
+                "start": 10241
+              },
+              {
+                "end": 10345,
+                "start": 10330
+              },
+              {
+                "end": 10442,
+                "start": 10418
+              },
+              {
+                "end": 10445,
+                "start": 10444
+              },
+              {
+                "end": 10460,
+                "start": 10448
+              },
+              {
+                "end": 10847,
+                "start": 10535
+              },
+              {
+                "end": 10885,
+                "start": 10849
+              },
+              {
+                "end": 11034,
+                "start": 11021
+              },
+              {
+                "end": 11170,
+                "start": 11122
+              },
+              {
+                "end": 11201,
+                "start": 11172
+              },
+              {
+                "end": 11235,
+                "start": 11203
+              },
+              {
+                "end": 11273,
+                "start": 11236
+              },
+              {
+                "end": 11368,
+                "start": 11326
+              },
+              {
+                "end": 11377,
+                "start": 11373
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 70,
+              "start": 50
+            }
+          },
+          {
+            "body_tokens": 37,
+            "heading": "Sign up for updates directly to your inbox",
+            "index": 6,
+            "insufficient_context": true,
+            "prose": {
+              "end": 5394,
+              "start": 5193
+            },
+            "raw_output": 3.5414958000183105,
+            "source_ranges": [
+              {
+                "end": 11415,
+                "start": 11377
+              },
+              {
+                "end": 11484,
+                "start": 11417
+              },
+              {
+                "end": 11495,
+                "start": 11486
+              },
+              {
+                "end": 11550,
+                "start": 11497
+              },
+              {
+                "end": 11581,
+                "start": 11552
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 77,
+              "start": 70
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

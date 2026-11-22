@@ -1,0 +1,534 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-09-01-coding-with-ai-how-real-time-collaboration-transforms-your-workflow.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 565,
+  "leverage_counts": {
+    "2": 2,
+    "3": 2,
+    "4": 11
+  },
+  "findings": [
+    {
+      "rule_id": "structure.copula-avoidance",
+      "guidance_id": "structure.copula-avoidance",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 54,
+        "column": 70,
+        "end_line": 54,
+        "end_column": 92,
+        "source_ranges": [
+          {
+            "start": 3435,
+            "end": 3457
+          }
+        ]
+      },
+      "matched_text": "functions as you type.",
+      "sentence": "Editor Autocomplete Tools like GitHub Copilot fill in syntax, boilerplate, or even whole functions as you type.",
+      "context": null,
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "message": null,
+      "why": "An indirect linking phrase may add words without clarifying a role.",
+      "fix": "Consider is when the original linking phrase adds no meaning.",
+      "keep_when": "Keep acts as or serves as when describing a temporary or functional role."
+    },
+    {
+      "rule_id": "structure.challenges-future-formula",
+      "guidance_id": "structure.challenges-future-formula",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 78,
+        "column": 4,
+        "end_line": 78,
+        "end_column": 48,
+        "source_ranges": [
+          {
+            "start": 4194,
+            "end": 4242
+          }
+        ]
+      },
+      "matched_text": "Looking Ahead: What’s Coming Up in Episode 2",
+      "sentence": "Looking Ahead: What’s Coming Up in Episode 2",
+      "context": null,
+      "suggestion": "Use a heading or transition specific to the actual next point.",
+      "message": null,
+      "why": "A generic transition can conceal what the next section actually covers.",
+      "fix": "Use the specific next point if the supplied material supports it.",
+      "keep_when": "Keep literal discussion of future challenges or venue-required headings."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 92,
+        "column": 84,
+        "end_line": 92,
+        "end_column": 102,
+        "source_ranges": [
+          {
+            "start": 4907,
+            "end": 4925
+          }
+        ]
+      },
+      "matched_text": "agentic workflows?",
+      "sentence": "agentic workflows?",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 96,
+        "column": 1,
+        "end_line": 96,
+        "end_column": 7,
+        "source_ranges": [
+          {
+            "start": 4984,
+            "end": 4990
+          }
+        ]
+      },
+      "matched_text": "-Kerry",
+      "sentence": "-Kerry",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 16,
+        "column": 94,
+        "end_line": 16,
+        "end_column": 95,
+        "source_ranges": [
+          {
+            "start": 1302,
+            "end": 1305
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "Imagine coding alongside a teammate who’s always alert, never grumpy, and can help brainstorm—or auto-complete—your next idea.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 16,
+        "column": 111,
+        "end_line": 16,
+        "end_column": 112,
+        "source_ranges": [
+          {
+            "start": 1321,
+            "end": 1324
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "Imagine coding alongside a teammate who’s always alert, never grumpy, and can help brainstorm—or auto-complete—your next idea.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 16,
+        "column": 357,
+        "end_line": 16,
+        "end_column": 358,
+        "source_ranges": [
+          {
+            "start": 1575,
+            "end": 1578
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "Now, let’s take a deeper dive into what that means—and how to get the most out of it as a junior dev.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "structure.title-case-headings",
+      "guidance_id": "structure.title-case-headings",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 20,
+        "column": 4,
+        "end_line": 20,
+        "end_column": 32,
+        "source_ranges": [
+          {
+            "start": 1638,
+            "end": 1668
+          }
+        ]
+      },
+      "matched_text": "What Is Vibe‑Coding, Really?",
+      "sentence": "What Is Vibe‑Coding, Really?",
+      "context": null,
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "message": null,
+      "why": "Heading capitalization may distract if it conflicts with the venue style.",
+      "fix": "Use the required or established heading style consistently.",
+      "keep_when": "Keep title case when the publication or naming convention requires it."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 26,
+        "column": 99,
+        "end_line": 26,
+        "end_column": 100,
+        "source_ranges": [
+          {
+            "start": 2044,
+            "end": 2047
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "The AI provides answers instantly—and might even expose you to new approaches.",
+      "context": "list_item",
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 32,
+        "column": 18,
+        "end_line": 32,
+        "end_column": 19,
+        "source_ranges": [
+          {
+            "start": 2306,
+            "end": 2309
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "AI as Teammate—not a Replace‑mate",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 36,
+        "column": 27,
+        "end_line": 36,
+        "end_column": 28,
+        "source_ranges": [
+          {
+            "start": 2408,
+            "end": 2411
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "You still steer the ship—AI's suggestions are just that, suggestions.",
+      "context": "list_item",
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 40,
+        "column": 138,
+        "end_line": 40,
+        "end_column": 139,
+        "source_ranges": [
+          {
+            "start": 2746,
+            "end": 2749
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "You’re learning how to ask the right questions—an invaluable skill as you level up.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 56,
+        "column": 66,
+        "end_line": 56,
+        "end_column": 67,
+        "source_ranges": [
+          {
+            "start": 3528,
+            "end": 3531
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "This kind of real-time collaboration helps you stay “in the zone”—you don’t disrupt your flow to lookup docs, you experiment faster, and feel that creative spark carry on without friction.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 80,
+        "column": 56,
+        "end_line": 80,
+        "end_column": 57,
+        "source_ranges": [
+          {
+            "start": 4301,
+            "end": 4304
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "Next time, we’ll zoom in on autocomplete in VS Code—with hands‑on tips and tricks to smooth your vibe‑coding workflow:",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 90,
+        "column": 26,
+        "end_line": 90,
+        "end_column": 27,
+        "source_ranges": [
+          {
+            "start": 4604,
+            "end": 4607
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "Vibe‑coding is not sci-fi—it’s already here.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "fail",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 15,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

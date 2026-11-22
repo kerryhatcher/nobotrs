@@ -1,0 +1,17 @@
+{
+  "version": "humanize-v1",
+  "baseline_revision": "aef3b239c6266ae53f09f0b2a5d8f54e8f1de680",
+  "scope": "default offline detection only",
+  "candidate_ids": ["burstiness-units", "punctuation-skip-list-separators", "structure-votes"],
+  "informational_only": ["model-full-coverage-thresholds"],
+  "error_budget": {
+    "human_fp_wilson_upper_95": 0.05,
+    "human_fp_no_worse_than_baseline": true,
+    "minimum_recall_gain": 0.10,
+    "recall_gain_interval_lower_exclusive": 0
+  },
+  "minimum_independent_human_sources_per_genre": 73,
+  "recall_interval": "paired source bootstrap, 2000 replicates, seed 0; a degenerate interval uses the two-sided Hoeffding bound on paired differences",
+  "underpowered": "informational",
+  "independent_runs": 1
+}

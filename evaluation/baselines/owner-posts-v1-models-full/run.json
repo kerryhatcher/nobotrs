@@ -1,0 +1,458 @@
+{
+  "backend_status_counts": {
+    "conpara": {
+      "scored_full": 9,
+      "skipped": 1
+    },
+    "desklib": {
+      "scored_full": 9,
+      "skipped": 1
+    },
+    "detectorscope": {
+      "failed": 1,
+      "scored_full": 8,
+      "skipped": 1
+    }
+  },
+  "binary_sha256": "b2036410b10d964e2d9e60410a44e01da4b231cc0ce5256bf96f2fa9cbbcfd3c",
+  "completed_documents": 10,
+  "configuration": "constructed from Settings::default plus recorded overrides; no environment or config-file merging",
+  "corpus_manifest_sha256": "7747cb4292a7a379697b83d1413db5017d2700ee2b87d8733a498d6760ba8234",
+  "documents": [
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 66073.376292,
+      "file": "2011-05-03-format-and-mount-ebs-in-ubuntu.md",
+      "input_sha256": "f439bc7898ae8db61803f9005cc4645be2ad65b5c3cce6a7a860df052b38462b",
+      "label": "human",
+      "prose_words": 129,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 24566.559199,
+      "file": "2011-05-03-ssh-to-aws-quick-and-dirty.md",
+      "input_sha256": "0db5e4ebfc1fde9c7da55b3723fbc6262db848d4905271ea2ca8e78f4e2e9b36",
+      "label": "human",
+      "prose_words": 117,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 27028.791361,
+      "file": "2011-06-01-jenkins-hudson-on-ubuntu-10-04-lts.md",
+      "input_sha256": "1aa81b4df1757c426df849d16a8158705b3161791fa810165bd3f816899e740f",
+      "label": "human",
+      "prose_words": 149,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 48463.867213,
+      "file": "2011-08-10-networking-101-document-everything.md",
+      "input_sha256": "eda697bd6a710281f88222bde1c999ba6dc623ffc349fd6e631074105c5c897f",
+      "label": "human",
+      "prose_words": 221,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 13870.385861,
+      "file": "2012-03-15-c-net-check-if-user-is-in-active-directory-group.md",
+      "input_sha256": "8b1c04483714f25a644064868da5fa48e5d18ac86cfd3a4a98805ae8161af6c7",
+      "label": "human",
+      "prose_words": 32,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 14734.346046,
+      "file": "2012-03-20-mounting-network-drives-with-c-net.md",
+      "input_sha256": "d0cf943700bb972483394d18ff7788ad11e527f442968d39842ecbc2fb2b53a0",
+      "label": "human",
+      "prose_words": 39,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "skipped",
+        "desklib": "skipped",
+        "detectorscope": "skipped"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 0.49000499999999997,
+      "file": "2012-10-05-to-the-west.md",
+      "input_sha256": "2ca185372804629b0d9d84fbba5d8d1ac6d62cda582ac63274796ed7a4601b48",
+      "label": "human",
+      "prose_words": 6,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 26238.037998,
+      "file": "2013-08-20-exchange-2013-enable-all-users-mailboxes-and-add-all-users-to-distribution-group.md",
+      "input_sha256": "5c960f53c10a40f826c2cf1ed6760f836f577c607869acf6c58948c4c163d01a",
+      "label": "human",
+      "prose_words": 134,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "scored_full"
+      },
+      "complete": true,
+      "confidence": "high",
+      "elapsed_ms": 89467.860842,
+      "file": "2014-05-26-install-git-1-8-on-rhel-6.md",
+      "input_sha256": "8954d522493f5826ab370ffd44e0f1daa79e397d861eb4e5ca3df97265cfbbfc",
+      "label": "human",
+      "prose_words": 288,
+      "report_detection_exit_code": 0,
+      "review_exit_code": 0
+    },
+    {
+      "backends": {
+        "conpara": "scored_full",
+        "desklib": "scored_full",
+        "detectorscope": "failed"
+      },
+      "complete": false,
+      "confidence": "high",
+      "elapsed_ms": 1080864.362496,
+      "file": "2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+      "input_sha256": "407eb33fbe07a3eb881d268cc45fdfbd95f84664070bdbc6748a3abe901225a6",
+      "label": "human",
+      "prose_words": 1800,
+      "report_detection_exit_code": 2,
+      "review_exit_code": 2
+    }
+  ],
+  "elapsed_ms": 1391341.7287090002,
+  "external": "none",
+  "features": [
+    "models-encoders",
+    "models-detectorscope"
+  ],
+  "finished": false,
+  "git_revision": "1f394fd35869e847e73536868174267a4fe22f45",
+  "models": [
+    {
+      "architecture": "deberta-v3-large masked-mean-pooling + linear logit",
+      "artifacts": [
+        {
+          "bytes": 1736100972,
+          "path": "desklib/model.safetensors",
+          "sha256": "c024a1704c65f5a4bffeda58745c58fc0ed67d6ca07b158b068a257238815265"
+        },
+        {
+          "bytes": 890,
+          "path": "desklib/config.json",
+          "sha256": "a9512ad54a256ca2e26bb16336cfcaa7c93d071a8667c659044003ef3973a9e2"
+        }
+      ],
+      "code": null,
+      "display_name": "Desklib AI text detector v1.01",
+      "head": null,
+      "id": "desklib",
+      "licenses": {
+        "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+        "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+        "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+        "weights": "MIT (upstream model card at the pinned revision)"
+      },
+      "max_tokens": 512,
+      "minimum_words": 25,
+      "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+      "runtime": {
+        "cargo_feature": "models-encoders",
+        "device": "cpu",
+        "kind": "candle-debertav2",
+        "precision": "float32",
+        "protocol": null,
+        "worker": null
+      },
+      "schema_version": "1.0.0",
+      "thresholds": {
+        "pilot_development_1pct": 3.6327714920043945
+      },
+      "tokenizer": {
+        "bytes": 8656624,
+        "file": "desklib/tokenizer.json",
+        "repo": "desklib/ai-text-detector-v1.01",
+        "revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964"
+      },
+      "upstream": {
+        "checkpoint_sha256": null,
+        "repo": "desklib/ai-text-detector-v1.01",
+        "revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    },
+    {
+      "architecture": "deberta-v3-large CLS pooling + Linear(1024,512) + GELU + Linear(512,2), AI-minus-human margin",
+      "artifacts": [
+        {
+          "bytes": 1738201152,
+          "path": "conpara/model.safetensors",
+          "sha256": "be997091698ff9ac5f204fe005554a17b87c7f51d3e291a1eed6471fc975d92f"
+        },
+        {
+          "bytes": 580,
+          "path": "conpara/config.json",
+          "sha256": "ddec8b81d079d218ce9e54fc0af5d1d5937d6d53b5d42e70c1f251a1cebc830d"
+        }
+      ],
+      "code": {
+        "repo": "SES-Lab-OTH/deberta-conpara",
+        "revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+        "source_license": "MIT"
+      },
+      "display_name": "DeBERTa-ConPara v2.18 no-feature",
+      "head": null,
+      "id": "conpara",
+      "licenses": {
+        "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+        "notes": "Converted tensor-only artifact derived locally from the pinned rawguard.pt; no redistribution until packaging review.",
+        "tokenizer": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+        "weights": "MIT (upstream model card and pinned source LICENSE)"
+      },
+      "max_tokens": 512,
+      "minimum_words": 25,
+      "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+      "runtime": {
+        "cargo_feature": "models-encoders",
+        "device": "cpu",
+        "kind": "candle-debertav2",
+        "precision": "float32",
+        "protocol": null,
+        "worker": null
+      },
+      "schema_version": "1.0.0",
+      "thresholds": {
+        "checkpoint_threshold_margin": 2.9423828125
+      },
+      "tokenizer": {
+        "bytes": 8656624,
+        "file": "conpara/tokenizer.json",
+        "repo": "microsoft/deberta-v3-large",
+        "revision": "64a8c8eab3e352a784c658aef62be1662607476f",
+        "sha256": "5124ef2ead1a10a717703bc436de7f353da76d6340e4587719b42b1693707964"
+      },
+      "upstream": {
+        "checkpoint_sha256": "a0a4eaf8914471b76102703e9de25ab5e7d49a49e3d5b529036ef4f61e72ab7c",
+        "repo": "SES-Lab-OTH/deberta-conpara",
+        "revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164"
+      }
+    },
+    {
+      "architecture": null,
+      "artifacts": [
+        {
+          "bytes": 1208522464,
+          "path": "detectorscope/model.safetensors",
+          "sha256": "2e8ae474410517753497b2600a88a523dd50ad9c703da7248b049064ba173d2b"
+        },
+        {
+          "bytes": 53470618,
+          "path": "detectorscope/features.jsonl",
+          "sha256": "713b0a28fc7dbc2a174f31ab6dc49fb3b14da7efaa5e2fac8a3f920d5d4785aa"
+        },
+        {
+          "bytes": 34362972,
+          "path": "detectorscope/extractor/tokenizer.json",
+          "sha256": "e6ce83119bb404f7f0a6e621b76759d476357dcd01241a90f9ca136ae2b3c11c"
+        },
+        {
+          "bytes": 24260,
+          "path": "detectorscope/extractor/model.safetensors.index.json",
+          "sha256": "b43d22840c3a033a4bbc9cb9a2877f37be63dd0af618ad82a28f231484cf3926"
+        },
+        {
+          "bytes": 4992576136,
+          "path": "detectorscope/extractor/model-00001-of-00003.safetensors",
+          "sha256": "1425aa066ec77e3eb79aac14a5bdea3ebcec46aa5c96cd40608c5c1fd70d193d"
+        },
+        {
+          "bytes": 4983443424,
+          "path": "detectorscope/extractor/model-00002-of-00003.safetensors",
+          "sha256": "96c111d3dcdbde9271595e463b5d9f7fc4810ad8b79e736309c0a1833e6c0d35"
+        },
+        {
+          "bytes": 481381384,
+          "path": "detectorscope/extractor/model-00003-of-00003.safetensors",
+          "sha256": "4e08abc64d1767fdacd2c94da7f2ec4b8c65b25b19a53e87d19dc432901b5f02"
+        },
+        {
+          "bytes": 173,
+          "path": "detectorscope/config.json",
+          "sha256": "0c2b653e74feacec4edfe5a861fb3aa6fb01cecfec86116c5621a1c71a887b5a"
+        },
+        {
+          "bytes": 1446,
+          "path": "detectorscope/extractor/config.json",
+          "sha256": "3aecd9e4d0b1daf9da7e1f52e895a6bb8ad537b77444f609ede14e376336f8d7"
+        },
+        {
+          "bytes": 168,
+          "path": "detectorscope/extractor/generation_config.json",
+          "sha256": "d9f6059f6cb5b3b46847f9f4ada1493e54bc5136711a528024c6ca9c26e624f7"
+        },
+        {
+          "bytes": 46409,
+          "path": "detectorscope/extractor/tokenizer_config.json",
+          "sha256": "5db39e7ccbeceb1dc1136ff54d717f6f84f3556893e6cc30ee4972c408ed4dc2"
+        },
+        {
+          "bytes": 636,
+          "path": "detectorscope/extractor/special_tokens_map.json",
+          "sha256": "baec30ea10906f16adb8c18af7a34023002c1746542612b8b41c9f09e1351351"
+        },
+        {
+          "bytes": 4241003,
+          "path": "detectorscope/extractor/tokenizer.model",
+          "sha256": "61a7b147390c64585d6c3543dd6fc636906c9af3865a5548f27f31aee1d4c8e2"
+        },
+        {
+          "bytes": 262388,
+          "path": "detectorscope/heads/logreg_tau0.85.safetensors",
+          "sha256": "8a19128c6a79c5e1e0548c5ab376f60d337991a0b408ed4006ce2ecfb4676cc4"
+        }
+      ],
+      "code": {
+        "repo": "liamdugan/detectorscope",
+        "revision": "52ecc87775154b35d4550911de22faad4fc68f40",
+        "source_license": "Apache-2.0"
+      },
+      "display_name": "DetectorScope auditable Gemma-2 2B + SAE + logistic head",
+      "head": {
+        "feature_filter": 0.85,
+        "name": "logreg",
+        "path": "detectorscope/heads/logreg_tau0.85.safetensors",
+        "sha256": "8a19128c6a79c5e1e0548c5ab376f60d337991a0b408ed4006ce2ecfb4676cc4",
+        "threshold": 0.5008
+      },
+      "id": "detectorscope",
+      "licenses": {
+        "code": "Apache-2.0 (pinned DetectorScope checkout LICENSE)",
+        "notes": "The Hub bundle is marked Gemma-licensed. Worker/source and artifacts remain external pending packaging and license review.",
+        "tokenizer": "Gemma terms via the pinned extractor bundle; base model terms also apply",
+        "weights": "Gemma license (upstream Hub model card at the pinned revision)"
+      },
+      "max_tokens": 1024,
+      "minimum_words": 25,
+      "preprocessing_revision": "detectorscope-flat-whitespace-v1/opening-excerpt-v1",
+      "runtime": {
+        "cargo_feature": "models-detectorscope",
+        "device": "cpu-or-cuda",
+        "kind": "detectorscope-worker",
+        "precision": "float32",
+        "protocol": "nobotrs-detectorscope-v1",
+        "worker": "integrations/model_workers/detectorscope_worker.py"
+      },
+      "schema_version": "1.0.0",
+      "thresholds": {},
+      "tokenizer": {
+        "bytes": 34362972,
+        "file": "detectorscope/extractor/tokenizer.json",
+        "repo": "liamdugan/detector-scope",
+        "revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+        "sha256": "e6ce83119bb404f7f0a6e621b76759d476357dcd01241a90f9ca136ae2b3c11c"
+      },
+      "upstream": {
+        "checkpoint_sha256": null,
+        "repo": "liamdugan/detector-scope",
+        "revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae"
+      }
+    }
+  ],
+  "planned_documents": 43,
+  "registry_reused": true,
+  "sample_limit": null,
+  "schema_version": "owner-model-baseline-v1",
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  }
+}

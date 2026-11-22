@@ -77,3 +77,103 @@ mod tests {
         }
     }
 }
+
+/// Apply the pinned normalization while retaining original UTF-8 navigation ranges.
+/// Tables are applied before compatibility decomposition, as in `conpara_unicode`.
+pub fn conpara_input_with_map(text: &str) -> (String, Vec<std::ops::Range<usize>>) {
+    use unicode_segmentation::UnicodeSegmentation;
+    let tables = tables();
+    let mut chars: Vec<(char, std::ops::Range<usize>)> = Vec::new();
+    for (i, c) in text.char_indices() {
+        let source = i..i + c.len_utf8();
+        if let Some(replacement) = tables.single.get(&c) {
+            chars.extend(replacement.chars().map(|c| (c, source.clone())));
+        } else {
+            chars.push((c, source));
+        }
+    }
+    for (from, to) in &tables.multi {
+        let needle: Vec<_> = from.chars().collect();
+        if needle.is_empty() {
+            continue;
+        }
+        let mut next = Vec::new();
+        let mut i = 0;
+        while i < chars.len() {
+            if i + needle.len() <= chars.len()
+                && chars[i..i + needle.len()]
+                    .iter()
+                    .map(|x| x.0)
+                    .eq(needle.iter().copied())
+            {
+                let range = chars[i].1.start..chars[i + needle.len() - 1].1.end;
+                next.extend(to.chars().map(|c| (c, range.clone())));
+                i += needle.len();
+            } else {
+                next.push(chars[i].clone());
+                i += 1;
+            }
+        }
+        chars = next;
+    }
+    let intermediate: String = chars.iter().map(|x| x.0).collect();
+    let mut byte_map = Vec::new();
+    for (c, r) in chars {
+        byte_map.extend(std::iter::repeat_n(r, c.len_utf8()));
+    }
+    let mut output = String::new();
+    let mut mapping = Vec::new();
+    let mut pending_space: Option<std::ops::Range<usize>> = None;
+    for (start, cluster) in intermediate.grapheme_indices(true) {
+        let end = start + cluster.len();
+        let source = byte_map[start].start..byte_map[end - 1].end;
+        let normalized: String = cluster
+            .nfkd()
+            .filter(|c| get_general_category(*c) != GeneralCategory::NonspacingMark)
+            .collect::<String>()
+            .nfc()
+            .filter(|c| get_general_category(*c) != GeneralCategory::Format)
+            .collect();
+        for c in normalized.chars() {
+            if c.is_whitespace() {
+                if let Some(r) = &mut pending_space {
+                    r.end = source.end;
+                } else {
+                    pending_space = Some(source.clone());
+                }
+                continue;
+            }
+            if let Some(r) = pending_space.take() {
+                if !output.is_empty() {
+                    output.push(' ');
+                    mapping.push(r);
+                }
+            }
+            output.push(c);
+            mapping.extend(std::iter::repeat_n(source.clone(), c.len_utf8()));
+        }
+    }
+    (output, mapping)
+}
+#[cfg(test)]
+mod mapping_tests {
+    use super::*;
+    #[test]
+    fn normalize_map_points_into_source_and_matches_pinned_order() {
+        for text in [
+            "  “café” — ﬁ \r\nＡＢＣ\u{200b} ",
+            "e\u{301} 가 한국어",
+            "one  two\nthree",
+            "русский ½",
+            "foo\u{200b}bar",
+        ] {
+            let (out, map) = conpara_input_with_map(text);
+            assert_eq!(out, conpara_input(text));
+            assert_eq!(out.len(), map.len());
+            for r in map {
+                assert!(!r.is_empty());
+                assert!(text.get(r).is_some());
+            }
+        }
+    }
+}

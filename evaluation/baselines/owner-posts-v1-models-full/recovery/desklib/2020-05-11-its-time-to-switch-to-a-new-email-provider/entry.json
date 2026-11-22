@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.073711,
+  "file": "2020-05-11-its-time-to-switch-to-a-new-email-provider.md",
+  "input_sha256": "b00fb6feb0583682c5b15b436de92276f83e1158ff1d69eb2ab720ec1e1b684c",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2020-05-11-its-time-to-switch-to-a-new-email-provider/backend.json",
+  "reused_source_sha256": "9b93b9c06fa23a0e407b1bcfa53aa677da635b8b07e94984c790d384ecbf8577",
+  "status": "scored_full"
+}

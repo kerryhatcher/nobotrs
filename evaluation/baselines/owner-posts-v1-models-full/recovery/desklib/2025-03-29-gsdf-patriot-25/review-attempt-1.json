@@ -1,0 +1,1006 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "fail"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "guidance_id": "structure.rule-of-three",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories.",
+      "leverage": 2,
+      "location": {
+        "column": 255,
+        "end_column": 355,
+        "end_line": 36,
+        "line": 36,
+        "source_ranges": [
+          {
+            "end": 2720,
+            "start": 2618
+          }
+        ]
+      },
+      "matched_text": "This was more than just an exercise—it was a proving ground for readiness, resilience, and response.",
+      "message": null,
+      "rule_id": "structure.rule-of-three",
+      "sentence": "This was more than just an exercise—it was a proving ground for readiness, resilience, and response.",
+      "severity": "low",
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "suppressed": false,
+      "why": "General qualities can leave the reader without a concrete property."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "guidance_id": "structure.rule-of-three",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 119,
+        "end_line": 312,
+        "line": 312,
+        "source_ranges": [
+          {
+            "end": 15984,
+            "start": 15923
+          },
+          {
+            "end": 16040,
+            "start": 15986
+          },
+          {
+            "end": 16043,
+            "start": 16042
+          }
+        ]
+      },
+      "matched_text": "Patriot 25 was more than just a training exercise—it was a proving ground for teamwork, resilience, and readiness.",
+      "message": null,
+      "rule_id": "structure.rule-of-three",
+      "sentence": "Patriot 25 was more than just a training exercise—it was a proving ground for teamwork, resilience, and readiness.",
+      "severity": "low",
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "suppressed": false,
+      "why": "General qualities can leave the reader without a concrete property."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Use the specific next point if the supplied material supports it.",
+      "guidance_id": "structure.challenges-future-formula",
+      "keep_when": "Keep literal discussion of future challenges or venue-required headings.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 186,
+        "end_line": 316,
+        "line": 316,
+        "source_ranges": [
+          {
+            "end": 16887,
+            "start": 16870
+          },
+          {
+            "end": 16899,
+            "start": 16889
+          },
+          {
+            "end": 17059,
+            "start": 16901
+          }
+        ]
+      },
+      "matched_text": "Looking ahead to Patriot 26, we’re excited to build on what we’ve learned, strengthen interagency cooperation, and continue preparing to serve our communities when disaster strikes.",
+      "message": null,
+      "rule_id": "structure.challenges-future-formula",
+      "sentence": "Looking ahead to Patriot 26, we’re excited to build on what we’ve learned, strengthen interagency cooperation, and continue preparing to serve our communities when disaster strikes.",
+      "severity": "low",
+      "suggestion": "Use a heading or transition specific to the actual next point.",
+      "suppressed": false,
+      "why": "A generic transition can conceal what the next section actually covers."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 18,
+        "end_line": 46,
+        "line": 46,
+        "source_ranges": [
+          {
+            "end": 3006,
+            "start": 2989
+          }
+        ]
+      },
+      "matched_text": "Search and Rescue",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Search and Rescue",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 24,
+        "end_line": 140,
+        "line": 140,
+        "source_ranges": [
+          {
+            "end": 8129,
+            "start": 8106
+          }
+        ]
+      },
+      "matched_text": "Searching for survivors",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Searching for survivors",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 15,
+        "end_line": 172,
+        "line": 172,
+        "source_ranges": [
+          {
+            "end": 10152,
+            "start": 10138
+          }
+        ]
+      },
+      "matched_text": "Derailed plans",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Derailed plans",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 16,
+        "end_line": 200,
+        "line": 200,
+        "source_ranges": [
+          {
+            "end": 11460,
+            "start": 11445
+          }
+        ]
+      },
+      "matched_text": "The great flood",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "The great flood",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 17,
+        "end_line": 228,
+        "line": 228,
+        "source_ranges": [
+          {
+            "end": 12634,
+            "start": 12618
+          }
+        ]
+      },
+      "matched_text": "Clearing the way",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Clearing the way",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 5,
+        "end_line": 276,
+        "line": 276,
+        "source_ranges": [
+          {
+            "end": 14632,
+            "start": 14628
+          }
+        ]
+      },
+      "matched_text": "U.S.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "U.S.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 15,
+        "end_line": 326,
+        "line": 326,
+        "source_ranges": [
+          {
+            "end": 17338,
+            "start": 17324
+          }
+        ]
+      },
+      "matched_text": "Ready to serve",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Ready to serve",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 140,
+        "end_column": 148,
+        "end_line": 36,
+        "line": 36,
+        "source_ranges": [
+          {
+            "end": 2509,
+            "start": 2501
+          }
+        ]
+      },
+      "matched_text": "seamless",
+      "message": null,
+      "rule_id": "seamless",
+      "sentence": "The facilities were outstanding, the coordination among agencies was seamless, and, of course, the food was some of the best I’ve had during DOMestic OPerations (DOMOPs) training!",
+      "severity": "medium",
+      "suggestion": "smooth",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 218,
+        "end_column": 229,
+        "end_line": 52,
+        "line": 52,
+        "source_ranges": [
+          {
+            "end": 3972,
+            "start": 3961
+          }
+        ]
+      },
+      "matched_text": "emphasizing",
+      "message": null,
+      "rule_id": "emphasize",
+      "sentence": "This training reinforced critical decision-making skills, emphasizing safety, coordination, and efficiency in high-risk urban search and rescue operations.",
+      "severity": "medium",
+      "suggestion": "stress",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 413,
+        "end_column": 424,
+        "end_line": 174,
+        "line": 174,
+        "source_ranges": [
+          {
+            "end": 10577,
+            "start": 10566
+          }
+        ]
+      },
+      "matched_text": "emphasizing",
+      "message": null,
+      "rule_id": "emphasize",
+      "sentence": "This hands-on training provided a realistic experience in urban disaster response, emphasizing teamwork and communication in a complex, underground environment.",
+      "severity": "medium",
+      "suggestion": "stress",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 230,
+        "end_line": 170,
+        "features": [],
+        "heading": "Downed aircraft",
+        "line": 138,
+        "mean_z": 1.295997553794831,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": 11.054654121398926,
+            "z": 1.295997553794831
+          }
+        ],
+        "prose": {
+          "end": 6095,
+          "start": 4764
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 8104,
+            "start": 8093
+          },
+          {
+            "end": 8129,
+            "start": 8106
+          },
+          {
+            "end": 8163,
+            "start": 8131
+          },
+          {
+            "end": 8175,
+            "start": 8165
+          },
+          {
+            "end": 8383,
+            "start": 8177
+          },
+          {
+            "end": 8407,
+            "start": 8385
+          },
+          {
+            "end": 8441,
+            "start": 8409
+          },
+          {
+            "end": 8462,
+            "start": 8443
+          },
+          {
+            "end": 8515,
+            "start": 8464
+          },
+          {
+            "end": 8539,
+            "start": 8517
+          },
+          {
+            "end": 8578,
+            "start": 8541
+          },
+          {
+            "end": 8844,
+            "start": 8580
+          },
+          {
+            "end": 8912,
+            "start": 8846
+          },
+          {
+            "end": 9001,
+            "start": 8914
+          },
+          {
+            "end": 9028,
+            "start": 9003
+          },
+          {
+            "end": 9054,
+            "start": 9030
+          },
+          {
+            "end": 9368,
+            "start": 9056
+          },
+          {
+            "end": 10052,
+            "start": 9973
+          },
+          {
+            "end": 10129,
+            "start": 10126
+          }
+        ],
+        "units": {
+          "end": 57,
+          "start": 46
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 187,
+        "end_line": 112,
+        "features": [],
+        "heading": "Searching Underground",
+        "line": 78,
+        "mean_z": 0.4541027797183364,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": 9.574830055236816,
+            "z": 0.4541027797183364
+          }
+        ],
+        "prose": {
+          "end": 4154,
+          "start": 3004
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 4983,
+            "start": 4971
+          },
+          {
+            "end": 5005,
+            "start": 4985
+          },
+          {
+            "end": 5363,
+            "start": 5007
+          },
+          {
+            "end": 5707,
+            "start": 5365
+          },
+          {
+            "end": 6024,
+            "start": 5709
+          },
+          {
+            "end": 6720,
+            "start": 6629
+          },
+          {
+            "end": 6807,
+            "start": 6799
+          }
+        ],
+        "units": {
+          "end": 38,
+          "start": 28
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 221,
+        "end_line": 78,
+        "features": [],
+        "heading": "Urban SAR",
+        "line": 44,
+        "mean_z": 0.3893438969619014,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": 9.4610013961792,
+            "z": 0.3893438969619014
+          }
+        ],
+        "prose": {
+          "end": 3004,
+          "start": 1700
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 2987,
+            "start": 2983
+          },
+          {
+            "end": 3006,
+            "start": 2989
+          },
+          {
+            "end": 3327,
+            "start": 3008
+          },
+          {
+            "end": 3742,
+            "start": 3329
+          },
+          {
+            "end": 4058,
+            "start": 3744
+          },
+          {
+            "end": 4885,
+            "start": 4663
+          },
+          {
+            "end": 4971,
+            "start": 4962
+          }
+        ],
+        "units": {
+          "end": 28,
+          "start": 15
+        }
+      },
+      {
+        "agreement": 0,
+        "body_tokens": 376,
+        "end_line": 334,
+        "features": [],
+        "heading": "A special rescue",
+        "line": 274,
+        "mean_z": 0.17574342985973065,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 4,
+            "raw_output": 9.085549354553223,
+            "z": 0.17574342985973065
+          }
+        ],
+        "prose": {
+          "end": 9784,
+          "start": 7954
+        },
+        "rank": 4,
+        "source_ranges": [
+          {
+            "end": 14626,
+            "start": 14611
+          },
+          {
+            "end": 14659,
+            "start": 14628
+          },
+          {
+            "end": 14832,
+            "start": 14661
+          },
+          {
+            "end": 15482,
+            "start": 15443
+          },
+          {
+            "end": 15573,
+            "start": 15532
+          },
+          {
+            "end": 15731,
+            "start": 15707
+          },
+          {
+            "end": 15867,
+            "start": 15819
+          },
+          {
+            "end": 15919,
+            "start": 15876
+          },
+          {
+            "end": 15984,
+            "start": 15923
+          },
+          {
+            "end": 16040,
+            "start": 15986
+          },
+          {
+            "end": 16261,
+            "start": 16042
+          },
+          {
+            "end": 16279,
+            "start": 16263
+          },
+          {
+            "end": 16439,
+            "start": 16281
+          },
+          {
+            "end": 16443,
+            "start": 16441
+          },
+          {
+            "end": 16459,
+            "start": 16445
+          },
+          {
+            "end": 16532,
+            "start": 16461
+          },
+          {
+            "end": 16548,
+            "start": 16534
+          },
+          {
+            "end": 16667,
+            "start": 16550
+          },
+          {
+            "end": 16786,
+            "start": 16669
+          },
+          {
+            "end": 16868,
+            "start": 16788
+          },
+          {
+            "end": 16887,
+            "start": 16870
+          },
+          {
+            "end": 16899,
+            "start": 16889
+          },
+          {
+            "end": 17159,
+            "start": 16901
+          },
+          {
+            "end": 17181,
+            "start": 17163
+          },
+          {
+            "end": 17217,
+            "start": 17190
+          },
+          {
+            "end": 17243,
+            "start": 17218
+          },
+          {
+            "end": 17322,
+            "start": 17294
+          },
+          {
+            "end": 17338,
+            "start": 17324
+          },
+          {
+            "end": 17436,
+            "start": 17409
+          },
+          {
+            "end": 17557,
+            "start": 17508
+          },
+          {
+            "end": 17572,
+            "start": 17567
+          }
+        ],
+        "units": {
+          "end": 104,
+          "start": 81
+        }
+      },
+      {
+        "agreement": 0,
+        "body_tokens": 320,
+        "end_line": 44,
+        "features": [],
+        "heading": null,
+        "line": 22,
+        "mean_z": -0.3664997676545143,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 5,
+            "raw_output": 8.132431983947754,
+            "z": -0.3664997676545143
+          }
+        ],
+        "prose": {
+          "end": 1700,
+          "start": 0
+        },
+        "rank": 5,
+        "source_ranges": [
+          {
+            "end": 948,
+            "start": 917
+          },
+          {
+            "end": 1099,
+            "start": 950
+          },
+          {
+            "end": 1111,
+            "start": 1101
+          },
+          {
+            "end": 1237,
+            "start": 1113
+          },
+          {
+            "end": 1255,
+            "start": 1239
+          },
+          {
+            "end": 1499,
+            "start": 1257
+          },
+          {
+            "end": 1669,
+            "start": 1579
+          },
+          {
+            "end": 1677,
+            "start": 1671
+          },
+          {
+            "end": 1703,
+            "start": 1679
+          },
+          {
+            "end": 1956,
+            "start": 1705
+          },
+          {
+            "end": 1998,
+            "start": 1958
+          },
+          {
+            "end": 2194,
+            "start": 2000
+          },
+          {
+            "end": 2360,
+            "start": 2263
+          },
+          {
+            "end": 2432,
+            "start": 2362
+          },
+          {
+            "end": 2461,
+            "start": 2434
+          },
+          {
+            "end": 2575,
+            "start": 2463
+          },
+          {
+            "end": 2605,
+            "start": 2577
+          },
+          {
+            "end": 2720,
+            "start": 2607
+          },
+          {
+            "end": 2906,
+            "start": 2842
+          },
+          {
+            "end": 2983,
+            "start": 2978
+          }
+        ],
+        "units": {
+          "end": 15,
+          "start": 0
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "2": 3,
+    "3": 7,
+    "5": 3
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-03-29-gsdf-patriot-25.md",
+  "prose_words": 1467,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 13
+}

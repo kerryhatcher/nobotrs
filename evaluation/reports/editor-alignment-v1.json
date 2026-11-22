@@ -1,0 +1,545 @@
+{
+  "rows": 6561,
+  "paired": 2187,
+  "docs_without_located_findings": 993,
+  "docs_used_for_edited_rate": 1194,
+  "skipped": {},
+  "prompts": 2187,
+  "multi_row_prompts": 0,
+  "pooled": {
+    "lift": 1.23345219463822,
+    "ci": [
+      1.1666626949035606,
+      1.2985175196493492
+    ],
+    "docs": 1192,
+    "groups": 1192
+  },
+  "per_rule": {
+    "a-testament-to": {
+      "lift": 1.1122586795900535,
+      "ci": [
+        0.8000129505873889,
+        1.3781648192921765
+      ],
+      "docs": 35,
+      "groups": 35
+    },
+    "beacon": {
+      "lift": 1.4869888475836432,
+      "ci": [
+        0.9469361164839888,
+        1.9749097091497416
+      ],
+      "docs": 13,
+      "groups": 13
+    },
+    "cutting-edge": {
+      "lift": 0.879120879120879,
+      "ci": [
+        0.0,
+        1.5424164524421595
+      ],
+      "docs": 6,
+      "groups": 6
+    },
+    "delve": {
+      "lift": 1.607257008919059,
+      "ci": [
+        1.3087488497324564,
+        1.803436676246311
+      ],
+      "docs": 12,
+      "groups": 12
+    },
+    "embark": {
+      "lift": 1.6129032258064517,
+      "ci": [
+        1.0385628330578172,
+        2.160633106030217
+      ],
+      "docs": 15,
+      "groups": 15
+    },
+    "embark-on-a-journey": {
+      "lift": 1.566579634464752,
+      "ci": [
+        1.3793103448275863,
+        2.105263157894737
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "emphasize": {
+      "lift": 1.4321074964639324,
+      "ci": [
+        1.047738877633649,
+        1.765115505086338
+      ],
+      "docs": 27,
+      "groups": 27
+    },
+    "empower": {
+      "lift": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "facilitate": {
+      "lift": 1.3833992094861658,
+      "ci": [
+        1.019367991845056,
+        1.6360756310972535
+      ],
+      "docs": 9,
+      "groups": 9
+    },
+    "foster": {
+      "lift": 1.358145608880183,
+      "ci": [
+        1.1741317872477144,
+        1.5858439468419256
+      ],
+      "docs": 12,
+      "groups": 12
+    },
+    "furthermore": {
+      "lift": 1.9115890083632021,
+      "ci": [
+        1.729106628242075,
+        2.1201647645562582
+      ],
+      "docs": 12,
+      "groups": 12
+    },
+    "harness-verb": {
+      "lift": 1.671309192200557,
+      "ci": [
+        1.1593365167127416,
+        2.1085132384742584
+      ],
+      "docs": 7,
+      "groups": 7
+    },
+    "heres-the-thing": {
+      "lift": 1.4925373134328357,
+      "ci": [
+        1.4925373134328357,
+        1.4925373134328357
+      ],
+      "docs": 1,
+      "groups": 1
+    },
+    "holistic": {
+      "lift": 1.4856081708449396,
+      "ci": [
+        0.0,
+        1.702127659574468
+      ],
+      "docs": 2,
+      "groups": 2
+    },
+    "important-to-note": {
+      "lift": 1.2154696132596685,
+      "ci": [
+        0.9846810301296081,
+        1.4018817610823784
+      ],
+      "docs": 13,
+      "groups": 13
+    },
+    "intricate": {
+      "lift": 1.101721439749609,
+      "ci": [
+        0.7843210565727208,
+        1.4242632893357048
+      ],
+      "docs": 22,
+      "groups": 22
+    },
+    "leverage": {
+      "lift": 0.9302325581395349,
+      "ci": [
+        0.0,
+        1.3071895424836601
+      ],
+      "docs": 2,
+      "groups": 2
+    },
+    "meticulous": {
+      "lift": 1.4084507042253522,
+      "ci": [
+        0.5194805194805194,
+        2.0100502512562812
+      ],
+      "docs": 4,
+      "groups": 4
+    },
+    "moreover": {
+      "lift": 1.409336856675475,
+      "ci": [
+        0.9845649948822927,
+        1.8374746841765872
+      ],
+      "docs": 8,
+      "groups": 8
+    },
+    "multifaceted": {
+      "lift": 0.97323600973236,
+      "ci": [
+        0.0,
+        1.5625
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "myriad": {
+      "lift": 1.282051282051282,
+      "ci": [
+        0.0,
+        2.3255813953488373
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "nevertheless": {
+      "lift": 1.4814814814814816,
+      "ci": [
+        1.2738853503184713,
+        1.6129032258064517
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "not-just-x-but-y": {
+      "lift": 1.465201465201465,
+      "ci": [
+        1.1627906976744187,
+        1.9801980198019802
+      ],
+      "docs": 2,
+      "groups": 2
+    },
+    "nuanced": {
+      "lift": 2.7027027027027026,
+      "ci": [
+        2.7027027027027026,
+        2.7027027027027026
+      ],
+      "docs": 1,
+      "groups": 1
+    },
+    "paradigm-shift": {
+      "lift": 2.1739130434782608,
+      "ci": [
+        2.1739130434782608,
+        2.1739130434782608
+      ],
+      "docs": 1,
+      "groups": 1
+    },
+    "paramount": {
+      "lift": 0.8849557522123895,
+      "ci": [
+        0.0,
+        1.9704433497536946
+      ],
+      "docs": 5,
+      "groups": 5
+    },
+    "pivotal": {
+      "lift": 1.0935601458080193,
+      "ci": [
+        0.0,
+        1.5444015444015444
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "plays-a-role": {
+      "lift": 1.4705882352941175,
+      "ci": [
+        1.2195121951219512,
+        1.6574585635359116
+      ],
+      "docs": 4,
+      "groups": 4
+    },
+    "plethora": {
+      "lift": 1.4319809069212412,
+      "ci": [
+        0.5012531328320802,
+        2.1739130434782608
+      ],
+      "docs": 4,
+      "groups": 4
+    },
+    "punctuation.em-dash-density": {
+      "lift": 0.7518796992481203,
+      "ci": [
+        0.7518796992481203,
+        0.7518796992481203
+      ],
+      "docs": 1,
+      "groups": 1
+    },
+    "robust": {
+      "lift": 0.0,
+      "ci": [
+        0.0,
+        0.0
+      ],
+      "docs": 2,
+      "groups": 2
+    },
+    "seamless": {
+      "lift": 2.580645161290322,
+      "ci": [
+        0.0,
+        5.128205128205129
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "showcase": {
+      "lift": 1.3484260100801455,
+      "ci": [
+        0.9353628353055631,
+        1.7308024484987419
+      ],
+      "docs": 17,
+      "groups": 17
+    },
+    "streamline": {
+      "lift": 1.3888888888888888,
+      "ci": [
+        0.0,
+        4.761904761904762
+      ],
+      "docs": 3,
+      "groups": 3
+    },
+    "structure.cheerful-opener": {
+      "lift": 4.805959389643157,
+      "ci": [
+        3.9978572813748805,
+        5.68202023794129
+      ],
+      "docs": 40,
+      "groups": 40
+    },
+    "structure.coordinated-series": {
+      "lift": 1.0826955385476944,
+      "ci": [
+        0.970506367062088,
+        1.181807223101698
+      ],
+      "docs": 31,
+      "groups": 31
+    },
+    "structure.copula-avoidance": {
+      "lift": 1.0,
+      "ci": [
+        1.0,
+        1.0
+      ],
+      "docs": 1,
+      "groups": 1
+    },
+    "structure.fragment-pattern": {
+      "lift": 1.6483895441064886,
+      "ci": [
+        1.4957664317546542,
+        1.8242989842255684
+      ],
+      "docs": 452,
+      "groups": 452
+    },
+    "structure.negative-parallelism": {
+      "lift": 1.2503308587201756,
+      "ci": [
+        1.104727105903226,
+        1.3868038130303753
+      ],
+      "docs": 32,
+      "groups": 32
+    },
+    "structure.repeated-opening": {
+      "lift": 1.0770666699632843,
+      "ci": [
+        1.0062558363872678,
+        1.1492969551418535
+      ],
+      "docs": 85,
+      "groups": 85
+    },
+    "structure.rule-of-three": {
+      "lift": 1.061503164302307,
+      "ci": [
+        0.9778817105243482,
+        1.1321431853282697
+      ],
+      "docs": 56,
+      "groups": 56
+    },
+    "structure.short-fragment": {
+      "lift": 1.3910918042765483,
+      "ci": [
+        1.2804835068476443,
+        1.5032583068653091
+      ],
+      "docs": 808,
+      "groups": 808
+    },
+    "structure.significance-inflation": {
+      "lift": 1.390573645512147,
+      "ci": [
+        1.132501518015983,
+        1.628367660061372
+      ],
+      "docs": 19,
+      "groups": 19
+    },
+    "structure.summary-close": {
+      "lift": 1.0762939739477524,
+      "ci": [
+        1.0037373557272677,
+        1.1475836366829888
+      ],
+      "docs": 97,
+      "groups": 97
+    },
+    "structure.title-case-headings": {
+      "lift": 1.2812089356110377,
+      "ci": [
+        1.054046924788107,
+        1.5252161044818184
+      ],
+      "docs": 56,
+      "groups": 56
+    },
+    "structure.uniform-paragraphs": {
+      "lift": 1.348626582487687,
+      "ci": [
+        1.2629966113884974,
+        1.4368341899861796
+      ],
+      "docs": 254,
+      "groups": 254
+    },
+    "studies-show": {
+      "lift": 2.9850746268656714,
+      "ci": [
+        2.9850746268656714,
+        2.9850746268656714
+      ],
+      "docs": 1,
+      "groups": 1
+    },
+    "tapestry": {
+      "lift": 1.3673752804187584,
+      "ci": [
+        0.9088258844317194,
+        1.6845172224203595
+      ],
+      "docs": 16,
+      "groups": 16
+    },
+    "testament": {
+      "lift": 0.8016032064128257,
+      "ci": [
+        0.0,
+        2.4615384615384612
+      ],
+      "docs": 5,
+      "groups": 5
+    },
+    "transformative": {
+      "lift": 1.74346201743462,
+      "ci": [
+        1.2889297064457903,
+        2.266449909863507
+      ],
+      "docs": 8,
+      "groups": 8
+    },
+    "underscore": {
+      "lift": 2.380952380952381,
+      "ci": [
+        2.380952380952381,
+        2.380952380952381
+      ],
+      "docs": 1,
+      "groups": 1
+    },
+    "utilize": {
+      "lift": 1.3189448441247003,
+      "ci": [
+        0.6796075933145252,
+        1.986128715971039
+      ],
+      "docs": 11,
+      "groups": 11
+    },
+    "worth-noting": {
+      "lift": 1.2684989429175477,
+      "ci": [
+        1.0734049074905188,
+        1.4609405169005671
+      ],
+      "docs": 21,
+      "groups": 21
+    }
+  },
+  "introduced_by_editors": {
+    "a-testament-to": 5,
+    "beacon": 3,
+    "cutting-edge": 1,
+    "delve": 8,
+    "embark": 6,
+    "embark-on-a-journey": 1,
+    "emphasize": 2,
+    "empower": 2,
+    "facilitate": 1,
+    "foster": 4,
+    "furthermore": 3,
+    "harness-verb": 3,
+    "intricate": 8,
+    "leverage": 3,
+    "meticulous": 3,
+    "moreover": 1,
+    "myriad": 4,
+    "nevertheless": 1,
+    "nuanced": 2,
+    "paramount": 1,
+    "pivotal": 6,
+    "plays-a-role": 3,
+    "plethora": 1,
+    "punctuation.em-dash-density": 6,
+    "robust": 1,
+    "showcase": 9,
+    "statistics.burstiness": 85,
+    "structure.cheerful-opener": 4,
+    "structure.coordinated-series": 21,
+    "structure.copula-avoidance": 1,
+    "structure.fragment-pattern": 90,
+    "structure.negative-parallelism": 13,
+    "structure.repeated-opening": 33,
+    "structure.rule-of-three": 16,
+    "structure.short-fragment": 121,
+    "structure.significance-inflation": 3,
+    "structure.summary-close": 5,
+    "structure.title-case-headings": 12,
+    "structure.uniform-paragraphs": 57,
+    "studies-show": 2,
+    "tapestry": 5,
+    "testament": 3,
+    "transformative": 3,
+    "underscore": 4,
+    "utilize": 11
+  },
+  "caveat": "Editor changes are not ground truth for quality; lift compares findings overlapping edited spans with random spans of matched length. Offsets are UTF-8 bytes, matching review source ranges."
+}

@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.073451,
+  "file": "2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent.md",
+  "input_sha256": "ea460543f102311cd5e49fc764300648884efeba809763667cbd268c62a0e15f",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-16-still-waiting-a-transparency-update-from-bibb-county-schools-and-the-state-superintendent/backend.json",
+  "reused_source_sha256": "b9cf37e296dfd113566384a5cf971813c288deffd2b621ece61a7cbf7066c532",
+  "status": "scored_full"
+}

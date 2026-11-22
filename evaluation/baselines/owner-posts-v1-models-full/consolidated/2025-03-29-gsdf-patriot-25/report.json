@@ -1,0 +1,3185 @@
+{
+  "actionable_finding_count": 13,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [
+            {
+              "block_context": 5,
+              "column": 140,
+              "disposition": "selected",
+              "end_column": 148,
+              "end_line": 36,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 36,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 1422,
+                "start": 1414
+              },
+              "raw_offset": {
+                "end": 2509,
+                "start": 2501
+              },
+              "rule_id": "seamless",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2509,
+                  "start": 2501
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            },
+            {
+              "block_context": 11,
+              "column": 218,
+              "disposition": "selected",
+              "end_column": 229,
+              "end_line": 52,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 52,
+              "matched_text": "emphasizing",
+              "prose_offset": {
+                "end": 2685,
+                "start": 2674
+              },
+              "raw_offset": {
+                "end": 3972,
+                "start": 3961
+              },
+              "rule_id": "emphasize",
+              "sentence_context": 23,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 3972,
+                  "start": 3961
+                }
+              ],
+              "suggestion": "stress",
+              "suppression": null
+            },
+            {
+              "block_context": 30,
+              "column": 413,
+              "disposition": "selected",
+              "end_column": 424,
+              "end_line": 174,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 174,
+              "matched_text": "emphasizing",
+              "prose_offset": {
+                "end": 6541,
+                "start": 6530
+              },
+              "raw_offset": {
+                "end": 10577,
+                "start": 10566
+              },
+              "rule_id": "emphasize",
+              "sentence_context": 61,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 10577,
+                  "start": 10566
+                }
+              ],
+              "suggestion": "stress",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 5,
+              "column": 140,
+              "disposition": "selected",
+              "end_column": 148,
+              "end_line": 36,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 36,
+              "matched_text": "seamless",
+              "prose_offset": {
+                "end": 1422,
+                "start": 1414
+              },
+              "raw_offset": {
+                "end": 2509,
+                "start": 2501
+              },
+              "rule_id": "seamless",
+              "sentence_context": 12,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2509,
+                  "start": 2501
+                }
+              ],
+              "suggestion": "smooth",
+              "suppression": null
+            },
+            {
+              "block_context": 11,
+              "column": 218,
+              "disposition": "selected",
+              "end_column": 229,
+              "end_line": 52,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 52,
+              "matched_text": "emphasizing",
+              "prose_offset": {
+                "end": 2685,
+                "start": 2674
+              },
+              "raw_offset": {
+                "end": 3972,
+                "start": 3961
+              },
+              "rule_id": "emphasize",
+              "sentence_context": 23,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 3972,
+                  "start": 3961
+                }
+              ],
+              "suggestion": "stress",
+              "suppression": null
+            },
+            {
+              "block_context": 30,
+              "column": 413,
+              "disposition": "selected",
+              "end_column": 424,
+              "end_line": 174,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 174,
+              "matched_text": "emphasizing",
+              "prose_offset": {
+                "end": 6541,
+                "start": 6530
+              },
+              "raw_offset": {
+                "end": 10577,
+                "start": 10566
+              },
+              "rule_id": "emphasize",
+              "sentence_context": 61,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 10577,
+                  "start": 10566
+                }
+              ],
+              "suggestion": "stress",
+              "suppression": null
+            }
+          ],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 3.0
+            }
+          },
+          "vote": "suspicious",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 3.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.20449897750511248
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 1467.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.7122996176854668
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 150.63518718668075
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 10.886368438991138
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.5793324646687381
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.518617275051326
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 5,
+              "column": 255,
+              "disposition": "selected",
+              "end_column": 355,
+              "end_line": 36,
+              "guidance_id": "structure.rule-of-three",
+              "leverage": 2,
+              "line": 36,
+              "matched_text": "This was more than just an exercise\u2014it was a proving ground for readiness, resilience, and response.",
+              "prose_offset": {
+                "end": 1629,
+                "start": 1527
+              },
+              "raw_offset": {
+                "end": 2720,
+                "start": 2618
+              },
+              "rule_id": "structure.rule-of-three",
+              "sentence_context": 13,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2720,
+                  "start": 2618
+                }
+              ],
+              "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+              "suppression": null
+            },
+            {
+              "block_context": 8,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 18,
+              "end_line": 46,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 46,
+              "matched_text": "Search and Rescue",
+              "prose_offset": {
+                "end": 1722,
+                "start": 1705
+              },
+              "raw_offset": {
+                "end": 3006,
+                "start": 2989
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 16,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 3006,
+                  "start": 2989
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 23,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 24,
+              "end_line": 140,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 140,
+              "matched_text": "Searching for survivors",
+              "prose_offset": {
+                "end": 4799,
+                "start": 4776
+              },
+              "raw_offset": {
+                "end": 8129,
+                "start": 8106
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 47,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8129,
+                  "start": 8106
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 29,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 172,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 172,
+              "matched_text": "Derailed plans",
+              "prose_offset": {
+                "end": 6117,
+                "start": 6103
+              },
+              "raw_offset": {
+                "end": 10152,
+                "start": 10138
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 58,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 10152,
+                  "start": 10138
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 33,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 16,
+              "end_line": 200,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 200,
+              "matched_text": "The great flood",
+              "prose_offset": {
+                "end": 6730,
+                "start": 6715
+              },
+              "raw_offset": {
+                "end": 11460,
+                "start": 11445
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 65,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 11460,
+                  "start": 11445
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 37,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 17,
+              "end_line": 228,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 228,
+              "matched_text": "Clearing the way",
+              "prose_offset": {
+                "end": 7211,
+                "start": 7195
+              },
+              "raw_offset": {
+                "end": 12634,
+                "start": 12618
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 72,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 12634,
+                  "start": 12618
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 44,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 5,
+              "end_line": 276,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 276,
+              "matched_text": "U.S.",
+              "prose_offset": {
+                "end": 7974,
+                "start": 7970
+              },
+              "raw_offset": {
+                "end": 14632,
+                "start": 14628
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 82,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 14632,
+                  "start": 14628
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 51,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 119,
+              "end_line": 312,
+              "guidance_id": "structure.rule-of-three",
+              "leverage": 2,
+              "line": 312,
+              "matched_text": "Patriot 25 was more than just a training exercise\u2014it was a proving ground for teamwork, resilience, and readiness.",
+              "prose_offset": {
+                "end": 8490,
+                "start": 8374
+              },
+              "raw_offset": {
+                "end": 16043,
+                "start": 15923
+              },
+              "rule_id": "structure.rule-of-three",
+              "sentence_context": 91,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 15984,
+                  "start": 15923
+                },
+                {
+                  "end": 16040,
+                  "start": 15986
+                },
+                {
+                  "end": 16043,
+                  "start": 16042
+                }
+              ],
+              "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+              "suppression": null
+            },
+            {
+              "block_context": 53,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 186,
+              "end_line": 316,
+              "guidance_id": "structure.challenges-future-formula",
+              "leverage": 2,
+              "line": 316,
+              "matched_text": "Looking ahead to Patriot 26, we\u2019re excited to build on what we\u2019ve learned, strengthen interagency cooperation, and continue preparing to serve our communities when disaster strikes.",
+              "prose_offset": {
+                "end": 9484,
+                "start": 9299
+              },
+              "raw_offset": {
+                "end": 17059,
+                "start": 16870
+              },
+              "rule_id": "structure.challenges-future-formula",
+              "sentence_context": 96,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 16887,
+                  "start": 16870
+                },
+                {
+                  "end": 16899,
+                  "start": 16889
+                },
+                {
+                  "end": 17059,
+                  "start": 16901
+                }
+              ],
+              "suggestion": "Use a heading or transition specific to the actual next point.",
+              "suppression": null
+            },
+            {
+              "block_context": 57,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 326,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 326,
+              "matched_text": "Ready to serve",
+              "prose_offset": {
+                "end": 9700,
+                "start": 9686
+              },
+              "raw_offset": {
+                "end": 17338,
+                "start": 17324
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 101,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 17338,
+                  "start": 17324
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 5,
+              "column": 255,
+              "disposition": "selected",
+              "end_column": 355,
+              "end_line": 36,
+              "guidance_id": "structure.rule-of-three",
+              "leverage": 2,
+              "line": 36,
+              "matched_text": "This was more than just an exercise\u2014it was a proving ground for readiness, resilience, and response.",
+              "prose_offset": {
+                "end": 1629,
+                "start": 1527
+              },
+              "raw_offset": {
+                "end": 2720,
+                "start": 2618
+              },
+              "rule_id": "structure.rule-of-three",
+              "sentence_context": 13,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 2720,
+                  "start": 2618
+                }
+              ],
+              "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+              "suppression": null
+            },
+            {
+              "block_context": 8,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 18,
+              "end_line": 46,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 46,
+              "matched_text": "Search and Rescue",
+              "prose_offset": {
+                "end": 1722,
+                "start": 1705
+              },
+              "raw_offset": {
+                "end": 3006,
+                "start": 2989
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 16,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 3006,
+                  "start": 2989
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 23,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 24,
+              "end_line": 140,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 140,
+              "matched_text": "Searching for survivors",
+              "prose_offset": {
+                "end": 4799,
+                "start": 4776
+              },
+              "raw_offset": {
+                "end": 8129,
+                "start": 8106
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 47,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8129,
+                  "start": 8106
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 29,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 172,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 172,
+              "matched_text": "Derailed plans",
+              "prose_offset": {
+                "end": 6117,
+                "start": 6103
+              },
+              "raw_offset": {
+                "end": 10152,
+                "start": 10138
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 58,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 10152,
+                  "start": 10138
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 33,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 16,
+              "end_line": 200,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 200,
+              "matched_text": "The great flood",
+              "prose_offset": {
+                "end": 6730,
+                "start": 6715
+              },
+              "raw_offset": {
+                "end": 11460,
+                "start": 11445
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 65,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 11460,
+                  "start": 11445
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 37,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 17,
+              "end_line": 228,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 228,
+              "matched_text": "Clearing the way",
+              "prose_offset": {
+                "end": 7211,
+                "start": 7195
+              },
+              "raw_offset": {
+                "end": 12634,
+                "start": 12618
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 72,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 12634,
+                  "start": 12618
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 44,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 5,
+              "end_line": 276,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 276,
+              "matched_text": "U.S.",
+              "prose_offset": {
+                "end": 7974,
+                "start": 7970
+              },
+              "raw_offset": {
+                "end": 14632,
+                "start": 14628
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 82,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 14632,
+                  "start": 14628
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 51,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 119,
+              "end_line": 312,
+              "guidance_id": "structure.rule-of-three",
+              "leverage": 2,
+              "line": 312,
+              "matched_text": "Patriot 25 was more than just a training exercise\u2014it was a proving ground for teamwork, resilience, and readiness.",
+              "prose_offset": {
+                "end": 8490,
+                "start": 8374
+              },
+              "raw_offset": {
+                "end": 16043,
+                "start": 15923
+              },
+              "rule_id": "structure.rule-of-three",
+              "sentence_context": 91,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 15984,
+                  "start": 15923
+                },
+                {
+                  "end": 16040,
+                  "start": 15986
+                },
+                {
+                  "end": 16043,
+                  "start": 16042
+                }
+              ],
+              "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+              "suppression": null
+            },
+            {
+              "block_context": 53,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 186,
+              "end_line": 316,
+              "guidance_id": "structure.challenges-future-formula",
+              "leverage": 2,
+              "line": 316,
+              "matched_text": "Looking ahead to Patriot 26, we\u2019re excited to build on what we\u2019ve learned, strengthen interagency cooperation, and continue preparing to serve our communities when disaster strikes.",
+              "prose_offset": {
+                "end": 9484,
+                "start": 9299
+              },
+              "raw_offset": {
+                "end": 17059,
+                "start": 16870
+              },
+              "rule_id": "structure.challenges-future-formula",
+              "sentence_context": 96,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 16887,
+                  "start": 16870
+                },
+                {
+                  "end": 16899,
+                  "start": 16889
+                },
+                {
+                  "end": 17059,
+                  "start": 16901
+                }
+              ],
+              "suggestion": "Use a heading or transition specific to the actual next point.",
+              "suppression": null
+            },
+            {
+              "block_context": 57,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 326,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 326,
+              "matched_text": "Ready to serve",
+              "prose_offset": {
+                "end": 9700,
+                "start": 9686
+              },
+              "raw_offset": {
+                "end": 17338,
+                "start": 17324
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 101,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 17338,
+                  "start": 17324
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 6.81663258350375
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": 9.810352325439453
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 15709.722395,
+            "excerpt_bytes": 2826,
+            "excerpt_coverage": 0.2832747363134103,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.2832747363134103,
+            "full_coverage_output": 8.676995808756384,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.2832747363134103,
+            "precision": "float32",
+            "prepared_bytes": 9977,
+            "prepared_words": 1467,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": 9.810352325439453,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 320,
+                "heading": null,
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 1700,
+                  "start": 0
+                },
+                "raw_output": 8.132431983947754,
+                "source_ranges": [
+                  {
+                    "end": 948,
+                    "start": 917
+                  },
+                  {
+                    "end": 1099,
+                    "start": 950
+                  },
+                  {
+                    "end": 1111,
+                    "start": 1101
+                  },
+                  {
+                    "end": 1237,
+                    "start": 1113
+                  },
+                  {
+                    "end": 1255,
+                    "start": 1239
+                  },
+                  {
+                    "end": 1499,
+                    "start": 1257
+                  },
+                  {
+                    "end": 1669,
+                    "start": 1579
+                  },
+                  {
+                    "end": 1677,
+                    "start": 1671
+                  },
+                  {
+                    "end": 1703,
+                    "start": 1679
+                  },
+                  {
+                    "end": 1956,
+                    "start": 1705
+                  },
+                  {
+                    "end": 1998,
+                    "start": 1958
+                  },
+                  {
+                    "end": 2194,
+                    "start": 2000
+                  },
+                  {
+                    "end": 2360,
+                    "start": 2263
+                  },
+                  {
+                    "end": 2432,
+                    "start": 2362
+                  },
+                  {
+                    "end": 2461,
+                    "start": 2434
+                  },
+                  {
+                    "end": 2575,
+                    "start": 2463
+                  },
+                  {
+                    "end": 2605,
+                    "start": 2577
+                  },
+                  {
+                    "end": 2720,
+                    "start": 2607
+                  },
+                  {
+                    "end": 2906,
+                    "start": 2842
+                  },
+                  {
+                    "end": 2983,
+                    "start": 2978
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 15,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 221,
+                "heading": "Urban SAR",
+                "index": 1,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 3004,
+                  "start": 1700
+                },
+                "raw_output": 9.4610013961792,
+                "source_ranges": [
+                  {
+                    "end": 2987,
+                    "start": 2983
+                  },
+                  {
+                    "end": 3006,
+                    "start": 2989
+                  },
+                  {
+                    "end": 3327,
+                    "start": 3008
+                  },
+                  {
+                    "end": 3742,
+                    "start": 3329
+                  },
+                  {
+                    "end": 4058,
+                    "start": 3744
+                  },
+                  {
+                    "end": 4885,
+                    "start": 4663
+                  },
+                  {
+                    "end": 4971,
+                    "start": 4962
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 28,
+                  "start": 15
+                }
+              },
+              {
+                "body_tokens": 187,
+                "heading": "Searching Underground",
+                "index": 2,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 4154,
+                  "start": 3004
+                },
+                "raw_output": 9.574830055236816,
+                "source_ranges": [
+                  {
+                    "end": 4983,
+                    "start": 4971
+                  },
+                  {
+                    "end": 5005,
+                    "start": 4985
+                  },
+                  {
+                    "end": 5363,
+                    "start": 5007
+                  },
+                  {
+                    "end": 5707,
+                    "start": 5365
+                  },
+                  {
+                    "end": 6024,
+                    "start": 5709
+                  },
+                  {
+                    "end": 6720,
+                    "start": 6629
+                  },
+                  {
+                    "end": 6807,
+                    "start": 6799
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 38,
+                  "start": 28
+                }
+              },
+              {
+                "body_tokens": 104,
+                "heading": "Collapsed Bridge",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 4764,
+                  "start": 4154
+                },
+                "raw_output": 7.872995853424072,
+                "source_ranges": [
+                  {
+                    "end": 6815,
+                    "start": 6807
+                  },
+                  {
+                    "end": 7289,
+                    "start": 6817
+                  },
+                  {
+                    "end": 8017,
+                    "start": 7894
+                  },
+                  {
+                    "end": 8093,
+                    "start": 8089
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 46,
+                  "start": 38
+                }
+              },
+              {
+                "body_tokens": 230,
+                "heading": "Downed aircraft",
+                "index": 4,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 6095,
+                  "start": 4764
+                },
+                "raw_output": 11.054654121398926,
+                "source_ranges": [
+                  {
+                    "end": 8104,
+                    "start": 8093
+                  },
+                  {
+                    "end": 8129,
+                    "start": 8106
+                  },
+                  {
+                    "end": 8163,
+                    "start": 8131
+                  },
+                  {
+                    "end": 8175,
+                    "start": 8165
+                  },
+                  {
+                    "end": 8383,
+                    "start": 8177
+                  },
+                  {
+                    "end": 8407,
+                    "start": 8385
+                  },
+                  {
+                    "end": 8441,
+                    "start": 8409
+                  },
+                  {
+                    "end": 8462,
+                    "start": 8443
+                  },
+                  {
+                    "end": 8515,
+                    "start": 8464
+                  },
+                  {
+                    "end": 8539,
+                    "start": 8517
+                  },
+                  {
+                    "end": 8578,
+                    "start": 8541
+                  },
+                  {
+                    "end": 8844,
+                    "start": 8580
+                  },
+                  {
+                    "end": 8912,
+                    "start": 8846
+                  },
+                  {
+                    "end": 9001,
+                    "start": 8914
+                  },
+                  {
+                    "end": 9028,
+                    "start": 9003
+                  },
+                  {
+                    "end": 9054,
+                    "start": 9030
+                  },
+                  {
+                    "end": 9368,
+                    "start": 9056
+                  },
+                  {
+                    "end": 10052,
+                    "start": 9973
+                  },
+                  {
+                    "end": 10129,
+                    "start": 10126
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 57,
+                  "start": 46
+                }
+              },
+              {
+                "body_tokens": 96,
+                "heading": "The subway",
+                "index": 5,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 6694,
+                  "start": 6095
+                },
+                "raw_output": 7.8554158210754395,
+                "source_ranges": [
+                  {
+                    "end": 10136,
+                    "start": 10129
+                  },
+                  {
+                    "end": 10152,
+                    "start": 10138
+                  },
+                  {
+                    "end": 10643,
+                    "start": 10154
+                  },
+                  {
+                    "end": 11349,
+                    "start": 11266
+                  },
+                  {
+                    "end": 11423,
+                    "start": 11421
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 64,
+                  "start": 57
+                }
+              },
+              {
+                "body_tokens": 85,
+                "heading": "Inundated neighborhood",
+                "index": 6,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 7187,
+                  "start": 6694
+                },
+                "raw_output": 9.379773139953613,
+                "source_ranges": [
+                  {
+                    "end": 11443,
+                    "start": 11423
+                  },
+                  {
+                    "end": 11460,
+                    "start": 11445
+                  },
+                  {
+                    "end": 11839,
+                    "start": 11462
+                  },
+                  {
+                    "end": 12533,
+                    "start": 12460
+                  },
+                  {
+                    "end": 12609,
+                    "start": 12605
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 71,
+                  "start": 64
+                }
+              },
+              {
+                "body_tokens": 145,
+                "heading": "Road debris",
+                "index": 7,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 7954,
+                  "start": 7187
+                },
+                "raw_output": 5.351371765136719,
+                "source_ranges": [
+                  {
+                    "end": 12616,
+                    "start": 12609
+                  },
+                  {
+                    "end": 12634,
+                    "start": 12618
+                  },
+                  {
+                    "end": 12952,
+                    "start": 12636
+                  },
+                  {
+                    "end": 13050,
+                    "start": 13021
+                  },
+                  {
+                    "end": 13090,
+                    "start": 13052
+                  },
+                  {
+                    "end": 13136,
+                    "start": 13091
+                  },
+                  {
+                    "end": 13478,
+                    "start": 13279
+                  },
+                  {
+                    "end": 14169,
+                    "start": 14087
+                  },
+                  {
+                    "end": 14533,
+                    "start": 14506
+                  },
+                  {
+                    "end": 14611,
+                    "start": 14610
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 81,
+                  "start": 71
+                }
+              },
+              {
+                "body_tokens": 376,
+                "heading": "A special rescue",
+                "index": 8,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 9784,
+                  "start": 7954
+                },
+                "raw_output": 9.085549354553223,
+                "source_ranges": [
+                  {
+                    "end": 14626,
+                    "start": 14611
+                  },
+                  {
+                    "end": 14659,
+                    "start": 14628
+                  },
+                  {
+                    "end": 14832,
+                    "start": 14661
+                  },
+                  {
+                    "end": 15482,
+                    "start": 15443
+                  },
+                  {
+                    "end": 15573,
+                    "start": 15532
+                  },
+                  {
+                    "end": 15731,
+                    "start": 15707
+                  },
+                  {
+                    "end": 15867,
+                    "start": 15819
+                  },
+                  {
+                    "end": 15919,
+                    "start": 15876
+                  },
+                  {
+                    "end": 15984,
+                    "start": 15923
+                  },
+                  {
+                    "end": 16040,
+                    "start": 15986
+                  },
+                  {
+                    "end": 16261,
+                    "start": 16042
+                  },
+                  {
+                    "end": 16279,
+                    "start": 16263
+                  },
+                  {
+                    "end": 16439,
+                    "start": 16281
+                  },
+                  {
+                    "end": 16443,
+                    "start": 16441
+                  },
+                  {
+                    "end": 16459,
+                    "start": 16445
+                  },
+                  {
+                    "end": 16532,
+                    "start": 16461
+                  },
+                  {
+                    "end": 16548,
+                    "start": 16534
+                  },
+                  {
+                    "end": 16667,
+                    "start": 16550
+                  },
+                  {
+                    "end": 16786,
+                    "start": 16669
+                  },
+                  {
+                    "end": 16868,
+                    "start": 16788
+                  },
+                  {
+                    "end": 16887,
+                    "start": 16870
+                  },
+                  {
+                    "end": 16899,
+                    "start": 16889
+                  },
+                  {
+                    "end": 17159,
+                    "start": 16901
+                  },
+                  {
+                    "end": 17181,
+                    "start": 17163
+                  },
+                  {
+                    "end": 17217,
+                    "start": 17190
+                  },
+                  {
+                    "end": 17243,
+                    "start": 17218
+                  },
+                  {
+                    "end": 17322,
+                    "start": 17294
+                  },
+                  {
+                    "end": 17338,
+                    "start": 17324
+                  },
+                  {
+                    "end": 17436,
+                    "start": 17409
+                  },
+                  {
+                    "end": 17557,
+                    "start": 17508
+                  },
+                  {
+                    "end": 17572,
+                    "start": 17567
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 104,
+                  "start": 81
+                }
+              },
+              {
+                "body_tokens": 51,
+                "heading": "Bonus section: National Guard Photos",
+                "index": 9,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 9977,
+                  "start": 9784
+                },
+                "raw_output": 3.1395394802093506,
+                "source_ranges": [
+                  {
+                    "end": 17603,
+                    "start": 17572
+                  },
+                  {
+                    "end": 17658,
+                    "start": 17605
+                  },
+                  {
+                    "end": 18307,
+                    "start": 18263
+                  },
+                  {
+                    "end": 18330,
+                    "start": 18309
+                  },
+                  {
+                    "end": 18371,
+                    "start": 18331
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 108,
+                  "start": 104
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "status": "failed",
+        "details": {
+          "ModelLoadFailed": "no completed attempt available"
+        }
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "status": "failed",
+        "details": {
+          "ModelLoadFailed": "no completed attempt available"
+        }
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 948,
+        "start": 917
+      }
+    ],
+    [
+      {
+        "end": 1099,
+        "start": 950
+      },
+      {
+        "end": 1111,
+        "start": 1101
+      },
+      {
+        "end": 1237,
+        "start": 1113
+      },
+      {
+        "end": 1255,
+        "start": 1239
+      },
+      {
+        "end": 1499,
+        "start": 1257
+      }
+    ],
+    [
+      {
+        "end": 1669,
+        "start": 1579
+      }
+    ],
+    [
+      {
+        "end": 1677,
+        "start": 1671
+      },
+      {
+        "end": 1703,
+        "start": 1679
+      },
+      {
+        "end": 1956,
+        "start": 1705
+      },
+      {
+        "end": 1998,
+        "start": 1958
+      },
+      {
+        "end": 2194,
+        "start": 2000
+      }
+    ],
+    [
+      {
+        "end": 2360,
+        "start": 2263
+      }
+    ],
+    [
+      {
+        "end": 2432,
+        "start": 2362
+      },
+      {
+        "end": 2461,
+        "start": 2434
+      },
+      {
+        "end": 2575,
+        "start": 2463
+      },
+      {
+        "end": 2605,
+        "start": 2577
+      },
+      {
+        "end": 2720,
+        "start": 2607
+      }
+    ],
+    [
+      {
+        "end": 2906,
+        "start": 2842
+      }
+    ],
+    [
+      {
+        "end": 2987,
+        "start": 2978
+      }
+    ],
+    [
+      {
+        "end": 3006,
+        "start": 2989
+      }
+    ],
+    [
+      {
+        "end": 3327,
+        "start": 3008
+      }
+    ],
+    [
+      {
+        "end": 3742,
+        "start": 3329
+      }
+    ],
+    [
+      {
+        "end": 4058,
+        "start": 3744
+      }
+    ],
+    [
+      {
+        "end": 4885,
+        "start": 4663
+      }
+    ],
+    [
+      {
+        "end": 4983,
+        "start": 4962
+      }
+    ],
+    [
+      {
+        "end": 5005,
+        "start": 4985
+      }
+    ],
+    [
+      {
+        "end": 5363,
+        "start": 5007
+      }
+    ],
+    [
+      {
+        "end": 5707,
+        "start": 5365
+      }
+    ],
+    [
+      {
+        "end": 6024,
+        "start": 5709
+      }
+    ],
+    [
+      {
+        "end": 6720,
+        "start": 6629
+      }
+    ],
+    [
+      {
+        "end": 6815,
+        "start": 6799
+      }
+    ],
+    [
+      {
+        "end": 7289,
+        "start": 6817
+      }
+    ],
+    [
+      {
+        "end": 8017,
+        "start": 7894
+      }
+    ],
+    [
+      {
+        "end": 8104,
+        "start": 8089
+      }
+    ],
+    [
+      {
+        "end": 8129,
+        "start": 8106
+      }
+    ],
+    [
+      {
+        "end": 8163,
+        "start": 8131
+      },
+      {
+        "end": 8175,
+        "start": 8165
+      },
+      {
+        "end": 8383,
+        "start": 8177
+      },
+      {
+        "end": 8407,
+        "start": 8385
+      },
+      {
+        "end": 8441,
+        "start": 8409
+      },
+      {
+        "end": 8462,
+        "start": 8443
+      },
+      {
+        "end": 8515,
+        "start": 8464
+      }
+    ],
+    [
+      {
+        "end": 8539,
+        "start": 8517
+      },
+      {
+        "end": 8578,
+        "start": 8541
+      },
+      {
+        "end": 8844,
+        "start": 8580
+      },
+      {
+        "end": 8912,
+        "start": 8846
+      },
+      {
+        "end": 9001,
+        "start": 8914
+      }
+    ],
+    [
+      {
+        "end": 9028,
+        "start": 9003
+      },
+      {
+        "end": 9054,
+        "start": 9030
+      },
+      {
+        "end": 9368,
+        "start": 9056
+      }
+    ],
+    [
+      {
+        "end": 10052,
+        "start": 9973
+      }
+    ],
+    [
+      {
+        "end": 10136,
+        "start": 10126
+      }
+    ],
+    [
+      {
+        "end": 10152,
+        "start": 10138
+      }
+    ],
+    [
+      {
+        "end": 10643,
+        "start": 10154
+      }
+    ],
+    [
+      {
+        "end": 11349,
+        "start": 11266
+      }
+    ],
+    [
+      {
+        "end": 11443,
+        "start": 11421
+      }
+    ],
+    [
+      {
+        "end": 11460,
+        "start": 11445
+      }
+    ],
+    [
+      {
+        "end": 11839,
+        "start": 11462
+      }
+    ],
+    [
+      {
+        "end": 12533,
+        "start": 12460
+      }
+    ],
+    [
+      {
+        "end": 12616,
+        "start": 12605
+      }
+    ],
+    [
+      {
+        "end": 12634,
+        "start": 12618
+      }
+    ],
+    [
+      {
+        "end": 12952,
+        "start": 12636
+      }
+    ],
+    [
+      {
+        "end": 13050,
+        "start": 13021
+      }
+    ],
+    [
+      {
+        "end": 13090,
+        "start": 13052
+      },
+      {
+        "end": 13136,
+        "start": 13091
+      },
+      {
+        "end": 13478,
+        "start": 13279
+      }
+    ],
+    [
+      {
+        "end": 14169,
+        "start": 14087
+      }
+    ],
+    [
+      {
+        "end": 14533,
+        "start": 14506
+      }
+    ],
+    [
+      {
+        "end": 14626,
+        "start": 14610
+      }
+    ],
+    [
+      {
+        "end": 14659,
+        "start": 14628
+      }
+    ],
+    [
+      {
+        "end": 14832,
+        "start": 14661
+      }
+    ],
+    [
+      {
+        "end": 15482,
+        "start": 15443
+      }
+    ],
+    [
+      {
+        "end": 15573,
+        "start": 15532
+      }
+    ],
+    [
+      {
+        "end": 15731,
+        "start": 15707
+      }
+    ],
+    [
+      {
+        "end": 15867,
+        "start": 15819
+      }
+    ],
+    [
+      {
+        "end": 15919,
+        "start": 15876
+      }
+    ],
+    [
+      {
+        "end": 15984,
+        "start": 15923
+      },
+      {
+        "end": 16040,
+        "start": 15986
+      },
+      {
+        "end": 16261,
+        "start": 16042
+      },
+      {
+        "end": 16279,
+        "start": 16263
+      },
+      {
+        "end": 16439,
+        "start": 16281
+      }
+    ],
+    [
+      {
+        "end": 16443,
+        "start": 16441
+      },
+      {
+        "end": 16459,
+        "start": 16445
+      },
+      {
+        "end": 16532,
+        "start": 16461
+      },
+      {
+        "end": 16548,
+        "start": 16534
+      },
+      {
+        "end": 16667,
+        "start": 16550
+      },
+      {
+        "end": 16786,
+        "start": 16669
+      },
+      {
+        "end": 16868,
+        "start": 16788
+      }
+    ],
+    [
+      {
+        "end": 16887,
+        "start": 16870
+      },
+      {
+        "end": 16899,
+        "start": 16889
+      },
+      {
+        "end": 17159,
+        "start": 16901
+      }
+    ],
+    [
+      {
+        "end": 17181,
+        "start": 17163
+      }
+    ],
+    [
+      {
+        "end": 17217,
+        "start": 17190
+      },
+      {
+        "end": 17243,
+        "start": 17218
+      }
+    ],
+    [
+      {
+        "end": 17322,
+        "start": 17294
+      }
+    ],
+    [
+      {
+        "end": 17338,
+        "start": 17324
+      }
+    ],
+    [
+      {
+        "end": 17436,
+        "start": 17409
+      }
+    ],
+    [
+      {
+        "end": 17557,
+        "start": 17508
+      }
+    ],
+    [
+      {
+        "end": 17603,
+        "start": 17567
+      }
+    ],
+    [
+      {
+        "end": 17658,
+        "start": 17605
+      }
+    ],
+    [
+      {
+        "end": 18307,
+        "start": 18263
+      }
+    ],
+    [
+      {
+        "end": 18330,
+        "start": 18309
+      },
+      {
+        "end": 18371,
+        "start": 18331
+      }
+    ]
+  ],
+  "complete": false,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 13,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "suspicious"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 13,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-03-29-gsdf-patriot-25.md",
+  "prose_words": 1467,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 948,
+        "start": 917
+      }
+    ],
+    [
+      {
+        "end": 1070,
+        "start": 950
+      }
+    ],
+    [
+      {
+        "end": 1099,
+        "start": 1070
+      },
+      {
+        "end": 1111,
+        "start": 1101
+      },
+      {
+        "end": 1222,
+        "start": 1113
+      }
+    ],
+    [
+      {
+        "end": 1237,
+        "start": 1222
+      },
+      {
+        "end": 1255,
+        "start": 1239
+      },
+      {
+        "end": 1499,
+        "start": 1257
+      }
+    ],
+    [
+      {
+        "end": 1642,
+        "start": 1579
+      }
+    ],
+    [
+      {
+        "end": 1669,
+        "start": 1642
+      }
+    ],
+    [
+      {
+        "end": 1677,
+        "start": 1671
+      },
+      {
+        "end": 1703,
+        "start": 1679
+      },
+      {
+        "end": 1856,
+        "start": 1705
+      }
+    ],
+    [
+      {
+        "end": 1956,
+        "start": 1856
+      },
+      {
+        "end": 1998,
+        "start": 1958
+      },
+      {
+        "end": 2124,
+        "start": 2000
+      }
+    ],
+    [
+      {
+        "end": 2194,
+        "start": 2124
+      }
+    ],
+    [
+      {
+        "end": 2333,
+        "start": 2263
+      }
+    ],
+    [
+      {
+        "end": 2360,
+        "start": 2333
+      }
+    ],
+    [
+      {
+        "end": 2427,
+        "start": 2362
+      }
+    ],
+    [
+      {
+        "end": 2432,
+        "start": 2427
+      },
+      {
+        "end": 2461,
+        "start": 2434
+      },
+      {
+        "end": 2575,
+        "start": 2463
+      },
+      {
+        "end": 2605,
+        "start": 2577
+      },
+      {
+        "end": 2617,
+        "start": 2607
+      }
+    ],
+    [
+      {
+        "end": 2720,
+        "start": 2617
+      }
+    ],
+    [
+      {
+        "end": 2906,
+        "start": 2842
+      }
+    ],
+    [
+      {
+        "end": 2987,
+        "start": 2978
+      }
+    ],
+    [
+      {
+        "end": 3006,
+        "start": 2989
+      }
+    ],
+    [
+      {
+        "end": 3169,
+        "start": 3008
+      }
+    ],
+    [
+      {
+        "end": 3327,
+        "start": 3169
+      }
+    ],
+    [
+      {
+        "end": 3432,
+        "start": 3329
+      }
+    ],
+    [
+      {
+        "end": 3588,
+        "start": 3432
+      }
+    ],
+    [
+      {
+        "end": 3742,
+        "start": 3588
+      }
+    ],
+    [
+      {
+        "end": 3902,
+        "start": 3744
+      }
+    ],
+    [
+      {
+        "end": 4058,
+        "start": 3902
+      }
+    ],
+    [
+      {
+        "end": 4741,
+        "start": 4663
+      }
+    ],
+    [
+      {
+        "end": 4813,
+        "start": 4741
+      }
+    ],
+    [
+      {
+        "end": 4857,
+        "start": 4813
+      }
+    ],
+    [
+      {
+        "end": 4885,
+        "start": 4857
+      }
+    ],
+    [
+      {
+        "end": 4983,
+        "start": 4962
+      }
+    ],
+    [
+      {
+        "end": 5005,
+        "start": 4985
+      }
+    ],
+    [
+      {
+        "end": 5208,
+        "start": 5007
+      }
+    ],
+    [
+      {
+        "end": 5363,
+        "start": 5208
+      }
+    ],
+    [
+      {
+        "end": 5550,
+        "start": 5365
+      }
+    ],
+    [
+      {
+        "end": 5707,
+        "start": 5550
+      }
+    ],
+    [
+      {
+        "end": 5838,
+        "start": 5709
+      }
+    ],
+    [
+      {
+        "end": 6024,
+        "start": 5838
+      }
+    ],
+    [
+      {
+        "end": 6692,
+        "start": 6629
+      }
+    ],
+    [
+      {
+        "end": 6720,
+        "start": 6692
+      }
+    ],
+    [
+      {
+        "end": 6815,
+        "start": 6799
+      }
+    ],
+    [
+      {
+        "end": 6905,
+        "start": 6817
+      }
+    ],
+    [
+      {
+        "end": 7028,
+        "start": 6905
+      }
+    ],
+    [
+      {
+        "end": 7165,
+        "start": 7028
+      }
+    ],
+    [
+      {
+        "end": 7289,
+        "start": 7165
+      }
+    ],
+    [
+      {
+        "end": 7949,
+        "start": 7894
+      }
+    ],
+    [
+      {
+        "end": 7989,
+        "start": 7949
+      }
+    ],
+    [
+      {
+        "end": 8017,
+        "start": 7989
+      }
+    ],
+    [
+      {
+        "end": 8104,
+        "start": 8089
+      }
+    ],
+    [
+      {
+        "end": 8129,
+        "start": 8106
+      }
+    ],
+    [
+      {
+        "end": 8163,
+        "start": 8131
+      },
+      {
+        "end": 8175,
+        "start": 8165
+      },
+      {
+        "end": 8301,
+        "start": 8177
+      }
+    ],
+    [
+      {
+        "end": 8383,
+        "start": 8301
+      },
+      {
+        "end": 8407,
+        "start": 8385
+      },
+      {
+        "end": 8441,
+        "start": 8409
+      },
+      {
+        "end": 8462,
+        "start": 8443
+      },
+      {
+        "end": 8515,
+        "start": 8464
+      }
+    ],
+    [
+      {
+        "end": 8539,
+        "start": 8517
+      },
+      {
+        "end": 8578,
+        "start": 8541
+      },
+      {
+        "end": 8691,
+        "start": 8580
+      }
+    ],
+    [
+      {
+        "end": 8818,
+        "start": 8691
+      }
+    ],
+    [
+      {
+        "end": 8844,
+        "start": 8818
+      },
+      {
+        "end": 8912,
+        "start": 8846
+      },
+      {
+        "end": 9001,
+        "start": 8914
+      }
+    ],
+    [
+      {
+        "end": 9028,
+        "start": 9003
+      },
+      {
+        "end": 9054,
+        "start": 9030
+      },
+      {
+        "end": 9175,
+        "start": 9056
+      }
+    ],
+    [
+      {
+        "end": 9368,
+        "start": 9175
+      }
+    ],
+    [
+      {
+        "end": 10024,
+        "start": 9973
+      }
+    ],
+    [
+      {
+        "end": 10052,
+        "start": 10024
+      }
+    ],
+    [
+      {
+        "end": 10136,
+        "start": 10126
+      }
+    ],
+    [
+      {
+        "end": 10152,
+        "start": 10138
+      }
+    ],
+    [
+      {
+        "end": 10302,
+        "start": 10154
+      }
+    ],
+    [
+      {
+        "end": 10482,
+        "start": 10302
+      }
+    ],
+    [
+      {
+        "end": 10643,
+        "start": 10482
+      }
+    ],
+    [
+      {
+        "end": 11321,
+        "start": 11266
+      }
+    ],
+    [
+      {
+        "end": 11349,
+        "start": 11321
+      }
+    ],
+    [
+      {
+        "end": 11443,
+        "start": 11421
+      }
+    ],
+    [
+      {
+        "end": 11460,
+        "start": 11445
+      }
+    ],
+    [
+      {
+        "end": 11573,
+        "start": 11462
+      }
+    ],
+    [
+      {
+        "end": 11662,
+        "start": 11573
+      }
+    ],
+    [
+      {
+        "end": 11839,
+        "start": 11662
+      }
+    ],
+    [
+      {
+        "end": 12504,
+        "start": 12460
+      }
+    ],
+    [
+      {
+        "end": 12533,
+        "start": 12504
+      }
+    ],
+    [
+      {
+        "end": 12616,
+        "start": 12605
+      }
+    ],
+    [
+      {
+        "end": 12634,
+        "start": 12618
+      }
+    ],
+    [
+      {
+        "end": 12788,
+        "start": 12636
+      }
+    ],
+    [
+      {
+        "end": 12952,
+        "start": 12788
+      }
+    ],
+    [
+      {
+        "end": 13050,
+        "start": 13021
+      }
+    ],
+    [
+      {
+        "end": 13090,
+        "start": 13052
+      },
+      {
+        "end": 13136,
+        "start": 13091
+      },
+      {
+        "end": 13335,
+        "start": 13279
+      }
+    ],
+    [
+      {
+        "end": 13478,
+        "start": 13335
+      }
+    ],
+    [
+      {
+        "end": 14141,
+        "start": 14087
+      }
+    ],
+    [
+      {
+        "end": 14169,
+        "start": 14141
+      }
+    ],
+    [
+      {
+        "end": 14533,
+        "start": 14506
+      }
+    ],
+    [
+      {
+        "end": 14626,
+        "start": 14610
+      }
+    ],
+    [
+      {
+        "end": 14632,
+        "start": 14628
+      }
+    ],
+    [
+      {
+        "end": 14659,
+        "start": 14632
+      }
+    ],
+    [
+      {
+        "end": 14727,
+        "start": 14661
+      }
+    ],
+    [
+      {
+        "end": 14832,
+        "start": 14727
+      }
+    ],
+    [
+      {
+        "end": 15482,
+        "start": 15443
+      }
+    ],
+    [
+      {
+        "end": 15573,
+        "start": 15532
+      }
+    ],
+    [
+      {
+        "end": 15731,
+        "start": 15707
+      }
+    ],
+    [
+      {
+        "end": 15867,
+        "start": 15819
+      }
+    ],
+    [
+      {
+        "end": 15919,
+        "start": 15876
+      }
+    ],
+    [
+      {
+        "end": 15984,
+        "start": 15923
+      },
+      {
+        "end": 16040,
+        "start": 15986
+      },
+      {
+        "end": 16043,
+        "start": 16042
+      }
+    ],
+    [
+      {
+        "end": 16256,
+        "start": 16043
+      }
+    ],
+    [
+      {
+        "end": 16261,
+        "start": 16256
+      },
+      {
+        "end": 16279,
+        "start": 16263
+      },
+      {
+        "end": 16439,
+        "start": 16281
+      }
+    ],
+    [
+      {
+        "end": 16443,
+        "start": 16441
+      },
+      {
+        "end": 16459,
+        "start": 16445
+      },
+      {
+        "end": 16532,
+        "start": 16461
+      },
+      {
+        "end": 16548,
+        "start": 16534
+      },
+      {
+        "end": 16643,
+        "start": 16550
+      }
+    ],
+    [
+      {
+        "end": 16667,
+        "start": 16643
+      },
+      {
+        "end": 16786,
+        "start": 16669
+      },
+      {
+        "end": 16868,
+        "start": 16788
+      }
+    ],
+    [
+      {
+        "end": 16887,
+        "start": 16870
+      },
+      {
+        "end": 16899,
+        "start": 16889
+      },
+      {
+        "end": 17059,
+        "start": 16901
+      }
+    ],
+    [
+      {
+        "end": 17159,
+        "start": 17059
+      }
+    ],
+    [
+      {
+        "end": 17181,
+        "start": 17163
+      }
+    ],
+    [
+      {
+        "end": 17217,
+        "start": 17190
+      },
+      {
+        "end": 17243,
+        "start": 17218
+      }
+    ],
+    [
+      {
+        "end": 17322,
+        "start": 17294
+      }
+    ],
+    [
+      {
+        "end": 17338,
+        "start": 17324
+      }
+    ],
+    [
+      {
+        "end": 17436,
+        "start": 17409
+      }
+    ],
+    [
+      {
+        "end": 17557,
+        "start": 17508
+      }
+    ],
+    [
+      {
+        "end": 17603,
+        "start": 17567
+      }
+    ],
+    [
+      {
+        "end": 17658,
+        "start": 17605
+      }
+    ],
+    [
+      {
+        "end": 18307,
+        "start": 18263
+      }
+    ],
+    [
+      {
+        "end": 18330,
+        "start": 18309
+      },
+      {
+        "end": 18371,
+        "start": 18331
+      }
+    ]
+  ],
+  "sentence_count": 108,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": [],
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-gsdf-patriot-25/backend-attempt-1.json",
+        "sha256": "176ae0cebb22f4b8bcc4cd0330ff7501cd06f2de39ccc01264137665a3780baf",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-03-29-gsdf-patriot-25/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-03-29-gsdf-patriot-25/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

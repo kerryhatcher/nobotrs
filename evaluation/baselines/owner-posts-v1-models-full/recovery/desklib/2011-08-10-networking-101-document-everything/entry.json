@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.04124,
+  "file": "2011-08-10-networking-101-document-everything.md",
+  "input_sha256": "eda697bd6a710281f88222bde1c999ba6dc623ffc349fd6e631074105c5c897f",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-08-10-networking-101-document-everything/backend.json",
+  "reused_source_sha256": "af212fa86fbab677c4670fc49121bbefdc2c812305913265df8afcd4dbe21694",
+  "status": "scored_full"
+}

@@ -1,0 +1,329 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 8.883970260620117
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 12479.171962,
+        "excerpt_bytes": 2053,
+        "excerpt_coverage": 1.0,
+        "excerpt_tokens": 373,
+        "execution_coverage": 1.0,
+        "full_coverage_output": 2.436056496319424,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 1.0,
+        "precision": "float32",
+        "prepared_bytes": 2053,
+        "prepared_words": 303,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 8.883970260620117,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": false,
+        "windows": [
+          {
+            "body_tokens": 76,
+            "heading": "Introducing UV",
+            "index": 0,
+            "insufficient_context": true,
+            "prose": {
+              "end": 402,
+              "start": 0
+            },
+            "raw_output": 0.7340596318244934,
+            "source_ranges": [
+              {
+                "end": 1509,
+                "start": 1495
+              },
+              {
+                "end": 1585,
+                "start": 1513
+              },
+              {
+                "end": 1590,
+                "start": 1588
+              },
+              {
+                "end": 1948,
+                "start": 1640
+              },
+              {
+                "end": 1957,
+                "start": 1954
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 5,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 85,
+            "heading": "Why UV?",
+            "index": 1,
+            "insufficient_context": true,
+            "prose": {
+              "end": 861,
+              "start": 402
+            },
+            "raw_output": -2.3833491802215576,
+            "source_ranges": [
+              {
+                "end": 1961,
+                "start": 1957
+              },
+              {
+                "end": 1980,
+                "start": 1968
+              },
+              {
+                "end": 2072,
+                "start": 1982
+              },
+              {
+                "end": 2098,
+                "start": 2078
+              },
+              {
+                "end": 2213,
+                "start": 2100
+              },
+              {
+                "end": 2245,
+                "start": 2219
+              },
+              {
+                "end": 2328,
+                "start": 2247
+              },
+              {
+                "end": 2353,
+                "start": 2334
+              },
+              {
+                "end": 2400,
+                "start": 2355
+              },
+              {
+                "end": 2407,
+                "start": 2405
+              },
+              {
+                "end": 2420,
+                "start": 2418
+              },
+              {
+                "end": 2434,
+                "start": 2432
+              },
+              {
+                "end": 2442,
+                "start": 2440
+              },
+              {
+                "end": 2470,
+                "start": 2448
+              },
+              {
+                "end": 2479,
+                "start": 2478
+              },
+              {
+                "end": 2492,
+                "start": 2485
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 11,
+              "start": 5
+            }
+          },
+          {
+            "body_tokens": 83,
+            "heading": "Getting Started with UV",
+            "index": 2,
+            "insufficient_context": true,
+            "prose": {
+              "end": 1303,
+              "start": 861
+            },
+            "raw_output": 3.206019639968872,
+            "source_ranges": [
+              {
+                "end": 2508,
+                "start": 2492
+              },
+              {
+                "end": 2629,
+                "start": 2510
+              },
+              {
+                "end": 2750,
+                "start": 2688
+              },
+              {
+                "end": 2776,
+                "start": 2751
+              },
+              {
+                "end": 2827,
+                "start": 2826
+              },
+              {
+                "end": 2922,
+                "start": 2829
+              },
+              {
+                "end": 3110,
+                "start": 2990
+              },
+              {
+                "end": 3117,
+                "start": 3116
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 17,
+              "start": 11
+            }
+          },
+          {
+            "body_tokens": 52,
+            "heading": "A Better Workflow",
+            "index": 3,
+            "insufficient_context": true,
+            "prose": {
+              "end": 1638,
+              "start": 1303
+            },
+            "raw_output": 1.7855522632598877,
+            "source_ranges": [
+              {
+                "end": 3133,
+                "start": 3117
+              },
+              {
+                "end": 3190,
+                "start": 3135
+              },
+              {
+                "end": 3236,
+                "start": 3196
+              },
+              {
+                "end": 3295,
+                "start": 3238
+              },
+              {
+                "end": 3336,
+                "start": 3300
+              },
+              {
+                "end": 3358,
+                "start": 3338
+              },
+              {
+                "end": 3368,
+                "start": 3363
+              },
+              {
+                "end": 3391,
+                "start": 3376
+              },
+              {
+                "end": 3418,
+                "start": 3396
+              },
+              {
+                "end": 3477,
+                "start": 3420
+              },
+              {
+                "end": 3488,
+                "start": 3483
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 24,
+              "start": 17
+            }
+          },
+          {
+            "body_tokens": 75,
+            "heading": "Final Thoughts",
+            "index": 4,
+            "insufficient_context": true,
+            "prose": {
+              "end": 2053,
+              "start": 1638
+            },
+            "raw_output": 9.221663475036621,
+            "source_ranges": [
+              {
+                "end": 3497,
+                "start": 3488
+              },
+              {
+                "end": 3819,
+                "start": 3499
+              },
+              {
+                "end": 3868,
+                "start": 3821
+              },
+              {
+                "end": 3890,
+                "start": 3869
+              },
+              {
+                "end": 3955,
+                "start": 3940
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 30,
+              "start": 24
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

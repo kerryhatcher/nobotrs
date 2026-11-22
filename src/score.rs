@@ -37,6 +37,12 @@ pub enum VoteStrength {
 #[derive(Debug, Clone, Serialize)]
 pub struct Evidence {
     pub rule_id: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub guidance_id: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub leverage: Option<u8>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub context: Option<String>,
     /// Bounding range for navigation only; replacements must use source_ranges.
     pub raw_offset: Range<usize>,
     pub source_ranges: Vec<Range<usize>>,

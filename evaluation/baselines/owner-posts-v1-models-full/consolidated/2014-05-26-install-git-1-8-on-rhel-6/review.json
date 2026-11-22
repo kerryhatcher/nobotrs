@@ -1,0 +1,273 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Check which units are complete sentences and which fragments need connection.",
+      "guidance_id": "structure.fragment-pattern",
+      "keep_when": "Keep dialogue, slogans, instructions and deliberate emphasis.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 9,
+        "end_line": 39,
+        "line": 39,
+        "source_ranges": [
+          {
+            "end": 2582,
+            "start": 2574
+          }
+        ]
+      },
+      "matched_text": "As Root:",
+      "message": null,
+      "rule_id": "structure.fragment-pattern",
+      "sentence": "As Root:",
+      "severity": "low",
+      "suggestion": "2 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+      "suppressed": false,
+      "why": "Several very short units may interrupt the argument."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Check whether repetition supports emphasis before varying it.",
+      "guidance_id": "structure.repeated-opening",
+      "keep_when": "Keep deliberate repetition, dialogue, procedures and learner exercises.",
+      "leverage": 2,
+      "location": {
+        "column": 3,
+        "end_column": 42,
+        "end_line": 43,
+        "line": 43,
+        "source_ranges": [
+          {
+            "end": 2721,
+            "start": 2682
+          }
+        ]
+      },
+      "matched_text": "yum install epel-release-6-5.noarch.rpm",
+      "message": null,
+      "rule_id": "structure.repeated-opening",
+      "sentence": "yum install epel-release-6-5.noarch.rpm",
+      "severity": "low",
+      "suggestion": "Repeated opening annotation: retain deliberate repetition, dialogue and parallel instructions.",
+      "suppressed": false,
+      "why": "Repeated sentence openings can obscure changing relationships."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 9,
+        "end_line": 39,
+        "line": 39,
+        "source_ranges": [
+          {
+            "end": 2582,
+            "start": 2574
+          }
+        ]
+      },
+      "matched_text": "As Root:",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "As Root:",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 3,
+        "end_column": 20,
+        "end_line": 49,
+        "line": 49,
+        "source_ranges": [
+          {
+            "end": 2903,
+            "start": 2886
+          }
+        ]
+      },
+      "matched_text": "yum install git18",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "yum install git18",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "2": 2,
+    "3": 2
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2014-05-26-install-git-1-8-on-rhel-6.md",
+  "prose_words": 288,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 4,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2014-05-26-install-git-1-8-on-rhel-6/report.json",
+        "sha256": "b09987a6c8af78db3d9502e4c9ba3a44a8283bb182f80a22c17908263ecf1cff",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2014-05-26-install-git-1-8-on-rhel-6/report.json",
+        "sha256": "b09987a6c8af78db3d9502e4c9ba3a44a8283bb182f80a22c17908263ecf1cff",
+        "origin": "original_reused",
+        "status": "scored_full"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/2014-05-26-install-git-1-8-on-rhel-6/report.json",
+        "sha256": "b09987a6c8af78db3d9502e4c9ba3a44a8283bb182f80a22c17908263ecf1cff",
+        "origin": "original_reused",
+        "status": "scored_full"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

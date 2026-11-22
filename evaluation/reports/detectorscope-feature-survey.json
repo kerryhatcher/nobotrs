@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0.0",
+  "validated": false,
+  "human_reviewed": false,
+  "status_counts": {
+    "insufficient_ranked_context": 12,
+    "skipped_model_context": 2,
+    "completed": 28,
+    "excluded_label_or_confidence": 1
+  },
+  "sample_limit": null,
+  "corpus_errors": [],
+  "samples": [
+    {
+      "id": "8b2541fa49edf7bec5ebbde38e251dd3ba84473f3031ada4fb958513baa49248",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "8034a80f685741823a0bbb70c36e8af7581e50512db586c08a743cfdb2622e9a",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "f83d306e3477a0347568f3b2d3f1fbb1f9c90235e21dcc24d1fe2c75308e6bb9",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "28fa16c43ba232ae9ec91bd429e5c5d5c08555a27ede3ca0e9910d3a515470ee",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "ba642a0ceb07a023fea28304b2a4a4c57b81beaf17689c20fb7d961d694eb243",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "237b743457b71f20544ce73dca4da045178ea610b42c210eb14d91548b47b9f0",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "4a033918d0d32b94d9f28659cd8922bc011763656d4726ba16d988a8e41e22d9",
+      "status": "skipped_model_context"
+    },
+    {
+      "id": "0ec0c2b2ab56fec0085056a59df0ea73bbe080d4b1a7f6694bc666f8a1875b5f",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "3841af997c5806ed48e5a6f1213ddcf99cb98c9fe331e120531a130ffcec7aca",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "99481a048532bd94138be3851833dcd42941d2b7ae678eee9381c8e78a9c1362",
+      "status": "completed"
+    },
+    {
+      "id": "3fb7a04b62d386fda7285daa2a5f16e05e78e07491adb2f1ca929efe6ef7c028",
+      "status": "completed"
+    },
+    {
+      "id": "1a470885537bf3de7d728f5b2435d5d67024396d953a634fc23b65aa4093778d",
+      "status": "completed"
+    },
+    {
+      "id": "9a86cb890784ebf43eae8c9b6393e5c945c3be8a4c96d17efa040200fb619843",
+      "status": "completed"
+    },
+    {
+      "id": "2e9911e5df314cf01c18c738cffbeadc663325f2af0b2da48281ba0f99cb6cd8",
+      "status": "completed"
+    },
+    {
+      "id": "5c7e416308dfb0484f71e66e9622580ebd6d5f64eca4f5caaa307f991ce56fb1",
+      "status": "excluded_label_or_confidence"
+    },
+    {
+      "id": "f00a39f27006f44e14a7f5c9d2015915b0c32342caa189494d68a6a940d6bf2a",
+      "status": "completed"
+    },
+    {
+      "id": "a774ec7bddcb1361daae520aa4210cc3ca80e00e2c1dca089815e713edee367b",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "6c0f98d117f741fcfee1d32bcc39073ebe730a718da05ed90f58e507cb4fc6c1",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "ca8afca1bbd70ac968d0f31466ec3abc3411f70f1af04190438a280e2fff101f",
+      "status": "completed"
+    },
+    {
+      "id": "61c84897a3828c04815f218247379ea53396d6552072cd0c2a62419af0aebfd6",
+      "status": "completed"
+    },
+    {
+      "id": "968d08a8f326fb0fabf0294ad4ab905b214b5b7ce53afb3dfbc737d16eceffbd",
+      "status": "completed"
+    },
+    {
+      "id": "53fa8946fee8679e47e945ee358e7a4eabd0154b6a06211868c246903d648ba1",
+      "status": "completed"
+    },
+    {
+      "id": "aa834fc4d3b56e00597e80cf9baf13055ccf0fe99687a4e5654d925e3dd0fde4",
+      "status": "completed"
+    },
+    {
+      "id": "6293e95096ac3d8b17afeaf00dfdd686cd8ed40587494f2fa610a5b118aa7500",
+      "status": "completed"
+    },
+    {
+      "id": "16db9ff343897bba368f93cda389f3238b022bbc5ccce59f037bbba17b01c0f7",
+      "status": "completed"
+    },
+    {
+      "id": "9e6b52dff93b0d4dc455736b3215d061098f9cb2513ca5abf379ffc5583a467d",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "46280177ffcde9fcdfa4b92f0bdf596f8cfe205be36527c6f3f7d4b32c6d1236",
+      "status": "insufficient_ranked_context"
+    },
+    {
+      "id": "e3bc9b59b09ecdfea98d4178da950d09213206a8b343d20c90d9d3a2af3f8b04",
+      "status": "completed"
+    },
+    {
+      "id": "5cccbb3e498317a7124ccb36ee3b69a8a7343b58c6683843f45268966aab925b",
+      "status": "completed"
+    },
+    {
+      "id": "23b50ea165542d67f9b0cd7751463d5d4f7e28ffe9052b9ba06da0a58825c551",
+      "status": "completed"
+    },
+    {
+      "id": "8f4d894a9278cf04373b120d047f57c291b9ffda787cfcb35b2f0134b947a3ec",
+      "status": "completed"
+    },
+    {
+      "id": "aec0cd60638ad25044feeae4d51d5aa60b1f9ec2015b58f7f13d001ac5ae8658",
+      "status": "completed"
+    },
+    {
+      "id": "2c30c71a10e741185b9e08bdec8279ea700e54a3dc2d2eaf4f18d7c6af4b0c93",
+      "status": "completed"
+    },
+    {
+      "id": "80de2d6b0711af5f3bebacd2b42bd864acfe0c68e5ffecd7e17223046bd1ac43",
+      "status": "completed"
+    },
+    {
+      "id": "c7aee4064d75238d888c4ddb4e7dc4d5d87e73cc295c24fc98dbc019599920d2",
+      "status": "completed"
+    },
+    {
+      "id": "4dffad6c12c1c7a5faaf3fe7eb97afd85833fafc77ee885ba036e65782c40a61",
+      "status": "skipped_model_context"
+    },
+    {
+      "id": "631ac5023fecf9883653786f487efc7d1590c0d5f2fc606d8a18186f73060ff4",
+      "status": "completed"
+    },
+    {
+      "id": "494438eef1fce21fc4bd92adf025dece681fe81a67b93c4117f591652967d4a9",
+      "status": "completed"
+    },
+    {
+      "id": "d363659ad117600a6573738979f9076f6aaec39252b62f1ba91d1036e6ea1a37",
+      "status": "completed"
+    },
+    {
+      "id": "d34e6f3288ae7ff9dfac6b8f7384a37af8ca6819fd6cd3e5a213cf5cbb918a75",
+      "status": "completed"
+    },
+    {
+      "id": "b34cfe771e289b334ed4106805614f311faae8175c6586cf3c739130627b9d7d",
+      "status": "completed"
+    },
+    {
+      "id": "bbd158ee3c2e0d512997c1daff23257e102108c6e40ce9675783ecdbe7bdf230",
+      "status": "completed"
+    },
+    {
+      "id": "35ed681046cac77f9a537de352fb50b59c19904f0af24422180c506bf404c2b2",
+      "status": "completed"
+    }
+  ],
+  "reports_dir": "evaluation/baselines/owner-posts-v1-models-full/consolidated",
+  "inference": "reused_reports",
+  "note": "Counts only; no excerpts, causal utility claim or feature mapping."
+}

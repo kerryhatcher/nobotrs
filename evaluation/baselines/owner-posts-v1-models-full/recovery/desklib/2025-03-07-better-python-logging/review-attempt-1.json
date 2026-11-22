@@ -1,0 +1,717 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Check which units are complete sentences and which fragments need connection.",
+      "guidance_id": "structure.fragment-pattern",
+      "keep_when": "Keep dialogue, slogans, instructions and deliberate emphasis.",
+      "leverage": 2,
+      "location": {
+        "column": 241,
+        "end_column": 248,
+        "end_line": 28,
+        "line": 28,
+        "source_ranges": [
+          {
+            "end": 1716,
+            "start": 1709
+          }
+        ]
+      },
+      "matched_text": "myself.",
+      "message": null,
+      "rule_id": "structure.fragment-pattern",
+      "sentence": "myself.",
+      "severity": "low",
+      "suggestion": "9 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+      "suppressed": false,
+      "why": "Several very short units may interrupt the argument."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 241,
+        "end_column": 248,
+        "end_line": 28,
+        "line": 28,
+        "source_ranges": [
+          {
+            "end": 1716,
+            "start": 1709
+          }
+        ]
+      },
+      "matched_text": "myself.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "myself.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 14,
+        "end_line": 79,
+        "line": 79,
+        "source_ranges": [
+          {
+            "end": 2725,
+            "start": 2712
+          }
+        ]
+      },
+      "matched_text": "See all those",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "See all those",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 25,
+        "end_column": 36,
+        "end_line": 79,
+        "line": 79,
+        "source_ranges": [
+          {
+            "end": 2747,
+            "start": 2736
+          }
+        ]
+      },
+      "matched_text": "statements?",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "statements?",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 308,
+        "end_column": 319,
+        "end_line": 81,
+        "line": 81,
+        "source_ranges": [
+          {
+            "end": 3489,
+            "start": 3478
+          }
+        ]
+      },
+      "matched_text": "statements.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "statements.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 518,
+        "end_column": 533,
+        "end_line": 152,
+        "line": 152,
+        "source_ranges": [
+          {
+            "end": 6514,
+            "start": 6499
+          }
+        ]
+      },
+      "matched_text": "So for example:",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "So for example:",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 10,
+        "end_line": 215,
+        "line": 215,
+        "source_ranges": [
+          {
+            "end": 8054,
+            "start": 8045
+          }
+        ]
+      },
+      "matched_text": "Previous:",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Previous:",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 9,
+        "end_line": 231,
+        "line": 231,
+        "source_ranges": [
+          {
+            "end": 8255,
+            "start": 8247
+          }
+        ]
+      },
+      "matched_text": "Current:",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Current:",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 303,
+        "end_column": 312,
+        "end_line": 248,
+        "line": 248,
+        "source_ranges": [
+          {
+            "end": 9472,
+            "start": 9463
+          }
+        ]
+      },
+      "matched_text": "function.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "function.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 63,
+        "end_column": 73,
+        "end_line": 252,
+        "line": 252,
+        "source_ranges": [
+          {
+            "end": 9565,
+            "start": 9555
+          }
+        ]
+      },
+      "matched_text": "Simply add",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Simply add",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 384,
+        "end_line": 148,
+        "features": [],
+        "heading": "Recognizing you have a problem",
+        "line": 26,
+        "mean_z": 1.3914675877700906,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": -0.7071926593780518,
+            "z": 1.3914675877700906
+          }
+        ],
+        "prose": {
+          "end": 2085,
+          "start": 105
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 1465,
+            "start": 1446
+          },
+          {
+            "end": 1617,
+            "start": 1467
+          },
+          {
+            "end": 1699,
+            "start": 1626
+          },
+          {
+            "end": 1801,
+            "start": 1708
+          },
+          {
+            "end": 2726,
+            "start": 2712
+          },
+          {
+            "end": 3169,
+            "start": 2735
+          },
+          {
+            "end": 3468,
+            "start": 3171
+          },
+          {
+            "end": 3706,
+            "start": 3477
+          },
+          {
+            "end": 5900,
+            "start": 5241
+          },
+          {
+            "end": 5908,
+            "start": 5905
+          }
+        ],
+        "units": {
+          "end": 28,
+          "start": 1
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 161,
+        "end_line": 246,
+        "features": [],
+        "heading": "Loguru",
+        "line": 148,
+        "mean_z": 0.2872983599197538,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": -1.8246389627456665,
+            "z": 0.2872983599197538
+          }
+        ],
+        "prose": {
+          "end": 2895,
+          "start": 2085
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 5911,
+            "start": 5908
+          },
+          {
+            "end": 5983,
+            "start": 5977
+          },
+          {
+            "end": 6152,
+            "start": 6039
+          },
+          {
+            "end": 6159,
+            "start": 6153
+          },
+          {
+            "end": 6231,
+            "start": 6215
+          },
+          {
+            "end": 6515,
+            "start": 6276
+          },
+          {
+            "end": 6558,
+            "start": 6557
+          },
+          {
+            "end": 6695,
+            "start": 6560
+          },
+          {
+            "end": 8043,
+            "start": 7969
+          },
+          {
+            "end": 8054,
+            "start": 8045
+          },
+          {
+            "end": 8255,
+            "start": 8247
+          },
+          {
+            "end": 9126,
+            "start": 8939
+          },
+          {
+            "end": 9136,
+            "start": 9132
+          }
+        ],
+        "units": {
+          "end": 42,
+          "start": 28
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 131,
+        "end_line": 258,
+        "features": [],
+        "heading": "Log File",
+        "line": 250,
+        "mean_z": -0.3045231552890628,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": -2.423576831817627,
+            "z": -0.3045231552890628
+          }
+        ],
+        "prose": {
+          "end": 3852,
+          "start": 3221
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 9489,
+            "start": 9484
+          },
+          {
+            "end": 9566,
+            "start": 9493
+          },
+          {
+            "end": 9668,
+            "start": 9589
+          },
+          {
+            "end": 9761,
+            "start": 9677
+          },
+          {
+            "end": 10230,
+            "start": 9848
+          },
+          {
+            "end": 10242,
+            "start": 10239
+          }
+        ],
+        "units": {
+          "end": 55,
+          "start": 47
+        }
+      },
+      {
+        "agreement": 0,
+        "body_tokens": 279,
+        "end_line": 336,
+        "features": [],
+        "heading": "Log Service",
+        "line": 258,
+        "mean_z": -1.3742427924007816,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 4,
+            "raw_output": -3.5061593055725098,
+            "z": -1.3742427924007816
+          }
+        ],
+        "prose": {
+          "end": 5177,
+          "start": 3852
+        },
+        "rank": 4,
+        "source_ranges": [
+          {
+            "end": 10250,
+            "start": 10242
+          },
+          {
+            "end": 10549,
+            "start": 10254
+          },
+          {
+            "end": 10577,
+            "start": 10551
+          },
+          {
+            "end": 10597,
+            "start": 10578
+          },
+          {
+            "end": 10890,
+            "start": 10703
+          },
+          {
+            "end": 10901,
+            "start": 10891
+          },
+          {
+            "end": 11000,
+            "start": 10969
+          },
+          {
+            "end": 11076,
+            "start": 11001
+          },
+          {
+            "end": 11179,
+            "start": 11128
+          },
+          {
+            "end": 11195,
+            "start": 11180
+          },
+          {
+            "end": 11340,
+            "start": 11297
+          },
+          {
+            "end": 11411,
+            "start": 11342
+          },
+          {
+            "end": 11605,
+            "start": 11529
+          },
+          {
+            "end": 13174,
+            "start": 12902
+          },
+          {
+            "end": 13387,
+            "start": 13246
+          }
+        ],
+        "units": {
+          "end": 72,
+          "start": 55
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "2": 1,
+    "3": 9
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-03-07-better-python-logging.md",
+  "prose_words": 944,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 10
+}

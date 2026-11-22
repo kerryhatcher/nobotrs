@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.028059999999999998,
+  "file": "2012-03-15-c-net-check-if-user-is-in-active-directory-group.md",
+  "input_sha256": "8b1c04483714f25a644064868da5fa48e5d18ac86cfd3a4a98805ae8161af6c7",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2012-03-15-c-net-check-if-user-is-in-active-directory-group/backend.json",
+  "reused_source_sha256": "44d0ef327fbf1f3062ed47786c76841ec81ab98250f8fa892a223dd7b56b7fa0",
+  "status": "scored_full"
+}

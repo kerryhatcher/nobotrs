@@ -1,0 +1,343 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 2.684049129486084
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 14083.356129,
+        "excerpt_bytes": 2736,
+        "excerpt_coverage": 0.6318350324374421,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.6318350324374421,
+        "full_coverage_output": 3.3478203206903796,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.6318350324374421,
+        "precision": "float32",
+        "prepared_bytes": 4336,
+        "prepared_words": 716,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 2.684049129486084,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 248,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1353,
+              "start": 0
+            },
+            "raw_output": 1.9154609441757202,
+            "source_ranges": [
+              {
+                "end": 1474,
+                "start": 1268
+              },
+              {
+                "end": 1496,
+                "start": 1478
+              },
+              {
+                "end": 2246,
+                "start": 1501
+              },
+              {
+                "end": 2297,
+                "start": 2251
+              },
+              {
+                "end": 2628,
+                "start": 2299
+              },
+              {
+                "end": 2637,
+                "start": 2633
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 13,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 279,
+            "heading": "What We Originally Requested",
+            "index": 1,
+            "insufficient_context": false,
+            "prose": {
+              "end": 2829,
+              "start": 1353
+            },
+            "raw_output": 1.5917654037475586,
+            "source_ranges": [
+              {
+                "end": 2661,
+                "start": 2637
+              },
+              {
+                "end": 2779,
+                "start": 2666
+              },
+              {
+                "end": 2919,
+                "start": 2783
+              },
+              {
+                "end": 3028,
+                "start": 2923
+              },
+              {
+                "end": 3152,
+                "start": 3032
+              },
+              {
+                "end": 3159,
+                "start": 3154
+              },
+              {
+                "end": 3242,
+                "start": 3161
+              },
+              {
+                "end": 3352,
+                "start": 3244
+              },
+              {
+                "end": 3376,
+                "start": 3359
+              },
+              {
+                "end": 3701,
+                "start": 3378
+              },
+              {
+                "end": 3725,
+                "start": 3707
+              },
+              {
+                "end": 3774,
+                "start": 3727
+              },
+              {
+                "end": 3798,
+                "start": 3780
+              },
+              {
+                "end": 3982,
+                "start": 3800
+              },
+              {
+                "end": 4012,
+                "start": 3988
+              },
+              {
+                "end": 4157,
+                "start": 4014
+              },
+              {
+                "end": 4236,
+                "start": 4234
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 28,
+              "start": 13
+            }
+          },
+          {
+            "body_tokens": 182,
+            "heading": "It’s time to pass the hat",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 3695,
+              "start": 2829
+            },
+            "raw_output": 3.9542863368988037,
+            "source_ranges": [
+              {
+                "end": 4261,
+                "start": 4236
+              },
+              {
+                "end": 4274,
+                "start": 4266
+              },
+              {
+                "end": 4278,
+                "start": 4277
+              },
+              {
+                "end": 4293,
+                "start": 4282
+              },
+              {
+                "end": 4555,
+                "start": 4356
+              },
+              {
+                "end": 4561,
+                "start": 4557
+              },
+              {
+                "end": 4641,
+                "start": 4564
+              },
+              {
+                "end": 4684,
+                "start": 4662
+              },
+              {
+                "end": 4698,
+                "start": 4685
+              },
+              {
+                "end": 4924,
+                "start": 4717
+              },
+              {
+                "end": 4961,
+                "start": 4927
+              },
+              {
+                "end": 5005,
+                "start": 5004
+              },
+              {
+                "end": 5032,
+                "start": 5007
+              },
+              {
+                "end": 5040,
+                "start": 5034
+              },
+              {
+                "end": 5130,
+                "start": 5042
+              },
+              {
+                "end": 5143,
+                "start": 5132
+              },
+              {
+                "end": 5268,
+                "start": 5145
+              },
+              {
+                "end": 5277,
+                "start": 5273
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 40,
+              "start": 28
+            }
+          },
+          {
+            "body_tokens": 141,
+            "heading": "Sign up for updates",
+            "index": 3,
+            "insufficient_context": false,
+            "prose": {
+              "end": 4336,
+              "start": 3695
+            },
+            "raw_output": 8.559080123901367,
+            "source_ranges": [
+              {
+                "end": 5292,
+                "start": 5277
+              },
+              {
+                "end": 5361,
+                "start": 5294
+              },
+              {
+                "end": 5372,
+                "start": 5363
+              },
+              {
+                "end": 5427,
+                "start": 5374
+              },
+              {
+                "end": 5458,
+                "start": 5429
+              },
+              {
+                "end": 5501,
+                "start": 5460
+              },
+              {
+                "end": 5511,
+                "start": 5504
+              },
+              {
+                "end": 5601,
+                "start": 5551
+              },
+              {
+                "end": 5649,
+                "start": 5603
+              },
+              {
+                "end": 5901,
+                "start": 5651
+              },
+              {
+                "end": 6019,
+                "start": 5993
+              },
+              {
+                "end": 6130,
+                "start": 6092
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 54,
+              "start": 40
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

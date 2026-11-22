@@ -13,9 +13,9 @@ jobs:
       - run: cargo test --locked
       - run: cargo build --locked --release
       - run: test "$(stat -c %s target/release/nobotrs)" -le 8000000
+      - run: python3 -m pip install numpy==2.5.5 jsonschema==4.26.0
       - run: python3 -m unittest discover -s scripts -p 'test_*.py'
       - run: python3 scripts/acceptance.py --binary target/release/nobotrs --skip-package
-      - run: python3 -m pip install jsonschema==4.26.0
       - run: curl --fail --location 'https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json' -o /tmp/nobotrs-sarif-schema.json
       - run: python3 scripts/integration_acceptance.py --binary target/release/nobotrs --schema /tmp/nobotrs-sarif-schema.json
       - run: python3 scripts/evaluate.py --binary target/release/nobotrs --manifest tests/fixtures/evaluation/manifest.json --output /tmp/baseline.json --check docs/evaluation/ci-baseline.json

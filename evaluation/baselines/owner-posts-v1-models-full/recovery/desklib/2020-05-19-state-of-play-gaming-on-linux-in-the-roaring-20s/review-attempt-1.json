@@ -1,0 +1,641 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "pass"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Remove the announcement if the following claim stands alone.",
+      "guidance_id": "structure.signposting-filler",
+      "keep_when": "Keep a warning that signals a meaningful change in scope.",
+      "leverage": 2,
+      "location": {
+        "column": 379,
+        "end_column": 395,
+        "end_line": 33,
+        "line": 33,
+        "source_ranges": [
+          {
+            "end": 4027,
+            "start": 4011
+          }
+        ]
+      },
+      "matched_text": "its worth noting",
+      "message": null,
+      "rule_id": "worth-noting",
+      "sentence": "Also its worth noting that developers are starting to pick up Vulkan due to its performance and getting up better Linux compatibility along the way.",
+      "severity": "medium",
+      "suggestion": null,
+      "suppressed": false,
+      "why": "Repeated announcements delay the useful information."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "Remove the announcement if the following claim stands alone.",
+      "guidance_id": "structure.signposting-filler",
+      "keep_when": "Keep a warning that signals a meaningful change in scope.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 17,
+        "end_line": 65,
+        "line": 65,
+        "source_ranges": [
+          {
+            "end": 7184,
+            "start": 7168
+          }
+        ]
+      },
+      "matched_text": "Its worth noting",
+      "message": null,
+      "rule_id": "worth-noting",
+      "sentence": "Its worth noting that even games not officially supported by Steam Play / Proton can still run just fine.",
+      "severity": "medium",
+      "suggestion": null,
+      "suppressed": false,
+      "why": "Repeated announcements delay the useful information."
+    },
+    {
+      "category": "formatting",
+      "context": null,
+      "fix": "Use the required or established heading style consistently.",
+      "guidance_id": "structure.title-case-headings",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "leverage": 4,
+      "location": {
+        "column": 4,
+        "end_column": 23,
+        "end_line": 23,
+        "line": 23,
+        "source_ranges": [
+          {
+            "end": 1746,
+            "start": 1727
+          }
+        ]
+      },
+      "matched_text": "Drivers and Porting",
+      "message": null,
+      "rule_id": "structure.title-case-headings",
+      "sentence": "Drivers and Porting",
+      "severity": "low",
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "suppressed": false,
+      "why": "Heading capitalization may distract if it conflicts with the venue style."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 192,
+        "end_line": 79,
+        "features": [],
+        "heading": "Wine / CodeWeavers",
+        "line": 67,
+        "mean_z": 1.8154599485491316,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": 1.0466593503952026,
+            "z": 1.8154599485491316
+          }
+        ],
+        "prose": {
+          "end": 5997,
+          "start": 5068
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 7755,
+            "start": 7741
+          },
+          {
+            "end": 8184,
+            "start": 7841
+          },
+          {
+            "end": 8464,
+            "start": 8186
+          },
+          {
+            "end": 8753,
+            "start": 8466
+          },
+          {
+            "end": 8767,
+            "start": 8764
+          }
+        ],
+        "units": {
+          "end": 65,
+          "start": 55
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 395,
+        "end_line": 57,
+        "features": [],
+        "heading": "Porting to Linux",
+        "line": 35,
+        "mean_z": 0.23273508560008668,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": -2.0539445877075195,
+            "z": 0.23273508560008668
+          }
+        ],
+        "prose": {
+          "end": 4538,
+          "start": 2594
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 4386,
+            "start": 4374
+          },
+          {
+            "end": 4613,
+            "start": 4388
+          },
+          {
+            "end": 4797,
+            "start": 4615
+          },
+          {
+            "end": 4810,
+            "start": 4798
+          },
+          {
+            "end": 5160,
+            "start": 4857
+          },
+          {
+            "end": 5244,
+            "start": 5162
+          },
+          {
+            "end": 5274,
+            "start": 5245
+          },
+          {
+            "end": 5567,
+            "start": 5378
+          },
+          {
+            "end": 5580,
+            "start": 5568
+          },
+          {
+            "end": 5630,
+            "start": 5629
+          },
+          {
+            "end": 5785,
+            "start": 5717
+          },
+          {
+            "end": 5809,
+            "start": 5786
+          },
+          {
+            "end": 6104,
+            "start": 5858
+          },
+          {
+            "end": 6326,
+            "start": 6191
+          },
+          {
+            "end": 6331,
+            "start": 6327
+          },
+          {
+            "end": 6387,
+            "start": 6382
+          },
+          {
+            "end": 6396,
+            "start": 6388
+          },
+          {
+            "end": 6566,
+            "start": 6456
+          },
+          {
+            "end": 6581,
+            "start": 6567
+          },
+          {
+            "end": 6754,
+            "start": 6634
+          },
+          {
+            "end": 6761,
+            "start": 6756
+          },
+          {
+            "end": 6798,
+            "start": 6762
+          },
+          {
+            "end": 6924,
+            "start": 6858
+          },
+          {
+            "end": 6972,
+            "start": 6927
+          },
+          {
+            "end": 6987,
+            "start": 6983
+          }
+        ],
+        "units": {
+          "end": 48,
+          "start": 27
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 130,
+        "end_line": 115,
+        "features": [],
+        "heading": "Factorio (Paid)",
+        "line": 109,
+        "mean_z": -0.3261666201322954,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": -3.1488492488861084,
+            "z": -0.3261666201322954
+          }
+        ],
+        "prose": {
+          "end": 7686,
+          "start": 7035
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 10223,
+            "start": 10214
+          },
+          {
+            "end": 10698,
+            "start": 10310
+          },
+          {
+            "end": 10951,
+            "start": 10700
+          }
+        ],
+        "units": {
+          "end": 89,
+          "start": 80
+        }
+      },
+      {
+        "agreement": 0,
+        "body_tokens": 206,
+        "end_line": 23,
+        "features": [],
+        "heading": null,
+        "line": 19,
+        "mean_z": -0.6865665619751166,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 4,
+            "raw_output": -3.8548831939697266,
+            "z": -0.6865665619751166
+          }
+        ],
+        "prose": {
+          "end": 998,
+          "start": 0
+        },
+        "rank": 4,
+        "source_ranges": [
+          {
+            "end": 716,
+            "start": 563
+          },
+          {
+            "end": 721,
+            "start": 718
+          },
+          {
+            "end": 803,
+            "start": 780
+          },
+          {
+            "end": 1101,
+            "start": 804
+          },
+          {
+            "end": 1558,
+            "start": 1103
+          },
+          {
+            "end": 1573,
+            "start": 1559
+          },
+          {
+            "end": 1631,
+            "start": 1626
+          },
+          {
+            "end": 1671,
+            "start": 1632
+          },
+          {
+            "end": 1734,
+            "start": 1727
+          }
+        ],
+        "units": {
+          "end": 11,
+          "start": 0
+        }
+      },
+      {
+        "agreement": 0,
+        "body_tokens": 231,
+        "end_line": 35,
+        "features": [],
+        "heading": "Video Card Drivers",
+        "line": 27,
+        "mean_z": -1.0354618520418066,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 5,
+            "raw_output": -4.538379192352295,
+            "z": -1.0354618520418066
+          }
+        ],
+        "prose": {
+          "end": 2594,
+          "start": 1303
+        },
+        "rank": 5,
+        "source_ranges": [
+          {
+            "end": 2149,
+            "start": 2136
+          },
+          {
+            "end": 2675,
+            "start": 2151
+          },
+          {
+            "end": 2704,
+            "start": 2677
+          },
+          {
+            "end": 2747,
+            "start": 2705
+          },
+          {
+            "end": 2868,
+            "start": 2832
+          },
+          {
+            "end": 2935,
+            "start": 2869
+          },
+          {
+            "end": 3096,
+            "start": 3094
+          },
+          {
+            "end": 3103,
+            "start": 3097
+          },
+          {
+            "end": 3215,
+            "start": 3210
+          },
+          {
+            "end": 3219,
+            "start": 3216
+          },
+          {
+            "end": 3396,
+            "start": 3316
+          },
+          {
+            "end": 3431,
+            "start": 3397
+          },
+          {
+            "end": 3524,
+            "start": 3517
+          },
+          {
+            "end": 3557,
+            "start": 3525
+          },
+          {
+            "end": 3631,
+            "start": 3630
+          },
+          {
+            "end": 3688,
+            "start": 3633
+          },
+          {
+            "end": 3708,
+            "start": 3689
+          },
+          {
+            "end": 3940,
+            "start": 3763
+          },
+          {
+            "end": 3945,
+            "start": 3941
+          },
+          {
+            "end": 4079,
+            "start": 4004
+          },
+          {
+            "end": 4098,
+            "start": 4080
+          },
+          {
+            "end": 4244,
+            "start": 4228
+          },
+          {
+            "end": 4271,
+            "start": 4245
+          },
+          {
+            "end": 4364,
+            "start": 4349
+          },
+          {
+            "end": 4374,
+            "start": 4370
+          }
+        ],
+        "units": {
+          "end": 27,
+          "start": 15
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "2": 2,
+    "4": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-19-state-of-play-gaming-on-linux-in-the-roaring-20s.md",
+  "prose_words": 1314,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 3
+}

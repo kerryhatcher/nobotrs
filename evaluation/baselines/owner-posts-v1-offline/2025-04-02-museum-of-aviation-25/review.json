@@ -1,0 +1,619 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-02-museum-of-aviation-25.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 904,
+  "leverage_counts": {
+    "2": 4,
+    "3": 8,
+    "4": 1,
+    "5": 5
+  },
+  "findings": [
+    {
+      "rule_id": "a-testament-to",
+      "guidance_id": "structure.significance-inflation",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 27,
+        "column": 69,
+        "end_line": 27,
+        "end_column": 83,
+        "source_ranges": [
+          {
+            "start": 1272,
+            "end": 1286
+          }
+        ]
+      },
+      "matched_text": "a testament to",
+      "sentence": "Nestled in Warner Robins, Georgia, the Museum of Aviation stands as a testament to the rich heritage of the United States Air Force and the marvels of aviation.",
+      "context": null,
+      "suggestion": null,
+      "message": null,
+      "why": "Generic significance does not explain the effect on the reader.",
+      "fix": "Use a supplied consequence, or cut the unsupported praise.",
+      "keep_when": "Keep significance supported by specific evidence in context."
+    },
+    {
+      "rule_id": "structure.rule-of-three",
+      "guidance_id": "structure.rule-of-three",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 27,
+        "column": 162,
+        "end_line": 27,
+        "end_column": 333,
+        "source_ranges": [
+          {
+            "start": 1365,
+            "end": 1536
+          }
+        ]
+      },
+      "matched_text": "As the second-largest museum in the Air Force's network, this sprawling facility offers visitors an immersive experience that combines history, education, and inspiration.",
+      "sentence": "As the second-largest museum in the Air Force's network, this sprawling facility offers visitors an immersive experience that combines history, education, and inspiration.",
+      "context": null,
+      "suggestion": "Consider naming the concrete properties rather than a string of general qualities.",
+      "message": null,
+      "why": "General qualities can leave the reader without a concrete property.",
+      "fix": "Use actual supported properties, or keep a parallel list if it communicates them.",
+      "keep_when": "Keep factual triples, intentional rhetoric and technical categories."
+    },
+    {
+      "rule_id": "structure.fragment-pattern",
+      "guidance_id": "structure.fragment-pattern",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 89,
+        "column": 1,
+        "end_line": 89,
+        "end_column": 15,
+        "source_ranges": [
+          {
+            "start": 4175,
+            "end": 4189
+          }
+        ]
+      },
+      "matched_text": "Flying Tigers.",
+      "sentence": "Flying Tigers.",
+      "context": null,
+      "suggestion": "8 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+      "message": null,
+      "why": "Several very short units may interrupt the argument.",
+      "fix": "Check which units are complete sentences and which fragments need connection.",
+      "keep_when": "Keep dialogue, slogans, instructions and deliberate emphasis."
+    },
+    {
+      "rule_id": "structure.negative-parallelism",
+      "guidance_id": "structure.negative-parallelism",
+      "category": "structure",
+      "leverage": 2,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 153,
+        "column": 15,
+        "end_line": 153,
+        "end_column": 56,
+        "source_ranges": [
+          {
+            "start": 8086,
+            "end": 8127
+          }
+        ]
+      },
+      "matched_text": "not just a place to admire aircraft; it's",
+      "sentence": "The museum is not just a place to admire aircraft; it's a hub for learning and innovation.",
+      "context": null,
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "message": null,
+      "why": "A repeated contrast can obscure what changed.",
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 89,
+        "column": 1,
+        "end_line": 89,
+        "end_column": 15,
+        "source_ranges": [
+          {
+            "start": 4175,
+            "end": 4189
+          }
+        ]
+      },
+      "matched_text": "Flying Tigers.",
+      "sentence": "Flying Tigers.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 151,
+        "column": 5,
+        "end_line": 151,
+        "end_column": 17,
+        "source_ranges": [
+          {
+            "start": 7939,
+            "end": 7951
+          }
+        ]
+      },
+      "matched_text": "Photo credit",
+      "sentence": "Photo credit",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 197,
+        "column": 3,
+        "end_line": 197,
+        "end_column": 18,
+        "source_ranges": [
+          {
+            "start": 10330,
+            "end": 10345
+          }
+        ]
+      },
+      "matched_text": "Plan Your Visit",
+      "sentence": "Plan Your Visit",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 207,
+        "column": 135,
+        "end_line": 207,
+        "end_column": 148,
+        "source_ranges": [
+          {
+            "start": 11021,
+            "end": 11034
+          }
+        ]
+      },
+      "matched_text": "Kerry Hatcher",
+      "sentence": "Kerry Hatcher",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 219,
+        "column": 1,
+        "end_line": 219,
+        "end_column": 10,
+        "source_ranges": [
+          {
+            "start": 11486,
+            "end": 11495
+          }
+        ]
+      },
+      "matched_text": "Subscribe",
+      "sentence": "Subscribe",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 221,
+        "column": 1,
+        "end_line": 221,
+        "end_column": 12,
+        "source_ranges": [
+          {
+            "start": 11497,
+            "end": 11508
+          }
+        ]
+      },
+      "matched_text": "Email sent!",
+      "sentence": "Email sent!",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 223,
+        "column": 1,
+        "end_line": 223,
+        "end_column": 9,
+        "source_ranges": [
+          {
+            "start": 11552,
+            "end": 11560
+          }
+        ]
+      },
+      "matched_text": "No spam.",
+      "sentence": "No spam.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.short-fragment",
+      "guidance_id": "structure.short-fragment",
+      "category": "rhythm",
+      "leverage": 3,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 223,
+        "column": 10,
+        "end_line": 223,
+        "end_column": 30,
+        "source_ranges": [
+          {
+            "start": 11561,
+            "end": 11581
+          }
+        ]
+      },
+      "matched_text": "Unsubscribe anytime.",
+      "sentence": "Unsubscribe anytime.",
+      "context": null,
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "message": null,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide.",
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment."
+    },
+    {
+      "rule_id": "structure.title-case-headings",
+      "guidance_id": "structure.title-case-headings",
+      "category": "formatting",
+      "leverage": 4,
+      "severity": "low",
+      "suppressed": false,
+      "location": {
+        "line": 35,
+        "column": 8,
+        "end_line": 35,
+        "end_column": 36,
+        "source_ranges": [
+          {
+            "start": 1763,
+            "end": 1791
+          }
+        ]
+      },
+      "matched_text": "A Treasure Trove of Exhibits",
+      "sentence": "A Treasure Trove of Exhibits",
+      "context": null,
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "message": null,
+      "why": "Heading capitalization may distract if it conflicts with the venue style.",
+      "fix": "Use the required or established heading style consistently.",
+      "keep_when": "Keep title case when the publication or naming convention requires it."
+    },
+    {
+      "rule_id": "showcase",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 59,
+        "column": 190,
+        "end_line": 59,
+        "end_column": 199,
+        "source_ranges": [
+          {
+            "start": 2900,
+            "end": 2909
+          }
+        ]
+      },
+      "matched_text": "showcases",
+      "sentence": "From the sleek SR-71 Blackbird to the formidable B-29 Superfortress, the collection showcases the evolution of aviation technology and its pivotal role in shaping history.",
+      "context": null,
+      "suggestion": "show",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    },
+    {
+      "rule_id": "pivotal",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 59,
+        "column": 245,
+        "end_line": 59,
+        "end_column": 252,
+        "source_ranges": [
+          {
+            "start": 2955,
+            "end": 2962
+          }
+        ]
+      },
+      "matched_text": "pivotal",
+      "sentence": "From the sleek SR-71 Blackbird to the formidable B-29 Superfortress, the collection showcases the evolution of aviation technology and its pivotal role in shaping history.",
+      "context": null,
+      "suggestion": "key",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    },
+    {
+      "rule_id": "pivotal",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 129,
+        "column": 54,
+        "end_line": 129,
+        "end_column": 61,
+        "source_ranges": [
+          {
+            "start": 6597,
+            "end": 6604
+          }
+        ]
+      },
+      "matched_text": "pivotal",
+      "sentence": "B-29 Superfortress: This heavy bomber played a pivotal role in the Pacific Theater during World War II, including the historic missions over Hiroshima and Nagasaki.",
+      "context": null,
+      "suggestion": "key",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    },
+    {
+      "rule_id": "robust",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 141,
+        "column": 147,
+        "end_line": 141,
+        "end_column": 153,
+        "source_ranges": [
+          {
+            "start": 7416,
+            "end": 7422
+          }
+        ]
+      },
+      "matched_text": "robust",
+      "sentence": "With its robust design and defensive capabilities, it played a crucial role in strategic bombing campaigns over Europe.",
+      "context": null,
+      "suggestion": "strong",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    },
+    {
+      "rule_id": "foster",
+      "guidance_id": "vocabulary.tell-word",
+      "category": "vocabulary",
+      "leverage": 5,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 153,
+        "column": 196,
+        "end_line": 153,
+        "end_column": 202,
+        "source_ranges": [
+          {
+            "start": 8267,
+            "end": 8273
+          }
+        ]
+      },
+      "matched_text": "foster",
+      "sentence": "Through its National STEM Academy, the museum provides resources and programs that ignite curiosity and foster a love for science, technology, engineering, and mathematics.",
+      "context": null,
+      "suggestion": "encourage",
+      "message": null,
+      "why": "A familiar general word may hide the action or property intended.",
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "fail",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "fail",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "fail",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 18,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

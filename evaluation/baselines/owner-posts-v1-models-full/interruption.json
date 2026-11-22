@@ -1,0 +1,26 @@
+{
+  "schema_version": "owner-model-interruption-v1",
+  "recorded_at": "2026-11-21T10:49:31.590252+00:00",
+  "original_checkpoint_preserved": true,
+  "completed_documents": 10,
+  "planned_documents": 43,
+  "backend_status_counts": {
+    "conpara": {
+      "scored_full": 9,
+      "skipped": 1
+    },
+    "desklib": {
+      "scored_full": 9,
+      "skipped": 1
+    },
+    "detectorscope": {
+      "failed": 1,
+      "scored_full": 8,
+      "skipped": 1
+    }
+  },
+  "active_uncheckpointed_document": "2020-05-08-make-your-internet-faster-and-safer-for-free.md",
+  "stopped_terminal": "t276",
+  "cause": "Host memory pressure and full swap; stopped only this model run after DS doc10 deadline failure. No OOM exception was returned by the worker.",
+  "recovery": "single-model processes, prior successful model results reused, CPU float32 retained, two threads, pressure monitor and per-document checkpoints"
+}

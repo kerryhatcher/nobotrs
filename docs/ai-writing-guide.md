@@ -145,41 +145,17 @@ That signal is weakening, though. GPT-5-era models show markedly lower em-dash u
 
 ---
 
-## Practical instructions for producing genuinely human text
+## Practical instructions for clear, faithful writing
 
-The following techniques, synthesized from AI research, writing communities, detection tool documentation, and adversarial studies, form an actionable system for producing text that reads as authentically human.
+The canonical instructions are the [reader-first brief](../guidance/brief.md), also available through `nobotrs guide`. Research observations elsewhere in this document are historical claims, not instructions to optimize a detector score.
 
-### Eliminate the vocabulary fingerprint
+Start with purpose, audience, supplied facts and the requested action. Use the author's real evidence and voice. Ask for missing facts or cut generic claims. Never fabricate experience, a persona, credentials, names, sources or numbers.
 
-Maintain and enforce a banned-word list. At minimum, exclude: delve, tapestry, landscape, multifaceted, nuanced, robust, leverage, utilize, seamless, foster, pivotal, paramount, holistic, innovative, streamline, transformative, vibrant, meticulous, intricate, compelling, embark, navigate, beacon, testament, plethora, myriad, moreover, furthermore, additionally, nevertheless, consequently, accordingly. Replace Latinate words with Anglo-Saxon equivalents: "use" not "utilize," "help" not "facilitate," "start" not "commence," "show" not "demonstrate," "improve" not "enhance." Replace formal connectors with natural ones: "but," "and," "also," "plus," "still," "so" — or drop connectors entirely and let logical flow do the work. A useful technique: before writing on a topic, list the 20 words an AI would most likely use, then ban all of them.
+Revise unclear content before structure, rhythm, punctuation and vocabulary. Preserve attribution, negation, modality, approximate quantities, links, quotes and code. A technical term, deliberate repetition, a factual list or a single fragment can be appropriate. These patterns do not establish authorship or justify an automatic rewrite.
 
-### Engineer burstiness into every paragraph
+Read aloud and stop when priority issues are resolved or accepted and fidelity questions are answered. Decoding settings change surface statistics, not substance; revise instead. Do not introduce grammar errors or replace every dash. Do not iterate against a detector score.
 
-Never allow three consecutive sentences of similar length. Mix aggressively: a three-word sentence, then a sprawling 35-word thought, then a medium one, then a fragment. Use sentence fragments for emphasis ("Exactly." "Not even close." "The point being."). Allow occasional run-ons that mimic how people actually think when excited. Read every paragraph aloud — if it sounds monotone, restructure until the rhythm varies.
-
-### Use contractions and break grammar rules deliberately
-
-Write "don't" not "do not," "can't" not "cannot," "it's" not "it is" — except when the formal version creates emphasis. Start sentences with "And," "But," "So," "Because." End sentences with prepositions. Split infinitives. Use comma splices occasionally for rhythm. Drop subjects in casual contexts ("Went to the store. Grabbed milk."). Perfect grammar is an AI tell; strategic imperfection is a human signature.
-
-### Build a specific, consistent voice
-
-The most effective anti-detection technique across all sources is writing from a **specific persona with lived experience**. Define: years of experience, communication style (blunt, warm, irreverent), relationship to reader (mentor, peer, skeptic), specific expertise domain, and emotional range. Take strong positions: "I think this approach is mostly wrong, and here's why" instead of "There are various perspectives on this matter." Show real frustration, genuine enthusiasm, self-doubt, and humor. Reference specific personal experiences with dates, places, and concrete details that only a real person would know.
-
-### Add radical specificity
-
-Replace every generic claim with a concrete one. Not "a local farm" but "Henderson's place off Route 9." Not "improved efficiency" but "cut processing time from 14 minutes to 90 seconds." Not "studies show" but "Liang et al. at Stanford found in their July 2023 Patterns paper." Use domain-specific jargon naturally, without defining terms insiders already know. Reference specific tools, version numbers, prices, dates, and people. Specificity is the single hardest thing for AI to fake and the single most effective differentiator.
-
-### Destroy formulaic structure
-
-Never open with "In this article, we will explore." Start with a hook — an anecdote, a provocative claim, a question, or straight into the argument with no preamble. Vary paragraph length wildly: one sentence, then five, then two, then a single line for emphasis. Digress intentionally, then circle back ("But I'm getting ahead of myself"). Don't resolve every thread neatly. Avoid "In conclusion" — just end when you're done, or end with a new thought that the conclusion prompted. Eliminate markdown formatting (bold, headers, bullet points) in contexts where flowing prose is expected.
-
-### Address the em dash problem
-
-Replace every em dash with a comma, period, semicolon, or sentence restructure. This single change eliminates one of the most discussed formatting tells. Similarly, avoid curly quotation marks in contexts where straight quotes are standard, and allow occasional minor imperfections rather than perfect typography throughout.
-
-### Prompting and post-processing
-
-When using AI as a writing tool, provide detailed persona definitions, explicit banned-word lists, and style instructions that demand burstiness, contractions, active voice, and specificity. Set temperature to maximum for vocabulary variety. After generation, edit line by line: read aloud, replace anything that sounds like a press release, insert personal touches, add concrete details, and break any remaining patterns. The most reliable approach is the **two-pass method**: generate with constraints, then manually rewrite every sentence you wouldn't actually say yourself.
+For web publication, consult the brief's linked Google Search Central guidance on helpful content, accurate creator details, disclosure and scaled content abuse. Follow venue requirements. Reader usefulness is the objective.
 
 ---
 

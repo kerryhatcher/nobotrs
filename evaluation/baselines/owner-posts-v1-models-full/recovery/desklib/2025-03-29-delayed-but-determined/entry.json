@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.05253,
+  "file": "2025-03-29-delayed-but-determined.md",
+  "input_sha256": "60683284869a6aa0fb4537e25d9a1a6e12bdb471a3e2e20f5c52ce330818c637",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-03-29-delayed-but-determined/backend.json",
+  "reused_source_sha256": "19c7b3e0430a05b7d13b041abdca380258e481e2624161b5343592d7b4c33b26",
+  "status": "scored_full"
+}

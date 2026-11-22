@@ -1,0 +1,910 @@
+{
+  "actionable_finding_count": 0,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 1.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.13966480446927373
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 716.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.665320676541865
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 102.90141689545268
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 8.846753569211668
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6010147601476015
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.964323929455086
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1474,
+        "start": 1268
+      }
+    ],
+    [
+      {
+        "end": 1496,
+        "start": 1478
+      }
+    ],
+    [
+      {
+        "end": 2246,
+        "start": 1501
+      }
+    ],
+    [
+      {
+        "end": 2297,
+        "start": 2251
+      }
+    ],
+    [
+      {
+        "end": 2628,
+        "start": 2299
+      }
+    ],
+    [
+      {
+        "end": 2661,
+        "start": 2633
+      }
+    ],
+    [
+      {
+        "end": 2779,
+        "start": 2666
+      }
+    ],
+    [
+      {
+        "end": 2919,
+        "start": 2783
+      }
+    ],
+    [
+      {
+        "end": 3028,
+        "start": 2923
+      }
+    ],
+    [
+      {
+        "end": 3152,
+        "start": 3032
+      },
+      {
+        "end": 3159,
+        "start": 3154
+      },
+      {
+        "end": 3242,
+        "start": 3161
+      }
+    ],
+    [
+      {
+        "end": 3352,
+        "start": 3244
+      }
+    ],
+    [
+      {
+        "end": 3376,
+        "start": 3359
+      },
+      {
+        "end": 3701,
+        "start": 3378
+      }
+    ],
+    [
+      {
+        "end": 3725,
+        "start": 3707
+      },
+      {
+        "end": 3774,
+        "start": 3727
+      }
+    ],
+    [
+      {
+        "end": 3798,
+        "start": 3780
+      },
+      {
+        "end": 3982,
+        "start": 3800
+      }
+    ],
+    [
+      {
+        "end": 4012,
+        "start": 3988
+      },
+      {
+        "end": 4157,
+        "start": 4014
+      }
+    ],
+    [
+      {
+        "end": 4261,
+        "start": 4234
+      }
+    ],
+    [
+      {
+        "end": 4274,
+        "start": 4266
+      },
+      {
+        "end": 4278,
+        "start": 4277
+      },
+      {
+        "end": 4293,
+        "start": 4282
+      }
+    ],
+    [
+      {
+        "end": 4555,
+        "start": 4356
+      }
+    ],
+    [
+      {
+        "end": 4561,
+        "start": 4557
+      }
+    ],
+    [
+      {
+        "end": 4641,
+        "start": 4564
+      }
+    ],
+    [
+      {
+        "end": 4684,
+        "start": 4662
+      },
+      {
+        "end": 4698,
+        "start": 4685
+      },
+      {
+        "end": 4924,
+        "start": 4717
+      },
+      {
+        "end": 4961,
+        "start": 4927
+      },
+      {
+        "end": 5005,
+        "start": 5004
+      }
+    ],
+    [
+      {
+        "end": 5032,
+        "start": 5007
+      },
+      {
+        "end": 5040,
+        "start": 5034
+      },
+      {
+        "end": 5130,
+        "start": 5042
+      },
+      {
+        "end": 5143,
+        "start": 5132
+      },
+      {
+        "end": 5268,
+        "start": 5145
+      }
+    ],
+    [
+      {
+        "end": 5292,
+        "start": 5273
+      }
+    ],
+    [
+      {
+        "end": 5361,
+        "start": 5294
+      }
+    ],
+    [
+      {
+        "end": 5372,
+        "start": 5363
+      }
+    ],
+    [
+      {
+        "end": 5427,
+        "start": 5374
+      }
+    ],
+    [
+      {
+        "end": 5458,
+        "start": 5429
+      }
+    ],
+    [
+      {
+        "end": 5501,
+        "start": 5460
+      },
+      {
+        "end": 5511,
+        "start": 5504
+      },
+      {
+        "end": 5601,
+        "start": 5551
+      }
+    ],
+    [
+      {
+        "end": 5649,
+        "start": 5603
+      }
+    ],
+    [
+      {
+        "end": 5901,
+        "start": 5651
+      }
+    ],
+    [
+      {
+        "end": 6019,
+        "start": 5993
+      }
+    ],
+    [
+      {
+        "end": 6130,
+        "start": 6092
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 0,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-03-29-delayed-but-determined.md",
+  "prose_words": 716,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1385,
+        "start": 1268
+      }
+    ],
+    [
+      {
+        "end": 1474,
+        "start": 1385
+      }
+    ],
+    [
+      {
+        "end": 1496,
+        "start": 1478
+      }
+    ],
+    [
+      {
+        "end": 1664,
+        "start": 1501
+      }
+    ],
+    [
+      {
+        "end": 1676,
+        "start": 1664
+      }
+    ],
+    [
+      {
+        "end": 1749,
+        "start": 1676
+      }
+    ],
+    [
+      {
+        "end": 1996,
+        "start": 1749
+      }
+    ],
+    [
+      {
+        "end": 2071,
+        "start": 1996
+      }
+    ],
+    [
+      {
+        "end": 2246,
+        "start": 2071
+      }
+    ],
+    [
+      {
+        "end": 2297,
+        "start": 2251
+      }
+    ],
+    [
+      {
+        "end": 2420,
+        "start": 2299
+      }
+    ],
+    [
+      {
+        "end": 2539,
+        "start": 2420
+      }
+    ],
+    [
+      {
+        "end": 2628,
+        "start": 2539
+      }
+    ],
+    [
+      {
+        "end": 2661,
+        "start": 2633
+      }
+    ],
+    [
+      {
+        "end": 2779,
+        "start": 2666
+      }
+    ],
+    [
+      {
+        "end": 2919,
+        "start": 2783
+      }
+    ],
+    [
+      {
+        "end": 3028,
+        "start": 2923
+      }
+    ],
+    [
+      {
+        "end": 3151,
+        "start": 3032
+      }
+    ],
+    [
+      {
+        "end": 3152,
+        "start": 3151
+      },
+      {
+        "end": 3159,
+        "start": 3154
+      },
+      {
+        "end": 3242,
+        "start": 3161
+      }
+    ],
+    [
+      {
+        "end": 3327,
+        "start": 3244
+      }
+    ],
+    [
+      {
+        "end": 3352,
+        "start": 3327
+      }
+    ],
+    [
+      {
+        "end": 3376,
+        "start": 3359
+      },
+      {
+        "end": 3595,
+        "start": 3378
+      }
+    ],
+    [
+      {
+        "end": 3701,
+        "start": 3595
+      }
+    ],
+    [
+      {
+        "end": 3725,
+        "start": 3707
+      },
+      {
+        "end": 3774,
+        "start": 3727
+      }
+    ],
+    [
+      {
+        "end": 3798,
+        "start": 3780
+      },
+      {
+        "end": 3913,
+        "start": 3800
+      }
+    ],
+    [
+      {
+        "end": 3982,
+        "start": 3913
+      }
+    ],
+    [
+      {
+        "end": 4012,
+        "start": 3988
+      },
+      {
+        "end": 4058,
+        "start": 4014
+      }
+    ],
+    [
+      {
+        "end": 4157,
+        "start": 4058
+      }
+    ],
+    [
+      {
+        "end": 4261,
+        "start": 4234
+      }
+    ],
+    [
+      {
+        "end": 4274,
+        "start": 4266
+      },
+      {
+        "end": 4278,
+        "start": 4277
+      },
+      {
+        "end": 4293,
+        "start": 4282
+      }
+    ],
+    [
+      {
+        "end": 4411,
+        "start": 4356
+      }
+    ],
+    [
+      {
+        "end": 4512,
+        "start": 4411
+      }
+    ],
+    [
+      {
+        "end": 4555,
+        "start": 4512
+      }
+    ],
+    [
+      {
+        "end": 4641,
+        "start": 4564
+      }
+    ],
+    [
+      {
+        "end": 4684,
+        "start": 4662
+      },
+      {
+        "end": 4698,
+        "start": 4685
+      },
+      {
+        "end": 4745,
+        "start": 4717
+      }
+    ],
+    [
+      {
+        "end": 4863,
+        "start": 4745
+      }
+    ],
+    [
+      {
+        "end": 4924,
+        "start": 4863
+      },
+      {
+        "end": 4961,
+        "start": 4927
+      },
+      {
+        "end": 5005,
+        "start": 5004
+      }
+    ],
+    [
+      {
+        "end": 5032,
+        "start": 5007
+      },
+      {
+        "end": 5040,
+        "start": 5034
+      },
+      {
+        "end": 5102,
+        "start": 5042
+      }
+    ],
+    [
+      {
+        "end": 5130,
+        "start": 5102
+      },
+      {
+        "end": 5143,
+        "start": 5132
+      },
+      {
+        "end": 5162,
+        "start": 5145
+      }
+    ],
+    [
+      {
+        "end": 5268,
+        "start": 5162
+      }
+    ],
+    [
+      {
+        "end": 5292,
+        "start": 5273
+      }
+    ],
+    [
+      {
+        "end": 5361,
+        "start": 5294
+      }
+    ],
+    [
+      {
+        "end": 5372,
+        "start": 5363
+      }
+    ],
+    [
+      {
+        "end": 5385,
+        "start": 5374
+      }
+    ],
+    [
+      {
+        "end": 5427,
+        "start": 5385
+      }
+    ],
+    [
+      {
+        "end": 5437,
+        "start": 5429
+      }
+    ],
+    [
+      {
+        "end": 5458,
+        "start": 5437
+      }
+    ],
+    [
+      {
+        "end": 5501,
+        "start": 5460
+      },
+      {
+        "end": 5511,
+        "start": 5504
+      },
+      {
+        "end": 5601,
+        "start": 5551
+      }
+    ],
+    [
+      {
+        "end": 5649,
+        "start": 5603
+      }
+    ],
+    [
+      {
+        "end": 5740,
+        "start": 5651
+      }
+    ],
+    [
+      {
+        "end": 5758,
+        "start": 5740
+      }
+    ],
+    [
+      {
+        "end": 5901,
+        "start": 5758
+      }
+    ],
+    [
+      {
+        "end": 6019,
+        "start": 5993
+      }
+    ],
+    [
+      {
+        "end": 6130,
+        "start": 6092
+      }
+    ]
+  ],
+  "sentence_count": 54,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

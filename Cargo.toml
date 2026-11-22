@@ -1,11 +1,11 @@
 [package]
 name = "nobotrs"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.85"
-include = ["src/**", "dictionary/**", "models/*.json", "models/README.md", "tests/**", "scripts/*.py", "integrations/**/*.py", "integrations/**/*.md", "integrations/**/*.json", "integrations/**/*.toml", "integrations/**/*.yml", "integrations/**/*.yaml", "docs/local-models.md", "docs/configuration.md", "docs/core-validation.md", "docs/integration-validation.md", "docs/compression-reference.md", "docs/mtld-reference.md", "docs/readability-reference.md", "docs/rule-catalog.md", "docs/writing-guide.md", "docs/ai-writing-guide.md", "docs/evaluation/**", "/Cargo.toml", "/Cargo.lock", "/build.rs", "/README.md", "/HANDOFF.md", "docs/superpowers/plans/2026-10-10-nobotrs-review-remediation.md", "/LICENSE", "/NOTICE", "/.pre-commit-hooks.yaml"]
+include = ["src/**", "examples/**", "dictionary/**", "guidance/**", "skills/**", "evaluation/fixtures/**", "models/*.json", "models/README.md", "tests/**", "scripts/*.py", "scripts/local-corpus-guard-allowlist.json", "integrations/**/*.py", "integrations/**/*.md", "integrations/**/*.json", "integrations/**/*.toml", "integrations/**/*.yml", "integrations/**/*.yaml", "docs/local-models.md", "docs/configuration.md", "docs/core-validation.md", "docs/integration-validation.md", "docs/compression-reference.md", "docs/mtld-reference.md", "docs/readability-reference.md", "docs/rule-catalog.md", "docs/writing-guide.md", "docs/ai-writing-guide.md", "docs/evaluation/**", "/Cargo.toml", "/Cargo.lock", "/build.rs", "/README.md", "/HANDOFF.md", "docs/superpowers/plans/2026-10-10-nobotrs-review-remediation.md", "/LICENSE", "/NOTICE", "/.pre-commit-hooks.yaml"]
 license = "MIT"
-description = "Offline heuristic prose linting with uncalibrated writing-tell signals"
+description = "Offline English prose review, copyediting, and source consistency checks"
 repository = "https://github.com/kerryhatcher/nobotrs"
 
 [[bin]]
@@ -19,6 +19,9 @@ models-encoders = ["dep:candle-core", "dep:candle-nn", "dep:candle-transformers"
 # Versioned local subprocess adapter for the pinned DetectorScope worker.
 models-detectorscope = ["dep:tokenizers", "dep:sha2"]
 models = ["models-encoders", "models-detectorscope"]
+# Opt-in external commercial detector clients. Sends user text to the vendor only when a
+# vendor is explicitly enabled at runtime with its own key. Not part of any meta-feature.
+api-clients = ["dep:reqwest"]
 
 [dependencies]
 clap = { version = "4", features = ["derive"] }
@@ -38,8 +41,17 @@ candle-transformers = { version = "0.8.4", optional = true }
 tokenizers = { version = "0.23.2", default-features = false, features = ["onig"], optional = true }
 unicode-normalization = { version = "0.1.25", optional = true }
 unicode-general-category = { version = "1.1.0", optional = true }
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json", "rustls-tls"], optional = true }
 
 [profile.release]
 lto = true
 strip = true
 opt-level = "z"
+
+[[example]]
+name = "owner_model_baseline"
+required-features = ["models"]
+
+[[example]]
+name = "owner_model_sweep"
+required-features = ["models"]

@@ -24,11 +24,20 @@ impl DetectorBackend for Punctuation {
 }
 impl Punctuation {
     pub fn score_limited(&self, doc: &Document, deadline: Deadline, cap: usize) -> ScoreOutcome {
+        self.score_excluding(doc, deadline, cap, &std::collections::BTreeSet::new())
+    }
+    pub(crate) fn score_excluding(
+        &self,
+        doc: &Document,
+        deadline: Deadline,
+        cap: usize,
+        separators: &std::collections::BTreeSet<usize>,
+    ) -> ScoreOutcome {
         if deadline.expired() {
             return ScoreOutcome::Failed(crate::error::Error::Timeout);
         }
         let word_count = doc.words.len();
-        let em_dash_count = doc.prose.matches('\u{2014}').count();
+        let em_dash_count = doc.prose.matches('\u{2014}').count() - separators.len();
 
         let vote = if em_dash_count >= 6 && em_dash_count as f64 > word_count as f64 / 100.0 {
             VoteStrength::Strong
@@ -43,6 +52,9 @@ impl Punctuation {
         let mut covered = 0;
         if vote != VoteStrength::None {
             for (i, _) in doc.prose.match_indices('—') {
+                if separators.contains(&i) {
+                    continue;
+                }
                 if deadline.expired() {
                     failure = Some(crate::error::Error::Timeout);
                     break;

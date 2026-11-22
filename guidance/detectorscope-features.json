@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "detectorscope_revision": "9baaff9e2d1cdb79cafa90cdb27811b847e69dae",
+  "tokenizer_parity": "passed on public Bibb fixture, 2026-11-21",
+  "features": [],
+  "note": "No feature-to-guidance associations have been reviewed by a human. Survey statistics and classifier activations do not authorize an editorial recommendation. Unknown IDs retain guidance_id null."
+}

@@ -1,0 +1,1806 @@
+{
+  "actionable_finding_count": 6,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [
+            {
+              "block_context": 3,
+              "column": 69,
+              "disposition": "selected",
+              "end_column": 83,
+              "end_line": 27,
+              "guidance_id": "structure.significance-inflation",
+              "leverage": 2,
+              "line": 27,
+              "matched_text": "a testament to",
+              "prose_offset": {
+                "end": 267,
+                "start": 253
+              },
+              "raw_offset": {
+                "end": 1286,
+                "start": 1272
+              },
+              "rule_id": "a-testament-to",
+              "sentence_context": 3,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1286,
+                  "start": 1272
+                }
+              ],
+              "suggestion": null,
+              "suppression": null
+            },
+            {
+              "block_context": 3,
+              "column": 71,
+              "disposition": "overlap_excluded",
+              "end_column": 80,
+              "end_line": 27,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 27,
+              "matched_text": "testament",
+              "prose_offset": {
+                "end": 264,
+                "start": 255
+              },
+              "raw_offset": {
+                "end": 1283,
+                "start": 1274
+              },
+              "rule_id": "testament",
+              "sentence_context": 3,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1283,
+                  "start": 1274
+                }
+              ],
+              "suggestion": "proof",
+              "suppression": null
+            },
+            {
+              "block_context": 9,
+              "column": 190,
+              "disposition": "selected",
+              "end_column": 199,
+              "end_line": 59,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 59,
+              "matched_text": "showcases",
+              "prose_offset": {
+                "end": 1050,
+                "start": 1041
+              },
+              "raw_offset": {
+                "end": 2909,
+                "start": 2900
+              },
+              "rule_id": "showcase",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2909,
+                  "start": 2900
+                }
+              ],
+              "suggestion": "show",
+              "suppression": null
+            },
+            {
+              "block_context": 9,
+              "column": 245,
+              "disposition": "selected",
+              "end_column": 252,
+              "end_line": 59,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 59,
+              "matched_text": "pivotal",
+              "prose_offset": {
+                "end": 1103,
+                "start": 1096
+              },
+              "raw_offset": {
+                "end": 2962,
+                "start": 2955
+              },
+              "rule_id": "pivotal",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2962,
+                  "start": 2955
+                }
+              ],
+              "suggestion": "key",
+              "suppression": null
+            },
+            {
+              "block_context": 25,
+              "column": 54,
+              "disposition": "selected",
+              "end_column": 61,
+              "end_line": 129,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 129,
+              "matched_text": "pivotal",
+              "prose_offset": {
+                "end": 2783,
+                "start": 2776
+              },
+              "raw_offset": {
+                "end": 6604,
+                "start": 6597
+              },
+              "rule_id": "pivotal",
+              "sentence_context": 36,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 6604,
+                  "start": 6597
+                }
+              ],
+              "suggestion": "key",
+              "suppression": null
+            },
+            {
+              "block_context": 29,
+              "column": 147,
+              "disposition": "selected",
+              "end_column": 153,
+              "end_line": 141,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 141,
+              "matched_text": "robust",
+              "prose_offset": {
+                "end": 3289,
+                "start": 3283
+              },
+              "raw_offset": {
+                "end": 7422,
+                "start": 7416
+              },
+              "rule_id": "robust",
+              "sentence_context": 42,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 7422,
+                  "start": 7416
+                }
+              ],
+              "suggestion": "strong",
+              "suppression": null
+            },
+            {
+              "block_context": 33,
+              "column": 196,
+              "disposition": "selected",
+              "end_column": 202,
+              "end_line": 153,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 153,
+              "matched_text": "foster",
+              "prose_offset": {
+                "end": 3786,
+                "start": 3780
+              },
+              "raw_offset": {
+                "end": 8273,
+                "start": 8267
+              },
+              "rule_id": "foster",
+              "sentence_context": 48,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 8273,
+                  "start": 8267
+                }
+              ],
+              "suggestion": "encourage",
+              "suppression": null
+            }
+          ],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 3,
+              "column": 69,
+              "disposition": "selected",
+              "end_column": 83,
+              "end_line": 27,
+              "guidance_id": "structure.significance-inflation",
+              "leverage": 2,
+              "line": 27,
+              "matched_text": "a testament to",
+              "prose_offset": {
+                "end": 267,
+                "start": 253
+              },
+              "raw_offset": {
+                "end": 1286,
+                "start": 1272
+              },
+              "rule_id": "a-testament-to",
+              "sentence_context": 3,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 1286,
+                  "start": 1272
+                }
+              ],
+              "suggestion": null,
+              "suppression": null
+            },
+            {
+              "block_context": 9,
+              "column": 190,
+              "disposition": "selected",
+              "end_column": 199,
+              "end_line": 59,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 59,
+              "matched_text": "showcases",
+              "prose_offset": {
+                "end": 1050,
+                "start": 1041
+              },
+              "raw_offset": {
+                "end": 2909,
+                "start": 2900
+              },
+              "rule_id": "showcase",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2909,
+                  "start": 2900
+                }
+              ],
+              "suggestion": "show",
+              "suppression": null
+            },
+            {
+              "block_context": 9,
+              "column": 245,
+              "disposition": "selected",
+              "end_column": 252,
+              "end_line": 59,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 59,
+              "matched_text": "pivotal",
+              "prose_offset": {
+                "end": 1103,
+                "start": 1096
+              },
+              "raw_offset": {
+                "end": 2962,
+                "start": 2955
+              },
+              "rule_id": "pivotal",
+              "sentence_context": 14,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 2962,
+                  "start": 2955
+                }
+              ],
+              "suggestion": "key",
+              "suppression": null
+            },
+            {
+              "block_context": 25,
+              "column": 54,
+              "disposition": "selected",
+              "end_column": 61,
+              "end_line": 129,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 129,
+              "matched_text": "pivotal",
+              "prose_offset": {
+                "end": 2783,
+                "start": 2776
+              },
+              "raw_offset": {
+                "end": 6604,
+                "start": 6597
+              },
+              "rule_id": "pivotal",
+              "sentence_context": 36,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 6604,
+                  "start": 6597
+                }
+              ],
+              "suggestion": "key",
+              "suppression": null
+            },
+            {
+              "block_context": 29,
+              "column": 147,
+              "disposition": "selected",
+              "end_column": 153,
+              "end_line": 141,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 141,
+              "matched_text": "robust",
+              "prose_offset": {
+                "end": 3289,
+                "start": 3283
+              },
+              "raw_offset": {
+                "end": 7422,
+                "start": 7416
+              },
+              "rule_id": "robust",
+              "sentence_context": 42,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 7422,
+                  "start": 7416
+                }
+              ],
+              "suggestion": "strong",
+              "suppression": null
+            },
+            {
+              "block_context": 33,
+              "column": 196,
+              "disposition": "selected",
+              "end_column": 202,
+              "end_line": 153,
+              "guidance_id": "vocabulary.tell-word",
+              "leverage": 5,
+              "line": 153,
+              "matched_text": "foster",
+              "prose_offset": {
+                "end": 3786,
+                "start": 3780
+              },
+              "raw_offset": {
+                "end": 8273,
+                "start": 8267
+              },
+              "rule_id": "foster",
+              "sentence_context": 48,
+              "severity": "medium",
+              "source_ranges": [
+                {
+                  "end": 8273,
+                  "start": 8267
+                }
+              ],
+              "suggestion": "encourage",
+              "suppression": null
+            }
+          ],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 6.0
+            }
+          },
+          "vote": "strong",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.0
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 904.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.664531211271653
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 74.50998333756954
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 8.529188024365016
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6190211345939933
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.777802091975495
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 872,
+        "start": 830
+      }
+    ],
+    [
+      {
+        "end": 986,
+        "start": 945
+      }
+    ],
+    [
+      {
+        "end": 1202,
+        "start": 1103
+      }
+    ],
+    [
+      {
+        "end": 1536,
+        "start": 1204
+      }
+    ],
+    [
+      {
+        "end": 1562,
+        "start": 1541
+      }
+    ],
+    [
+      {
+        "end": 1687,
+        "start": 1564
+      }
+    ],
+    [
+      {
+        "end": 1791,
+        "start": 1763
+      }
+    ],
+    [
+      {
+        "end": 1824,
+        "start": 1800
+      },
+      {
+        "end": 1826,
+        "start": 1825
+      },
+      {
+        "end": 1840,
+        "start": 1828
+      }
+    ],
+    [
+      {
+        "end": 2625,
+        "start": 2517
+      },
+      {
+        "end": 2638,
+        "start": 2626
+      }
+    ],
+    [
+      {
+        "end": 3161,
+        "start": 2711
+      }
+    ],
+    [
+      {
+        "end": 3687,
+        "start": 3632
+      },
+      {
+        "end": 3700,
+        "start": 3688
+      }
+    ],
+    [
+      {
+        "end": 4216,
+        "start": 4175
+      },
+      {
+        "end": 4229,
+        "start": 4217
+      }
+    ],
+    [
+      {
+        "end": 4404,
+        "start": 4376
+      }
+    ],
+    [
+      {
+        "end": 4437,
+        "start": 4413
+      },
+      {
+        "end": 4439,
+        "start": 4438
+      },
+      {
+        "end": 4453,
+        "start": 4441
+      }
+    ],
+    [
+      {
+        "end": 4652,
+        "start": 4527
+      }
+    ],
+    [
+      {
+        "end": 4668,
+        "start": 4658
+      },
+      {
+        "end": 4865,
+        "start": 4670
+      }
+    ],
+    [
+      {
+        "end": 4959,
+        "start": 4934
+      },
+      {
+        "end": 4985,
+        "start": 4961
+      },
+      {
+        "end": 4988,
+        "start": 4987
+      },
+      {
+        "end": 5003,
+        "start": 4991
+      }
+    ],
+    [
+      {
+        "end": 5102,
+        "start": 5082
+      },
+      {
+        "end": 5277,
+        "start": 5104
+      }
+    ],
+    [
+      {
+        "end": 5375,
+        "start": 5346
+      },
+      {
+        "end": 5401,
+        "start": 5377
+      },
+      {
+        "end": 5404,
+        "start": 5403
+      },
+      {
+        "end": 5419,
+        "start": 5407
+      }
+    ],
+    [
+      {
+        "end": 5508,
+        "start": 5498
+      },
+      {
+        "end": 5645,
+        "start": 5510
+      }
+    ],
+    [
+      {
+        "end": 5721,
+        "start": 5714
+      },
+      {
+        "end": 5747,
+        "start": 5723
+      },
+      {
+        "end": 5750,
+        "start": 5749
+      },
+      {
+        "end": 5765,
+        "start": 5753
+      }
+    ],
+    [
+      {
+        "end": 5859,
+        "start": 5844
+      },
+      {
+        "end": 5983,
+        "start": 5861
+      }
+    ],
+    [
+      {
+        "end": 6060,
+        "start": 6054
+      },
+      {
+        "end": 6086,
+        "start": 6062
+      },
+      {
+        "end": 6089,
+        "start": 6088
+      },
+      {
+        "end": 6104,
+        "start": 6092
+      }
+    ],
+    [
+      {
+        "end": 6198,
+        "start": 6183
+      },
+      {
+        "end": 6346,
+        "start": 6200
+      }
+    ],
+    [
+      {
+        "end": 6425,
+        "start": 6417
+      },
+      {
+        "end": 6451,
+        "start": 6427
+      },
+      {
+        "end": 6454,
+        "start": 6453
+      },
+      {
+        "end": 6469,
+        "start": 6457
+      }
+    ],
+    [
+      {
+        "end": 6566,
+        "start": 6548
+      },
+      {
+        "end": 6714,
+        "start": 6568
+      }
+    ],
+    [
+      {
+        "end": 6813,
+        "start": 6783
+      },
+      {
+        "end": 6839,
+        "start": 6815
+      },
+      {
+        "end": 6842,
+        "start": 6841
+      },
+      {
+        "end": 6857,
+        "start": 6845
+      }
+    ],
+    [
+      {
+        "end": 6948,
+        "start": 6936
+      },
+      {
+        "end": 7073,
+        "start": 6950
+      }
+    ],
+    [
+      {
+        "end": 7151,
+        "start": 7144
+      },
+      {
+        "end": 7177,
+        "start": 7153
+      },
+      {
+        "end": 7180,
+        "start": 7179
+      },
+      {
+        "end": 7195,
+        "start": 7183
+      }
+    ],
+    [
+      {
+        "end": 7294,
+        "start": 7274
+      },
+      {
+        "end": 7633,
+        "start": 7296
+      }
+    ],
+    [
+      {
+        "end": 7737,
+        "start": 7706
+      },
+      {
+        "end": 7740,
+        "start": 7739
+      },
+      {
+        "end": 7755,
+        "start": 7743
+      }
+    ],
+    [
+      {
+        "end": 7929,
+        "start": 7904
+      }
+    ],
+    [
+      {
+        "end": 7951,
+        "start": 7939
+      }
+    ],
+    [
+      {
+        "end": 8453,
+        "start": 8072
+      }
+    ],
+    [
+      {
+        "end": 8558,
+        "start": 8529
+      }
+    ],
+    [
+      {
+        "end": 8598,
+        "start": 8564
+      }
+    ],
+    [
+      {
+        "end": 8627,
+        "start": 8603
+      },
+      {
+        "end": 8629,
+        "start": 8628
+      },
+      {
+        "end": 8643,
+        "start": 8631
+      }
+    ],
+    [
+      {
+        "end": 9079,
+        "start": 9054
+      },
+      {
+        "end": 9082,
+        "start": 9081
+      },
+      {
+        "end": 9097,
+        "start": 9085
+      }
+    ],
+    [
+      {
+        "end": 9558,
+        "start": 9172
+      }
+    ],
+    [
+      {
+        "end": 10235,
+        "start": 10165
+      },
+      {
+        "end": 10238,
+        "start": 10237
+      },
+      {
+        "end": 10253,
+        "start": 10241
+      }
+    ],
+    [
+      {
+        "end": 10345,
+        "start": 10330
+      }
+    ],
+    [
+      {
+        "end": 10442,
+        "start": 10418
+      },
+      {
+        "end": 10445,
+        "start": 10444
+      },
+      {
+        "end": 10460,
+        "start": 10448
+      }
+    ],
+    [
+      {
+        "end": 10847,
+        "start": 10535
+      }
+    ],
+    [
+      {
+        "end": 10885,
+        "start": 10849
+      }
+    ],
+    [
+      {
+        "end": 11034,
+        "start": 11021
+      }
+    ],
+    [
+      {
+        "end": 11170,
+        "start": 11122
+      }
+    ],
+    [
+      {
+        "end": 11201,
+        "start": 11172
+      }
+    ],
+    [
+      {
+        "end": 11235,
+        "start": 11203
+      },
+      {
+        "end": 11273,
+        "start": 11236
+      },
+      {
+        "end": 11368,
+        "start": 11326
+      }
+    ],
+    [
+      {
+        "end": 11415,
+        "start": 11373
+      }
+    ],
+    [
+      {
+        "end": 11484,
+        "start": 11417
+      }
+    ],
+    [
+      {
+        "end": 11495,
+        "start": 11486
+      }
+    ],
+    [
+      {
+        "end": 11550,
+        "start": 11497
+      }
+    ],
+    [
+      {
+        "end": 11581,
+        "start": 11552
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 6,
+  "emitted_candidates": 7,
+  "emitted_findings": 6,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "strong"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-02-museum-of-aviation-25.md",
+  "prose_words": 904,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 872,
+        "start": 830
+      }
+    ],
+    [
+      {
+        "end": 986,
+        "start": 945
+      }
+    ],
+    [
+      {
+        "end": 1202,
+        "start": 1103
+      }
+    ],
+    [
+      {
+        "end": 1364,
+        "start": 1204
+      }
+    ],
+    [
+      {
+        "end": 1536,
+        "start": 1364
+      }
+    ],
+    [
+      {
+        "end": 1562,
+        "start": 1541
+      }
+    ],
+    [
+      {
+        "end": 1623,
+        "start": 1564
+      }
+    ],
+    [
+      {
+        "end": 1687,
+        "start": 1623
+      }
+    ],
+    [
+      {
+        "end": 1791,
+        "start": 1763
+      }
+    ],
+    [
+      {
+        "end": 1824,
+        "start": 1800
+      },
+      {
+        "end": 1826,
+        "start": 1825
+      },
+      {
+        "end": 1840,
+        "start": 1828
+      }
+    ],
+    [
+      {
+        "end": 2561,
+        "start": 2517
+      }
+    ],
+    [
+      {
+        "end": 2599,
+        "start": 2561
+      }
+    ],
+    [
+      {
+        "end": 2625,
+        "start": 2599
+      },
+      {
+        "end": 2638,
+        "start": 2626
+      }
+    ],
+    [
+      {
+        "end": 2815,
+        "start": 2711
+      }
+    ],
+    [
+      {
+        "end": 2987,
+        "start": 2815
+      }
+    ],
+    [
+      {
+        "end": 3161,
+        "start": 2987
+      }
+    ],
+    [
+      {
+        "end": 3660,
+        "start": 3632
+      }
+    ],
+    [
+      {
+        "end": 3687,
+        "start": 3660
+      },
+      {
+        "end": 3700,
+        "start": 3688
+      }
+    ],
+    [
+      {
+        "end": 4189,
+        "start": 4175
+      }
+    ],
+    [
+      {
+        "end": 4216,
+        "start": 4189
+      },
+      {
+        "end": 4229,
+        "start": 4217
+      }
+    ],
+    [
+      {
+        "end": 4404,
+        "start": 4376
+      }
+    ],
+    [
+      {
+        "end": 4437,
+        "start": 4413
+      },
+      {
+        "end": 4439,
+        "start": 4438
+      },
+      {
+        "end": 4453,
+        "start": 4441
+      }
+    ],
+    [
+      {
+        "end": 4626,
+        "start": 4527
+      }
+    ],
+    [
+      {
+        "end": 4652,
+        "start": 4626
+      }
+    ],
+    [
+      {
+        "end": 4668,
+        "start": 4658
+      },
+      {
+        "end": 4762,
+        "start": 4670
+      }
+    ],
+    [
+      {
+        "end": 4865,
+        "start": 4762
+      }
+    ],
+    [
+      {
+        "end": 4959,
+        "start": 4934
+      },
+      {
+        "end": 4985,
+        "start": 4961
+      },
+      {
+        "end": 4988,
+        "start": 4987
+      },
+      {
+        "end": 5003,
+        "start": 4991
+      }
+    ],
+    [
+      {
+        "end": 5102,
+        "start": 5082
+      },
+      {
+        "end": 5209,
+        "start": 5104
+      }
+    ],
+    [
+      {
+        "end": 5277,
+        "start": 5209
+      }
+    ],
+    [
+      {
+        "end": 5375,
+        "start": 5346
+      },
+      {
+        "end": 5401,
+        "start": 5377
+      },
+      {
+        "end": 5404,
+        "start": 5403
+      },
+      {
+        "end": 5419,
+        "start": 5407
+      }
+    ],
+    [
+      {
+        "end": 5508,
+        "start": 5498
+      },
+      {
+        "end": 5645,
+        "start": 5510
+      }
+    ],
+    [
+      {
+        "end": 5721,
+        "start": 5714
+      },
+      {
+        "end": 5747,
+        "start": 5723
+      },
+      {
+        "end": 5750,
+        "start": 5749
+      },
+      {
+        "end": 5765,
+        "start": 5753
+      }
+    ],
+    [
+      {
+        "end": 5859,
+        "start": 5844
+      },
+      {
+        "end": 5983,
+        "start": 5861
+      }
+    ],
+    [
+      {
+        "end": 6060,
+        "start": 6054
+      },
+      {
+        "end": 6086,
+        "start": 6062
+      },
+      {
+        "end": 6089,
+        "start": 6088
+      },
+      {
+        "end": 6104,
+        "start": 6092
+      }
+    ],
+    [
+      {
+        "end": 6198,
+        "start": 6183
+      },
+      {
+        "end": 6346,
+        "start": 6200
+      }
+    ],
+    [
+      {
+        "end": 6425,
+        "start": 6417
+      },
+      {
+        "end": 6451,
+        "start": 6427
+      },
+      {
+        "end": 6454,
+        "start": 6453
+      },
+      {
+        "end": 6469,
+        "start": 6457
+      }
+    ],
+    [
+      {
+        "end": 6566,
+        "start": 6548
+      },
+      {
+        "end": 6714,
+        "start": 6568
+      }
+    ],
+    [
+      {
+        "end": 6812,
+        "start": 6783
+      }
+    ],
+    [
+      {
+        "end": 6813,
+        "start": 6812
+      },
+      {
+        "end": 6839,
+        "start": 6815
+      },
+      {
+        "end": 6842,
+        "start": 6841
+      },
+      {
+        "end": 6857,
+        "start": 6845
+      }
+    ],
+    [
+      {
+        "end": 6948,
+        "start": 6936
+      },
+      {
+        "end": 7073,
+        "start": 6950
+      }
+    ],
+    [
+      {
+        "end": 7151,
+        "start": 7144
+      },
+      {
+        "end": 7177,
+        "start": 7153
+      },
+      {
+        "end": 7180,
+        "start": 7179
+      },
+      {
+        "end": 7195,
+        "start": 7183
+      }
+    ],
+    [
+      {
+        "end": 7294,
+        "start": 7274
+      },
+      {
+        "end": 7406,
+        "start": 7296
+      }
+    ],
+    [
+      {
+        "end": 7526,
+        "start": 7406
+      }
+    ],
+    [
+      {
+        "end": 7633,
+        "start": 7526
+      }
+    ],
+    [
+      {
+        "end": 7737,
+        "start": 7706
+      },
+      {
+        "end": 7740,
+        "start": 7739
+      },
+      {
+        "end": 7755,
+        "start": 7743
+      }
+    ],
+    [
+      {
+        "end": 7929,
+        "start": 7904
+      }
+    ],
+    [
+      {
+        "end": 7951,
+        "start": 7939
+      }
+    ],
+    [
+      {
+        "end": 8162,
+        "start": 8072
+      }
+    ],
+    [
+      {
+        "end": 8335,
+        "start": 8162
+      }
+    ],
+    [
+      {
+        "end": 8453,
+        "start": 8335
+      }
+    ],
+    [
+      {
+        "end": 8558,
+        "start": 8529
+      }
+    ],
+    [
+      {
+        "end": 8598,
+        "start": 8564
+      }
+    ],
+    [
+      {
+        "end": 8627,
+        "start": 8603
+      },
+      {
+        "end": 8629,
+        "start": 8628
+      },
+      {
+        "end": 8643,
+        "start": 8631
+      }
+    ],
+    [
+      {
+        "end": 9079,
+        "start": 9054
+      },
+      {
+        "end": 9082,
+        "start": 9081
+      },
+      {
+        "end": 9097,
+        "start": 9085
+      }
+    ],
+    [
+      {
+        "end": 9297,
+        "start": 9172
+      }
+    ],
+    [
+      {
+        "end": 9425,
+        "start": 9297
+      }
+    ],
+    [
+      {
+        "end": 9558,
+        "start": 9425
+      }
+    ],
+    [
+      {
+        "end": 10235,
+        "start": 10165
+      },
+      {
+        "end": 10238,
+        "start": 10237
+      },
+      {
+        "end": 10253,
+        "start": 10241
+      }
+    ],
+    [
+      {
+        "end": 10345,
+        "start": 10330
+      }
+    ],
+    [
+      {
+        "end": 10442,
+        "start": 10418
+      },
+      {
+        "end": 10445,
+        "start": 10444
+      },
+      {
+        "end": 10460,
+        "start": 10448
+      }
+    ],
+    [
+      {
+        "end": 10654,
+        "start": 10535
+      }
+    ],
+    [
+      {
+        "end": 10694,
+        "start": 10654
+      }
+    ],
+    [
+      {
+        "end": 10707,
+        "start": 10694
+      }
+    ],
+    [
+      {
+        "end": 10847,
+        "start": 10707
+      }
+    ],
+    [
+      {
+        "end": 10885,
+        "start": 10849
+      }
+    ],
+    [
+      {
+        "end": 11034,
+        "start": 11021
+      }
+    ],
+    [
+      {
+        "end": 11170,
+        "start": 11122
+      }
+    ],
+    [
+      {
+        "end": 11201,
+        "start": 11172
+      }
+    ],
+    [
+      {
+        "end": 11235,
+        "start": 11203
+      },
+      {
+        "end": 11273,
+        "start": 11236
+      },
+      {
+        "end": 11327,
+        "start": 11326
+      }
+    ],
+    [
+      {
+        "end": 11368,
+        "start": 11327
+      }
+    ],
+    [
+      {
+        "end": 11415,
+        "start": 11373
+      }
+    ],
+    [
+      {
+        "end": 11484,
+        "start": 11417
+      }
+    ],
+    [
+      {
+        "end": 11495,
+        "start": 11486
+      }
+    ],
+    [
+      {
+        "end": 11508,
+        "start": 11497
+      }
+    ],
+    [
+      {
+        "end": 11550,
+        "start": 11508
+      }
+    ],
+    [
+      {
+        "end": 11560,
+        "start": 11552
+      }
+    ],
+    [
+      {
+        "end": 11581,
+        "start": 11560
+      }
+    ]
+  ],
+  "sentence_count": 77,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

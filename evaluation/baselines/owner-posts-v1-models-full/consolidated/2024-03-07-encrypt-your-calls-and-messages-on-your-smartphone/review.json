@@ -1,0 +1,332 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within \u00b13 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "fail"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "status": "completed",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "conpara",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    },
+    {
+      "backend": "detectorscope",
+      "status": "incomplete",
+      "reason": "See immutable per-model attempt record."
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "guidance_id": "structure.negative-parallelism",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding.",
+      "leverage": 2,
+      "location": {
+        "column": 206,
+        "end_column": 245,
+        "end_line": 60,
+        "line": 60,
+        "source_ranges": [
+          {
+            "end": 5523,
+            "start": 5484
+          }
+        ]
+      },
+      "matched_text": "not only are your messages private, but",
+      "message": null,
+      "rule_id": "structure.negative-parallelism",
+      "sentence": "With E2EE you can be assured that not only are your messages private, but also are coming from the person (well device) you expect it to.",
+      "severity": "low",
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "suppressed": false,
+      "why": "A repeated contrast can obscure what changed."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "End at the useful conclusion if the announcement is unnecessary.",
+      "guidance_id": "structure.summary-close",
+      "keep_when": "Keep summaries in reports and teaching material where readers need a recap.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 46,
+        "end_line": 90,
+        "line": 90,
+        "source_ranges": [
+          {
+            "end": 8033,
+            "start": 7988
+          }
+        ]
+      },
+      "matched_text": "Overall Signal is worth your time to try out.",
+      "message": null,
+      "rule_id": "structure.summary-close",
+      "sentence": "Overall Signal is worth your time to try out.",
+      "severity": "low",
+      "suggestion": "End on the useful conclusion; keep a summary when readers need one.",
+      "suppressed": false,
+      "why": "A generic closing announcement may repeat rather than complete the argument."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 174,
+        "end_column": 189,
+        "end_line": 18,
+        "line": 18,
+        "source_ranges": [
+          {
+            "end": 1312,
+            "start": 1297
+          }
+        ]
+      },
+      "matched_text": "Well good news!",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Well good news!",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 7,
+        "end_line": 24,
+        "line": 24,
+        "source_ranges": [
+          {
+            "end": 2412,
+            "start": 2406
+          }
+        ]
+      },
+      "matched_text": "Update",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Update",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 2,
+        "end_column": 12,
+        "end_line": 28,
+        "line": 28,
+        "source_ranges": [
+          {
+            "end": 2622,
+            "start": 2612
+          }
+        ]
+      },
+      "matched_text": "Learn more",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Learn more",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 209,
+        "end_column": 221,
+        "end_line": 86,
+        "line": 86,
+        "source_ranges": [
+          {
+            "end": 7981,
+            "start": 7967
+          }
+        ]
+      },
+      "matched_text": "I\u2019m a fan :)",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "I\u2019m a fan :)",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "ranking_policy": "within-doc-z-v1",
+    "validated": false,
+    "reason": "Consolidated per-model sweeps; joint ranks not computed. Per-model ranks remain in immutable review-attempt files.",
+    "hotspots": [],
+    "provenance": []
+  },
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "leverage_counts": {
+    "2": 2,
+    "3": 4
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+  "prose_words": 831,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 6,
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend-attempt-1.json",
+        "sha256": "535df5cadf1ff3f2a3925db5f24ac8f717fa273fa4112b857480776cf995b3b7",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

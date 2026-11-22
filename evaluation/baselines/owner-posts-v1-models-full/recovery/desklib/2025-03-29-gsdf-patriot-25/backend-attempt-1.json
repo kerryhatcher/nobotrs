@@ -1,0 +1,691 @@
+{
+  "backend": "desklib",
+  "family": "Model",
+  "outcome": {
+    "details": {
+      "backend": "desklib",
+      "candidates": [],
+      "confidence": "low",
+      "document_findings": [],
+      "evidence": [],
+      "family": "Model",
+      "metrics": {
+        "model_score": {
+          "method": "prepared-prose-v1/opening-excerpt-v1",
+          "unit": "logit",
+          "value": 9.810352325439453
+        },
+        "model_threshold": {
+          "method": "pilot_development_1pct",
+          "unit": "logit",
+          "value": 3.6327714920043945
+        }
+      },
+      "model_evidence": {
+        "aggregation_policy": "token-weighted-mean-v1",
+        "backend": "desklib",
+        "code_revision": null,
+        "device": "cpu",
+        "elapsed_ms": 15709.722395,
+        "excerpt_bytes": 2826,
+        "excerpt_coverage": 0.2832747363134103,
+        "excerpt_tokens": 512,
+        "execution_coverage": 0.2832747363134103,
+        "full_coverage_output": 8.676995808756384,
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "packing_policy": "section-packed-v1",
+        "planned_coverage": 0.2832747363134103,
+        "precision": "float32",
+        "prepared_bytes": 9977,
+        "prepared_words": 1467,
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "raw_output": 9.810352325439453,
+        "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+        "runtime": "candle-debertav2",
+        "threshold": 3.6327714920043945,
+        "threshold_source": "pilot development 1% target",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "truncated": true,
+        "windows": [
+          {
+            "body_tokens": 320,
+            "heading": null,
+            "index": 0,
+            "insufficient_context": false,
+            "prose": {
+              "end": 1700,
+              "start": 0
+            },
+            "raw_output": 8.132431983947754,
+            "source_ranges": [
+              {
+                "end": 948,
+                "start": 917
+              },
+              {
+                "end": 1099,
+                "start": 950
+              },
+              {
+                "end": 1111,
+                "start": 1101
+              },
+              {
+                "end": 1237,
+                "start": 1113
+              },
+              {
+                "end": 1255,
+                "start": 1239
+              },
+              {
+                "end": 1499,
+                "start": 1257
+              },
+              {
+                "end": 1669,
+                "start": 1579
+              },
+              {
+                "end": 1677,
+                "start": 1671
+              },
+              {
+                "end": 1703,
+                "start": 1679
+              },
+              {
+                "end": 1956,
+                "start": 1705
+              },
+              {
+                "end": 1998,
+                "start": 1958
+              },
+              {
+                "end": 2194,
+                "start": 2000
+              },
+              {
+                "end": 2360,
+                "start": 2263
+              },
+              {
+                "end": 2432,
+                "start": 2362
+              },
+              {
+                "end": 2461,
+                "start": 2434
+              },
+              {
+                "end": 2575,
+                "start": 2463
+              },
+              {
+                "end": 2605,
+                "start": 2577
+              },
+              {
+                "end": 2720,
+                "start": 2607
+              },
+              {
+                "end": 2906,
+                "start": 2842
+              },
+              {
+                "end": 2983,
+                "start": 2978
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 15,
+              "start": 0
+            }
+          },
+          {
+            "body_tokens": 221,
+            "heading": "Urban SAR",
+            "index": 1,
+            "insufficient_context": false,
+            "prose": {
+              "end": 3004,
+              "start": 1700
+            },
+            "raw_output": 9.4610013961792,
+            "source_ranges": [
+              {
+                "end": 2987,
+                "start": 2983
+              },
+              {
+                "end": 3006,
+                "start": 2989
+              },
+              {
+                "end": 3327,
+                "start": 3008
+              },
+              {
+                "end": 3742,
+                "start": 3329
+              },
+              {
+                "end": 4058,
+                "start": 3744
+              },
+              {
+                "end": 4885,
+                "start": 4663
+              },
+              {
+                "end": 4971,
+                "start": 4962
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 28,
+              "start": 15
+            }
+          },
+          {
+            "body_tokens": 187,
+            "heading": "Searching Underground",
+            "index": 2,
+            "insufficient_context": false,
+            "prose": {
+              "end": 4154,
+              "start": 3004
+            },
+            "raw_output": 9.574830055236816,
+            "source_ranges": [
+              {
+                "end": 4983,
+                "start": 4971
+              },
+              {
+                "end": 5005,
+                "start": 4985
+              },
+              {
+                "end": 5363,
+                "start": 5007
+              },
+              {
+                "end": 5707,
+                "start": 5365
+              },
+              {
+                "end": 6024,
+                "start": 5709
+              },
+              {
+                "end": 6720,
+                "start": 6629
+              },
+              {
+                "end": 6807,
+                "start": 6799
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 38,
+              "start": 28
+            }
+          },
+          {
+            "body_tokens": 104,
+            "heading": "Collapsed Bridge",
+            "index": 3,
+            "insufficient_context": true,
+            "prose": {
+              "end": 4764,
+              "start": 4154
+            },
+            "raw_output": 7.872995853424072,
+            "source_ranges": [
+              {
+                "end": 6815,
+                "start": 6807
+              },
+              {
+                "end": 7289,
+                "start": 6817
+              },
+              {
+                "end": 8017,
+                "start": 7894
+              },
+              {
+                "end": 8093,
+                "start": 8089
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 46,
+              "start": 38
+            }
+          },
+          {
+            "body_tokens": 230,
+            "heading": "Downed aircraft",
+            "index": 4,
+            "insufficient_context": false,
+            "prose": {
+              "end": 6095,
+              "start": 4764
+            },
+            "raw_output": 11.054654121398926,
+            "source_ranges": [
+              {
+                "end": 8104,
+                "start": 8093
+              },
+              {
+                "end": 8129,
+                "start": 8106
+              },
+              {
+                "end": 8163,
+                "start": 8131
+              },
+              {
+                "end": 8175,
+                "start": 8165
+              },
+              {
+                "end": 8383,
+                "start": 8177
+              },
+              {
+                "end": 8407,
+                "start": 8385
+              },
+              {
+                "end": 8441,
+                "start": 8409
+              },
+              {
+                "end": 8462,
+                "start": 8443
+              },
+              {
+                "end": 8515,
+                "start": 8464
+              },
+              {
+                "end": 8539,
+                "start": 8517
+              },
+              {
+                "end": 8578,
+                "start": 8541
+              },
+              {
+                "end": 8844,
+                "start": 8580
+              },
+              {
+                "end": 8912,
+                "start": 8846
+              },
+              {
+                "end": 9001,
+                "start": 8914
+              },
+              {
+                "end": 9028,
+                "start": 9003
+              },
+              {
+                "end": 9054,
+                "start": 9030
+              },
+              {
+                "end": 9368,
+                "start": 9056
+              },
+              {
+                "end": 10052,
+                "start": 9973
+              },
+              {
+                "end": 10129,
+                "start": 10126
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 57,
+              "start": 46
+            }
+          },
+          {
+            "body_tokens": 96,
+            "heading": "The subway",
+            "index": 5,
+            "insufficient_context": true,
+            "prose": {
+              "end": 6694,
+              "start": 6095
+            },
+            "raw_output": 7.8554158210754395,
+            "source_ranges": [
+              {
+                "end": 10136,
+                "start": 10129
+              },
+              {
+                "end": 10152,
+                "start": 10138
+              },
+              {
+                "end": 10643,
+                "start": 10154
+              },
+              {
+                "end": 11349,
+                "start": 11266
+              },
+              {
+                "end": 11423,
+                "start": 11421
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 64,
+              "start": 57
+            }
+          },
+          {
+            "body_tokens": 85,
+            "heading": "Inundated neighborhood",
+            "index": 6,
+            "insufficient_context": true,
+            "prose": {
+              "end": 7187,
+              "start": 6694
+            },
+            "raw_output": 9.379773139953613,
+            "source_ranges": [
+              {
+                "end": 11443,
+                "start": 11423
+              },
+              {
+                "end": 11460,
+                "start": 11445
+              },
+              {
+                "end": 11839,
+                "start": 11462
+              },
+              {
+                "end": 12533,
+                "start": 12460
+              },
+              {
+                "end": 12609,
+                "start": 12605
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 71,
+              "start": 64
+            }
+          },
+          {
+            "body_tokens": 145,
+            "heading": "Road debris",
+            "index": 7,
+            "insufficient_context": false,
+            "prose": {
+              "end": 7954,
+              "start": 7187
+            },
+            "raw_output": 5.351371765136719,
+            "source_ranges": [
+              {
+                "end": 12616,
+                "start": 12609
+              },
+              {
+                "end": 12634,
+                "start": 12618
+              },
+              {
+                "end": 12952,
+                "start": 12636
+              },
+              {
+                "end": 13050,
+                "start": 13021
+              },
+              {
+                "end": 13090,
+                "start": 13052
+              },
+              {
+                "end": 13136,
+                "start": 13091
+              },
+              {
+                "end": 13478,
+                "start": 13279
+              },
+              {
+                "end": 14169,
+                "start": 14087
+              },
+              {
+                "end": 14533,
+                "start": 14506
+              },
+              {
+                "end": 14611,
+                "start": 14610
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 81,
+              "start": 71
+            }
+          },
+          {
+            "body_tokens": 376,
+            "heading": "A special rescue",
+            "index": 8,
+            "insufficient_context": false,
+            "prose": {
+              "end": 9784,
+              "start": 7954
+            },
+            "raw_output": 9.085549354553223,
+            "source_ranges": [
+              {
+                "end": 14626,
+                "start": 14611
+              },
+              {
+                "end": 14659,
+                "start": 14628
+              },
+              {
+                "end": 14832,
+                "start": 14661
+              },
+              {
+                "end": 15482,
+                "start": 15443
+              },
+              {
+                "end": 15573,
+                "start": 15532
+              },
+              {
+                "end": 15731,
+                "start": 15707
+              },
+              {
+                "end": 15867,
+                "start": 15819
+              },
+              {
+                "end": 15919,
+                "start": 15876
+              },
+              {
+                "end": 15984,
+                "start": 15923
+              },
+              {
+                "end": 16040,
+                "start": 15986
+              },
+              {
+                "end": 16261,
+                "start": 16042
+              },
+              {
+                "end": 16279,
+                "start": 16263
+              },
+              {
+                "end": 16439,
+                "start": 16281
+              },
+              {
+                "end": 16443,
+                "start": 16441
+              },
+              {
+                "end": 16459,
+                "start": 16445
+              },
+              {
+                "end": 16532,
+                "start": 16461
+              },
+              {
+                "end": 16548,
+                "start": 16534
+              },
+              {
+                "end": 16667,
+                "start": 16550
+              },
+              {
+                "end": 16786,
+                "start": 16669
+              },
+              {
+                "end": 16868,
+                "start": 16788
+              },
+              {
+                "end": 16887,
+                "start": 16870
+              },
+              {
+                "end": 16899,
+                "start": 16889
+              },
+              {
+                "end": 17159,
+                "start": 16901
+              },
+              {
+                "end": 17181,
+                "start": 17163
+              },
+              {
+                "end": 17217,
+                "start": 17190
+              },
+              {
+                "end": 17243,
+                "start": 17218
+              },
+              {
+                "end": 17322,
+                "start": 17294
+              },
+              {
+                "end": 17338,
+                "start": 17324
+              },
+              {
+                "end": 17436,
+                "start": 17409
+              },
+              {
+                "end": 17557,
+                "start": 17508
+              },
+              {
+                "end": 17572,
+                "start": 17567
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 104,
+              "start": 81
+            }
+          },
+          {
+            "body_tokens": 51,
+            "heading": "Bonus section: National Guard Photos",
+            "index": 9,
+            "insufficient_context": true,
+            "prose": {
+              "end": 9977,
+              "start": 9784
+            },
+            "raw_output": 3.1395394802093506,
+            "source_ranges": [
+              {
+                "end": 17603,
+                "start": 17572
+              },
+              {
+                "end": 17658,
+                "start": 17605
+              },
+              {
+                "end": 18307,
+                "start": 18263
+              },
+              {
+                "end": 18330,
+                "start": 18309
+              },
+              {
+                "end": 18371,
+                "start": 18331
+              }
+            ],
+            "status": "scored",
+            "units": {
+              "end": 108,
+              "start": 104
+            }
+          }
+        ]
+      },
+      "vote": "none",
+      "voting_eligible": false
+    },
+    "status": "scored"
+  }
+}

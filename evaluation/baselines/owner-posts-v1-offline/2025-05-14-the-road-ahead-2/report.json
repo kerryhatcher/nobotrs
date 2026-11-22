@@ -1,0 +1,734 @@
+{
+  "actionable_finding_count": 0,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 2.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.4854368932038835
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 412.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.7648365977177135
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 176.64359490710666
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 8.590106796116505
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.6348659003831417
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 7.872316939263053
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 1500,
+        "start": 1159
+      }
+    ],
+    [
+      {
+        "end": 1537,
+        "start": 1505
+      }
+    ],
+    [
+      {
+        "end": 1565,
+        "start": 1543
+      }
+    ],
+    [
+      {
+        "end": 1793,
+        "start": 1567
+      }
+    ],
+    [
+      {
+        "end": 1833,
+        "start": 1799
+      }
+    ],
+    [
+      {
+        "end": 2050,
+        "start": 1835
+      }
+    ],
+    [
+      {
+        "end": 2054,
+        "start": 2052
+      },
+      {
+        "end": 2076,
+        "start": 2057
+      },
+      {
+        "end": 2253,
+        "start": 2079
+      }
+    ],
+    [
+      {
+        "end": 2293,
+        "start": 2263
+      }
+    ],
+    [
+      {
+        "end": 2323,
+        "start": 2299
+      }
+    ],
+    [
+      {
+        "end": 2482,
+        "start": 2325
+      }
+    ],
+    [
+      {
+        "end": 2565,
+        "start": 2486
+      }
+    ],
+    [
+      {
+        "end": 2746,
+        "start": 2568
+      }
+    ],
+    [
+      {
+        "end": 2762,
+        "start": 2752
+      }
+    ],
+    [
+      {
+        "end": 2983,
+        "start": 2764
+      }
+    ],
+    [
+      {
+        "end": 3022,
+        "start": 2993
+      }
+    ],
+    [
+      {
+        "end": 3040,
+        "start": 3028
+      }
+    ],
+    [
+      {
+        "end": 3104,
+        "start": 3042
+      }
+    ],
+    [
+      {
+        "end": 3198,
+        "start": 3109
+      }
+    ],
+    [
+      {
+        "end": 3269,
+        "start": 3202
+      }
+    ],
+    [
+      {
+        "end": 3293,
+        "start": 3275
+      }
+    ],
+    [
+      {
+        "end": 3427,
+        "start": 3295
+      }
+    ],
+    [
+      {
+        "end": 3486,
+        "start": 3429
+      }
+    ],
+    [
+      {
+        "end": 3504,
+        "start": 3489
+      },
+      {
+        "end": 3604,
+        "start": 3603
+      },
+      {
+        "end": 3650,
+        "start": 3605
+      }
+    ],
+    [
+      {
+        "end": 3771,
+        "start": 3753
+      },
+      {
+        "end": 3849,
+        "start": 3848
+      },
+      {
+        "end": 3880,
+        "start": 3850
+      }
+    ],
+    [
+      {
+        "end": 4012,
+        "start": 3984
+      }
+    ],
+    [
+      {
+        "end": 4197,
+        "start": 4097
+      }
+    ],
+    [
+      {
+        "end": 4264,
+        "start": 4203
+      }
+    ],
+    [
+      {
+        "end": 4280,
+        "start": 4270
+      }
+    ],
+    [
+      {
+        "end": 4290,
+        "start": 4284
+      }
+    ],
+    [
+      {
+        "end": 4307,
+        "start": 4293
+      },
+      {
+        "end": 4314,
+        "start": 4308
+      },
+      {
+        "end": 4414,
+        "start": 4397
+      }
+    ]
+  ],
+  "complete": true,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 0,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 0,
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-05-14-the-road-ahead-2.md",
+  "prose_words": 412,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 1285,
+        "start": 1159
+      }
+    ],
+    [
+      {
+        "end": 1350,
+        "start": 1285
+      }
+    ],
+    [
+      {
+        "end": 1410,
+        "start": 1350
+      }
+    ],
+    [
+      {
+        "end": 1500,
+        "start": 1410
+      }
+    ],
+    [
+      {
+        "end": 1507,
+        "start": 1505
+      }
+    ],
+    [
+      {
+        "end": 1537,
+        "start": 1507
+      }
+    ],
+    [
+      {
+        "end": 1565,
+        "start": 1543
+      }
+    ],
+    [
+      {
+        "end": 1704,
+        "start": 1567
+      }
+    ],
+    [
+      {
+        "end": 1793,
+        "start": 1704
+      }
+    ],
+    [
+      {
+        "end": 1833,
+        "start": 1799
+      }
+    ],
+    [
+      {
+        "end": 1914,
+        "start": 1835
+      }
+    ],
+    [
+      {
+        "end": 2050,
+        "start": 1914
+      }
+    ],
+    [
+      {
+        "end": 2054,
+        "start": 2052
+      },
+      {
+        "end": 2076,
+        "start": 2057
+      },
+      {
+        "end": 2253,
+        "start": 2079
+      }
+    ],
+    [
+      {
+        "end": 2265,
+        "start": 2263
+      }
+    ],
+    [
+      {
+        "end": 2293,
+        "start": 2265
+      }
+    ],
+    [
+      {
+        "end": 2323,
+        "start": 2299
+      }
+    ],
+    [
+      {
+        "end": 2482,
+        "start": 2325
+      }
+    ],
+    [
+      {
+        "end": 2565,
+        "start": 2486
+      }
+    ],
+    [
+      {
+        "end": 2746,
+        "start": 2568
+      }
+    ],
+    [
+      {
+        "end": 2762,
+        "start": 2752
+      }
+    ],
+    [
+      {
+        "end": 2848,
+        "start": 2764
+      }
+    ],
+    [
+      {
+        "end": 2983,
+        "start": 2848
+      }
+    ],
+    [
+      {
+        "end": 2995,
+        "start": 2993
+      }
+    ],
+    [
+      {
+        "end": 3022,
+        "start": 2995
+      }
+    ],
+    [
+      {
+        "end": 3040,
+        "start": 3028
+      }
+    ],
+    [
+      {
+        "end": 3104,
+        "start": 3042
+      }
+    ],
+    [
+      {
+        "end": 3198,
+        "start": 3109
+      }
+    ],
+    [
+      {
+        "end": 3269,
+        "start": 3202
+      }
+    ],
+    [
+      {
+        "end": 3293,
+        "start": 3275
+      }
+    ],
+    [
+      {
+        "end": 3396,
+        "start": 3295
+      }
+    ],
+    [
+      {
+        "end": 3427,
+        "start": 3396
+      }
+    ],
+    [
+      {
+        "end": 3486,
+        "start": 3429
+      }
+    ],
+    [
+      {
+        "end": 3504,
+        "start": 3489
+      },
+      {
+        "end": 3604,
+        "start": 3603
+      },
+      {
+        "end": 3650,
+        "start": 3605
+      }
+    ],
+    [
+      {
+        "end": 3771,
+        "start": 3753
+      },
+      {
+        "end": 3849,
+        "start": 3848
+      },
+      {
+        "end": 3880,
+        "start": 3850
+      }
+    ],
+    [
+      {
+        "end": 4012,
+        "start": 3984
+      }
+    ],
+    [
+      {
+        "end": 4197,
+        "start": 4097
+      }
+    ],
+    [
+      {
+        "end": 4264,
+        "start": 4203
+      }
+    ],
+    [
+      {
+        "end": 4280,
+        "start": 4270
+      }
+    ],
+    [
+      {
+        "end": 4290,
+        "start": 4284
+      }
+    ],
+    [
+      {
+        "end": 4307,
+        "start": 4293
+      },
+      {
+        "end": 4314,
+        "start": 4308
+      },
+      {
+        "end": 4414,
+        "start": 4397
+      }
+    ]
+  ],
+  "sentence_count": 40,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "medium",
+    "model_coverage": "opening",
+    "models": [],
+    "models_dir": null,
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 5000
+  },
+  "verdict": "clean",
+  "warnings": []
+}

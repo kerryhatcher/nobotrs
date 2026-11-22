@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0.0",
+  "review_version": "review-v1",
+  "path": "/home/kwhatcher/.herdr/worktrees/nobotrs/gptzero/evaluation/corpora/owner-posts-v1/samples/2025-04-09-meet-me-at-the-mall.md",
+  "guidance_version": "2026.11.21",
+  "complete": true,
+  "prose_words": 352,
+  "leverage_counts": {
+    "4": 3
+  },
+  "findings": [
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 20,
+        "column": 179,
+        "end_line": 20,
+        "end_column": 180,
+        "source_ranges": [
+          {
+            "start": 1023,
+            "end": 1026
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "The event wasn’t just about school—it was about building bridges between families and the many resources available to them right here in Bibb County.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 102,
+        "column": 114,
+        "end_line": 102,
+        "end_column": 115,
+        "source_ranges": [
+          {
+            "start": 4202,
+            "end": 4205
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "One of the evening’s most heartwarming elements was the visible pride students took in representing their schools—whether through music, dance, or simply sharing their achievements.",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    },
+    {
+      "rule_id": "punctuation.em-dash-density",
+      "guidance_id": "punctuation.em-dash-connectors",
+      "category": "punctuation",
+      "leverage": 4,
+      "severity": "medium",
+      "suppressed": false,
+      "location": {
+        "line": 106,
+        "column": 37,
+        "end_line": 106,
+        "end_column": 38,
+        "source_ranges": [
+          {
+            "start": 4556,
+            "end": 4559
+          }
+        ]
+      },
+      "matched_text": "—",
+      "sentence": "And let’s not forget the little ones—plenty of activities were on hand to keep young attendees smiling and spinning (sometimes literally, thanks to hula hoops and bubbles).",
+      "context": null,
+      "suggestion": "Consider a comma, period, or parentheses where appropriate.",
+      "message": null,
+      "why": "Many interruptions can obscure a sentence’s main connection.",
+      "fix": "Consider a period, comma or parentheses where the connection becomes clearer.",
+      "keep_when": "Keep a list separator, quoted dash or deliberate interruption when it aids reading."
+    }
+  ],
+  "document": [],
+  "checklist": [
+    {
+      "id": "no-tell-vocabulary",
+      "status": "pass",
+      "detail": "Review word choices in context, including technical exceptions."
+    },
+    {
+      "id": "no-em-dash-connectors",
+      "status": "fail",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "sentence-length-varies",
+      "status": "fail",
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded."
+    },
+    {
+      "id": "has-checkable-specific",
+      "status": "pass",
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim."
+    },
+    {
+      "id": "no-vague-attribution",
+      "status": "pass",
+      "detail": "Name actual evidence; this check cannot verify sources."
+    },
+    {
+      "id": "no-negative-parallelism",
+      "status": "pass",
+      "detail": "Retain contrasts that clarify a distinction."
+    },
+    {
+      "id": "facts-are-real",
+      "status": "unknown",
+      "detail": "confirm every name, number and source is the writer's own"
+    },
+    {
+      "id": "read-aloud",
+      "status": "unknown",
+      "detail": "Read aloud to check clarity and the author's voice."
+    },
+    {
+      "id": "tone-shifts",
+      "status": "unknown",
+      "detail": "Confirm that changes in tone fit the purpose and audience."
+    },
+    {
+      "id": "no-summary-close",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    },
+    {
+      "id": "no-rule-of-three",
+      "status": "pass",
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed."
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "punctuation",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "burstiness",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "lexical-diversity",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "readability",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "compression",
+      "status": "completed",
+      "reason": null
+    },
+    {
+      "backend": "structure",
+      "status": "completed",
+      "reason": null
+    }
+  ],
+  "total_findings": 3,
+  "suppressed_findings": 0,
+  "omitted_findings": 0,
+  "incomplete_reasons": []
+}

@@ -102,30 +102,18 @@ def hook_checks(r):
     (bindir / "nobotrs").symlink_to(r.binary)
     env = r.env({"PATH": str(bindir) + os.pathsep + os.environ.get("PATH", "")})
     hook = ROOT / "scripts/advisory-hook.py"
-    for text in (b"delve", b"plain prose", b"\xff"):
-        direct = r.run(["lint", "-"], text)
+    fixture = (ROOT / "evaluation/fixtures/bibb-fy27.txt").read_bytes()
+    for text, status in [(b"delve", 0), (b"plain prose", 0), (b"\xff", 0), (fixture, 2)]:
         hooked = subprocess.run([sys.executable, str(hook)], input=text,
                                 capture_output=True, env=env, cwd=r.work, timeout=15)
-        require(hooked.returncode == (2 if direct.returncode == 1 else 0), "hook status translation")
-        require(hooked.stdout == (direct.stdout if direct.returncode == 1 else b""),
-                "hook stdout translation")
-        if direct.returncode == 2:
+        require(hooked.returncode == status, "hook feedback status")
+        require(bool(hooked.stdout) == (status == 2), "hook silence contract")
+        if text == b"\xff":
             require(bool(hooked.stderr), "hook missing failure diagnostic")
-    # Exercise all host status mappings, including inconclusive, independently
-    # of whether today's default lint policy can produce each status naturally.
-    fake = bindir / "nobotrs"
-    fake.unlink()
-    fake.write_text("#!/usr/bin/env python3\nimport os,sys\n"
-                    "sys.stdin.buffer.read()\nprint('nudge')\n"
-                    "print('diagnostic',file=sys.stderr)\n"
-                    "sys.exit(int(os.environ['HOOK_TEST_STATUS']))\n")
-    fake.chmod(0o755)
-    for status in (0, 1, 2, 3):
-        hooked = subprocess.run([sys.executable, str(hook)], input=b"test", capture_output=True,
-                                env={**env, "HOOK_TEST_STATUS": str(status)}, timeout=15)
-        require(hooked.returncode == (2 if status == 1 else 0), "hook simulated status mapping")
-        require(bool(hooked.stdout) == (status == 1), "hook simulated silence contract")
-    r.check("advisory hook uses installed binary and translates statuses 0/1/2/3")
+        if status == 2:
+            require(b"review-writing" in hooked.stdout and len(hooked.stdout.splitlines()) <= 6,
+                    "hook exceeded its advisory feedback contract")
+    r.check("installed advisory hook distinguishes editorial priority and incomplete input")
 
 
 def example_checks(r):

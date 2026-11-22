@@ -113,7 +113,7 @@ def check_cli_surface(r):
     config = r.json(r.run(["config", "--format", "json"]), "config")
     require(config["schema_version"] == "1.0.0", "config schema")
     require(config["configuration"]["settings"]["quorum"] == 2, "config quorum default")
-    require(len(config["backends"]) == 6, "config backend count")
+    require(len(config["backends"]) == 7, "config backend count")
     require(all(item["availability"] == "ready" for item in config["backends"]),
             "default backends must be ready offline")
     r.check("CLI help, packaged guide, and offline config")
@@ -400,8 +400,9 @@ def check_package(r, package_timeout):
             cwd=ROOT, capture_output=True, timeout=package_timeout, check=False)
         require(packaged.returncode == 0,
                 f"cargo package failed: {packaged.stderr.decode(errors='replace')}")
-        crate = package_target / "package" / "nobotrs-0.1.0.crate"
-        require(crate.is_file(), "package archive missing")
+        archives = list((package_target / "package").glob("nobotrs-*.crate"))
+        require(len(archives) == 1, "expected one nobotrs package archive")
+        crate = archives[0]
         unpacked = temp / "unpacked"
         with tarfile.open(crate, "r:gz") as archive:
             names = archive.getnames()
@@ -409,6 +410,11 @@ def check_package(r, package_timeout):
                     "packaged guide missing")
             require(any(name.endswith("dictionary/entries.json") for name in names),
                     "packaged dictionary missing")
+            for required in ("guidance/brief.md", "guidance/guidance.json",
+                             "evaluation/fixtures/bibb-fy27.txt",
+                             "tests/fixtures/review/bibb-fy27.json"):
+                require(any(name.endswith(required) for name in names),
+                        f"packaged editorial asset missing: {required}")
             require(not any("docs/research/thor-ai-writing" in name for name in names),
                     "imported research was packaged")
             require(not any(
@@ -416,7 +422,13 @@ def check_package(r, package_timeout):
                 or ".pytest_cache" in name for name in names
             ), "Python cache artifact was packaged")
             archive.extractall(unpacked)
-        source = unpacked / "nobotrs-0.1.0"
+        source = unpacked / crate.stem
+        fixture_tests = subprocess.run(
+            ["cargo", "test", "--locked", "--offline", "--test", "bibb_fixture",
+             "--test", "review", "--test", "guidance", "--test", "skills", "--target-dir", str(temp / "fixture-target")],
+            cwd=source, capture_output=True, timeout=package_timeout, check=False)
+        require(fixture_tests.returncode == 0,
+                f"packaged editorial tests failed: {fixture_tests.stderr.decode(errors='replace')}")
         install_root = temp / "install"
         installed = subprocess.run(
             ["cargo", "install", "--locked", "--offline", "--path", str(source),
@@ -461,6 +473,27 @@ def check_package(r, package_timeout):
         r.check("package contents, clean install, installed CLI, and size budget")
 
 
+def check_local_corpus_guard():
+    """Run the local-corpus leak guard when local corpora exist (roadmap decision 1).
+
+    Exit 1 (leak) and exit 2 (could not check every corpus) both fail acceptance: an
+    incomplete guard must be reported, never treated as a pass.
+    """
+    internal = Path(os.environ.get("NOBOTRS_INTERNAL_DIR")
+                    or "/mnt/storage/projects/nobotrs/docs/internal")
+    if not internal.is_dir():
+        print("skipped: no local corpora")
+        return
+    guard = ROOT / "scripts" / "check_no_local_corpora.py"
+    # Beemo needs pyarrow: set NOBOTRS_GUARD_PYTHON to an interpreter that has it.
+    python = os.environ.get("NOBOTRS_GUARD_PYTHON") or sys.executable
+    result = subprocess.run([python, str(guard)], cwd=ROOT, check=False)
+    require(result.returncode == 0,
+            "local corpus guard found leaks" if result.returncode == 1
+            else "local corpus guard incomplete (see NOT CHECKED lines)")
+    print("local corpus guard: passed")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--binary", default=str(ROOT / "target/debug/nobotrs"))
@@ -474,6 +507,12 @@ def main():
         binary = ROOT / "target/debug/nobotrs"
     with tempfile.TemporaryDirectory(prefix="nobotrs-accept-") as work:
         r = Runner(binary, work)
+        guard_failure = None
+        try:
+            check_local_corpus_guard()
+        except AcceptanceError as error:
+            guard_failure = error
+            print(f"FAIL {error}", file=sys.stderr)
         try:
             check_cli_surface(r)
             check_file_stdin_equivalence(r)
@@ -491,6 +530,8 @@ def main():
             print(f"FAIL {error}", file=sys.stderr)
             return 1
     print(f"acceptance: {r.checks} checks passed")
+    if guard_failure:
+        return 1
     return 0
 
 

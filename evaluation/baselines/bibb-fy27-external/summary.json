@@ -1,0 +1,74 @@
+{
+  "input_sha256": "5c45d6d3edb1f09cf567915a1ea14699316fdeefe7576d9ac805aa7d69aa23d4",
+  "binary_sha256": "a355578a9cd610354c34c63c07b27ab5ee275f1ddb3c33629e6f467c05be127d",
+  "git_revision": "0c7b50512b5904852f261db9a86e9402364d2bcd",
+  "guide_sha256": "993644e73b89d934b5d6389399a3ff617aef6c99ee6907079409c47e1e891ac3",
+  "date": "2026-11-21",
+  "external": {
+    "gptzero": {
+      "status": "request_failed",
+      "http_status": 403,
+      "attempt": "separate vendor request"
+    },
+    "openrouter_failed_repeats": 0,
+    "openrouter_label_agreement": 1.0,
+    "openrouter_repeats": [
+      {
+        "ai_generated": true,
+        "completion_tokens": 1432,
+        "confidence": 88,
+        "cost": 0.00265714,
+        "model": "deepseek/deepseek-v4.1-flash",
+        "prompt_tokens": 9086,
+        "provider": "Wafer",
+        "status": "ok",
+        "verdict": "HUMAN"
+      },
+      {
+        "ai_generated": true,
+        "completion_tokens": 1366,
+        "confidence": 90,
+        "cost": 0.001746,
+        "model": "deepseek/deepseek-v4.1-flash",
+        "prompt_tokens": 9086,
+        "provider": "River",
+        "status": "ok",
+        "verdict": "HUMAN"
+      },
+      {
+        "ai_generated": true,
+        "completion_tokens": 1437,
+        "confidence": 88,
+        "cost": 0.00289263,
+        "model": "deepseek/deepseek-v4.1-flash",
+        "prompt_tokens": 9086,
+        "provider": "DigitalOcean",
+        "status": "ok",
+        "verdict": "HUMAN"
+      },
+      {
+        "ai_generated": true,
+        "completion_tokens": 1231,
+        "confidence": 88,
+        "cost": 0.001674458,
+        "model": "deepseek/deepseek-v4.1-flash",
+        "prompt_tokens": 9086,
+        "provider": "InferenceNet",
+        "status": "ok",
+        "verdict": "HUMAN"
+      },
+      {
+        "ai_generated": true,
+        "completion_tokens": 1159,
+        "confidence": 85,
+        "cost": 0.000592944,
+        "model": "deepseek/deepseek-v4.1-flash",
+        "prompt_tokens": 9086,
+        "provider": "River",
+        "status": "ok",
+        "verdict": "HUMAN"
+      }
+    ]
+  },
+  "scope": "Results describe one pinned public fixture. The ai_generated field marks the origin of the judge reply."
+}

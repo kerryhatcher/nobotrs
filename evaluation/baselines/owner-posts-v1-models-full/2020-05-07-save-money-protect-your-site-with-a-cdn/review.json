@@ -1,0 +1,720 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "unknown"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "unknown"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "fail"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "conpara",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "detectorscope",
+      "reason": "analysis deadline exceeded (planned excerpt 1024 tokens/limit 1024, truncated, coverage 0.4670; executed coverage 0)",
+      "status": "incomplete"
+    }
+  ],
+  "complete": false,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "guidance_id": "structure.negative-parallelism",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding.",
+      "leverage": 2,
+      "location": {
+        "column": 175,
+        "end_column": 215,
+        "end_line": 56,
+        "line": 56,
+        "source_ranges": [
+          {
+            "end": 5699,
+            "start": 5659
+          }
+        ]
+      },
+      "matched_text": "not only can you speed up your page, but",
+      "message": null,
+      "rule_id": "structure.negative-parallelism",
+      "sentence": "So if you are using a free or low cost CDN like CloudFlare, not only can you speed up your page, but also save some ca$h.",
+      "severity": "low",
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "suppressed": false,
+      "why": "A repeated contrast can obscure what changed."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 189,
+        "end_column": 204,
+        "end_line": 64,
+        "line": 64,
+        "source_ranges": [
+          {
+            "end": 6914,
+            "start": 6899
+          }
+        ]
+      },
+      "matched_text": "So for example,",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "So for example,",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 216,
+        "end_column": 224,
+        "end_line": 64,
+        "line": 64,
+        "source_ranges": [
+          {
+            "end": 6934,
+            "start": 6926
+          }
+        ]
+      },
+      "matched_text": "might be",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "might be",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 9,
+        "end_line": 72,
+        "line": 72,
+        "source_ranges": [
+          {
+            "end": 7917,
+            "start": 7909
+          }
+        ]
+      },
+      "matched_text": "Sort of.",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Sort of.",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "formatting",
+      "context": null,
+      "fix": "Use the required or established heading style consistently.",
+      "guidance_id": "structure.title-case-headings",
+      "keep_when": "Keep title case when the publication or naming convention requires it.",
+      "leverage": 4,
+      "location": {
+        "column": 4,
+        "end_column": 28,
+        "end_line": 34,
+        "line": 34,
+        "source_ranges": [
+          {
+            "end": 2435,
+            "start": 2411
+          }
+        ]
+      },
+      "matched_text": "Content Delivery Network",
+      "message": null,
+      "rule_id": "structure.title-case-headings",
+      "sentence": "Content Delivery Network",
+      "severity": "low",
+      "suggestion": "Check heading case against the venue's style; title case may be required.",
+      "suppressed": false,
+      "why": "Heading capitalization may distract if it conflicts with the venue style."
+    },
+    {
+      "category": "vocabulary",
+      "context": null,
+      "fix": "Use the precise term or an ordinary verb if it preserves meaning.",
+      "guidance_id": "vocabulary.tell-word",
+      "keep_when": "Keep technical terms such as robust statistics, quoted language and the author’s intentional voice.",
+      "leverage": 5,
+      "location": {
+        "column": 107,
+        "end_column": 115,
+        "end_line": 120,
+        "line": 120,
+        "source_ranges": [
+          {
+            "end": 11756,
+            "start": 11748
+          }
+        ]
+      },
+      "matched_text": "leverage",
+      "message": null,
+      "rule_id": "leverage",
+      "sentence": "By acting as a proxy in front of my webservers, they could leverage the vast visibility they had across the internet to block and thwart attackers.",
+      "severity": "medium",
+      "suggestion": "use",
+      "suppressed": false,
+      "why": "A familiar general word may hide the action or property intended."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 2,
+        "body_tokens": 128,
+        "end_line": 98,
+        "features": [],
+        "heading": "Amazon Web Services’ CloudFront",
+        "line": 84,
+        "mean_z": 1.530740797504829,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": 1.7527945041656494,
+            "z": 1.5963358060269421
+          },
+          {
+            "backend": "conpara",
+            "rank": 1,
+            "raw_output": 8.742660522460938,
+            "z": 1.4651457889827157
+          }
+        ],
+        "prose": {
+          "end": 7617,
+          "start": 6984
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 9046,
+            "start": 9019
+          },
+          {
+            "end": 9322,
+            "start": 9048
+          },
+          {
+            "end": 9524,
+            "start": 9324
+          },
+          {
+            "end": 9560,
+            "start": 9527
+          },
+          {
+            "end": 9717,
+            "start": 9629
+          },
+          {
+            "end": 9837,
+            "start": 9831
+          }
+        ],
+        "units": {
+          "end": 82,
+          "start": 73
+        }
+      },
+      {
+        "agreement": 2,
+        "body_tokens": 156,
+        "end_line": 34,
+        "features": [],
+        "heading": "Corporate relationships disclaimer:",
+        "line": 24,
+        "mean_z": 1.009000921965039,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": 0.09877722710371017,
+            "z": 1.0205544328262395
+          },
+          {
+            "backend": "conpara",
+            "rank": 2,
+            "raw_output": 5.142408847808838,
+            "z": 0.9974474111038386
+          }
+        ],
+        "prose": {
+          "end": 1298,
+          "start": 596
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 1718,
+            "start": 1692
+          },
+          {
+            "end": 1728,
+            "start": 1722
+          },
+          {
+            "end": 1947,
+            "start": 1730
+          },
+          {
+            "end": 1954,
+            "start": 1951
+          },
+          {
+            "end": 2173,
+            "start": 1956
+          },
+          {
+            "end": 2187,
+            "start": 2177
+          },
+          {
+            "end": 2401,
+            "start": 2189
+          },
+          {
+            "end": 2418,
+            "start": 2411
+          }
+        ],
+        "units": {
+          "end": 17,
+          "start": 6
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 360,
+        "end_line": 58,
+        "features": [],
+        "heading": "Cool, but how do I get my content into a CDN?",
+        "line": 46,
+        "mean_z": -0.09337877790753377,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": -2.3623409271240234,
+            "z": 0.16381248091169653
+          },
+          {
+            "backend": "conpara",
+            "rank": 4,
+            "raw_output": -5.234368801116943,
+            "z": -0.35057003672676407
+          }
+        ],
+        "prose": {
+          "end": 4055,
+          "start": 2413
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 3871,
+            "start": 3830
+          },
+          {
+            "end": 3913,
+            "start": 3873
+          },
+          {
+            "end": 3938,
+            "start": 3914
+          },
+          {
+            "end": 4277,
+            "start": 4014
+          },
+          {
+            "end": 4286,
+            "start": 4278
+          },
+          {
+            "end": 4396,
+            "start": 4361
+          },
+          {
+            "end": 4419,
+            "start": 4397
+          },
+          {
+            "end": 4536,
+            "start": 4511
+          },
+          {
+            "end": 4619,
+            "start": 4538
+          },
+          {
+            "end": 5064,
+            "start": 4621
+          },
+          {
+            "end": 5483,
+            "start": 5066
+          },
+          {
+            "end": 5720,
+            "start": 5485
+          },
+          {
+            "end": 5729,
+            "start": 5727
+          }
+        ],
+        "units": {
+          "end": 42,
+          "start": 27
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 402,
+        "end_line": 70,
+        "features": [],
+        "heading": "So what happens when my files change?",
+        "line": 58,
+        "mean_z": -0.3369929685104138,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 7,
+            "raw_output": -7.278419017791748,
+            "z": -1.5475276804405307
+          },
+          {
+            "backend": "conpara",
+            "rank": 3,
+            "raw_output": 4.1886069774627686,
+            "z": 0.873541743419703
+          }
+        ],
+        "prose": {
+          "end": 6057,
+          "start": 4055
+        },
+        "rank": 4,
+        "source_ranges": [
+          {
+            "end": 5764,
+            "start": 5729
+          },
+          {
+            "end": 6055,
+            "start": 5766
+          },
+          {
+            "end": 6075,
+            "start": 6056
+          },
+          {
+            "end": 6185,
+            "start": 6138
+          },
+          {
+            "end": 6709,
+            "start": 6187
+          },
+          {
+            "end": 6915,
+            "start": 6711
+          },
+          {
+            "end": 6935,
+            "start": 6925
+          },
+          {
+            "end": 7237,
+            "start": 6955
+          },
+          {
+            "end": 7560,
+            "start": 7239
+          },
+          {
+            "end": 7578,
+            "start": 7564
+          },
+          {
+            "end": 7827,
+            "start": 7580
+          },
+          {
+            "end": 7838,
+            "start": 7834
+          }
+        ],
+        "units": {
+          "end": 62,
+          "start": 42
+        }
+      },
+      {
+        "agreement": 0,
+        "body_tokens": 292,
+        "end_line": 126,
+        "features": [],
+        "heading": "CloudFlare",
+        "line": 118,
+        "mean_z": -0.4242850571561911,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 4,
+            "raw_output": -2.4746806621551514,
+            "z": 0.124705799380459
+          },
+          {
+            "backend": "conpara",
+            "rank": 5,
+            "raw_output": -10.027838230133057,
+            "z": -0.9732759136928412
+          }
+        ],
+        "prose": {
+          "end": 10195,
+          "start": 8751
+        },
+        "rank": 5,
+        "source_ranges": [
+          {
+            "end": 11243,
+            "start": 11181
+          },
+          {
+            "end": 11261,
+            "start": 11244
+          },
+          {
+            "end": 11640,
+            "start": 11337
+          },
+          {
+            "end": 11882,
+            "start": 11642
+          },
+          {
+            "end": 12126,
+            "start": 11884
+          },
+          {
+            "end": 12139,
+            "start": 12127
+          },
+          {
+            "end": 12191,
+            "start": 12187
+          },
+          {
+            "end": 12195,
+            "start": 12192
+          },
+          {
+            "end": 12327,
+            "start": 12262
+          },
+          {
+            "end": 12746,
+            "start": 12329
+          },
+          {
+            "end": 12822,
+            "start": 12749
+          }
+        ],
+        "units": {
+          "end": 113,
+          "start": 97
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      },
+      {
+        "backend": "conpara",
+        "code_revision": "b6388ca8b95b75c057f5e6dfa3ee5b7c3f92eced",
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Converted tensor-only artifact derived locally from the pinned rawguard.pt; no redistribution until packaging review.",
+          "tokenizer": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "weights": "MIT (upstream model card and pinned source LICENSE)"
+        },
+        "model_revision": "a5f896f20f14259cf8a966fa4ae2012bd8d80164",
+        "precision": "float32",
+        "preprocessing_revision": "conpara-unicode-v2/whitespace-collapse/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "64a8c8eab3e352a784c658aef62be1662607476f"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [
+    "analysis deadline exceeded (planned excerpt 1024 tokens/limit 1024, truncated, coverage 0.4670; executed coverage 0)"
+  ],
+  "leverage_counts": {
+    "2": 1,
+    "3": 3,
+    "4": 1,
+    "5": 1
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2020-05-07-save-money-protect-your-site-with-a-cdn.md",
+  "prose_words": 1800,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 6
+}

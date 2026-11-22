@@ -1,0 +1,4303 @@
+{
+  "actionable_finding_count": 25,
+  "analyzed_coverage": 1.0,
+  "backends": [
+    {
+      "backend": "vocabulary",
+      "family": "Vocabulary",
+      "outcome": {
+        "details": {
+          "backend": "vocabulary",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Vocabulary",
+          "metrics": {
+            "effective_occurrences": {
+              "method": "suppression-before-longest-selection-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "punctuation",
+      "family": "Punctuation",
+      "outcome": {
+        "details": {
+          "backend": "punctuation",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Punctuation",
+          "metrics": {
+            "effective_em_dash_count": {
+              "method": "unsuppressed-occurrences/original-prose-denominator-v1",
+              "unit": "occurrences",
+              "value": 0.0
+            },
+            "em_dash_count": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences",
+              "value": 7.0
+            },
+            "em_dashes_per_100_words": {
+              "method": "prepared-prose-v1",
+              "unit": "occurrences/100-words",
+              "value": 0.5397070161912105
+            },
+            "prose_words": {
+              "method": "unicode-segmentation-v1",
+              "unit": "words",
+              "value": 1297.0
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "burstiness",
+      "family": "Burstiness",
+      "outcome": {
+        "details": {
+          "backend": "burstiness",
+          "candidates": [],
+          "confidence": "medium",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Burstiness",
+          "metrics": {
+            "sentence_length_cv": {
+              "method": "population-stdev/shared-segmentation-v1",
+              "unit": "ratio",
+              "value": 0.7885894888748102
+            }
+          },
+          "vote": "none",
+          "voting_eligible": true
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "lexical-diversity",
+      "family": "LexicalDiversity",
+      "outcome": {
+        "details": {
+          "backend": "lexical-diversity",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "LexicalDiversity",
+          "metrics": {
+            "mtld": {
+              "method": "bidirectional-mtld-0.72-v1",
+              "unit": "tokens/factor",
+              "value": 106.15110469976315
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "readability",
+      "family": "Readability",
+      "outcome": {
+        "details": {
+          "backend": "readability",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Readability",
+          "metrics": {
+            "flesch_kincaid_grade": {
+              "method": "vowel-groups/shared-segmentation-v1",
+              "unit": "grade",
+              "value": 7.231584846148454
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "compression",
+      "family": "Compression",
+      "outcome": {
+        "details": {
+          "backend": "compression",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Compression",
+          "metrics": {
+            "lzma_ratio": {
+              "method": "lzma-rs-0.3-default",
+              "unit": "compressed-bytes/prose-bytes",
+              "value": 0.5983284791693048
+            },
+            "token_entropy": {
+              "method": "shannon-whitespace-case-sensitive-v1",
+              "unit": "bits/token",
+              "value": 8.640343067719442
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "structure",
+      "family": "Structure",
+      "outcome": {
+        "details": {
+          "backend": "structure",
+          "candidates": [
+            {
+              "block_context": 29,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 25,
+              "end_line": 92,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 92,
+              "matched_text": "Assessed value = $80,000",
+              "prose_offset": {
+                "end": 4558,
+                "start": 4534
+              },
+              "raw_offset": {
+                "end": 6160,
+                "start": 6136
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 49,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6160,
+                  "start": 6136
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 30,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 23,
+              "end_line": 94,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 94,
+              "matched_text": "$80,000 / $1,000 = $80",
+              "prose_offset": {
+                "end": 4581,
+                "start": 4559
+              },
+              "raw_offset": {
+                "end": 6184,
+                "start": 6162
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 50,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6184,
+                  "start": 6162
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 40,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 119,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 119,
+              "matched_text": "County",
+              "prose_offset": {
+                "end": 6307,
+                "start": 6301
+              },
+              "raw_offset": {
+                "end": 8223,
+                "start": 8217
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 64,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8223,
+                  "start": 8217
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 41,
+              "column": 12,
+              "disposition": "selected",
+              "end_column": 24,
+              "end_line": 119,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 119,
+              "matched_text": "Ed Mill Rate",
+              "prose_offset": {
+                "end": 6320,
+                "start": 6308
+              },
+              "raw_offset": {
+                "end": 8238,
+                "start": 8226
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 65,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8238,
+                  "start": 8226
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 42,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 121,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 121,
+              "matched_text": "Bibb",
+              "prose_offset": {
+                "end": 6325,
+                "start": 6321
+              },
+              "raw_offset": {
+                "end": 8261,
+                "start": 8257
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 66,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8261,
+                  "start": 8257
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 43,
+              "column": 10,
+              "disposition": "selected",
+              "end_column": 16,
+              "end_line": 121,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 121,
+              "matched_text": "14.674",
+              "prose_offset": {
+                "end": 6332,
+                "start": 6326
+              },
+              "raw_offset": {
+                "end": 8270,
+                "start": 8264
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 67,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8270,
+                  "start": 8264
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 44,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 122,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 122,
+              "matched_text": "Houston **",
+              "prose_offset": {
+                "end": 6343,
+                "start": 6333
+              },
+              "raw_offset": {
+                "end": 8287,
+                "start": 8275
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 68,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8283,
+                  "start": 8275
+                },
+                {
+                  "end": 8285,
+                  "start": 8284
+                },
+                {
+                  "end": 8287,
+                  "start": 8286
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 45,
+              "column": 18,
+              "disposition": "selected",
+              "end_column": 29,
+              "end_line": 122,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 122,
+              "matched_text": "11.719 **",
+              "prose_offset": {
+                "end": 6353,
+                "start": 6344
+              },
+              "raw_offset": {
+                "end": 8301,
+                "start": 8290
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 69,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8297,
+                  "start": 8290
+                },
+                {
+                  "end": 8299,
+                  "start": 8298
+                },
+                {
+                  "end": 8301,
+                  "start": 8300
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 46,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 8,
+              "end_line": 123,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 123,
+              "matched_text": "Jones",
+              "prose_offset": {
+                "end": 6359,
+                "start": 6354
+              },
+              "raw_offset": {
+                "end": 8311,
+                "start": 8306
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 70,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8311,
+                  "start": 8306
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 47,
+              "column": 11,
+              "disposition": "selected",
+              "end_column": 17,
+              "end_line": 123,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 123,
+              "matched_text": "16.312",
+              "prose_offset": {
+                "end": 6366,
+                "start": 6360
+              },
+              "raw_offset": {
+                "end": 8320,
+                "start": 8314
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 71,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8320,
+                  "start": 8314
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 48,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 124,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 124,
+              "matched_text": "Monroe",
+              "prose_offset": {
+                "end": 6373,
+                "start": 6367
+              },
+              "raw_offset": {
+                "end": 8331,
+                "start": 8325
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 72,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8331,
+                  "start": 8325
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 49,
+              "column": 12,
+              "disposition": "selected",
+              "end_column": 18,
+              "end_line": 124,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 124,
+              "matched_text": "16.212",
+              "prose_offset": {
+                "end": 6380,
+                "start": 6374
+              },
+              "raw_offset": {
+                "end": 8340,
+                "start": 8334
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 73,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8340,
+                  "start": 8334
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 50,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 8,
+              "end_line": 125,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 125,
+              "matched_text": "Peach",
+              "prose_offset": {
+                "end": 6386,
+                "start": 6381
+              },
+              "raw_offset": {
+                "end": 8350,
+                "start": 8345
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 74,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8350,
+                  "start": 8345
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 51,
+              "column": 11,
+              "disposition": "selected",
+              "end_column": 17,
+              "end_line": 125,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 125,
+              "matched_text": "14.500",
+              "prose_offset": {
+                "end": 6393,
+                "start": 6387
+              },
+              "raw_offset": {
+                "end": 8359,
+                "start": 8353
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 75,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8359,
+                  "start": 8353
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 52,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 18,
+              "end_line": 126,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 126,
+              "matched_text": "Clarke (Athens)",
+              "prose_offset": {
+                "end": 6409,
+                "start": 6394
+              },
+              "raw_offset": {
+                "end": 8379,
+                "start": 8364
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 76,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8379,
+                  "start": 8364
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 53,
+              "column": 21,
+              "disposition": "selected",
+              "end_column": 27,
+              "end_line": 126,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 126,
+              "matched_text": "18.800",
+              "prose_offset": {
+                "end": 6416,
+                "start": 6410
+              },
+              "raw_offset": {
+                "end": 8388,
+                "start": 8382
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 77,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8388,
+                  "start": 8382
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 54,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 21,
+              "end_line": 127,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 127,
+              "matched_text": "Richmond (Augusta)",
+              "prose_offset": {
+                "end": 6435,
+                "start": 6417
+              },
+              "raw_offset": {
+                "end": 8411,
+                "start": 8393
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 78,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8411,
+                  "start": 8393
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 55,
+              "column": 24,
+              "disposition": "selected",
+              "end_column": 30,
+              "end_line": 127,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 127,
+              "matched_text": "18.330",
+              "prose_offset": {
+                "end": 6442,
+                "start": 6436
+              },
+              "raw_offset": {
+                "end": 8420,
+                "start": 8414
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 79,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8420,
+                  "start": 8414
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 56,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 22,
+              "end_line": 128,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 128,
+              "matched_text": "Muscogee (Columbus)",
+              "prose_offset": {
+                "end": 6462,
+                "start": 6443
+              },
+              "raw_offset": {
+                "end": 8444,
+                "start": 8425
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 80,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8444,
+                  "start": 8425
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 57,
+              "column": 25,
+              "disposition": "selected",
+              "end_column": 31,
+              "end_line": 128,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 128,
+              "matched_text": "23.075",
+              "prose_offset": {
+                "end": 6469,
+                "start": 6463
+              },
+              "raw_offset": {
+                "end": 8453,
+                "start": 8447
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 81,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8453,
+                  "start": 8447
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 63,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 144,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 144,
+              "matched_text": "Encourage them to:",
+              "prose_offset": {
+                "end": 6825,
+                "start": 6807
+              },
+              "raw_offset": {
+                "end": 8990,
+                "start": 8972
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 89,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8990,
+                  "start": 8972
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 64,
+              "column": 5,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 146,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 146,
+              "matched_text": "1.",
+              "prose_offset": {
+                "end": 6828,
+                "start": 6826
+              },
+              "raw_offset": {
+                "end": 8998,
+                "start": 8996
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 90,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8998,
+                  "start": 8996
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 65,
+              "column": 5,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 148,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 148,
+              "matched_text": "2.",
+              "prose_offset": {
+                "end": 6908,
+                "start": 6906
+              },
+              "raw_offset": {
+                "end": 9085,
+                "start": 9083
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 92,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 9085,
+                  "start": 9083
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 74,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 173,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 172,
+              "matched_text": "Thank you, -Kerry",
+              "prose_offset": {
+                "end": 7710,
+                "start": 7693
+              },
+              "raw_offset": {
+                "end": 10154,
+                "start": 10137
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 105,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 10154,
+                  "start": 10137
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 29,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 25,
+              "end_line": 92,
+              "guidance_id": "structure.fragment-pattern",
+              "leverage": 2,
+              "line": 92,
+              "matched_text": "Assessed value = $80,000",
+              "prose_offset": {
+                "end": 4558,
+                "start": 4534
+              },
+              "raw_offset": {
+                "end": 6160,
+                "start": 6136
+              },
+              "rule_id": "structure.fragment-pattern",
+              "sentence_context": 49,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6160,
+                  "start": 6136
+                }
+              ],
+              "suggestion": "24 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+              "suppression": null
+            }
+          ],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [
+            {
+              "block_context": 29,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 25,
+              "end_line": 92,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 92,
+              "matched_text": "Assessed value = $80,000",
+              "prose_offset": {
+                "end": 4558,
+                "start": 4534
+              },
+              "raw_offset": {
+                "end": 6160,
+                "start": 6136
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 49,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6160,
+                  "start": 6136
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 30,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 23,
+              "end_line": 94,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 94,
+              "matched_text": "$80,000 / $1,000 = $80",
+              "prose_offset": {
+                "end": 4581,
+                "start": 4559
+              },
+              "raw_offset": {
+                "end": 6184,
+                "start": 6162
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 50,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6184,
+                  "start": 6162
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 40,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 119,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 119,
+              "matched_text": "County",
+              "prose_offset": {
+                "end": 6307,
+                "start": 6301
+              },
+              "raw_offset": {
+                "end": 8223,
+                "start": 8217
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 64,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8223,
+                  "start": 8217
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 41,
+              "column": 12,
+              "disposition": "selected",
+              "end_column": 24,
+              "end_line": 119,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 119,
+              "matched_text": "Ed Mill Rate",
+              "prose_offset": {
+                "end": 6320,
+                "start": 6308
+              },
+              "raw_offset": {
+                "end": 8238,
+                "start": 8226
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 65,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8238,
+                  "start": 8226
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 42,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 121,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 121,
+              "matched_text": "Bibb",
+              "prose_offset": {
+                "end": 6325,
+                "start": 6321
+              },
+              "raw_offset": {
+                "end": 8261,
+                "start": 8257
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 66,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8261,
+                  "start": 8257
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 43,
+              "column": 10,
+              "disposition": "selected",
+              "end_column": 16,
+              "end_line": 121,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 121,
+              "matched_text": "14.674",
+              "prose_offset": {
+                "end": 6332,
+                "start": 6326
+              },
+              "raw_offset": {
+                "end": 8270,
+                "start": 8264
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 67,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8270,
+                  "start": 8264
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 44,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 15,
+              "end_line": 122,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 122,
+              "matched_text": "Houston **",
+              "prose_offset": {
+                "end": 6343,
+                "start": 6333
+              },
+              "raw_offset": {
+                "end": 8287,
+                "start": 8275
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 68,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8283,
+                  "start": 8275
+                },
+                {
+                  "end": 8285,
+                  "start": 8284
+                },
+                {
+                  "end": 8287,
+                  "start": 8286
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 45,
+              "column": 18,
+              "disposition": "selected",
+              "end_column": 29,
+              "end_line": 122,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 122,
+              "matched_text": "11.719 **",
+              "prose_offset": {
+                "end": 6353,
+                "start": 6344
+              },
+              "raw_offset": {
+                "end": 8301,
+                "start": 8290
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 69,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8297,
+                  "start": 8290
+                },
+                {
+                  "end": 8299,
+                  "start": 8298
+                },
+                {
+                  "end": 8301,
+                  "start": 8300
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 46,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 8,
+              "end_line": 123,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 123,
+              "matched_text": "Jones",
+              "prose_offset": {
+                "end": 6359,
+                "start": 6354
+              },
+              "raw_offset": {
+                "end": 8311,
+                "start": 8306
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 70,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8311,
+                  "start": 8306
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 47,
+              "column": 11,
+              "disposition": "selected",
+              "end_column": 17,
+              "end_line": 123,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 123,
+              "matched_text": "16.312",
+              "prose_offset": {
+                "end": 6366,
+                "start": 6360
+              },
+              "raw_offset": {
+                "end": 8320,
+                "start": 8314
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 71,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8320,
+                  "start": 8314
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 48,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 9,
+              "end_line": 124,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 124,
+              "matched_text": "Monroe",
+              "prose_offset": {
+                "end": 6373,
+                "start": 6367
+              },
+              "raw_offset": {
+                "end": 8331,
+                "start": 8325
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 72,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8331,
+                  "start": 8325
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 49,
+              "column": 12,
+              "disposition": "selected",
+              "end_column": 18,
+              "end_line": 124,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 124,
+              "matched_text": "16.212",
+              "prose_offset": {
+                "end": 6380,
+                "start": 6374
+              },
+              "raw_offset": {
+                "end": 8340,
+                "start": 8334
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 73,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8340,
+                  "start": 8334
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 50,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 8,
+              "end_line": 125,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 125,
+              "matched_text": "Peach",
+              "prose_offset": {
+                "end": 6386,
+                "start": 6381
+              },
+              "raw_offset": {
+                "end": 8350,
+                "start": 8345
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 74,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8350,
+                  "start": 8345
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 51,
+              "column": 11,
+              "disposition": "selected",
+              "end_column": 17,
+              "end_line": 125,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 125,
+              "matched_text": "14.500",
+              "prose_offset": {
+                "end": 6393,
+                "start": 6387
+              },
+              "raw_offset": {
+                "end": 8359,
+                "start": 8353
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 75,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8359,
+                  "start": 8353
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 52,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 18,
+              "end_line": 126,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 126,
+              "matched_text": "Clarke (Athens)",
+              "prose_offset": {
+                "end": 6409,
+                "start": 6394
+              },
+              "raw_offset": {
+                "end": 8379,
+                "start": 8364
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 76,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8379,
+                  "start": 8364
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 53,
+              "column": 21,
+              "disposition": "selected",
+              "end_column": 27,
+              "end_line": 126,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 126,
+              "matched_text": "18.800",
+              "prose_offset": {
+                "end": 6416,
+                "start": 6410
+              },
+              "raw_offset": {
+                "end": 8388,
+                "start": 8382
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 77,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8388,
+                  "start": 8382
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 54,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 21,
+              "end_line": 127,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 127,
+              "matched_text": "Richmond (Augusta)",
+              "prose_offset": {
+                "end": 6435,
+                "start": 6417
+              },
+              "raw_offset": {
+                "end": 8411,
+                "start": 8393
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 78,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8411,
+                  "start": 8393
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 55,
+              "column": 24,
+              "disposition": "selected",
+              "end_column": 30,
+              "end_line": 127,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 127,
+              "matched_text": "18.330",
+              "prose_offset": {
+                "end": 6442,
+                "start": 6436
+              },
+              "raw_offset": {
+                "end": 8420,
+                "start": 8414
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 79,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8420,
+                  "start": 8414
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 56,
+              "column": 3,
+              "disposition": "selected",
+              "end_column": 22,
+              "end_line": 128,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 128,
+              "matched_text": "Muscogee (Columbus)",
+              "prose_offset": {
+                "end": 6462,
+                "start": 6443
+              },
+              "raw_offset": {
+                "end": 8444,
+                "start": 8425
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 80,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8444,
+                  "start": 8425
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 57,
+              "column": 25,
+              "disposition": "selected",
+              "end_column": 31,
+              "end_line": 128,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 128,
+              "matched_text": "23.075",
+              "prose_offset": {
+                "end": 6469,
+                "start": 6463
+              },
+              "raw_offset": {
+                "end": 8453,
+                "start": 8447
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 81,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8453,
+                  "start": 8447
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 63,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 19,
+              "end_line": 144,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 144,
+              "matched_text": "Encourage them to:",
+              "prose_offset": {
+                "end": 6825,
+                "start": 6807
+              },
+              "raw_offset": {
+                "end": 8990,
+                "start": 8972
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 89,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8990,
+                  "start": 8972
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 64,
+              "column": 5,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 146,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 146,
+              "matched_text": "1.",
+              "prose_offset": {
+                "end": 6828,
+                "start": 6826
+              },
+              "raw_offset": {
+                "end": 8998,
+                "start": 8996
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 90,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 8998,
+                  "start": 8996
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 65,
+              "column": 5,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 148,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 148,
+              "matched_text": "2.",
+              "prose_offset": {
+                "end": 6908,
+                "start": 6906
+              },
+              "raw_offset": {
+                "end": 9085,
+                "start": 9083
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 92,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 9085,
+                  "start": 9083
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 74,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 7,
+              "end_line": 173,
+              "guidance_id": "structure.short-fragment",
+              "leverage": 3,
+              "line": 172,
+              "matched_text": "Thank you, -Kerry",
+              "prose_offset": {
+                "end": 7710,
+                "start": 7693
+              },
+              "raw_offset": {
+                "end": 10154,
+                "start": 10137
+              },
+              "rule_id": "structure.short-fragment",
+              "sentence_context": 105,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 10154,
+                  "start": 10137
+                }
+              ],
+              "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+              "suppression": null
+            },
+            {
+              "block_context": 29,
+              "column": 1,
+              "disposition": "selected",
+              "end_column": 25,
+              "end_line": 92,
+              "guidance_id": "structure.fragment-pattern",
+              "leverage": 2,
+              "line": 92,
+              "matched_text": "Assessed value = $80,000",
+              "prose_offset": {
+                "end": 4558,
+                "start": 4534
+              },
+              "raw_offset": {
+                "end": 6160,
+                "start": 6136
+              },
+              "rule_id": "structure.fragment-pattern",
+              "sentence_context": 49,
+              "severity": "low",
+              "source_ranges": [
+                {
+                  "end": 6160,
+                  "start": 6136
+                }
+              ],
+              "suggestion": "24 short units; distinguish complete sentences, dialogue and deliberate emphasis before editing.",
+              "suppression": null
+            }
+          ],
+          "family": "Structure",
+          "metrics": {
+            "structure_findings_per_1k_words": {
+              "method": "structure-v1",
+              "unit": "findings/1k words",
+              "value": 19.275250578257516
+            }
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "desklib",
+      "family": "Model",
+      "outcome": {
+        "details": {
+          "backend": "desklib",
+          "candidates": [],
+          "confidence": "low",
+          "document_findings": [],
+          "evidence": [],
+          "family": "Model",
+          "metrics": {
+            "model_score": {
+              "method": "prepared-prose-v1/opening-excerpt-v1",
+              "unit": "logit",
+              "value": -0.8351154923439026
+            },
+            "model_threshold": {
+              "method": "pilot_development_1pct",
+              "unit": "logit",
+              "value": 3.6327714920043945
+            }
+          },
+          "model_evidence": {
+            "aggregation_policy": "token-weighted-mean-v1",
+            "backend": "desklib",
+            "code_revision": null,
+            "device": "cpu",
+            "elapsed_ms": 11970.048648,
+            "excerpt_bytes": 2557,
+            "excerpt_coverage": 0.3226837060702875,
+            "excerpt_tokens": 512,
+            "execution_coverage": 0.3226837060702875,
+            "full_coverage_output": 1.0858027739079552,
+            "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "packing_policy": "section-packed-v1",
+            "planned_coverage": 0.3226837060702875,
+            "precision": "float32",
+            "prepared_bytes": 7897,
+            "prepared_words": 1297,
+            "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+            "raw_output": -0.8351154923439026,
+            "raw_units": "logit (higher = machine-like at the pinned pilot cutoff)",
+            "runtime": "candle-debertav2",
+            "threshold": 3.6327714920043945,
+            "threshold_source": "pilot development 1% target",
+            "token_coverage": 1.0,
+            "token_limit": 512,
+            "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+            "truncated": true,
+            "windows": [
+              {
+                "body_tokens": 164,
+                "heading": "Our schools are facing a crisis in teacher retention and recruitment.",
+                "index": 0,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 827,
+                  "start": 0
+                },
+                "raw_output": 3.7695250511169434,
+                "source_ranges": [
+                  {
+                    "end": 683,
+                    "start": 614
+                  },
+                  {
+                    "end": 720,
+                    "start": 687
+                  },
+                  {
+                    "end": 735,
+                    "start": 722
+                  },
+                  {
+                    "end": 738,
+                    "start": 737
+                  },
+                  {
+                    "end": 967,
+                    "start": 743
+                  },
+                  {
+                    "end": 995,
+                    "start": 970
+                  },
+                  {
+                    "end": 1023,
+                    "start": 997
+                  },
+                  {
+                    "end": 1250,
+                    "start": 1025
+                  },
+                  {
+                    "end": 1310,
+                    "start": 1253
+                  },
+                  {
+                    "end": 1424,
+                    "start": 1317
+                  },
+                  {
+                    "end": 1427,
+                    "start": 1426
+                  },
+                  {
+                    "end": 1466,
+                    "start": 1428
+                  },
+                  {
+                    "end": 1642,
+                    "start": 1639
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 8,
+                  "start": 0
+                }
+              },
+              {
+                "body_tokens": 184,
+                "heading": "How does Bibb County compare in teacher pay?",
+                "index": 1,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 1637,
+                  "start": 827
+                },
+                "raw_output": -4.169644832611084,
+                "source_ranges": [
+                  {
+                    "end": 1683,
+                    "start": 1642
+                  },
+                  {
+                    "end": 1919,
+                    "start": 1691
+                  },
+                  {
+                    "end": 2035,
+                    "start": 1925
+                  },
+                  {
+                    "end": 2409,
+                    "start": 2212
+                  },
+                  {
+                    "end": 2633,
+                    "start": 2411
+                  },
+                  {
+                    "end": 2745,
+                    "start": 2738
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 17,
+                  "start": 8
+                }
+              },
+              {
+                "body_tokens": 211,
+                "heading": "Closing the funding gap",
+                "index": 2,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 2814,
+                  "start": 1637
+                },
+                "raw_output": 1.1103330850601196,
+                "source_ranges": [
+                  {
+                    "end": 2761,
+                    "start": 2745
+                  },
+                  {
+                    "end": 2776,
+                    "start": 2763
+                  },
+                  {
+                    "end": 2790,
+                    "start": 2777
+                  },
+                  {
+                    "end": 3142,
+                    "start": 2875
+                  },
+                  {
+                    "end": 3162,
+                    "start": 3144
+                  },
+                  {
+                    "end": 3254,
+                    "start": 3164
+                  },
+                  {
+                    "end": 3393,
+                    "start": 3330
+                  },
+                  {
+                    "end": 3426,
+                    "start": 3395
+                  },
+                  {
+                    "end": 3544,
+                    "start": 3428
+                  },
+                  {
+                    "end": 3586,
+                    "start": 3546
+                  },
+                  {
+                    "end": 3899,
+                    "start": 3590
+                  },
+                  {
+                    "end": 4094,
+                    "start": 3901
+                  },
+                  {
+                    "end": 4105,
+                    "start": 4102
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 27,
+                  "start": 17
+                }
+              },
+              {
+                "body_tokens": 91,
+                "heading": "The Solution:",
+                "index": 3,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 3291,
+                  "start": 2814
+                },
+                "raw_output": 1.184895396232605,
+                "source_ranges": [
+                  {
+                    "end": 4115,
+                    "start": 4105
+                  },
+                  {
+                    "end": 4351,
+                    "start": 4119
+                  },
+                  {
+                    "end": 4360,
+                    "start": 4353
+                  },
+                  {
+                    "end": 4365,
+                    "start": 4362
+                  },
+                  {
+                    "end": 4585,
+                    "start": 4367
+                  },
+                  {
+                    "end": 4597,
+                    "start": 4593
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 33,
+                  "start": 27
+                }
+              },
+              {
+                "body_tokens": 491,
+                "heading": "What Is a Millage Rate?",
+                "index": 4,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 5425,
+                  "start": 3291
+                },
+                "raw_output": 1.5629268884658813,
+                "source_ranges": [
+                  {
+                    "end": 4616,
+                    "start": 4597
+                  },
+                  {
+                    "end": 4832,
+                    "start": 4620
+                  },
+                  {
+                    "end": 5116,
+                    "start": 4904
+                  },
+                  {
+                    "end": 5373,
+                    "start": 5118
+                  },
+                  {
+                    "end": 5503,
+                    "start": 5378
+                  },
+                  {
+                    "end": 5606,
+                    "start": 5514
+                  },
+                  {
+                    "end": 5829,
+                    "start": 5730
+                  },
+                  {
+                    "end": 5958,
+                    "start": 5910
+                  },
+                  {
+                    "end": 6035,
+                    "start": 5960
+                  },
+                  {
+                    "end": 6109,
+                    "start": 6037
+                  },
+                  {
+                    "end": 6134,
+                    "start": 6111
+                  },
+                  {
+                    "end": 6160,
+                    "start": 6136
+                  },
+                  {
+                    "end": 6184,
+                    "start": 6162
+                  },
+                  {
+                    "end": 6219,
+                    "start": 6188
+                  },
+                  {
+                    "end": 6241,
+                    "start": 6220
+                  },
+                  {
+                    "end": 6366,
+                    "start": 6251
+                  },
+                  {
+                    "end": 6611,
+                    "start": 6368
+                  },
+                  {
+                    "end": 6752,
+                    "start": 6613
+                  },
+                  {
+                    "end": 7102,
+                    "start": 6817
+                  },
+                  {
+                    "end": 7108,
+                    "start": 7104
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 59,
+                  "start": 33
+                }
+              },
+              {
+                "body_tokens": 199,
+                "heading": "What Is a Millage Rate?",
+                "index": 5,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 6259,
+                  "start": 5425
+                },
+                "raw_output": -0.4869837462902069,
+                "source_ranges": [
+                  {
+                    "end": 7117,
+                    "start": 7108
+                  },
+                  {
+                    "end": 7133,
+                    "start": 7119
+                  },
+                  {
+                    "end": 7140,
+                    "start": 7135
+                  },
+                  {
+                    "end": 7148,
+                    "start": 7142
+                  },
+                  {
+                    "end": 7310,
+                    "start": 7150
+                  },
+                  {
+                    "end": 7328,
+                    "start": 7316
+                  },
+                  {
+                    "end": 7350,
+                    "start": 7330
+                  },
+                  {
+                    "end": 7360,
+                    "start": 7352
+                  },
+                  {
+                    "end": 7363,
+                    "start": 7362
+                  },
+                  {
+                    "end": 7374,
+                    "start": 7364
+                  },
+                  {
+                    "end": 7473,
+                    "start": 7472
+                  },
+                  {
+                    "end": 7605,
+                    "start": 7475
+                  },
+                  {
+                    "end": 7615,
+                    "start": 7607
+                  },
+                  {
+                    "end": 7737,
+                    "start": 7617
+                  },
+                  {
+                    "end": 7762,
+                    "start": 7742
+                  },
+                  {
+                    "end": 7792,
+                    "start": 7764
+                  },
+                  {
+                    "end": 7802,
+                    "start": 7794
+                  },
+                  {
+                    "end": 7805,
+                    "start": 7804
+                  },
+                  {
+                    "end": 7812,
+                    "start": 7806
+                  },
+                  {
+                    "end": 7893,
+                    "start": 7892
+                  },
+                  {
+                    "end": 7955,
+                    "start": 7895
+                  },
+                  {
+                    "end": 7964,
+                    "start": 7957
+                  },
+                  {
+                    "end": 7995,
+                    "start": 7966
+                  },
+                  {
+                    "end": 8005,
+                    "start": 7997
+                  },
+                  {
+                    "end": 8163,
+                    "start": 8007
+                  },
+                  {
+                    "end": 8172,
+                    "start": 8169
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 63,
+                  "start": 59
+                }
+              },
+              {
+                "body_tokens": 109,
+                "heading": "How does Bibb County's millage rage compare?",
+                "index": 6,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 6690,
+                  "start": 6259
+                },
+                "raw_output": -1.7039575576782227,
+                "source_ranges": [
+                  {
+                    "end": 8213,
+                    "start": 8172
+                  },
+                  {
+                    "end": 8223,
+                    "start": 8217
+                  },
+                  {
+                    "end": 8238,
+                    "start": 8226
+                  },
+                  {
+                    "end": 8261,
+                    "start": 8257
+                  },
+                  {
+                    "end": 8270,
+                    "start": 8264
+                  },
+                  {
+                    "end": 8283,
+                    "start": 8275
+                  },
+                  {
+                    "end": 8285,
+                    "start": 8284
+                  },
+                  {
+                    "end": 8287,
+                    "start": 8286
+                  },
+                  {
+                    "end": 8297,
+                    "start": 8290
+                  },
+                  {
+                    "end": 8299,
+                    "start": 8298
+                  },
+                  {
+                    "end": 8301,
+                    "start": 8300
+                  },
+                  {
+                    "end": 8311,
+                    "start": 8306
+                  },
+                  {
+                    "end": 8320,
+                    "start": 8314
+                  },
+                  {
+                    "end": 8331,
+                    "start": 8325
+                  },
+                  {
+                    "end": 8340,
+                    "start": 8334
+                  },
+                  {
+                    "end": 8350,
+                    "start": 8345
+                  },
+                  {
+                    "end": 8359,
+                    "start": 8353
+                  },
+                  {
+                    "end": 8379,
+                    "start": 8364
+                  },
+                  {
+                    "end": 8388,
+                    "start": 8382
+                  },
+                  {
+                    "end": 8411,
+                    "start": 8393
+                  },
+                  {
+                    "end": 8420,
+                    "start": 8414
+                  },
+                  {
+                    "end": 8444,
+                    "start": 8425
+                  },
+                  {
+                    "end": 8453,
+                    "start": 8447
+                  },
+                  {
+                    "end": 8459,
+                    "start": 8458
+                  },
+                  {
+                    "end": 8675,
+                    "start": 8460
+                  },
+                  {
+                    "end": 8750,
+                    "start": 8747
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 84,
+                  "start": 63
+                }
+              },
+              {
+                "body_tokens": 8,
+                "heading": "How you can help",
+                "index": 7,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 6730,
+                  "start": 6690
+                },
+                "raw_output": 1.5379564762115479,
+                "source_ranges": [
+                  {
+                    "end": 8763,
+                    "start": 8750
+                  },
+                  {
+                    "end": 8789,
+                    "start": 8765
+                  },
+                  {
+                    "end": 8800,
+                    "start": 8799
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 86,
+                  "start": 84
+                }
+              },
+              {
+                "body_tokens": 2,
+                "heading": "1.",
+                "index": 8,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 6737,
+                  "start": 6730
+                },
+                "raw_output": 1.2101019620895386,
+                "source_ranges": [
+                  {
+                    "end": 8807,
+                    "start": 8800
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 87,
+                  "start": 86
+                }
+              },
+              {
+                "body_tokens": 56,
+                "heading": "Email the school board and superintendent.",
+                "index": 9,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 7017,
+                  "start": 6737
+                },
+                "raw_output": 2.5369458198547363,
+                "source_ranges": [
+                  {
+                    "end": 8844,
+                    "start": 8807
+                  },
+                  {
+                    "end": 8878,
+                    "start": 8847
+                  },
+                  {
+                    "end": 8990,
+                    "start": 8972
+                  },
+                  {
+                    "end": 9075,
+                    "start": 8996
+                  },
+                  {
+                    "end": 9192,
+                    "start": 9083
+                  },
+                  {
+                    "end": 9201,
+                    "start": 9200
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 94,
+                  "start": 87
+                }
+              },
+              {
+                "body_tokens": 2,
+                "heading": "2.",
+                "index": 10,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 7024,
+                  "start": 7017
+                },
+                "raw_output": 1.6548757553100586,
+                "source_ranges": [
+                  {
+                    "end": 9208,
+                    "start": 9201
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 95,
+                  "start": 94
+                }
+              },
+              {
+                "body_tokens": 54,
+                "heading": "Share this blog post with as many people as possible.",
+                "index": 11,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 7256,
+                  "start": 7024
+                },
+                "raw_output": -0.3558770716190338,
+                "source_ranges": [
+                  {
+                    "end": 9256,
+                    "start": 9208
+                  },
+                  {
+                    "end": 9304,
+                    "start": 9258
+                  },
+                  {
+                    "end": 9328,
+                    "start": 9307
+                  },
+                  {
+                    "end": 9446,
+                    "start": 9333
+                  },
+                  {
+                    "end": 9453,
+                    "start": 9452
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 98,
+                  "start": 95
+                }
+              },
+              {
+                "body_tokens": 2,
+                "heading": "3.",
+                "index": 12,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 7262,
+                  "start": 7256
+                },
+                "raw_output": 0.9918825626373291,
+                "source_ranges": [
+                  {
+                    "end": 9459,
+                    "start": 9453
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 99,
+                  "start": 98
+                }
+              },
+              {
+                "body_tokens": 3,
+                "heading": "Sign the petition",
+                "index": 13,
+                "insufficient_context": true,
+                "prose": {
+                  "end": 7279,
+                  "start": 7262
+                },
+                "raw_output": 1.0423507690429688,
+                "source_ranges": [
+                  {
+                    "end": 9472,
+                    "start": 9459
+                  },
+                  {
+                    "end": 9697,
+                    "start": 9694
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 100,
+                  "start": 99
+                }
+              },
+              {
+                "body_tokens": 132,
+                "heading": "Why It Matters",
+                "index": 14,
+                "insufficient_context": false,
+                "prose": {
+                  "end": 7897,
+                  "start": 7279
+                },
+                "raw_output": 7.808378219604492,
+                "source_ranges": [
+                  {
+                    "end": 9708,
+                    "start": 9697
+                  },
+                  {
+                    "end": 9768,
+                    "start": 9714
+                  },
+                  {
+                    "end": 9783,
+                    "start": 9770
+                  },
+                  {
+                    "end": 9791,
+                    "start": 9785
+                  },
+                  {
+                    "end": 9807,
+                    "start": 9793
+                  },
+                  {
+                    "end": 9845,
+                    "start": 9809
+                  },
+                  {
+                    "end": 9882,
+                    "start": 9847
+                  },
+                  {
+                    "end": 9928,
+                    "start": 9884
+                  },
+                  {
+                    "end": 10041,
+                    "start": 9930
+                  },
+                  {
+                    "end": 10132,
+                    "start": 10046
+                  },
+                  {
+                    "end": 10154,
+                    "start": 10137
+                  },
+                  {
+                    "end": 10170,
+                    "start": 10156
+                  },
+                  {
+                    "end": 10177,
+                    "start": 10171
+                  },
+                  {
+                    "end": 10277,
+                    "start": 10260
+                  },
+                  {
+                    "end": 10431,
+                    "start": 10284
+                  }
+                ],
+                "status": "scored",
+                "units": {
+                  "end": 110,
+                  "start": 100
+                }
+              }
+            ]
+          },
+          "vote": "none",
+          "voting_eligible": false
+        },
+        "status": "scored"
+      }
+    },
+    {
+      "backend": "conpara",
+      "family": "Model",
+      "outcome": {
+        "status": "failed",
+        "details": {
+          "ModelLoadFailed": "no completed attempt available"
+        }
+      }
+    },
+    {
+      "backend": "detectorscope",
+      "family": "Model",
+      "outcome": {
+        "status": "failed",
+        "details": {
+          "ModelLoadFailed": "no completed attempt available"
+        }
+      }
+    }
+  ],
+  "block_contexts": [
+    [
+      {
+        "end": 683,
+        "start": 614
+      }
+    ],
+    [
+      {
+        "end": 720,
+        "start": 687
+      },
+      {
+        "end": 735,
+        "start": 722
+      },
+      {
+        "end": 738,
+        "start": 737
+      }
+    ],
+    [
+      {
+        "end": 967,
+        "start": 743
+      }
+    ],
+    [
+      {
+        "end": 995,
+        "start": 970
+      },
+      {
+        "end": 1023,
+        "start": 997
+      },
+      {
+        "end": 1250,
+        "start": 1025
+      },
+      {
+        "end": 1310,
+        "start": 1253
+      }
+    ],
+    [
+      {
+        "end": 1424,
+        "start": 1317
+      },
+      {
+        "end": 1427,
+        "start": 1426
+      },
+      {
+        "end": 1466,
+        "start": 1428
+      }
+    ],
+    [
+      {
+        "end": 1683,
+        "start": 1639
+      }
+    ],
+    [
+      {
+        "end": 1919,
+        "start": 1691
+      }
+    ],
+    [
+      {
+        "end": 2035,
+        "start": 1925
+      }
+    ],
+    [
+      {
+        "end": 2409,
+        "start": 2212
+      }
+    ],
+    [
+      {
+        "end": 2633,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2761,
+        "start": 2738
+      }
+    ],
+    [
+      {
+        "end": 2776,
+        "start": 2763
+      },
+      {
+        "end": 2790,
+        "start": 2777
+      },
+      {
+        "end": 3142,
+        "start": 2875
+      },
+      {
+        "end": 3162,
+        "start": 3144
+      },
+      {
+        "end": 3254,
+        "start": 3164
+      }
+    ],
+    [
+      {
+        "end": 3393,
+        "start": 3330
+      },
+      {
+        "end": 3426,
+        "start": 3395
+      },
+      {
+        "end": 3544,
+        "start": 3428
+      },
+      {
+        "end": 3586,
+        "start": 3546
+      }
+    ],
+    [
+      {
+        "end": 3899,
+        "start": 3590
+      }
+    ],
+    [
+      {
+        "end": 4094,
+        "start": 3901
+      }
+    ],
+    [
+      {
+        "end": 4115,
+        "start": 4102
+      }
+    ],
+    [
+      {
+        "end": 4351,
+        "start": 4119
+      }
+    ],
+    [
+      {
+        "end": 4360,
+        "start": 4353
+      },
+      {
+        "end": 4365,
+        "start": 4362
+      },
+      {
+        "end": 4585,
+        "start": 4367
+      }
+    ],
+    [
+      {
+        "end": 4616,
+        "start": 4593
+      }
+    ],
+    [
+      {
+        "end": 4832,
+        "start": 4620
+      }
+    ],
+    [
+      {
+        "end": 5116,
+        "start": 4904
+      }
+    ],
+    [
+      {
+        "end": 5373,
+        "start": 5118
+      }
+    ],
+    [
+      {
+        "end": 5503,
+        "start": 5378
+      }
+    ],
+    [
+      {
+        "end": 5606,
+        "start": 5514
+      }
+    ],
+    [
+      {
+        "end": 5829,
+        "start": 5730
+      }
+    ],
+    [
+      {
+        "end": 5958,
+        "start": 5910
+      }
+    ],
+    [
+      {
+        "end": 6035,
+        "start": 5960
+      }
+    ],
+    [
+      {
+        "end": 6109,
+        "start": 6037
+      }
+    ],
+    [
+      {
+        "end": 6134,
+        "start": 6111
+      }
+    ],
+    [
+      {
+        "end": 6160,
+        "start": 6136
+      }
+    ],
+    [
+      {
+        "end": 6184,
+        "start": 6162
+      }
+    ],
+    [
+      {
+        "end": 6219,
+        "start": 6188
+      },
+      {
+        "end": 6241,
+        "start": 6220
+      }
+    ],
+    [
+      {
+        "end": 6366,
+        "start": 6251
+      }
+    ],
+    [
+      {
+        "end": 6611,
+        "start": 6368
+      }
+    ],
+    [
+      {
+        "end": 6752,
+        "start": 6613
+      }
+    ],
+    [
+      {
+        "end": 7102,
+        "start": 6817
+      }
+    ],
+    [
+      {
+        "end": 7117,
+        "start": 7104
+      },
+      {
+        "end": 7133,
+        "start": 7119
+      },
+      {
+        "end": 7140,
+        "start": 7135
+      },
+      {
+        "end": 7148,
+        "start": 7142
+      },
+      {
+        "end": 7310,
+        "start": 7150
+      }
+    ],
+    [
+      {
+        "end": 7328,
+        "start": 7316
+      },
+      {
+        "end": 7350,
+        "start": 7330
+      },
+      {
+        "end": 7360,
+        "start": 7352
+      },
+      {
+        "end": 7363,
+        "start": 7362
+      },
+      {
+        "end": 7374,
+        "start": 7364
+      },
+      {
+        "end": 7473,
+        "start": 7472
+      },
+      {
+        "end": 7605,
+        "start": 7475
+      },
+      {
+        "end": 7615,
+        "start": 7607
+      },
+      {
+        "end": 7737,
+        "start": 7617
+      }
+    ],
+    [
+      {
+        "end": 7762,
+        "start": 7742
+      },
+      {
+        "end": 7792,
+        "start": 7764
+      },
+      {
+        "end": 7802,
+        "start": 7794
+      },
+      {
+        "end": 7805,
+        "start": 7804
+      },
+      {
+        "end": 7812,
+        "start": 7806
+      },
+      {
+        "end": 7893,
+        "start": 7892
+      },
+      {
+        "end": 7955,
+        "start": 7895
+      },
+      {
+        "end": 7964,
+        "start": 7957
+      },
+      {
+        "end": 7995,
+        "start": 7966
+      },
+      {
+        "end": 8005,
+        "start": 7997
+      },
+      {
+        "end": 8163,
+        "start": 8007
+      }
+    ],
+    [
+      {
+        "end": 8213,
+        "start": 8169
+      }
+    ],
+    [
+      {
+        "end": 8223,
+        "start": 8217
+      }
+    ],
+    [
+      {
+        "end": 8238,
+        "start": 8226
+      }
+    ],
+    [
+      {
+        "end": 8261,
+        "start": 8257
+      }
+    ],
+    [
+      {
+        "end": 8270,
+        "start": 8264
+      }
+    ],
+    [
+      {
+        "end": 8283,
+        "start": 8275
+      },
+      {
+        "end": 8285,
+        "start": 8284
+      },
+      {
+        "end": 8287,
+        "start": 8286
+      }
+    ],
+    [
+      {
+        "end": 8297,
+        "start": 8290
+      },
+      {
+        "end": 8299,
+        "start": 8298
+      },
+      {
+        "end": 8301,
+        "start": 8300
+      }
+    ],
+    [
+      {
+        "end": 8311,
+        "start": 8306
+      }
+    ],
+    [
+      {
+        "end": 8320,
+        "start": 8314
+      }
+    ],
+    [
+      {
+        "end": 8331,
+        "start": 8325
+      }
+    ],
+    [
+      {
+        "end": 8340,
+        "start": 8334
+      }
+    ],
+    [
+      {
+        "end": 8350,
+        "start": 8345
+      }
+    ],
+    [
+      {
+        "end": 8359,
+        "start": 8353
+      }
+    ],
+    [
+      {
+        "end": 8379,
+        "start": 8364
+      }
+    ],
+    [
+      {
+        "end": 8388,
+        "start": 8382
+      }
+    ],
+    [
+      {
+        "end": 8411,
+        "start": 8393
+      }
+    ],
+    [
+      {
+        "end": 8420,
+        "start": 8414
+      }
+    ],
+    [
+      {
+        "end": 8444,
+        "start": 8425
+      }
+    ],
+    [
+      {
+        "end": 8453,
+        "start": 8447
+      }
+    ],
+    [
+      {
+        "end": 8459,
+        "start": 8458
+      },
+      {
+        "end": 8675,
+        "start": 8460
+      }
+    ],
+    [
+      {
+        "end": 8763,
+        "start": 8747
+      }
+    ],
+    [
+      {
+        "end": 8789,
+        "start": 8765
+      }
+    ],
+    [
+      {
+        "end": 8844,
+        "start": 8799
+      }
+    ],
+    [
+      {
+        "end": 8878,
+        "start": 8847
+      }
+    ],
+    [
+      {
+        "end": 8990,
+        "start": 8972
+      }
+    ],
+    [
+      {
+        "end": 9075,
+        "start": 8996
+      }
+    ],
+    [
+      {
+        "end": 9192,
+        "start": 9083
+      }
+    ],
+    [
+      {
+        "end": 9256,
+        "start": 9200
+      }
+    ],
+    [
+      {
+        "end": 9304,
+        "start": 9258
+      },
+      {
+        "end": 9328,
+        "start": 9307
+      }
+    ],
+    [
+      {
+        "end": 9446,
+        "start": 9333
+      }
+    ],
+    [
+      {
+        "end": 9472,
+        "start": 9452
+      }
+    ],
+    [
+      {
+        "end": 9708,
+        "start": 9694
+      }
+    ],
+    [
+      {
+        "end": 9768,
+        "start": 9714
+      }
+    ],
+    [
+      {
+        "end": 9783,
+        "start": 9770
+      },
+      {
+        "end": 9791,
+        "start": 9785
+      },
+      {
+        "end": 9807,
+        "start": 9793
+      },
+      {
+        "end": 9845,
+        "start": 9809
+      },
+      {
+        "end": 9882,
+        "start": 9847
+      },
+      {
+        "end": 9928,
+        "start": 9884
+      },
+      {
+        "end": 10041,
+        "start": 9930
+      }
+    ],
+    [
+      {
+        "end": 10132,
+        "start": 10046
+      }
+    ],
+    [
+      {
+        "end": 10154,
+        "start": 10137
+      }
+    ],
+    [
+      {
+        "end": 10170,
+        "start": 10156
+      },
+      {
+        "end": 10177,
+        "start": 10171
+      },
+      {
+        "end": 10277,
+        "start": 10260
+      }
+    ],
+    [
+      {
+        "end": 10431,
+        "start": 10284
+      }
+    ]
+  ],
+  "complete": false,
+  "dictionary_version": "2026.07.26",
+  "display_limit": 100000,
+  "effective_finding_count": 25,
+  "emitted_candidates": 0,
+  "emitted_findings": 0,
+  "engine_version": "0.1.0",
+  "families": [
+    {
+      "backends": [
+        "vocabulary"
+      ],
+      "family": "Vocabulary",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "punctuation"
+      ],
+      "family": "Punctuation",
+      "vote": "none"
+    },
+    {
+      "backends": [
+        "burstiness"
+      ],
+      "family": "Burstiness",
+      "vote": "none"
+    }
+  ],
+  "incomplete_reasons": [
+    "conpara: failed",
+    "detectorscope: failed"
+  ],
+  "language": {
+    "applicability": "supported",
+    "language": "en",
+    "reason": "explicit user assertion, not automatic recognition",
+    "source": "user_override"
+  },
+  "metric_contract": "prepared-prose-v1/uncalibrated",
+  "omitted_candidates": 0,
+  "omitted_document_findings": 0,
+  "omitted_findings": 25,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2025-05-16-investing-in-bibb-countys-future.md",
+  "prose_words": 1297,
+  "schema_version": "1.0.0",
+  "sentence_contexts": [
+    [
+      {
+        "end": 683,
+        "start": 614
+      }
+    ],
+    [
+      {
+        "end": 720,
+        "start": 687
+      },
+      {
+        "end": 735,
+        "start": 722
+      },
+      {
+        "end": 738,
+        "start": 737
+      }
+    ],
+    [
+      {
+        "end": 852,
+        "start": 743
+      }
+    ],
+    [
+      {
+        "end": 964,
+        "start": 852
+      }
+    ],
+    [
+      {
+        "end": 995,
+        "start": 970
+      },
+      {
+        "end": 1023,
+        "start": 997
+      },
+      {
+        "end": 1065,
+        "start": 1025
+      }
+    ],
+    [
+      {
+        "end": 1192,
+        "start": 1065
+      }
+    ],
+    [
+      {
+        "end": 1250,
+        "start": 1192
+      },
+      {
+        "end": 1310,
+        "start": 1253
+      }
+    ],
+    [
+      {
+        "end": 1424,
+        "start": 1317
+      },
+      {
+        "end": 1427,
+        "start": 1426
+      },
+      {
+        "end": 1466,
+        "start": 1428
+      }
+    ],
+    [
+      {
+        "end": 1683,
+        "start": 1639
+      }
+    ],
+    [
+      {
+        "end": 1783,
+        "start": 1691
+      }
+    ],
+    [
+      {
+        "end": 1840,
+        "start": 1783
+      }
+    ],
+    [
+      {
+        "end": 1919,
+        "start": 1840
+      }
+    ],
+    [
+      {
+        "end": 2035,
+        "start": 1925
+      }
+    ],
+    [
+      {
+        "end": 2304,
+        "start": 2212
+      }
+    ],
+    [
+      {
+        "end": 2409,
+        "start": 2304
+      }
+    ],
+    [
+      {
+        "end": 2489,
+        "start": 2411
+      }
+    ],
+    [
+      {
+        "end": 2633,
+        "start": 2489
+      }
+    ],
+    [
+      {
+        "end": 2761,
+        "start": 2738
+      }
+    ],
+    [
+      {
+        "end": 2776,
+        "start": 2763
+      },
+      {
+        "end": 2790,
+        "start": 2777
+      },
+      {
+        "end": 3097,
+        "start": 2875
+      }
+    ],
+    [
+      {
+        "end": 3142,
+        "start": 3097
+      },
+      {
+        "end": 3162,
+        "start": 3144
+      },
+      {
+        "end": 3254,
+        "start": 3164
+      }
+    ],
+    [
+      {
+        "end": 3393,
+        "start": 3330
+      },
+      {
+        "end": 3426,
+        "start": 3395
+      }
+    ],
+    [
+      {
+        "end": 3544,
+        "start": 3428
+      },
+      {
+        "end": 3586,
+        "start": 3546
+      }
+    ],
+    [
+      {
+        "end": 3748,
+        "start": 3590
+      }
+    ],
+    [
+      {
+        "end": 3786,
+        "start": 3748
+      }
+    ],
+    [
+      {
+        "end": 3899,
+        "start": 3786
+      }
+    ],
+    [
+      {
+        "end": 4016,
+        "start": 3901
+      }
+    ],
+    [
+      {
+        "end": 4094,
+        "start": 4016
+      }
+    ],
+    [
+      {
+        "end": 4115,
+        "start": 4102
+      }
+    ],
+    [
+      {
+        "end": 4229,
+        "start": 4119
+      }
+    ],
+    [
+      {
+        "end": 4351,
+        "start": 4229
+      }
+    ],
+    [
+      {
+        "end": 4360,
+        "start": 4353
+      },
+      {
+        "end": 4365,
+        "start": 4362
+      },
+      {
+        "end": 4398,
+        "start": 4367
+      }
+    ],
+    [
+      {
+        "end": 4505,
+        "start": 4398
+      }
+    ],
+    [
+      {
+        "end": 4585,
+        "start": 4505
+      }
+    ],
+    [
+      {
+        "end": 4616,
+        "start": 4593
+      }
+    ],
+    [
+      {
+        "end": 4734,
+        "start": 4620
+      }
+    ],
+    [
+      {
+        "end": 4832,
+        "start": 4734
+      }
+    ],
+    [
+      {
+        "end": 5013,
+        "start": 4904
+      }
+    ],
+    [
+      {
+        "end": 5116,
+        "start": 5013
+      }
+    ],
+    [
+      {
+        "end": 5218,
+        "start": 5118
+      }
+    ],
+    [
+      {
+        "end": 5271,
+        "start": 5218
+      }
+    ],
+    [
+      {
+        "end": 5373,
+        "start": 5271
+      }
+    ],
+    [
+      {
+        "end": 5503,
+        "start": 5378
+      }
+    ],
+    [
+      {
+        "end": 5606,
+        "start": 5514
+      }
+    ],
+    [
+      {
+        "end": 5829,
+        "start": 5730
+      }
+    ],
+    [
+      {
+        "end": 5958,
+        "start": 5910
+      }
+    ],
+    [
+      {
+        "end": 6035,
+        "start": 5960
+      }
+    ],
+    [
+      {
+        "end": 6075,
+        "start": 6037
+      }
+    ],
+    [
+      {
+        "end": 6109,
+        "start": 6075
+      }
+    ],
+    [
+      {
+        "end": 6134,
+        "start": 6111
+      }
+    ],
+    [
+      {
+        "end": 6160,
+        "start": 6136
+      }
+    ],
+    [
+      {
+        "end": 6184,
+        "start": 6162
+      }
+    ],
+    [
+      {
+        "end": 6219,
+        "start": 6188
+      },
+      {
+        "end": 6241,
+        "start": 6220
+      }
+    ],
+    [
+      {
+        "end": 6366,
+        "start": 6251
+      }
+    ],
+    [
+      {
+        "end": 6499,
+        "start": 6368
+      }
+    ],
+    [
+      {
+        "end": 6611,
+        "start": 6499
+      }
+    ],
+    [
+      {
+        "end": 6669,
+        "start": 6613
+      }
+    ],
+    [
+      {
+        "end": 6752,
+        "start": 6669
+      }
+    ],
+    [
+      {
+        "end": 6968,
+        "start": 6817
+      }
+    ],
+    [
+      {
+        "end": 7102,
+        "start": 6968
+      }
+    ],
+    [
+      {
+        "end": 7117,
+        "start": 7104
+      },
+      {
+        "end": 7133,
+        "start": 7119
+      },
+      {
+        "end": 7140,
+        "start": 7135
+      },
+      {
+        "end": 7148,
+        "start": 7142
+      },
+      {
+        "end": 7310,
+        "start": 7150
+      }
+    ],
+    [
+      {
+        "end": 7328,
+        "start": 7316
+      },
+      {
+        "end": 7350,
+        "start": 7330
+      },
+      {
+        "end": 7360,
+        "start": 7352
+      },
+      {
+        "end": 7363,
+        "start": 7362
+      },
+      {
+        "end": 7374,
+        "start": 7364
+      },
+      {
+        "end": 7473,
+        "start": 7472
+      },
+      {
+        "end": 7483,
+        "start": 7475
+      }
+    ],
+    [
+      {
+        "end": 7605,
+        "start": 7483
+      },
+      {
+        "end": 7615,
+        "start": 7607
+      },
+      {
+        "end": 7737,
+        "start": 7617
+      }
+    ],
+    [
+      {
+        "end": 7762,
+        "start": 7742
+      },
+      {
+        "end": 7792,
+        "start": 7764
+      },
+      {
+        "end": 7802,
+        "start": 7794
+      },
+      {
+        "end": 7805,
+        "start": 7804
+      },
+      {
+        "end": 7812,
+        "start": 7806
+      },
+      {
+        "end": 7893,
+        "start": 7892
+      },
+      {
+        "end": 7955,
+        "start": 7895
+      },
+      {
+        "end": 7964,
+        "start": 7957
+      },
+      {
+        "end": 7995,
+        "start": 7966
+      },
+      {
+        "end": 8005,
+        "start": 7997
+      },
+      {
+        "end": 8163,
+        "start": 8007
+      }
+    ],
+    [
+      {
+        "end": 8213,
+        "start": 8169
+      }
+    ],
+    [
+      {
+        "end": 8223,
+        "start": 8217
+      }
+    ],
+    [
+      {
+        "end": 8238,
+        "start": 8226
+      }
+    ],
+    [
+      {
+        "end": 8261,
+        "start": 8257
+      }
+    ],
+    [
+      {
+        "end": 8270,
+        "start": 8264
+      }
+    ],
+    [
+      {
+        "end": 8283,
+        "start": 8275
+      },
+      {
+        "end": 8285,
+        "start": 8284
+      },
+      {
+        "end": 8287,
+        "start": 8286
+      }
+    ],
+    [
+      {
+        "end": 8297,
+        "start": 8290
+      },
+      {
+        "end": 8299,
+        "start": 8298
+      },
+      {
+        "end": 8301,
+        "start": 8300
+      }
+    ],
+    [
+      {
+        "end": 8311,
+        "start": 8306
+      }
+    ],
+    [
+      {
+        "end": 8320,
+        "start": 8314
+      }
+    ],
+    [
+      {
+        "end": 8331,
+        "start": 8325
+      }
+    ],
+    [
+      {
+        "end": 8340,
+        "start": 8334
+      }
+    ],
+    [
+      {
+        "end": 8350,
+        "start": 8345
+      }
+    ],
+    [
+      {
+        "end": 8359,
+        "start": 8353
+      }
+    ],
+    [
+      {
+        "end": 8379,
+        "start": 8364
+      }
+    ],
+    [
+      {
+        "end": 8388,
+        "start": 8382
+      }
+    ],
+    [
+      {
+        "end": 8411,
+        "start": 8393
+      }
+    ],
+    [
+      {
+        "end": 8420,
+        "start": 8414
+      }
+    ],
+    [
+      {
+        "end": 8444,
+        "start": 8425
+      }
+    ],
+    [
+      {
+        "end": 8453,
+        "start": 8447
+      }
+    ],
+    [
+      {
+        "end": 8459,
+        "start": 8458
+      },
+      {
+        "end": 8579,
+        "start": 8460
+      }
+    ],
+    [
+      {
+        "end": 8675,
+        "start": 8579
+      }
+    ],
+    [
+      {
+        "end": 8763,
+        "start": 8747
+      }
+    ],
+    [
+      {
+        "end": 8789,
+        "start": 8765
+      }
+    ],
+    [
+      {
+        "end": 8801,
+        "start": 8799
+      }
+    ],
+    [
+      {
+        "end": 8844,
+        "start": 8801
+      }
+    ],
+    [
+      {
+        "end": 8878,
+        "start": 8847
+      }
+    ],
+    [
+      {
+        "end": 8990,
+        "start": 8972
+      }
+    ],
+    [
+      {
+        "end": 8998,
+        "start": 8996
+      }
+    ],
+    [
+      {
+        "end": 9075,
+        "start": 8998
+      }
+    ],
+    [
+      {
+        "end": 9085,
+        "start": 9083
+      }
+    ],
+    [
+      {
+        "end": 9192,
+        "start": 9085
+      }
+    ],
+    [
+      {
+        "end": 9202,
+        "start": 9200
+      }
+    ],
+    [
+      {
+        "end": 9256,
+        "start": 9202
+      }
+    ],
+    [
+      {
+        "end": 9304,
+        "start": 9258
+      },
+      {
+        "end": 9328,
+        "start": 9307
+      }
+    ],
+    [
+      {
+        "end": 9446,
+        "start": 9333
+      }
+    ],
+    [
+      {
+        "end": 9454,
+        "start": 9452
+      }
+    ],
+    [
+      {
+        "end": 9472,
+        "start": 9454
+      }
+    ],
+    [
+      {
+        "end": 9708,
+        "start": 9694
+      }
+    ],
+    [
+      {
+        "end": 9768,
+        "start": 9714
+      }
+    ],
+    [
+      {
+        "end": 9783,
+        "start": 9770
+      },
+      {
+        "end": 9791,
+        "start": 9785
+      },
+      {
+        "end": 9807,
+        "start": 9793
+      },
+      {
+        "end": 9845,
+        "start": 9809
+      },
+      {
+        "end": 9882,
+        "start": 9847
+      },
+      {
+        "end": 9928,
+        "start": 9884
+      }
+    ],
+    [
+      {
+        "end": 10041,
+        "start": 9930
+      }
+    ],
+    [
+      {
+        "end": 10132,
+        "start": 10046
+      }
+    ],
+    [
+      {
+        "end": 10154,
+        "start": 10137
+      }
+    ],
+    [
+      {
+        "end": 10170,
+        "start": 10156
+      },
+      {
+        "end": 10177,
+        "start": 10171
+      },
+      {
+        "end": 10277,
+        "start": 10260
+      }
+    ],
+    [
+      {
+        "end": 10310,
+        "start": 10284
+      }
+    ],
+    [
+      {
+        "end": 10371,
+        "start": 10310
+      }
+    ],
+    [
+      {
+        "end": 10431,
+        "start": 10371
+      }
+    ]
+  ],
+  "sentence_count": 110,
+  "settings": {
+    "display_limit": 100000,
+    "enabled_backends": [
+      "vocabulary",
+      "punctuation",
+      "burstiness",
+      "lexical-diversity",
+      "readability",
+      "compression",
+      "structure"
+    ],
+    "gptzero": false,
+    "gptzero_base_url": "https://api.gptzero.me",
+    "ignore_rules": [],
+    "language": "en",
+    "max_bytes": 1048576,
+    "max_candidates": 10000,
+    "minimum_severity": "low",
+    "model_coverage": "full",
+    "models": [
+      "desklib",
+      "conpara",
+      "detectorscope"
+    ],
+    "models_dir": "/home/kwhatcher/.cache/nobotrs-local-ai/models-v1",
+    "openrouter_base_url": "https://openrouter.ai/api/v1",
+    "openrouter_judge": false,
+    "openrouter_model": "deepseek/deepseek-v4.1-flash",
+    "openrouter_strict_privacy": true,
+    "path_ignores": {},
+    "quorum": 2,
+    "timeout_ms": 1200000
+  },
+  "verdict": "clean",
+  "warnings": [],
+  "_recovery": {
+    "schema_version": "owner-model-consolidated-v1",
+    "single_concurrent_run": false,
+    "model_sources": {
+      "desklib": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-05-16-investing-in-bibb-countys-future/backend-attempt-1.json",
+        "sha256": "140b5cc837bbf3b01806779a450b4981809548b14c4c966368765c917b29e48e",
+        "origin": "recovery_attempt",
+        "status": "scored_full"
+      },
+      "conpara": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/conpara/2025-05-16-investing-in-bibb-countys-future/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      },
+      "detectorscope": {
+        "path": "evaluation/baselines/owner-posts-v1-models-full/recovery/detectorscope/2025-05-16-investing-in-bibb-countys-future/backend.json",
+        "sha256": null,
+        "origin": "unprocessed",
+        "status": "missing"
+      }
+    },
+    "note": "Scores join separate immutable attempts; original failure and runtime/thread provenance remain in original and recovery records."
+  }
+}

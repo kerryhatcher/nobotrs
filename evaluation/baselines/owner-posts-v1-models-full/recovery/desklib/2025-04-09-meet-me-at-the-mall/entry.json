@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.043941,
+  "file": "2025-04-09-meet-me-at-the-mall.md",
+  "input_sha256": "6fad7211105b3c0bf15249aa880b55d0ca9b7e1356c538455207f2da15381a38",
+  "label": "ai_drafted",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2025-04-09-meet-me-at-the-mall/backend.json",
+  "reused_source_sha256": "b9f7125bb063526f4749fd0c5d8ccfb10845b907112aa46db734e2a35cfb4d09",
+  "status": "scored_full"
+}

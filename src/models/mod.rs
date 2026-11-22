@@ -1,4 +1,8 @@
+#[cfg(any(feature = "models-encoders", feature = "models-detectorscope"))]
+mod full;
 mod manifest;
+#[cfg(any(feature = "models-encoders", feature = "models-detectorscope"))]
+pub mod windows;
 
 use crate::{
     availability::Availability,
@@ -367,6 +371,35 @@ pub struct ModelEvidence {
     pub elapsed_ms: f64,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub detectorscope: Option<DetectorScopeEvidence>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub packing_policy: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub aggregation_policy: Option<String>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub windows: Vec<WindowEvidence>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub full_coverage_output: Option<f64>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub token_coverage: Option<f64>,
+    #[serde(skip_serializing_if = "Vec::is_empty")]
+    pub coverage_gaps: Vec<std::ops::Range<usize>>,
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub struct WindowEvidence {
+    pub index: usize,
+    pub prose: std::ops::Range<usize>,
+    pub source_ranges: Vec<std::ops::Range<usize>>,
+    pub units: std::ops::Range<usize>,
+    pub heading: Option<String>,
+    pub body_tokens: usize,
+    pub status: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub error: Option<String>,
+    pub raw_output: Option<f64>,
+    pub insufficient_context: bool,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub detectorscope: Option<DetectorScopeEvidence>,
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize)]
@@ -397,6 +430,10 @@ pub struct FeatureContribution {
     pub id: usize,
     pub description: String,
     pub contribution: f64,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub active_tokens: Option<usize>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub highlight_limit: Option<usize>,
     pub highlights: Vec<FeatureHighlight>,
 }
 
@@ -430,6 +467,10 @@ mod normalize;
 #[cfg(feature = "models-encoders")]
 fn normalize_input(text: &str) -> String {
     normalize::conpara_input(text)
+}
+#[cfg(feature = "models-encoders")]
+pub fn normalize_input_with_map(text: &str) -> (String, Vec<std::ops::Range<usize>>) {
+    normalize::conpara_input_with_map(text)
 }
 
 #[cfg(feature = "models-detectorscope")]

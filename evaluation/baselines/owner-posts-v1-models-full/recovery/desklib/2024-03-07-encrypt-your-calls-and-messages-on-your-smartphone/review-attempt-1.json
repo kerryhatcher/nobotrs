@@ -1,0 +1,569 @@
+{
+  "checklist": [
+    {
+      "detail": "Review word choices in context, including technical exceptions.",
+      "id": "no-tell-vocabulary",
+      "status": "pass"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-em-dash-connectors",
+      "status": "pass"
+    },
+    {
+      "detail": "Three sentence lengths within ±3 words are a reading prompt; headings and lists are excluded.",
+      "id": "sentence-length-varies",
+      "status": "fail"
+    },
+    {
+      "detail": "A digit-bearing token is a checkable-detail prompt, not verification of a claim.",
+      "id": "has-checkable-specific",
+      "status": "pass"
+    },
+    {
+      "detail": "Name actual evidence; this check cannot verify sources.",
+      "id": "no-vague-attribution",
+      "status": "pass"
+    },
+    {
+      "detail": "Retain contrasts that clarify a distinction.",
+      "id": "no-negative-parallelism",
+      "status": "fail"
+    },
+    {
+      "detail": "confirm every name, number and source is the writer's own",
+      "id": "facts-are-real",
+      "status": "unknown"
+    },
+    {
+      "detail": "Read aloud to check clarity and the author's voice.",
+      "id": "read-aloud",
+      "status": "unknown"
+    },
+    {
+      "detail": "Confirm that changes in tone fit the purpose and audience.",
+      "id": "tone-shifts",
+      "status": "unknown"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-summary-close",
+      "status": "fail"
+    },
+    {
+      "detail": "An editing prompt; absence is meaningful only when the check completed and was not suppressed.",
+      "id": "no-rule-of-three",
+      "status": "pass"
+    }
+  ],
+  "checks": [
+    {
+      "backend": "vocabulary",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "punctuation",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "burstiness",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "lexical-diversity",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "readability",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "compression",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "structure",
+      "reason": null,
+      "status": "completed"
+    },
+    {
+      "backend": "desklib",
+      "reason": null,
+      "status": "completed"
+    }
+  ],
+  "complete": true,
+  "document": [],
+  "findings": [
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "State the relationship directly while retaining the original distinction.",
+      "guidance_id": "structure.negative-parallelism",
+      "keep_when": "Keep a contrast that corrects a likely misunderstanding.",
+      "leverage": 2,
+      "location": {
+        "column": 206,
+        "end_column": 245,
+        "end_line": 60,
+        "line": 60,
+        "source_ranges": [
+          {
+            "end": 5523,
+            "start": 5484
+          }
+        ]
+      },
+      "matched_text": "not only are your messages private, but",
+      "message": null,
+      "rule_id": "structure.negative-parallelism",
+      "sentence": "With E2EE you can be assured that not only are your messages private, but also are coming from the person (well device) you expect it to.",
+      "severity": "low",
+      "suggestion": "Check whether this pattern makes the point harder to follow; retain justified wording.",
+      "suppressed": false,
+      "why": "A repeated contrast can obscure what changed."
+    },
+    {
+      "category": "structure",
+      "context": null,
+      "fix": "End at the useful conclusion if the announcement is unnecessary.",
+      "guidance_id": "structure.summary-close",
+      "keep_when": "Keep summaries in reports and teaching material where readers need a recap.",
+      "leverage": 2,
+      "location": {
+        "column": 1,
+        "end_column": 46,
+        "end_line": 90,
+        "line": 90,
+        "source_ranges": [
+          {
+            "end": 8033,
+            "start": 7988
+          }
+        ]
+      },
+      "matched_text": "Overall Signal is worth your time to try out.",
+      "message": null,
+      "rule_id": "structure.summary-close",
+      "sentence": "Overall Signal is worth your time to try out.",
+      "severity": "low",
+      "suggestion": "End on the useful conclusion; keep a summary when readers need one.",
+      "suppressed": false,
+      "why": "A generic closing announcement may repeat rather than complete the argument."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 174,
+        "end_column": 189,
+        "end_line": 18,
+        "line": 18,
+        "source_ranges": [
+          {
+            "end": 1312,
+            "start": 1297
+          }
+        ]
+      },
+      "matched_text": "Well good news!",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Well good news!",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 1,
+        "end_column": 7,
+        "end_line": 24,
+        "line": 24,
+        "source_ranges": [
+          {
+            "end": 2412,
+            "start": 2406
+          }
+        ]
+      },
+      "matched_text": "Update",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Update",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 2,
+        "end_column": 12,
+        "end_line": 28,
+        "line": 28,
+        "source_ranges": [
+          {
+            "end": 2622,
+            "start": 2612
+          }
+        ]
+      },
+      "matched_text": "Learn more",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "Learn more",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    },
+    {
+      "category": "rhythm",
+      "context": null,
+      "fix": "Treat this as an annotation. Read surrounding units before changing it.",
+      "guidance_id": "structure.short-fragment",
+      "keep_when": "Keep complete short sentences, dialogue and a single punchy fragment.",
+      "leverage": 3,
+      "location": {
+        "column": 209,
+        "end_column": 221,
+        "end_line": 86,
+        "line": 86,
+        "source_ranges": [
+          {
+            "end": 7981,
+            "start": 7967
+          }
+        ]
+      },
+      "matched_text": "I’m a fan :)",
+      "message": null,
+      "rule_id": "structure.short-fragment",
+      "sentence": "I’m a fan :)",
+      "severity": "low",
+      "suggestion": "Short-unit annotation; a complete short sentence or a deliberate fragment can be appropriate.",
+      "suppressed": false,
+      "why": "A short unit may be a complete sentence, dialogue or emphasis; length alone cannot decide."
+    }
+  ],
+  "guidance_version": "2026.11.21",
+  "hotspots": {
+    "guidance_version": "2026.11.21",
+    "hotspots": [
+      {
+        "agreement": 1,
+        "body_tokens": 166,
+        "end_line": 32,
+        "features": [],
+        "heading": "What’s there to be worried about?",
+        "line": 20,
+        "mean_z": 1.2067501667821843,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 1,
+            "raw_output": 0.052580539137125015,
+            "z": 1.2067501667821843
+          }
+        ],
+        "prose": {
+          "end": 1034,
+          "start": 221
+        },
+        "rank": 1,
+        "source_ranges": [
+          {
+            "end": 1376,
+            "start": 1345
+          },
+          {
+            "end": 1543,
+            "start": 1378
+          },
+          {
+            "end": 1600,
+            "start": 1544
+          },
+          {
+            "end": 1702,
+            "start": 1688
+          },
+          {
+            "end": 1711,
+            "start": 1703
+          },
+          {
+            "end": 1799,
+            "start": 1794
+          },
+          {
+            "end": 1807,
+            "start": 1800
+          },
+          {
+            "end": 1925,
+            "start": 1889
+          },
+          {
+            "end": 1961,
+            "start": 1926
+          },
+          {
+            "end": 2100,
+            "start": 2097
+          },
+          {
+            "end": 2120,
+            "start": 2102
+          },
+          {
+            "end": 2203,
+            "start": 2122
+          },
+          {
+            "end": 2250,
+            "start": 2204
+          },
+          {
+            "end": 2404,
+            "start": 2317
+          },
+          {
+            "end": 2412,
+            "start": 2406
+          },
+          {
+            "end": 2609,
+            "start": 2414
+          },
+          {
+            "end": 2622,
+            "start": 2612
+          },
+          {
+            "end": 2772,
+            "start": 2767
+          }
+        ],
+        "units": {
+          "end": 15,
+          "start": 4
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 240,
+        "end_line": 58,
+        "features": [],
+        "heading": "Spoofing and SIM swapping",
+        "line": 46,
+        "mean_z": 0.03522927474340909,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 2,
+            "raw_output": -0.889307975769043,
+            "z": 0.03522927474340909
+          }
+        ],
+        "prose": {
+          "end": 2685,
+          "start": 1481
+        },
+        "rank": 2,
+        "source_ranges": [
+          {
+            "end": 3575,
+            "start": 3553
+          },
+          {
+            "end": 3888,
+            "start": 3577
+          },
+          {
+            "end": 4349,
+            "start": 3890
+          },
+          {
+            "end": 4399,
+            "start": 4352
+          },
+          {
+            "end": 4807,
+            "start": 4500
+          },
+          {
+            "end": 4815,
+            "start": 4808
+          },
+          {
+            "end": 4912,
+            "start": 4911
+          },
+          {
+            "end": 4917,
+            "start": 4913
+          },
+          {
+            "end": 5042,
+            "start": 5041
+          },
+          {
+            "end": 5053,
+            "start": 5043
+          },
+          {
+            "end": 5180,
+            "start": 5155
+          },
+          {
+            "end": 5263,
+            "start": 5257
+          }
+        ],
+        "units": {
+          "end": 33,
+          "start": 22
+        }
+      },
+      {
+        "agreement": 1,
+        "body_tokens": 176,
+        "end_line": 84,
+        "features": [],
+        "heading": "Trusted by the government",
+        "line": 70,
+        "mean_z": -1.2419794415255934,
+        "per_model": [
+          {
+            "backend": "desklib",
+            "rank": 3,
+            "raw_output": -1.916168212890625,
+            "z": -1.2419794415255934
+          }
+        ],
+        "prose": {
+          "end": 4452,
+          "start": 3553
+        },
+        "rank": 3,
+        "source_ranges": [
+          {
+            "end": 6440,
+            "start": 6422
+          },
+          {
+            "end": 6572,
+            "start": 6442
+          },
+          {
+            "end": 6596,
+            "start": 6574
+          },
+          {
+            "end": 6619,
+            "start": 6597
+          },
+          {
+            "end": 6805,
+            "start": 6701
+          },
+          {
+            "end": 6824,
+            "start": 6806
+          },
+          {
+            "end": 6974,
+            "start": 6906
+          },
+          {
+            "end": 7125,
+            "start": 6976
+          },
+          {
+            "end": 7155,
+            "start": 7126
+          },
+          {
+            "end": 7408,
+            "start": 7328
+          },
+          {
+            "end": 7659,
+            "start": 7410
+          },
+          {
+            "end": 7741,
+            "start": 7736
+          }
+        ],
+        "units": {
+          "end": 51,
+          "start": 42
+        }
+      }
+    ],
+    "label": "Where local classifiers react most. Not a Google signal and not evidence of authorship.",
+    "minimum_body_tokens": 128,
+    "provenance": [
+      {
+        "backend": "desklib",
+        "code_revision": null,
+        "coverage_gaps": [],
+        "device": "cpu",
+        "licenses": {
+          "base_model": "MIT (microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f)",
+          "notes": "Manifest facts only; packaging review is still required before redistributing artifacts.",
+          "tokenizer": "MIT (upstream model card); base tokenizer derived from microsoft/deberta-v3-large at 64a8c8eab3e352a784c658aef62be1662607476f",
+          "weights": "MIT (upstream model card at the pinned revision)"
+        },
+        "model_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7",
+        "precision": "float32",
+        "preprocessing_revision": "prepared-prose-v1/opening-excerpt-v1",
+        "runtime": "candle-debertav2",
+        "token_coverage": 1.0,
+        "token_limit": 512,
+        "tokenizer_revision": "5fdea974cd4287c61674951ec78803aa274e2fb7"
+      }
+    ],
+    "ranking_policy": "within-doc-z-v1",
+    "reason": null,
+    "validated": false
+  },
+  "incomplete_reasons": [],
+  "leverage_counts": {
+    "2": 2,
+    "3": 4
+  },
+  "omitted_findings": 0,
+  "path": "evaluation/corpora/owner-posts-v1/samples/2024-03-07-encrypt-your-calls-and-messages-on-your-smartphone.md",
+  "prose_words": 831,
+  "review_version": "review-v1",
+  "schema_version": "1.0.0",
+  "suppressed_findings": 0,
+  "total_findings": 6
+}

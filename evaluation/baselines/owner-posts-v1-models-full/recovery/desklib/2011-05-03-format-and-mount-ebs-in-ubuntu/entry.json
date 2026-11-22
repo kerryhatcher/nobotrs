@@ -1,0 +1,10 @@
+{
+  "confidence": "high",
+  "elapsed_ms": 0.0496,
+  "file": "2011-05-03-format-and-mount-ebs-in-ubuntu.md",
+  "input_sha256": "f439bc7898ae8db61803f9005cc4645be2ad65b5c3cce6a7a860df052b38462b",
+  "label": "human",
+  "reused_from": "evaluation/baselines/owner-posts-v1-models-full/recovery/desklib/2011-05-03-format-and-mount-ebs-in-ubuntu/backend.json",
+  "reused_source_sha256": "dc7152b55e821d47bdbfbe8fe9af501181f3b21b1eb33efa9e81a7b80238aac4",
+  "status": "scored_full"
+}
